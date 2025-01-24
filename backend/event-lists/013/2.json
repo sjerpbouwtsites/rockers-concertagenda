@@ -1,347 +1,103 @@
 [
   {
-    "door": "2024-10-27T19:30:00+01:00",
-    "start": "2024-10-27T19:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/79375/the-ghost-inside",
-    "title": "The Ghost Inside",
+    "door": "2025-01-31T20:30:00+01:00",
+    "start": "2025-01-31T20:30:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/86023/feuerengel",
+    "title": "Feuerengel",
     "location": "013",
-    "price": 38.8,
-    "shortText": "Searching For Solace Tour",
-    "longText": "../public/texts/013/b2dyYW1tYS83OTM3NS90aGUtZ2hvc3QtaW5zaWRl.html",
-    "image": "../public/event-images/013/b2dyYW1tYS83OTM3NS90aGUtZ2hvc3QtaW5zaWRl",
+    "price": 35.8,
+    "shortText": "A Tribute To Rammstein",
+    "longText": "../public/texts/013/Lm5sL3Byb2dyYW1tYS84NjAyMy9mZXVlcmVuZ2Vs.html",
+    "image": "../public/event-images/013/Lm5sL3Byb2dyYW1tYS84NjAyMy9mZXVlcmVuZ2Vs",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "the ghost inside": {
-        "s": "6kQB2RN7WwryMdJ1MoQh1E",
-        "l": "the%20ghost%20inside",
+      "feuerengel": {
+        "s": null,
+        "l": "feuerengel",
         "g": [
-          "melodic metalcore",
+          "neue deutsche haerte",
+          "tanzmetal",
+          "industrial",
+          "industrial metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-02-04T20:00:00+01:00",
+    "start": "2025-02-04T20:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/88624/rise-against",
+    "title": "Rise Against",
+    "location": "013",
+    "price": 51.8,
+    "shortText": "",
+    "longText": "../public/texts/013/bC9wcm9ncmFtbWEvODg2MjQvcmlzZS1hZ2FpbnN0.html",
+    "image": "../public/event-images/013/bC9wcm9ncmFtbWEvODg2MjQvcmlzZS1hZ2FpbnN0",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "rise against": {
+        "s": "6Wr3hh341P84m3EI8qdn9O",
+        "l": "rise%20against",
+        "g": [
+          "punk",
+          "hardcore punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-02-14T19:00:00+01:00",
+    "start": "2025-02-14T19:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/80019/motionless-in-white",
+    "title": "Motionless in White",
+    "location": "013",
+    "price": 36.8,
+    "shortText": "",
+    "longText": "../public/texts/013/YW1tYS84MDAxOS9tb3Rpb25sZXNzLWluLXdoaXRl.html",
+    "image": "../public/event-images/013/YW1tYS84MDAxOS9tb3Rpb25sZXNzLWluLXdoaXRl",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "motionless in white": {
+        "s": "6MwPCCR936cYfM1dLsGVnl",
+        "l": "motionless%20in%20white",
+        "g": [
+          "alternative metal",
           "metalcore"
         ]
-      },
-      "ghost": {
-        "s": "1qp56t7n950o3egmssl81d",
-        "l": "ghost",
-        "g": [
-          "hard rock",
-          "metal"
-        ]
       }
     }
   },
   {
-    "door": "2024-11-03T19:30:00+01:00",
-    "start": "2024-11-03T19:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/88110/wargasm",
-    "title": "Wargasm",
+    "door": "2025-02-20T20:00:00+01:00",
+    "start": "2025-02-20T20:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/86139/love-letter",
+    "title": "Love Letter",
     "location": "013",
-    "price": 23.3,
+    "price": 17.3,
     "shortText": "",
-    "longText": "../public/texts/013/MDEzLm5sL3Byb2dyYW1tYS84ODExMC93YXJnYXNt.html",
-    "image": "../public/event-images/013/MDEzLm5sL3Byb2dyYW1tYS84ODExMC93YXJnYXNt",
+    "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzg2MTM5L2xvdmUtbGV0dGVy.html",
+    "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzg2MTM5L2xvdmUtbGV0dGVy",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "wargasm": {
-        "s": "4hey3o8p8cqhh81winvexe",
-        "l": "wargasm",
+      "love letter": {
+        "s": "41DJIv2qEvmvkcOsj7scTA",
+        "l": "love%20letter",
         "g": [
-          "boston metal",
-          "new england metal",
-          "old school thrash"
+          "melodic hardcore"
         ]
       }
     }
   },
   {
-    "door": "2024-11-08T20:00:00+01:00",
-    "start": "2024-11-08T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/81918/guilt-trip",
-    "title": "Guilt Trip",
-    "location": "013",
-    "price": 19.8,
-    "shortText": "",
-    "longText": "../public/texts/013/Lm5sL3Byb2dyYW1tYS84MTkxOC9ndWlsdC10cmlw.html",
-    "image": "../public/event-images/013/Lm5sL3Byb2dyYW1tYS84MTkxOC9ndWlsdC10cmlw",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "guilt trip": {
-        "s": "07mhrucogu6njvrnvzqoxu",
-        "l": "guilt%20trip",
-        "g": [
-          "uk beatdown",
-          "ukhc"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-17T20:00:00+01:00",
-    "start": "2024-11-17T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7891/wheel",
-    "title": "Wheel",
-    "location": "013",
-    "price": 23.3,
-    "shortText": "",
-    "longText": "../public/texts/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83ODkxL3doZWVs.html",
-    "image": "../public/event-images/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83ODkxL3doZWVs",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "wheel": {
-        "s": "4msm1QtpV7zMReePhbEQ6H",
-        "l": "wheel",
-        "g": [
-          "finnish progressive rock",
-          "modern progressive rock",
-          "progressive metal",
-          "doom metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-27T20:00:00+01:00",
-    "start": "2024-11-27T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/78453/benighted-baest",
-    "title": "Benighted + Baest",
-    "location": "013",
-    "price": 22.3,
-    "shortText": "",
-    "longText": "../public/texts/013/cm9ncmFtbWEvNzg0NTMvYmVuaWdodGVkLWJhZXN0.html",
-    "image": "../public/event-images/013/cm9ncmFtbWEvNzg0NTMvYmVuaWdodGVkLWJhZXN0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "benighted": {
-        "s": "0duwiwapc6uukkcztaaf7j",
-        "l": "benighted",
-        "g": [
-          "brutal death metal",
-          "death metal",
-          "deathgrind",
-          "french death metal",
-          "french metal",
-          "technical death metal",
-          "black metal (early)",
-          "brutal death metal/grindcore (later)"
-        ]
-      },
-      "baest": {
-        "s": "4UtjZRQc6qXhAd1kqyLvqp",
-        "l": "baest",
-        "g": [
-          "danish death metal",
-          "danish metal",
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-07-15T21:00:00+02:00",
-    "start": "2024-12-04T21:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/87313/cats-cult",
-    "title": "Cat's Cult",
-    "location": "013",
-    "price": 0,
-    "shortText": "Crybabies + No Way",
-    "longText": "../public/texts/013/My5ubC9wcm9ncmFtbWEvODczMTMvY2F0cy1jdWx0.html",
-    "image": "../public/event-images/013/My5ubC9wcm9ncmFtbWEvODczMTMvY2F0cy1jdWx0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "cat's cult": {
-        "s": "39easu1lufd34xctyotlvu",
-        "l": "cat's%20cult",
-        "g": []
-      },
-      "no way": {
-        "s": null,
-        "l": "no%20way",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2024-12-11T20:00:00+01:00",
-    "start": "2024-12-11T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/90293/eihwar",
-    "title": "Eihwar",
-    "location": "013",
-    "price": 21.8,
-    "shortText": "Pagan Party",
-    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTAyOTMvZWlod2Fy.html",
-    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTAyOTMvZWlod2Fy",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-12-22T20:30:00+01:00",
-    "start": "2024-12-22T20:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7907/green-lizard",
-    "title": "Green Lizard",
-    "location": "013",
-    "price": 19.8,
-    "shortText": "30th Anniversary Tour",
-    "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzc5MDcvZ3JlZW4tbGl6YXJk.html",
-    "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzc5MDcvZ3JlZW4tbGl6YXJk",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "green lizard": {
-        "s": "05ZicXUsA6xxL2jxDN9q76",
-        "l": "green%20lizard",
-        "g": [
-          "dutch punk",
-          "dutch rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-17T20:00:00+01:00",
-    "start": "2025-01-17T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/90733/turmion-k%C3%A4til%C3%B6t",
-    "title": "Turmion kätilöt",
-    "location": "013",
-    "price": 21.3,
-    "shortText": "RESET WORLD TOUR 2025",
-    "longText": "../public/texts/013/MDczMy90dXJtaW9uLWslQzMlQTR0aWwlQzMlQjZ0.html",
-    "image": "../public/event-images/013/MDczMy90dXJtaW9uLWslQzMlQTR0aWwlQzMlQjZ0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "turmion kätilöt": {
-        "s": "76t3VPzCEYAlrZhVAY7yjg",
-        "l": "turmion%20k%C3%A4til%C3%B6t",
-        "g": [
-          "cyber metal",
-          "finnish metal"
-        ]
-      },
-      "reset": {
-        "s": "7IpVGSueIeprUfcTL6tARx",
-        "l": "reset",
-        "g": [
-          "canadian punk",
-          "quebec punk",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-02T17:20:00+01:00",
-    "start": "2025-02-02T17:20:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/90358/paganfest-2025",
-    "title": "Paganfest 2025",
-    "location": "013",
-    "price": 55.8,
-    "shortText": "ALESTORM - ENSIFERUM - TÝR - HEIDEVOLK - ELVENKING",
-    "longText": "../public/texts/013/cHJvZ3JhbW1hLzkwMzU4L3BhZ2FuZmVzdC0yMDI1.html",
-    "image": "../public/event-images/013/cHJvZ3JhbW1hLzkwMzU4L3BhZ2FuZmVzdC0yMDI1",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ensiferum": {
-        "s": "0krxcikthz13p8o0v2tksh",
-        "l": "ensiferum",
-        "g": [
-          "finnish melodeath",
-          "finnish metal",
-          "folk metal",
-          "melodic death metal",
-          "metal",
-          "nordic folk metal",
-          "power metal",
-          "symphonic metal",
-          "viking metal"
-        ]
-      },
-      "heidevolk": {
-        "s": "0a2yao4tufejvnn5hvjfxa",
-        "l": "heidevolk",
-        "g": [
-          "dutch metal",
-          "folk metal",
-          "viking metal"
-        ]
-      },
-      "alestorm": {
-        "s": "3opqu68jpzlzvjajj3b2da",
-        "l": "alestorm",
-        "g": [
-          "british power metal",
-          "comic metal",
-          "pirate",
-          "power metal",
-          "scottish metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-08T20:30:00+01:00",
-    "start": "2025-02-08T20:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/82767/ronnie-james-dio-the-memorial-concert",
-    "title": "Ronnie James Dio",
-    "location": "013",
-    "price": 28.3,
-    "shortText": "The Memorial Concert",
-    "longText": "../public/texts/013/amFtZXMtZGlvLXRoZS1tZW1vcmlhbC1jb25jZXJ0.html",
-    "image": "../public/event-images/013/amFtZXMtZGlvLXRoZS1tZW1vcmlhbC1jb25jZXJ0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ronnie james dio": {
-        "s": "4M3c7tg4BzLQ5pIOupZL65",
-        "l": "ronnie%20james%20dio",
-        "g": [
-          "hard rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-16T19:00:00+01:00",
-    "start": "2025-02-16T19:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/84793/spiritbox",
-    "title": "Spiritbox",
-    "location": "013",
-    "price": 44.3,
-    "shortText": "",
-    "longText": "../public/texts/013/My5ubC9wcm9ncmFtbWEvODQ3OTMvc3Bpcml0Ym94.html",
-    "image": "../public/event-images/013/My5ubC9wcm9ncmFtbWEvODQ3OTMvc3Bpcml0Ym94",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "spiritbox": {
-        "s": "4MzJMcHQBl9SIYSjwWn8QW",
-        "l": "spiritbox",
-        "g": [
-          "canadian metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-23T18:30:00+01:00",
+    "door": "2025-01-22T18:30:00+01:00",
     "start": "2025-02-23T18:30:00+01:00",
     "venueEventUrl": "https://www.013.nl/programma/92680/cattle-decapition-shadow-of-intent",
     "title": "Cattle Decapitation + Shadow Of Intent",
@@ -385,6 +141,39 @@
     }
   },
   {
+    "door": "2025-03-06T20:00:00+01:00",
+    "start": "2025-03-06T20:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/98625/the-raven-age",
+    "title": "The Raven Age",
+    "location": "013",
+    "price": 23.3,
+    "shortText": "The Forsaken Tour 2025",
+    "longText": "../public/texts/013/L3Byb2dyYW1tYS85ODYyNS90aGUtcmF2ZW4tYWdl.html",
+    "image": "../public/event-images/013/L3Byb2dyYW1tYS85ODYyNS90aGUtcmF2ZW4tYWdl",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the raven age": {
+        "s": "1ia5ityhmbsmqfi7fbcbuw",
+        "l": "the%20raven%20age",
+        "g": [
+          "gymcore",
+          "melodic groove metal",
+          "uk metalcore"
+        ]
+      },
+      "raven": {
+        "s": "6K0vfJogIPUIo694VqX2Wr",
+        "l": "raven",
+        "g": [
+          "nwobhm",
+          "heavy metal, speed metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-03-16T19:30:00+01:00",
     "start": "2025-03-16T19:30:00+01:00",
     "venueEventUrl": "https://www.013.nl/programma/81196/punk-rock-factory",
@@ -418,47 +207,373 @@
     }
   },
   {
-    "door": "2025-04-13T19:00:00+02:00",
-    "start": "2025-04-13T19:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/88183/behemoth",
-    "title": "Behemoth",
+    "door": "2025-03-20T19:00:00+01:00",
+    "start": "2025-03-20T19:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/95389/knocked-loose",
+    "title": "Knocked Loose",
     "location": "013",
-    "price": 66.6,
-    "shortText": "The Unholy Trinity 2025",
-    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzg4MTgzL2JlaGVtb3Ro.html",
-    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzg4MTgzL2JlaGVtb3Ro",
+    "price": 42.3,
+    "shortText": "",
+    "longText": "../public/texts/013/L3Byb2dyYW1tYS85NTM4OS9rbm9ja2VkLWxvb3Nl.html",
+    "image": "../public/event-images/013/L3Byb2dyYW1tYS85NTM4OS9rbm9ja2VkLWxvb3Nl",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "behemoth": {
-        "s": "1mk0sgeytnkbefygj673e9",
-        "l": "behemoth",
+      "knocked loose": {
+        "s": "4qrHkx5cgWIslciLXUMrYw",
+        "l": "knocked%20loose",
         "g": [
-          "black metal",
-          "death metal",
-          "groove metal",
-          "metal",
-          "pagan black metal",
-          "polish black metal",
-          "polish death metal",
-          "polish metal"
+          "hardcore",
+          "metalcore",
+          "deathcore",
+          "hardcore punk"
         ]
       }
     }
   },
   {
-    "start": "2025-04-19T14:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/90329/roadburn-2025",
+    "door": "2025-03-27T21:00:00+01:00",
+    "start": "2025-03-27T21:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/103423/hexis",
+    "title": "Hexis",
+    "location": "013",
+    "price": 16,
+    "shortText": "15 years anniversary tour",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvMTAzNDIzL2hleGlz.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvMTAzNDIzL2hleGlz",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "hexis": {
+        "s": "1gA55xnafhPiBIM07ZlXHA",
+        "l": "hexis",
+        "g": [
+          "black metal",
+          "sludge metal",
+          "black metal",
+          "hardcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-02T20:00:00+02:00",
+    "start": "2025-04-02T20:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/98493/social-distortion",
+    "title": "Social Distortion",
+    "location": "013",
+    "price": 43.8,
+    "shortText": "European Tour 2025",
+    "longText": "../public/texts/013/Z3JhbW1hLzk4NDkzL3NvY2lhbC1kaXN0b3J0aW9u.html",
+    "image": "../public/event-images/013/Z3JhbW1hLzk4NDkzL3NvY2lhbC1kaXN0b3J0aW9u",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "social distortion": {
+        "s": "16nn7kCHPWIB6uK09GQCNI",
+        "l": "social%20distortion",
+        "g": [
+          "punk",
+          "skate punk",
+          "ska punk",
+          "psychobilly"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-11T19:30:00+02:00",
+    "start": "2025-04-11T19:30:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/103210/state-power",
+    "title": "State Power",
+    "location": "013",
+    "price": 15,
+    "shortText": "",
+    "longText": "../public/texts/013/bC9wcm9ncmFtbWEvMTAzMjEwL3N0YXRlLXBvd2Vy.html",
+    "image": "../public/event-images/013/bC9wcm9ncmFtbWEvMTAzMjEwL3N0YXRlLXBvd2Vy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "state power": {
+        "s": "2ZksA5DzgDlR4hTXquufqU",
+        "l": "state%20power",
+        "g": [
+          "hardcore punk",
+          "hardcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-18T14:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/90323/roadburn-2025-2",
     "title": "Roadburn 2025",
     "location": "013",
     "price": 269,
-    "shortText": "Chat Pile, Kylesa en Altın Gün",
-    "longText": "../public/texts/013/L3Byb2dyYW1tYS85MDMyOS9yb2FkYnVybi0yMDI1.html",
-    "image": "../public/event-images/013/L3Byb2dyYW1tYS85MDMyOS9yb2FkYnVybi0yMDI1",
+    "shortText": "envy, Thou, Messa, Midwife en meer",
+    "longText": "../public/texts/013/cm9ncmFtbWEvOTAzMjMvcm9hZGJ1cm4tMjAyNS0y.html",
+    "image": "../public/event-images/013/cm9ncmFtbWEvOTAzMjMvcm9hZGJ1cm4tMjAyNS0y",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "door": "2025-04-24T22:00:00+02:00",
+    "start": "2025-04-24T22:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/92107/aborted",
+    "title": "Aborted",
+    "location": "013",
+    "price": 28.3,
+    "shortText": "",
+    "longText": "../public/texts/013/MDEzLm5sL3Byb2dyYW1tYS85MjEwNy9hYm9ydGVk.html",
+    "image": "../public/event-images/013/MDEzLm5sL3Byb2dyYW1tYS85MjEwNy9hYm9ydGVk",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "aborted": {
+        "s": "1XRhUgCyzIdeT8d9KMfeDR",
+        "l": "aborted",
+        "g": [
+          "belgian death metal",
+          "belgian metal",
+          "brutal death metal",
+          "death metal",
+          "deathgrind",
+          "goregrind",
+          "grindcore",
+          "technical death metal",
+          "death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-04T20:00:00+02:00",
+    "start": "2025-05-04T20:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/95081/swallow-the-sun",
+    "title": "Swallow The Sun",
+    "location": "013",
+    "price": 27.3,
+    "shortText": "",
+    "longText": "../public/texts/013/cm9ncmFtbWEvOTUwODEvc3dhbGxvdy10aGUtc3Vu.html",
+    "image": "../public/event-images/013/cm9ncmFtbWEvOTUwODEvc3dhbGxvdy10aGUtc3Vu",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "swallow the sun": {
+        "s": "0ulKlNlo0iPx5ZS6VMTHWQ",
+        "l": "swallow%20the%20sun",
+        "g": [
+          "doom metal",
+          "melodic death metal",
+          "gothic metal",
+          "sludge metal",
+          "melodic metal",
+          "progressive metal",
+          "melodic doom",
+          "death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-21T20:00:00+02:00",
+    "start": "2025-05-21T20:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/100500/weather-systems",
+    "title": "Weather Systems",
+    "location": "013",
+    "price": 29.3,
+    "shortText": "Oceans Without A Shore - Live in 25",
+    "longText": "../public/texts/013/b2dyYW1tYS8xMDA1MDAvd2VhdGhlci1zeXN0ZW1z.html",
+    "image": "../public/event-images/013/b2dyYW1tYS8xMDA1MDAvd2VhdGhlci1zeXN0ZW1z",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "weather systems": {
+        "s": "79pII4A4OPL8CZRfAmAZOq",
+        "l": "weather%20systems",
+        "g": [
+          "progressive rock",
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-06-07T20:00:00+02:00",
+    "start": "2025-06-07T20:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/103287/mojo-the-kitchen-brothers",
+    "title": "Mojo & The Kitchen Brothers",
+    "location": "013",
+    "price": 17.3,
+    "shortText": "",
+    "longText": "../public/texts/013/MzI4Ny9tb2pvLXRoZS1raXRjaGVuLWJyb3RoZXJz.html",
+    "image": "../public/event-images/013/MzI4Ny9tb2pvLXRoZS1raXRjaGVuLWJyb3RoZXJz",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "mojo": {
+        "s": "2QwLnnvQD0oR1Gfl1TDhIJ",
+        "l": "mojo",
+        "g": [
+          "dubstep",
+          "stoner",
+          "doom metal",
+          "rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-06T18:45:00+02:00",
+    "start": "2025-08-06T18:45:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/98543/dimmu-borgir",
+    "title": "Dimmu borgir",
+    "location": "013",
+    "price": 66.6,
+    "shortText": "The Chosen Legacy Tour 2025",
+    "longText": "../public/texts/013/bC9wcm9ncmFtbWEvOTg1NDMvZGltbXUtYm9yZ2ly.html",
+    "image": "../public/event-images/013/bC9wcm9ncmFtbWEvOTg1NDMvZGltbXUtYm9yZ2ly",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the chosen": {
+        "s": "5sywd6fu4rdgishox40hma",
+        "l": "the%20chosen",
+        "g": []
+      },
+      "dimmu borgir": {
+        "s": "6e8ISIsI7UQZPyEorefAhK",
+        "l": "dimmu%20borgir",
+        "g": [
+          "black metal",
+          "metal",
+          "symphonic metal",
+          "death metal",
+          "symphonic black metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-09-13T14:00:00+02:00",
+    "start": "2025-09-13T14:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/94540/ayreon",
+    "title": "Ayreon",
+    "location": "013",
+    "price": 75,
+    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #2 (MATINEE)",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDAvYXlyZW9u.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDAvYXlyZW9u",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ayreon": {
+        "s": "2rsapl0sxcvt8yiy4uapst",
+        "l": "ayreon",
+        "g": [
+          "celtic metal",
+          "dutch metal",
+          "neo classical metal",
+          "prog metal",
+          "progressive metal",
+          "sci-fi metal",
+          "symphonic metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-09-14T20:30:00+02:00",
+    "start": "2025-09-14T20:30:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/94548/ayreon",
+    "title": "Ayreon",
+    "location": "013",
+    "price": 75,
+    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #5",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDgvYXlyZW9u.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDgvYXlyZW9u",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ayreon": {
+        "s": "2rsapl0sxcvt8yiy4uapst",
+        "l": "ayreon",
+        "g": [
+          "celtic metal",
+          "dutch metal",
+          "neo classical metal",
+          "prog metal",
+          "progressive metal",
+          "sci-fi metal",
+          "symphonic metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-10-08T19:00:00+02:00",
+    "start": "2025-10-08T19:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/88519/bleed-from-within",
+    "title": "Bleed From Within",
+    "location": "013",
+    "price": 34.8,
+    "shortText": "The Zenith Tour",
+    "longText": "../public/texts/013/Z3JhbW1hLzg4NTE5L2JsZWVkLWZyb20td2l0aGlu.html",
+    "image": "../public/event-images/013/Z3JhbW1hLzg4NTE5L2JsZWVkLWZyb20td2l0aGlu",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "bleed from within": {
+        "s": "5ZvwJikDgdP1PFU4PkAPVG",
+        "l": "bleed%20from%20within",
+        "g": [
+          "metalcore",
+          "deathcore",
+          "metal",
+          "djent",
+          "melodic death metal",
+          "metalcore (early)",
+          " metalcore (later)"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-12-16T20:00:00+01:00",
+    "start": "2025-12-16T20:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/98930/imminence",
+    "title": "Imminence",
+    "location": "013",
+    "price": 38.8,
+    "shortText": "The Black Finale - Live with String Quartet",
+    "longText": "../public/texts/013/My5ubC9wcm9ncmFtbWEvOTg5MzAvaW1taW5lbmNl.html",
+    "image": "../public/event-images/013/My5ubC9wcm9ncmFtbWEvOTg5MzAvaW1taW5lbmNl",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "imminence": {
+        "s": "7rqJQQxuUOCk052MK5kLsH",
+        "l": "imminence",
+        "g": [
+          "metalcore",
+          "swedish metalcore"
+        ]
+      }
+    }
   }
 ]

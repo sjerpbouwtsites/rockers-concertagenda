@@ -33,11 +33,6 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "de røckers": {
-        "s": "4gnyohyczuql9vf0vbjffq",
-        "l": null,
-        "g": []
-      },
       "dikke dennis &": {
         "s": null,
         "l": "dikke%20dennis%20&",
@@ -45,6 +40,11 @@
           "punk ",
           "rock "
         ]
+      },
+      "de røckers": {
+        "s": "4gnyohyczuql9vf0vbjffq",
+        "l": null,
+        "g": []
       },
       "thammuz": {
         "s": "5XjWtIODAsVMlwEBfmlbOp",
@@ -90,6 +90,28 @@
           "deep punk rock",
           "northern irish punk",
           "uk82"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-07T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/nytt-land-ru-leaves-eyes-de-ater-cl-more-excl-nl-show/",
+    "title": "Nytt land (ru) ",
+    "location": "willemeen",
+    "price": 23,
+    "shortText": " leaves eyes (de)  +  ater (cl)  +  more excl nl show ",
+    "longText": "../public/texts/willemeen/LWRlLWF0ZXItY2wtbW9yZS1leGNsLW5sLXNob3cv.html",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "more": {
+        "s": null,
+        "l": "more",
+        "g": [
+          "nwobhm",
+          "heavy metal"
         ]
       }
     }
@@ -151,105 +173,56 @@
     }
   },
   {
-    "start": "2025-03-29T15:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/smyrna-deathfest-stillbirth-soulburn-teethgrinder-the-lucifer-principle-devoured-elysium-1/",
-    "title": "Smyrna Deathfest: Stillbirth ",
+    "start": "2025-03-28T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/saor-ie-can-bardd-ch-morgarten-ch/",
+    "title": "Saor (ie) + cân bardd (ch) + morgarten (ch)",
     "location": "willemeen",
-    "price": 25,
-    "shortText": " Soulburn  +  Teethgrinder  +  The Lucifer Principle  +  Devoured Elysium  + 1 deathmetal festival",
-    "longText": "../public/texts/willemeen/LXByaW5jaXBsZS1kZXZvdXJlZC1lbHlzaXVtLTEv.html",
+    "price": 27.5,
+    "shortText": "folk, black",
+    "longText": "../public/texts/willemeen/LWllLWNhbi1iYXJkZC1jaC1tb3JnYXJ0ZW4tY2gv.html",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "lucifer": {
-        "s": "3oypqq5xqbllc5fh0h7a6q",
-        "l": "lucifer",
+      "saor": {
+        "s": "4rHMzJ1RKUMtid1K2QEYbr",
+        "l": "saor",
         "g": [
-          "belgian metal"
+          "black metal",
+          "folk metal",
+          "atmospheric folk",
+          "black metal"
         ]
       },
-      "teethgrinder": {
-        "s": "0J9eNWKbu2RTQ5bcQ0eJS6",
-        "l": "teethgrinder",
+      "morgarten": {
+        "s": "4xKJfYRasExH6cgMmWlBpd",
+        "l": "morgarten",
         "g": [
-          "grindcore",
-          "powerviolence"
-        ]
-      },
-      "devoured elysium": {
-        "s": "0StR9GrLWsoDfnVEHvTbez",
-        "l": "devoured%20elysium",
-        "g": [
-          "turkish death metal",
-          "death metal",
-          "grindcore"
+          "swiss black metal",
+          "swiss metal",
+          "black",
+          "folk metal"
         ]
       }
     }
   },
   {
-    "start": "2025-04-12T18:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/rotfest-met-maria-iskariot-be-rotzorg-eyesores-apeshit-waardeloos/",
-    "title": "ROTFEST met: Maria Iskariot (BE) ",
+    "start": "2025-04-11T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/metal-battle-2025/",
+    "title": "Metal Battle 2025",
     "location": "willemeen",
-    "price": 12.5,
-    "shortText": " Rotzorg   +  Eyesores  +  Apeshit   +  Waardeloos punk festival",
-    "longText": "../public/texts/willemeen/Zy1leWVzb3Jlcy1hcGVzaGl0LXdhYXJkZWxvb3Mv.html",
+    "price": 6.66,
+    "shortText": "contest",
+    "longText": "../public/texts/willemeen/bC9wcm9ncmFtbWEvbWV0YWwtYmF0dGxlLTIwMjUv.html",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "apeshit": {
-        "s": "60idytqipfbGaZr3u2a0QG",
-        "l": "apeshit",
+      "battle": {
+        "s": null,
+        "l": "battle",
         "g": [
-          "brutal death metal",
-          "grindcore"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-03T23:59:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/outcast-vs-addr-presents-total-ga-osz/",
-    "title": "Outcast VS ADDR Presents; Total Ga-osz",
-    "location": "willemeen",
-    "price": 10,
-    "shortText": "millenium hardcore gabber",
-    "longText": "../public/texts/willemeen/dnMtYWRkci1wcmVzZW50cy10b3RhbC1nYS1vc3ov.html",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "outcast": {
-        "s": "4ddifkfkmzrazeakcn1gjo",
-        "l": "outcast",
-        "g": [
-          "deep punk rock",
-          "northern irish punk",
-          "uk82"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-06-05T19:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/back-alley-ritual-4-metalucifer-jp-intranced-us-bad-omen-avalon-de/",
-    "title": "Back Alley Ritual 4: Metalucifer (JP) ",
-    "location": "willemeen",
-    "price": 24.21,
-    "shortText": " Intranced (US)  +  Bad Omen  +  Avalon (DE) cult heavy metal",
-    "longText": "../public/texts/willemeen/dHJhbmNlZC11cy1iYWQtb21lbi1hdmFsb24tZGUv.html",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "lucifer": {
-        "s": "3oypqq5xqbllc5fh0h7a6q",
-        "l": "lucifer",
-        "g": [
-          "belgian metal"
+          "black metal"
         ]
       },
       "metal": {
@@ -270,28 +243,124 @@
     }
   },
   {
-    "start": "2025-06-28T19:30:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/aephanemer-fr-support/",
-    "title": "Aephanemer (FR) + Support",
+    "start": "2025-04-18T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/frozen-crown-it-fellowship-uk-lutharo-ca/",
+    "title": "Frozen crown (it) ",
     "location": "willemeen",
-    "price": 17.5,
-    "shortText": "symphonic melodic death",
-    "longText": "../public/texts/willemeen/b2dyYW1tYS9hZXBoYW5lbWVyLWZyLXN1cHBvcnQv.html",
+    "price": 23,
+    "shortText": " fellowship (uk)  +  lutharo (ca) power metal",
+    "longText": "../public/texts/willemeen/bi1pdC1mZWxsb3dzaGlwLXVrLWx1dGhhcm8tY2Ev.html",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "aephanemer": {
-        "s": "1M2nK2dOXJjcCuW3SQEzET",
-        "l": "aephanemer",
+      "frozen crown": {
+        "s": "6hbGneO1qRnmz6xflK4n8E",
+        "l": "frozen%20crown",
         "g": [
-          "melodic death metal",
-          "melodic metal",
-          "folk metal",
-          "death metal",
+          "power metal",
           "symphonic metal",
-          "symphonic",
-          "melodic death metal"
+          "melodic metal",
+          "speed metal",
+          "metal",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-10T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/diabolical-echoes-part-7/",
+    "title": "Diabolical Echoes part 7",
+    "location": "willemeen",
+    "price": 8,
+    "shortText": "black metal",
+    "longText": "../public/texts/willemeen/YW1tYS9kaWFib2xpY2FsLWVjaG9lcy1wYXJ0LTcv.html",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "echo": {
+        "s": "0fgykf9avljex0l9wt5b8z",
+        "l": "echo",
+        "g": [
+          "alternative rock",
+          "new romantic",
+          "new wave",
+          "permanent wave"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-06-17T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/battery-us-support-excl-nl-show/",
+    "title": "Battery (US, only NL show) ",
+    "location": "willemeen",
+    "price": 16,
+    "shortText": " Thrive (NL/DE, first NL show)  +  Hometown Crew DC hardcore, youth crew, Hardcore, SXE",
+    "longText": "../public/texts/willemeen/dHRlcnktdXMtc3VwcG9ydC1leGNsLW5sLXNob3cv.html",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "battery": {
+        "s": "7MlVSrN1UclvhmDbHlCOf9",
+        "l": "battery",
+        "g": [
+          "hardcore punk",
+          "hardcore",
+          "melodic hardcore",
+          "groove",
+          "thrash metal"
+        ]
+      },
+      "hometown crew": {
+        "s": "5TFQ3BuWa1IZ2OsQ6X4t3b",
+        "l": "hometown%20crew",
+        "g": [
+          "hardcore punk",
+          "hardcore",
+          "melodic hardcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-11-26T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/gutalax-cz-spasm-cz-guineapig-it-excl-nl-show/",
+    "title": "Gutalax (cz) ",
+    "location": "willemeen",
+    "price": 23.5,
+    "shortText": " spasm (cz)  +  guineapig (it) excl nl show groegrind, gore 'n roll",
+    "longText": "../public/texts/willemeen/LWN6LWd1aW5lYXBpZy1pdC1leGNsLW5sLXNob3cv.html",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "gutalax": {
+        "s": "5CmgfDQq0YVKMP6zpjYhPR",
+        "l": "gutalax",
+        "g": [
+          "grindcore",
+          "death metal",
+          "goregrind"
+        ]
+      },
+      "guineapig": {
+        "s": "7JjFSi8Nz49BxuZcoTHc7L",
+        "l": "guineapig",
+        "g": [
+          "grindcore",
+          "goregrind"
+        ]
+      },
+      "spasm": {
+        "s": "43YYqRi7IDMb1BYolZmy3T",
+        "l": "spasm",
+        "g": [
+          "grindcore",
+          "goregrind"
         ]
       }
     }

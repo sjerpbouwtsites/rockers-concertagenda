@@ -264,25 +264,31 @@
     }
   },
   {
-    "door": "2025-11-07T20:00:00.000",
-    "start": "2025-11-07T21:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/eskorzo-2/",
-    "title": "Eskorzo",
+    "door": "2026-02-06T19:00:00.000",
+    "start": "2026-02-06T19:30:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/beyond-the-black/",
+    "title": "Beyond the Black",
     "location": "doornroosje",
     "price": null,
-    "shortText": "punk, cumbia, afro, gypsy",
-    "longText": "../public/texts/doornroosje/b29ybnJvb3NqZS5ubC9ldmVudC9lc2tvcnpvLTIv.html",
+    "shortText": "metal, symfonische metal",
+    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L2JleW9uZC10aGUtYmxhY2sv.html",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "punk": {
-        "s": null,
-        "l": "punk",
+      "beyond the black": {
+        "s": "6swnqil41bd4go2fnaxxrf",
+        "l": "beyond%20the%20black",
         "g": [
-          "melodic death metal (early)",
-          " glitch",
-          "dubstep",
-          "electronica (later)"
+          "gothic symphonic metal",
+          "slayer",
+          "symphonic metal"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
         ]
       }
     }

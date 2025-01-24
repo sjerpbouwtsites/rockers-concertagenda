@@ -45,20 +45,20 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      },
       "virtuoso": {
         "s": "2SLaITxUrqhSRzXHk4x1l5",
         "l": "virtuoso",
         "g": [
           "underground hip hop",
           "hardcore hip hop"
+        ]
+      },
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
         ]
       }
     }

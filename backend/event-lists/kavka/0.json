@@ -107,6 +107,13 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "colorblind": {
+        "s": "3kSDOw6bEMSStOjqLR2kVX",
+        "l": "colorblind",
+        "g": [
+          "groove metal"
+        ]
+      },
       "caskets": {
         "s": "2XIbOWDT5vZPW7jNyzdfcK",
         "l": "caskets",
@@ -114,13 +121,6 @@
           "metalcore",
           "post-hardcore",
           "death metal"
-        ]
-      },
-      "colorblind": {
-        "s": "3kSDOw6bEMSStOjqLR2kVX",
-        "l": "colorblind",
-        "g": [
-          "groove metal"
         ]
       }
     }
@@ -138,6 +138,17 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "nanowar of steel": {
+        "s": "7jw9vF1hFRp1k8dDRNRiC5",
+        "l": "nanowar%20of%20steel",
+        "g": [
+          "power metal",
+          "folk metal",
+          "heavy",
+          "power metal",
+          "hard rock"
+        ]
+      },
       "dynazty": {
         "s": "5deRBvKxJssHVa9n6B7tWV",
         "l": "dynazty",
@@ -149,17 +160,6 @@
           "metal",
           "heavy",
           "power metal, hard rock"
-        ]
-      },
-      "nanowar of steel": {
-        "s": "7jw9vF1hFRp1k8dDRNRiC5",
-        "l": "nanowar%20of%20steel",
-        "g": [
-          "power metal",
-          "folk metal",
-          "heavy",
-          "power metal",
-          "hard rock"
         ]
       }
     }
@@ -357,6 +357,14 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "guineapig": {
+        "s": "7JjFSi8Nz49BxuZcoTHc7L",
+        "l": "guineapig",
+        "g": [
+          "grindcore",
+          "goregrind"
+        ]
+      },
       "gutalax": {
         "s": "5CmgfDQq0YVKMP6zpjYhPR",
         "l": "gutalax",
@@ -369,14 +377,6 @@
       "spasm": {
         "s": "43YYqRi7IDMb1BYolZmy3T",
         "l": "spasm",
-        "g": [
-          "grindcore",
-          "goregrind"
-        ]
-      },
-      "guineapig": {
-        "s": "7JjFSi8Nz49BxuZcoTHc7L",
-        "l": "guineapig",
         "g": [
           "grindcore",
           "goregrind"

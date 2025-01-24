@@ -1,343 +1,193 @@
 [
   {
-    "start": "2024-10-05T19:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-de-beuk-sear-bliss-rivers-ablaze/",
-    "title": "Baroeg On Tour @De Beuk: Sear Bliss ",
+    "start": "2025-01-26T15:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-soundville-in-the-grip-of-winter-presents-anchillys-facing-the-madness-mancuerda/",
+    "title": "Baroeg On Tour @SoundVille: In The Grip Of Winter presents: Anchillys ",
     "location": "baroeg",
-    "price": null,
-    "shortText": " Rivers Ablaze Black metal met koperblazers.",
-    "longText": "../public/texts/baroeg/YmV1ay1zZWFyLWJsaXNzLXJpdmVycy1hYmxhemUv.html",
-    "image": "../public/event-images/baroeg/YmV1ay1zZWFyLWJsaXNzLXJpdmVycy1hYmxhemUv",
+    "price": 14,
+    "shortText": " Facing The Madness  +  Mancuerda In The Grip Of Winter voor het eerst in SoundVille.",
+    "longText": "../public/texts/baroeg/LWZhY2luZy10aGUtbWFkbmVzcy1tYW5jdWVyZGEv.html",
+    "image": "../public/event-images/baroeg/LWZhY2luZy10aGUtbWFkbmVzcy1tYW5jdWVyZGEv",
     "soldOut": false,
     "eventGenres": [
-      "black"
+      "brutal death metal",
+      "death metal",
+      "doom",
+      "hardcore",
+      "thrash"
     ],
     "artists": {
-      "rivers ablaze": {
-        "s": "0DZSYoZluja08JRF1GN1Wj",
-        "l": "rivers%20ablaze",
+      "anchillys facing the": {
+        "s": null,
+        "l": "anchillys facing the",
         "g": [
-          "progressive black",
+          "brutal death metal",
           "death metal",
-          "black"
+          "doom",
+          "hardcore",
+          "thrash"
         ]
       },
-      "sear bliss": {
-        "s": "5h1vktUNKEYPDaQUUaOKAA",
-        "l": "sear%20bliss",
+      "mancuerda": {
+        "s": "5dB2jJwiwwnKU5nF3vACvl",
+        "l": "mancuerda",
         "g": [
-          "atmospheric black metal",
-          "black metal",
-          "hungarian black metal",
-          "hungarian metal",
-          "slavic metal",
-          "symphonic black metal",
-          "atmospheric black metal",
-          "black"
+          "death metal",
+          "brutal death metal",
+          "death metal",
+          "doom",
+          "hardcore",
+          "thrash"
         ]
       },
-      "metal": {
+      "facing the mancuerda in the grip of winter voor het eerst in soundville.": {
         "s": null,
-        "l": "metal",
+        "l": "facing the mancuerda in the grip of winter voor het eerst in soundville.",
         "g": [
-          "death metal"
-        ]
-      },
-      "black met koperblazers.": {
-        "s": null,
-        "l": "black met koperblazers.",
-        "g": [
-          "black"
+          "brutal death metal",
+          "death metal",
+          "doom",
+          "hardcore",
+          "thrash"
         ]
       }
     }
   },
   {
-    "start": "2024-11-01T19:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-soundville-dutch-doom-day-dodentocht/",
-    "title": "Baroeg On Tour @SoundVille: Dutch Doom Day: Dodentocht ",
+    "start": "2025-02-01T20:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-soundville-80s-more-depeche-mood-djs-co2-denniz/",
+    "title": "Baroeg On Tour @SoundVille: 80's & More: Depeche Mood",
+    "location": "baroeg",
+    "price": null,
+    "shortText": " Nadat The Cure, The Cult, The Sisters Of Mercy én The Smiths al naar SoundVille zijn gekomen, is het nu tijd voor een andere grootmacht: Depeche Mode!",
+    "longText": "../public/texts/baroeg/ZS1kZXBlY2hlLW1vb2QtZGpzLWNvMi1kZW5uaXov.html",
+    "image": "../public/event-images/baroeg/ZS1kZXBlY2hlLW1vb2QtZGpzLWNvMi1kZW5uaXov",
+    "soldOut": true,
+    "eventGenres": [
+      "new wave / electro / industrial"
+    ],
+    "artists": {
+      "the sisters of mercy": {
+        "s": "2cswbwhuu4beari8swf8gj",
+        "l": "the%20sisters%20of%20mercy",
+        "g": []
+      },
+      "depeche mood": {
+        "s": null,
+        "l": "depeche%20mood",
+        "g": [
+          "new wave / electro / industrial"
+        ]
+      },
+      "nadat the cure, , én the smiths al naar soundville zijn gekomen, is het nu tijd voor een andere grootmacht: depeche mode!": {
+        "s": null,
+        "l": "nadat the cure, , én the smiths al naar soundville zijn gekomen, is het nu tijd voor een andere grootmacht: depeche mode!",
+        "g": [
+          "new wave / electro / industrial"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-02-10T19:30:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-v11-16/",
+    "title": "Baroeg On Tour @V11: Riffsniffer presents: -(16)- ",
     "location": "baroeg",
     "price": 14,
-    "shortText": " Pander  +  20HZ Fader Dutch Doom Day met opkomende Doom bands.",
-    "longText": "../public/texts/baroeg/bGxlLWR1dGNoLWRvb20tZGF5LWRvZGVudG9jaHQv.html",
-    "image": "../public/event-images/baroeg/bGxlLWR1dGNoLWRvb20tZGF5LWRvZGVudG9jaHQv",
+    "shortText": " Modder Dit is de enige show van –(16)- in de Benelux!",
+    "longText": "../public/texts/baroeg/b2R1Y3RpZS9iYXJvZWctb24tdG91ci12MTEtMTYv.html",
+    "image": "../public/event-images/baroeg/b2R1Y3RpZS9iYXJvZWctb24tdG91ci12MTEtMTYv",
     "soldOut": false,
     "eventGenres": [
-      "death metal",
-      "doom",
       "sludge"
     ],
     "artists": {
-      "dodentocht": {
-        "s": "1viPziG5G19z4NCY8gus89",
-        "l": "dodentocht",
-        "g": [
-          "death",
-          "doom",
-          "sludge metal"
-        ]
-      },
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      },
-      "pander": {
-        "s": "6UMkl3m9CCLHsAr10YLg6o",
-        "l": "pander",
-        "g": [
-          "stoner metal",
-          "death metal",
-          "doom",
-          "sludge"
-        ]
-      },
-      "20hz fader": {
-        "s": "5tzUDC3Nnrjlt7gaTdw0d8",
-        "l": "20hz%20fader",
-        "g": [
-          "death metal",
-          "doom",
-          "sludge"
-        ]
-      },
-      "pander 20hz fader dutch doom day met opkomende doom s.": {
-        "s": null,
-        "l": "pander 20hz fader dutch doom day met opkomende doom s.",
-        "g": [
-          "death metal",
-          "doom",
-          "sludge"
-        ]
+      "modder": {
+        "s": "5lrqzwilzsuyy7mhq4lw4y",
+        "l": "modder",
+        "g": []
       }
     }
   },
   {
-    "start": "2024-11-09T19:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-rotown-popronde-rotterdam-state-power-32elephants-man-as-plague/",
-    "title": "Baroeg On Tour @Rotown: Popronde Rotterdam: State Power ",
+    "start": "2025-02-22T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-de-beuk-metal-battle-voorronde-zuid-holland/",
+    "title": "Baroeg On Tour @De Beuk: Metal Battle voorronde Zuid-Holland: Ann My Dice ",
     "location": "baroeg",
-    "price": 0,
-    "shortText": " 32elephants  +  Man As Plague Baroeg host dit jaar voor het eerst een podium tijdens Popronde Rotterdam, en wel in Rotown!",
-    "longText": "../public/texts/baroeg/d2VyLTMyZWxlcGhhbnRzLW1hbi1hcy1wbGFndWUv.html",
-    "image": "../public/event-images/baroeg/d2VyLTMyZWxlcGhhbnRzLW1hbi1hcy1wbGFndWUv",
+    "price": 5,
+    "shortText": " Phrasing  +  Redikin  +  Sea Of Consciousness Voorronde voor de Veldslag West die op zaterdag 22 maart 2025 uitgevochten wordt.",
+    "longText": "../public/texts/baroeg/YmF0dGxlLXZvb3Jyb25kZS16dWlkLWhvbGxhbmQv.html",
+    "image": "../public/event-images/baroeg/YmF0dGxlLXZvb3Jyb25kZS16dWlkLWhvbGxhbmQv",
     "soldOut": false,
     "eventGenres": [
-      "alternative",
-      "emo",
-      "hardcore",
-      "metalcore"
-    ],
-    "artists": {
-      "plague": {
-        "s": "080xip1qfuknbnyeypuh1v",
-        "l": "plague",
-        "g": [
-          "blackened deathcore",
-          "deathcore",
-          "melodic metalcore",
-          "metalcore",
-          "symphonic deathcore"
-        ]
-      },
-      "state power 32s man as": {
-        "s": null,
-        "l": "state power 32s man as",
-        "g": [
-          "alternative",
-          "emo",
-          "hardcore",
-          "metalcore"
-        ]
-      },
-      "32s man as baroeg host dit jaar voor het eerst een podium tijdens popronde rotterdam, en wel in rotown!": {
-        "s": null,
-        "l": "32s man as baroeg host dit jaar voor het eerst een podium tijdens popronde rotterdam, en wel in rotown!",
-        "g": [
-          "alternative",
-          "emo",
-          "hardcore",
-          "metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-11-16T19:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-grounds-dutch-doom-days-presents-draconian-nailed-to-obscurity-fragment-soul/",
-    "title": "Baroeg On Tour @Grounds: Dutch Doom Days presents: Draconian ",
-    "location": "baroeg",
-    "price": null,
-    "shortText": " Nailed To Obscurity  +  Fragment Soul Draconian bestaat 30 jaar.",
-    "longText": "../public/texts/baroeg/ZWQtdG8tb2JzY3VyaXR5LWZyYWdtZW50LXNvdWwv.html",
-    "image": "../public/event-images/baroeg/ZWQtdG8tb2JzY3VyaXR5LWZyYWdtZW50LXNvdWwv",
-    "soldOut": true,
-    "eventGenres": [
-      "doom",
-      "gothic metal",
+      "hardrock",
+      "heavy rock",
+      "melodic metal",
       "metal",
-      "progressive"
+      "metalcore",
+      "modern metal",
+      "progressive death"
     ],
     "artists": {
-      "nailed to obscurity": {
-        "s": "3VKWvDnlwWaBI2uzMTjuSJ",
-        "l": "nailed%20to%20obscurity",
+      "redikin": {
+        "s": "1ruulqgnhiitn4lh7idres",
+        "l": null,
         "g": [
-          "finnish metal",
-          "melodic death metal",
-          "melodic doom",
-          "death metal",
-          "doom",
-          "gothic metal",
+          "metal"
+        ]
+      },
+      "ann my dice phrasing": {
+        "s": null,
+        "l": "ann my dice phrasing",
+        "g": [
+          "hardrock",
+          "heavy rock",
+          "melodic metal",
           "metal",
-          "progressive"
+          "metalcore",
+          "modern metal",
+          "progressive death"
         ]
       },
-      "fragment soul": {
-        "s": "2VsKiASSkRwzniSx3o6vL4",
-        "l": "fragment%20soul",
+      "sea of consciousness": {
+        "s": "4jMjkPnS3oAFqhngqKCo3o",
+        "l": "sea%20of%20consciousness",
         "g": [
-          "gothic doom",
-          "doom",
-          "gothic metal",
+          "progressive metal",
+          "progressive technical death metal",
+          "hardrock",
+          "heavy rock",
+          "melodic metal",
           "metal",
-          "progressive"
+          "metalcore",
+          "modern metal",
+          "progressive death"
         ]
       },
-      "draconian": {
-        "s": "1TX9g1uSl0B0DQIE9lBqmU",
-        "l": "draconian",
+      "phrasing": {
+        "s": "5f9oXTR1RNUOJUbU6TjAGw",
+        "l": "phrasing",
         "g": [
-          "doom metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "swedish doom metal",
-          "swedish metal",
-          "gothic",
-          "doom",
-          "death metal",
-          "doom",
-          "gothic metal",
+          "hardrock",
+          "heavy rock",
+          "melodic metal",
           "metal",
-          "progressive"
+          "metalcore",
+          "modern metal",
+          "progressive death"
         ]
       },
-      "bestaat 30 jaar.": {
+      "sea of consciousness voorronde voor de veldslag west die op zaterdag 22 maart uitgevochten wordt.": {
         "s": null,
-        "l": "bestaat%2030%20jaar.",
+        "l": "sea of consciousness voorronde voor de veldslag west die op zaterdag 22 maart uitgevochten wordt.",
         "g": [
-          "doom",
-          "gothic metal",
+          "hardrock",
+          "heavy rock",
+          "melodic metal",
           "metal",
-          "progressive"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-11-30T19:30:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-soundville-wavefest-presents-vision-video/",
-    "title": "Baroeg On Tour @SoundVille: Wavefest presents: Vision Video ",
-    "location": "baroeg",
-    "price": null,
-    "shortText": " Lifeless Past  +  Modern Victims Dancenight Creëert een verfrissend en modern geluid binnen het postpunk genre.",
-    "longText": "../public/texts/baroeg/YXZlZmVzdC1wcmVzZW50cy12aXNpb24tdmlkZW8v.html",
-    "image": "../public/event-images/baroeg/YXZlZmVzdC1wcmVzZW50cy12aXNpb24tdmlkZW8v",
-    "soldOut": true,
-    "eventGenres": [
-      "post-punk"
-    ],
-    "artists": {
-      "lifeless past": {
-        "s": "1RlqgEBCNfaHMav4mzI4O7",
-        "l": "lifeless%20past",
-        "g": [
-          "dutch post-punk",
-          "post-punk"
-        ]
-      },
-      "vision video": {
-        "s": null,
-        "l": "vision%20video",
-        "g": [
-          "post-punk"
-        ]
-      },
-      "punk": {
-        "s": null,
-        "l": "punk",
-        "g": [
-          "melodic death metal (early)",
-          " glitch",
-          "dubstep",
-          "electronica (later)"
-        ]
-      },
-      "modern victims dancenight": {
-        "s": null,
-        "l": "modern%20victims%20dancenight",
-        "g": [
-          "post-punk"
-        ]
-      },
-      "modern victims dancenight creëert een verfrissend en modern geluid binnen het post genre.": {
-        "s": null,
-        "l": "modern victims dancenight creëert een verfrissend en modern geluid binnen het post genre.",
-        "g": [
-          "post-punk"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-12-13T19:30:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-roodkapje-p-o-box-skapiche/",
-    "title": "Baroeg On Tour @ Roodkapje: P.O.BOX ",
-    "location": "baroeg",
-    "price": 16.5,
-    "shortText": " Skapiche?! FFO: Mad Caddies, Big D And The Kids Table, NOFX.",
-    "longText": "../public/texts/baroeg/dXItcm9vZGthcGplLXAtby1ib3gtc2thcGljaGUv.html",
-    "image": "../public/event-images/baroeg/dXItcm9vZGthcGplLXAtby1ib3gtc2thcGljaGUv",
-    "soldOut": false,
-    "eventGenres": [
-      "punk",
-      "ska"
-    ],
-    "artists": {
-      "mad caddies": {
-        "s": "0cmbbo2sr4w0rrgt3rkvs6",
-        "l": "mad%20caddies",
-        "g": [
-          "ska",
-          "ska punk",
-          "skate punk"
-        ]
-      },
-      "p.o.box": {
-        "s": "47xWB3xTF7N8J4K7gjNgQG",
-        "l": "p.o.box",
-        "g": [
-          "punk",
-          "ska"
-        ]
-      },
-      "skapiche?!": {
-        "s": "2f1mPMpaSZ9Zn25wZpK2jV",
-        "l": "skapiche?!",
-        "g": [
-          "punk",
-          "ska"
-        ]
-      },
-      "skapiche?! ffo: , big d and the kids table, nofx.": {
-        "s": null,
-        "l": "skapiche?! ffo: , big d and the kids table, nofx.",
-        "g": [
-          "punk",
-          "ska"
+          "metalcore",
+          "modern metal",
+          "progressive death"
         ]
       }
     }
@@ -345,14 +195,15 @@
   {
     "start": "2025-03-09T15:00:00",
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-grounds-riffsniffer-presents-planet-of-zeus/",
-    "title": "Baroeg On Tour @Grounds Riffsniffer presents: Planet Of Zeus",
+    "title": "Baroeg On Tour @Grounds: Riffsniffer presents: Planet Of Zeus ",
     "location": "baroeg",
     "price": 16,
-    "shortText": " Deze band is meer onderweg dan dat ze thuis aan de ouzo zitten.",
+    "shortText": " Stonus  +  Hell Valley High Deze band is meer onderweg dan dat ze thuis aan de ouzo zitten.",
     "longText": "../public/texts/baroeg/aWZmZXItcHJlc2VudHMtcGxhbmV0LW9mLXpldXMv.html",
     "image": "../public/event-images/baroeg/aWZmZXItcHJlc2VudHMtcGxhbmV0LW9mLXpldXMv",
     "soldOut": false,
     "eventGenres": [
+      "heavy rock 'n roll",
       "stoner"
     ],
     "artists": {
@@ -365,6 +216,14 @@
           "greek rock"
         ]
       },
+      "hell valley high": {
+        "s": "73S04UDUeClAd4eXSeUPr0",
+        "l": "hell%20valley%20high",
+        "g": [
+          "stoner rock",
+          "space rock"
+        ]
+      },
       "band": {
         "s": null,
         "l": "band",
@@ -373,26 +232,276 @@
           "power metal"
         ]
       },
-      "deze is onderweg dan dat ze thuis aan de ouzo zitten.": {
-        "s": null,
-        "l": "deze is onderweg dan dat ze thuis aan de ouzo zitten.",
+      "stonus": {
+        "s": "6dubhV0h7XuLaho8yFEeVG",
+        "l": "stonus",
         "g": [
+          "stoner rock",
+          "space rock",
+          "sludge metal",
+          "doom metal",
+          "heavy rock 'n roll",
+          "stoner"
+        ]
+      },
+      "stonus deze is onderweg dan dat ze thuis aan de ouzo zitten.": {
+        "s": null,
+        "l": "stonus deze is onderweg dan dat ze thuis aan de ouzo zitten.",
+        "g": [
+          "heavy rock 'n roll",
           "stoner"
         ]
       }
     }
   },
   {
-    "start": "2025-04-20T15:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-musicon-festerfest/",
-    "title": "Baroeg On Tour @Musicon: Festerfest: Obstruktor",
+    "start": "2025-03-16T15:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-soundville-in-the-grip-of-winter-presents-kurb-saatus-bloodcrypt-rectum-stretchers/",
+    "title": "Baroeg On Tour @SoundVille: In The Grip Of Winter presents: Kurb Saatus ",
     "location": "baroeg",
-    "price": null,
-    "shortText": " Anual fest to crush the boundaries between different forms of underground music and to spread the knowledge of its diversity.",
+    "price": 14,
+    "shortText": " Bloodcrypt  +  Rectum Stretchers De tweede editie van In The Grip Of Winter in SoundVille.",
+    "longText": "../public/texts/baroeg/LWJsb29kY3J5cHQtcmVjdHVtLXN0cmV0Y2hlcnMv.html",
+    "image": "../public/event-images/baroeg/LWJsb29kY3J5cHQtcmVjdHVtLXN0cmV0Y2hlcnMv",
+    "soldOut": false,
+    "eventGenres": [
+      "d-beat",
+      "death metal",
+      "goregrind",
+      "hardcore",
+      "melodic death/thrash"
+    ],
+    "artists": {
+      "bloodcrypt": {
+        "s": null,
+        "l": "bloodcrypt",
+        "g": []
+      },
+      "kurb saatus": {
+        "s": "1XPp3Z8sS6EjnIY5IoIRYu",
+        "l": "kurb%20saatus",
+        "g": [
+          "melodic death metal",
+          "melodic death metal",
+          "d-beat",
+          "death metal",
+          "goregrind",
+          "hardcore",
+          "melodic death/thrash"
+        ]
+      },
+      "rectum stretchers": {
+        "s": null,
+        "l": "rectum%20stretchers",
+        "g": [
+          "d-beat",
+          "death metal",
+          "goregrind",
+          "hardcore",
+          "melodic death/thrash"
+        ]
+      },
+      "rectum stretchers de tweede editie van in the grip of winter in soundville.": {
+        "s": null,
+        "l": "rectum%20stretchers%20de%20tweede%20editie%20van%20in%20the%20grip%20of%20winter%20in%20soundville.",
+        "g": [
+          "d-beat",
+          "death metal",
+          "goregrind",
+          "hardcore",
+          "melodic death/thrash"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-22T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-de-beuk-metal-battle-veldslag-west/",
+    "title": "Baroeg On Tour @De Beuk: Metal Battle Veldslag West",
+    "location": "baroeg",
+    "price": 5,
+    "shortText": " Met de winnaars van de voorrondes van Noord-Brabant, Noord-Holland, Zeeland en Zuid-Holland.",
+    "longText": "../public/texts/baroeg/dWstbWV0YWwtYmF0dGxlLXZlbGRzbGFnLXdlc3Qv.html",
+    "image": "../public/event-images/baroeg/dWstbWV0YWwtYmF0dGxlLXZlbGRzbGFnLXdlc3Qv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal"
+    ],
+    "artists": {
+      "battle": {
+        "s": null,
+        "l": "battle",
+        "g": [
+          "black metal"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "veldslag west": {
+        "s": null,
+        "l": "veldslag%20west",
+        "g": [
+          "metal"
+        ]
+      },
+      "met de winnaars van de voorrondes van noord-brabant, noord-holland, zeeland en zuid-holland.": {
+        "s": null,
+        "l": "met%20de%20winnaars%20van%20de%20voorrondes%20van%20noord-brabant,%20noord-holland,%20zeeland%20en%20zuid-holland.",
+        "g": [
+          "metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-23T15:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-roodkapje-riffsniffer-presents-nightstalker-daily-thompson/",
+    "title": "Baroeg On Tour @Roodkapje: Riffsniffer presents: Nightstalker ",
+    "location": "baroeg",
+    "price": 17.5,
+    "shortText": " Daily Thompson  +  Support FFO 1000mods, Monster Magnet, Mos Generator.",
+    "longText": "../public/texts/baroeg/cy1uaWdodHN0YWxrZXItZGFpbHktdGhvbXBzb24v.html",
+    "image": "../public/event-images/baroeg/cy1uaWdodHN0YWxrZXItZGFpbHktdGhvbXBzb24v",
+    "soldOut": false,
+    "eventGenres": [
+      "desert rock",
+      "grunge",
+      "stoner"
+    ],
+    "artists": {
+      "talk": {
+        "s": null,
+        "l": "talk",
+        "g": [
+          "crossover",
+          "hardcore",
+          "thrash metal"
+        ]
+      },
+      "monster magnet": {
+        "s": "4hvwEwrCmGj22uURGVET7Q",
+        "l": "monster%20magnet",
+        "g": [
+          "stoner metal",
+          "stoner rock"
+        ]
+      },
+      "1000mods": {
+        "s": "7EgAHTw2PMP7a1tAEtue89",
+        "l": "1000mods",
+        "g": [
+          "stoner rock",
+          "sludge metal",
+          "space rock",
+          "doom metal",
+          "psychedelic rock"
+        ]
+      },
+      "nightser daily thompson": {
+        "s": null,
+        "l": "nightser daily thompson",
+        "g": [
+          "desert rock",
+          "grunge",
+          "stoner"
+        ]
+      },
+      "daily thompson ffo , , mos generator.": {
+        "s": null,
+        "l": "daily thompson ffo , , mos generator.",
+        "g": [
+          "desert rock",
+          "grunge",
+          "stoner"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-30T16:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-bibelot-power-stage-cult-of-fire-the-great-old-ones-caronte/",
+    "title": "Baroeg On Tour @Bibelot (Power Stage): Cult Of Fire ",
+    "location": "baroeg",
+    "price": 22.5,
+    "shortText": " The Great Old Ones  +  Caronte Baroeg haalt zeer bijzonder schouwspel naar Dordrecht.",
+    "longText": "../public/texts/baroeg/cmUtdGhlLWdyZWF0LW9sZC1vbmVzLWNhcm9udGUv.html",
+    "image": "../public/event-images/baroeg/cmUtdGhlLWdyZWF0LW9sZC1vbmVzLWNhcm9udGUv",
+    "soldOut": false,
+    "eventGenres": [
+      "black",
+      "doom",
+      "post-black"
+    ],
+    "artists": {
+      "cult of fire": {
+        "s": "1GNzgaXdYGtEP5xOqCsdSq",
+        "l": "cult%20of%20fire",
+        "g": [
+          "black metal",
+          "epic black metal",
+          "black",
+          "doom",
+          "post-black"
+        ]
+      },
+      "the great old ones": {
+        "s": "1U6VZQrgQ4CNXbS6FpP0QC",
+        "l": "the%20great%20old%20ones",
+        "g": [
+          "black metal",
+          "doom metal",
+          "post-black metal",
+          "black",
+          "doom",
+          "post-black"
+        ]
+      },
+      "caronte": {
+        "s": "1EsM1ENlZYKKqv4I3NvwNd",
+        "l": "caronte",
+        "g": [
+          "doom metal",
+          "stoner rock",
+          "space rock",
+          "sludge metal",
+          "black metal",
+          "black",
+          "doom",
+          "post-black"
+        ]
+      },
+      "caronte baroeg haalt zeer bijzonder schouwspel naar dordrecht.": {
+        "s": null,
+        "l": "caronte%20baroeg%20haalt%20zeer%20bijzonder%20schouwspel%20naar%20dordrecht.",
+        "g": [
+          "black",
+          "doom",
+          "post-black"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-20T14:30:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-musicon-festerfest/",
+    "title": "Baroeg On Tour @Musicon: Festerfest: Wounded ",
+    "location": "baroeg",
+    "price": 16,
+    "shortText": " Dystopia  +  Mispricks  +  Bent Out Of Shape  +  Braces  +  Obstruktor  +  Dr. Fred's Galactic Commotion  +  Goregnomes  +  DJ's Zot & Rot  +  DJ's Vicious & Delicious  +  DJ Harry Merry  +  NOCX  +   DJ Kalex Annual fest to crush the boundaries between different forms of underground music and to spread the knowledge of its diversity.",
     "longText": "../public/texts/baroeg/ZWctb24tdG91ci1tdXNpY29uLWZlc3RlcmZlc3Qv.html",
     "image": "../public/event-images/baroeg/ZWctb24tdG91ci1tdXNpY29uLWZlc3RlcmZlc3Qv",
     "soldOut": false,
     "eventGenres": [
+      "black",
+      "deathcore",
+      "oi!",
+      "punk",
+      "street punk",
       "thrash metal"
     ],
     "artists": {
@@ -404,11 +513,240 @@
           "metal"
         ]
       },
-      "anual fest to crush the boundaries between different forms of underground music and to spread the knowledge of its diversity.": {
-        "s": null,
-        "l": "anual%20fest%20to%20crush%20the%20boundaries%20between%20different%20forms%20of%20underground%20music%20and%20to%20spread%20the%20knowledge%20of%20its%20diversity.",
+      "gnome": {
+        "s": "6clbqb5cobaxrbi4qvckmo",
+        "l": "gnome",
         "g": [
+          "belgian stoner rock"
+        ]
+      },
+      "nocx": {
+        "s": "1zjfqp1e0qg4kmxldrvi9l",
+        "l": null,
+        "g": [
+          "avantgarde death",
+          "industrial cyber techno",
+          "melodic death/thrash",
+          "punkrock",
+          "rockcovers",
+          "synthwave"
+        ]
+      },
+      "wounded dystopia mispricks bent out of shape": {
+        "s": null,
+        "l": "wounded dystopia mispricks bent out of shape",
+        "g": [
+          "black",
+          "deathcore",
+          "oi!",
+          "punk",
+          "street punk",
           "thrash metal"
+        ]
+      },
+      "braces": {
+        "s": "1oZBET0PBRusndmvbnlz9W",
+        "l": "braces",
+        "g": [
+          "deathcore",
+          "metalcore",
+          "black",
+          "deathcore",
+          "oi!",
+          "punk",
+          "street punk",
+          "thrash metal"
+        ]
+      },
+      "dr. fred's galactic commotion": {
+        "s": null,
+        "l": "dr.%20fred's%20galactic%20commotion",
+        "g": [
+          "black",
+          "deathcore",
+          "oi!",
+          "punk",
+          "street punk",
+          "thrash metal"
+        ]
+      },
+      "gores": {
+        "s": null,
+        "l": "gores",
+        "g": [
+          "black",
+          "deathcore",
+          "oi!",
+          "punk",
+          "street punk",
+          "thrash metal"
+        ]
+      },
+      "dj's zot & rot": {
+        "s": null,
+        "l": "dj's%20zot%20&%20rot",
+        "g": [
+          "black",
+          "deathcore",
+          "oi!",
+          "punk",
+          "street punk",
+          "thrash metal"
+        ]
+      },
+      "dj's vicious & delicious": {
+        "s": null,
+        "l": "dj's%20vicious%20&%20delicious",
+        "g": [
+          "black",
+          "deathcore",
+          "oi!",
+          "punk",
+          "street punk",
+          "thrash metal"
+        ]
+      },
+      "dj harry merry": {
+        "s": null,
+        "l": "dj%20harry%20merry",
+        "g": [
+          "black",
+          "deathcore",
+          "oi!",
+          "punk",
+          "street punk",
+          "thrash metal"
+        ]
+      },
+      "dj kalex": {
+        "s": null,
+        "l": "dj%20kalex",
+        "g": [
+          "black",
+          "deathcore",
+          "oi!",
+          "punk",
+          "street punk",
+          "thrash metal"
+        ]
+      },
+      "dystopia mispricks bent out of shape braces": {
+        "s": null,
+        "l": "dystopia mispricks bent out of shape braces",
+        "g": [
+          "black",
+          "deathcore",
+          "oi!",
+          "punk",
+          "street punk",
+          "thrash metal"
+        ]
+      },
+      "dj kalex annual fest to crush the boundaries between different forms of underground music and to spread the knowledge of its diversity.": {
+        "s": null,
+        "l": "dj%20kalex%20annual%20fest%20to%20crush%20the%20boundaries%20between%20different%20forms%20of%20underground%20music%20and%20to%20spread%20the%20knowledge%20of%20its%20diversity.",
+        "g": [
+          "black",
+          "deathcore",
+          "oi!",
+          "punk",
+          "street punk",
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-15T20:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-rotown-temple-fang/",
+    "title": "Baroeg On Tour @Rotown: Temple Fang",
+    "location": "baroeg",
+    "price": 15,
+    "shortText": "FFO: Alconaut, Weedpecker, King Buffalo.",
+    "longText": "../public/texts/baroeg/ZWctb24tdG91ci1yb3Rvd24tdGVtcGxlLWZhbmcv.html",
+    "image": "../public/event-images/baroeg/ZWctb24tdG91ci1yb3Rvd24tdGVtcGxlLWZhbmcv",
+    "soldOut": false,
+    "eventGenres": [
+      "psychedelic spacerock"
+    ],
+    "artists": {
+      "temple fang": {
+        "s": null,
+        "l": null,
+        "g": [
+          "space rock",
+          "doom",
+          "psych",
+          "heavy psych",
+          "stoner"
+        ]
+      },
+      "king buffalo": {
+        "s": "06d0yfenzgba7xwq79y42r",
+        "l": "king%20buffalo",
+        "g": [
+          "instrumental stoner rock",
+          "psychedelic doom",
+          "rochester ny indie",
+          "stoner metal",
+          "stoner rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-18T15:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-maassilo-wavefest-xii-sad-lovers-giants-spasmodique-desinteresse/",
+    "title": "Baroeg On Tour @Maassilo: Wavefest XII: Sad Lovers & Giants ",
+    "location": "baroeg",
+    "price": 25,
+    "shortText": " Spasmodique  +  Desinteresse Twaalfde editie van Wavefest.",
+    "longText": "../public/texts/baroeg/YW50cy1zcGFzbW9kaXF1ZS1kZXNpbnRlcmVzc2Uv.html",
+    "image": "../public/event-images/baroeg/YW50cy1zcGFzbW9kaXF1ZS1kZXNpbnRlcmVzc2Uv",
+    "soldOut": false,
+    "eventGenres": [
+      "darkwave",
+      "new wave",
+      "post-punk"
+    ],
+    "artists": {
+      "spasm": {
+        "s": "43YYqRi7IDMb1BYolZmy3T",
+        "l": "spasm",
+        "g": [
+          "grindcore",
+          "goregrind"
+        ]
+      },
+      "sad lovers & giants odique": {
+        "s": null,
+        "l": "sad lovers & giants odique",
+        "g": [
+          "darkwave",
+          "new wave",
+          "post-punk"
+        ]
+      },
+      "desinteresse": {
+        "s": "6QEEO0dNssjo13FijeT1W9",
+        "l": "desinteresse",
+        "g": [
+          "darkwave",
+          "post-punk",
+          "cold wave",
+          "deathrock",
+          "darkwave",
+          "new wave",
+          "post-punk"
+        ]
+      },
+      "odique desinteresse twaalfde editie van wavefest.": {
+        "s": null,
+        "l": "odique desinteresse twaalfde editie van wavefest.",
+        "g": [
+          "darkwave",
+          "new wave",
+          "post-punk"
         ]
       }
     }
@@ -419,11 +757,17 @@
     "title": "Baroeg Open Air 2025",
     "location": "baroeg",
     "price": 12.5,
-    "shortText": "Zaterdag 15 september 2025 vindt de zestiende editie van Baroeg Open Air plaats in het Rotterdamse Zuiderpark.",
+    "shortText": "Zaterdag 13 september 2025 vindt de zestiende editie van Baroeg Open Air plaats in het Rotterdamse Zuiderpark.",
     "longText": "../public/texts/baroeg/cm9kdWN0aWUvYmFyb2VnLW9wZW4tYWlyLTIwMjUv.html",
     "image": "../public/event-images/baroeg/cm9kdWN0aWUvYmFyb2VnLW9wZW4tYWlyLTIwMjUv",
     "soldOut": false,
-    "eventGenres": [],
+    "eventGenres": [
+      "black",
+      "electronic",
+      "electronic wave",
+      "hiphop",
+      "thrash"
+    ],
     "artists": {
       "baroeg open air": {
         "s": null,
@@ -433,6 +777,17 @@
           "electronic",
           "metal",
           "punk"
+        ]
+      },
+      "zaterdag 13 september vindt de zestiende editie van plaats in het rotterdamse zuiderpark.": {
+        "s": null,
+        "l": "zaterdag 13 september vindt de zestiende editie van plaats in het rotterdamse zuiderpark.",
+        "g": [
+          "black",
+          "electronic",
+          "electronic wave",
+          "hiphop",
+          "thrash"
         ]
       }
     }

@@ -14,6 +14,13 @@
     "unavailable": null,
     "eventGenres": null,
     "artists": {
+      "battle": {
+        "s": null,
+        "l": "battle",
+        "g": [
+          "black metal"
+        ]
+      },
       "metal": {
         "s": null,
         "l": "metal",
@@ -70,6 +77,17 @@
     "unavailable": null,
     "eventGenres": null,
     "artists": {
+      "nanowar of steel": {
+        "s": "7jw9vF1hFRp1k8dDRNRiC5",
+        "l": "nanowar%20of%20steel",
+        "g": [
+          "power metal",
+          "folk metal",
+          "heavy",
+          "power metal",
+          "hard rock"
+        ]
+      },
       "dynazty": {
         "s": "5deRBvKxJssHVa9n6B7tWV",
         "l": "dynazty",
@@ -81,17 +99,6 @@
           "metal",
           "heavy",
           "power metal, hard rock"
-        ]
-      },
-      "nanowar of steel": {
-        "s": "7jw9vF1hFRp1k8dDRNRiC5",
-        "l": "nanowar%20of%20steel",
-        "g": [
-          "power metal",
-          "folk metal",
-          "heavy",
-          "power metal",
-          "hard rock"
         ]
       }
     }

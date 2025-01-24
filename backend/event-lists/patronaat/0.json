@@ -48,77 +48,208 @@
     }
   },
   {
-    "door": "2025-02-27T20:00:00",
-    "start": "2025-02-27T20:30:00",
-    "venueEventUrl": "https://patronaat.nl/event/mob-27-02-25/",
-    "title": "M.O.B. presents: The Meffs",
+    "door": "2025-02-22T20:00:00",
+    "start": "2025-02-22T20:30:00",
+    "venueEventUrl": "https://patronaat.nl/event/creeperfest-dope-d-o-d-ecocide-sidecity-22-02-25/",
+    "title": "Creeperfest: Dope D.O.D.",
     "location": "patronaat",
-    "price": null,
-    "shortText": "Gratis show met razendsnelle punkrockers",
-    "longText": "../public/texts/patronaat/dHJvbmFhdC5ubC9ldmVudC9tb2ItMjctMDItMjUv.html",
-    "image": "../public/event-images/patronaat/dHJvbmFhdC5ubC9ldmVudC9tb2ItMjctMDItMjUv",
+    "price": 19.5,
+    "shortText": " Ecocide  +  Sidecity  +  Gutslasher Beats en breakdowns!",
+    "longText": "../public/texts/patronaat/by1kLWVjb2NpZGUtc2lkZWNpdHktMjItMDItMjUv.html",
+    "image": "../public/event-images/patronaat/by1kLWVjb2NpZGUtc2lkZWNpdHktMjItMDItMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "the meffs": {
-        "s": "0py1x64i2ewlucppunajry",
-        "l": "the%20meffs",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2025-03-06T19:30:00",
-    "start": "2025-03-06T19:45:00",
-    "venueEventUrl": "https://patronaat.nl/event/3-eyed-kids-support-06-03-25/",
-    "title": "3 Eyed Kids + support",
-    "location": "patronaat",
-    "price": 15,
-    "shortText": "Brute gitaren en indringende drums gemengd met beats en synths",
-    "longText": "../public/texts/patronaat/LzMtZXllZC1raWRzLXN1cHBvcnQtMDYtMDMtMjUv.html",
-    "image": "../public/event-images/patronaat/LzMtZXllZC1raWRzLXN1cHBvcnQtMDYtMDMtMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "3 eyed kids": {
-        "s": "4cmx6rsoa66tynathlh0in",
-        "l": null,
+      "dope d.o.d.": {
+        "s": "64uhlfdukt8hx3rctduien",
+        "l": "dope%20d.o.d.",
         "g": [
-          "metalcore",
-          "progressive"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-14T19:00:00",
-    "start": "2025-03-14T19:30:00",
-    "venueEventUrl": "https://patronaat.nl/event/allt-support-14-03-25/",
-    "title": "Allt + atlas",
-    "location": "patronaat",
-    "price": 18.5,
-    "shortText": "Innovatieve progressive metalcore uit Zweden",
-    "longText": "../public/texts/patronaat/bC9ldmVudC9hbGx0LXN1cHBvcnQtMTQtMDMtMjUv.html",
-    "image": "../public/event-images/patronaat/bC9ldmVudC9hbGx0LXN1cHBvcnQtMTQtMDMtMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "allt": {
-        "s": "6YRr0btzGqfQ5K7r23qjEM",
-        "l": "allt",
-        "g": [
-          "progressive metalcore",
-          "swedish metalcore"
+          "dutch hip hop"
         ]
       },
-      "atlas": {
-        "s": "4cIXcF5axlL9r4CTRCtszo",
-        "l": "atlas",
+      "ecocide": {
+        "s": "3hvm8t0tgxg4w6ftgfthqs",
+        "l": "ecocide",
         "g": [
-          "heavy metal"
+          "dutch death metal",
+          "epic doom"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-03-02T18:30:00",
+    "start": "2025-03-02T19:30:00",
+    "venueEventUrl": "https://patronaat.nl/event/unleash-the-archers-striker-seven-kingdoms-02-03-25/",
+    "title": "Unleash The Archers ",
+    "location": "patronaat",
+    "price": 27.5,
+    "shortText": " Striker  +  Seven Kingdoms Heavy metal gamechangers",
+    "longText": "../public/texts/patronaat/cmlrZXItc2V2ZW4ta2luZ2RvbXMtMDItMDMtMjUv.html",
+    "image": "../public/event-images/patronaat/cmlrZXItc2V2ZW4ta2luZ2RvbXMtMDItMDMtMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "unleash the archers": {
+        "s": "6irKXFXk2sPNmHtKqmrfuU",
+        "l": "unleash%20the%20archers",
+        "g": [
+          "gothic symphonic metal",
+          "melodic metal",
+          "power metal",
+          "symphonic metal",
+          "vancouver metal",
+          "melodic death",
+          "power metal (early)",
+          " power metal (later)"
+        ]
+      },
+      "seven kingdoms": {
+        "s": "0PMYvG0U25tgSi8jQExPAC",
+        "l": "seven%20kingdoms",
+        "g": [
+          "fantasy metal",
+          "melodic metal",
+          "power thrash",
+          "symphonic power metal",
+          "power",
+          "thrash metal"
+        ]
+      },
+      "striker": {
+        "s": "1x9HF6TcMwwfsQffYME3kn",
+        "l": "striker",
+        "g": [
+          "uptempo hardcore",
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-03-04T19:30:00",
+    "start": "2025-03-04T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/caskets-support-04-03-25/",
+    "title": "Caskets + Colorblind",
+    "location": "patronaat",
+    "price": 24.5,
+    "shortText": "Een mix van metal en emo met een toegankelijke, poppy twist",
+    "longText": "../public/texts/patronaat/dmVudC9jYXNrZXRzLXN1cHBvcnQtMDQtMDMtMjUv.html",
+    "image": "../public/event-images/patronaat/dmVudC9jYXNrZXRzLXN1cHBvcnQtMDQtMDMtMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "colorblind": {
+        "s": "3kSDOw6bEMSStOjqLR2kVX",
+        "l": "colorblind",
+        "g": [
+          "groove metal"
+        ]
+      },
+      "caskets": {
+        "s": "2XIbOWDT5vZPW7jNyzdfcK",
+        "l": "caskets",
+        "g": [
+          "metalcore",
+          "post-hardcore",
+          "death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-03-12T18:30:00",
+    "start": "2025-03-12T19:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/rivers-of-nihil-cynic-beyond-creation-daath-12-03-25/",
+    "title": "Rivers of Nihil ",
+    "location": "patronaat",
+    "price": 34.5,
+    "shortText": " Cynic  +  Beyond Creation  +  Dååth Een line-up die de harten van progressieve deathmetalfans een sprongetje doet maken!",
+    "longText": "../public/texts/patronaat/ZXlvbmQtY3JlYXRpb24tZGFhdGgtMTItMDMtMjUv.html",
+    "image": "../public/event-images/patronaat/ZXlvbmQtY3JlYXRpb24tZGFhdGgtMTItMDMtMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "rivers of nihil": {
+        "s": "3UJmyt9ApeZTmOlMvBNGLN",
+        "l": "rivers%20of%20nihil",
+        "g": [
+          "death metal",
+          "progressive metal",
+          "deathcore",
+          "djent",
+          "metal",
+          "melodic death metal",
+          "progressive",
+          "technical death metal"
+        ]
+      },
+      "cynic": {
+        "s": "5nXldeedEas60jZnMi40p4",
+        "l": "cynic",
+        "g": [
+          "progressive metal",
+          "death metal",
+          "djent",
+          "progressive rock",
+          "nwobhm",
+          "heavy metal (early)",
+          " heavy metal (later)"
+        ]
+      },
+      "beyond creation": {
+        "s": "3HBOxN9iagI9Ot1kTHpPX8",
+        "l": "beyond%20creation",
+        "g": [
+          "death metal",
+          "progressive metal",
+          "melodic death metal",
+          "deathcore",
+          "metal",
+          "progressive",
+          "technical death metal"
+        ]
+      },
+      "dååth": {
+        "s": "1zPmAg2AfxmMPKspgUv9JN",
+        "l": "d%C3%A5%C3%A5th",
+        "g": [
+          "death metal",
+          "groove metal",
+          "melodic death metal",
+          "metal",
+          "industrial",
+          "melodic death",
+          "groove metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-03T19:30:00",
+    "start": "2025-04-03T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/rhea-support-03-04-25/",
+    "title": "Rhea + support",
+    "location": "patronaat",
+    "price": 18,
+    "shortText": "Het bewijs dat rock-‘n-roll springlevend is",
+    "longText": "../public/texts/patronaat/bC9ldmVudC9yaGVhLXN1cHBvcnQtMDMtMDQtMjUv.html",
+    "image": "../public/event-images/patronaat/bC9ldmVudC9yaGVhLXN1cHBvcnQtMDMtMDQtMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "rhea": {
+        "s": "3iTqZTjeziB8WtVJeIUrLD",
+        "l": "rhea",
+        "g": [
+          "atmospheric death",
+          "doom metal"
         ]
       }
     }
@@ -188,28 +319,6 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "aborted": {
-        "s": "1XRhUgCyzIdeT8d9KMfeDR",
-        "l": "aborted",
-        "g": [
-          "belgian death metal",
-          "belgian metal",
-          "brutal death metal",
-          "death metal",
-          "deathgrind",
-          "goregrind",
-          "grindcore",
-          "technical death metal",
-          "death metal"
-        ]
-      },
-      "crypta": {
-        "s": "0w1xNkvjKVskWP7GvbiwRB",
-        "l": "crypta",
-        "g": [
-          "death metal"
-        ]
-      },
       "the zenith passage": {
         "s": "55ISuKXdlefU2R5hV3GWnf",
         "l": "the%20zenith%20passage",
@@ -232,6 +341,28 @@
           "slam death metal",
           "slam",
           "brutal death metal"
+        ]
+      },
+      "aborted": {
+        "s": "1XRhUgCyzIdeT8d9KMfeDR",
+        "l": "aborted",
+        "g": [
+          "belgian death metal",
+          "belgian metal",
+          "brutal death metal",
+          "death metal",
+          "deathgrind",
+          "goregrind",
+          "grindcore",
+          "technical death metal",
+          "death metal"
+        ]
+      },
+      "crypta": {
+        "s": "0w1xNkvjKVskWP7GvbiwRB",
+        "l": "crypta",
+        "g": [
+          "death metal"
         ]
       }
     }

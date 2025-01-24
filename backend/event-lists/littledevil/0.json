@@ -24,19 +24,19 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "city riot": {
+        "s": "5A91FYahDG9GH37wuL61rr",
+        "l": "city%20riot",
+        "g": [
+          "hardcore punk"
+        ]
+      },
       "malad": {
         "s": "21fzlwdq72k9w3ozypcxyr",
         "l": null,
         "g": [
           "punk",
           "street punk"
-        ]
-      },
-      "city riot": {
-        "s": "5A91FYahDG9GH37wuL61rr",
-        "l": "city%20riot",
-        "g": [
-          "hardcore punk"
         ]
       }
     }
@@ -53,16 +53,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "echo": {
-        "s": "0fgykf9avljex0l9wt5b8z",
-        "l": "echo",
-        "g": [
-          "alternative rock",
-          "new romantic",
-          "new wave",
-          "permanent wave"
-        ]
-      },
       "acidbait": {
         "s": "2yaxHzLBIPiwA9eRqce2hk",
         "l": "acidbait",
@@ -76,6 +66,16 @@
         "g": [
           "epic",
           "melodic death metal"
+        ]
+      },
+      "echo": {
+        "s": "0fgykf9avljex0l9wt5b8z",
+        "l": "echo",
+        "g": [
+          "alternative rock",
+          "new romantic",
+          "new wave",
+          "permanent wave"
         ]
       }
     }
@@ -123,20 +123,20 @@
         "l": "radeloos///ziedend",
         "g": []
       },
-      "yantras": {
-        "s": "4JUyZMVdrUBchwH8c2asWY",
-        "l": "yantras",
-        "g": [
-          "sludge metal",
-          "stoner rock"
-        ]
-      },
       "noctambulist": {
         "s": "1k7JWDTAwZRGoGg9rCxU2o",
         "l": "noctambulist",
         "g": [
           "black metal",
           "post-black metal"
+        ]
+      },
+      "yantras": {
+        "s": "4JUyZMVdrUBchwH8c2asWY",
+        "l": "yantras",
+        "g": [
+          "sludge metal",
+          "stoner rock"
         ]
       }
     }
@@ -190,6 +190,14 @@
           "hardcore",
           "post-hardcore"
         ]
+      },
+      "rhea": {
+        "s": "3iTqZTjeziB8WtVJeIUrLD",
+        "l": "rhea",
+        "g": [
+          "atmospheric death",
+          "doom metal"
+        ]
       }
     }
   },
@@ -205,11 +213,26 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "battle": {
+        "s": null,
+        "l": "battle",
+        "g": [
+          "black metal"
+        ]
+      },
       "metal": {
         "s": null,
         "l": "metal",
         "g": [
           "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
         ]
       }
     }
