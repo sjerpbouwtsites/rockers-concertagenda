@@ -1,243 +1,401 @@
 [
   {
-    "door": "2025-01-24T19:30:00",
-    "start": "2025-01-24T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/berget-lewis-ft-leif-de-leeuw-band-clubtour-2025/",
-    "title": "Berget Lewis ft. Leif de Leeuw Band – Clubtour 2025",
-    "location": "groeneengel",
-    "price": 28.5,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/Zi1kZS1sZWV1dy1iYW5kLWNsdWJ0b3VyLTIwMjUv.html",
-    "image": "../public/event-images/groeneengel/Zi1kZS1sZWV1dy1iYW5kLWNsdWJ0b3VyLTIwMjUv",
+    "door": "2025-02-18T20:00:00",
+    "start": "2025-02-18T20:00:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/delivery/2447412",
+    "title": "Delivery",
+    "location": "paradiso",
+    "price": 17.5,
+    "shortText": "Garage punk by Australian quintet / Toekomstmuziek",
+    "longText": "../public/texts/paradiso/bmwvZW4vcHJvZ3JhbS9kZWxpdmVyeS8yNDQ3NDEy.html",
+    "image": "../public/event-images/paradiso/bmwvZW4vcHJvZ3JhbS9kZWxpdmVyeS8yNDQ3NDEy",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
+      "delivery": {
+        "s": "44qDh9SR4FYA9V1yb7Amig",
+        "l": "delivery",
         "g": [
-          "heavy",
-          "power metal"
+          "australian post-punk",
+          "grindcore",
+          "death metal"
         ]
       }
     }
   },
   {
-    "door": "2025-01-30T20:30:00",
-    "start": "2025-01-30T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/de-woedende-versie-bambie/",
-    "title": "Moddergat – Koen en Jeroen",
-    "location": "groeneengel",
-    "price": 20,
-    "longText": "../public/texts/groeneengel/bW1hL2RlLXdvZWRlbmRlLXZlcnNpZS1iYW1iaWUv.html",
-    "image": "../public/event-images/groeneengel/bW1hL2RlLXdvZWRlbmRlLXZlcnNpZS1iYW1iaWUv",
-    "soldOut": false,
+    "door": "2025-02-28T20:30:00",
+    "start": "2025-02-28T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/dubioza-kolektiv/2259538",
+    "title": "Dubioza Kolektiv",
+    "location": "paradiso",
+    "price": 27.2,
+    "shortText": "Highly energetic ska band from Bosnia",
+    "longText": "../public/texts/paradiso/b2dyYW0vZHViaW96YS1rb2xla3Rpdi8yMjU5NTM4.html",
+    "image": "../public/event-images/paradiso/b2dyYW0vZHViaW96YS1rb2xla3Rpdi8yMjU5NTM4",
+    "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "modder": {
-        "s": "5lrqzwilzsuyy7mhq4lw4y",
-        "l": "modder",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2025-02-06T19:30:00",
-    "start": "2025-02-06T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/mitch-ryder-band/",
-    "title": "Mitch Ryder & Band",
-    "location": "groeneengel",
-    "price": 25,
-    "longText": "../public/texts/groeneengel/bmwvcHJvZ3JhbW1hL21pdGNoLXJ5ZGVyLWJhbmQv.html",
-    "image": "../public/event-images/groeneengel/bmwvcHJvZ3JhbW1hL21pdGNoLXJ5ZGVyLWJhbmQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
+      "dubioza kolektiv": {
+        "s": "02IFYoziC7CpQRK8fbehUY",
+        "l": "dubioza%20kolektiv",
         "g": [
-          "heavy",
-          "power metal"
+          "balkan brass",
+          "balkan punk",
+          "bosnian indie"
         ]
       }
     }
   },
   {
-    "door": "2025-02-07T19:30:00",
-    "start": "2025-02-07T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/starman-the-dutch-bowie-tribute/",
-    "title": "Starman – the dutch bowie tribute",
-    "location": "groeneengel",
-    "price": 27,
-    "longText": "../public/texts/groeneengel/YXJtYW4tdGhlLWR1dGNoLWJvd2llLXRyaWJ1dGUv.html",
-    "image": "../public/event-images/groeneengel/YXJtYW4tdGhlLWR1dGNoLWJvd2llLXRyaWJ1dGUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-02-15T19:30:00",
-    "start": "2025-02-15T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/physical-graffiti-the-ultimate-led-zeppelin-experience/",
-    "title": "Physical Graffiti – The Ultimate Led Zeppelin Experience",
-    "location": "groeneengel",
-    "price": 27,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/aW1hdGUtbGVkLXplcHBlbGluLWV4cGVyaWVuY2Uv.html",
-    "image": "../public/event-images/groeneengel/aW1hdGUtbGVkLXplcHBlbGluLWV4cGVyaWVuY2Uv",
+    "door": "2025-03-06T20:30:00",
+    "start": "2025-03-06T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/ditz/2407777",
+    "title": "Ditz",
+    "location": "paradiso",
+    "price": 19.7,
+    "shortText": "Brighton five-piece combines post punk and noise rock / Tolhuistuin",
+    "longText": "../public/texts/paradiso/aXNvLm5sL2VuL3Byb2dyYW0vZGl0ei8yNDA3Nzc3.html",
+    "image": "../public/event-images/paradiso/aXNvLm5sL2VuL3Byb2dyYW0vZGl0ei8yNDA3Nzc3",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "physical graffiti": {
-        "s": null,
-        "l": "physical%20graffiti",
-        "g": []
+      "ditz": {
+        "s": "3oskgwx1dqjhidhnhpgbfj",
+        "l": "ditz",
+        "g": [
+          "crank wave",
+          "uk post-punk revival"
+        ]
       }
     }
   },
   {
-    "start": "2025-03-07T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/dana-van-bergen/",
-    "title": "Dana van Bergen",
-    "location": "groeneengel",
-    "price": 8.5,
-    "longText": "../public/texts/groeneengel/Lm5sL3Byb2dyYW1tYS9kYW5hLXZhbi1iZXJnZW4v.html",
-    "image": "../public/event-images/groeneengel/Lm5sL3Byb2dyYW1tYS9kYW5hLXZhbi1iZXJnZW4v",
+    "door": "2025-03-12T19:30:00",
+    "start": "2025-03-12T19:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/chalk/2405176",
+    "title": "Chalk",
+    "location": "paradiso",
+    "price": 15,
+    "shortText": "Belfast electronic/noise rock trio",
+    "longText": "../public/texts/paradiso/c28ubmwvZW4vcHJvZ3JhbS9jaGFsay8yNDA1MTc2.html",
+    "image": "../public/event-images/paradiso/c28ubmwvZW4vcHJvZ3JhbS9jaGFsay8yNDA1MTc2",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "danava": {
-        "s": null,
-        "l": "danava%20(usa)&%c%us",
-        "g": []
+      "chalk": {
+        "s": "3qa9pv6B0dmiBVETLQOCpi",
+        "l": "chalk",
+        "g": [
+          "post-punk",
+          "noise rock"
+        ]
       }
     }
   },
   {
-    "door": "2025-03-21T19:30:00",
-    "start": "2025-03-21T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/jared-grant-support/",
-    "title": "Jared Grant + support",
-    "location": "groeneengel",
+    "door": "2025-03-24T20:30:00",
+    "start": "2025-03-24T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/thus-love/2399147",
+    "title": "Thus love + dream nails",
+    "location": "paradiso",
+    "price": 19.7,
+    "shortText": "Queer post-punk band from Brattleboro / Tolhuistuin",
+    "longText": "../public/texts/paradiso/bC9lbi9wcm9ncmFtL3RodXMtbG92ZS8yMzk5MTQ3.html",
+    "image": "../public/event-images/paradiso/bC9lbi9wcm9ncmFtL3RodXMtbG92ZS8yMzk5MTQ3",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "thus love": {
+        "s": "26hW7zYB4V3PGMPBKoBdgl",
+        "l": "thus%20love",
+        "g": [
+          "american post-punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-05T20:30:00",
+    "start": "2025-04-05T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/snapped-ankles/2437365",
+    "title": "Snapped Ankles",
+    "location": "paradiso",
+    "price": 19.7,
+    "shortText": "Krautrock and post punk from London / Tolhuistuin",
+    "longText": "../public/texts/paradiso/cHJvZ3JhbS9zbmFwcGVkLWFua2xlcy8yNDM3MzY1.html",
+    "image": "../public/event-images/paradiso/cHJvZ3JhbS9zbmFwcGVkLWFua2xlcy8yNDM3MzY1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "snapped ankles": {
+        "s": "4iWOyexPqcvgycdx7mLUcl",
+        "l": "snapped%20ankles",
+        "g": [
+          "post-punk",
+          "krautrock",
+          "space rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-09T19:30:00",
+    "start": "2025-04-09T19:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/ada-oda/2394350",
+    "title": "Ada Oda",
+    "location": "paradiso",
     "price": 17,
-    "longText": "../public/texts/groeneengel/cHJvZ3JhbW1hL2phcmVkLWdyYW50LXN1cHBvcnQv.html",
-    "image": "../public/event-images/groeneengel/cHJvZ3JhbW1hL2phcmVkLWdyYW50LXN1cHBvcnQv",
+    "shortText": "Post-punk with Italian charm",
+    "longText": "../public/texts/paradiso/Lm5sL2VuL3Byb2dyYW0vYWRhLW9kYS8yMzk0MzUw.html",
+    "image": "../public/event-images/paradiso/Lm5sL2VuL3Byb2dyYW0vYWRhLW9kYS8yMzk0MzUw",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
   },
   {
-    "door": "2025-04-04T19:30:00",
-    "start": "2025-04-04T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/fleetwood-mac-gold-dust-women-a-tribute-to-stevie-nicks-christine-mcvie/",
-    "title": "Fleetwood Mac: Gold Dust Women A tribute to Stevie Nicks & Christine McVie",
-    "location": "groeneengel",
-    "price": 27.5,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/LXN0ZXZpZS1uaWNrcy1jaHJpc3RpbmUtbWN2aWUv.html",
-    "image": "../public/event-images/groeneengel/LXN0ZXZpZS1uaWNrcy1jaHJpc3RpbmUtbWN2aWUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-05-09T19:30:00",
-    "start": "2025-05-09T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/joy-division-undercover-closer-to-curtis/",
-    "title": "Joy Division Undercover – Closer To Curtis",
-    "location": "groeneengel",
-    "price": 18.5,
-    "longText": "../public/texts/groeneengel/bi11bmRlcmNvdmVyLWNsb3Nlci10by1jdXJ0aXMv.html",
-    "image": "../public/event-images/groeneengel/bi11bmRlcmNvdmVyLWNsb3Nlci10by1jdXJ0aXMv",
+    "door": "2025-04-13T21:00:00",
+    "start": "2025-04-13T21:00:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/the-ex-release-show-plus-special-guests/2471490",
+    "title": "The Ex - release show plus special guests",
+    "location": "paradiso",
+    "price": 17,
+    "shortText": "Dutch punk band celebrates their new release",
+    "longText": "../public/texts/paradiso/b3ctcGx1cy1zcGVjaWFsLWd1ZXN0cy8yNDcxNDkw.html",
+    "image": "../public/event-images/paradiso/b3ctcGx1cy1zcGVjaWFsLWd1ZXN0cy8yNDcxNDkw",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "joy division": {
+      "the ex": {
         "s": null,
-        "l": "joy%20division",
+        "l": "the%20ex",
         "g": []
       },
-      "undercover": {
-        "s": "5EQMhqNfNmnIIAgwQX1WZ7",
-        "l": "undercover",
+      "plus": {
+        "s": null,
+        "l": "plus",
         "g": [
-          "christian punk"
+          "death",
+          "black metal"
         ]
       }
     }
   },
   {
-    "door": "2025-05-11T15:00:00",
-    "start": "2025-05-11T15:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/ambitus-presents-matteo-myderwyck/",
-    "title": "Ambitus presents: Matteo Myderwyk",
-    "location": "groeneengel",
-    "price": 16,
-    "longText": "../public/texts/groeneengel/dHVzLXByZXNlbnRzLW1hdHRlby1teWRlcnd5Y2sv.html",
-    "image": "../public/event-images/groeneengel/dHVzLXByZXNlbnRzLW1hdHRlby1teWRlcnd5Y2sv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-05-17T19:30:00",
-    "start": "2025-05-17T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/legend-of-springsteen/",
-    "title": "Legend Of Springsteen – Bruce Springsteen Tribute uit de UK.",
-    "location": "groeneengel",
-    "price": 25,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/b2dyYW1tYS9sZWdlbmQtb2Ytc3ByaW5nc3RlZW4v.html",
-    "image": "../public/event-images/groeneengel/b2dyYW1tYS9sZWdlbmQtb2Ytc3ByaW5nc3RlZW4v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-06-07T19:30:00",
-    "start": "2025-06-07T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/elvana/",
-    "title": "Elvana",
-    "location": "groeneengel",
-    "price": 21,
-    "longText": "../public/texts/groeneengel/ZW5lLWVuZ2VsLm5sL3Byb2dyYW1tYS9lbHZhbmEv.html",
-    "image": "../public/event-images/groeneengel/ZW5lLWVuZ2VsLm5sL3Byb2dyYW1tYS9lbHZhbmEv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-11-08T15:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/engel-blues-festival-5-danny-bryant-heath-richville-more-tba/",
-    "title": "Engel Blues Festival 5: Danny Bryant ",
-    "location": "groeneengel",
-    "price": 32.5,
-    "shortText": " HEATH  +  Richville  +  more tba undefined",
-    "longText": "../public/texts/groeneengel/eWFudC1oZWF0aC1yaWNodmlsbGUtbW9yZS10YmEv.html",
-    "image": "../public/event-images/groeneengel/eWFudC1oZWF0aC1yaWNodmlsbGUtbW9yZS10YmEv",
+    "door": "2025-04-14T20:30:00",
+    "start": "2025-04-14T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/fat-dog/2365347",
+    "title": "Fat Dog",
+    "location": "paradiso",
+    "price": 23.2,
+    "shortText": "Manic mix of dance, punk, and klezmer from South London",
+    "longText": "../public/texts/paradiso/Lm5sL2VuL3Byb2dyYW0vZmF0LWRvZy8yMzY1MzQ3.html",
+    "image": "../public/event-images/paradiso/Lm5sL2VuL3Byb2dyYW0vZmF0LWRvZy8yMzY1MzQ3",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "more": {
-        "s": null,
-        "l": "more",
+      "fat dog": {
+        "s": "4dljephxbw7qihx4iwmnee",
+        "l": "fat%20dog",
         "g": [
-          "nwobhm",
-          "heavy metal"
+          "crank wave",
+          "punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-25T20:30:00",
+    "start": "2025-04-25T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/gurriers/2438458",
+    "title": "Gurriers",
+    "location": "paradiso",
+    "price": 20.7,
+    "shortText": "Gritty post-punk by promising Irish five-piece / Tolhuistuin",
+    "longText": "../public/texts/paradiso/bmwvZW4vcHJvZ3JhbS9ndXJyaWVycy8yNDM4NDU4.html",
+    "image": "../public/event-images/paradiso/bmwvZW4vcHJvZ3JhbS9ndXJyaWVycy8yNDM4NDU4",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "gurriers": {
+        "s": "0bPAi2zCrxUrPBREWdetZ5",
+        "l": "gurriers",
+        "g": [
+          "crank wave",
+          "irish post-punk",
+          "irish shoegaze"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-29T20:30:00",
+    "start": "2025-04-29T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/motorpsycho/2432631",
+    "title": "Motorpsycho",
+    "location": "paradiso",
+    "price": 34.8,
+    "shortText": "Innovative Norwegian rock duo / Tolhuistuin",
+    "longText": "../public/texts/paradiso/ZW4vcHJvZ3JhbS9tb3RvcnBzeWNoby8yNDMyNjMx.html",
+    "image": "../public/event-images/paradiso/ZW4vcHJvZ3JhbS9tb3RvcnBzeWNoby8yNDMyNjMx",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "motorpsycho": {
+        "s": "2bniajyl3hfcuqbqqhpn4t",
+        "l": "motorpsycho",
+        "g": [
+          "jazz metal",
+          "norwegian alternative rock",
+          "norwegian experimental",
+          "norwegian prog",
+          "norwegian psychedelic",
+          "norwegian punk",
+          "norwegian rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-03T20:30:00",
+    "start": "2025-05-03T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/wodan-boys/2445029",
+    "title": "Wodan Boys",
+    "location": "paradiso",
+    "price": 20.7,
+    "shortText": "Rattling rock songs from The Hague foursome / Tolhuistuin",
+    "longText": "../public/texts/paradiso/L2VuL3Byb2dyYW0vd29kYW4tYm95cy8yNDQ1MDI5.html",
+    "image": "../public/event-images/paradiso/L2VuL3Byb2dyYW0vd29kYW4tYm95cy8yNDQ1MDI5",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "wodan boys": {
+        "s": "0kmkbibevmq4luqquahdmr",
+        "l": "wodan%20boys",
+        "g": [
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-15T22:00:00",
+    "start": "2025-05-15T22:00:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/equal-idiots/2402701",
+    "title": "Equal Idiots",
+    "location": "paradiso",
+    "price": 14.5,
+    "shortText": "Belgian garage-rock duo",
+    "longText": "../public/texts/paradiso/bi9wcm9ncmFtL2VxdWFsLWlkaW90cy8yNDAyNzAx.html",
+    "image": "../public/event-images/paradiso/bi9wcm9ncmFtL2VxdWFsLWlkaW90cy8yNDAyNzAx",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "equal idiots": {
+        "s": "4nljEo4gnUFgczxjNt5KOR",
+        "l": "equal%20idiots",
+        "g": [
+          "belgian punk",
+          "belgian rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-18T20:30:00",
+    "start": "2025-05-18T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/osees/2413436",
+    "title": "OSEES + Psychic Graveyard",
+    "location": "paradiso",
+    "price": 27.2,
+    "shortText": "Frantic rock machine",
+    "longText": "../public/texts/paradiso/c28ubmwvZW4vcHJvZ3JhbS9vc2Vlcy8yNDEzNDM2.html",
+    "image": "../public/event-images/paradiso/c28ubmwvZW4vcHJvZ3JhbS9vc2Vlcy8yNDEzNDM2",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "psychic graveyard": {
+        "s": "4i09yoyjd3v14wcaldfn3b",
+        "l": "psychic%20graveyard",
+        "g": [
+          "noise punk",
+          "noise rock",
+          "synth punk"
+        ]
+      },
+      "osees": {
+        "s": "0Ynh5WKqwbdYqJUpVpfEGS",
+        "l": "osees",
+        "g": [
+          "psychedelic rock",
+          "garage rock",
+          "noise rock",
+          "krautrock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-20T20:00:00",
+    "start": "2025-05-20T20:00:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/foxing/2453888",
+    "title": "Foxing",
+    "location": "paradiso",
+    "price": 21.7,
+    "shortText": "From raw noiserock to intimate bedroom experiments / Doka",
+    "longText": "../public/texts/paradiso/by5ubC9lbi9wcm9ncmFtL2ZveGluZy8yNDUzODg4.html",
+    "image": "../public/event-images/paradiso/by5ubC9lbi9wcm9ncmFtL2ZveGluZy8yNDUzODg4",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "foxing": {
+        "s": "2dfxY7YDuYCUtWFzWTS6IR",
+        "l": "foxing",
+        "g": [
+          "midwest emo",
+          "emo",
+          "math rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-12-11T20:30:00",
+    "start": "2025-12-11T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/clutch/2438454",
+    "title": "Clutch",
+    "location": "paradiso",
+    "price": 37.8,
+    "shortText": "Sensational Heavy Rock band from the USA",
+    "longText": "../public/texts/paradiso/by5ubC9lbi9wcm9ncmFtL2NsdXRjaC8yNDM4NDU0.html",
+    "image": "../public/event-images/paradiso/by5ubC9lbi9wcm9ncmFtL2NsdXRjaC8yNDM4NDU0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "clutch": {
+        "s": "161AC1AVRkIGIMxyj5djFQ",
+        "l": "clutch",
+        "g": [
+          "stoner rock",
+          "sludge metal",
+          "thrash metal",
+          "crossover"
         ]
       }
     }
