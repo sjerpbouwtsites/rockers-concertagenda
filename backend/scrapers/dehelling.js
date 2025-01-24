@@ -78,7 +78,7 @@ dehellingScraper.mainPage = async function () {
 
           res.soldOut = !!eventEl.querySelector('.c-event-card__banner--uitverkocht');
 
-          res.venueEventUrl = eventEl.href;
+          res.venueEventUrl = eventEl.querySelector('a').href;
           res.shortText = eventEl.querySelector('.c-event-card__subtitle')?.textContent.trim() ?? '';
 
           return res;

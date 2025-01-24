@@ -37,11 +37,11 @@ export const workerConfig = {
   //   forceSet: 1,
   // },
   
-  dehelling: {
-    workerCount: 1,
-    workerConcurrent: 1,
-    forceSet: 2,
-  },
+  // dehelling: {
+  //   workerCount: 1,
+  //   workerConcurrent: 1,
+  //   forceSet: 2,
+  // },
   // doornroosje: {
   //   workerCount: 3,
   //   workerConcurrent: 1,
