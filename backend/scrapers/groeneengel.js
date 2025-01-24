@@ -5,7 +5,13 @@ import longTextSocialsIframes from './longtext/groeneengel.js';
 import getImage from './gedeeld/image.js';
 import {
   mapToShortDate,
+  mapToStartDate,
+  mapToDoorTime,
+  mapToStartTime,
+  combineDoorTimeStartDate,
+  combineStartTimeStartDate,
 } from './gedeeld/datums.js';
+
 import workTitleAndSlug from './gedeeld/slug.js';
 import terms from '../artist-db/store/terms.js';
 
@@ -29,7 +35,7 @@ const scraper = new AbstractScraper({
     }, 
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
-      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation', 'failure'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
@@ -70,20 +76,7 @@ scraper.mainPage = async function () {
           !!eventEl.querySelector('.bottom-bar')?.textContent.match(/uitverkocht|sold\s?out/i) ??
           null;
 
-        res.startDateMatch =
-          eventEl
-            .querySelector('.date-label')
-            ?.textContent.match(/\s(?<datum>\d{1,2}\s\w+\s\d\d\d\d)/) ?? null;
-        if (res.startDateMatch && res.startDateMatch?.groups) {
-          res.startDateRauw = res.startDateMatch.groups.datum;
-        }
-
-        res.dag = res.startDateMatch.groups.datum.split(' ')[0].padStart(2, '0');
-        res.maand = res.startDateMatch.groups.datum.split(' ')[1];
-        res.maand = months[res.maand];
-        res.jaar = res.startDateMatch.groups.datum.split(' ')[2];
-
-        res.startDate = `${res.jaar}-${res.maand}-${res.dag}`;
+        res.mapToStartDate = eventEl.querySelector('.date-label')?.textContent.trim().toLowerCase() ?? '';
 
         return res;
       }),
@@ -91,6 +84,7 @@ scraper.mainPage = async function () {
   );
 
   baseEvents = baseEvents
+    .map((event) => mapToStartDate(event, 'dag-maandNaam', this.months))
     .map(mapToShortDate)
     .map(this.isMusicEventCorruptedMapper)
     .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
@@ -116,7 +110,7 @@ scraper.mainPage = async function () {
 scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
-  const pageInfo = await page.evaluate(
+  let pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ event }) => {
       const res = {
@@ -124,45 +118,24 @@ scraper.singlePage = async function ({ page, event }) {
         errors: [],
       };
 
-      let startEl;
-      let deurEl;
-      document.querySelectorAll('.time-tag ~ *').forEach((tijdEl) => {
-        if (tijdEl.textContent.toLowerCase().includes('aanvang')) {
-          startEl = tijdEl;
-        }
-        if (tijdEl.textContent.toLowerCase().includes('open')) {
-          deurEl = tijdEl;
-        }
+      document.querySelectorAll('.label').forEach((label) => {
+        const t = label.textContent.trim().toLowerCase().replaceAll(/\W/g, '');
+        label.parentNode.classList.add(t);
       });
 
-      if (!startEl) {
-        res.errors.push({
-          error: new Error('geen tijd el gevonden'),
-        });
-      }
-
-      res.startTijdMatch = startEl.textContent.match(/\d\d:\d\d/);
-      if (deurEl) res.deurTijdMatch = deurEl.textContent.match(/\d\d:\d\d/);
-      if (Array.isArray(res.startTijdMatch)) res.startTijd = res.startTijdMatch[0];
-      if (Array.isArray(res.deurTijdMatch)) res.deurTijd = res.deurTijdMatch[0];
-
-      try {
-        res.start = `${event.startDate}T${res.startTijd}:00`;
-        res.door = !res?.deurTijd ? null : `${event.startDate}T${res.deurTijd}:00`;
-      } catch (error) {
-        res.errors.push({
-          error,
-          remarks: `date ${event.startDate} time ${res.startTijd}`,
-          toDebug: {
-            startElT: startEl.textContent,
-          },
-        });
-      }
-
+      res.mapToDoorTime = document.querySelector('.zaalopen')?.textContent.trim().toLowerCase();
+      res.mapToStartTime = document.querySelector('.aanvang')?.textContent.trim().toLowerCase();
+    
       return res;
     },
     { event },
   );
+
+  pageInfo.startDate = event.startDate;
+  pageInfo = mapToStartTime(pageInfo);
+  pageInfo = mapToDoorTime(pageInfo);
+  pageInfo = combineStartTimeStartDate(pageInfo);
+  pageInfo = combineDoorTimeStartDate(pageInfo);
 
   const imageRes = await getImage({
     _this: this,
@@ -170,7 +143,7 @@ scraper.singlePage = async function ({ page, event }) {
     workerData,
     event,
     pageInfo,
-    selectors: ['.img-wrapper img'],
+    selectors: ['.inner-wrapper img'],
     mode: 'image-src',
   });
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
@@ -180,7 +153,7 @@ scraper.singlePage = async function ({ page, event }) {
     page,
     event,
     pageInfo,
-    selectors: ['.main-ticket-info'],
+    selectors: ['.entree'],
   });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;

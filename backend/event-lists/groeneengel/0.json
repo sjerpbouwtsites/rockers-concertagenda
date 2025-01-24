@@ -1,254 +1,5 @@
 [
   {
-    "door": "2024-10-11T19:30:00",
-    "start": "2024-10-11T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/bang-your-head/",
-    "title": "Bang your head – Live 90’s Rock Night – Laatste Tickets!",
-    "location": "groeneengel",
-    "price": 12.5,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/bC5ubC9wcm9ncmFtbWEvYmFuZy15b3VyLWhlYWQv.html",
-    "image": "../public/event-images/groeneengel/bC5ubC9wcm9ncmFtbWEvYmFuZy15b3VyLWhlYWQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-10-12T19:30:00",
-    "start": "2024-10-12T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/abel/",
-    "title": "Abel + loen",
-    "location": "groeneengel",
-    "price": 25,
-    "longText": "../public/texts/groeneengel/cm9lbmUtZW5nZWwubmwvcHJvZ3JhbW1hL2FiZWwv.html",
-    "image": "../public/event-images/groeneengel/cm9lbmUtZW5nZWwubmwvcHJvZ3JhbW1hL2FiZWwv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "abel": {
-        "s": "0JRVrJQNnlSl10wEsioxOJ",
-        "l": "abel",
-        "g": [
-          "stoner metal",
-          "rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-15T19:30:00",
-    "start": "2024-10-15T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/feestprogramma/",
-    "title": "25 jaar Groene Engel: Rattlesnake Shake  – Gratis entree",
-    "location": "groeneengel",
-    "price": 15,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/bC5ubC9wcm9ncmFtbWEvZmVlc3Rwcm9ncmFtbWEv.html",
-    "image": "../public/event-images/groeneengel/bC5ubC9wcm9ncmFtbWEvZmVlc3Rwcm9ncmFtbWEv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-10-18T19:30:00",
-    "start": "2024-10-18T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/robin-borneman/",
-    "title": "Robin Borneman + Merlijn Nash",
-    "location": "groeneengel",
-    "price": 19,
-    "longText": "../public/texts/groeneengel/bC5ubC9wcm9ncmFtbWEvcm9iaW4tYm9ybmVtYW4v.html",
-    "image": "../public/event-images/groeneengel/bC5ubC9wcm9ncmFtbWEvcm9iaW4tYm9ybmVtYW4v",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-10-24T19:30:00",
-    "start": "2024-10-24T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/witch-club-satan/",
-    "title": "Witch Club Satan + Alkahest",
-    "location": "groeneengel",
-    "price": 14,
-    "longText": "../public/texts/groeneengel/bmwvcHJvZ3JhbW1hL3dpdGNoLWNsdWItc2F0YW4v.html",
-    "image": "../public/event-images/groeneengel/bmwvcHJvZ3JhbW1hL3dpdGNoLWNsdWItc2F0YW4v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "witch club satan": {
-        "s": "395rqoVSDgQIF7fzRfZIoy",
-        "l": "witch%20club%20satan",
-        "g": [
-          "norwegian black metal",
-          "black metal"
-        ]
-      },
-      "alkahest": {
-        "s": "53vjMkvxWt9UZAXlnwsPrj",
-        "l": "alkahest",
-        "g": [
-          "atmospheric sludge",
-          "doom metal",
-          "post-rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-30T19:30:00",
-    "start": "2024-11-30T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/new-cool-collective/",
-    "title": "New Cool Collective",
-    "location": "groeneengel",
-    "price": 22,
-    "longText": "../public/texts/groeneengel/cHJvZ3JhbW1hL25ldy1jb29sLWNvbGxlY3RpdmUv.html",
-    "image": "../public/event-images/groeneengel/cHJvZ3JhbW1hL25ldy1jb29sLWNvbGxlY3RpdmUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-12-14T19:15:00",
-    "start": "2024-12-14T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/ac-dc-uk-highway-to-hell-tour-special-guest-meatallica/",
-    "title": "AC/DC UK – Highway To Hell Tour ",
-    "location": "groeneengel",
-    "price": 29,
-    "shortText": " Special Guest: Meatallica undefined",
-    "longText": "../public/texts/groeneengel/dG91ci1zcGVjaWFsLWd1ZXN0LW1lYXRhbGxpY2Ev.html",
-    "image": "../public/event-images/groeneengel/dG91ci1zcGVjaWFsLWd1ZXN0LW1lYXRhbGxpY2Ev",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-12-14T22:30:00",
-    "start": "2024-12-14T22:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/trail-of-mystery-aftershow-ac-dc-uk/",
-    "title": "Trail of Mystery – Aftershow AC/DC UK",
-    "location": "groeneengel",
-    "price": 14,
-    "longText": "../public/texts/groeneengel/b2YtbXlzdGVyeS1hZnRlcnNob3ctYWMtZGMtdWsv.html",
-    "image": "../public/event-images/groeneengel/b2YtbXlzdGVyeS1hZnRlcnNob3ctYWMtZGMtdWsv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ac/dc uk": {
-        "s": null,
-        "l": "ac/dc%20uk",
-        "g": [
-          "hard rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-29T15:30:00",
-    "start": "2024-12-29T16:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/folkcafe-sessioneers/",
-    "title": "Folkcafé: Sessioneers",
-    "location": "groeneengel",
-    "price": 29,
-    "longText": "../public/texts/groeneengel/cm9ncmFtbWEvZm9sa2NhZmUtc2Vzc2lvbmVlcnMv.html",
-    "image": "../public/event-images/groeneengel/cm9ncmFtbWEvZm9sa2NhZmUtc2Vzc2lvbmVlcnMv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-04T19:30:00",
-    "start": "2025-01-04T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/camp-4-hideous-videocall/",
-    "title": "Camp. 4 Hideous + Hiqpy + Videocall",
-    "location": "groeneengel",
-    "price": 10,
-    "longText": "../public/texts/groeneengel/YW1tYS9jYW1wLTQtaGlkZW91cy12aWRlb2NhbGwv.html",
-    "image": "../public/event-images/groeneengel/YW1tYS9jYW1wLTQtaGlkZW91cy12aWRlb2NhbGwv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "hideous": {
-        "s": "4xopu6j3nq37jfiawa4ysh",
-        "l": "hideous",
-        "g": [
-          "brutal death metal",
-          "deathgrind",
-          "italian death metal",
-          "technical brutal death metal",
-          "technical death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-12T15:00:00",
-    "start": "2025-01-12T15:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/benefietconcert-christian-gilissen/",
-    "title": "Benefietconcert Christian Gilissen voor Alzheimer Nederland",
-    "location": "groeneengel",
-    "price": 11,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/aWV0Y29uY2VydC1jaHJpc3RpYW4tZ2lsaXNzZW4v.html",
-    "image": "../public/event-images/groeneengel/aWV0Y29uY2VydC1jaHJpc3RpYW4tZ2lsaXNzZW4v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-17T19:30:00",
-    "start": "2025-01-17T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/ronnie-james-dio-the-memorial-concert/",
-    "title": "Ronnie James DIO – The Memorial Concert",
-    "location": "groeneengel",
-    "price": 24,
-    "longText": "../public/texts/groeneengel/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv.html",
-    "image": "../public/event-images/groeneengel/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ronnie james dio": {
-        "s": "4M3c7tg4BzLQ5pIOupZL65",
-        "l": "ronnie%20james%20dio",
-        "g": [
-          "hard rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-17T22:00:00",
-    "start": "2025-01-17T22:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/foxy-venus-aftershow-ronnie-james-dio/",
-    "title": "Foxy Venus – Aftershow Ronnie James DIO",
-    "location": "groeneengel",
-    "price": 17,
-    "longText": "../public/texts/groeneengel/dXMtYWZ0ZXJzaG93LXJvbm5pZS1qYW1lcy1kaW8v.html",
-    "image": "../public/event-images/groeneengel/dXMtYWZ0ZXJzaG93LXJvbm5pZS1qYW1lcy1kaW8v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ronnie james dio": {
-        "s": "4M3c7tg4BzLQ5pIOupZL65",
-        "l": "ronnie%20james%20dio",
-        "g": [
-          "hard rock"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-01-24T19:30:00",
     "start": "2025-01-24T20:00:00",
     "venueEventUrl": "https://www.groene-engel.nl/programma/berget-lewis-ft-leif-de-leeuw-band-clubtour-2025/",
@@ -273,18 +24,24 @@
     }
   },
   {
-    "door": "2025-01-31T22:00:00",
-    "start": "2025-01-31T22:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/black-smoke-brigade-aftershow-wild-romance/",
-    "title": "Black Smoke Brigade – Aftershow Wild Romance",
+    "door": "2025-01-30T20:30:00",
+    "start": "2025-01-30T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/de-woedende-versie-bambie/",
+    "title": "Moddergat – Koen en Jeroen",
     "location": "groeneengel",
-    "price": 31,
-    "longText": "../public/texts/groeneengel/cmlnYWRlLWFmdGVyc2hvdy13aWxkLXJvbWFuY2Uv.html",
-    "image": "../public/event-images/groeneengel/cmlnYWRlLWFmdGVyc2hvdy13aWxkLXJvbWFuY2Uv",
+    "price": 20,
+    "longText": "../public/texts/groeneengel/bW1hL2RlLXdvZWRlbmRlLXZlcnNpZS1iYW1iaWUv.html",
+    "image": "../public/event-images/groeneengel/bW1hL2RlLXdvZWRlbmRlLXZlcnNpZS1iYW1iaWUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "modder": {
+        "s": "5lrqzwilzsuyy7mhq4lw4y",
+        "l": "modder",
+        "g": []
+      }
+    }
   },
   {
     "door": "2025-02-06T19:30:00",
@@ -345,6 +102,25 @@
     }
   },
   {
+    "start": "2025-03-07T20:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/dana-van-bergen/",
+    "title": "Dana van Bergen",
+    "location": "groeneengel",
+    "price": 8.5,
+    "longText": "../public/texts/groeneengel/Lm5sL3Byb2dyYW1tYS9kYW5hLXZhbi1iZXJnZW4v.html",
+    "image": "../public/event-images/groeneengel/Lm5sL3Byb2dyYW1tYS9kYW5hLXZhbi1iZXJnZW4v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "danava": {
+        "s": null,
+        "l": "danava%20(usa)&%c%us",
+        "g": []
+      }
+    }
+  },
+  {
     "door": "2025-03-21T19:30:00",
     "start": "2025-03-21T20:00:00",
     "venueEventUrl": "https://www.groene-engel.nl/programma/jared-grant-support/",
@@ -353,20 +129,6 @@
     "price": 17,
     "longText": "../public/texts/groeneengel/cHJvZ3JhbW1hL2phcmVkLWdyYW50LXN1cHBvcnQv.html",
     "image": "../public/event-images/groeneengel/cHJvZ3JhbW1hL2phcmVkLWdyYW50LXN1cHBvcnQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-03-23T14:30:00",
-    "start": "2025-03-23T15:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/drumpraat-on-tour-met-cesar-zuiderwijk/",
-    "title": "Drumpraat On Tour: met Cesar Zuiderwijk",
-    "location": "groeneengel",
-    "price": 25,
-    "longText": "../public/texts/groeneengel/LW9uLXRvdXItbWV0LWNlc2FyLXp1aWRlcndpamsv.html",
-    "image": "../public/event-images/groeneengel/LW9uLXRvdXItbWV0LWNlc2FyLXp1aWRlcndpamsv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -388,19 +150,31 @@
     "artists": {}
   },
   {
-    "door": "2025-05-02T19:30:00",
-    "start": "2025-05-02T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/ida-nielsen-the-funkbots-voormalig-protege-van-prince/",
-    "title": "Ida Nielsen & The Funkbots – Voormalig protegé van Prince",
+    "door": "2025-05-09T19:30:00",
+    "start": "2025-05-09T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/joy-division-undercover-closer-to-curtis/",
+    "title": "Joy Division Undercover – Closer To Curtis",
     "location": "groeneengel",
-    "price": 29,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/LXZvb3JtYWxpZy1wcm90ZWdlLXZhbi1wcmluY2Uv.html",
-    "image": "../public/event-images/groeneengel/LXZvb3JtYWxpZy1wcm90ZWdlLXZhbi1wcmluY2Uv",
+    "price": 18.5,
+    "longText": "../public/texts/groeneengel/bi11bmRlcmNvdmVyLWNsb3Nlci10by1jdXJ0aXMv.html",
+    "image": "../public/event-images/groeneengel/bi11bmRlcmNvdmVyLWNsb3Nlci10by1jdXJ0aXMv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "joy division": {
+        "s": null,
+        "l": "joy%20division",
+        "g": []
+      },
+      "undercover": {
+        "s": "5EQMhqNfNmnIIAgwQX1WZ7",
+        "l": "undercover",
+        "g": [
+          "christian punk"
+        ]
+      }
+    }
   },
   {
     "door": "2025-05-11T15:00:00",
@@ -419,13 +193,13 @@
   {
     "door": "2025-05-17T19:30:00",
     "start": "2025-05-17T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/legend-of-springsteen-bruce-springsteen-tribute-uit-de-uk/",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/legend-of-springsteen/",
     "title": "Legend Of Springsteen – Bruce Springsteen Tribute uit de UK.",
     "location": "groeneengel",
     "price": 25,
     "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/c3ByaW5nc3RlZW4tdHJpYnV0ZS11aXQtZGUtdWsv.html",
-    "image": "../public/event-images/groeneengel/c3ByaW5nc3RlZW4tdHJpYnV0ZS11aXQtZGUtdWsv",
+    "longText": "../public/texts/groeneengel/b2dyYW1tYS9sZWdlbmQtb2Ytc3ByaW5nc3RlZW4v.html",
+    "image": "../public/event-images/groeneengel/b2dyYW1tYS9sZWdlbmQtb2Ytc3ByaW5nc3RlZW4v",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -444,5 +218,28 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "start": "2025-11-08T15:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/engel-blues-festival-5-danny-bryant-heath-richville-more-tba/",
+    "title": "Engel Blues Festival 5: Danny Bryant ",
+    "location": "groeneengel",
+    "price": 32.5,
+    "shortText": " HEATH  +  Richville  +  more tba undefined",
+    "longText": "../public/texts/groeneengel/eWFudC1oZWF0aC1yaWNodmlsbGUtbW9yZS10YmEv.html",
+    "image": "../public/event-images/groeneengel/eWFudC1oZWF0aC1yaWNodmlsbGUtbW9yZS10YmEv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "more": {
+        "s": null,
+        "l": "more",
+        "g": [
+          "nwobhm",
+          "heavy metal"
+        ]
+      }
+    }
   }
 ]

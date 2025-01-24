@@ -1,225 +1,31 @@
 [
   {
-    "door": "2024-10-11T18:30:00",
-    "start": "2024-10-11T19:00:00",
-    "end": "2024-10-11T23:00:00",
-    "venueEventUrl": "https://iduna.nl/agenda/kamelot/",
-    "title": "Kamelot • Charlotte • Ad Infinitum",
-    "location": "iduna",
-    "price": 18,
-    "shortText": null,
-    "longText": "../public/texts/iduna/dHBzOi8vaWR1bmEubmwvYWdlbmRhL2thbWVsb3Qv.html",
-    "image": "../public/event-images/iduna/dHBzOi8vaWR1bmEubmwvYWdlbmRhL2thbWVsb3Qv",
-    "soldOut": true,
-    "unavailable": null,
-    "eventGenres": null,
-    "artists": {
-      "ad infinitum": {
-        "s": "2X3qFQFHkm1sOGo5ppIoSD",
-        "l": "ad%20infinitum",
-        "g": [
-          "gothic symphonic metal",
-          "melodic metal",
-          "slayer",
-          "symphonic metal",
-          "symphonic metal",
-          "rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-17T20:00:00",
-    "start": "2024-10-17T20:30:00",
-    "end": "2024-10-17T23:00:00",
-    "venueEventUrl": "https://iduna.nl/agenda/eleine/",
-    "title": "EleineWe shall remain tour",
-    "location": "iduna",
-    "price": 20,
-    "shortText": null,
-    "longText": "../public/texts/iduna/dHRwczovL2lkdW5hLm5sL2FnZW5kYS9lbGVpbmUv.html",
-    "image": "../public/event-images/iduna/dHRwczovL2lkdW5hLm5sL2FnZW5kYS9lbGVpbmUv",
-    "soldOut": false,
-    "unavailable": null,
-    "eventGenres": null,
-    "artists": {
-      "eleine": {
-        "s": "2L2rV1gDa17HwFcFCWBIAx",
-        "l": "eleine",
-        "g": [
-          "gothic symphonic metal",
-          "slayer",
-          "symphonic metal",
-          "symphonic metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-26T14:00:00",
-    "start": "2024-10-26T14:15:00",
-    "end": "2024-10-26T17:00:00",
-    "venueEventUrl": "https://iduna.nl/agenda/hunekopfestival-lollyfretters/",
-    "title": "Hûnekopfestival -Lollyfretters",
-    "location": "iduna",
-    "price": 14,
-    "shortText": null,
-    "longText": "../public/texts/iduna/aHVuZWtvcGZlc3RpdmFsLWxvbGx5ZnJldHRlcnMv.html",
-    "image": "../public/event-images/iduna/aHVuZWtvcGZlc3RpdmFsLWxvbGx5ZnJldHRlcnMv",
-    "soldOut": true,
-    "unavailable": null,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-10-26T20:00:00",
-    "start": "2024-10-26T20:30:00",
-    "end": "2024-10-26T01:30:00",
-    "venueEventUrl": "https://iduna.nl/agenda/hunekopfestival/",
-    "title": "Hûnekop-festival",
-    "location": "iduna",
-    "price": 20,
-    "shortText": null,
-    "longText": "../public/texts/iduna/dW5hLm5sL2FnZW5kYS9odW5la29wZmVzdGl2YWwv.html",
-    "image": "../public/event-images/iduna/dW5hLm5sL2FnZW5kYS9odW5la29wZmVzdGl2YWwv",
-    "soldOut": true,
-    "unavailable": null,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-11-09T20:00:00",
-    "start": "2024-11-09T20:30:00",
-    "end": "2024-11-09T23:00:00",
-    "venueEventUrl": "https://iduna.nl/agenda/the-iron-maidens/",
-    "title": "The Iron Maidens",
-    "location": "iduna",
-    "price": 20,
-    "shortText": null,
-    "longText": "../public/texts/iduna/bmEubmwvYWdlbmRhL3RoZS1pcm9uLW1haWRlbnMv.html",
-    "image": "../public/event-images/iduna/bmEubmwvYWdlbmRhL3RoZS1pcm9uLW1haWRlbnMv",
-    "soldOut": false,
-    "unavailable": null,
-    "eventGenres": null,
-    "artists": {
-      "the iron maidens": {
-        "s": null,
-        "l": null,
-        "g": [
-          "heavy metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-15T20:00:00",
-    "start": "2024-11-15T20:30:00",
-    "end": "2024-11-15T23:00:00",
-    "venueEventUrl": "https://iduna.nl/agenda/ramones-50th-3-tributes-havana-affair-rumbones-the-brats/",
-    "title": "Ramones 50th& 3 Tributes",
-    "location": "iduna",
-    "price": 20,
-    "shortText": null,
-    "longText": "../public/texts/iduna/YW5hLWFmZmFpci1ydW1ib25lcy10aGUtYnJhdHMv.html",
-    "image": "../public/event-images/iduna/YW5hLWFmZmFpci1ydW1ib25lcy10aGUtYnJhdHMv",
-    "soldOut": false,
-    "unavailable": null,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-12-01T15:00:00",
-    "start": "2024-12-01T15:30:00",
-    "end": "2024-12-01T18:00:00",
-    "venueEventUrl": "https://iduna.nl/agenda/pro-pain/",
-    "title": "Pro-Pain",
+    "door": "2025-01-26T15:00:00",
+    "start": "2025-01-26T15:30:00",
+    "end": "2025-01-26T19:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/metal-battle-friesland-metal-market/",
+    "title": "Metal Battle Friesland& Metal Market",
     "location": "iduna",
     "price": 15,
     "shortText": null,
-    "longText": "../public/texts/iduna/cHM6Ly9pZHVuYS5ubC9hZ2VuZGEvcHJvLXBhaW4v.html",
-    "image": "../public/event-images/iduna/cHM6Ly9pZHVuYS5ubC9hZ2VuZGEvcHJvLXBhaW4v",
+    "longText": "../public/texts/iduna/YmF0dGxlLWZyaWVzbGFuZC1tZXRhbC1tYXJrZXQv.html",
+    "image": "../public/event-images/iduna/YmF0dGxlLWZyaWVzbGFuZC1tZXRhbC1tYXJrZXQv",
     "soldOut": false,
     "unavailable": null,
     "eventGenres": null,
     "artists": {
-      "pro-pain": {
-        "s": "56f64pmwssccms1cxanpk8",
-        "l": "pro-pain",
-        "g": [
-          "groove metal",
-          "old school thrash",
-          "thrash metal",
-          "southern metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-06T20:00:00",
-    "start": "2024-12-06T20:30:00",
-    "end": "2024-12-06T23:00:00",
-    "venueEventUrl": "https://iduna.nl/agenda/marco-mendoza-band/",
-    "title": "Marco MendozaBand",
-    "location": "iduna",
-    "price": 20,
-    "shortText": null,
-    "longText": "../public/texts/iduna/Lm5sL2FnZW5kYS9tYXJjby1tZW5kb3phLWJhbmQv.html",
-    "image": "../public/event-images/iduna/Lm5sL2FnZW5kYS9tYXJjby1tZW5kb3phLWJhbmQv",
-    "soldOut": false,
-    "unavailable": null,
-    "eventGenres": null,
-    "artists": {
-      "band": {
+      "metal": {
         "s": null,
-        "l": "band",
+        "l": "metal",
         "g": [
-          "heavy",
-          "power metal"
+          "death metal"
         ]
       }
     }
   },
   {
-    "door": "2024-12-13T20:00:00",
-    "start": "2024-12-13T20:30:00",
-    "end": "2024-12-13T23:00:00",
-    "venueEventUrl": "https://iduna.nl/agenda/neuk/",
-    "title": "Neuk!",
-    "location": "iduna",
-    "price": 20,
-    "shortText": null,
-    "longText": "../public/texts/iduna/aHR0cHM6Ly9pZHVuYS5ubC9hZ2VuZGEvbmV1ay8=.html",
-    "image": "../public/event-images/iduna/aHR0cHM6Ly9pZHVuYS5ubC9hZ2VuZGEvbmV1ay8=",
-    "soldOut": false,
-    "unavailable": null,
-    "eventGenres": null,
-    "artists": {
-      "neuk!": {
-        "s": "61z4arbgymgk3nsxcyazoa",
-        "l": "neuk!",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2025-01-18T19:00:00",
-    "start": "2025-01-18T19:30:00",
-    "end": "2025-01-18T23:55:00",
-    "venueEventUrl": "https://iduna.nl/agenda/monsters-of-rock-pantera-iron-maiden-ac-dc-bon-scott/",
-    "title": "A Tribute ToMonsters of Rock",
-    "location": "iduna",
-    "price": 19,
-    "shortText": null,
-    "longText": "../public/texts/iduna/YS1pcm9uLW1haWRlbi1hYy1kYy1ib24tc2NvdHQv.html",
-    "image": "../public/event-images/iduna/YS1pcm9uLW1haWRlbi1hYy1kYy1ib24tc2NvdHQv",
-    "soldOut": false,
-    "unavailable": null,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-02-02T13:00:00",
-    "start": "2025-02-02T13:30:00",
+    "door": "2025-02-02T13:30:00",
+    "start": "2025-02-02T14:15:00",
     "end": "2025-02-02T22:30:00",
     "venueEventUrl": "https://iduna.nl/agenda/drachten-deathfest/",
     "title": "DrachtenDeathfest",
@@ -232,6 +38,209 @@
     "unavailable": null,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "door": "2025-03-07T20:00:00",
+    "start": "2025-03-07T20:30:00",
+    "end": "2025-03-07T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/anonemia-baas-blazuh/",
+    "title": "Anonemia + baas + blazuh!",
+    "location": "iduna",
+    "price": 20,
+    "shortText": null,
+    "longText": "../public/texts/iduna/bC9hZ2VuZGEvYW5vbmVtaWEtYmFhcy1ibGF6dWgv.html",
+    "image": "../public/event-images/iduna/bC9hZ2VuZGEvYW5vbmVtaWEtYmFhcy1ibGF6dWgv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-03-14T19:00:00",
+    "start": "2025-03-14T19:30:00",
+    "end": "2025-03-14T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/dynazty-nanowar-of-steel-support/",
+    "title": "Dynazty +Nanowar of Steel",
+    "location": "iduna",
+    "price": 19,
+    "shortText": null,
+    "longText": "../public/texts/iduna/YXp0eS1uYW5vd2FyLW9mLXN0ZWVsLXN1cHBvcnQv.html",
+    "image": "../public/event-images/iduna/YXp0eS1uYW5vd2FyLW9mLXN0ZWVsLXN1cHBvcnQv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "dynazty": {
+        "s": "5deRBvKxJssHVa9n6B7tWV",
+        "l": "dynazty",
+        "g": [
+          "power metal",
+          "melodic metal",
+          "symphonic metal",
+          "arena rock",
+          "metal",
+          "heavy",
+          "power metal, hard rock"
+        ]
+      },
+      "nanowar of steel": {
+        "s": "7jw9vF1hFRp1k8dDRNRiC5",
+        "l": "nanowar%20of%20steel",
+        "g": [
+          "power metal",
+          "folk metal",
+          "heavy",
+          "power metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-03-21T20:00:00",
+    "start": "2025-03-21T20:30:00",
+    "end": "2025-03-21T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/pothamus-onhou/",
+    "title": "Pothamus+ Onhou",
+    "location": "iduna",
+    "price": 20,
+    "shortText": null,
+    "longText": "../public/texts/iduna/ZHVuYS5ubC9hZ2VuZGEvcG90aGFtdXMtb25ob3Uv.html",
+    "image": "../public/event-images/iduna/ZHVuYS5ubC9hZ2VuZGEvcG90aGFtdXMtb25ob3Uv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "onhou": {
+        "s": null,
+        "l": "onhou",
+        "g": []
+      },
+      "pothamus": {
+        "s": "3oKgJ6083BjtllXxDN3TD5",
+        "l": "pothamus",
+        "g": [
+          "sludge metal",
+          "post-rock",
+          "stoner rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-03-22T18:30:00",
+    "start": "2025-03-22T19:00:00",
+    "end": "2025-03-22T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/temperance-induction-ignea/",
+    "title": "Temperance+ Induction+ Ignea",
+    "location": "iduna",
+    "price": 18,
+    "shortText": null,
+    "longText": "../public/texts/iduna/ZGEvdGVtcGVyYW5jZS1pbmR1Y3Rpb24taWduZWEv.html",
+    "image": "../public/event-images/iduna/ZGEvdGVtcGVyYW5jZS1pbmR1Y3Rpb24taWduZWEv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "temperance": {
+        "s": "0WHhPa7TmqQASabtpYsa5J",
+        "l": "temperance",
+        "g": [
+          "symphonic metal",
+          "power metal",
+          "melodic metal",
+          "gothic metal",
+          "symphonic rock",
+          "metal",
+          "melodic heavy",
+          "power metal"
+        ]
+      },
+      "induction": {
+        "s": "5mPSuVF1DeqeY3SpIt2f00",
+        "l": "induction",
+        "g": [
+          "power metal",
+          "melodic metal",
+          "symphonic metal",
+          "japanese vgm",
+          "symphonic power metal"
+        ]
+      },
+      "ignea": {
+        "s": "7E7V95LId9MPJ6anIK1qrM",
+        "l": "ignea",
+        "g": [
+          "symphonic metal",
+          "melodic metal",
+          "folk metal",
+          "gothic metal",
+          "symphonic",
+          "progressive metal with middle-eastern folk influences"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-03-29T19:00:00",
+    "start": "2025-03-29T19:30:00",
+    "end": "2025-03-29T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/lordi-special-guest/",
+    "title": "Lordi +special guest",
+    "location": "iduna",
+    "price": 19,
+    "shortText": null,
+    "longText": "../public/texts/iduna/bmwvYWdlbmRhL2xvcmRpLXNwZWNpYWwtZ3Vlc3Qv.html",
+    "image": "../public/event-images/iduna/bmwvYWdlbmRhL2xvcmRpLXNwZWNpYWwtZ3Vlc3Qv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "lordi": {
+        "s": "14SgKNlOCKAI0PfRD1HnWh",
+        "l": "lordi",
+        "g": [
+          "metal",
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-17T20:00:00",
+    "start": "2025-04-17T20:30:00",
+    "end": "2025-04-17T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/carnal-tomb-scalpture/",
+    "title": "Carnal Tomb + Scalpture",
+    "location": "iduna",
+    "price": 20,
+    "shortText": null,
+    "longText": "../public/texts/iduna/L2FnZW5kYS9jYXJuYWwtdG9tYi1zY2FscHR1cmUv.html",
+    "image": "../public/event-images/iduna/L2FnZW5kYS9jYXJuYWwtdG9tYi1zY2FscHR1cmUv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "carnal tomb": {
+        "s": "0lnbT9M0FJ681IzqEa9VWG",
+        "l": "carnal%20tomb",
+        "g": [
+          "death metal",
+          "grindcore",
+          "death metal"
+        ]
+      },
+      "scalpture": {
+        "s": "24ayf6ObGs5kWru2VHRCjv",
+        "l": "scalpture",
+        "g": [
+          "death metal",
+          "grindcore",
+          "death metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-04-20T15:00:00",
@@ -257,5 +266,72 @@
         ]
       }
     }
+  },
+  {
+    "door": "2025-05-17T16:00:00",
+    "start": "2025-05-17T16:30:00",
+    "end": "2025-05-17T22:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/medieval-combat-bildtstar-stoflik-omskot/",
+    "title": "Medieval CombatBildtstar + Stoflik Omskot",
+    "location": "iduna",
+    "price": 16,
+    "shortText": null,
+    "longText": "../public/texts/iduna/bWJhdC1iaWxkdHN0YXItc3RvZmxpay1vbXNrb3Qv.html",
+    "image": "../public/event-images/iduna/bWJhdC1iaWxkdHN0YXItc3RvZmxpay1vbXNrb3Qv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "stoflik omskot": {
+        "s": "0Ns6zUGC4t215rJ5YC6ABt",
+        "l": "stoflik%20omskot",
+        "g": [
+          "death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-29T19:00:00",
+    "start": "2025-05-29T20:00:00",
+    "end": "2025-05-29T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/blaze-bayley-pryma/",
+    "title": "Blaze Bayley • • Pryma",
+    "location": "iduna",
+    "price": 19,
+    "shortText": null,
+    "longText": "../public/texts/iduna/Lm5sL2FnZW5kYS9ibGF6ZS1iYXlsZXktcHJ5bWEv.html",
+    "image": "../public/event-images/iduna/Lm5sL2FnZW5kYS9ibGF6ZS1iYXlsZXktcHJ5bWEv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "blaze bayley": {
+        "s": "2N1l5VEy6whDRqvnUElnau",
+        "l": "blaze%20bayley",
+        "g": [
+          "heavy metal",
+          "power metal",
+          "speed metal",
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-11-02T15:00:00",
+    "start": "2025-11-02T15:30:00",
+    "end": "2025-11-02T18:30:00",
+    "venueEventUrl": "https://iduna.nl/agenda/ronnie-romero-gus-g/",
+    "title": "Ronnie Romero& Gus G",
+    "location": "iduna",
+    "price": 15,
+    "shortText": null,
+    "longText": "../public/texts/iduna/bmwvYWdlbmRhL3Jvbm5pZS1yb21lcm8tZ3VzLWcv.html",
+    "image": "../public/event-images/iduna/bmwvYWdlbmRhL3Jvbm5pZS1yb21lcm8tZ3VzLWcv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {}
   }
 ]
