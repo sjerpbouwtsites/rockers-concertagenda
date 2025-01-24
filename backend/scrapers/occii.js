@@ -20,7 +20,7 @@ const scraper = new AbstractScraper({
         url: "https://occii.org/events/categories/rock/"
     },
     singlePage: {
-        timeout: 45000
+        timeout: 15000
     },
     app: {
         harvest: {

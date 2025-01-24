@@ -15,7 +15,7 @@ const scraper = new AbstractScraper({
         url: "https://bibelot.net/programma/?_categories=punk%2Cmetal%2Cgaragerock%2Cgrunge"
     },
     singlePage: {
-        timeout: 20003
+        timeout: 10000
     },
     app: {
         harvest: {

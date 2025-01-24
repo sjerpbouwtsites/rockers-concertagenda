@@ -12,6 +12,13 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "festering existence": {
+        "s": "76y8zTxaYa4RyupENFfGUB",
+        "l": "festering%20existence",
+        "g": [
+          "melodic death metal"
+        ]
+      },
       "von mollestein": {
         "s": "54K2l8MWmIaWcCwwA3zoW4",
         "l": "von%20mollestein",
@@ -25,13 +32,6 @@
         "l": "sledeon",
         "g": [
           "symphonic metal"
-        ]
-      },
-      "festering existence": {
-        "s": "76y8zTxaYa4RyupENFfGUB",
-        "l": "festering%20existence",
-        "g": [
-          "melodic death metal"
         ]
       }
     }
@@ -262,66 +262,86 @@
     }
   },
   {
-    "start": "2025-06-05T19:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/back-alley-ritual-4-metalucifer-jp-intranced-us-bad-omen-avalon-de/",
-    "title": "Back Alley Ritual 4: Metalucifer (JP) ",
+    "start": "2025-05-31T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/apocalypse-heavy-presents-changing-tides-a-knife-under-marias-altar-out-of-the-blue-deeproot/",
+    "title": "Apocalypse Heavy Presents: Changing Tides ",
     "location": "willemeen",
-    "price": 24.21,
-    "shortText": " Intranced (US)  +  Bad Omen  +  Avalon (DE) cult heavy metal",
-    "longText": "../public/texts/willemeen/dHJhbmNlZC11cy1iYWQtb21lbi1hdmFsb24tZGUv.html",
+    "price": 16.21,
+    "shortText": " A Knife Under Maria’s Altar  +  Out Of The Blue  +  Deeproot metalcore, beatdown, hardcore, metal",
+    "longText": "../public/texts/willemeen/bHRhci1vdXQtb2YtdGhlLWJsdWUtZGVlcHJvb3Qv.html",
     "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "lucifer": {
-        "s": "3oypqq5xqbllc5fh0h7a6q",
-        "l": "lucifer",
-        "g": [
-          "belgian metal"
-        ]
+      "changing tides": {
+        "s": "4fdvjqh3xqrmfvpb4n5hqu",
+        "l": "changing%20tides",
+        "g": []
       },
-      "metal": {
-        "s": null,
-        "l": "metal",
+      "deeproot": {
+        "s": "497D31qNuomZa2eCIOuEa5",
+        "l": "deeproot",
         "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
+          "deathcore"
         ]
       }
     }
   },
   {
-    "start": "2025-06-28T19:30:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/aephanemer-fr-support/",
-    "title": "Aephanemer (FR) + Support",
+    "start": "2025-06-17T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/battery-us-support-excl-nl-show/",
+    "title": "Battery (US, only NL show) ",
     "location": "willemeen",
-    "price": 17.5,
-    "shortText": "symphonic melodic death",
-    "longText": "../public/texts/willemeen/b2dyYW1tYS9hZXBoYW5lbWVyLWZyLXN1cHBvcnQv.html",
+    "price": 16,
+    "shortText": " Thrive (NL/DE, first NL show)  +  Hometown Crew DC hardcore, youth crew, Hardcore, SXE",
+    "longText": "../public/texts/willemeen/dHRlcnktdXMtc3VwcG9ydC1leGNsLW5sLXNob3cv.html",
     "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "aephanemer": {
-        "s": "1M2nK2dOXJjcCuW3SQEzET",
-        "l": "aephanemer",
+      "hometown crew": {
+        "s": "5TFQ3BuWa1IZ2OsQ6X4t3b",
+        "l": "hometown%20crew",
         "g": [
-          "melodic death metal",
-          "melodic metal",
-          "folk metal",
-          "death metal",
-          "symphonic metal",
-          "symphonic",
-          "melodic death metal"
+          "hardcore punk",
+          "hardcore",
+          "melodic hardcore"
+        ]
+      },
+      "battery": {
+        "s": "7MlVSrN1UclvhmDbHlCOf9",
+        "l": "battery",
+        "g": [
+          "hardcore punk",
+          "hardcore",
+          "melodic hardcore",
+          "groove",
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-11-26T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/gutalax-cz-spasm-cz-guineapig-it-excl-nl-show/",
+    "title": "Gutalax (cz) ",
+    "location": "willemeen",
+    "price": 23.5,
+    "shortText": " spasm (cz)  +  guineapig (it) excl nl show groegrind, gore 'n roll",
+    "longText": "../public/texts/willemeen/LWN6LWd1aW5lYXBpZy1pdC1leGNsLW5sLXNob3cv.html",
+    "image": "../public/location-images/willemeen",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "guineapig": {
+        "s": "7JjFSi8Nz49BxuZcoTHc7L",
+        "l": "guineapig",
+        "g": [
+          "grindcore",
+          "goregrind"
         ]
       }
     }

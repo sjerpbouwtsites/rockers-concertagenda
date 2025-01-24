@@ -1,69 +1,47 @@
 [
   {
-    "start": "2025-02-19T17:30:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/marilyn-manson",
-    "title": "Marilyn Manson",
+    "start": "2025-02-13T17:30:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/sticks",
+    "title": "Sticks",
     "location": "afaslive",
-    "price": 19,
-    "longText": "../public/texts/afaslive/c2xpdmUubmwvYWdlbmRhL21hcmlseW4tbWFuc29u.html",
-    "image": "../public/event-images/afaslive/c2xpdmUubmwvYWdlbmRhL21hcmlseW4tbWFuc29u",
-    "soldOut": true,
+    "price": 13,
+    "longText": "../public/texts/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvc3RpY2tz.html",
+    "image": "../public/event-images/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvc3RpY2tz",
+    "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "marilyn manson": {
-        "s": "2VYQTNDsvvKN9wmU5W7xpj",
-        "l": "marilyn%20manson",
+      "sticks": {
+        "s": "0DnbOatBnP7UDkeiQACgxd",
+        "l": "sticks",
         "g": [
-          "alternative metal",
-          "hard rock",
-          "industrial",
-          "industrial metal",
-          "industrial rock",
-          "nu metal",
-          "post-grunge",
-          "rock"
+          "dutch hip hop",
+          "groove metal",
+          "hardcore"
         ]
       }
     }
   },
   {
-    "start": "2025-05-22T17:30:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/steven-wilson",
-    "title": "Steven Wilson",
+    "start": "2025-03-08T14:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/major-conspiracy",
+    "title": "Major Conspiracy",
     "location": "afaslive",
-    "price": 22,
-    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u.html",
-    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u",
+    "price": 2025,
+    "longText": "../public/texts/afaslive/aXZlLm5sL2FnZW5kYS9tYWpvci1jb25zcGlyYWN5.html",
+    "image": "../public/event-images/afaslive/aXZlLm5sL2FnZW5kYS9tYWpvci1jb25zcGlyYWN5",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "steven wilson": {
-        "s": "4X42BfuhWCAZ2swiVze9O0",
-        "l": "steven%20wilson",
+      "major conspiracy": {
+        "s": "0WjzjRwo3dcv6HCPs70Rnc",
+        "l": "major%20conspiracy",
         "g": [
-          "progressive metal",
-          "progressive rock"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-09-29T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/pierce-the-veil",
-    "title": "Pierce The Veil",
-    "location": "afaslive",
-    "price": 29,
-    "longText": "../public/texts/afaslive/bGl2ZS5ubC9hZ2VuZGEvcGllcmNlLXRoZS12ZWls.html",
-    "image": "../public/event-images/afaslive/bGl2ZS5ubC9hZ2VuZGEvcGllcmNlLXRoZS12ZWls",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "pierce the veil": {
-        "s": "4ijlpqclelzobcbifm8fzv",
-        "l": "pierce%20the%20veil",
-        "g": [
-          "pop punk",
-          "screamo"
+          "hardcore",
+          "frenchcore",
+          "hardstyle",
+          "gabber",
+          "speedcore",
+          "hardcore techno"
         ]
       }
     }

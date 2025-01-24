@@ -16,7 +16,7 @@ const scraper = new AbstractScraper({
         url: "https://kavka.be/programma/"
     },
     singlePage: {
-        timeout: 30016
+        timeout: 15000
     },
     app: {
         harvest: {

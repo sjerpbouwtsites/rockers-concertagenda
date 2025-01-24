@@ -13,6 +13,9 @@ const scraper = new AbstractScraper({
     mainPage: {
         url: "https://www.013.nl/programma/heavy"
     },
+    singlePage: {
+        timeout: 10000
+    },
     app: {
         harvest: {
             dividers: [`+`, "&"],

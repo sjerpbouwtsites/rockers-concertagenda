@@ -34,6 +34,13 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "battle": {
+        "s": null,
+        "l": "battle",
+        "g": [
+          "black metal"
+        ]
+      },
       "metal": {
         "s": null,
         "l": "metal",
@@ -41,11 +48,12 @@
           "death metal"
         ]
       },
-      "battle": {
+      "meta": {
         "s": null,
-        "l": "battle",
+        "l": "meta",
         "g": [
-          "black metal"
+          "groove",
+          "progressive metal"
         ]
       }
     }

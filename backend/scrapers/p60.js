@@ -16,7 +16,7 @@ const scraper = new AbstractScraper({
         url: "https://p60.nl/agenda"
     },
     singlePage: {
-        timeout: 30021
+        timeout: 10000
     },
     app: {
         harvest: {

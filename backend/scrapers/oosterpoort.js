@@ -16,7 +16,7 @@ const scraper = new AbstractScraper({
         url: "https://www.spotgroningen.nl/programma/#genres=muziek&subgenres=metal-heavy,pop-rock"
     },
     singlePage: {
-        timeout: 20018,
+        timeout: 15000,
         waitTime: "load"
     },
     app: {

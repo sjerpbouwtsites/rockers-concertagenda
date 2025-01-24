@@ -24,7 +24,7 @@ const scraper = new AbstractScraper({
         url: "https://www.paradiso.nl/nl"
     },
     singlePage: {
-        timeout: 200024,
+        timeout: 10000,
         waitUntil: "networkidle0"
     },
     app: {

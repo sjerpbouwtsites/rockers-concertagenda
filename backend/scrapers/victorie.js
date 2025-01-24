@@ -23,7 +23,7 @@ const scraper = new AbstractScraper({
         url: "https://www.podiumvictorie.nl/programma/"
     },
     singlePage: {
-        timeout: 15000
+        timeout: 10000
     },
     app: {
         harvest: {

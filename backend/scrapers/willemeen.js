@@ -15,7 +15,9 @@ const scraper = new AbstractScraper({
         waitUntil: "load",
         url: "https://www.willemeen.nl/programma/"
     },
-
+    singlePage: {
+        timeout: 10000
+    },
     app: {
         harvest: {
             dividers: [`+`],

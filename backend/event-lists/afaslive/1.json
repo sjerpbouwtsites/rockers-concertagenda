@@ -1,69 +1,118 @@
 [
   {
-    "start": "2025-02-19T17:30:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/marilyn-manson",
-    "title": "Marilyn Manson",
+    "start": "2025-02-11T17:30:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/bullet-for-my-valentine-trivium",
+    "title": "Bullet For My Valentine & Trivium",
     "location": "afaslive",
-    "price": 19,
-    "longText": "../public/texts/afaslive/c2xpdmUubmwvYWdlbmRhL21hcmlseW4tbWFuc29u.html",
-    "image": "../public/event-images/afaslive/c2xpdmUubmwvYWdlbmRhL21hcmlseW4tbWFuc29u",
-    "soldOut": true,
+    "price": 11,
+    "longText": "../public/texts/afaslive/dWxsZXQtZm9yLW15LXZhbGVudGluZS10cml2aXVt.html",
+    "image": "../public/event-images/afaslive/dWxsZXQtZm9yLW15LXZhbGVudGluZS10cml2aXVt",
+    "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "marilyn manson": {
-        "s": "2VYQTNDsvvKN9wmU5W7xpj",
-        "l": "marilyn%20manson",
+      "bullet for my valentine": {
+        "s": "7iWiAD5LLKyiox2grgfmUT",
+        "l": "bullet%20for%20my%20valentine",
         "g": [
           "alternative metal",
-          "hard rock",
-          "industrial",
-          "industrial metal",
-          "industrial rock",
+          "melodic metalcore",
           "nu metal",
           "post-grunge",
-          "rock"
+          "uk metalcore",
+          "welsh metal"
+        ]
+      },
+      "trivium": {
+        "s": "278ZYwGhdK6QTzE3MFePnP",
+        "l": "trivium",
+        "g": [
+          "alternative metal",
+          "groove metal",
+          "melodic metalcore",
+          "melodic thrash",
+          "metal",
+          "metalcore",
+          "nu metal",
+          "post-grunge",
+          "metalcore, thrash",
+          "heavy metal"
         ]
       }
     }
   },
   {
-    "start": "2025-05-22T17:30:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/steven-wilson",
-    "title": "Steven Wilson",
+    "start": "2025-02-22T17:30:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/opeth",
+    "title": "Opeth",
     "location": "afaslive",
     "price": 22,
-    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u.html",
-    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u",
+    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL29wZXRo.html",
+    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL29wZXRo",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "steven wilson": {
-        "s": "4X42BfuhWCAZ2swiVze9O0",
-        "l": "steven%20wilson",
+      "opeth": {
+        "s": "0ybFZ2Ab08V8hueghSXm6E",
+        "l": "opeth",
         "g": [
+          "alternative metal",
+          "metal",
+          "progressive death metal",
           "progressive metal",
-          "progressive rock"
+          "swedish metal",
+          "swedish progressive metal",
+          "progressive death metal, progressive rock"
         ]
       }
     }
   },
   {
-    "start": "2025-09-29T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/pierce-the-veil",
-    "title": "Pierce The Veil",
+    "start": "2025-06-23T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/satchvai-band",
+    "title": "SatchVai Band",
     "location": "afaslive",
-    "price": 29,
-    "longText": "../public/texts/afaslive/bGl2ZS5ubC9hZ2VuZGEvcGllcmNlLXRoZS12ZWls.html",
-    "image": "../public/event-images/afaslive/bGl2ZS5ubC9hZ2VuZGEvcGllcmNlLXRoZS12ZWls",
+    "price": 23,
+    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zYXRjaHZhaS1iYW5k.html",
+    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zYXRjaHZhaS1iYW5k",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "pierce the veil": {
-        "s": "4ijlpqclelzobcbifm8fzv",
-        "l": "pierce%20the%20veil",
+      "band": {
+        "s": null,
+        "l": "band",
         "g": [
-          "pop punk",
-          "screamo"
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-10-28T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/arch-enemy",
+    "title": "Arch Enemy",
+    "location": "afaslive",
+    "price": 28,
+    "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9hcmNoLWVuZW15.html",
+    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9hcmNoLWVuZW15",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "arch enemy": {
+        "s": "0DCw6lHkzh9t7f8Hb4Z0Sx",
+        "l": "arch%20enemy",
+        "g": [
+          "alternative metal",
+          "death metal",
+          "melodic death metal",
+          "metal",
+          "power metal",
+          "speed metal",
+          "swedish death metal",
+          "swedish melodeath",
+          "swedish metal",
+          "symphonic metal",
+          "melodic death metal"
         ]
       }
     }

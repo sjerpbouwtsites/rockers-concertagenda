@@ -388,87 +388,86 @@
     }
   },
   {
-    "door": "2025-05-23T19:00:00",
-    "start": "2025-05-23T19:15:00",
-    "venueEventUrl": "https://patronaat.nl/event/grima-ultar-23-05-25/",
-    "title": "Grima + Ultar + Houle + Aquilus + Suldusk",
+    "door": "2025-05-18T19:30:00",
+    "start": "2025-05-18T20:15:00",
+    "venueEventUrl": "https://patronaat.nl/event/blackbriar-solar-cycles-18-05-25/",
+    "title": "Blackbriar + Solar Cycles",
     "location": "patronaat",
-    "price": null,
-    "shortText": "Atmosferische blackmetal uit Siberië",
-    "longText": "../public/texts/patronaat/bmwvZXZlbnQvZ3JpbWEtdWx0YXItMjMtMDUtMjUv.html",
-    "image": "../public/event-images/patronaat/bmwvZXZlbnQvZ3JpbWEtdWx0YXItMjMtMDUtMjUv",
+    "price": 28.5,
+    "shortText": "Een van de snelst stijgende sterren van de symfonishe metalscene",
+    "longText": "../public/texts/patronaat/Y2ticmlhci1zb2xhci1jeWNsZXMtMTgtMDUtMjUv.html",
+    "image": "../public/event-images/patronaat/Y2ticmlhci1zb2xhci1jeWNsZXMtMTgtMDUtMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "grima": {
-        "s": "7KSPZyeCKkfkhMkX8rYIhD",
-        "l": "grima",
+      "blackbriar": {
+        "s": "6pxqux3bytsvj7lcvviomi",
+        "l": "blackbriar",
         "g": [
-          "atmospheric black metal",
-          "russian black metal",
-          "voidgaze",
-          "atmospheric black metal"
-        ]
-      },
-      "ultar": {
-        "s": "6qBmMTIQANnluSglXkcRV0",
-        "l": "ultar",
-        "g": [
-          "black metal",
-          "post-black metal"
-        ]
-      },
-      "houle": {
-        "s": "7kyEbclVUPx4zFdUdNbMUI",
-        "l": "houle",
-        "g": [
-          "dark ambient",
-          "ambient",
-          "black metal"
-        ]
-      },
-      "aquilus": {
-        "s": "1AKQ12On2ydAN0jykcB929",
-        "l": "aquilus",
-        "g": [
-          "black metal",
-          "atmospheric black",
-          "folk metal",
-          "neoclassical"
-        ]
-      },
-      "suldusk": {
-        "s": "27bhelNsrdlX5Y5H7yigfg",
-        "l": "suldusk",
-        "g": [
-          "neofolk",
-          "black metal"
+          "dutch metal",
+          "gothic symphonic metal",
+          "slayer",
+          "symphonic metal"
         ]
       }
     }
   },
   {
-    "door": "2025-06-01T19:00:00",
-    "start": "2025-06-01T20:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/living-colour-support-01-06-25/",
-    "title": "Living Colour + support • PHIL",
+    "door": "2025-05-31T19:30:00",
+    "start": "2025-05-31T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/dvne-support-31-05-25/",
+    "title": "DVNE + support",
     "location": "patronaat",
-    "price": 38.5,
-    "shortText": "Eighties band terug naar Haarlem",
-    "longText": "../public/texts/patronaat/aXZpbmctY29sb3VyLXN1cHBvcnQtMDEtMDYtMjUv.html",
-    "image": "../public/event-images/patronaat/aXZpbmctY29sb3VyLXN1cHBvcnQtMDEtMDYtMjUv",
+    "price": 23.5,
+    "shortText": "Progressieve metal uit schotland met sci-fi en fantasy invloeden",
+    "longText": "../public/texts/patronaat/bC9ldmVudC9kdm5lLXN1cHBvcnQtMzEtMDUtMjUv.html",
+    "image": "../public/event-images/patronaat/bC9ldmVudC9kdm5lLXN1cHBvcnQtMzEtMDUtMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "living colour": {
-        "s": "6uhp7wa6sjm5zl6xz561de",
-        "l": "living%20colour",
+      "dvne": {
+        "s": "1isrot4ggrmnqft2vmaa5q",
+        "l": "united kingdom",
         "g": [
-          "funk metal",
-          "funk rock",
-          "hard rock"
+          "edinburgh metal",
+          "post-metal",
+          "progressive sludge",
+          "sci-fi metal",
+          "scottish metal",
+          "progressive sludge/post-metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-23T14:30:00",
+    "start": "2025-08-23T15:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/complexity-fest-2025-23-08-25/",
+    "title": "Complexity Fest 2025: Car Bomb, Imperial Triumphant, Papangu, meth., L’orne en meer!",
+    "location": "patronaat",
+    "price": null,
+    "shortText": " Ons favoriete festival voor grensverleggende heavy muziek is terug!",
+    "longText": "../public/texts/patronaat/Y29tcGxleGl0eS1mZXN0LTIwMjUtMjMtMDgtMjUv.html",
+    "image": "../public/event-images/patronaat/Y29tcGxleGl0eS1mZXN0LTIwMjUtMjMtMDgtMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "imperial triumphant": {
+        "s": "5zvMklMSTgoGUS9Un5domO",
+        "l": "imperial%20triumphant",
+        "g": [
+          "avant-garde black metal",
+          "dissonant death metal",
+          "nyc metal",
+          "post-black metal",
+          "technical black metal",
+          "voidgrind",
+          "avant-garde",
+          "technical black",
+          "death metal"
         ]
       }
     }

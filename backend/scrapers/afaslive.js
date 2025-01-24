@@ -21,7 +21,7 @@ const scraper = new AbstractScraper({
         url: "https://www.afaslive.nl/agenda"
     },
     singlePage: {
-        timeout: 20000
+        timeout: 15000
     },
     app: {
         harvest: {

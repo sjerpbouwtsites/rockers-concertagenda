@@ -21,7 +21,7 @@ const scraper = new AbstractScraper({
         url: "https://www.melkweg.nl/nl/agenda"
     },
     singlePage: {
-        timeout: 20074
+        timeout: 15000
     },
     app: {
         harvest: {

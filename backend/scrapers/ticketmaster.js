@@ -25,7 +25,7 @@ const ticketmasterScraper = new AbstractScraper({
         url: `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=NL&apikey=${workerData.masterEnv.TICKETMASTER_CONSUMER_KEY}&size=199&page=${workerData.index}`
     },
     singlePage: {
-        timeout: 30005
+        timeout: 15000
     },
     app: {
         mainPage: {

@@ -22,7 +22,7 @@ const metropoolScraper = new AbstractScraper({
         url: "https://metropool.nl/agenda?genre=metal&genre=rock&filter=open"
     },
     singlePage: {
-        timeout: 45000
+        timeout: 10000
     },
     app: {
         harvest: {

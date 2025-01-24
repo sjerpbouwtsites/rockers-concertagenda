@@ -19,7 +19,9 @@ import workTitleAndSlug from "./gedeeld/slug.js";
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
     workerData: { ...workerData },
-
+    singlePage: {
+        timeout: 10000
+    },
     mainPage: {
         waitUntil: "load",
         url: "https://www.tivolivredenburg.nl/agenda/?event_category=metal-punk-heavy"

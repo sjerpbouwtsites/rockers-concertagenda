@@ -24,7 +24,7 @@ const scraper = new AbstractScraper({
         url: "https://www.dynamo-eindhoven.nl/programma/?_sfm_fw%3Aopt%3Astyle=15"
     },
     singlePage: {
-        timeout: 25061
+        timeout: 15000
     },
     app: {
         harvest: {

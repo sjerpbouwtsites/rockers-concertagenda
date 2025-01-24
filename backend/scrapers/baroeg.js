@@ -19,7 +19,7 @@ const scraper = new AbstractScraper({
         url: "https://baroeg.nl/agenda/"
     },
     singlePage: {
-        timeout: 30000
+        timeout: 15000
     },
     app: {
         harvest: {

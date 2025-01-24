@@ -24,7 +24,7 @@ const scraper = new AbstractScraper({
         url: "https://www.groene-engel.nl/programma/?filter=concert"
     },
     singlePage: {
-        timeout: 20077
+        timeout: 10000
     },
     app: {
         harvest: {

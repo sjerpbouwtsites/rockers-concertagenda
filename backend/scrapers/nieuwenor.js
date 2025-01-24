@@ -16,7 +16,7 @@ const scraper = new AbstractScraper({
         url: "https://nieuwenor.nl/programma"
     },
     singlePage: {
-        timeout: 15014
+        timeout: 10000
     },
     app: {
         harvest: {

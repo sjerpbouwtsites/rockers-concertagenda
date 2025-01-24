@@ -14,11 +14,26 @@
     "unavailable": null,
     "eventGenres": null,
     "artists": {
+      "battle": {
+        "s": null,
+        "l": "battle",
+        "g": [
+          "black metal"
+        ]
+      },
       "metal": {
         "s": null,
         "l": "metal",
         "g": [
           "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
         ]
       }
     }

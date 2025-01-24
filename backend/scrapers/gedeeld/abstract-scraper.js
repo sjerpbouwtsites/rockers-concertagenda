@@ -911,29 +911,34 @@ export default class AbstractScraper extends ScraperConfig {
      * @memberof AbstractScraper
      */
     async createSinglePage(event) {
-        try {
-            const page = await this.browser.newPage();
-            try {
-                await page.goto(event.venueEventUrl, this.singlePage);
-            } catch (error) {
-                this.handleError(
-                    error,
-                    `Mislukken single <a class='single-page-failure error-link' href='${event.venueEventUrl}'>${event.title}</a>`,
-                    "notice",
-                    event
-                );
-            }
+        const page = await this.browser.newPage();
+        let err1 = null;
+        let err2 = null;
+        await page.goto(event.venueEventUrl, this.singlePage).catch((err) => {
+            err1 = err;
+        });
+        if (!err1) return page;
 
-            return page;
-        } catch (error) {
-            this.handleError(
-                error,
-                `Mislukken single pagina <a class='single-page-failure error-link' href='${event.venueEventUrl}'>${event.title}</a> wss duurt te lang`,
-                "notice",
-                null
-            );
-        }
-        return null;
+        this.handleError(
+            err2,
+            `Eerste keer mislukt single <a class='single-page-failure error-link' href='${event.venueEventUrl}'>${event.title}</a>`,
+            "notice",
+            event
+        );
+
+        await this.waitTime(500);
+
+        await page.goto(event.venueEventUrl, this.singlePage).catch((err) => {
+            err2 = err;
+        });
+        if (!err2) return page;
+
+        this.handleError(
+            err2,
+            `Tweede keer mislukt single <a class='single-page-failure error-link' href='${event.venueEventUrl}'>${event.title}</a>`,
+            "notice",
+            event
+        );
     }
 
     titelShorttextPostfix(musicEvent) {
@@ -1172,11 +1177,18 @@ export default class AbstractScraper extends ScraperConfig {
 
     // step 4.5
     async closeBrowser() {
-        if (
-            this.browser &&
-            Object.prototype.hasOwnProperty.call(this.browser, "close")
-        ) {
-            this.browser.close();
+        try {
+            if (
+                this.browser &&
+                Object.prototype.hasOwnProperty.call(this.browser, "close")
+            ) {
+                this.browser.close();
+            }
+        } catch (error) {
+            this.handleError(
+                error,
+                `mislukt browser sluiten ${workerData.name}`
+            );
         }
         return true;
     }

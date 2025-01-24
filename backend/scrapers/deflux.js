@@ -16,7 +16,7 @@ const scraper = new AbstractScraper({
         url: `https://www.podiumdeflux.nl/wp-json/wp/v2/ajde_events?event_type=81,87,78,88,80&filter[startdate]=${vandaag}`
     },
     singlePage: {
-        timeout: 20009
+        timeout: 10000
     },
     app: {
         mainPage: {

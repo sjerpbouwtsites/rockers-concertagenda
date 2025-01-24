@@ -26,7 +26,7 @@ const scraper = new AbstractScraper({
         url: "https://www.cpunt.nl/agenda?q=&genre=metalpunkheavy&StartDate=&EndDate=#filter"
     },
     singlePage: {
-        timeout: 30012
+        timeout: 15000
     },
     app: {
         harvest: {

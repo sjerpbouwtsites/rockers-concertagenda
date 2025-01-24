@@ -21,7 +21,7 @@ const scraper = new AbstractScraper({
         url: "https://gebouw-t.nl/evenementen/?genre=metal,rock,punk"
     },
     singlePage: {
-        timeout: 20000
+        timeout: 10000
     },
     app: {
         harvest: {

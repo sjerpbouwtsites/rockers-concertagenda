@@ -24,7 +24,7 @@ const dbsScraper = new AbstractScraper({
         url: "https://www.dbstudio.nl/agenda/"
     },
     singlePage: {
-        timeout: 45000
+        timeout: 20000
     },
     app: {
         harvest: {

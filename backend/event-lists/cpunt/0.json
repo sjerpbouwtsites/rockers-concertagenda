@@ -42,7 +42,7 @@
     "door": "2025-03-09T19:30:00",
     "start": "2025-03-09T20:00:00",
     "venueEventUrl": "https://www.cpunt.nl/agenda/alex-skolnick-trio-clinic",
-    "title": "Alex Skolnick Trio + Clinic",
+    "title": "Alex Skolnick Trio",
     "location": "cpunt",
     "price": 19.5,
     "shortText": "Prove You're Not A Robot Tour",
@@ -112,15 +112,6 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "faun": {
-        "s": "2wpognq6ew3x73uijz4yfe",
-        "l": "faun",
-        "g": [
-          "hurdy-gurdy",
-          "medieval folk",
-          "medieval rock"
-        ]
-      },
       "sleepytime gorilla museum": {
         "s": "74KPeP60dRLSAAk7sFtWTC",
         "l": "sleepytime%20gorilla%20museum",
@@ -136,6 +127,15 @@
         "l": "fables",
         "g": [
           "experimental black metal"
+        ]
+      },
+      "faun": {
+        "s": "2wpognq6ew3x73uijz4yfe",
+        "l": "faun",
+        "g": [
+          "hurdy-gurdy",
+          "medieval folk",
+          "medieval rock"
         ]
       }
     }

@@ -15,7 +15,7 @@ const scraper = new AbstractScraper({
         waitUntil: "load"
     },
     singlePage: {
-        timeout: 35000
+        timeout: 15000
     },
     app: {
         harvest: {
