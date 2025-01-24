@@ -21,10 +21,14 @@ export default function makeLongHTML(event) {
                       return `<div class='iframe-wrapper-generiek'>${bron.outer}</div>`;
                   }
                   if (bron.src && bron.type === "youtube") {
-                      return `<div class='iframe-wrapper-16-9'>${youtubeSRCToIframe(bron.src)}</div>`;
+                      return `<div class='iframe-wrapper-16-9'>${youtubeSRCToIframe(
+                          bron.src
+                      )}</div>`.replace('"=""', ""); //TODO hack
                   }
                   if (bron.id && bron.type === "youtube") {
-                      return `<div class='iframe-wrapper-16-9'>${youtubeIDToIframe(bron.id)}</div>`;
+                      return `<div class='iframe-wrapper-16-9'>${youtubeIDToIframe(
+                          bron.id
+                      )}</div>`;
                   }
                   if (bron.src && bron.type !== "youtube") {
                       return `onbekende type ${bron.type}`;
