@@ -7,15 +7,10 @@ export default async function longTextSocialsIframes(page, event) {
     ({ event }) => {
       const res = {};
 
-      const textSelector = '.article-block.text-block';
-      const mediaSelector = ['.sidebar iframe, .article-block iframe'].join(', ');
+      const textSelector = '.wp-block-dynamo-eindhoven-container';
+      const mediaSelector = ['.rll-youtube-player', '.wp-block-embed__wrapper iframe'].join(', ');
       const removeEmptyHTMLFrom = textSelector;
-      const socialSelector = [
-        '.event-content .fb-event a',
-        ".article-block a[href*='facebook']",
-        ".article-block a[href*='instagram']",
-        ".article-block a[href*='bandcamp']",
-      ].join(', ');
+      const socialSelector = '';
       const removeSelectors = [
         `${textSelector} [class*='icon-']`,
         `${textSelector} [class*='fa-']`,
@@ -26,10 +21,7 @@ export default async function longTextSocialsIframes(page, event) {
         `${textSelector} meta`,
         `${textSelector} svg`,
         `${textSelector} form`,
-        '.iframe-wrapper-tijdelijk',
-        ".article-block a[href*='facebook']",
-        ".article-block a[href*='instagram']",
-        ".article-block a[href*='bandcamp']",
+        `${textSelector} figure`,
         `${textSelector} img`,
       ].join(', ');
 
@@ -49,12 +41,6 @@ export default async function longTextSocialsIframes(page, event) {
       const attributesToRemoveSecondRound = ['class', 'id'];
       const removeHTMLWithStrings = [];
 
-      // custom dynamo
-      document
-        .querySelectorAll('.article-block iframe')
-        .forEach((iframe) => iframe.parentNode.classList.add('iframe-wrapper-tijdelijk'));
-      // end custom dynamo
-
       // eerst onzin attributes wegslopen
       const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ''}`;
       const mediaAttrRemSelAdd = `${
@@ -71,73 +57,27 @@ export default async function longTextSocialsIframes(page, event) {
 
       // media obj maken voordat HTML verdwijnt
       res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector)).map((bron) => {
-        if (bron.hasAttribute('data-src-cmplz')) {
-          bron.src = bron.getAttribute('data-src-cmplz');
-        }
-        const src = bron?.src ? bron.src : '';
-        if (bron.hasAttribute('data-cmplz-target')) bron.removeAttribute('data-cmplz-target');
-        if (bron.hasAttribute('data-src-cmplz')) bron.removeAttribute('data-src-cmplz');
-        if (bron.hasAttribute('loading')) bron.removeAttribute('loading');
-        bron.className = '';
+        
+        const lsrc = bron.hasAttribute('data-lazy-src') ? bron.getAttribute('data-lazy-src') : false;
+        const dsrc = bron.hasAttribute('data-src') ? bron.getAttribute('data-src') : false;
+        const src = lsrc ? lsrc : dsrc ? dsrc : bron?.src ? bron.src : '';
+        const type = bron.className.includes("rll-youtube-player") ? 'youtube': "spotify"
         return {
           outer: bron.outerHTML,
           src,
           id: null,
-          type: src.includes('spotify')
-            ? 'spotify'
-            : src.includes('youtube')
-            ? 'youtube'
-            : 'bandcamp',
+          type: type,
         };
       });
 
       // socials obj maken voordat HTML verdwijnt
-      res.socialsForHTML = !socialSelector
-        ? ''
-        : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
-            el.querySelectorAll('i, svg, img').forEach((rm) => rm.parentNode.removeChild(rm));
-            if (!el.textContent.trim().length) {
-              if (el.href.includes('facebook') || el.href.includes('fb.me')) {
-                if (el.href.includes('facebook.com/events')) {
-                  el.textContent = `FB event ${event.title}`;
-                } else {
-                  el.textContent = 'Facebook';
-                }
-              } else if (el.href.includes('twitter')) {
-                el.textContent = 'Tweet';
-              } else if (el.href.includes('instagram')) {
-                el.textContent = 'Insta';
-              } else {
-                el.textContent = 'Social';
-              }
-            }
-            if (el.textContent.includes('https')){
-              el.textContent = el.textContent.replace('https://','').replace('www','')
-            }
-            el.className = 'long-html__social-list-link';
-            el.target = '_blank';
-            return el.outerHTML;
-          });
+      res.socialsForHTML = '';
 
       // stript HTML tbv text
       removeSelectors.length &&
         document
           .querySelectorAll(removeSelectors)
           .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
-
-      // dynamo custom
-      const textBlokken = Array.from(document.querySelectorAll('.article-block.text-block'));
-      if (textBlokken.length) {
-        const laatsteBlok = textBlokken[textBlokken.length - 1];
-        if (
-          laatsteBlok.textContent.includes('voorverkoop') ||
-          laatsteBlok.textContent.includes('sale') ||
-          laatsteBlok.querySelector('h6')?.textContent.toLowerCase().includes('info')
-        ) {
-          laatsteBlok.parentNode.removeChild(laatsteBlok);
-        }
-      }
-      // eind dynamo custom
 
       // verwijder ongewenste paragrafen over bv restaurants
       Array.from(

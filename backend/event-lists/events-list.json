@@ -1,184 +1,299 @@
 [
   {
-    "door": "2025-02-18T20:00:00",
-    "start": "2025-02-18T20:00:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/delivery/2447412",
-    "title": "Delivery",
-    "location": "paradiso",
-    "price": 17.5,
-    "shortText": "Garage punk by Australian quintet / Toekomstmuziek",
-    "longText": "../public/texts/paradiso/bmwvZW4vcHJvZ3JhbS9kZWxpdmVyeS8yNDQ3NDEy.html",
-    "image": "../public/event-images/paradiso/bmwvZW4vcHJvZ3JhbS9kZWxpdmVyeS8yNDQ3NDEy",
+    "door": "2025-01-24T19:00:00",
+    "start": "2025-01-24T19:00:00",
+    "end": "2025-01-24T22:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/queerhoven-boardgame-night/",
+    "title": "Queerhoven Boardgame Night",
+    "location": "dynamo",
+    "price": 2400,
+    "shortText": "The boardgame night is a recurring event from Queerhoven. Join us for an evening of boardgames and hanging out with your fellow queer people!",
+    "longText": "../public/texts/dynamo/bnQvcXVlZXJob3Zlbi1ib2FyZGdhbWUtbmlnaHQv.html",
+    "image": "../public/event-images/dynamo/bnQvcXVlZXJob3Zlbi1ib2FyZGdhbWUtbmlnaHQv",
     "soldOut": false,
-    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-01-24T20:00:00",
+    "end": "2025-01-24T02:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/devils-lair/",
+    "title": "Devils Lair",
+    "location": "dynamo",
+    "price": 13,
+    "shortText": "Underground Hiphop meets Duistere Drum ’n Bass",
+    "longText": "../public/texts/dynamo/b3Zlbi5ubC9ldmVuZW1lbnQvZGV2aWxzLWxhaXIv.html",
+    "image": "../public/event-images/dynamo/b3Zlbi5ubC9ldmVuZW1lbnQvZGV2aWxzLWxhaXIv",
+    "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "delivery": {
-        "s": "44qDh9SR4FYA9V1yb7Amig",
-        "l": "delivery",
+      "bass": {
+        "s": null,
+        "l": "bass",
         "g": [
-          "australian post-punk",
-          "grindcore",
+          "doom",
           "death metal"
         ]
       }
     }
   },
   {
-    "door": "2025-02-28T20:30:00",
-    "start": "2025-02-28T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/dubioza-kolektiv/2259538",
-    "title": "Dubioza Kolektiv",
-    "location": "paradiso",
-    "price": 27.2,
-    "shortText": "Highly energetic ska band from Bosnia",
-    "longText": "../public/texts/paradiso/b2dyYW0vZHViaW96YS1rb2xla3Rpdi8yMjU5NTM4.html",
-    "image": "../public/event-images/paradiso/b2dyYW0vZHViaW96YS1rb2xla3Rpdi8yMjU5NTM4",
-    "soldOut": true,
-    "unavailable": false,
+    "door": "2025-01-25T14:00:00",
+    "start": "2025-01-25T14:00:00",
+    "end": "2025-01-25T17:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/queer-art-club/",
+    "title": "Queer Art club",
+    "location": "dynamo",
+    "price": 5,
+    "shortText": "za 25-jan-2025Room 7€ 5,- Queer Art club Soapstone, sculpting for beginners",
+    "longText": "../public/texts/dynamo/bi5ubC9ldmVuZW1lbnQvcXVlZXItYXJ0LWNsdWIv.html",
+    "image": "../public/event-images/dynamo/bi5ubC9ldmVuZW1lbnQvcXVlZXItYXJ0LWNsdWIv",
+    "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "dubioza kolektiv": {
-        "s": "02IFYoziC7CpQRK8fbehUY",
-        "l": "dubioza%20kolektiv",
+      "stone": {
+        "s": "22be4uq6banwshpvcdxlce",
+        "l": "stone",
         "g": [
-          "balkan brass",
-          "balkan punk",
-          "bosnian indie"
+          "album rock",
+          "british invasion",
+          "classic rock",
+          "rock"
         ]
       }
     }
   },
   {
-    "door": "2025-03-06T20:30:00",
-    "start": "2025-03-06T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/ditz/2407777",
-    "title": "Ditz",
-    "location": "paradiso",
-    "price": 19.7,
-    "shortText": "Brighton five-piece combines post punk and noise rock / Tolhuistuin",
-    "longText": "../public/texts/paradiso/aXNvLm5sL2VuL3Byb2dyYW0vZGl0ei8yNDA3Nzc3.html",
-    "image": "../public/event-images/paradiso/aXNvLm5sL2VuL3Byb2dyYW0vZGl0ei8yNDA3Nzc3",
+    "start": "2025-02-01T23:00:00",
+    "end": "2025-02-01T06:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/puin-x-echo-recordings/",
+    "title": "Puin x echo recordings",
+    "location": "dynamo",
+    "price": 17.5,
+    "shortText": "[HARDGROOVE – TECHNO]",
+    "longText": "../public/texts/dynamo/bmVtZW50L3B1aW4teC1lY2hvLXJlY29yZGluZ3Mv.html",
+    "image": "../public/event-images/dynamo/bmVtZW50L3B1aW4teC1lY2hvLXJlY29yZGluZ3Mv",
     "soldOut": false,
-    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "ditz": {
-        "s": "3oskgwx1dqjhidhnhpgbfj",
-        "l": "ditz",
+      "echo": {
+        "s": "0fgykf9avljex0l9wt5b8z",
+        "l": "echo",
         "g": [
-          "crank wave",
-          "uk post-punk revival"
+          "alternative rock",
+          "new romantic",
+          "new wave",
+          "permanent wave"
         ]
       }
     }
   },
   {
-    "door": "2025-03-12T19:30:00",
-    "start": "2025-03-12T19:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/chalk/2405176",
-    "title": "Chalk",
-    "location": "paradiso",
-    "price": 15,
-    "shortText": "Belfast electronic/noise rock trio",
-    "longText": "../public/texts/paradiso/c28ubmwvZW4vcHJvZ3JhbS9jaGFsay8yNDA1MTc2.html",
-    "image": "../public/event-images/paradiso/c28ubmwvZW4vcHJvZ3JhbS9jaGFsay8yNDA1MTc2",
+    "door": "2025-02-04T20:00:00",
+    "start": "2025-02-04T20:00:00",
+    "end": "2025-02-04T22:30:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/homegrown-sessions-15/",
+    "title": "Homegrown sessions #15",
+    "location": "dynamo",
+    "price": 0,
+    "shortText": "W/ JAYD3n + THE SACRED PATH + JUNIOR + MALU V + ‘N POLSKI + JONA VELLI + GIBBY + HOOGE + DJ ICEJUSTFLEXIN’",
+    "longText": "../public/texts/dynamo/ZW5lbWVudC9ob21lZ3Jvd24tc2Vzc2lvbnMtMTUv.html",
+    "image": "../public/event-images/dynamo/ZW5lbWVudC9ob21lZ3Jvd24tc2Vzc2lvbnMtMTUv",
     "soldOut": false,
-    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "chalk": {
-        "s": "3qa9pv6B0dmiBVETLQOCpi",
-        "l": "chalk",
+      "junior": {
+        "s": null,
+        "l": "junior",
         "g": [
-          "post-punk",
-          "noise rock"
+          "progressive death metal"
         ]
       }
     }
   },
   {
-    "door": "2025-03-24T20:30:00",
-    "start": "2025-03-24T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/thus-love/2399147",
-    "title": "Thus love + dream nails",
-    "location": "paradiso",
-    "price": 19.7,
-    "shortText": "Queer post-punk band from Brattleboro / Tolhuistuin",
-    "longText": "../public/texts/paradiso/bC9lbi9wcm9ncmFtL3RodXMtbG92ZS8yMzk5MTQ3.html",
-    "image": "../public/event-images/paradiso/bC9lbi9wcm9ncmFtL3RodXMtbG92ZS8yMzk5MTQ3",
+    "door": "2025-02-12T19:00:00",
+    "start": "2025-02-12T19:00:00",
+    "end": "2025-02-12T21:30:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/brainfreeze-club-dialoog-mentale-gezondheid/",
+    "title": "the BRainfreeze club",
+    "location": "dynamo",
+    "price": 1200,
+    "shortText": "wo 12-feb-2025DynamoGratis the BRainfreeze club Dialoog mentale gezondheid",
+    "longText": "../public/texts/dynamo/dWItZGlhbG9vZy1tZW50YWxlLWdlem9uZGhlaWQv.html",
+    "image": "../public/event-images/dynamo/dWItZGlhbG9vZy1tZW50YWxlLWdlem9uZGhlaWQv",
     "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "thus love": {
-        "s": "26hW7zYB4V3PGMPBKoBdgl",
-        "l": "thus%20love",
-        "g": [
-          "american post-punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-05T20:30:00",
-    "start": "2025-04-05T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/snapped-ankles/2437365",
-    "title": "Snapped Ankles",
-    "location": "paradiso",
-    "price": 19.7,
-    "shortText": "Krautrock and post punk from London / Tolhuistuin",
-    "longText": "../public/texts/paradiso/cHJvZ3JhbS9zbmFwcGVkLWFua2xlcy8yNDM3MzY1.html",
-    "image": "../public/event-images/paradiso/cHJvZ3JhbS9zbmFwcGVkLWFua2xlcy8yNDM3MzY1",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "snapped ankles": {
-        "s": "4iWOyexPqcvgycdx7mLUcl",
-        "l": "snapped%20ankles",
-        "g": [
-          "post-punk",
-          "krautrock",
-          "space rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-09T19:30:00",
-    "start": "2025-04-09T19:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/ada-oda/2394350",
-    "title": "Ada Oda",
-    "location": "paradiso",
-    "price": 17,
-    "shortText": "Post-punk with Italian charm",
-    "longText": "../public/texts/paradiso/Lm5sL2VuL3Byb2dyYW0vYWRhLW9kYS8yMzk0MzUw.html",
-    "image": "../public/event-images/paradiso/Lm5sL2VuL3Byb2dyYW0vYWRhLW9kYS8yMzk0MzUw",
-    "soldOut": false,
-    "unavailable": false,
     "eventGenres": null,
     "artists": {}
   },
   {
-    "door": "2025-04-13T21:00:00",
-    "start": "2025-04-13T21:00:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/the-ex-release-show-plus-special-guests/2471490",
-    "title": "The Ex - release show plus special guests",
-    "location": "paradiso",
-    "price": 17,
-    "shortText": "Dutch punk band celebrates their new release",
-    "longText": "../public/texts/paradiso/b3ctcGx1cy1zcGVjaWFsLWd1ZXN0cy8yNDcxNDkw.html",
-    "image": "../public/event-images/paradiso/b3ctcGx1cy1zcGVjaWFsLWd1ZXN0cy8yNDcxNDkw",
+    "start": "2025-02-14T22:00:00",
+    "end": "2025-02-14T04:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/bunkerbass-2/",
+    "title": "Bunkerbass",
+    "location": "dynamo",
+    "price": 10,
+    "shortText": "DRUM ‘N BASS – Valentine’s edition",
+    "longText": "../public/texts/dynamo/dmVuLm5sL2V2ZW5lbWVudC9idW5rZXJiYXNzLTIv.html",
+    "image": "../public/event-images/dynamo/dmVuLm5sL2V2ZW5lbWVudC9idW5rZXJiYXNzLTIv",
     "soldOut": false,
-    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "the ex": {
+      "bass": {
         "s": null,
-        "l": "the%20ex",
-        "g": []
+        "l": "bass",
+        "g": [
+          "doom",
+          "death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-03-08T15:00:00",
+    "start": "2025-03-08T15:00:00",
+    "end": "2025-03-08T17:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/gendermore/",
+    "title": "Gendermore",
+    "location": "dynamo",
+    "price": 800,
+    "shortText": "support meeting",
+    "longText": "../public/texts/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L2dlbmRlcm1vcmUv.html",
+    "image": "../public/event-images/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L2dlbmRlcm1vcmUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "gender": {
+        "s": null,
+        "l": "gender",
+        "g": [
+          "death metal",
+          "crust punk"
+        ]
       },
+      "more": {
+        "s": null,
+        "l": "more",
+        "g": [
+          "nwobhm",
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-03-14T20:00:00",
+    "start": "2025-03-14T20:00:00",
+    "end": "2025-03-14T01:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/its-just-one-of-those-nights-2/",
+    "title": "It’s Just One Of Those Nights",
+    "location": "dynamo",
+    "price": 12.5,
+    "shortText": "90’s & 00’s Nu-Metal Punkrock party",
+    "longText": "../public/texts/dynamo/dHMtanVzdC1vbmUtb2YtdGhvc2UtbmlnaHRzLTIv.html",
+    "image": "../public/event-images/dynamo/dHMtanVzdC1vbmUtb2YtdGhvc2UtbmlnaHRzLTIv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "punk": {
+        "s": null,
+        "l": "punk",
+        "g": [
+          "melodic death metal (early)",
+          " glitch",
+          "dubstep",
+          "electronica (later)"
+        ]
+      },
+      "stone": {
+        "s": "22be4uq6banwshpvcdxlce",
+        "l": "stone",
+        "g": [
+          "album rock",
+          "british invasion",
+          "classic rock",
+          "rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-03-15T19:00:00",
+    "start": "2025-03-15T19:30:00",
+    "end": "2025-03-15T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/allt/",
+    "title": "Allt",
+    "location": "dynamo",
+    "price": 18.5,
+    "shortText": "Uitverkocht",
+    "longText": "../public/texts/dynamo/by1laW5kaG92ZW4ubmwvZXZlbmVtZW50L2FsbHQv.html",
+    "image": "../public/event-images/dynamo/by1laW5kaG92ZW4ubmwvZXZlbmVtZW50L2FsbHQv",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "allt": {
+        "s": "6YRr0btzGqfQ5K7r23qjEM",
+        "l": "allt",
+        "g": [
+          "progressive metalcore",
+          "swedish metalcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-05T15:00:00",
+    "start": "2025-04-05T16:00:00",
+    "end": "2025-04-05T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/grindhoven-xii/",
+    "title": "Grindhoven XII",
+    "location": "dynamo",
+    "price": 36.5,
+    "shortText": "W/ General Surgery + Guineapig + pulmonary Fibrosis and more",
+    "longText": "../public/texts/dynamo/bi5ubC9ldmVuZW1lbnQvZ3JpbmRob3Zlbi14aWkv.html",
+    "image": "../public/event-images/dynamo/bi5ubC9ldmVuZW1lbnQvZ3JpbmRob3Zlbi14aWkv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "guineapig": {
+        "s": "7JjFSi8Nz49BxuZcoTHc7L",
+        "l": "guineapig",
+        "g": [
+          "grindcore",
+          "goregrind"
+        ]
+      },
+      "more": {
+        "s": null,
+        "l": "more",
+        "g": [
+          "nwobhm",
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-08T19:30:00",
+    "start": "2025-04-08T20:00:00",
+    "end": "2025-04-08T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/save-face/",
+    "title": "Save Face",
+    "location": "dynamo",
+    "price": 20,
+    "shortText": "plus support",
+    "longText": "../public/texts/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9zYXZlLWZhY2Uv.html",
+    "image": "../public/event-images/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9zYXZlLWZhY2Uv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
       "plus": {
         "s": null,
         "l": "plus",
@@ -190,212 +305,204 @@
     }
   },
   {
-    "door": "2025-04-14T20:30:00",
-    "start": "2025-04-14T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/fat-dog/2365347",
-    "title": "Fat Dog",
-    "location": "paradiso",
-    "price": 23.2,
-    "shortText": "Manic mix of dance, punk, and klezmer from South London",
-    "longText": "../public/texts/paradiso/Lm5sL2VuL3Byb2dyYW0vZmF0LWRvZy8yMzY1MzQ3.html",
-    "image": "../public/event-images/paradiso/Lm5sL2VuL3Byb2dyYW0vZmF0LWRvZy8yMzY1MzQ3",
+    "door": "2025-04-19T19:30:00",
+    "start": "2025-04-19T20:00:00",
+    "end": "2025-04-19T23:15:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/carsick/",
+    "title": "Carsick",
+    "location": "dynamo",
+    "price": 16,
+    "shortText": "Plus support",
+    "longText": "../public/texts/dynamo/aW5kaG92ZW4ubmwvZXZlbmVtZW50L2NhcnNpY2sv.html",
+    "image": "../public/event-images/dynamo/aW5kaG92ZW4ubmwvZXZlbmVtZW50L2NhcnNpY2sv",
     "soldOut": false,
-    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "fat dog": {
-        "s": "4dljephxbw7qihx4iwmnee",
-        "l": "fat%20dog",
+      "plus": {
+        "s": null,
+        "l": "plus",
         "g": [
-          "crank wave",
-          "punk"
+          "death",
+          "black metal"
         ]
       }
     }
   },
   {
-    "door": "2025-04-25T20:30:00",
-    "start": "2025-04-25T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/gurriers/2438458",
-    "title": "Gurriers",
-    "location": "paradiso",
-    "price": 20.7,
-    "shortText": "Gritty post-punk by promising Irish five-piece / Tolhuistuin",
-    "longText": "../public/texts/paradiso/bmwvZW4vcHJvZ3JhbS9ndXJyaWVycy8yNDM4NDU4.html",
-    "image": "../public/event-images/paradiso/bmwvZW4vcHJvZ3JhbS9ndXJyaWVycy8yNDM4NDU4",
+    "door": "2025-05-06T18:30:00",
+    "start": "2025-05-06T19:00:00",
+    "end": "2025-05-06T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/caliban/",
+    "title": "Caliban",
+    "location": "dynamo",
+    "price": 28.5,
+    "shortText": "Support: In Hearts Wake + Cabal + Assemble the Chariots",
+    "longText": "../public/texts/dynamo/aW5kaG92ZW4ubmwvZXZlbmVtZW50L2NhbGliYW4v.html",
+    "image": "../public/event-images/dynamo/aW5kaG92ZW4ubmwvZXZlbmVtZW50L2NhbGliYW4v",
     "soldOut": false,
-    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "gurriers": {
-        "s": "0bPAi2zCrxUrPBREWdetZ5",
-        "l": "gurriers",
+      "caliban": {
+        "s": "1oeo6cC9Fqa2bxxv67qBQL",
+        "l": "caliban",
         "g": [
-          "crank wave",
-          "irish post-punk",
-          "irish shoegaze"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-29T20:30:00",
-    "start": "2025-04-29T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/motorpsycho/2432631",
-    "title": "Motorpsycho",
-    "location": "paradiso",
-    "price": 34.8,
-    "shortText": "Innovative Norwegian rock duo / Tolhuistuin",
-    "longText": "../public/texts/paradiso/ZW4vcHJvZ3JhbS9tb3RvcnBzeWNoby8yNDMyNjMx.html",
-    "image": "../public/event-images/paradiso/ZW4vcHJvZ3JhbS9tb3RvcnBzeWNoby8yNDMyNjMx",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "motorpsycho": {
-        "s": "2bniajyl3hfcuqbqqhpn4t",
-        "l": "motorpsycho",
-        "g": [
-          "jazz metal",
-          "norwegian alternative rock",
-          "norwegian experimental",
-          "norwegian prog",
-          "norwegian psychedelic",
-          "norwegian punk",
-          "norwegian rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-03T20:30:00",
-    "start": "2025-05-03T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/wodan-boys/2445029",
-    "title": "Wodan Boys",
-    "location": "paradiso",
-    "price": 20.7,
-    "shortText": "Rattling rock songs from The Hague foursome / Tolhuistuin",
-    "longText": "../public/texts/paradiso/L2VuL3Byb2dyYW0vd29kYW4tYm95cy8yNDQ1MDI5.html",
-    "image": "../public/event-images/paradiso/L2VuL3Byb2dyYW0vd29kYW4tYm95cy8yNDQ1MDI5",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "wodan boys": {
-        "s": "0kmkbibevmq4luqquahdmr",
-        "l": "wodan%20boys",
-        "g": [
-          "dutch rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-15T22:00:00",
-    "start": "2025-05-15T22:00:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/equal-idiots/2402701",
-    "title": "Equal Idiots",
-    "location": "paradiso",
-    "price": 14.5,
-    "shortText": "Belgian garage-rock duo",
-    "longText": "../public/texts/paradiso/bi9wcm9ncmFtL2VxdWFsLWlkaW90cy8yNDAyNzAx.html",
-    "image": "../public/event-images/paradiso/bi9wcm9ncmFtL2VxdWFsLWlkaW90cy8yNDAyNzAx",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "equal idiots": {
-        "s": "4nljEo4gnUFgczxjNt5KOR",
-        "l": "equal%20idiots",
-        "g": [
-          "belgian punk",
-          "belgian rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-18T20:30:00",
-    "start": "2025-05-18T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/osees/2413436",
-    "title": "OSEES + Psychic Graveyard",
-    "location": "paradiso",
-    "price": 27.2,
-    "shortText": "Frantic rock machine",
-    "longText": "../public/texts/paradiso/c28ubmwvZW4vcHJvZ3JhbS9vc2Vlcy8yNDEzNDM2.html",
-    "image": "../public/event-images/paradiso/c28ubmwvZW4vcHJvZ3JhbS9vc2Vlcy8yNDEzNDM2",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "psychic graveyard": {
-        "s": "4i09yoyjd3v14wcaldfn3b",
-        "l": "psychic%20graveyard",
-        "g": [
-          "noise punk",
-          "noise rock",
-          "synth punk"
+          "metalcore",
+          "deathcore",
+          "metal",
+          "metalcore"
         ]
       },
-      "osees": {
-        "s": "0Ynh5WKqwbdYqJUpVpfEGS",
-        "l": "osees",
+      "assemble the chariots": {
+        "s": "6MWE8Xn602R4dRfbmJaNRJ",
+        "l": "assemble%20the%20chariots",
         "g": [
-          "psychedelic rock",
-          "garage rock",
+          "deathcore",
+          "symphonic death metal",
+          "deathcore"
+        ]
+      },
+      "in hearts wake": {
+        "s": "30BDCIM0IdglDaLzvCYd0N",
+        "l": "in%20hearts%20wake",
+        "g": [
+          "metalcore",
+          "djent",
+          "post-hardcore",
+          "deathcore"
+        ]
+      },
+      "cabal": {
+        "s": "6iv9dxekx45ff7qe0ldufw",
+        "l": "cabal",
+        "g": [
+          "argentine rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-07T19:30:00",
+    "start": "2025-05-07T20:00:00",
+    "end": "2025-05-07T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/knives/",
+    "title": "Knives",
+    "location": "dynamo",
+    "price": 15,
+    "shortText": "Hosted by Stroomhuis",
+    "longText": "../public/texts/dynamo/ZWluZGhvdmVuLm5sL2V2ZW5lbWVudC9rbml2ZXMv.html",
+    "image": "../public/event-images/dynamo/ZWluZGhvdmVuLm5sL2V2ZW5lbWVudC9rbml2ZXMv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "knives": {
+        "s": "2YoHhPouaTT96k3dUQ8WZK",
+        "l": "knives",
+        "g": [
           "noise rock",
-          "krautrock"
+          "grindcore",
+          "death 'n' roll"
         ]
       }
     }
   },
   {
-    "door": "2025-05-20T20:00:00",
-    "start": "2025-05-20T20:00:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/foxing/2453888",
-    "title": "Foxing",
-    "location": "paradiso",
-    "price": 21.7,
-    "shortText": "From raw noiserock to intimate bedroom experiments / Doka",
-    "longText": "../public/texts/paradiso/by5ubC9lbi9wcm9ncmFtL2ZveGluZy8yNDUzODg4.html",
-    "image": "../public/event-images/paradiso/by5ubC9lbi9wcm9ncmFtL2ZveGluZy8yNDUzODg4",
+    "door": "2025-05-16T19:30:00",
+    "start": "2025-05-16T20:00:00",
+    "end": "2025-05-16T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/after-taste/",
+    "title": "After Taste",
+    "location": "dynamo",
+    "price": 14,
+    "shortText": "Support: Yantras + The Infamous Nameless",
+    "longText": "../public/texts/dynamo/b3Zlbi5ubC9ldmVuZW1lbnQvYWZ0ZXItdGFzdGUv.html",
+    "image": "../public/event-images/dynamo/b3Zlbi5ubC9ldmVuZW1lbnQvYWZ0ZXItdGFzdGUv",
     "soldOut": false,
-    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "foxing": {
-        "s": "2dfxY7YDuYCUtWFzWTS6IR",
-        "l": "foxing",
+      "after taste": {
+        "s": "0Py0Fe4tMyQxGHTkX67IcS",
+        "l": "after%20taste",
         "g": [
-          "midwest emo",
-          "emo",
-          "math rock"
+          "power metal"
         ]
-      }
-    }
-  },
-  {
-    "door": "2025-12-11T20:30:00",
-    "start": "2025-12-11T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/clutch/2438454",
-    "title": "Clutch",
-    "location": "paradiso",
-    "price": 37.8,
-    "shortText": "Sensational Heavy Rock band from the USA",
-    "longText": "../public/texts/paradiso/by5ubC9lbi9wcm9ncmFtL2NsdXRjaC8yNDM4NDU0.html",
-    "image": "../public/event-images/paradiso/by5ubC9lbi9wcm9ncmFtL2NsdXRjaC8yNDM4NDU0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "clutch": {
-        "s": "161AC1AVRkIGIMxyj5djFQ",
-        "l": "clutch",
+      },
+      "yantras": {
+        "s": "4JUyZMVdrUBchwH8c2asWY",
+        "l": "yantras",
         "g": [
-          "stoner rock",
           "sludge metal",
+          "stoner rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-06-06T19:30:00",
+    "start": "2025-06-06T20:00:00",
+    "end": "2025-06-06T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/international-slayer-day/",
+    "title": "International Slayer Day",
+    "location": "dynamo",
+    "price": 19.5,
+    "shortText": "The official Dutch Ensemble",
+    "longText": "../public/texts/dynamo/bWVudC9pbnRlcm5hdGlvbmFsLXNsYXllci1kYXkv.html",
+    "image": "../public/event-images/dynamo/bWVudC9pbnRlcm5hdGlvbmFsLXNsYXllci1kYXkv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-06-15T11:00:00",
+    "start": "2025-06-15T11:00:00",
+    "end": "2025-06-15T18:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/yaltival-2025/",
+    "title": "Yaltival 2025",
+    "location": "dynamo",
+    "price": 30,
+    "shortText": "Young adult Boekenfestival",
+    "longText": "../public/texts/dynamo/ZW4ubmwvZXZlbmVtZW50L3lhbHRpdmFsLTIwMjUv.html",
+    "image": "../public/event-images/dynamo/ZW4ubmwvZXZlbmVtZW50L3lhbHRpdmFsLTIwMjUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-08-13T19:30:00",
+    "start": "2025-08-13T20:00:00",
+    "end": "2025-08-13T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/prong/",
+    "title": "Prong",
+    "location": "dynamo",
+    "price": 26,
+    "shortText": "Plus support",
+    "longText": "../public/texts/dynamo/LWVpbmRob3Zlbi5ubC9ldmVuZW1lbnQvcHJvbmcv.html",
+    "image": "../public/event-images/dynamo/LWVpbmRob3Zlbi5ubC9ldmVuZW1lbnQvcHJvbmcv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "prong": {
+        "s": "6SER9tY2pDIDVWVf5Ql97B",
+        "l": "prong",
+        "g": [
+          "groove metal",
+          "industrial metal",
           "thrash metal",
-          "crossover"
+          "alternative metal",
+          "industrial rock",
+          "metal",
+          "crossover",
+          "thrash metal (early",
+          "later)",
+          " groove",
+          "industrial metal (mid)"
+        ]
+      },
+      "plus": {
+        "s": null,
+        "l": "plus",
+        "g": [
+          "death",
+          "black metal"
         ]
       }
     }
