@@ -1,7 +1,7 @@
 /* global document */
 import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
-import longTextSocialsIframes from './longtext/neushoorn.js';
+import longTextSocialsIframes from './longtext/gebouw-t.js';
 import getImage from './gedeeld/image.js';
 import {
   mapToStartDate,
@@ -178,6 +178,8 @@ scraper.singlePage = async function ({ page, event }) {
   pageInfo.mediaForHTML = mediaForHTML;
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
+
+  this.dirtyDebug({ title: event.title, text: textForHTML.substring(0, 500) });
 
   return this.singlePageEnd({
     pageInfo,

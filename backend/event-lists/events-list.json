@@ -1,510 +1,305 @@
 [
   {
-    "door": "2025-01-24T19:00:00",
-    "start": "2025-01-24T19:00:00",
-    "end": "2025-01-24T22:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/queerhoven-boardgame-night/",
-    "title": "Queerhoven Boardgame Night",
-    "location": "dynamo",
-    "price": 2400,
-    "shortText": "The boardgame night is a recurring event from Queerhoven. Join us for an evening of boardgames and hanging out with your fellow queer people!",
-    "longText": "../public/texts/dynamo/bnQvcXVlZXJob3Zlbi1ib2FyZGdhbWUtbmlnaHQv.html",
-    "image": "../public/event-images/dynamo/bnQvcXVlZXJob3Zlbi1ib2FyZGdhbWUtbmlnaHQv",
+    "door": "2025-01-25T20:30:00",
+    "start": "2025-01-25T21:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/daredevils-zing-nederlands-met-me/",
+    "title": "Daredevils: Zing Nederlands Met Me",
+    "location": "gebouwt",
+    "price": 27.25,
+    "shortText": "100% Nederlandstalige show van partyband Daredevils",
+    "longText": "../public/texts/gebouwt/ZGV2aWxzLXppbmctbmVkZXJsYW5kcy1tZXQtbWUv.html",
+    "image": "../public/event-images/gebouwt/ZGV2aWxzLXppbmctbmVkZXJsYW5kcy1tZXQtbWUv",
     "soldOut": false,
+    "unavailable": false,
     "eventGenres": null,
     "artists": {}
   },
   {
-    "start": "2025-01-24T20:00:00",
-    "end": "2025-01-24T02:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/devils-lair/",
-    "title": "Devils Lair",
-    "location": "dynamo",
-    "price": 13,
-    "shortText": "Underground Hiphop meets Duistere Drum ’n Bass",
-    "longText": "../public/texts/dynamo/b3Zlbi5ubC9ldmVuZW1lbnQvZGV2aWxzLWxhaXIv.html",
-    "image": "../public/event-images/dynamo/b3Zlbi5ubC9ldmVuZW1lbnQvZGV2aWxzLWxhaXIv",
+    "door": "2025-01-25T20:00:00",
+    "start": "2025-01-25T20:30:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/rumours-atl/",
+    "title": "Rumours ATL: A Fleetwood Mac Tribute",
+    "location": "gebouwt",
+    "price": 29.25,
+    "shortText": "Een authentieke reproductie van live Fleetwood Mac shows",
+    "longText": "../public/texts/gebouwt/ZWJvdXctdC5ubC9hZ2VuZGEvcnVtb3Vycy1hdGwv.html",
+    "image": "../public/event-images/gebouwt/ZWJvdXctdC5ubC9hZ2VuZGEvcnVtb3Vycy1hdGwv",
     "soldOut": false,
+    "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "bass": {
-        "s": null,
-        "l": "bass",
-        "g": [
-          "doom",
-          "death metal"
-        ]
-      }
-    }
+    "artists": {}
   },
   {
-    "door": "2025-01-25T14:00:00",
-    "start": "2025-01-25T14:00:00",
-    "end": "2025-01-25T17:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/queer-art-club/",
-    "title": "Queer Art club",
-    "location": "dynamo",
-    "price": 5,
-    "shortText": "za 25-jan-2025Room 7€ 5,- Queer Art club Soapstone, sculpting for beginners",
-    "longText": "../public/texts/dynamo/bi5ubC9ldmVuZW1lbnQvcXVlZXItYXJ0LWNsdWIv.html",
-    "image": "../public/event-images/dynamo/bi5ubC9ldmVuZW1lbnQvcXVlZXItYXJ0LWNsdWIv",
+    "door": "2025-01-25T20:30:00",
+    "start": "2025-01-25T21:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/u2two/",
+    "title": "U2two",
+    "location": "gebouwt",
+    "price": 27,
+    "shortText": "Finalist van SBS6 TV-show “The Tribute – Battle of the bands”",
+    "longText": "../public/texts/gebouwt/cHM6Ly9nZWJvdXctdC5ubC9hZ2VuZGEvdTJ0d28v.html",
+    "image": "../public/event-images/gebouwt/cHM6Ly9nZWJvdXctdC5ubC9hZ2VuZGEvdTJ0d28v",
     "soldOut": false,
+    "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "stone": {
-        "s": "22be4uq6banwshpvcdxlce",
-        "l": "stone",
-        "g": [
-          "album rock",
-          "british invasion",
-          "classic rock",
-          "rock"
-        ]
-      }
-    }
+    "artists": {}
   },
   {
-    "start": "2025-02-01T23:00:00",
-    "end": "2025-02-01T06:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/puin-x-echo-recordings/",
-    "title": "Puin x echo recordings",
-    "location": "dynamo",
-    "price": 17.5,
-    "shortText": "[HARDGROOVE – TECHNO]",
-    "longText": "../public/texts/dynamo/bmVtZW50L3B1aW4teC1lY2hvLXJlY29yZGluZ3Mv.html",
-    "image": "../public/event-images/dynamo/bmVtZW50L3B1aW4teC1lY2hvLXJlY29yZGluZ3Mv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "echo": {
-        "s": "0fgykf9avljex0l9wt5b8z",
-        "l": "echo",
-        "g": [
-          "alternative rock",
-          "new romantic",
-          "new wave",
-          "permanent wave"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-04T20:00:00",
-    "start": "2025-02-04T20:00:00",
-    "end": "2025-02-04T22:30:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/homegrown-sessions-15/",
-    "title": "Homegrown sessions #15",
-    "location": "dynamo",
+    "door": "2025-01-25T20:30:00",
+    "start": "2025-01-25T21:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/slash-n-roses/",
+    "title": "Slash n' Roses",
+    "location": "gebouwt",
     "price": 0,
-    "shortText": "W/ JAYD3n + THE SACRED PATH + JUNIOR + MALU V + ‘N POLSKI + JONA VELLI + GIBBY + HOOGE + DJ ICEJUSTFLEXIN’",
-    "longText": "../public/texts/dynamo/ZW5lbWVudC9ob21lZ3Jvd24tc2Vzc2lvbnMtMTUv.html",
-    "image": "../public/event-images/dynamo/ZW5lbWVudC9ob21lZ3Jvd24tc2Vzc2lvbnMtMTUv",
+    "shortText": "GRATIS ENTREE - Claim je ticket en verzeker jezelf van een plek",
+    "longText": "../public/texts/gebouwt/b3V3LXQubmwvYWdlbmRhL3NsYXNoLW4tcm9zZXMv.html",
+    "image": "../public/event-images/gebouwt/b3V3LXQubmwvYWdlbmRhL3NsYXNoLW4tcm9zZXMv",
     "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "junior": {
-        "s": null,
-        "l": "junior",
-        "g": [
-          "progressive death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-12T19:00:00",
-    "start": "2025-02-12T19:00:00",
-    "end": "2025-02-12T21:30:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/brainfreeze-club-dialoog-mentale-gezondheid/",
-    "title": "the BRainfreeze club",
-    "location": "dynamo",
-    "price": 1200,
-    "shortText": "wo 12-feb-2025DynamoGratis the BRainfreeze club Dialoog mentale gezondheid",
-    "longText": "../public/texts/dynamo/dWItZGlhbG9vZy1tZW50YWxlLWdlem9uZGhlaWQv.html",
-    "image": "../public/event-images/dynamo/dWItZGlhbG9vZy1tZW50YWxlLWdlem9uZGhlaWQv",
-    "soldOut": false,
+    "unavailable": false,
     "eventGenres": null,
     "artists": {}
   },
   {
-    "start": "2025-02-14T22:00:00",
-    "end": "2025-02-14T04:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/bunkerbass-2/",
-    "title": "Bunkerbass",
-    "location": "dynamo",
-    "price": 10,
-    "shortText": "DRUM ‘N BASS – Valentine’s edition",
-    "longText": "../public/texts/dynamo/dmVuLm5sL2V2ZW5lbWVudC9idW5rZXJiYXNzLTIv.html",
-    "image": "../public/event-images/dynamo/dmVuLm5sL2V2ZW5lbWVudC9idW5rZXJiYXNzLTIv",
+    "door": "2025-01-25T20:00:00",
+    "start": "2025-01-25T20:30:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/bongloard-maria-iskariot/",
+    "title": "Bongloard + Maria Iskariot",
+    "location": "gebouwt",
+    "price": 17.25,
+    "shortText": "Rauwe energiebronnen uit de punkwereld",
+    "longText": "../public/texts/gebouwt/ZW5kYS9ib25nbG9hcmQtbWFyaWEtaXNrYXJpb3Qv.html",
+    "image": "../public/event-images/gebouwt/ZW5kYS9ib25nbG9hcmQtbWFyaWEtaXNrYXJpb3Qv",
     "soldOut": false,
+    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "bass": {
-        "s": null,
-        "l": "bass",
+      "bongloard": {
+        "s": "14irVozeTn0DEdXOdaWxow",
+        "l": "bongloard",
         "g": [
-          "doom",
-          "death metal"
+          "garage rock"
         ]
       }
     }
   },
   {
-    "door": "2025-03-08T15:00:00",
-    "start": "2025-03-08T15:00:00",
-    "end": "2025-03-08T17:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/gendermore/",
-    "title": "Gendermore",
-    "location": "dynamo",
-    "price": 800,
-    "shortText": "support meeting",
-    "longText": "../public/texts/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L2dlbmRlcm1vcmUv.html",
-    "image": "../public/event-images/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L2dlbmRlcm1vcmUv",
+    "door": "2025-01-25T20:30:00",
+    "start": "2025-01-25T21:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/the-exploited/",
+    "title": "The Exploited",
+    "location": "gebouwt",
+    "price": 30,
+    "shortText": "Legendarisch stel relschoppers uit Edinburgh",
+    "longText": "../public/texts/gebouwt/b3V3LXQubmwvYWdlbmRhL3RoZS1leHBsb2l0ZWQv.html",
+    "image": "../public/event-images/gebouwt/b3V3LXQubmwvYWdlbmRhL3RoZS1leHBsb2l0ZWQv",
     "soldOut": false,
+    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "gender": {
-        "s": null,
-        "l": "gender",
+      "the exploited": {
+        "s": "6NB4b8lltHCjOhW7vQZkAy",
+        "l": "the%20exploited",
         "g": [
-          "death metal",
-          "crust punk"
+          "hardcore punk",
+          "punk",
+          "uk82",
+          "hardcore punk (early)",
+          " thrash metal",
+          "crossover (later)"
         ]
       },
-      "more": {
+      "the ex": {
         "s": null,
-        "l": "more",
+        "l": "the%20ex",
+        "g": []
+      }
+    }
+  },
+  {
+    "door": "2025-01-25T20:30:00",
+    "start": "2025-01-25T21:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/anneke-van-giersbergen-2/",
+    "title": "Anneke van Giersbergen",
+    "location": "gebouwt",
+    "price": 26.25,
+    "shortText": "Clubtour 2025",
+    "longText": "../public/texts/gebouwt/ZW5kYS9hbm5la2UtdmFuLWdpZXJzYmVyZ2VuLTIv.html",
+    "image": "../public/event-images/gebouwt/ZW5kYS9hbm5la2UtdmFuLWdpZXJzYmVyZ2VuLTIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "anneke van giersbergen": {
+        "s": "6tzqjnkayty8hfqbeddf8v",
+        "l": "anneke%20van%20giersbergen",
         "g": [
-          "nwobhm",
-          "heavy metal"
+          "metal"
         ]
       }
     }
   },
   {
-    "door": "2025-03-14T20:00:00",
-    "start": "2025-03-14T20:00:00",
-    "end": "2025-03-14T01:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/its-just-one-of-those-nights-2/",
-    "title": "It’s Just One Of Those Nights",
-    "location": "dynamo",
-    "price": 12.5,
-    "shortText": "90’s & 00’s Nu-Metal Punkrock party",
-    "longText": "../public/texts/dynamo/dHMtanVzdC1vbmUtb2YtdGhvc2UtbmlnaHRzLTIv.html",
-    "image": "../public/event-images/dynamo/dHMtanVzdC1vbmUtb2YtdGhvc2UtbmlnaHRzLTIv",
+    "door": "2025-01-25T20:30:00",
+    "start": "2025-01-25T21:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/plan-nine/",
+    "title": "Lucassen & Soeterboek's Plan Nine",
+    "location": "gebouwt",
+    "price": 22.25,
+    "shortText": "Long Lost Tour",
+    "longText": "../public/texts/gebouwt/L2dlYm91dy10Lm5sL2FnZW5kYS9wbGFuLW5pbmUv.html",
+    "image": "../public/event-images/gebouwt/L2dlYm91dy10Lm5sL2FnZW5kYS9wbGFuLW5pbmUv",
     "soldOut": false,
+    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "punk": {
-        "s": null,
-        "l": "punk",
-        "g": [
-          "melodic death metal (early)",
-          " glitch",
-          "dubstep",
-          "electronica (later)"
-        ]
-      },
-      "stone": {
-        "s": "22be4uq6banwshpvcdxlce",
-        "l": "stone",
+      "lucassen & soeterboek's plan nine": {
+        "s": "3hTFJa0cS8g0LJMQs2RkPG",
+        "l": "lucassen%20&%20soeterboek's%20plan%20nine",
         "g": [
           "album rock",
-          "british invasion",
-          "classic rock",
-          "rock"
+          "arena rock",
+          "progressive metal"
         ]
       }
     }
   },
   {
-    "door": "2025-03-15T19:00:00",
-    "start": "2025-03-15T19:30:00",
-    "end": "2025-03-15T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/allt/",
-    "title": "Allt",
-    "location": "dynamo",
-    "price": 18.5,
-    "shortText": "Uitverkocht",
-    "longText": "../public/texts/dynamo/by1laW5kaG92ZW4ubmwvZXZlbmVtZW50L2FsbHQv.html",
-    "image": "../public/event-images/dynamo/by1laW5kaG92ZW4ubmwvZXZlbmVtZW50L2FsbHQv",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "allt": {
-        "s": "6YRr0btzGqfQ5K7r23qjEM",
-        "l": "allt",
-        "g": [
-          "progressive metalcore",
-          "swedish metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-05T15:00:00",
-    "start": "2025-04-05T16:00:00",
-    "end": "2025-04-05T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/grindhoven-xii/",
-    "title": "Grindhoven XII",
-    "location": "dynamo",
-    "price": 36.5,
-    "shortText": "W/ General Surgery + Guineapig + pulmonary Fibrosis and more",
-    "longText": "../public/texts/dynamo/bi5ubC9ldmVuZW1lbnQvZ3JpbmRob3Zlbi14aWkv.html",
-    "image": "../public/event-images/dynamo/bi5ubC9ldmVuZW1lbnQvZ3JpbmRob3Zlbi14aWkv",
+    "door": "2025-01-25T19:30:00",
+    "start": "2025-01-25T20:15:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/legends-of-rock-tribute-tour-7/",
+    "title": "Legends of Rock Tribute Tour",
+    "location": "gebouwt",
+    "price": 27.25,
+    "shortText": "Tributes aan Metallica, Motörhead en Judas Priest",
+    "longText": "../public/texts/gebouwt/ZWdlbmRzLW9mLXJvY2stdHJpYnV0ZS10b3VyLTcv.html",
+    "image": "../public/event-images/gebouwt/ZWdlbmRzLW9mLXJvY2stdHJpYnV0ZS10b3VyLTcv",
     "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-01-25T20:30:00",
+    "start": "2025-01-25T21:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/autarkh-farer-alkahest/",
+    "title": "Autarkh + Farer + Alkahest",
+    "location": "gebouwt",
+    "price": 17.25,
+    "shortText": "Imponerende experimental metal",
+    "longText": "../public/texts/gebouwt/YWdlbmRhL2F1dGFya2gtZmFyZXItYWxrYWhlc3Qv.html",
+    "image": "../public/event-images/gebouwt/YWdlbmRhL2F1dGFya2gtZmFyZXItYWxrYWhlc3Qv",
+    "soldOut": false,
+    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "guineapig": {
-        "s": "7JjFSi8Nz49BxuZcoTHc7L",
-        "l": "guineapig",
+      "alkahest": {
+        "s": "53vjMkvxWt9UZAXlnwsPrj",
+        "l": "alkahest",
         "g": [
-          "grindcore",
-          "goregrind"
+          "atmospheric sludge",
+          "doom metal",
+          "post-rock"
         ]
       },
-      "more": {
-        "s": null,
-        "l": "more",
+      "autarkh": {
+        "s": "1h39mvskrqbzrsf3vfnsp5",
+        "l": "autarkh",
         "g": [
-          "nwobhm",
+          "industrial metal"
+        ]
+      },
+      "farer": {
+        "s": "529WaKnDwThqAtgOLNjwMp",
+        "l": "farer",
+        "g": [
+          "atmospheric sludge",
+          "post-metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-01-25T20:30:00",
+    "start": "2025-01-25T21:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/ian-paice-deep-purple-ft-purpendicular/",
+    "title": "Ian Paice (Deep Purple) ft. Purpendicular",
+    "location": "gebouwt",
+    "price": 40.25,
+    "shortText": "Performing Classic Deep Purple",
+    "longText": "../public/texts/gebouwt/LWRlZXAtcHVycGxlLWZ0LXB1cnBlbmRpY3VsYXIv.html",
+    "image": "../public/event-images/gebouwt/LWRlZXAtcHVycGxlLWZ0LXB1cnBlbmRpY3VsYXIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "purpendicular": {
+        "s": "7dtykvbh2qxkicazbxtrkf",
+        "l": "purpendicular",
+        "g": []
+      },
+      "ian paice": {
+        "s": "2gndxbhyibxhwvurrlruaq",
+        "l": "ian%20paice",
+        "g": [
+          "rock drums",
           "heavy metal"
         ]
       }
     }
   },
   {
-    "door": "2025-04-08T19:30:00",
-    "start": "2025-04-08T20:00:00",
-    "end": "2025-04-08T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/save-face/",
-    "title": "Save Face",
-    "location": "dynamo",
-    "price": 20,
-    "shortText": "plus support",
-    "longText": "../public/texts/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9zYXZlLWZhY2Uv.html",
-    "image": "../public/event-images/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9zYXZlLWZhY2Uv",
+    "door": "2025-01-25T20:30:00",
+    "start": "2025-01-25T21:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/t-strijd-2025-rock-heavy/",
+    "title": "T-Strijd 2025 - rock & heavy",
+    "location": "gebouwt",
+    "price": null,
+    "shortText": "Nobody Asked + Two Second Before + The Morning Indefinite",
+    "longText": "../public/texts/gebouwt/ZW5kYS90LXN0cmlqZC0yMDI1LXJvY2staGVhdnkv.html",
+    "image": "../public/event-images/gebouwt/ZW5kYS90LXN0cmlqZC0yMDI1LXJvY2staGVhdnkv",
     "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "plus": {
-        "s": null,
-        "l": "plus",
-        "g": [
-          "death",
-          "black metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-19T19:30:00",
-    "start": "2025-04-19T20:00:00",
-    "end": "2025-04-19T23:15:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/carsick/",
-    "title": "Carsick",
-    "location": "dynamo",
-    "price": 16,
-    "shortText": "Plus support",
-    "longText": "../public/texts/dynamo/aW5kaG92ZW4ubmwvZXZlbmVtZW50L2NhcnNpY2sv.html",
-    "image": "../public/event-images/dynamo/aW5kaG92ZW4ubmwvZXZlbmVtZW50L2NhcnNpY2sv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "plus": {
-        "s": null,
-        "l": "plus",
-        "g": [
-          "death",
-          "black metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-06T18:30:00",
-    "start": "2025-05-06T19:00:00",
-    "end": "2025-05-06T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/caliban/",
-    "title": "Caliban",
-    "location": "dynamo",
-    "price": 28.5,
-    "shortText": "Support: In Hearts Wake + Cabal + Assemble the Chariots",
-    "longText": "../public/texts/dynamo/aW5kaG92ZW4ubmwvZXZlbmVtZW50L2NhbGliYW4v.html",
-    "image": "../public/event-images/dynamo/aW5kaG92ZW4ubmwvZXZlbmVtZW50L2NhbGliYW4v",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "caliban": {
-        "s": "1oeo6cC9Fqa2bxxv67qBQL",
-        "l": "caliban",
-        "g": [
-          "metalcore",
-          "deathcore",
-          "metal",
-          "metalcore"
-        ]
-      },
-      "assemble the chariots": {
-        "s": "6MWE8Xn602R4dRfbmJaNRJ",
-        "l": "assemble%20the%20chariots",
-        "g": [
-          "deathcore",
-          "symphonic death metal",
-          "deathcore"
-        ]
-      },
-      "in hearts wake": {
-        "s": "30BDCIM0IdglDaLzvCYd0N",
-        "l": "in%20hearts%20wake",
-        "g": [
-          "metalcore",
-          "djent",
-          "post-hardcore",
-          "deathcore"
-        ]
-      },
-      "cabal": {
-        "s": "6iv9dxekx45ff7qe0ldufw",
-        "l": "cabal",
-        "g": [
-          "argentine rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-07T19:30:00",
-    "start": "2025-05-07T20:00:00",
-    "end": "2025-05-07T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/knives/",
-    "title": "Knives",
-    "location": "dynamo",
-    "price": 15,
-    "shortText": "Hosted by Stroomhuis",
-    "longText": "../public/texts/dynamo/ZWluZGhvdmVuLm5sL2V2ZW5lbWVudC9rbml2ZXMv.html",
-    "image": "../public/event-images/dynamo/ZWluZGhvdmVuLm5sL2V2ZW5lbWVudC9rbml2ZXMv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "knives": {
-        "s": "2YoHhPouaTT96k3dUQ8WZK",
-        "l": "knives",
-        "g": [
-          "noise rock",
-          "grindcore",
-          "death 'n' roll"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-16T19:30:00",
-    "start": "2025-05-16T20:00:00",
-    "end": "2025-05-16T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/after-taste/",
-    "title": "After Taste",
-    "location": "dynamo",
-    "price": 14,
-    "shortText": "Support: Yantras + The Infamous Nameless",
-    "longText": "../public/texts/dynamo/b3Zlbi5ubC9ldmVuZW1lbnQvYWZ0ZXItdGFzdGUv.html",
-    "image": "../public/event-images/dynamo/b3Zlbi5ubC9ldmVuZW1lbnQvYWZ0ZXItdGFzdGUv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "after taste": {
-        "s": "0Py0Fe4tMyQxGHTkX67IcS",
-        "l": "after%20taste",
-        "g": [
-          "power metal"
-        ]
-      },
-      "yantras": {
-        "s": "4JUyZMVdrUBchwH8c2asWY",
-        "l": "yantras",
-        "g": [
-          "sludge metal",
-          "stoner rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-06-06T19:30:00",
-    "start": "2025-06-06T20:00:00",
-    "end": "2025-06-06T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/international-slayer-day/",
-    "title": "International Slayer Day",
-    "location": "dynamo",
-    "price": 19.5,
-    "shortText": "The official Dutch Ensemble",
-    "longText": "../public/texts/dynamo/bWVudC9pbnRlcm5hdGlvbmFsLXNsYXllci1kYXkv.html",
-    "image": "../public/event-images/dynamo/bWVudC9pbnRlcm5hdGlvbmFsLXNsYXllci1kYXkv",
-    "soldOut": false,
+    "unavailable": false,
     "eventGenres": null,
     "artists": {}
   },
   {
-    "door": "2025-06-15T11:00:00",
-    "start": "2025-06-15T11:00:00",
-    "end": "2025-06-15T18:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/yaltival-2025/",
-    "title": "Yaltival 2025",
-    "location": "dynamo",
-    "price": 30,
-    "shortText": "Young adult Boekenfestival",
-    "longText": "../public/texts/dynamo/ZW4ubmwvZXZlbmVtZW50L3lhbHRpdmFsLTIwMjUv.html",
-    "image": "../public/event-images/dynamo/ZW4ubmwvZXZlbmVtZW50L3lhbHRpdmFsLTIwMjUv",
+    "door": "2025-01-25T20:30:00",
+    "start": "2025-01-25T21:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/renegade/",
+    "title": "From Thin Lizzy, Darren Wharton’s Renegade",
+    "location": "gebouwt",
+    "price": 27.25,
+    "shortText": "Een reis door Thin Lizzy's erfgoed en meer!",
+    "longText": "../public/texts/gebouwt/Ly9nZWJvdXctdC5ubC9hZ2VuZGEvcmVuZWdhZGUv.html",
+    "image": "../public/event-images/gebouwt/Ly9nZWJvdXctdC5ubC9hZ2VuZGEvcmVuZWdhZGUv",
     "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-08-13T19:30:00",
-    "start": "2025-08-13T20:00:00",
-    "end": "2025-08-13T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/prong/",
-    "title": "Prong",
-    "location": "dynamo",
-    "price": 26,
-    "shortText": "Plus support",
-    "longText": "../public/texts/dynamo/LWVpbmRob3Zlbi5ubC9ldmVuZW1lbnQvcHJvbmcv.html",
-    "image": "../public/event-images/dynamo/LWVpbmRob3Zlbi5ubC9ldmVuZW1lbnQvcHJvbmcv",
-    "soldOut": false,
+    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "prong": {
-        "s": "6SER9tY2pDIDVWVf5Ql97B",
-        "l": "prong",
+      "renegade": {
+        "s": "3vBaLrnIgG5WCQ3pTeZexc",
+        "l": "renegade",
         "g": [
-          "groove metal",
-          "industrial metal",
-          "thrash metal",
-          "alternative metal",
-          "industrial rock",
-          "metal",
-          "crossover",
-          "thrash metal (early",
-          "later)",
-          " groove",
-          "industrial metal (mid)"
-        ]
-      },
-      "plus": {
-        "s": null,
-        "l": "plus",
-        "g": [
-          "death",
-          "black metal"
+          "jungle",
+          "progressive heavy metal",
+          "hard rock"
         ]
       }
     }
+  },
+  {
+    "door": "2025-01-25T20:30:00",
+    "start": "2025-01-25T21:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/t-strijd-2025-tribute/",
+    "title": "T-Strijd 2025 - tribute",
+    "location": "gebouwt",
+    "price": 0,
+    "shortText": "Olalala + Dookie + De Neefjes",
+    "longText": "../public/texts/gebouwt/L2FnZW5kYS90LXN0cmlqZC0yMDI1LXRyaWJ1dGUv.html",
+    "image": "../public/event-images/gebouwt/L2FnZW5kYS90LXN0cmlqZC0yMDI1LXRyaWJ1dGUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   }
 ]
