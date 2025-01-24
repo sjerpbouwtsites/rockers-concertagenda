@@ -56,8 +56,7 @@ scraper.mainPage = async function () {
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData }) =>
-      Array.from(document.querySelectorAll('a[href*="https://dynamo-eindhoven.nl"].image-border-element'))
-        .map((el) => el.parentNode)    
+      Array.from(document.querySelectorAll('h1 ~ div > .group.image-border-trigger'))
         .map(
           (baseEvent) => {
             const title = baseEvent.querySelector('h3')?.textContent ?? '';
@@ -72,7 +71,10 @@ scraper.mainPage = async function () {
               res.corrupted = `is metalfest`;
             }
 
-            res.mapToStartDate = baseEvent.querySelector('a + a')?.textContent.replaceAll(/-/g, ' ').replaceAll(/\s\s/g, ' ') ?? '';
+            res.mapToStartDate = baseEvent.querySelector('a + a')?.textContent
+              .trim().substring(0, 20)
+              .toLowerCase().replaceAll(/-/g, ' ')
+              .replaceAll(/\s\s/g, ' ') ?? '';
             
             res.shortText = baseEvent.querySelector('a + a div:last-child')?.textContent ?? '';
 
@@ -133,8 +135,9 @@ scraper.singlePage = async function ({ page, event }) {
         if (Array.isArray(m)) {
           res.mapToStartTime = m[1];
         }
-      } else {
-        res.corrupt = true;
+      } else if (res.mapToDoorTime) {
+        res.mapToStartTime = res.mapToDoorTime;
+        res.mapToDoorTime = null;
       }
 
       if (tijdenRijTekst.includes('curfew')) {

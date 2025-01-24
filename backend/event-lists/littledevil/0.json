@@ -1,273 +1,177 @@
 [
   {
-    "start": "2024-10-11T20:30:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/foreseenforeseen-fin-traumatizer/",
-    "title": "ForeseenForeseen (FIN) + Traumatizer",
+    "start": "2025-01-24T21:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/sha-la-lees-b-nl/",
+    "title": "Sha-la-lees (b/nl)",
     "location": "littledevil",
-    "price": 14,
-    "shortText": "hardcore punk",
-    "longText": "../public/texts/littledevil/ZXNlZW5mb3Jlc2Vlbi1maW4tdHJhdW1hdGl6ZXIv.html",
-    "image": "../public/event-images/littledevil/ZXNlZW5mb3Jlc2Vlbi1maW4tdHJhdW1hdGl6ZXIv",
+    "price": 10,
+    "shortText": "protopunk garage rock 'n roll - LP release HEX",
+    "longText": "../public/texts/littledevil/Lm5sL2NhbGVuZGFyL3NoYS1sYS1sZWVzLWItbmwv.html",
+    "image": "../public/event-images/littledevil/Lm5sL2NhbGVuZGFyL3NoYS1sYS1sZWVzLWItbmwv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-01-26T16:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/savage-beat-malad-diamond-dogs/",
+    "title": "Savage Beat + Malad + City Riot",
+    "location": "littledevil",
+    "price": 10,
+    "shortText": "streetpunk matinee",
+    "longText": "../public/texts/littledevil/YXZhZ2UtYmVhdC1tYWxhZC1kaWFtb25kLWRvZ3Mv.html",
+    "image": "../public/event-images/littledevil/YXZhZ2UtYmVhdC1tYWxhZC1kaWFtb25kLWRvZ3Mv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "traumatizer": {
-        "s": "7zjBOWru8RBRZ1dQQk0B4g",
-        "l": "traumatizer",
+      "malad": {
+        "s": "21fzlwdq72k9w3ozypcxyr",
+        "l": null,
         "g": [
-          "lowlands hardcore",
-          "crossover",
-          "hardcore",
-          "psychobilly",
           "punk",
-          "thrash"
+          "street punk"
         ]
       },
-      "foreseen": {
-        "s": "0GQRDxksaf79O8JDgxp91g",
-        "l": "foreseen",
+      "city riot": {
+        "s": "5A91FYahDG9GH37wuL61rr",
+        "l": "city%20riot",
         "g": [
-          "crossover thrash",
-          "new wave of thrash metal",
-          "thrash metal",
-          "crossover"
+          "hardcore punk"
         ]
       }
     }
   },
   {
-    "start": "2024-10-12T15:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/little-devil-oktoberfest-2024/",
-    "title": "Little Devil Oktoberfest 2024",
+    "start": "2025-01-31T19:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/remain-untamed-chaos-unleashed-acidbait-fading-echo/",
+    "title": "Remain Untamed ",
     "location": "littledevil",
-    "price": 0,
-    "shortText": "drie verschillende oktoberfest bieren - dansen met DJ - prosit",
-    "longText": "../public/texts/littledevil/bGl0dGxlLWRldmlsLW9rdG9iZXJmZXN0LTIwMjQv.html",
-    "image": "../public/event-images/littledevil/bGl0dGxlLWRldmlsLW9rdG9iZXJmZXN0LTIwMjQv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-10-13T14:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/dwaalboktour-3/",
-    "title": "DwaalBokTour",
-    "location": "littledevil",
-    "price": 0,
-    "shortText": "",
-    "longText": "../public/texts/littledevil/aWwubmwvY2FsZW5kYXIvZHdhYWxib2t0b3VyLTMv.html",
-    "image": "../public/event-images/littledevil/aWwubmwvY2FsZW5kYXIvZHdhYWxib2t0b3VyLTMv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-10-17T19:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/your-highness-b-yama/",
-    "title": "Your Highness (B) + Yama",
-    "location": "littledevil",
-    "price": 7.5,
-    "shortText": "heavy stoner - rock",
-    "longText": "../public/texts/littledevil/Y2FsZW5kYXIveW91ci1oaWdobmVzcy1iLXlhbWEv.html",
-    "image": "../public/event-images/littledevil/Y2FsZW5kYXIveW91ci1oaWdobmVzcy1iLXlhbWEv",
+    "price": 5,
+    "shortText": " Hallowed Fire  +  Acidbait  +  Fading Echo EP release party - thrash metal - presented by HB concerts",
+    "longText": "../public/texts/littledevil/bmxlYXNoZWQtYWNpZGJhaXQtZmFkaW5nLWVjaG8v.html",
+    "image": "../public/event-images/littledevil/bmxlYXNoZWQtYWNpZGJhaXQtZmFkaW5nLWVjaG8v",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "your highness": {
-        "s": "6Cbs0xetz57bCUhG7wyCt7",
-        "l": "your%20highness",
+      "echo": {
+        "s": "0fgykf9avljex0l9wt5b8z",
+        "l": "echo",
         "g": [
-          "belgian metal",
-          "belgian stoner rock",
-          "sludge",
-          "stoner metal"
+          "alternative rock",
+          "new romantic",
+          "new wave",
+          "permanent wave"
         ]
       },
-      "yama": {
+      "acidbait": {
+        "s": "2yaxHzLBIPiwA9eRqce2hk",
+        "l": "acidbait",
+        "g": [
+          "groove metal"
+        ]
+      },
+      "fading": {
         "s": null,
-        "l": "yama",
+        "l": "fading",
         "g": [
-          "psychedelic doom",
-          "stoner metal",
-          "rock"
+          "epic",
+          "melodic death metal"
         ]
       }
     }
   },
   {
-    "start": "2024-10-19T21:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/child-aus/",
-    "title": "Child (aus)",
+    "start": "2025-02-01T20:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/schirenc-plays-pungent-stench-at/",
+    "title": "Schirenc plays Pungent Stench (AT)",
     "location": "littledevil",
-    "price": 10,
-    "shortText": "heavy blues rock",
-    "longText": "../public/texts/littledevil/bGVkZXZpbC5ubC9jYWxlbmRhci9jaGlsZC1hdXMv.html",
-    "image": "../public/event-images/littledevil/bGVkZXZpbC5ubC9jYWxlbmRhci9jaGlsZC1hdXMv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "child": {
-        "s": null,
-        "l": "child",
-        "g": [
-          "grindcore"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-10-25T20:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/skroetbalg/",
-    "title": "Skroetbalg",
-    "location": "littledevil",
-    "price": 10,
-    "shortText": "punk rock 'n roll",
-    "longText": "../public/texts/littledevil/ZWRldmlsLm5sL2NhbGVuZGFyL3Nrcm9ldGJhbGcv.html",
-    "image": "../public/event-images/littledevil/ZWRldmlsLm5sL2NhbGVuZGFyL3Nrcm9ldGJhbGcv",
+    "price": 18.5,
+    "shortText": "death metal",
+    "longText": "../public/texts/littledevil/aXJlbmMtcGxheXMtcHVuZ2VudC1zdGVuY2gtYXQv.html",
+    "image": "../public/event-images/littledevil/aXJlbmMtcGxheXMtcHVuZ2VudC1zdGVuY2gtYXQv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {}
   },
   {
-    "start": "2024-10-26T19:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/little-devil-21-jaar-met-live-little-devil-allstars/",
-    "title": "Little Devil 21 jaar! Met live: Little Devil Allstars",
+    "start": "2025-02-02T14:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/paganfest-picknick-free-warmup-show-with-mourning-wood/",
+    "title": "Paganfest Picknick – Free warmup-show with Mourning Wood",
     "location": "littledevil",
     "price": 0,
-    "shortText": " party! - DJ's - food - swingen",
-    "longText": "../public/texts/littledevil/ZXQtbGl2ZS1saXR0bGUtZGV2aWwtYWxsc3RhcnMv.html",
-    "image": "../public/event-images/littledevil/ZXQtbGl2ZS1saXR0bGUtZGV2aWwtYWxsc3RhcnMv",
+    "shortText": " Paganfest - warmup-show",
+    "longText": "../public/texts/littledevil/YXJtdXAtc2hvdy13aXRoLW1vdXJuaW5nLXdvb2Qv.html",
+    "image": "../public/event-images/littledevil/YXJtdXAtc2hvdy13aXRoLW1vdXJuaW5nLXdvb2Qv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {}
   },
   {
-    "start": "2024-10-31T20:30:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/beasto-blanco-usa-johnny-tupolev-d/",
-    "title": "Beastö Blancö (USA) + Johnny Tupolev (D)",
+    "start": "2025-02-07T19:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/noctambulist-yantras-radeloos-ziedend/",
+    "title": "Noctambulist + Yantras + Radeloos///Ziedend",
     "location": "littledevil",
-    "price": 10,
-    "shortText": "powerful - rock & roll - theatrical live experience",
-    "longText": "../public/texts/littledevil/by1ibGFuY28tdXNhLWpvaG5ueS10dXBvbGV2LWQv.html",
-    "image": "../public/event-images/littledevil/by1ibGFuY28tdXNhLWpvaG5ueS10dXBvbGV2LWQv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-11-01T15:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/little-devil-halloween-party/",
-    "title": "Little Devil Halloween Party",
-    "location": "littledevil",
-    "price": 0,
-    "shortText": "Halloween beers",
-    "longText": "../public/texts/littledevil/L2xpdHRsZS1kZXZpbC1oYWxsb3dlZW4tcGFydHkv.html",
-    "image": "../public/event-images/littledevil/L2xpdHRsZS1kZXZpbC1oYWxsb3dlZW4tcGFydHkv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-11-07T18:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/anvil-can-guests/",
-    "title": "Anvil (can) + guests",
-    "location": "littledevil",
-    "price": 27.5,
-    "shortText": "thrash metal legends",
-    "longText": "../public/texts/littledevil/Lm5sL2NhbGVuZGFyL2FudmlsLWNhbi1ndWVzdHMv.html",
-    "image": "../public/event-images/littledevil/Lm5sL2NhbGVuZGFyL2FudmlsLWNhbi1ndWVzdHMv",
+    "price": 5,
+    "shortText": "release show - post-black metal - post-doom",
+    "longText": "../public/texts/littledevil/bGlzdC15YW50cmFzLXJhZGVsb29zLXppZWRlbmQv.html",
+    "image": "../public/event-images/littledevil/bGlzdC15YW50cmFzLXJhZGVsb29zLXppZWRlbmQv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "anvil": {
-        "s": "0maNhqGx60ucjS4UaAH6cP",
-        "l": "anvil",
-        "g": [
-          "canadian metal",
-          "glam metal",
-          "hard rock",
-          "metal",
-          "speed metal",
-          "thrash metal",
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-11-08T20:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/superbloom-dear-seattle/",
-    "title": "Superbloom + Dear Seattle",
-    "location": "littledevil",
-    "price": 16.5,
-    "shortText": "rock - grunge",
-    "longText": "../public/texts/littledevil/ZW5kYXIvc3VwZXJibG9vbS1kZWFyLXNlYXR0bGUv.html",
-    "image": "../public/event-images/littledevil/ZW5kYXIvc3VwZXJibG9vbS1kZWFyLXNlYXR0bGUv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "dear seattle": {
-        "s": "5gWPNlps947GENk32pRV3S",
-        "l": "dear%20seattle",
-        "g": [
-          "aussie emo",
-          "australian garage punk"
-        ]
-      },
-      "superbloom": {
-        "s": "3xdggitmc1vfachxawhiil",
-        "l": "superbloom",
-        "g": [
-          "grungegaze"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-01-10T19:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/burning-sad-iron/",
-    "title": "Burning + Sad Iron",
-    "location": "littledevil",
-    "price": 0,
-    "shortText": "heavy metal - speed metal - split album presentation",
-    "longText": "../public/texts/littledevil/Lm5sL2NhbGVuZGFyL2J1cm5pbmctc2FkLWlyb24v.html",
-    "image": "../public/event-images/littledevil/Lm5sL2NhbGVuZGFyL2J1cm5pbmctc2FkLWlyb24v",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "burning": {
-        "s": null,
-        "l": "burning",
-        "g": [
-          "thrash metal"
-        ]
-      },
-      "sad iron": {
-        "s": "7JwCaSdDps9WHepLw8ksid",
-        "l": "sad%20iron",
-        "g": [
-          "heavy metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-01-24T20:30:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/the-optimist-in-me/",
-    "title": "The Optimist In Me",
-    "location": "littledevil",
-    "price": 10,
-    "shortText": "rock",
-    "longText": "../public/texts/littledevil/bC9jYWxlbmRhci90aGUtb3B0aW1pc3QtaW4tbWUv.html",
-    "image": "../public/event-images/littledevil/bC9jYWxlbmRhci90aGUtb3B0aW1pc3QtaW4tbWUv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "the optimist in me": {
-        "s": "3qmkrrjqjtixsbgjgwwmmu",
-        "l": "the%20optimist%20in%20me",
+      "radeloos///ziedend": {
+        "s": "6l0nxnfykkn3chx6mw1xcj",
+        "l": "radeloos///ziedend",
         "g": []
+      }
+    }
+  },
+  {
+    "start": "2025-02-14T20:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/cobra-the-impaler/",
+    "title": "Cobra The Impaler",
+    "location": "littledevil",
+    "price": 18.3,
+    "shortText": "heavy metal",
+    "longText": "../public/texts/littledevil/bmwvY2FsZW5kYXIvY29icmEtdGhlLWltcGFsZXIv.html",
+    "image": "../public/event-images/littledevil/bmwvY2FsZW5kYXIvY29icmEtdGhlLWltcGFsZXIv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "cobra the impaler": {
+        "s": "3GF4mtTUUptBbUoJNclS4A",
+        "l": "cobra%20the%20impaler",
+        "g": [
+          "progressive metalcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-01T09:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/woa-metal-battle-voorronde-noord-brabant/",
+    "title": "W:O:A: Metal Battle Voorronde Noord-Brabant",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": "W:O:A: Metal Battle",
+    "longText": "../public/texts/littledevil/YXR0bGUtdm9vcnJvbmRlLW5vb3JkLWJyYWJhbnQv.html",
+    "image": "../public/event-images/littledevil/YXR0bGUtdm9vcnJvbmRlLW5vb3JkLWJyYWJhbnQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
       }
     }
   }

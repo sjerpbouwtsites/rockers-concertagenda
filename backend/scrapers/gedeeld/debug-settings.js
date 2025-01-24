@@ -2,13 +2,13 @@ const debugSettings = {
   debugDebug: false,
   debugCorruptedUnavailable: false,
   debugsinglePageAsyncCheck: true,
-  debugRawEventAsyncCheck: true,
+  debugRawEventAsyncCheck: false,
   debugBaseEvents: true,
-  debugPageInfo: false,
+  debugPageInfo: true,
   debugPrice: false,
   debugWithTempFile:false,
-  debugHarvestIntegratie:true,
-  debugArtistScan:true,
+  debugHarvestIntegratie:false,
+  debugArtistScan:false,
   vertraagScraper: false,
 };
 export default debugSettings;
