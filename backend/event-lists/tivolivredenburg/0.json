@@ -1,33 +1,7 @@
 [
   {
-    "door": "2025-01-16T18:30:00",
-    "start": "2025-01-16T19:00:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/76440654/insomnium-16-01-2025",
-    "title": "Insomnium",
-    "location": "tivolivredenburg",
-    "price": 33.75,
-    "shortText": "Integrale uitvoering van Beyond The Shadows Of The Dying Sun",
-    "longText": "../public/texts/tivolivredenburg/Lzc2NDQwNjU0L2luc29tbml1bS0xNi0wMS0yMDI1.html",
-    "image": "../public/event-images/tivolivredenburg/Lzc2NDQwNjU0L2luc29tbml1bS0xNi0wMS0yMDI1",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "insomnium": {
-        "s": "3uiglg971orm5fe6v8lvqs",
-        "l": "insomnium",
-        "g": [
-          "finnish death metal",
-          "finnish melodeath",
-          "finnish metal",
-          "melodic death metal"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-01-24T18:30:00",
-    "start": "2025-01-24T19:30:00",
+    "start": "2025-01-24T22:30:00",
     "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/64838372/bernth-charles-berthoud-24-01-2025",
     "title": "Bernth + Charles Berthoud",
     "location": "tivolivredenburg",
@@ -42,7 +16,7 @@
   },
   {
     "door": "2025-01-26T19:00:00",
-    "start": "2025-01-26T20:00:00",
+    "start": "2025-01-26T22:30:00",
     "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/55110861/fleshgod-apocalypse-26-01-2025",
     "title": "Fleshgod Apocalypse",
     "location": "tivolivredenburg",
@@ -159,6 +133,42 @@
           "instrumental post-rock",
           "post-rock"
         ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-02T19:30:00",
+    "start": "2025-04-02T20:30:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/71463765/kai-hahto-02-04-2025",
+    "title": "Kai hahto",
+    "location": "tivolivredenburg",
+    "price": 28.85,
+    "shortText": "Finse metaldrummer bekend van o.a. Nightwish",
+    "longText": "../public/texts/tivolivredenburg/LzcxNDYzNzY1L2thaS1oYWh0by0wMi0wNC0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/LzcxNDYzNzY1L2thaS1oYWh0by0wMi0wNC0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-04-03T19:30:00",
+    "start": "2025-04-03T20:30:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/19988782/frog-leap-03-04-2025",
+    "title": "Frog Leap",
+    "location": "tivolivredenburg",
+    "price": 31.25,
+    "shortText": "YouTube-fenomeen haalt covers door metal shredder",
+    "longText": "../public/texts/tivolivredenburg/LzE5OTg4NzgyL2Zyb2ctbGVhcC0wMy0wNC0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/LzE5OTg4NzgyL2Zyb2ctbGVhcC0wMy0wNC0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "frog leap": {
+        "s": "6mjmqm0uhax5nidmdvfbf0",
+        "l": "frog%20leap",
+        "g": []
       }
     }
   }

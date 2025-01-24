@@ -1,35 +1,5 @@
 [
   {
-    "start": "2025-01-11T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/marathon-texoprint",
-    "title": "Marathon + Texoprint",
-    "location": "metropool",
-    "price": 15,
-    "shortText": "Kom alvast in de stemming voor Eurosonic Noorderslag",
-    "longText": "../public/texts/metropool/bC5ubC9hZ2VuZGEvbWFyYXRob24tdGV4b3ByaW50.html",
-    "image": "../public/event-images/metropool/bC5ubC9hZ2VuZGEvbWFyYXRob24tdGV4b3ByaW50",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "texoprint": {
-        "s": "3Crxw3x5GQwDrhY51BNcMi",
-        "l": "texoprint",
-        "g": [
-          "dutch post-punk"
-        ]
-      },
-      "marathon": {
-        "s": "4AmPhWuKz1UIdx2Mvt4yAw",
-        "l": "marathon",
-        "g": [
-          "dutch post-punk",
-          "dutch shoegaze"
-        ]
-      }
-    }
-  },
-  {
     "start": "2025-03-28T20:30:00",
     "venueEventUrl": "https://metropool.nl/agenda/anneke-van-giersbergen-band",
     "title": "Anneke van Giersbergen & Band ",
@@ -60,69 +30,74 @@
     }
   },
   {
-    "start": "2025-05-14T18:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/decapitated-cryptopsy-warbringer-carnation",
-    "title": "Decapitated ",
+    "start": "2025-04-11T21:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/deadly-alliance-ep-release",
+    "title": "Deadly Alliance - EP release",
     "location": "metropool",
-    "price": 33,
-    "shortText": " Cryptopsy  +  Warbringer  +  Carnation Internal Bloodshed Over Europe 2025",
-    "longText": "../public/texts/metropool/Y3J5cHRvcHN5LXdhcmJyaW5nZXItY2FybmF0aW9u.html",
-    "image": "../public/event-images/metropool/Y3J5cHRvcHN5LXdhcmJyaW5nZXItY2FybmF0aW9u",
+    "price": 10,
+    "shortText": "De mannen brengen de rauwheid van de thrash-scene terug",
+    "longText": "../public/texts/metropool/bmRhL2RlYWRseS1hbGxpYW5jZS1lcC1yZWxlYXNl.html",
+    "image": "../public/event-images/metropool/bmRhL2RlYWRseS1hbGxpYW5jZS1lcC1yZWxlYXNl",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "decapitated": {
-        "s": "17mbhjoaaphuwnrawu9xkc",
-        "l": "decapitated",
+      "deadly alliance": {
+        "s": "6PhKl46OGC5fSK21tYUJEu",
+        "l": "deadly%20alliance",
         "g": [
-          "brutal death metal",
-          "death metal",
-          "deathgrind",
-          "groove metal",
-          "metal",
-          "polish death metal",
-          "polish metal",
-          "technical death metal",
-          "technical groove metal",
           "thrash metal"
         ]
-      },
-      "warbringer": {
-        "s": "4ukkkgkjnwx8ktuvea66k1",
-        "l": "warbringer",
+      }
+    }
+  },
+  {
+    "start": "2025-05-28T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/arena",
+    "title": "Arena",
+    "location": "metropool",
+    "price": 33,
+    "shortText": "De rockband viert de dertigste verjaardag van debuutalbum Songs From The Lions Cage",
+    "longText": "../public/texts/metropool/cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2FyZW5h.html",
+    "image": "../public/event-images/metropool/cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2FyZW5h",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "arena": {
+        "s": "5n72qzNEfzCXvNDxKComR7",
+        "l": "arena",
         "g": [
-          "metal",
-          "new wave of thrash metal",
-          "speed metal",
+          "neo-progressive",
+          "progressive metal",
+          "progressive rock",
+          "symphonic rock",
           "thrash metal"
         ]
-      },
-      "carnation": {
-        "s": "7s6smrbyqvp26jn5ebnu9u",
-        "l": "carnation",
+      }
+    }
+  },
+  {
+    "start": "2025-07-11T21:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/valient-thorr",
+    "title": "Valient Thorr",
+    "location": "metropool",
+    "price": 22.5,
+    "shortText": "De iconische rockers vieren het 21-jarig jubileum van hun debuutalbum",
+    "longText": "../public/texts/metropool/cm9wb29sLm5sL2FnZW5kYS92YWxpZW50LXRob3Jy.html",
+    "image": "../public/event-images/metropool/cm9wb29sLm5sL2FnZW5kYS92YWxpZW50LXRob3Jy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "valient thorr": {
+        "s": "6rVaRHgldZoRMvERFyZmAH",
+        "l": "valient%20thorr",
         "g": [
-          "belgian death metal",
-          "belgian metal",
-          "dutch metal",
-          "voidgrind"
-        ]
-      },
-      "cryptopsy": {
-        "s": "29PgYwTelpNl6370XLqFtN",
-        "l": "cryptopsy",
-        "g": [
-          "black metal",
-          "brutal death metal",
-          "canadian metal",
-          "death metal",
-          "quebec death metal",
-          "technical death metal",
-          "technical deathcore",
-          "technical melodic death metal",
-          "thrash metal",
-          "brutal",
-          "technical death metal"
+          "north carolina metal",
+          "heavy",
+          "southern metal",
+          "rock"
         ]
       }
     }

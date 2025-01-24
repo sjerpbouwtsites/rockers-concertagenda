@@ -1,7 +1,7 @@
 [
   {
-    "start": "2025-02-09T20:00:00",
-    "end": "2025-02-09T02:00:00",
+    "start": "2025-02-09T19:00:00",
+    "end": "2025-02-09T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/ankor-09-02-2025/",
     "title": "Ankor",
     "location": "dehelling",
@@ -28,8 +28,8 @@
     }
   },
   {
-    "start": "2025-02-15T20:00:00",
-    "end": "2025-02-15T02:00:00",
+    "start": "2025-02-15T19:00:00",
+    "end": "2025-02-15T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/tribulation-15-02-2025/",
     "title": "Tribulation",
     "location": "dehelling",
@@ -51,8 +51,8 @@
     }
   },
   {
-    "start": "2025-03-12T20:00:00",
-    "end": "2025-03-12T02:00:00",
+    "start": "2025-03-12T19:00:00",
+    "end": "2025-03-12T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/3-eyed-kids-12-03-2025/",
     "title": "3 Eyed Kids",
     "location": "dehelling",
@@ -73,8 +73,8 @@
     }
   },
   {
-    "start": "2025-03-21T20:00:00",
-    "end": "2025-03-21T02:00:00",
+    "start": "2025-03-21T19:00:00",
+    "end": "2025-03-21T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/enemy-inside-21-03-2025/",
     "title": "Enemy Inside",
     "location": "dehelling",
@@ -97,8 +97,8 @@
     }
   },
   {
-    "start": "2025-04-13T20:00:00",
-    "end": "2025-04-13T02:00:00",
+    "start": "2025-04-13T19:00:00",
+    "end": "2025-04-13T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/anneke-van-giersbergen-13-04-2025/",
     "title": "Anneke van Giersbergen",
     "location": "dehelling",
@@ -118,8 +118,8 @@
     }
   },
   {
-    "start": "2025-04-21T20:00:00",
-    "end": "2025-04-21T02:00:00",
+    "start": "2025-04-21T19:00:00",
+    "end": "2025-04-21T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/spectral-wound-lamp-of-murmuur-21-04-2025/",
     "title": "Spectral Wound + Lamp Of Murmuur",
     "location": "dehelling",
@@ -146,5 +146,18 @@
         ]
       }
     }
+  },
+  {
+    "start": "2025-05-22T19:00:00",
+    "end": "2025-05-22T23:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/phantom-elite-ep-release-22-05-2025/",
+    "title": "Phantom Elite EP release",
+    "location": "dehelling",
+    "price": 17.2,
+    "shortText": "Exclusieve releaseparty van genrebending metalband",
+    "longText": "../public/texts/dehelling/bS1lbGl0ZS1lcC1yZWxlYXNlLTIyLTA1LTIwMjUv.html",
+    "image": "../public/event-images/dehelling/bS1lbGl0ZS1lcC1yZWxlYXNlLTIyLTA1LTIwMjUv",
+    "eventGenres": null,
+    "artists": {}
   }
 ]
