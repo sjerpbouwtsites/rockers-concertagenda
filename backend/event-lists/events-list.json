@@ -1,305 +1,245 @@
 [
   {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T21:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/daredevils-zing-nederlands-met-me/",
-    "title": "Daredevils: Zing Nederlands Met Me",
-    "location": "gebouwt",
-    "price": 27.25,
-    "shortText": "100% Nederlandstalige show van partyband Daredevils",
-    "longText": "../public/texts/gebouwt/ZGV2aWxzLXppbmctbmVkZXJsYW5kcy1tZXQtbWUv.html",
-    "image": "../public/event-images/gebouwt/ZGV2aWxzLXppbmctbmVkZXJsYW5kcy1tZXQtbWUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-25T20:00:00",
-    "start": "2025-01-25T20:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/rumours-atl/",
-    "title": "Rumours ATL: A Fleetwood Mac Tribute",
-    "location": "gebouwt",
-    "price": 29.25,
-    "shortText": "Een authentieke reproductie van live Fleetwood Mac shows",
-    "longText": "../public/texts/gebouwt/ZWJvdXctdC5ubC9hZ2VuZGEvcnVtb3Vycy1hdGwv.html",
-    "image": "../public/event-images/gebouwt/ZWJvdXctdC5ubC9hZ2VuZGEvcnVtb3Vycy1hdGwv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T21:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/u2two/",
-    "title": "U2two",
-    "location": "gebouwt",
-    "price": 27,
-    "shortText": "Finalist van SBS6 TV-show “The Tribute – Battle of the bands”",
-    "longText": "../public/texts/gebouwt/cHM6Ly9nZWJvdXctdC5ubC9hZ2VuZGEvdTJ0d28v.html",
-    "image": "../public/event-images/gebouwt/cHM6Ly9nZWJvdXctdC5ubC9hZ2VuZGEvdTJ0d28v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T21:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/slash-n-roses/",
-    "title": "Slash n' Roses",
-    "location": "gebouwt",
-    "price": 0,
-    "shortText": "GRATIS ENTREE - Claim je ticket en verzeker jezelf van een plek",
-    "longText": "../public/texts/gebouwt/b3V3LXQubmwvYWdlbmRhL3NsYXNoLW4tcm9zZXMv.html",
-    "image": "../public/event-images/gebouwt/b3V3LXQubmwvYWdlbmRhL3NsYXNoLW4tcm9zZXMv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-25T20:00:00",
-    "start": "2025-01-25T20:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/bongloard-maria-iskariot/",
-    "title": "Bongloard + Maria Iskariot",
-    "location": "gebouwt",
-    "price": 17.25,
-    "shortText": "Rauwe energiebronnen uit de punkwereld",
-    "longText": "../public/texts/gebouwt/ZW5kYS9ib25nbG9hcmQtbWFyaWEtaXNrYXJpb3Qv.html",
-    "image": "../public/event-images/gebouwt/ZW5kYS9ib25nbG9hcmQtbWFyaWEtaXNrYXJpb3Qv",
+    "door": "2025-01-24T19:30:00",
+    "start": "2025-01-24T20:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/berget-lewis-ft-leif-de-leeuw-band-clubtour-2025/",
+    "title": "Berget Lewis ft. Leif de Leeuw Band – Clubtour 2025",
+    "location": "groeneengel",
+    "price": 28.5,
+    "shortText": " undefined",
+    "longText": "../public/texts/groeneengel/Zi1kZS1sZWV1dy1iYW5kLWNsdWJ0b3VyLTIwMjUv.html",
+    "image": "../public/event-images/groeneengel/Zi1kZS1sZWV1dy1iYW5kLWNsdWJ0b3VyLTIwMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "bongloard": {
-        "s": "14irVozeTn0DEdXOdaWxow",
-        "l": "bongloard",
-        "g": [
-          "garage rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T21:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/the-exploited/",
-    "title": "The Exploited",
-    "location": "gebouwt",
-    "price": 30,
-    "shortText": "Legendarisch stel relschoppers uit Edinburgh",
-    "longText": "../public/texts/gebouwt/b3V3LXQubmwvYWdlbmRhL3RoZS1leHBsb2l0ZWQv.html",
-    "image": "../public/event-images/gebouwt/b3V3LXQubmwvYWdlbmRhL3RoZS1leHBsb2l0ZWQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "the exploited": {
-        "s": "6NB4b8lltHCjOhW7vQZkAy",
-        "l": "the%20exploited",
-        "g": [
-          "hardcore punk",
-          "punk",
-          "uk82",
-          "hardcore punk (early)",
-          " thrash metal",
-          "crossover (later)"
-        ]
-      },
-      "the ex": {
+      "band": {
         "s": null,
-        "l": "the%20ex",
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-01-30T20:30:00",
+    "start": "2025-01-30T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/de-woedende-versie-bambie/",
+    "title": "Moddergat – Koen en Jeroen",
+    "location": "groeneengel",
+    "price": 20,
+    "longText": "../public/texts/groeneengel/bW1hL2RlLXdvZWRlbmRlLXZlcnNpZS1iYW1iaWUv.html",
+    "image": "../public/event-images/groeneengel/bW1hL2RlLXdvZWRlbmRlLXZlcnNpZS1iYW1iaWUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "modder": {
+        "s": "5lrqzwilzsuyy7mhq4lw4y",
+        "l": "modder",
         "g": []
       }
     }
   },
   {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T21:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/anneke-van-giersbergen-2/",
-    "title": "Anneke van Giersbergen",
-    "location": "gebouwt",
-    "price": 26.25,
-    "shortText": "Clubtour 2025",
-    "longText": "../public/texts/gebouwt/ZW5kYS9hbm5la2UtdmFuLWdpZXJzYmVyZ2VuLTIv.html",
-    "image": "../public/event-images/gebouwt/ZW5kYS9hbm5la2UtdmFuLWdpZXJzYmVyZ2VuLTIv",
+    "door": "2025-02-06T19:30:00",
+    "start": "2025-02-06T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/mitch-ryder-band/",
+    "title": "Mitch Ryder & Band",
+    "location": "groeneengel",
+    "price": 25,
+    "longText": "../public/texts/groeneengel/bmwvcHJvZ3JhbW1hL21pdGNoLXJ5ZGVyLWJhbmQv.html",
+    "image": "../public/event-images/groeneengel/bmwvcHJvZ3JhbW1hL21pdGNoLXJ5ZGVyLWJhbmQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "anneke van giersbergen": {
-        "s": "6tzqjnkayty8hfqbeddf8v",
-        "l": "anneke%20van%20giersbergen",
+      "band": {
+        "s": null,
+        "l": "band",
         "g": [
-          "metal"
+          "heavy",
+          "power metal"
         ]
       }
     }
   },
   {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T21:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/plan-nine/",
-    "title": "Lucassen & Soeterboek's Plan Nine",
-    "location": "gebouwt",
-    "price": 22.25,
-    "shortText": "Long Lost Tour",
-    "longText": "../public/texts/gebouwt/L2dlYm91dy10Lm5sL2FnZW5kYS9wbGFuLW5pbmUv.html",
-    "image": "../public/event-images/gebouwt/L2dlYm91dy10Lm5sL2FnZW5kYS9wbGFuLW5pbmUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "lucassen & soeterboek's plan nine": {
-        "s": "3hTFJa0cS8g0LJMQs2RkPG",
-        "l": "lucassen%20&%20soeterboek's%20plan%20nine",
-        "g": [
-          "album rock",
-          "arena rock",
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-25T19:30:00",
-    "start": "2025-01-25T20:15:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/legends-of-rock-tribute-tour-7/",
-    "title": "Legends of Rock Tribute Tour",
-    "location": "gebouwt",
-    "price": 27.25,
-    "shortText": "Tributes aan Metallica, Motörhead en Judas Priest",
-    "longText": "../public/texts/gebouwt/ZWdlbmRzLW9mLXJvY2stdHJpYnV0ZS10b3VyLTcv.html",
-    "image": "../public/event-images/gebouwt/ZWdlbmRzLW9mLXJvY2stdHJpYnV0ZS10b3VyLTcv",
+    "door": "2025-02-07T19:30:00",
+    "start": "2025-02-07T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/starman-the-dutch-bowie-tribute/",
+    "title": "Starman – the dutch bowie tribute",
+    "location": "groeneengel",
+    "price": 27,
+    "longText": "../public/texts/groeneengel/YXJtYW4tdGhlLWR1dGNoLWJvd2llLXRyaWJ1dGUv.html",
+    "image": "../public/event-images/groeneengel/YXJtYW4tdGhlLWR1dGNoLWJvd2llLXRyaWJ1dGUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
   },
   {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T21:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/autarkh-farer-alkahest/",
-    "title": "Autarkh + Farer + Alkahest",
-    "location": "gebouwt",
-    "price": 17.25,
-    "shortText": "Imponerende experimental metal",
-    "longText": "../public/texts/gebouwt/YWdlbmRhL2F1dGFya2gtZmFyZXItYWxrYWhlc3Qv.html",
-    "image": "../public/event-images/gebouwt/YWdlbmRhL2F1dGFya2gtZmFyZXItYWxrYWhlc3Qv",
+    "door": "2025-02-15T19:30:00",
+    "start": "2025-02-15T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/physical-graffiti-the-ultimate-led-zeppelin-experience/",
+    "title": "Physical Graffiti – The Ultimate Led Zeppelin Experience",
+    "location": "groeneengel",
+    "price": 27,
+    "shortText": " undefined",
+    "longText": "../public/texts/groeneengel/aW1hdGUtbGVkLXplcHBlbGluLWV4cGVyaWVuY2Uv.html",
+    "image": "../public/event-images/groeneengel/aW1hdGUtbGVkLXplcHBlbGluLWV4cGVyaWVuY2Uv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "alkahest": {
-        "s": "53vjMkvxWt9UZAXlnwsPrj",
-        "l": "alkahest",
-        "g": [
-          "atmospheric sludge",
-          "doom metal",
-          "post-rock"
-        ]
+      "physical graffiti": {
+        "s": null,
+        "l": "physical%20graffiti",
+        "g": []
+      }
+    }
+  },
+  {
+    "start": "2025-03-07T20:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/dana-van-bergen/",
+    "title": "Dana van Bergen",
+    "location": "groeneengel",
+    "price": 8.5,
+    "longText": "../public/texts/groeneengel/Lm5sL3Byb2dyYW1tYS9kYW5hLXZhbi1iZXJnZW4v.html",
+    "image": "../public/event-images/groeneengel/Lm5sL3Byb2dyYW1tYS9kYW5hLXZhbi1iZXJnZW4v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "danava": {
+        "s": null,
+        "l": "danava%20(usa)&%c%us",
+        "g": []
+      }
+    }
+  },
+  {
+    "door": "2025-03-21T19:30:00",
+    "start": "2025-03-21T20:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/jared-grant-support/",
+    "title": "Jared Grant + support",
+    "location": "groeneengel",
+    "price": 17,
+    "longText": "../public/texts/groeneengel/cHJvZ3JhbW1hL2phcmVkLWdyYW50LXN1cHBvcnQv.html",
+    "image": "../public/event-images/groeneengel/cHJvZ3JhbW1hL2phcmVkLWdyYW50LXN1cHBvcnQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-04-04T19:30:00",
+    "start": "2025-04-04T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/fleetwood-mac-gold-dust-women-a-tribute-to-stevie-nicks-christine-mcvie/",
+    "title": "Fleetwood Mac: Gold Dust Women A tribute to Stevie Nicks & Christine McVie",
+    "location": "groeneengel",
+    "price": 27.5,
+    "shortText": " undefined",
+    "longText": "../public/texts/groeneengel/LXN0ZXZpZS1uaWNrcy1jaHJpc3RpbmUtbWN2aWUv.html",
+    "image": "../public/event-images/groeneengel/LXN0ZXZpZS1uaWNrcy1jaHJpc3RpbmUtbWN2aWUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-05-09T19:30:00",
+    "start": "2025-05-09T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/joy-division-undercover-closer-to-curtis/",
+    "title": "Joy Division Undercover – Closer To Curtis",
+    "location": "groeneengel",
+    "price": 18.5,
+    "longText": "../public/texts/groeneengel/bi11bmRlcmNvdmVyLWNsb3Nlci10by1jdXJ0aXMv.html",
+    "image": "../public/event-images/groeneengel/bi11bmRlcmNvdmVyLWNsb3Nlci10by1jdXJ0aXMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "joy division": {
+        "s": null,
+        "l": "joy%20division",
+        "g": []
       },
-      "autarkh": {
-        "s": "1h39mvskrqbzrsf3vfnsp5",
-        "l": "autarkh",
+      "undercover": {
+        "s": "5EQMhqNfNmnIIAgwQX1WZ7",
+        "l": "undercover",
         "g": [
-          "industrial metal"
-        ]
-      },
-      "farer": {
-        "s": "529WaKnDwThqAtgOLNjwMp",
-        "l": "farer",
-        "g": [
-          "atmospheric sludge",
-          "post-metal"
+          "christian punk"
         ]
       }
     }
   },
   {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T21:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/ian-paice-deep-purple-ft-purpendicular/",
-    "title": "Ian Paice (Deep Purple) ft. Purpendicular",
-    "location": "gebouwt",
-    "price": 40.25,
-    "shortText": "Performing Classic Deep Purple",
-    "longText": "../public/texts/gebouwt/LWRlZXAtcHVycGxlLWZ0LXB1cnBlbmRpY3VsYXIv.html",
-    "image": "../public/event-images/gebouwt/LWRlZXAtcHVycGxlLWZ0LXB1cnBlbmRpY3VsYXIv",
+    "door": "2025-05-11T15:00:00",
+    "start": "2025-05-11T15:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/ambitus-presents-matteo-myderwyck/",
+    "title": "Ambitus presents: Matteo Myderwyk",
+    "location": "groeneengel",
+    "price": 16,
+    "longText": "../public/texts/groeneengel/dHVzLXByZXNlbnRzLW1hdHRlby1teWRlcnd5Y2sv.html",
+    "image": "../public/event-images/groeneengel/dHVzLXByZXNlbnRzLW1hdHRlby1teWRlcnd5Y2sv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-05-17T19:30:00",
+    "start": "2025-05-17T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/legend-of-springsteen/",
+    "title": "Legend Of Springsteen – Bruce Springsteen Tribute uit de UK.",
+    "location": "groeneengel",
+    "price": 25,
+    "shortText": " undefined",
+    "longText": "../public/texts/groeneengel/b2dyYW1tYS9sZWdlbmQtb2Ytc3ByaW5nc3RlZW4v.html",
+    "image": "../public/event-images/groeneengel/b2dyYW1tYS9sZWdlbmQtb2Ytc3ByaW5nc3RlZW4v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-06-07T19:30:00",
+    "start": "2025-06-07T20:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/elvana/",
+    "title": "Elvana",
+    "location": "groeneengel",
+    "price": 21,
+    "longText": "../public/texts/groeneengel/ZW5lLWVuZ2VsLm5sL3Byb2dyYW1tYS9lbHZhbmEv.html",
+    "image": "../public/event-images/groeneengel/ZW5lLWVuZ2VsLm5sL3Byb2dyYW1tYS9lbHZhbmEv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-11-08T15:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/engel-blues-festival-5-danny-bryant-heath-richville-more-tba/",
+    "title": "Engel Blues Festival 5: Danny Bryant ",
+    "location": "groeneengel",
+    "price": 32.5,
+    "shortText": " HEATH  +  Richville  +  more tba undefined",
+    "longText": "../public/texts/groeneengel/eWFudC1oZWF0aC1yaWNodmlsbGUtbW9yZS10YmEv.html",
+    "image": "../public/event-images/groeneengel/eWFudC1oZWF0aC1yaWNodmlsbGUtbW9yZS10YmEv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "purpendicular": {
-        "s": "7dtykvbh2qxkicazbxtrkf",
-        "l": "purpendicular",
-        "g": []
-      },
-      "ian paice": {
-        "s": "2gndxbhyibxhwvurrlruaq",
-        "l": "ian%20paice",
+      "more": {
+        "s": null,
+        "l": "more",
         "g": [
-          "rock drums",
+          "nwobhm",
           "heavy metal"
         ]
       }
     }
-  },
-  {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T21:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/t-strijd-2025-rock-heavy/",
-    "title": "T-Strijd 2025 - rock & heavy",
-    "location": "gebouwt",
-    "price": null,
-    "shortText": "Nobody Asked + Two Second Before + The Morning Indefinite",
-    "longText": "../public/texts/gebouwt/ZW5kYS90LXN0cmlqZC0yMDI1LXJvY2staGVhdnkv.html",
-    "image": "../public/event-images/gebouwt/ZW5kYS90LXN0cmlqZC0yMDI1LXJvY2staGVhdnkv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T21:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/renegade/",
-    "title": "From Thin Lizzy, Darren Wharton’s Renegade",
-    "location": "gebouwt",
-    "price": 27.25,
-    "shortText": "Een reis door Thin Lizzy's erfgoed en meer!",
-    "longText": "../public/texts/gebouwt/Ly9nZWJvdXctdC5ubC9hZ2VuZGEvcmVuZWdhZGUv.html",
-    "image": "../public/event-images/gebouwt/Ly9nZWJvdXctdC5ubC9hZ2VuZGEvcmVuZWdhZGUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "renegade": {
-        "s": "3vBaLrnIgG5WCQ3pTeZexc",
-        "l": "renegade",
-        "g": [
-          "jungle",
-          "progressive heavy metal",
-          "hard rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T21:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/t-strijd-2025-tribute/",
-    "title": "T-Strijd 2025 - tribute",
-    "location": "gebouwt",
-    "price": 0,
-    "shortText": "Olalala + Dookie + De Neefjes",
-    "longText": "../public/texts/gebouwt/L2FnZW5kYS90LXN0cmlqZC0yMDI1LXRyaWJ1dGUv.html",
-    "image": "../public/event-images/gebouwt/L2FnZW5kYS90LXN0cmlqZC0yMDI1LXRyaWJ1dGUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
   }
 ]
