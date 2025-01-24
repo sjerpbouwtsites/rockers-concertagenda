@@ -1,1 +1,57 @@
-[]
+[
+  {
+    "door": "2025-01-25T20:30:00",
+    "start": "2025-01-25T21:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/t-strijd-2025-rock-heavy/",
+    "title": "T-Strijd 2025 - rock & heavy",
+    "location": "gebouwt",
+    "price": null,
+    "shortText": "Nobody Asked + Two Second Before + The Morning Indefinite",
+    "longText": "../public/texts/gebouwt/ZW5kYS90LXN0cmlqZC0yMDI1LXJvY2staGVhdnkv.html",
+    "image": "../public/event-images/gebouwt/ZW5kYS90LXN0cmlqZC0yMDI1LXJvY2staGVhdnkv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-01-25T20:30:00",
+    "start": "2025-01-25T21:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/renegade/",
+    "title": "From Thin Lizzy, Darren Wharton’s Renegade",
+    "location": "gebouwt",
+    "price": 27.25,
+    "shortText": "Een reis door Thin Lizzy's erfgoed en meer!",
+    "longText": "../public/texts/gebouwt/Ly9nZWJvdXctdC5ubC9hZ2VuZGEvcmVuZWdhZGUv.html",
+    "image": "../public/event-images/gebouwt/Ly9nZWJvdXctdC5ubC9hZ2VuZGEvcmVuZWdhZGUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "renegade": {
+        "s": "3vBaLrnIgG5WCQ3pTeZexc",
+        "l": "renegade",
+        "g": [
+          "jungle",
+          "progressive heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-01-25T20:30:00",
+    "start": "2025-01-25T21:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/t-strijd-2025-tribute/",
+    "title": "T-Strijd 2025 - tribute",
+    "location": "gebouwt",
+    "price": 0,
+    "shortText": "Olalala + Dookie + De Neefjes",
+    "longText": "../public/texts/gebouwt/L2FnZW5kYS90LXN0cmlqZC0yMDI1LXRyaWJ1dGUv.html",
+    "image": "../public/event-images/gebouwt/L2FnZW5kYS90LXN0cmlqZC0yMDI1LXRyaWJ1dGUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  }
+]

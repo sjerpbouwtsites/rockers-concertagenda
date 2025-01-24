@@ -58,30 +58,30 @@ scraper.mainPage = async function () {
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
-      Array.from(document.querySelectorAll('.home-block.event')).map((eventEl) => {
-        const title = eventEl.querySelector(
-          'header h4',
-        )?.textContent ?? '';
-        const res = {
-          anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
-          errors: [],
-          title,
-        };
+      Array.from(document.querySelectorAll('.event-card '))
+        .map((eventEl) => {
+          const title = eventEl.querySelector(
+            'h3',
+          )?.textContent ?? '';
+          const res = {
+            anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            errors: [],
+            title,
+          };
         
-        res.mapToStartDate =
+          res.mapToStartDate =
       document
-        .querySelector('time.date')
+        .querySelector('.date')
         ?.textContent.trim()
-        .toLowerCase().replace("'", ' ') ?? '';
+        .toLowerCase().replace("'", '') ?? '';
 
-        res.venueEventUrl = eventEl.href;
-        const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
-        res.unavailable = !!eventEl.textContent.match(uaRex);
-        res.soldOut =
-          !!eventEl.querySelector('.last-tickets-holder')?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
-        res.shortText = eventEl.querySelector('.subtitle')?.textContent ?? null;
-        return res;
-      }),
+          res.venueEventUrl = eventEl.href;
+          const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
+          res.unavailable = !!eventEl.textContent.match(uaRex);
+          res.soldOut = !!eventEl.querySelector('.ribbon soldout') ?? false;
+          res.shortText = eventEl.querySelector('.info-sub')?.textContent ?? null;
+          return res;
+        }),
     { workerData, unavailabiltyTerms: terms.unavailability },
   );
 
@@ -120,13 +120,18 @@ scraper.singlePage = async function ({ page, event }) {
         errors: [],
       };
       
+      Array.from(document.querySelectorAll('.x-core-icon-text__content')).forEach((xc) => {
+        const t = xc.textContent.replaceAll(/\W/g, '').toLowerCase();
+        xc.parentNode.parentNode.classList.add(t);
+      });
+
       res.mapToStartTime =
         document
-          .querySelector('.event-info .times .info-line .value')
+          .querySelector('.aanvang')
           ?.textContent.trim()
           .toLowerCase() ?? '';
       res.mapToDoorTime =
-        document.querySelector('.event-info .times .info-line + .info-line .value')?.textContent.trim().toLowerCase() ??
+        document.querySelector('.zaalopen')?.textContent.trim().toLowerCase() ??
         '';
 
       return res;
@@ -145,8 +150,8 @@ scraper.singlePage = async function ({ page, event }) {
     workerData,
     event,
     pageInfo,
-    selectors: ['.hightlighted-event'],
-    mode: 'background-src',
+    selectors: ['header .image-wrapper img'],
+    mode: 'image-src',
   });
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
@@ -155,10 +160,10 @@ scraper.singlePage = async function ({ page, event }) {
     page,
     event,
     pageInfo,
-    selectors: ['.price'],
+    selectors: ['.ticket-price'],
   });
-  const isGratis = await page.evaluate(() => !!document.querySelector('.last-tickets')?.textContent.match(/gratis/i) ?? null);
-  if (pageInfo.errors.length && isGratis) {
+  
+  if (pageInfo.errors.length) {
     pageInfo.price = 0;
   } else {
     pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
