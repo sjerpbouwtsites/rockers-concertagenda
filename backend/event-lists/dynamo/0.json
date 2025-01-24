@@ -23,6 +23,36 @@
     }
   },
   {
+    "door": "2025-01-24T19:00:00",
+    "start": "2025-01-24T19:00:00",
+    "end": "2025-01-24T22:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/queerhoven-boardgame-night/",
+    "title": "Queerhoven Boardgame Night",
+    "location": "dynamo",
+    "price": 2400,
+    "shortText": "The boardgame night is a recurring event from Queerhoven. Join us for an evening of boardgames and hanging out with your fellow queer people!",
+    "longText": "../public/texts/dynamo/bnQvcXVlZXJob3Zlbi1ib2FyZGdhbWUtbmlnaHQv.html",
+    "image": "../public/event-images/dynamo/bnQvcXVlZXJob3Zlbi1ib2FyZGdhbWUtbmlnaHQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-01-25T14:00:00",
+    "start": "2025-01-25T14:00:00",
+    "end": "2025-01-25T17:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/queer-art-club/",
+    "title": "Queer Art club",
+    "location": "dynamo",
+    "price": 5,
+    "shortText": "za 25-jan-2025Room 7€ 5,- Queer Art club Soapstone, sculpting for beginners",
+    "longText": "../public/texts/dynamo/bi5ubC9ldmVuZW1lbnQvcXVlZXItYXJ0LWNsdWIv.html",
+    "image": "../public/event-images/dynamo/bi5ubC9ldmVuZW1lbnQvcXVlZXItYXJ0LWNsdWIv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "start": "2025-02-01T23:00:00",
     "end": "2025-02-01T06:00:00",
     "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/puin-x-echo-recordings/",
@@ -48,13 +78,51 @@
     }
   },
   {
+    "door": "2025-02-04T20:00:00",
+    "start": "2025-02-04T20:00:00",
+    "end": "2025-02-04T22:30:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/homegrown-sessions-15/",
+    "title": "Homegrown sessions #15",
+    "location": "dynamo",
+    "price": 0,
+    "shortText": "W/ JAYD3n + THE SACRED PATH + JUNIOR + MALU V + ‘N POLSKI + JONA VELLI + GIBBY + HOOGE + DJ ICEJUSTFLEXIN’",
+    "longText": "../public/texts/dynamo/ZW5lbWVudC9ob21lZ3Jvd24tc2Vzc2lvbnMtMTUv.html",
+    "image": "../public/event-images/dynamo/ZW5lbWVudC9ob21lZ3Jvd24tc2Vzc2lvbnMtMTUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "junior": {
+        "s": null,
+        "l": "junior",
+        "g": [
+          "progressive death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-02-12T19:00:00",
+    "start": "2025-02-12T19:00:00",
+    "end": "2025-02-12T21:30:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/brainfreeze-club-dialoog-mentale-gezondheid/",
+    "title": "the BRainfreeze club",
+    "location": "dynamo",
+    "price": 1200,
+    "shortText": "wo 12-feb-2025DynamoGratis the BRainfreeze club Dialoog mentale gezondheid",
+    "longText": "../public/texts/dynamo/dWItZGlhbG9vZy1tZW50YWxlLWdlem9uZGhlaWQv.html",
+    "image": "../public/event-images/dynamo/dWItZGlhbG9vZy1tZW50YWxlLWdlem9uZGhlaWQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "start": "2025-02-14T22:00:00",
     "end": "2025-02-14T04:00:00",
     "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/bunkerbass-2/",
     "title": "Bunkerbass",
     "location": "dynamo",
     "price": 10,
-    "shortText": "Valentine’s edition",
+    "shortText": "DRUM ‘N BASS – Valentine’s edition",
     "longText": "../public/texts/dynamo/dmVuLm5sL2V2ZW5lbWVudC9idW5rZXJiYXNzLTIv.html",
     "image": "../public/event-images/dynamo/dmVuLm5sL2V2ZW5lbWVudC9idW5rZXJiYXNzLTIv",
     "soldOut": false,
@@ -69,6 +137,21 @@
         ]
       }
     }
+  },
+  {
+    "door": "2025-03-08T15:00:00",
+    "start": "2025-03-08T15:00:00",
+    "end": "2025-03-08T17:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/gendermore/",
+    "title": "Gendermore",
+    "location": "dynamo",
+    "price": 800,
+    "shortText": "support meeting",
+    "longText": "../public/texts/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L2dlbmRlcm1vcmUv.html",
+    "image": "../public/event-images/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L2dlbmRlcm1vcmUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "door": "2025-03-14T20:00:00",
@@ -101,10 +184,10 @@
     "title": "Allt",
     "location": "dynamo",
     "price": 18.5,
-    "shortText": "Support: ATLAS",
+    "shortText": "Uitverkocht",
     "longText": "../public/texts/dynamo/by1laW5kaG92ZW4ubmwvZXZlbmVtZW50L2FsbHQv.html",
     "image": "../public/event-images/dynamo/by1laW5kaG92ZW4ubmwvZXZlbmVtZW50L2FsbHQv",
-    "soldOut": false,
+    "soldOut": true,
     "eventGenres": null,
     "artists": {
       "allt": {
@@ -113,13 +196,6 @@
         "g": [
           "progressive metalcore",
           "swedish metalcore"
-        ]
-      },
-      "atlas": {
-        "s": "4cIXcF5axlL9r4CTRCtszo",
-        "l": "atlas",
-        "g": [
-          "heavy metal"
         ]
       }
     }
@@ -162,6 +238,38 @@
           "swedish grindcore",
           "death metal",
           "goregrind"
+        ]
+      },
+      "guineapig": {
+        "s": "7JjFSi8Nz49BxuZcoTHc7L",
+        "l": "guineapig",
+        "g": [
+          "grindcore",
+          "goregrind"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-08T19:30:00",
+    "start": "2025-04-08T20:00:00",
+    "end": "2025-04-08T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/save-face/",
+    "title": "Save Face",
+    "location": "dynamo",
+    "price": 20,
+    "shortText": "plus support",
+    "longText": "../public/texts/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9zYXZlLWZhY2Uv.html",
+    "image": "../public/event-images/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9zYXZlLWZhY2Uv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "plus": {
+        "s": null,
+        "l": "plus",
+        "g": [
+          "death",
+          "black metal"
         ]
       }
     }
@@ -288,6 +396,14 @@
         "g": [
           "power metal"
         ]
+      },
+      "yantras": {
+        "s": "4JUyZMVdrUBchwH8c2asWY",
+        "l": "yantras",
+        "g": [
+          "sludge metal",
+          "stoner rock"
+        ]
       }
     }
   },
@@ -320,5 +436,46 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "door": "2025-08-13T19:30:00",
+    "start": "2025-08-13T20:00:00",
+    "end": "2025-08-13T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/prong/",
+    "title": "Prong",
+    "location": "dynamo",
+    "price": 26,
+    "shortText": "Plus support",
+    "longText": "../public/texts/dynamo/LWVpbmRob3Zlbi5ubC9ldmVuZW1lbnQvcHJvbmcv.html",
+    "image": "../public/event-images/dynamo/LWVpbmRob3Zlbi5ubC9ldmVuZW1lbnQvcHJvbmcv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "plus": {
+        "s": null,
+        "l": "plus",
+        "g": [
+          "death",
+          "black metal"
+        ]
+      },
+      "prong": {
+        "s": "6SER9tY2pDIDVWVf5Ql97B",
+        "l": "prong",
+        "g": [
+          "groove metal",
+          "industrial metal",
+          "thrash metal",
+          "alternative metal",
+          "industrial rock",
+          "metal",
+          "crossover",
+          "thrash metal (early",
+          "later)",
+          " groove",
+          "industrial metal (mid)"
+        ]
+      }
+    }
   }
 ]

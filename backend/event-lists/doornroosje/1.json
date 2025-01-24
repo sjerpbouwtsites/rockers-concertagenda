@@ -11,6 +11,13 @@
     "soldOut": true,
     "eventGenres": null,
     "artists": {
+      "vower": {
+        "s": "4B27SA6MuuYfEbzz1BObjY",
+        "l": "vower",
+        "g": [
+          "progressive metal"
+        ]
+      },
       "metal": {
         "s": null,
         "l": "metal",
@@ -106,6 +113,13 @@
         "g": [
           "american post-punk"
         ]
+      },
+      "cassels": {
+        "s": "4tTRgwk8L4eDg74OI9dKL2",
+        "l": "cassels",
+        "g": [
+          "noise rock"
+        ]
       }
     }
   },
@@ -132,36 +146,35 @@
     }
   },
   {
-    "door": "2025-05-08T21:00:00.000",
-    "start": "2025-05-08T22:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/knives/",
-    "title": "Knives",
+    "door": "2025-05-02T20:00:00.000",
+    "start": "2025-05-02T20:30:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/wodan-boys-2/",
+    "title": "Wodan Boys",
     "location": "doornroosje",
     "price": null,
     "shortText": "rock, punk",
-    "longText": "../public/texts/doornroosje/dy5kb29ybnJvb3NqZS5ubC9ldmVudC9rbml2ZXMv.html",
+    "longText": "../public/texts/doornroosje/bnJvb3NqZS5ubC9ldmVudC93b2Rhbi1ib3lzLTIv.html",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "knives": {
-        "s": "2YoHhPouaTT96k3dUQ8WZK",
-        "l": "knives",
+      "wodan boys": {
+        "s": "0kmkbibevmq4luqquahdmr",
+        "l": "wodan%20boys",
         "g": [
-          "grindcore",
-          "death 'n' roll"
+          "dutch rock"
         ]
       }
     }
   },
   {
-    "door": "2025-08-31T19:00:00.000",
-    "start": "2025-08-31T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering-9/",
+    "door": "2025-08-28T19:00:00.000",
+    "start": "2025-08-28T20:30:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering-10/",
     "title": "The Gathering",
     "location": "doornroosje",
     "price": null,
     "shortText": "Extra showrock, progressieve rock, metal, symfonische metal",
-    "longText": "../public/texts/doornroosje/b3NqZS5ubC9ldmVudC90aGUtZ2F0aGVyaW5nLTkv.html",
+    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L3RoZS1nYXRoZXJpbmctMTAv.html",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
@@ -187,5 +200,18 @@
         ]
       }
     }
+  },
+  {
+    "door": "2025-11-07T20:00:00.000",
+    "start": "2025-11-07T21:00:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/eskorzo-2/",
+    "title": "Eskorzo",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "punk, cumbia, afro, gypsy",
+    "longText": "../public/texts/doornroosje/b29ybnJvb3NqZS5ubC9ldmVudC9lc2tvcnpvLTIv.html",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {}
   }
 ]

@@ -1,125 +1,175 @@
 [
   {
-    "door": "2025-02-09T18:00:00",
-    "start": "2025-02-09T19:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/queensryche",
-    "title": "Queensrÿche",
+    "door": "2025-02-15T19:30:00",
+    "start": "2025-02-15T20:15:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/vnv-nation",
+    "title": "VNV Nation",
     "location": "effenaar",
-    "price": 39,
-    "shortText": "+ Night Demon",
-    "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL3F1ZWVuc3J5Y2hl.html",
-    "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL3F1ZWVuc3J5Y2hl",
-    "soldOut": true,
+    "price": 37.5,
+    "shortText": "Construct // Destruct - Live Tour 2025 | + Special Guest: Straight Razor",
+    "longText": "../public/texts/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS92bnYtbmF0aW9u.html",
+    "image": "../public/event-images/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS92bnYtbmF0aW9u",
+    "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "queensrÿche": {
-        "s": "2OgUPVlWYgGBGMefZgGvCO",
-        "l": "queensr%C3%BFche",
+      "vnv nation": {
+        "s": "4KlYg0F5KG9QNDFKaeTNAy",
+        "l": "vnv%20nation",
         "g": [
-          "album rock",
-          "glam metal",
-          "hard rock",
-          "metal",
-          "progressive metal",
-          "us power metal",
-          "progressive heavy",
-          "power metal (early",
-          "later)",
-          " hard rock (mid)"
+          "ebm",
+          "industrial",
+          "synthpop",
+          "darkwave"
         ]
       },
-      "night demon": {
-        "s": "5klvf93hyckwpsqssbxy9a",
-        "l": "night%20demon",
+      "straight razor": {
+        "s": "6hcKJiqNxY4w5nFAno0scD",
+        "l": "straight%20razor",
         "g": [
-          "nwothm",
-          "heavy metal"
+          "darkwave",
+          "ebm",
+          "industrial"
         ]
       }
     }
   },
   {
-    "door": "2025-02-19T19:30:00",
-    "start": "2025-02-19T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/vukovi",
-    "title": "Vukovi",
+    "door": "2025-02-21T19:30:00",
+    "start": "2025-02-21T20:15:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/obscura",
+    "title": "Obscura",
     "location": "effenaar",
-    "price": 25.5,
-    "shortText": "Schotse poppunkers brengen zware rockriffs en aanstekelijke vocalen | + unpeople + Artio",
-    "longText": "../public/texts/effenaar/L3d3dy5lZmZlbmFhci5ubC9hZ2VuZGEvdnVrb3Zp.html",
-    "image": "../public/event-images/effenaar/L3d3dy5lZmZlbmFhci5ubC9hZ2VuZGEvdnVrb3Zp",
+    "price": 26.5,
+    "shortText": "Technische deathmetal van wereldklasse met special guests Skeletal Remains + Gorod",
+    "longText": "../public/texts/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9vYnNjdXJh.html",
+    "image": "../public/event-images/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9vYnNjdXJh",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "artio": {
+      "obscura": {
+        "s": "7i82bJxWj1Tggc7pnU1hzt",
+        "l": "obscura",
+        "g": [
+          "brutal death metal",
+          "cosmic death metal",
+          "death metal",
+          "deathgrind",
+          "melodic death metal",
+          "progressive death metal",
+          "progressive technical death metal",
+          "sci-fi metal",
+          "technical death metal",
+          "thrash",
+          "death",
+          "groove metal"
+        ]
+      },
+      "skeletal remains": {
+        "s": "4Rh3NPxVMADeaSIduAsykN",
+        "l": "skeletal%20remains",
+        "g": [
+          "brutal death metal",
+          "death metal",
+          "deathgrind",
+          "grisly death metal",
+          "new wave of osdm",
+          "technical death metal",
+          "death metal"
+        ]
+      },
+      "metal": {
         "s": null,
-        "l": "artio",
+        "l": "metal",
         "g": [
-          "atmospheric black metal"
+          "death metal"
         ]
       }
     }
   },
   {
-    "door": "2025-03-14T19:30:00",
-    "start": "2025-03-14T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/datsuns",
-    "title": "The Datsuns",
+    "door": "2025-03-15T20:00:00",
+    "start": "2025-03-15T20:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/evening-knives",
+    "title": "An Evening With Knives",
     "location": "effenaar",
-    "price": 20,
-    "shortText": "Nieuw-Zeelandse garagerock voor liefhebbers van Jet, The White Stripes en Wolfmother | + Spiders",
-    "longText": "../public/texts/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9kYXRzdW5z.html",
-    "image": "../public/event-images/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9kYXRzdW5z",
+    "price": 15,
+    "shortText": "Album release show | Mix van post-metal, psychedelische rock en doommetal",
+    "longText": "../public/texts/effenaar/ZW5hYXIubmwvYWdlbmRhL2V2ZW5pbmcta25pdmVz.html",
+    "image": "../public/event-images/effenaar/ZW5hYXIubmwvYWdlbmRhL2V2ZW5pbmcta25pdmVz",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "the datsuns": {
-        "s": "2P6KPAphDMASmfHjnxSMmR",
-        "l": "the%20datsuns",
+      "an evening with knives": {
+        "s": "3FAXLvVlUZ34x2nlGr570X",
+        "l": "an%20evening%20with%20knives",
         "g": [
-          "garage rock",
-          "garage rock revival",
-          "kiwi rock"
-        ]
-      },
-      "wolfmother": {
-        "s": "3yenarbnhytcwmrvd9sby4",
-        "l": "wolfmother",
-        "g": [
-          "alternative rock",
-          "australian psych",
-          "garage rock",
-          "modern blues rock",
-          "modern rock",
-          "rock"
-        ]
-      },
-      "spiders": {
-        "s": "19kCN9kQcd5T2IyqvPfjVt",
-        "l": "spiders",
-        "g": [
-          "gaian doom",
-          "nwocr",
+          "dutch stoner rock",
           "stoner",
           "doom metal",
           "rock"
         ]
+      },
+      "knives": {
+        "s": "2YoHhPouaTT96k3dUQ8WZK",
+        "l": "knives",
+        "g": [
+          "grindcore",
+          "death 'n' roll"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
       }
     }
   },
   {
-    "door": "2025-03-22T20:30:00",
-    "start": "2025-03-22T21:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/split-dogs",
-    "title": "Split Dogs",
+    "door": "2025-03-23T19:00:00",
+    "start": "2025-03-23T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/descendents",
+    "title": "Descendents ",
     "location": "effenaar",
-    "price": 15,
-    "shortText": "Punk rock 'n roll uit Engeland | + Barbee",
-    "longText": "../public/texts/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS9zcGxpdC1kb2dz.html",
-    "image": "../public/event-images/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS9zcGxpdC1kb2dz",
+    "price": 35.5,
+    "shortText": " Circle Jerks  +  Negative Approach Old school punklegendes",
+    "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2Rlc2NlbmRlbnRz.html",
+    "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2Rlc2NlbmRlbnRz",
     "soldOut": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "negative approach": {
+        "s": "1DijMV2W1I2CfGLcarzgav",
+        "l": "negative%20approach",
+        "g": [
+          "anarcho-punk",
+          "chain punk",
+          "crust punk",
+          "hardcore",
+          "hardcore punk",
+          "punk",
+          "straight edge"
+        ]
+      },
+      "circle jerks": {
+        "s": "4ubY8RYfXkcEqgjEMDuLYl",
+        "l": "circle%20jerks",
+        "g": [
+          "hardcore punk",
+          "punk"
+        ]
+      },
+      "descendents": {
+        "s": "1FGH4Bh7g9W6V4fUcKZWp5",
+        "l": "descendents",
+        "g": [
+          "hardcore punk",
+          "punk",
+          "skate punk"
+        ]
+      }
+    }
   },
   {
     "door": "2025-04-04T19:30:00",
@@ -180,68 +230,48 @@
     "artists": {}
   },
   {
-    "door": "2025-06-11T19:00:00",
-    "start": "2025-06-11T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/wasp-11jun",
-    "title": "W.a.s.p.",
+    "door": "2025-05-07T19:30:00",
+    "start": "2025-05-07T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/knives",
+    "title": "Knives",
     "location": "effenaar",
-    "price": 42.5,
-    "shortText": "Een heavy metal legende keert terug!",
-    "longText": "../public/texts/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS93YXNwLTExanVu.html",
-    "image": "../public/event-images/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS93YXNwLTExanVu",
+    "price": 15,
+    "shortText": "Hosted by Stroomhuis | Moshpit-waardige mix van elementen uit postpunk, hardcore, rap en noise",
+    "longText": "../public/texts/effenaar/L3d3dy5lZmZlbmFhci5ubC9hZ2VuZGEva25pdmVz.html",
+    "image": "../public/event-images/effenaar/L3d3dy5lZmZlbmFhci5ubC9hZ2VuZGEva25pdmVz",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "w.a.s.p.": {
-        "s": "3BVkDHWRvLJEyKdvhLbjsq",
-        "l": "w.a.s.p.",
+      "knives": {
+        "s": "2YoHhPouaTT96k3dUQ8WZK",
+        "l": "knives",
         "g": [
-          "glam metal",
-          "hard rock",
-          "metal",
-          "speed metal",
-          "thrash metal",
-          "heavy metal",
-          "hard rock"
+          "grindcore",
+          "death 'n' roll"
         ]
       },
-      "metal": {
-        "s": null,
-        "l": "metal",
+      "hardcore": {
+        "s": "3N11n3hTyVlcOg77IGefjz",
+        "l": "hardcore",
         "g": [
-          "death metal"
+          "death metal",
+          "hardcore"
         ]
       }
     }
   },
   {
-    "door": "2025-10-25T19:30:00",
-    "start": "2025-10-25T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/fall-spring",
-    "title": "From Fall To Spring",
+    "door": "2025-10-04T15:00:00",
+    "start": "2025-10-04T15:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/come-you-are-2025",
+    "title": "Come as you are 2025",
     "location": "effenaar",
-    "price": 17,
-    "shortText": "Een energieke mix van metalcore en alternatieve rock",
-    "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2ZhbGwtc3ByaW5n.html",
-    "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2ZhbGwtc3ByaW5n",
+    "price": 49.5,
+    "shortText": "Het beste van drie decennia gitaarmuziek",
+    "longText": "../public/texts/effenaar/YXIubmwvYWdlbmRhL2NvbWUteW91LWFyZS0yMDI1.html",
+    "image": "../public/event-images/effenaar/YXIubmwvYWdlbmRhL2NvbWUteW91LWFyZS0yMDI1",
     "soldOut": false,
     "eventGenres": null,
-    "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "allt": {
-        "s": "6YRr0btzGqfQ5K7r23qjEM",
-        "l": "allt",
-        "g": [
-          "progressive metalcore",
-          "swedish metalcore"
-        ]
-      }
-    }
+    "artists": {}
   }
 ]

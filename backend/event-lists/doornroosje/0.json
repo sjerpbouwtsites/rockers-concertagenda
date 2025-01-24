@@ -1,12 +1,12 @@
 [
   {
-    "door": "2025-01-25T18:45:00.000",
-    "start": "2025-01-25T19:15:00.000",
+    "door": "2025-01-25T19:00:00.000",
+    "start": "2025-01-25T19:30:00.000",
     "venueEventUrl": "https://www.doornroosje.nl/event/delain-2/",
     "title": "Delain",
     "location": "doornroosje",
     "price": null,
-    "shortText": "+ Serenity + Kingfisher Skymetal, symfonische metal",
+    "shortText": "+ Kingfisher Skymetal, symfonische metal",
     "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvZGVsYWluLTIv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -22,19 +22,6 @@
           "symphonic metal",
           "symphonic metal",
           "rock"
-        ]
-      },
-      "serenity": {
-        "s": "3cdasoclre8dkjzjowtznw",
-        "l": "serenity",
-        "g": [
-          "austrian metal",
-          "fantasy metal",
-          "gothic symphonic metal",
-          "melodic metal",
-          "power metal",
-          "symphonic metal",
-          "symphonic power metal"
         ]
       },
       "metal": {
@@ -63,6 +50,14 @@
         "l": "high%20vis",
         "g": [
           "uk post-punk revival"
+        ]
+      },
+      "hardcore": {
+        "s": "3N11n3hTyVlcOg77IGefjz",
+        "l": "hardcore",
+        "g": [
+          "death metal",
+          "hardcore"
         ]
       }
     }
@@ -157,11 +152,14 @@
           "technical death metal"
         ]
       },
-      "metal": {
-        "s": null,
-        "l": "metal",
+      "fuming mouth": {
+        "s": "2I7atnUFOmvMyGPuesD7cB",
+        "l": "fuming%20mouth",
         "g": [
-          "death metal"
+          "chaotic hardcore",
+          "metallic hardcore",
+          "death metal",
+          "crust"
         ]
       },
       "angelmaker": {
@@ -176,16 +174,6 @@
           "deathcore"
         ]
       },
-      "fuming mouth": {
-        "s": "2I7atnUFOmvMyGPuesD7cB",
-        "l": "fuming%20mouth",
-        "g": [
-          "chaotic hardcore",
-          "metallic hardcore",
-          "death metal",
-          "crust"
-        ]
-      },
       "carcosa": {
         "s": "2bhtSpyMNiPZJlkisy4T9G",
         "l": "carcosa",
@@ -195,39 +183,48 @@
           "death metal",
           "hardcore"
         ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-02T20:00:00.000",
-    "start": "2025-05-02T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/wodan-boys-2/",
-    "title": "Wodan Boys",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, punk",
-    "longText": "../public/texts/doornroosje/bnJvb3NqZS5ubC9ldmVudC93b2Rhbi1ib3lzLTIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "wodan boys": {
-        "s": "0kmkbibevmq4luqquahdmr",
-        "l": "wodan%20boys",
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
         "g": [
-          "dutch rock"
+          "death metal"
         ]
       }
     }
   },
   {
-    "door": "2025-08-28T19:00:00.000",
-    "start": "2025-08-28T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering-10/",
+    "door": "2025-04-27T20:00:00.000",
+    "start": "2025-04-27T20:45:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/gnod-white-hills/",
+    "title": "Gnod & White Hills",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "rock, kraut rock, psychedelische rock, noise rock, doornroosjepas",
+    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L2dub2Qtd2hpdGUtaGlsbHMv.html",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "gnod": {
+        "s": "0M7HBnNJoTfTWouL5O7FtO",
+        "l": "gnod",
+        "g": [
+          "double drumming",
+          "noise rock",
+          "uk noise rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-27T19:00:00.000",
+    "start": "2025-08-27T20:30:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering-11/",
     "title": "The Gathering",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Extra showrock, progressieve rock, metal, symfonische metal",
-    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L3RoZS1nYXRoZXJpbmctMTAv.html",
+    "shortText": "Final extra showrock, progressieve rock, metal, symfonische metal",
+    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L3RoZS1nYXRoZXJpbmctMTEv.html",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
@@ -255,24 +252,22 @@
     }
   },
   {
-    "door": "2026-02-06T19:00:00.000",
-    "start": "2026-02-06T19:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/beyond-the-black/",
-    "title": "Beyond the Black",
+    "door": "2025-10-17T19:15:00.000",
+    "start": "2025-10-17T20:15:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/floor-jansen-2/",
+    "title": "Floor Jansen",
     "location": "doornroosje",
     "price": null,
-    "shortText": "metal, symfonische metal",
-    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L2JleW9uZC10aGUtYmxhY2sv.html",
+    "shortText": "pop, symphonic metal, power metal",
+    "longText": "../public/texts/doornroosje/b29zamUubmwvZXZlbnQvZmxvb3ItamFuc2VuLTIv.html",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "beyond the black": {
-        "s": "6swnqil41bd4go2fnaxxrf",
-        "l": "beyond%20the%20black",
+      "floor jansen": {
+        "s": "2zntj9bu9qmjwbbomspqgj",
+        "l": "floor%20jansen",
         "g": [
-          "gothic symphonic metal",
-          "slayer",
-          "symphonic metal"
+          "hel"
         ]
       },
       "metal": {

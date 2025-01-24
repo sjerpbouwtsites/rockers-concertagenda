@@ -1,55 +1,5 @@
 [
   {
-    "start": "2025-01-09T17:00:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/paganfest-2025/",
-    "title": "Paganfest 2025alestorm / ensiferum / tyr / heidevolk / elvenking",
-    "location": "oosterpoort",
-    "price": 51.6,
-    "shortText": "  Paganfest 2025ALESTORM / ENSIFERUM / TYR / HEIDEVOLK / ELVENKING",
-    "longText": "../public/texts/oosterpoort/bi5ubC9wcm9ncmFtbWEvcGFnYW5mZXN0LTIwMjUv.html",
-    "image": "../public/event-images/oosterpoort/bi5ubC9wcm9ncmFtbWEvcGFnYW5mZXN0LTIwMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ensiferum": {
-        "s": "0krxcikthz13p8o0v2tksh",
-        "l": "ensiferum",
-        "g": [
-          "finnish melodeath",
-          "finnish metal",
-          "folk metal",
-          "melodic death metal",
-          "metal",
-          "nordic folk metal",
-          "power metal",
-          "symphonic metal",
-          "viking metal"
-        ]
-      },
-      "heidevolk": {
-        "s": "0a2yao4tufejvnn5hvjfxa",
-        "l": "heidevolk",
-        "g": [
-          "dutch metal",
-          "folk metal",
-          "viking metal"
-        ]
-      },
-      "alestorm": {
-        "s": "3opqu68jpzlzvjajj3b2da",
-        "l": "alestorm",
-        "g": [
-          "british power metal",
-          "comic metal",
-          "pirate",
-          "power metal",
-          "scottish metal"
-        ]
-      }
-    }
-  },
-  {
     "start": "2025-02-01T20:00:00+01:00",
     "venueEventUrl": "https://www.spotgroningen.nl/programma/feuerengel-a-tribute-to-rammstein/",
     "title": "Feuerengela tribute to rammstein",
@@ -111,31 +61,6 @@
     "artists": {}
   },
   {
-    "start": "2025-04-28T20:00:00+02:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/pixies-2/",
-    "title": "Pixies",
-    "location": "oosterpoort",
-    "price": null,
-    "shortText": "Pixies",
-    "longText": "../public/texts/oosterpoort/b25pbmdlbi5ubC9wcm9ncmFtbWEvcGl4aWVzLTIv.html",
-    "image": "../public/event-images/oosterpoort/b25pbmdlbi5ubC9wcm9ncmFtbWEvcGl4aWVzLTIv",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "pixies": {
-        "s": "6zvul52xwtwzilbzl6bubt",
-        "l": "pixies",
-        "g": [
-          "alternative rock",
-          "boston rock",
-          "permanent wave",
-          "rock"
-        ]
-      }
-    }
-  },
-  {
     "start": "2025-05-23T20:00:00+02:00",
     "venueEventUrl": "https://www.spotgroningen.nl/programma/oriol-mares-talal-fayad-quartet/",
     "title": "Oriol Marès & Talal Fayad Quartet",
@@ -153,6 +78,29 @@
         "l": "ares",
         "g": [
           "neo-trad metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-06-07T20:00:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/heather-nova/",
+    "title": "Heather Nova",
+    "location": "oosterpoort",
+    "price": 35.6,
+    "shortText": "Heather Nova",
+    "longText": "../public/texts/oosterpoort/Z2VuLm5sL3Byb2dyYW1tYS9oZWF0aGVyLW5vdmEv.html",
+    "image": "../public/event-images/oosterpoort/Z2VuLm5sL3Byb2dyYW1tYS9oZWF0aGVyLW5vdmEv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "heath": {
+        "s": null,
+        "l": "heath",
+        "g": [
+          "black",
+          "thrash metal"
         ]
       }
     }

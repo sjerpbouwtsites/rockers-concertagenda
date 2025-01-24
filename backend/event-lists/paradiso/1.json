@@ -1,109 +1,112 @@
 [
   {
-    "start": "2025-02-18T20:00:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/delivery/2447412",
-    "title": "Delivery",
+    "start": "2025-02-28T20:00:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/dubioza-kolektiv/2259538",
+    "title": "Dubioza Kolektiv",
     "location": "paradiso",
-    "price": 17.5,
-    "shortText": "Garage punk by Australian quintet / Toekomstmuziek",
-    "longText": "../public/texts/paradiso/bmwvZW4vcHJvZ3JhbS9kZWxpdmVyeS8yNDQ3NDEy.html",
-    "image": "../public/event-images/paradiso/bmwvZW4vcHJvZ3JhbS9kZWxpdmVyeS8yNDQ3NDEy",
-    "soldOut": false,
+    "price": 27.2,
+    "shortText": "Highly energetic ska band from Bosnia",
+    "longText": "../public/texts/paradiso/b2dyYW0vZHViaW96YS1rb2xla3Rpdi8yMjU5NTM4.html",
+    "image": "../public/event-images/paradiso/b2dyYW0vZHViaW96YS1rb2xla3Rpdi8yMjU5NTM4",
+    "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "delivery": {
-        "s": "44qDh9SR4FYA9V1yb7Amig",
-        "l": "delivery",
+      "dubioza kolektiv": {
+        "s": "02IFYoziC7CpQRK8fbehUY",
+        "l": "dubioza%20kolektiv",
         "g": [
-          "australian post-punk",
-          "grindcore",
-          "death metal"
+          "balkan brass",
+          "balkan punk",
+          "bosnian indie"
         ]
       }
     }
   },
   {
-    "start": "2025-03-06T19:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/ditz/2407777",
-    "title": "Ditz",
+    "start": "2025-03-12T19:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/chalk/2405176",
+    "title": "Chalk",
     "location": "paradiso",
-    "price": 19.7,
-    "shortText": "Brighton five-piece combines post punk and noise rock / Tolhuistuin",
-    "longText": "../public/texts/paradiso/aXNvLm5sL2VuL3Byb2dyYW0vZGl0ei8yNDA3Nzc3.html",
-    "image": "../public/event-images/paradiso/aXNvLm5sL2VuL3Byb2dyYW0vZGl0ei8yNDA3Nzc3",
+    "price": 15,
+    "shortText": "Belfast electronic/noise rock trio",
+    "longText": "../public/texts/paradiso/c28ubmwvZW4vcHJvZ3JhbS9jaGFsay8yNDA1MTc2.html",
+    "image": "../public/event-images/paradiso/c28ubmwvZW4vcHJvZ3JhbS9jaGFsay8yNDA1MTc2",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "ditz": {
-        "s": "3oskgwx1dqjhidhnhpgbfj",
-        "l": "ditz",
+      "chalk": {
+        "s": "3qa9pv6B0dmiBVETLQOCpi",
+        "l": "chalk",
         "g": [
           "crank wave",
+          "irish post-punk",
+          "irish punk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-05T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/snapped-ankles/2437365",
+    "title": "Snapped Ankles",
+    "location": "paradiso",
+    "price": 19.7,
+    "shortText": "Krautrock and post punk from London / Tolhuistuin",
+    "longText": "../public/texts/paradiso/cHJvZ3JhbS9zbmFwcGVkLWFua2xlcy8yNDM3MzY1.html",
+    "image": "../public/event-images/paradiso/cHJvZ3JhbS9zbmFwcGVkLWFua2xlcy8yNDM3MzY1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "snapped ankles": {
+        "s": "4iWOyexPqcvgycdx7mLUcl",
+        "l": "snapped%20ankles",
+        "g": [
+          "crank wave",
+          "london indie",
           "uk post-punk revival"
         ]
       }
     }
   },
   {
-    "start": "2025-03-24T19:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/thus-love/2399147",
-    "title": "Thus love + dream nails",
+    "start": "2025-04-13T18:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/the-ex-release-show-plus-special-guests/2471490",
+    "title": "The Ex - release show plus special guests",
     "location": "paradiso",
-    "price": 19.7,
-    "shortText": "Queer post-punk band from Brattleboro / Tolhuistuin",
-    "longText": "../public/texts/paradiso/bC9lbi9wcm9ncmFtL3RodXMtbG92ZS8yMzk5MTQ3.html",
-    "image": "../public/event-images/paradiso/bC9lbi9wcm9ncmFtL3RodXMtbG92ZS8yMzk5MTQ3",
+    "price": 17,
+    "shortText": "Dutch punk band celebrates their new release",
+    "longText": "../public/texts/paradiso/b3ctcGx1cy1zcGVjaWFsLWd1ZXN0cy8yNDcxNDkw.html",
+    "image": "../public/event-images/paradiso/b3ctcGx1cy1zcGVjaWFsLWd1ZXN0cy8yNDcxNDkw",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "thus love": {
-        "s": "26hW7zYB4V3PGMPBKoBdgl",
-        "l": "thus%20love",
+      "plus": {
+        "s": null,
+        "l": "plus",
         "g": [
-          "american post-punk"
+          "death",
+          "black metal"
         ]
       }
     }
   },
   {
-    "start": "2025-04-09T19:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/ada-oda/2394350",
-    "title": "Ada Oda",
+    "start": "2025-04-19T22:00:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/kap-bambino/2498915",
+    "title": "Kap Bambino",
     "location": "paradiso",
-    "price": 17,
-    "shortText": "Post-punk with Italian charm",
-    "longText": "../public/texts/paradiso/Lm5sL2VuL3Byb2dyYW0vYWRhLW9kYS8yMzk0MzUw.html",
-    "image": "../public/event-images/paradiso/Lm5sL2VuL3Byb2dyYW0vYWRhLW9kYS8yMzk0MzUw",
+    "price": 22.2,
+    "shortText": "French duo playing dark wave electro punk",
+    "longText": "../public/texts/paradiso/ZW4vcHJvZ3JhbS9rYXAtYmFtYmluby8yNDk4OTE1.html",
+    "image": "../public/event-images/paradiso/ZW4vcHJvZ3JhbS9rYXAtYmFtYmluby8yNDk4OTE1",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
-  },
-  {
-    "start": "2025-04-14T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/fat-dog/2365347",
-    "title": "Fat Dog",
-    "location": "paradiso",
-    "price": 23.2,
-    "shortText": "Manic mix of dance, punk, and klezmer from South London",
-    "longText": "../public/texts/paradiso/Lm5sL2VuL3Byb2dyYW0vZmF0LWRvZy8yMzY1MzQ3.html",
-    "image": "../public/event-images/paradiso/Lm5sL2VuL3Byb2dyYW0vZmF0LWRvZy8yMzY1MzQ3",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "fat dog": {
-        "s": "4dljephxbw7qihx4iwmnee",
-        "l": "fat%20dog",
-        "g": [
-          "crank wave",
-          "punk"
-        ]
-      }
-    }
   },
   {
     "start": "2025-04-29T20:30:00",
@@ -159,7 +162,7 @@
   {
     "start": "2025-05-18T20:00:00",
     "venueEventUrl": "https://www.paradiso.nl/en/program/the-mekons/2431035",
-    "title": "Mekons",
+    "title": "Mekons + Eton Crop",
     "location": "paradiso",
     "price": 23.2,
     "shortText": "British art collective creates pure rock 'n' roll",
@@ -181,31 +184,17 @@
     }
   },
   {
-    "start": "2024-12-11T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/clutch/2438454",
-    "title": "Clutch",
+    "start": "2025-11-05T19:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/eskorzo/2492697",
+    "title": "Eskorzo",
     "location": "paradiso",
-    "price": 37.8,
-    "shortText": "Sensational Heavy Rock band from the USA",
-    "longText": "../public/texts/paradiso/by5ubC9lbi9wcm9ncmFtL2NsdXRjaC8yNDM4NDU0.html",
-    "image": "../public/event-images/paradiso/by5ubC9lbi9wcm9ncmFtL2NsdXRjaC8yNDM4NDU0",
+    "price": 23.2,
+    "shortText": "Energetic Spanish mestizo band",
+    "longText": "../public/texts/paradiso/Lm5sL2VuL3Byb2dyYW0vZXNrb3J6by8yNDkyNjk3.html",
+    "image": "../public/event-images/paradiso/Lm5sL2VuL3Byb2dyYW0vZXNrb3J6by8yNDkyNjk3",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "clutch": {
-        "s": "161AC1AVRkIGIMxyj5djFQ",
-        "l": "clutch",
-        "g": [
-          "funk metal",
-          "modern blues rock",
-          "southern metal",
-          "stoner metal",
-          "stoner rock",
-          "thrash metal",
-          "crossover"
-        ]
-      }
-    }
+    "artists": {}
   }
 ]

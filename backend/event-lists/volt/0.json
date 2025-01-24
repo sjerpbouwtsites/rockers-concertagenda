@@ -2,17 +2,27 @@
   {
     "start": "2025-02-08T20:00:00",
     "end": "2025-02-08T00:00:00",
-    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/siamese-support?show=336",
-    "title": "Siamese + support",
+    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/siamese?show=336",
+    "title": "Siamese",
     "location": "volt",
-    "price": 25,
+    "price": 22,
     "shortText": "Metal",
-    "longText": "../public/texts/volt/aXRlaXQvc2lhbWVzZS1zdXBwb3J0P3Nob3c9MzM2.html",
-    "image": "../public/event-images/volt/aXRlaXQvc2lhbWVzZS1zdXBwb3J0P3Nob3c9MzM2",
+    "longText": "../public/texts/volt/bmwvYWN0aXZpdGVpdC9zaWFtZXNlP3Nob3c9MzM2.html",
+    "image": "../public/event-images/volt/bmwvYWN0aXZpdGVpdC9zaWFtZXNlP3Nob3c9MzM2",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "siamese": {
+        "s": "0Hx4gv3eoiodtu6XYHF1X0",
+        "l": "siamese",
+        "g": [
+          "metalcore",
+          "post-hardcore",
+          "death metal"
+        ]
+      }
+    }
   },
   {
     "start": "2025-03-30T19:00:00",

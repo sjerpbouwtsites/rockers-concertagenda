@@ -1,105 +1,5 @@
 [
   {
-    "door": "2024-12-27T20:00:00",
-    "start": "2024-12-27T20:45:00",
-    "venueEventUrl": "https://bibelot.net/programma/the-metal-studs/",
-    "title": "The Metal Studs",
-    "location": "bibelot",
-    "price": 27,
-    "longText": "../public/texts/bibelot/bmV0L3Byb2dyYW1tYS90aGUtbWV0YWwtc3R1ZHMv.html",
-    "image": "../public/event-images/bibelot/bmV0L3Byb2dyYW1tYS90aGUtbWV0YWwtc3R1ZHMv",
-    "soldOut": false,
-    "eventGenres": [
-      "metal ",
-      "rock "
-    ],
-    "artists": {
-      "the metal studs": {
-        "s": null,
-        "l": "the%20metal%20studs",
-        "g": [
-          "metal ",
-          "rock "
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-28T19:00:00",
-    "start": "2024-12-28T19:30:00",
-    "venueEventUrl": "https://bibelot.net/programma/pestilence-magnacult-release-show/",
-    "title": "Pestilence + Misanthropia + Terradown",
-    "location": "bibelot",
-    "price": 28,
-    "longText": "../public/texts/bibelot/aWxlbmNlLW1hZ25hY3VsdC1yZWxlYXNlLXNob3cv.html",
-    "image": "../public/event-images/bibelot/aWxlbmNlLW1hZ25hY3VsdC1yZWxlYXNlLXNob3cv",
-    "soldOut": false,
-    "eventGenres": [
-      "metal "
-    ],
-    "artists": {
-      "misanthropia": {
-        "s": "4yb8ayltwfuqn8ogg4qjky",
-        "l": "misanthropia",
-        "g": [
-          "grisly death metal"
-        ]
-      },
-      "pestilence": {
-        "s": "6jcfn4plxfuxmhrxpopsan",
-        "l": "pestilence",
-        "g": [
-          "black metal",
-          "brutal death metal",
-          "death metal",
-          "deathrash",
-          "dutch death metal",
-          "dutch metal",
-          "old school thrash",
-          "technical death metal"
-        ]
-      },
-      "terradown": {
-        "s": "376qQKIyviwh5xgbVj02LC",
-        "l": "terradown",
-        "g": [
-          "melodic death",
-          "groove metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-10T20:30:00",
-    "start": "2025-01-10T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/regressive-hypnosis-dream-theater-tribute/",
-    "title": "Regressive Hypnosis (Dream Theater Tribute)",
-    "location": "bibelot",
-    "price": 10,
-    "longText": "../public/texts/bibelot/eXBub3Npcy1kcmVhbS10aGVhdGVyLXRyaWJ1dGUv.html",
-    "image": "../public/event-images/bibelot/eXBub3Npcy1kcmVhbS10aGVhdGVyLXRyaWJ1dGUv",
-    "soldOut": false,
-    "eventGenres": [
-      "metal "
-    ],
-    "artists": {
-      "regressive hypnosis": {
-        "s": null,
-        "l": "regressive%20hypnosis",
-        "g": [
-          "metal "
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-02-01T20:00:00",
     "start": "2025-02-01T20:30:00",
     "venueEventUrl": "https://bibelot.net/programma/de-plaag-album-release/",
@@ -245,9 +145,7 @@
         "s": "2dNNRreuWrVDbNX2srDdag",
         "l": "ultha",
         "g": [
-          "atmospheric black metal",
-          "german black metal",
-          "voidgaze",
+          "black metal",
           "black metal",
           "hardcore (punk) ",
           "metal ",
@@ -302,8 +200,11 @@
         "s": "3UImFCoyCFOVsD7fUVgTbv",
         "l": "the pubcrawlers",
         "g": [
-          "celtic punk",
-          "pirate",
+          "celtic rock",
+          "pirate metal",
+          "celtic",
+          "folk punk",
+          "sea shanties",
           "folk ",
           "punk ",
           "ska "
@@ -321,13 +222,35 @@
     }
   },
   {
+    "door": "2025-03-28T19:30:00",
+    "start": "2025-03-28T20:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/zoekhetuitman-album-release/",
+    "title": "Zoekhetuitman – album release",
+    "location": "bibelot",
+    "price": 28,
+    "longText": "../public/texts/bibelot/YS96b2VraGV0dWl0bWFuLWFsYnVtLXJlbGVhc2Uv.html",
+    "image": "../public/event-images/bibelot/YS96b2VraGV0dWl0bWFuLWFsYnVtLXJlbGVhc2Uv",
+    "soldOut": false,
+    "eventGenres": [
+      "punk "
+    ],
+    "artists": {
+      "zoekhetuitman –": {
+        "s": null,
+        "l": "zoekhetuitman%20%E2%80%93",
+        "g": [
+          "punk "
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-03-30T16:00:00",
     "start": "2025-03-30T16:40:00",
     "venueEventUrl": "https://bibelot.net/programma/mantras-for-peaceful-death-over-europe/",
-    "title": "Cult of fire (cz) ",
+    "title": "Cult Of Fire + The Great Old Ones + Caronte",
     "location": "bibelot",
     "price": 30,
-    "shortText": " the great old ones (fr)  +  caronte (it) undefined",
     "longText": "../public/texts/bibelot/b3ItcGVhY2VmdWwtZGVhdGgtb3Zlci1ldXJvcGUv.html",
     "image": "../public/event-images/bibelot/b3ItcGVhY2VmdWwtZGVhdGgtb3Zlci1ldXJvcGUv",
     "soldOut": false,
@@ -335,21 +258,6 @@
       "metal "
     ],
     "artists": {
-      "cult of fire": {
-        "s": "1GNzgaXdYGtEP5xOqCsdSq",
-        "l": "cult%20of%20fire",
-        "g": [
-          "atmospheric black metal",
-          "black metal",
-          "czsk black metal",
-          "epic black metal",
-          "voidgaze",
-          "epic black metal",
-          "black",
-          "doom",
-          "post-black"
-        ]
-      },
       "the great old ones": {
         "s": "1U6VZQrgQ4CNXbS6FpP0QC",
         "l": "the%20great%20old%20ones",
@@ -368,13 +276,19 @@
           "post-black"
         ]
       },
-      "undefined": {
-        "s": "6NMVL5NGYZKTl6AZuxybbV",
-        "l": "undefined",
+      "cult of fire": {
+        "s": "1GNzgaXdYGtEP5xOqCsdSq",
+        "l": "cult%20of%20fire",
         "g": [
-          "metalcore",
-          "new wave ",
-          "punk "
+          "atmospheric black metal",
+          "black metal",
+          "czsk black metal",
+          "epic black metal",
+          "voidgaze",
+          "epic black metal",
+          "black",
+          "doom",
+          "post-black"
         ]
       },
       "caronte": {

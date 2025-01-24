@@ -2,7 +2,7 @@
   {
     "door": "2025-02-02T18:00:00",
     "start": "2025-02-02T18:30:00",
-    "end": "2025-02-02T22:00:00",
+    "end": "2025-02-02T21:45:00",
     "venueEventUrl": "https://nieuwenor.nl/programma/2025/02/02/trail-of-lies",
     "title": "Trail of lies (usa)",
     "location": "nieuwenor",
@@ -26,15 +26,15 @@
   },
   {
     "door": "2025-02-21T20:00:00",
-    "start": "2025-02-21T21:00:00",
-    "end": "2025-02-21T23:30:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2025/02/21/pothamus-oefenbunker",
-    "title": "Pot­ha­mus [Oefen­bun­ker]",
+    "start": "2025-02-21T20:30:00",
+    "end": "2025-02-21T23:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/02/21/pothamus",
+    "title": "Pot­ha­mus",
     "location": "nieuwenor",
-    "price": 11,
-    "shortText": "metal\nHyp­no­ti­se­ren­de Sludge-Metal",
-    "longText": "../public/texts/nieuwenor/MDI1LzAyLzIxL3BvdGhhbXVzLW9lZmVuYnVua2Vy.html",
-    "image": "../public/event-images/nieuwenor/MDI1LzAyLzIxL3BvdGhhbXVzLW9lZmVuYnVua2Vy",
+    "price": 10,
+    "shortText": "metal\nSlud­ge trio uit Bel­gië brengt audio-hypnose",
+    "longText": "../public/texts/nieuwenor/L3Byb2dyYW1tYS8yMDI1LzAyLzIxL3BvdGhhbXVz.html",
+    "image": "../public/event-images/nieuwenor/L3Byb2dyYW1tYS8yMDI1LzAyLzIxL3BvdGhhbXVz",
     "soldOut": null,
     "unavailable": false,
     "eventGenres": null,
@@ -50,7 +50,7 @@
     }
   },
   {
-    "door": "2025-03-29T19:00:00",
+    "door": "2025-03-29T18:30:00",
     "start": "2025-03-29T19:00:00",
     "end": "2025-03-29T22:00:00",
     "venueEventUrl": "https://nieuwenor.nl/programma/2025/03/29/rhea-be",
@@ -186,6 +186,30 @@
         "g": [
           "heavy",
           "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-07-09T19:00:00",
+    "start": "2025-07-09T19:30:00",
+    "end": "2025-07-09T22:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/07/09/american-nervana-usa",
+    "title": "Ame­ri­can Ner­va­na (USA)",
+    "location": "nieuwenor",
+    "price": 20,
+    "shortText": "rock-alternative,tribute-cover\nNir­va­na Tri­bu­te brengt ode aan In Utero-Tour",
+    "longText": "../public/texts/nieuwenor/MDI1LzA3LzA5L2FtZXJpY2FuLW5lcnZhbmEtdXNh.html",
+    "image": "../public/event-images/nieuwenor/MDI1LzA3LzA5L2FtZXJpY2FuLW5lcnZhbmEtdXNh",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "nervana": {
+        "s": null,
+        "l": null,
+        "g": [
+          "grunge"
         ]
       }
     }

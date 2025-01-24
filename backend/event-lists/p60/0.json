@@ -1,65 +1,5 @@
 [
   {
-    "door": "2024-12-27T18:30:00Z",
-    "start": "2024-12-27T20:00:00Z",
-    "venueEventUrl": "https://p60.nl/27-12-2024/pestilence",
-    "title": "Pestilence",
-    "location": "p60",
-    "price": 19.5021,
-    "shortText": "SUPPORT: MISANTHROPIA",
-    "longText": "../public/texts/p60/Ly9wNjAubmwvMjctMTItMjAyNC9wZXN0aWxlbmNl.html",
-    "image": "../public/event-images/p60/Ly9wNjAubmwvMjctMTItMjAyNC9wZXN0aWxlbmNl",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "pestilence": {
-        "s": "6jcfn4plxfuxmhrxpopsan",
-        "l": "pestilence",
-        "g": [
-          "black metal",
-          "brutal death metal",
-          "death metal",
-          "deathrash",
-          "dutch death metal",
-          "dutch metal",
-          "old school thrash",
-          "technical death metal"
-        ]
-      },
-      "misanthropia": {
-        "s": "4yb8ayltwfuqn8ogg4qjky",
-        "l": "misanthropia",
-        "g": [
-          "grisly death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-10T18:30:00Z",
-    "start": "2025-01-10T20:30:00Z",
-    "venueEventUrl": "https://p60.nl/2025/the-memorial-concert",
-    "title": "Ronnie James Dio",
-    "location": "p60",
-    "price": 23.5026,
-    "shortText": "THE MEMORIAL CONCERT",
-    "longText": "../public/texts/p60/MC5ubC8yMDI1L3RoZS1tZW1vcmlhbC1jb25jZXJ0.html",
-    "image": "../public/event-images/p60/MC5ubC8yMDI1L3RoZS1tZW1vcmlhbC1jb25jZXJ0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ronnie james dio": {
-        "s": "4M3c7tg4BzLQ5pIOupZL65",
-        "l": "ronnie%20james%20dio",
-        "g": [
-          "hard rock"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-02-27T17:30:00Z",
     "start": "2025-02-27T19:00:00Z",
     "venueEventUrl": "https://p60.nl/2025/marduk",
@@ -90,6 +30,30 @@
         "l": "metal",
         "g": [
           "death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-03-12T17:00:00Z",
+    "start": "2025-03-12T19:00:00Z",
+    "venueEventUrl": "https://p60.nl/2025/ghost9",
+    "title": "Ghost9",
+    "location": "p60",
+    "price": 49,
+    "shortText": "SHOW[K]ASE TOUR: THE NEW MIDNIGHT",
+    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9naG9zdDk=.html",
+    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9naG9zdDk=",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ghost": {
+        "s": "1qp56t7n950o3egmssl81d",
+        "l": "ghost",
+        "g": [
+          "hard rock",
+          "metal"
         ]
       }
     }
