@@ -1,114 +1,64 @@
 [
   {
-    "door": "2024-10-18T17:00:00Z",
-    "start": "2024-10-18T19:30:00Z",
-    "venueEventUrl": "https://p60.nl/2024/heavy-metal-maniacs-vr",
-    "title": "Heavy Metal Maniacs Festival",
+    "door": "2025-02-27T17:30:00Z",
+    "start": "2025-02-27T19:00:00Z",
+    "venueEventUrl": "https://p60.nl/2025/marduk",
+    "title": "Marduk",
     "location": "p60",
-    "price": 26.503,
-    "shortText": "DAG 1: MOTÖRHEADACHE, OBSTRUKTOR & SATAN'S FALL",
-    "longText": "../public/texts/p60/bmwvMjAyNC9oZWF2eS1tZXRhbC1tYW5pYWNzLXZy.html",
-    "image": "../public/event-images/p60/bmwvMjAyNC9oZWF2eS1tZXRhbC1tYW5pYWNzLXZy",
+    "price": 25.0027,
+    "shortText": "KEIHARDE BLACK METAL",
+    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9tYXJkdWs=.html",
+    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9tYXJkdWs=",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "marduk": {
+        "s": "2lxB5NTcQXj7GGRR4xAVaH",
+        "l": "marduk",
+        "g": [
+          "black metal",
+          "death metal",
+          "black metal"
+        ]
+      },
       "metal": {
         "s": null,
         "l": "metal",
         "g": [
           "death metal"
         ]
-      },
-      "satan's fall": {
-        "s": "2UAI07YLI30I3lZN91lqbO",
-        "l": "satan's%20fall",
+      }
+    }
+  },
+  {
+    "door": "2025-02-28T19:00:00Z",
+    "start": "2025-02-28T21:00:00Z",
+    "venueEventUrl": "https://p60.nl/2025/virtuoso",
+    "title": "Virtuoso",
+    "location": "p60",
+    "price": 25.0027,
+    "shortText": "TOP 2000 COVERBAND",
+    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS92aXJ0dW9zbw==.html",
+    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS92aXJ0dW9zbw==",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
         "g": [
-          "finnish heavy metal",
-          "nwothm",
           "heavy",
-          "speed metal"
+          "power metal"
         ]
       },
-      "obstruktor": {
-        "s": "6royebi1pogfkefylnvshp",
-        "l": "netherlands",
+      "virtuoso": {
+        "s": "2SLaITxUrqhSRzXHk4x1l5",
+        "l": "virtuoso",
         "g": [
-          "speed/thrash metal",
-          "metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-19T18:00:00Z",
-    "start": "2024-10-19T21:00:00Z",
-    "venueEventUrl": "https://p60.nl/2024/heavy-metal-maniacs-za",
-    "title": "Heavy Metal Maniacs Festival",
-    "location": "p60",
-    "price": 34.0037,
-    "shortText": "DAG 2: ANVIL, HITTEN, FINGERNAILS & MEER",
-    "longText": "../public/texts/p60/bmwvMjAyNC9oZWF2eS1tZXRhbC1tYW5pYWNzLXph.html",
-    "image": "../public/event-images/p60/bmwvMjAyNC9oZWF2eS1tZXRhbC1tYW5pYWNzLXph",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "fingernails": {
-        "s": "4qNP3aG4wJeDWttXkvIuqb",
-        "l": "fingernails",
-        "g": [
-          "thrash",
-          "speed metal"
-        ]
-      },
-      "hitten": {
-        "s": "78LVpk0xhPtf6ptfZjaw5h",
-        "l": "hitten",
-        "g": [
-          "neo-trad metal",
-          "nwothm",
-          "heavy metal",
-          "hard rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-24T18:00:00Z",
-    "start": "2024-10-24T21:00:00Z",
-    "venueEventUrl": "https://p60.nl/the-sound-undercover",
-    "title": "The Sound Undercover",
-    "location": "p60",
-    "price": 15.5017,
-    "shortText": "EEN THE SOUND TRIBUTE",
-    "longText": "../public/texts/p60/Oi8vcDYwLm5sL3RoZS1zb3VuZC11bmRlcmNvdmVy.html",
-    "image": "../public/event-images/p60/Oi8vcDYwLm5sL3RoZS1zb3VuZC11bmRlcmNvdmVy",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "undercover": {
-        "s": "5EQMhqNfNmnIIAgwQX1WZ7",
-        "l": "undercover",
-        "g": [
-          "christian punk"
-        ]
-      },
-      "the sound": {
-        "s": "4hzCcF4Leos2sKnz79nwhz",
-        "l": "the%20sound",
-        "g": [
-          "uk post-punk",
-          "technical grindcore",
-          "mathcore"
+          "underground hip hop",
+          "hardcore hip hop"
         ]
       }
     }

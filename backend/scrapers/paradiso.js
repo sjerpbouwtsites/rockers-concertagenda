@@ -7,7 +7,9 @@ import {
   mapToStartDate,
   mapToStartTime,
   mapToShortDate,
+  mapToDoorTime,
   combineStartTimeStartDate,
+  combineDoorTimeStartDate,
 } from './gedeeld/datums.js';
 import workTitleAndSlug from './gedeeld/slug.js';
 import terms from '../artist-db/store/terms.js';
@@ -109,7 +111,7 @@ scraper.mainPage = async function () {
   // datum in concerten zetten
   await page.evaluate(() => {
     document.querySelectorAll('.css-1usmbod').forEach((datumGroep) => {
-      const datum = datumGroep.textContent.toLowerCase().trim().substring(4, 10);
+      const datum = datumGroep.textContent.toLowerCase().trim().substring(3, 9);
       const concertenOpDezeDatum = datumGroep.parentNode.querySelectorAll('.css-1agutam');
       // eslint-disable-next-line consistent-return
       concertenOpDezeDatum.forEach((concert) => {
@@ -133,14 +135,10 @@ scraper.mainPage = async function () {
 
         res.shortText = eventEl.querySelector('.css-1ket9pb')?.textContent.trim() ?? '';
 
-        const tttt = eventEl.querySelector('.css-1kynn8g').textContent.trim().toLowerCase();
-        const tijdVeldHeeftEchtTijd = /\d\d:\d\d/.test(tttt); // kan ook term hebben... pannekoeken
-        const tijd = tijdVeldHeeftEchtTijd ? tttt : '20:00';
-
         const datum = eventEl.getAttribute('date-datum');
 
         res.mapToStartDate = datum;
-        res.mapToStartTime = tijd;
+        // res.mapToStartTime = tijd;
  
         res.venueEventUrl = eventEl.href ?? null;
         res.soldOut = !!eventEl?.textContent.match(/uitverkocht|sold\s?out/i);
@@ -155,9 +153,9 @@ scraper.mainPage = async function () {
 
   rawEvents = rawEvents
     .map((event) => mapToStartDate(event, 'dag-maandNaam', this.months))
-    .map(mapToStartTime)
+    // .map(mapToStartTime)
     .map(mapToShortDate)
-    .map(combineStartTimeStartDate)
+    // .map(combineStartTimeStartDate)
     .map(this.isMusicEventCorruptedMapper)
     .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
@@ -189,17 +187,38 @@ scraper.singlePage = async function ({ page, event }) {
 
   await this.waitTime(50);
 
-  const pageInfo = await page.evaluate(
+  let pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ buitenRes, event }) => {
       const res = { ...buitenRes };
 
       res.startDate = event.startDate;
 
+      const t = document.querySelector('.css-65enbk')?.textContent.trim().toLowerCase() ?? '';
+      const doorsM = t.match(/doors.*(\d\d:\d\d)/);
+      const startM = t.match(/main.*(\d\d:\d\d)/);
+
+      if (Array.isArray(doorsM) && !Array.isArray(startM)) {
+        res.mapToStartTime = doorsM[1];
+      } else {
+        if (Array.isArray(doorsM)) {
+          res.mapToDoorTime = doorsM[1];
+        }
+        if (Array.isArray(startM)) {
+          res.mapToStartTime = startM[1];
+        }
+      }
+
       return res;
     },
     { buitenRes, event },
   );
+
+  pageInfo.startDate = event.startDate;
+  pageInfo = mapToStartTime(pageInfo);
+  pageInfo = mapToDoorTime(pageInfo);
+  pageInfo = combineStartTimeStartDate(pageInfo);
+  pageInfo = combineDoorTimeStartDate(pageInfo);
 
   const imageRes = await getImage({
     _this: this,

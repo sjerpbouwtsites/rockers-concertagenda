@@ -1,139 +1,152 @@
 [
   {
-    "start": "2024-10-26T14:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/fajtfest-fryslan/",
-    "title": "Fajtfest Fryslân",
+    "start": "2025-01-30T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/semblant-rexoria-blame-zeus-another-approach/",
+    "title": "Semblant ",
     "location": "neushoorn",
     "price": 15,
-    "shortText": "Bruut gitaargeweld op Fryske editie van iconisch metal/-core festival",
-    "longText": "../public/texts/neushoorn/bC9wcm9kdWN0aW9uL2ZhanRmZXN0LWZyeXNsYW4v.html",
-    "image": "../public/event-images/neushoorn/bC9wcm9kdWN0aW9uL2ZhanRmZXN0LWZyeXNsYW4v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-11-15T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/acindc-twisted-sisters/",
-    "title": "ACinDC + Twisted Sisters",
-    "location": "neushoorn",
-    "price": 19,
-    "shortText": "pure rock 'n roll op de planken",
-    "longText": "../public/texts/neushoorn/dWN0aW9uL2FjaW5kYy10d2lzdGVkLXNpc3RlcnMv.html",
-    "image": "../public/event-images/neushoorn/dWN0aW9uL2FjaW5kYy10d2lzdGVkLXNpc3RlcnMv",
+    "shortText": " Rexoria  +  Blame Zeus  +  Another Approach Lunar Manifesto 10 Years Celebration Tour",
+    "longText": "../public/texts/neushoorn/YS1ibGFtZS16ZXVzLWFub3RoZXItYXBwcm9hY2gv.html",
+    "image": "../public/event-images/neushoorn/YS1ibGFtZS16ZXVzLWFub3RoZXItYXBwcm9hY2gv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "twisted sisters": {
-        "s": "2pmpxmoxfmnbux4ydjz4gq",
-        "l": "twisted%20sisters",
-        "g": []
+      "semblant": {
+        "s": "6xbrgptxh3evqfhcfkcqio",
+        "l": "semblant",
+        "g": [
+          "finnish melodeath",
+          "metal gotico",
+          "metal paranaense",
+          "slayer",
+          "symphonic metal"
+        ]
       },
-      "acindc": {
+      "rexoria": {
+        "s": "5omfyexrlgfv6dgrq6zctk",
+        "l": "rexoria",
+        "g": [
+          "melodic metal",
+          "symphonic power metal"
+        ]
+      },
+      "blame zeus": {
+        "s": "0sPGGoMtwWSE0VjukL8TwO",
+        "l": "blame%20zeus",
+        "g": [
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-02-02T17:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nargaroth/",
+    "title": "Nargaroth",
+    "location": "neushoorn",
+    "price": 27,
+    "shortText": "Black metal package om je vingers bij af te likken",
+    "longText": "../public/texts/neushoorn/aG9vcm4ubmwvcHJvZHVjdGlvbi9uYXJnYXJvdGgv.html",
+    "image": "../public/event-images/neushoorn/aG9vcm4ubmwvcHJvZHVjdGlvbi9uYXJnYXJvdGgv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "nargaroth": {
+        "s": "0aIcU4OHpKl7lpcRQp32Eo",
+        "l": "nargaroth",
+        "g": [
+          "black metal",
+          "black metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-07T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/and-so-i-watch-you-from-afar/",
+    "title": "And So I Watch You From Afar",
+    "location": "neushoorn",
+    "price": 25,
+    "shortText": "Maar je hoort ze van dichtbij!",
+    "longText": "../public/texts/neushoorn/L2FuZC1zby1pLXdhdGNoLXlvdS1mcm9tLWFmYXIv.html",
+    "image": "../public/event-images/neushoorn/L2FuZC1zby1pLXdhdGNoLXlvdS1mcm9tLWFmYXIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "and so i watch you from afar": {
+        "s": "7qKMNwlACMZOUdMG3acwst",
+        "l": "and%20so%20i%20watch%20you%20from%20afar",
+        "g": [
+          "post-rock",
+          "math rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-01T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/wodan-boys/",
+    "title": "Wodan Boys",
+    "location": "neushoorn",
+    "price": 18,
+    "shortText": "Een rauwe liveshow waar de Noorse god Wodan trots op zou zijn",
+    "longText": "../public/texts/neushoorn/b29ybi5ubC9wcm9kdWN0aW9uL3dvZGFuLWJveXMv.html",
+    "image": "../public/event-images/neushoorn/b29ybi5ubC9wcm9kdWN0aW9uL3dvZGFuLWJveXMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "wodan boys": {
+        "s": "0kmkbibevmq4luqquahdmr",
+        "l": "wodan%20boys",
+        "g": [
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-07-11T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nervana/",
+    "title": "Nervana",
+    "location": "neushoorn",
+    "price": 20,
+    "shortText": "The American Nirvana Tribute",
+    "longText": "../public/texts/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL25lcnZhbmEv.html",
+    "image": "../public/event-images/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL25lcnZhbmEv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "nervana": {
         "s": null,
-        "l": "acindc",
+        "l": null,
         "g": [
-          "hard rock"
+          "grunge"
         ]
       }
     }
   },
   {
-    "start": "2024-12-01T19:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-civerous-crematory-stench-deadspeak/",
-    "title": "Civerous + Crematory Stench + Deadspeak",
-    "location": "neushoorn",
-    "price": 12,
-    "shortText": "Smerige onheilspellende death metal",
-    "longText": "../public/texts/neushoorn/dXMtY3JlbWF0b3J5LXN0ZW5jaC1kZWFkc3BlYWsv.html",
-    "image": "../public/event-images/neushoorn/dXMtY3JlbWF0b3J5LXN0ZW5jaC1kZWFkc3BlYWsv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "crematory stench": {
-        "s": "2beNfSm9dIS8uUXIEhxrHu",
-        "l": "crematory%20stench",
-        "g": [
-          "cavernous death metal",
-          "death metal"
-        ]
-      },
-      "deadspeak": {
-        "s": "5U0DUA9QRLtIrKIYfp8qiw",
-        "l": "deadspeak",
-        "g": [
-          "death metal"
-        ]
-      },
-      "civerous": {
-        "s": "02OUZObgphMvZtxecx8bYk",
-        "l": "civerous",
-        "g": [
-          "cavernous death metal",
-          "black",
-          "death",
-          "doom metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-12-13T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/texoprint/",
-    "title": "Texoprint",
+    "start": "2025-09-19T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-the-optimist-in-me/",
+    "title": "The Optimist In Me",
     "location": "neushoorn",
     "price": 5,
-    "shortText": "Nederland’s meest intense noiserock trio",
-    "longText": "../public/texts/neushoorn/aG9vcm4ubmwvcHJvZHVjdGlvbi90ZXhvcHJpbnQv.html",
-    "image": "../public/event-images/neushoorn/aG9vcm4ubmwvcHJvZHVjdGlvbi90ZXhvcHJpbnQv",
+    "shortText": "Rock jezelf de positiviteit in met The Optimist In Me",
+    "longText": "../public/texts/neushoorn/b24vbmgtY2FmZS10aGUtb3B0aW1pc3QtaW4tbWUv.html",
+    "image": "../public/event-images/neushoorn/b24vbmgtY2FmZS10aGUtb3B0aW1pc3QtaW4tbWUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "texoprint": {
-        "s": "3Crxw3x5GQwDrhY51BNcMi",
-        "l": "texoprint",
-        "g": [
-          "dutch post-punk"
-        ]
-      }
-    }
-  },
-  {
-    "start": "4049-02-01T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/distant-enterprise-earth/",
-    "title": "Distant + Enterprise Earth",
-    "location": "neushoorn",
-    "price": 23,
-    "shortText": "Een nacht van ongekende brutaliteit",
-    "longText": "../public/texts/neushoorn/dGlvbi9kaXN0YW50LWVudGVycHJpc2UtZWFydGgv.html",
-    "image": "../public/event-images/neushoorn/dGlvbi9kaXN0YW50LWVudGVycHJpc2UtZWFydGgv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "distant": {
-        "s": "7dfpBi0QvO9FmlhBK6XHwJ",
-        "l": "distant",
-        "g": [
-          "deathcore",
-          "downtempo deathcore",
-          "slamming deathcore",
-          "groove metal"
-        ]
-      },
-      "enterprise earth": {
-        "s": "1l3cAmALCtGbjWGVtRwhoh",
-        "l": "enterprise%20earth",
-        "g": [
-          "brutal deathcore",
-          "deathcore",
-          "melodic metalcore",
-          "progressive deathcore"
-        ]
+      "the optimist in me": {
+        "s": "3qmkrrjqjtixsbgjgwwmmu",
+        "l": "the%20optimist%20in%20me",
+        "g": []
       }
     }
   }

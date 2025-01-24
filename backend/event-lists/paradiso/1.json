@@ -1,6 +1,7 @@
 [
   {
-    "start": "2025-02-08T20:00:00",
+    "door": "2025-02-18T20:00:00",
+    "start": "2025-02-18T20:00:00",
     "venueEventUrl": "https://www.paradiso.nl/en/program/delivery/2447412",
     "title": "Delivery",
     "location": "paradiso",
@@ -24,7 +25,32 @@
     }
   },
   {
-    "start": "2025-03-04T19:30:00",
+    "door": "2025-03-06T20:30:00",
+    "start": "2025-03-06T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/ditz/2407777",
+    "title": "Ditz",
+    "location": "paradiso",
+    "price": 19.7,
+    "shortText": "Brighton five-piece combines post punk and noise rock / Tolhuistuin",
+    "longText": "../public/texts/paradiso/aXNvLm5sL2VuL3Byb2dyYW0vZGl0ei8yNDA3Nzc3.html",
+    "image": "../public/event-images/paradiso/aXNvLm5sL2VuL3Byb2dyYW0vZGl0ei8yNDA3Nzc3",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ditz": {
+        "s": "3oskgwx1dqjhidhnhpgbfj",
+        "l": "ditz",
+        "g": [
+          "crank wave",
+          "uk post-punk revival"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-03-24T20:30:00",
+    "start": "2025-03-24T20:30:00",
     "venueEventUrl": "https://www.paradiso.nl/en/program/thus-love/2399147",
     "title": "Thus love + dream nails",
     "location": "paradiso",
@@ -46,7 +72,23 @@
     }
   },
   {
-    "start": "2025-04-04T20:30:00",
+    "door": "2025-04-09T19:30:00",
+    "start": "2025-04-09T19:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/ada-oda/2394350",
+    "title": "Ada Oda",
+    "location": "paradiso",
+    "price": 17,
+    "shortText": "Post-punk with Italian charm",
+    "longText": "../public/texts/paradiso/Lm5sL2VuL3Byb2dyYW0vYWRhLW9kYS8yMzk0MzUw.html",
+    "image": "../public/event-images/paradiso/Lm5sL2VuL3Byb2dyYW0vYWRhLW9kYS8yMzk0MzUw",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-04-14T20:30:00",
+    "start": "2025-04-14T20:30:00",
     "venueEventUrl": "https://www.paradiso.nl/en/program/fat-dog/2365347",
     "title": "Fat Dog",
     "location": "paradiso",
@@ -69,7 +111,8 @@
     }
   },
   {
-    "start": "2025-04-09T20:30:00",
+    "door": "2025-04-29T20:30:00",
+    "start": "2025-04-29T20:30:00",
     "venueEventUrl": "https://www.paradiso.nl/en/program/motorpsycho/2432631",
     "title": "Motorpsycho",
     "location": "paradiso",
@@ -97,7 +140,8 @@
     }
   },
   {
-    "start": "2025-05-05T22:00:00",
+    "door": "2025-05-15T22:00:00",
+    "start": "2025-05-15T22:00:00",
     "venueEventUrl": "https://www.paradiso.nl/en/program/equal-idiots/2402701",
     "title": "Equal Idiots",
     "location": "paradiso",
@@ -115,6 +159,31 @@
         "g": [
           "belgian punk",
           "belgian rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-20T20:00:00",
+    "start": "2025-05-20T20:00:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/foxing/2453888",
+    "title": "Foxing",
+    "location": "paradiso",
+    "price": 21.7,
+    "shortText": "From raw noiserock to intimate bedroom experiments / Doka",
+    "longText": "../public/texts/paradiso/by5ubC9lbi9wcm9ncmFtL2ZveGluZy8yNDUzODg4.html",
+    "image": "../public/event-images/paradiso/by5ubC9lbi9wcm9ncmFtL2ZveGluZy8yNDUzODg4",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "foxing": {
+        "s": "2dfxY7YDuYCUtWFzWTS6IR",
+        "l": "foxing",
+        "g": [
+          "midwest emo",
+          "emo",
+          "math rock"
         ]
       }
     }
