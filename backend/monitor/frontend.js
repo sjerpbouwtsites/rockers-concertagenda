@@ -82,6 +82,8 @@ function openClientWebsocket(fields) {
             text: "De server lijkt afgesloten te zijn."
         });
         eventToUpdates(msg, fields);
+        var msg2 = new SpeechSynthesisUtterance("Scrapers zijn klaar");
+        window.speechSynthesis.speak(msg2);
     });
 
     socket.addEventListener("message", (event) => {
