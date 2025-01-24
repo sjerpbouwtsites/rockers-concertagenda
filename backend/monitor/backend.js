@@ -5,7 +5,7 @@ import open from 'open';
 import showdown from 'showdown';
 import wsMessage from './wsMessage.js';
 
-const monitorURL = 'http://localhost/concertagenda/backend/monitor/';
+const monitorURL = 'http://172.24.239.239/rockagenda/backend/monitor/';
 
 /**
  *
