@@ -7,7 +7,9 @@ import {
     mapToStartDate,
     mapToStartTime,
     mapToShortDate,
-    combineStartTimeStartDate
+    mapToDoorTime,
+    combineStartTimeStartDate,
+    combineDoorTimeStartDate
 } from "./gedeeld/datums.js";
 import workTitleAndSlug from "./gedeeld/slug.js";
 import terms from "../artist-db/store/terms.js";
@@ -148,6 +150,13 @@ scraper.mainPage = async function () {
                         ...resBuiten,
                         errors: []
                     };
+
+                    res.cancelled = eventEl
+                        .querySelector(".chakra-skeleton")
+                        ?.textContent.toLowerCase()
+                        .includes("cancelled");
+                    if (res.cancelled) return res;
+
                     res.title =
                         eventEl
                             .querySelector(".chakra-heading")
@@ -164,17 +173,9 @@ scraper.mainPage = async function () {
                             .querySelector(".css-1ket9pb")
                             ?.textContent.trim() ?? "";
 
-                    const tttt = eventEl
-                        .querySelector(".css-1kynn8g")
-                        .textContent.trim()
-                        .toLowerCase();
-                    const tijdVeldHeeftEchtTijd = /\d\d:\d\d/.test(tttt); // kan ook term hebben... pannekoeken
-                    const tijd = tijdVeldHeeftEchtTijd ? tttt : "20:00";
-
                     const datum = eventEl.getAttribute("date-datum");
 
                     res.mapToStartDate = datum;
-                    res.mapToStartTime = tijd;
 
                     res.venueEventUrl = eventEl.href ?? null;
                     res.soldOut = !!eventEl?.textContent.match(
@@ -191,10 +192,9 @@ scraper.mainPage = async function () {
     );
 
     rawEvents = rawEvents
+        .filter((event) => !event.cancelled)
         .map((event) => mapToStartDate(event, "dag-maandNaam", this.months))
-        .map(mapToStartTime)
         .map(mapToShortDate)
-        .map(combineStartTimeStartDate)
         .map(this.isMusicEventCorruptedMapper)
         .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
@@ -224,27 +224,49 @@ scraper.singlePage = async function ({ page, event }) {
         errors: []
     };
 
-    await this.waitTime(500);
+    await this.waitTime(250);
 
-    const pageInfo = await page.evaluate(
+    let pageInfo = await page.evaluate(
         // eslint-disable-next-line no-shadow
         ({ buitenRes, event }) => {
             const res = { ...buitenRes };
 
             res.startDate = event.startDate;
 
+            const t =
+                document
+                    .querySelector(".css-65enbk")
+                    ?.textContent.toLowerCase()
+                    .trim() ?? "";
+            res.doorTimeM = t.match(/doors.*(\d\d:\d\d)/);
+            res.startTimeM = t.match(/main.*(\d\d:\d\d)/);
+            if (Array.isArray(res.startTimeM)) {
+                res.mapToStartTime = res.startTimeM[1];
+                if (Array.isArray(res.doorTimeM)) {
+                    res.mapToDoorTime = res.doorTimeM[1];
+                }
+            } else if (Array.isArray(res.doorTimeM)) {
+                res.mapToStartTime = res.doorTimeM[1];
+            } else {
+                res.startTimeM = t.match(/(\d\d:\d\d)/);
+                if (Array.isArray(res.startTimeM)) {
+                    res.mapToStartTime = res.startTimeM[1];
+                }
+            }
+
             return res;
         },
         { buitenRes, event }
     );
 
+    pageInfo = mapToStartTime(pageInfo);
+    pageInfo = mapToDoorTime(pageInfo);
+    pageInfo = combineStartTimeStartDate(pageInfo);
+    pageInfo = combineDoorTimeStartDate(pageInfo);
+
     const imageSrc = await page.evaluate(() => {
-        const sourceEl = document.querySelector(
-            "source[srcset*='https://assets.paradiso.nl/images/transforms/event']"
-        );
-        return sourceEl.srcset.split(" ")[0];
+        return document.querySelector("[property='og:image']")?.content ?? "";
     });
-    this.dirtyTalk(`paradiso image ${imageSrc} ${event.title}`);
 
     const imageRes = await getImage({
         _this: this,

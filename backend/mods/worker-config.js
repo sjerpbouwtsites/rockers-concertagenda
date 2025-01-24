@@ -52,12 +52,12 @@ export const workerConfig = {
     //     workerConcurrent: 2,
     //     forceSet: 3
     // },
-    gebouwt: {
-        workerCount: 1,
-        workerConcurrent: 1,
-        CPUReq: "high",
-        forceSet: 3
-    }
+    // gebouwt: {
+    //     workerCount: 1,
+    //     workerConcurrent: 1,
+    //     CPUReq: "high",
+    //     forceSet: 3
+    // }
     // gebrdenobel: {
     //     workerCount: 1,
     //     workerConcurrent: 1,
@@ -104,12 +104,12 @@ export const workerConfig = {
     //     forceSet: 6,
     //     CPUReq: "high"
     // },
-    // paradiso: {
-    //     workerCount: 2,
-    //     workerConcurrent: 2,
-    //     forceSet: 5,
-    //     CPUReq: "high"
-    // },
+    paradiso: {
+        workerCount: 2,
+        workerConcurrent: 2,
+        forceSet: 5,
+        CPUReq: "high"
+    }
     // tivolivredenburg: {
     //     workerCount: 2,
     //     workerConcurrent: 2,
