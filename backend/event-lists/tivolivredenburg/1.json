@@ -1,30 +1,5 @@
 [
   {
-    "door": "2025-01-19T18:30:00",
-    "start": "2025-01-19T19:00:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/83816779/stick-to-your-guns-19-01-2025",
-    "title": "Stick To Your Guns",
-    "location": "tivolivredenburg",
-    "price": 28.85,
-    "shortText": "Amerikaanse hardcorepunkband met nieuwe EP",
-    "longText": "../public/texts/tivolivredenburg/L3N0aWNrLXRvLXlvdXItZ3Vucy0xOS0wMS0yMDI1.html",
-    "image": "../public/event-images/tivolivredenburg/L3N0aWNrLXRvLXlvdXItZ3Vucy0xOS0wMS0yMDI1",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "stick to your guns": {
-        "s": "2sqrupqcoipb7uzvkapenj",
-        "l": "stick%20to%20your%20guns",
-        "g": [
-          "melodic metalcore",
-          "metalcore",
-          "modern melodic hardcore"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-01-24T19:30:00",
     "start": "2025-01-24T20:15:00",
     "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/10893380/wardruna-releaseparty-24-01-2025",
@@ -50,8 +25,8 @@
     }
   },
   {
-    "door": "2025-02-06T18:15:00",
-    "start": "2025-02-06T18:45:00",
+    "door": "2025-02-06T18:00:00",
+    "start": "2025-02-06T22:35:00",
     "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/44008748/napalm-death-06-02-2025",
     "title": "Napalm Death",
     "location": "tivolivredenburg",
@@ -59,7 +34,7 @@
     "shortText": "Grindcore-legende met supports Crowbar, Full of Hell & Brat",
     "longText": "../public/texts/tivolivredenburg/MDA4NzQ4L25hcGFsbS1kZWF0aC0wNi0wMi0yMDI1.html",
     "image": "../public/event-images/tivolivredenburg/MDA4NzQ4L25hcGFsbS1kZWF0aC0wNi0wMi0yMDI1",
-    "soldOut": false,
+    "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
@@ -116,10 +91,18 @@
     "shortText": "Rock- en post-hardcoreproject van voormalig Attack Attack!-lid",
     "longText": "../public/texts/tivolivredenburg/ZGEvOTY0NjYwNjUvYmlsbXVyaS0xNy0wMy0yMDI1.html",
     "image": "../public/event-images/tivolivredenburg/ZGEvOTY0NjYwNjUvYmlsbXVyaS0xNy0wMy0yMDI1",
-    "soldOut": false,
+    "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "bilmuri": {
+        "s": "5Rc75vGFBWZPgL7EXb4k89",
+        "l": "bilmuri",
+        "g": [
+          "post-hardcore"
+        ]
+      }
+    }
   },
   {
     "door": "2025-03-22T19:15:00",
@@ -141,6 +124,30 @@
         "g": [
           "modern progressive rock",
           "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-03T19:15:00",
+    "start": "2025-04-03T20:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/48511309/tramhaus-03-04-2025",
+    "title": "Tramhaus",
+    "location": "tivolivredenburg",
+    "price": 22.85,
+    "shortText": "Rotterdamse (post-)punkgroep met energieke sound",
+    "longText": "../public/texts/tivolivredenburg/YS80ODUxMTMwOS90cmFtaGF1cy0wMy0wNC0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/YS80ODUxMTMwOS90cmFtaGF1cy0wMy0wNC0yMDI1",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "tramhaus": {
+        "s": "5HXrUfoDwofY8lehLNIykB",
+        "l": "tramhaus",
+        "g": [
+          "post-punk",
+          "noise rock"
         ]
       }
     }

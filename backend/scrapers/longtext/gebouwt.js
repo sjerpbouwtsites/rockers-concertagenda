@@ -7,7 +7,7 @@ export default async function longTextSocialsIframes(page, event) {
         ({ event }) => {
             const res = {};
 
-            const textSelector = ".event-content-wrapper .event-text";
+            const textSelector = ".event-content-wrapper";
             const mediaSelector = [`${textSelector} iframe`].join(", ");
             const removeEmptyHTMLFrom = textSelector;
             const socialSelector = [""].join(", ");
@@ -23,7 +23,8 @@ export default async function longTextSocialsIframes(page, event) {
                 `${textSelector} iframe`,
                 `${textSelector} form`,
                 `${textSelector} img`,
-                `${textSelector} .embed-responsive`
+                `${textSelector} .embed-container`,
+                `${textSelector} .event-info`
             ].join(", ");
 
             const attributesToRemove = [
@@ -140,11 +141,13 @@ export default async function longTextSocialsIframes(page, event) {
             });
 
             // tekst.
-            res.textForHTML = Array.from(
-                document.querySelectorAll(textSelector)
-            )
-                .map((el) => el.innerHTML)
-                .join("");
+            const d = document.querySelectorAll(textSelector);
+            res.textForHTML =
+                Array.from(d)
+                    .map((el) => el.innerHTML)
+                    .join("") +
+                `aantal ` +
+                d.length;
             return res;
         },
         { event }

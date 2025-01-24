@@ -1,21 +1,5 @@
 [
   {
-    "door": "2025-01-18T19:00:00",
-    "start": "2025-01-18T19:30:00",
-    "end": "2025-01-18T23:55:00",
-    "venueEventUrl": "https://iduna.nl/agenda/monsters-of-rock-pantera-iron-maiden-ac-dc-bon-scott/",
-    "title": "A Tribute ToMonsters of Rock",
-    "location": "iduna",
-    "price": 19,
-    "shortText": null,
-    "longText": "../public/texts/iduna/YS1pcm9uLW1haWRlbi1hYy1kYy1ib24tc2NvdHQv.html",
-    "image": "../public/event-images/iduna/YS1pcm9uLW1haWRlbi1hYy1kYy1ib24tc2NvdHQv",
-    "soldOut": false,
-    "unavailable": null,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
     "door": "2025-01-26T15:00:00",
     "start": "2025-01-26T15:30:00",
     "end": "2025-01-26T19:00:00",
@@ -40,8 +24,8 @@
     }
   },
   {
-    "door": "2025-02-02T13:00:00",
-    "start": "2025-02-02T13:30:00",
+    "door": "2025-02-02T13:30:00",
+    "start": "2025-02-02T14:15:00",
     "end": "2025-02-02T22:30:00",
     "venueEventUrl": "https://iduna.nl/agenda/drachten-deathfest/",
     "title": "DrachtenDeathfest",
@@ -281,6 +265,30 @@
         "g": [
           "garage punk blues",
           "modern blues rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-17T16:00:00",
+    "start": "2025-05-17T16:30:00",
+    "end": "2025-05-17T22:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/medieval-combat-bildtstar-stoflik-omskot/",
+    "title": "Medieval CombatBildtstar + Stoflik Omskot",
+    "location": "iduna",
+    "price": 16,
+    "shortText": null,
+    "longText": "../public/texts/iduna/bWJhdC1iaWxkdHN0YXItc3RvZmxpay1vbXNrb3Qv.html",
+    "image": "../public/event-images/iduna/bWJhdC1iaWxkdHN0YXItc3RvZmxpay1vbXNrb3Qv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "stoflik omskot": {
+        "s": "0Ns6zUGC4t215rJ5YC6ABt",
+        "l": "stoflik%20omskot",
+        "g": [
+          "death metal"
         ]
       }
     }

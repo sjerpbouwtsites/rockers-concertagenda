@@ -333,16 +333,24 @@ export default class WorkerStatus {
             nowDateString.toISOString().substring(0, 10).replace(/-/g, "")
         );
         const allEventListFiles = [];
-        Object.entries(workerConfig).forEach(
-            ([familyName, { workerCount }]) => {
-                for (let i = 0; i < workerCount; i += 1) {
-                    const pad = `${pathToEventList}/${familyName}/${i}.json`;
-                    if (fs.existsSync(pad)) {
-                        allEventListFiles.push(pad);
-                    }
-                }
-            }
-        );
+
+        const eventListFolders = fs
+            .readdirSync(pathToEventList)
+            .filter((a) => !a.includes("events-list.json"))
+            .map((a) => `${pathToEventList}/${a}`);
+
+        eventListFolders.forEach((eventListFolder) => {
+            fs.readdirSync(eventListFolder).forEach((file) =>
+                allEventListFiles.push(`${eventListFolder}/${file}`)
+            );
+
+            // for (let i = 0; i < workerCount; i += 1) {
+            //     const pad = `${pathToEventList}/${familyName}/${i}.json`;
+            //     if (fs.existsSync(pad)) {
+            //         allEventListFiles.push(pad);
+            //     }
+            // }
+        });
 
         let consolidatedEvents = allEventListFiles
             .map((eventListFile) => {
@@ -412,7 +420,10 @@ export default class WorkerStatus {
                 const laatste = consolidatedEvents[index - 1];
                 const laatsteNaamDatum = laatste.title + laatste.start;
                 const dezeNaamDatum = ev.title + ev.start;
-                if (laatsteNaamDatum === dezeNaamDatum) return false;
+                if (laatsteNaamDatum === dezeNaamDatum) {
+                    console.log(`dubbel event ${laatsteNaamDatum}`);
+                    return false;
+                }
                 return ev;
             })
             .filter((a) => a);

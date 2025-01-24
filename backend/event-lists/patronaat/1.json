@@ -1,78 +1,5 @@
 [
   {
-    "door": "2025-01-17T19:30:00",
-    "start": "2025-01-17T19:50:00",
-    "venueEventUrl": "https://patronaat.nl/event/sacramentum-thulcandra-nephyilm-17-01-25/",
-    "title": "Sacramentum + Thulcandra + Nephylim",
-    "location": "patronaat",
-    "price": 23.5,
-    "shortText": "Voor liefhebbers van het zwaardere werk",
-    "longText": "../public/texts/patronaat/LXRodWxjYW5kcmEtbmVwaHlpbG0tMTctMDEtMjUv.html",
-    "image": "../public/event-images/patronaat/LXRodWxjYW5kcmEtbmVwaHlpbG0tMTctMDEtMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "sacramentum": {
-        "s": "2aWNMyDPP58u8yalKahWXJ",
-        "l": "sacramentum",
-        "g": [
-          "black metal",
-          "gothenburg metal",
-          "melodic black metal",
-          "swedish black metal",
-          "swedish metal",
-          "symphonic black metal",
-          "melodic black",
-          "death metal"
-        ]
-      },
-      "thulcandra": {
-        "s": "3cJkyh6iM5N2AI07hNlu1j",
-        "l": "thulcandra",
-        "g": [
-          "german black metal",
-          "symphonic black metal",
-          "melodic black",
-          "death metal"
-        ]
-      },
-      "nephylim": {
-        "s": "7DPLwE91KdBmQUCRIRlDZr",
-        "l": "nephylim",
-        "g": [
-          "dutch death metal",
-          "melodic death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-23T20:00:00",
-    "start": "2025-01-23T20:30:00",
-    "venueEventUrl": "https://patronaat.nl/event/dry-socket-support-23-01-25/",
-    "title": "Dry Socket + support",
-    "location": "patronaat",
-    "price": 16.5,
-    "shortText": "DIY Hardcore Punk",
-    "longText": "../public/texts/patronaat/dC9kcnktc29ja2V0LXN1cHBvcnQtMjMtMDEtMjUv.html",
-    "image": "../public/event-images/patronaat/dC9kcnktc29ja2V0LXN1cHBvcnQtMjMtMDEtMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "dry socket": {
-        "s": "6OPZS4R79OduZPOLxzQnSm",
-        "l": "dry%20socket",
-        "g": [
-          "modern hardcore",
-          "death",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-02-05T19:00:00",
     "start": "2025-02-05T19:20:00",
     "venueEventUrl": "https://patronaat.nl/event/the-devil-wears-prada-20th-anniversary-05-02-25/",
@@ -116,27 +43,41 @@
     }
   },
   {
-    "door": "2025-02-14T19:30:00",
-    "start": "2025-02-14T20:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/ohm-14-02-25/",
-    "title": "OHM: Neànder + support",
+    "door": "2025-02-18T19:00:00",
+    "start": "2025-02-18T19:30:00",
+    "venueEventUrl": "https://patronaat.nl/event/kvelertak-mantar-urne-18-02-25/",
+    "title": "Kvelertak + Mantar + URNE",
     "location": "patronaat",
-    "price": 13,
-    "shortText": "Doom-riffs die opstijgen naar hemelse, dromerige geluiden",
-    "longText": "../public/texts/patronaat/dHJvbmFhdC5ubC9ldmVudC9vaG0tMTQtMDItMjUv.html",
-    "image": "../public/event-images/patronaat/dHJvbmFhdC5ubC9ldmVudC9vaG0tMTQtMDItMjUv",
+    "price": 30.5,
+    "shortText": "Noorse 'blackened rock'n'roll party animals'",
+    "longText": "../public/texts/patronaat/dmVsZXJ0YWstbWFudGFyLXVybmUtMTgtMDItMjUv.html",
+    "image": "../public/event-images/patronaat/dmVsZXJ0YWstbWFudGFyLXVybmUtMTgtMDItMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "neànder": {
-        "s": "3boxetQXPWlw7DND6hMvrm",
-        "l": "ne%C3%A0nder",
+      "kvelertak": {
+        "s": null,
+        "l": null,
         "g": [
-          "german post-rock",
-          "doom",
-          "post-metal",
-          "rock"
+          "heavy metal",
+          "black metal",
+          "black 'n roll"
+        ]
+      },
+      "mantar": {
+        "s": null,
+        "l": null,
+        "g": [
+          "black metal"
+        ]
+      },
+      "urne": {
+        "s": null,
+        "l": null,
+        "g": [
+          "heavy metal",
+          "black metal"
         ]
       }
     }
@@ -281,7 +222,16 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "tramhaus": {
+        "s": "5HXrUfoDwofY8lehLNIykB",
+        "l": "tramhaus",
+        "g": [
+          "post-punk",
+          "noise rock"
+        ]
+      }
+    }
   },
   {
     "door": "2025-04-25T19:30:00",

@@ -1,49 +1,11 @@
 [
   {
-    "start": "2025-01-11T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/15-years-of-midnight-tattoo/",
-    "title": "15 years of midnight tattoo",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Come celebrate 15 years of MIDNIGHT TATTOO with us !! On Saturday January 11th 2025,…",
-    "longText": "../public/texts/kavka/dC8xNS15ZWFycy1vZi1taWRuaWdodC10YXR0b28v.html",
-    "image": "../public/event-images/kavka/dC8xNS15ZWFycy1vZi1taWRuaWdodC10YXR0b28v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-01-23T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/kublai-khan-tx/",
-    "title": "Kublai khan tx",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Kublai Khan TX is an American metalcore band hailing from Sherman, Texas. Formed in 2009,…",
-    "longText": "../public/texts/kavka/a2F2a2EuYmUvZXZlbnQva3VibGFpLWtoYW4tdHgv.html",
-    "image": "../public/event-images/kavka/a2F2a2EuYmUvZXZlbnQva3VibGFpLWtoYW4tdHgv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "kublai khan tx": {
-        "s": "5BIOo2mCAokFcLHXO2Llb4",
-        "l": "kublai%20khan%20tx",
-        "g": [
-          "metallic hardcore",
-          "texas hardcore",
-          "texas metal"
-        ]
-      }
-    }
-  },
-  {
     "start": "2025-02-07T19:00:00",
     "venueEventUrl": "https://kavka.be/event/zero-936/",
     "title": "Zero 9:36 + ryan oakes",
     "location": "kavka",
     "price": null,
-    "shortText": "Siphoning precise raps through a battlefield of distorted guitars and glitchy hues, Zero 9:36 holds…",
+    "shortText": "TIMETABLE 20:00 – DOORS 20:45 – RYAN OAKES 21:36 – ZERO 9:36 ———- Siphoning precise…",
     "longText": "../public/texts/kavka/dHBzOi8va2F2a2EuYmUvZXZlbnQvemVyby05MzYv.html",
     "image": "../public/event-images/kavka/dHBzOi8va2F2a2EuYmUvZXZlbnQvemVyby05MzYv",
     "soldOut": false,
@@ -143,6 +105,17 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "nanowar of steel": {
+        "s": "7jw9vF1hFRp1k8dDRNRiC5",
+        "l": "nanowar%20of%20steel",
+        "g": [
+          "comic metal",
+          "italian metal",
+          "heavy",
+          "power metal",
+          "hard rock"
+        ]
+      },
       "dynazty": {
         "s": "5deRBvKxJssHVa9n6B7tWV",
         "l": "dynazty",
@@ -153,17 +126,6 @@
           "swedish hard rock",
           "heavy",
           "power metal, hard rock"
-        ]
-      },
-      "nanowar of steel": {
-        "s": "7jw9vF1hFRp1k8dDRNRiC5",
-        "l": "nanowar%20of%20steel",
-        "g": [
-          "comic metal",
-          "italian metal",
-          "heavy",
-          "power metal",
-          "hard rock"
         ]
       }
     }
@@ -206,10 +168,10 @@
   {
     "start": "2025-03-30T13:30:00",
     "venueEventUrl": "https://kavka.be/event/dag-drammen-hardcore-punk-festival/",
-    "title": "Dag drammen – hardcore/punk festival",
+    "title": "Dag drammen – hardcore/punk festival (mindwar, fatal move, eightbal ",
     "location": "kavka",
     "price": null,
-    "shortText": "Op 30 maart 2025 organiseren we vanuit Kavka de eerste editie van Dag Drammen. Een…",
+    "shortText": " more) Op 30 maart 2025 organiseren we vanuit Kavka de eerste editie van Dag Drammen. Een…",
     "longText": "../public/texts/kavka/cmFtbWVuLWhhcmRjb3JlLXB1bmstZmVzdGl2YWwv.html",
     "image": "../public/event-images/kavka/cmFtbWVuLWhhcmRjb3JlLXB1bmstZmVzdGl2YWwv",
     "soldOut": false,
@@ -334,6 +296,29 @@
         "g": [
           "progressive metalcore",
           "swedish metalcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-11-25T19:00:00",
+    "venueEventUrl": "https://kavka.be/event/gutalax-spasm-guineapig/",
+    "title": "Gutalax + Spasm + Guineapig",
+    "location": "kavka",
+    "price": null,
+    "shortText": "GUTALAX (CZ) Na het verpletterende succes van onze uitverkochte show in september zijn we enorm…",
+    "longText": "../public/texts/kavka/ZXZlbnQvZ3V0YWxheC1zcGFzbS1ndWluZWFwaWcv.html",
+    "image": "../public/event-images/kavka/ZXZlbnQvZ3V0YWxheC1zcGFzbS1ndWluZWFwaWcv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "guineapig": {
+        "s": "7JjFSi8Nz49BxuZcoTHc7L",
+        "l": "guineapig",
+        "g": [
+          "grindcore",
+          "goregrind"
         ]
       }
     }

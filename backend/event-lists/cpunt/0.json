@@ -1,62 +1,5 @@
 [
   {
-    "door": "2025-01-18T19:30:00",
-    "start": "2025-01-18T20:30:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/69-charger-neuk-skroetbalg",
-    "title": "Skroetbalg, neuk! & 69 charger",
-    "location": "cpunt",
-    "price": 17.5,
-    "shortText": "",
-    "longText": "../public/texts/cpunt/bmRhLzY5LWNoYXJnZXItbmV1ay1za3JvZXRiYWxn.html",
-    "image": "../public/event-images/cpunt/bmRhLzY5LWNoYXJnZXItbmV1ay1za3JvZXRiYWxn",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "69 charger": {
-        "s": "2sibonl0bjr2o5ckfrcepl",
-        "l": "69%20charger",
-        "g": [
-          "metal",
-          "punk"
-        ]
-      },
-      "neuk!": {
-        "s": "61z4arbgymgk3nsxcyazoa",
-        "l": "neuk!",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2025-01-21T19:00:00",
-    "start": "2025-01-21T19:30:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/bonfire",
-    "title": "Bonfire",
-    "location": "cpunt",
-    "price": 30,
-    "shortText": "Higher Ground Tour",
-    "longText": "../public/texts/cpunt/Oi8vd3d3LmNwdW50Lm5sL2FnZW5kYS9ib25maXJl.html",
-    "image": "../public/event-images/cpunt/Oi8vd3d3LmNwdW50Lm5sL2FnZW5kYS9ib25maXJl",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "bonfire": {
-        "s": "7gqKcfoY25do9k18uCCgIT",
-        "l": "bonfire",
-        "g": [
-          "german hard rock",
-          "german power metal",
-          "glam metal",
-          "hard rock",
-          "black",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-03-01T20:00:00",
     "start": "2025-03-01T21:00:00",
     "venueEventUrl": "https://www.cpunt.nl/agenda/freak-kitchen",
@@ -138,6 +81,63 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "reaching as we fall": {
+        "s": "5e6c0qjLrLOlHLdQCVaUmP",
+        "l": "reaching%20as%20we%20fall",
+        "g": [
+          "metalcore"
+        ]
+      },
+      "deeproot": {
+        "s": "497D31qNuomZa2eCIOuEa5",
+        "l": "deeproot",
+        "g": [
+          "deathcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-13T19:30:00",
+    "start": "2025-08-13T20:15:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/sleepytime-gorilla-museum",
+    "title": "Sleepytime Gorilla Museum",
+    "location": "cpunt",
+    "price": 25,
+    "shortText": "Support: Faun Fables",
+    "longText": "../public/texts/cpunt/ZW5kYS9zbGVlcHl0aW1lLWdvcmlsbGEtbXVzZXVt.html",
+    "image": "../public/event-images/cpunt/ZW5kYS9zbGVlcHl0aW1lLWdvcmlsbGEtbXVzZXVt",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "faun": {
+        "s": "2wpognq6ew3x73uijz4yfe",
+        "l": "faun",
+        "g": [
+          "hurdy-gurdy",
+          "medieval folk",
+          "medieval rock"
+        ]
+      },
+      "sleepytime gorilla museum": {
+        "s": "74KPeP60dRLSAAk7sFtWTC",
+        "l": "sleepytime%20gorilla%20museum",
+        "g": [
+          "avant-garde",
+          "progressive metal",
+          "dark cabaret",
+          "experimental"
+        ]
+      },
+      "fables": {
+        "s": "1idSfiC0wnGTZM7xohuAqk",
+        "l": "fables",
+        "g": [
+          "experimental black metal"
+        ]
+      }
+    }
   }
 ]

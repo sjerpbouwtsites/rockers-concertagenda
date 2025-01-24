@@ -57,7 +57,7 @@
     "title": "The Meffs",
     "location": "doornroosje",
     "price": null,
-    "shortText": "rock, punk, noise",
+    "shortText": "+ Meryl Streekrock, punk, noise",
     "longText": "../public/texts/doornroosje/b29ybnJvb3NqZS5ubC9ldmVudC90aGUtbWVmZnMv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -133,14 +133,36 @@
     "artists": {}
   },
   {
-    "door": "2025-08-27T19:00:00.000",
-    "start": "2025-08-27T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering-11/",
+    "door": "2025-05-08T21:00:00.000",
+    "start": "2025-05-08T22:00:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/knives/",
+    "title": "Knives",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "rock, punk",
+    "longText": "../public/texts/doornroosje/dy5kb29ybnJvb3NqZS5ubC9ldmVudC9rbml2ZXMv.html",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "knives": {
+        "s": "2YoHhPouaTT96k3dUQ8WZK",
+        "l": "knives",
+        "g": [
+          "grindcore",
+          "death 'n' roll"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-31T19:00:00.000",
+    "start": "2025-08-31T20:30:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering-9/",
     "title": "The Gathering",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Final extra showrock, progressieve rock, metal, symfonische metal",
-    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L3RoZS1nYXRoZXJpbmctMTEv.html",
+    "shortText": "Extra showrock, progressieve rock, metal, symfonische metal",
+    "longText": "../public/texts/doornroosje/b3NqZS5ubC9ldmVudC90aGUtZ2F0aGVyaW5nLTkv.html",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
@@ -168,22 +190,24 @@
     }
   },
   {
-    "door": "2025-10-17T19:15:00.000",
-    "start": "2025-10-17T20:15:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/floor-jansen-2/",
-    "title": "Floor Jansen",
+    "door": "2026-02-06T19:00:00.000",
+    "start": "2026-02-06T19:30:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/beyond-the-black/",
+    "title": "Beyond the Black",
     "location": "doornroosje",
     "price": null,
-    "shortText": "pop, symphonic metal, power metal",
-    "longText": "../public/texts/doornroosje/b29zamUubmwvZXZlbnQvZmxvb3ItamFuc2VuLTIv.html",
+    "shortText": "metal, symfonische metal",
+    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L2JleW9uZC10aGUtYmxhY2sv.html",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "floor jansen": {
-        "s": "2zntj9bu9qmjwbbomspqgj",
-        "l": "floor%20jansen",
+      "beyond the black": {
+        "s": "6swnqil41bd4go2fnaxxrf",
+        "l": "beyond%20the%20black",
         "g": [
-          "hel"
+          "gothic symphonic metal",
+          "slayer",
+          "symphonic metal"
         ]
       },
       "metal": {

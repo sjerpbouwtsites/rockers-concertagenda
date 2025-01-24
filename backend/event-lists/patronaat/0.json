@@ -1,60 +1,5 @@
 [
   {
-    "door": "2025-01-12T19:30:00",
-    "start": "2025-01-12T19:50:00",
-    "venueEventUrl": "https://patronaat.nl/event/complexity-presents-autarkh-alkahest-12-01-25/",
-    "title": "Complexity Presents: Autarkh ",
-    "location": "patronaat",
-    "price": 10,
-    "shortText": " Farer  +  Alkahest Mechanisch metalproject keert terug naar Patronaat!",
-    "longText": "../public/texts/patronaat/bnRzLWF1dGFya2gtYWxrYWhlc3QtMTItMDEtMjUv.html",
-    "image": "../public/event-images/patronaat/bnRzLWF1dGFya2gtYWxrYWhlc3QtMTItMDEtMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "alkahest": {
-        "s": "53vjMkvxWt9UZAXlnwsPrj",
-        "l": "alkahest",
-        "g": [
-          "atmospheric sludge",
-          "doom metal",
-          "post-rock"
-        ]
-      },
-      "autarkh": {
-        "s": "1h39mvskrqbzrsf3vfnsp5",
-        "l": "autarkh",
-        "g": [
-          "industrial metal"
-        ]
-      },
-      "farer": {
-        "s": "529WaKnDwThqAtgOLNjwMp",
-        "l": "farer",
-        "g": [
-          "atmospheric sludge",
-          "post-metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-19T18:00:00",
-    "start": "2025-01-19T19:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/the-halo-effect-halos-over-europe-2025-19-01-25/",
-    "title": "The Halo Effect + PAIN + Bloodred Hourglass",
-    "location": "patronaat",
-    "price": 41.5,
-    "shortText": "Halos Over Europe Tour 2025",
-    "longText": "../public/texts/patronaat/bG9zLW92ZXItZXVyb3BlLTIwMjUtMTktMDEtMjUv.html",
-    "image": "../public/event-images/patronaat/bG9zLW92ZXItZXVyb3BlLTIwMjUtMTktMDEtMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
     "door": "2025-02-02T19:30:00",
     "start": "2025-02-02T20:00:00",
     "venueEventUrl": "https://patronaat.nl/event/from-thin-lizzy-darren-whartons-renegade-02-02-25/",
@@ -103,41 +48,32 @@
     }
   },
   {
-    "door": "2025-02-18T19:00:00",
-    "start": "2025-02-18T19:30:00",
-    "venueEventUrl": "https://patronaat.nl/event/kvelertak-mantar-urne-18-02-25/",
-    "title": "Kvelertak + Mantar + URNE",
+    "door": "2025-02-22T20:00:00",
+    "start": "2025-02-22T20:30:00",
+    "venueEventUrl": "https://patronaat.nl/event/creeperfest-dope-d-o-d-ecocide-sidecity-22-02-25/",
+    "title": "Creeperfest: Dope D.O.D.",
     "location": "patronaat",
-    "price": 30.5,
-    "shortText": "Noorse 'blackened rock'n'roll party animals'",
-    "longText": "../public/texts/patronaat/dmVsZXJ0YWstbWFudGFyLXVybmUtMTgtMDItMjUv.html",
-    "image": "../public/event-images/patronaat/dmVsZXJ0YWstbWFudGFyLXVybmUtMTgtMDItMjUv",
+    "price": 19.5,
+    "shortText": " Ecocide  +  Sidecity  +  Gutslasher Beats en breakdowns!",
+    "longText": "../public/texts/patronaat/by1kLWVjb2NpZGUtc2lkZWNpdHktMjItMDItMjUv.html",
+    "image": "../public/event-images/patronaat/by1kLWVjb2NpZGUtc2lkZWNpdHktMjItMDItMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "kvelertak": {
-        "s": null,
-        "l": null,
+      "dope d.o.d.": {
+        "s": "64uhlfdukt8hx3rctduien",
+        "l": "dope%20d.o.d.",
         "g": [
-          "heavy metal",
-          "black metal",
-          "black 'n roll"
+          "dutch hip hop"
         ]
       },
-      "mantar": {
-        "s": null,
-        "l": null,
+      "ecocide": {
+        "s": "3hvm8t0tgxg4w6ftgfthqs",
+        "l": "ecocide",
         "g": [
-          "black metal"
-        ]
-      },
-      "urne": {
-        "s": null,
-        "l": null,
-        "g": [
-          "heavy metal",
-          "black metal"
+          "dutch death metal",
+          "epic doom"
         ]
       }
     }
@@ -219,21 +155,6 @@
           "technical death metal"
         ]
       },
-      "cynic": {
-        "s": "5nXldeedEas60jZnMi40p4",
-        "l": "cynic",
-        "g": [
-          "djent",
-          "florida death metal",
-          "jazz metal",
-          "miami metal",
-          "progressive metal",
-          "technical death metal",
-          "nwobhm",
-          "heavy metal (early)",
-          " heavy metal (later)"
-        ]
-      },
       "beyond creation": {
         "s": "3HBOxN9iagI9Ot1kTHpPX8",
         "l": "beyond%20creation",
@@ -248,6 +169,21 @@
           "technical death metal",
           "progressive",
           "technical death metal"
+        ]
+      },
+      "cynic": {
+        "s": "5nXldeedEas60jZnMi40p4",
+        "l": "cynic",
+        "g": [
+          "djent",
+          "florida death metal",
+          "jazz metal",
+          "miami metal",
+          "progressive metal",
+          "technical death metal",
+          "nwobhm",
+          "heavy metal (early)",
+          " heavy metal (later)"
         ]
       },
       "dååth": {
@@ -299,14 +235,18 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "varials": {
-        "s": "6EFV3PmaXblKwNbvpkGv9l",
-        "l": "varials",
+      "no face no case": {
+        "s": "1jwcvlHFsttKb6JY8jPUXQ",
+        "l": "no%20face%20no%20case",
         "g": [
-          "deathcore",
-          "metallic hardcore",
-          "pennsylvania hardcore",
-          "progressive deathcore"
+          "czech punk"
+        ]
+      },
+      "dagger threat": {
+        "s": "2pPMN17NO16nG9OrtfRhfG",
+        "l": "dagger%20threat",
+        "g": [
+          "german hardcore"
         ]
       },
       "boundaries": {
@@ -318,18 +258,14 @@
           "symphonic metal"
         ]
       },
-      "dagger threat": {
-        "s": "2pPMN17NO16nG9OrtfRhfG",
-        "l": "dagger%20threat",
+      "varials": {
+        "s": "6EFV3PmaXblKwNbvpkGv9l",
+        "l": "varials",
         "g": [
-          "german hardcore"
-        ]
-      },
-      "no face no case": {
-        "s": "1jwcvlHFsttKb6JY8jPUXQ",
-        "l": "no%20face%20no%20case",
-        "g": [
-          "czech punk"
+          "deathcore",
+          "metallic hardcore",
+          "pennsylvania hardcore",
+          "progressive deathcore"
         ]
       }
     }
@@ -452,10 +388,10 @@
     }
   },
   {
-    "door": "2025-05-23T19:30:00",
-    "start": "2025-05-23T20:00:00",
+    "door": "2025-05-23T19:00:00",
+    "start": "2025-05-23T19:15:00",
     "venueEventUrl": "https://patronaat.nl/event/grima-ultar-23-05-25/",
-    "title": "Grima + support",
+    "title": "Grima + Ultar + Houle + Aquilus + Suldusk",
     "location": "patronaat",
     "price": null,
     "shortText": "Atmosferische blackmetal uit Siberië",
@@ -473,6 +409,41 @@
           "russian black metal",
           "voidgaze",
           "atmospheric black metal"
+        ]
+      },
+      "ultar": {
+        "s": "6qBmMTIQANnluSglXkcRV0",
+        "l": "ultar",
+        "g": [
+          "black metal",
+          "post-black metal"
+        ]
+      },
+      "houle": {
+        "s": "7kyEbclVUPx4zFdUdNbMUI",
+        "l": "houle",
+        "g": [
+          "dark ambient",
+          "ambient",
+          "black metal"
+        ]
+      },
+      "aquilus": {
+        "s": "1AKQ12On2ydAN0jykcB929",
+        "l": "aquilus",
+        "g": [
+          "black metal",
+          "atmospheric black",
+          "folk metal",
+          "neoclassical"
+        ]
+      },
+      "suldusk": {
+        "s": "27bhelNsrdlX5Y5H7yigfg",
+        "l": "suldusk",
+        "g": [
+          "neofolk",
+          "black metal"
         ]
       }
     }

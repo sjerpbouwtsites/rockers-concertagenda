@@ -1,29 +1,5 @@
 [
   {
-    "start": "2025-02-04T17:30:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/papa-roach",
-    "title": "Papa Roach",
-    "location": "afaslive",
-    "price": 2025,
-    "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9wYXBhLXJvYWNo.html",
-    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9wYXBhLXJvYWNo",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "papa roach": {
-        "s": "4RddZ3iHvSpGV4dvATac9X",
-        "l": "papa%20roach",
-        "g": [
-          "alternative metal",
-          "nu metal",
-          "rap metal",
-          "rap rock",
-          "rock"
-        ]
-      }
-    }
-  },
-  {
     "start": "2025-02-19T17:30:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/marilyn-manson",
     "title": "Marilyn Manson",
@@ -51,23 +27,43 @@
     }
   },
   {
-    "start": "2025-06-23T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/satchvai-band",
-    "title": "Satchvai band\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t nieuw",
+    "start": "2025-05-22T17:30:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/steven-wilson",
+    "title": "Steven Wilson",
     "location": "afaslive",
-    "price": 23,
-    "shortText": "  undefined",
-    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zYXRjaHZhaS1iYW5k.html",
-    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zYXRjaHZhaS1iYW5k",
+    "price": 22,
+    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u.html",
+    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
+      "steven wilson": {
+        "s": "4X42BfuhWCAZ2swiVze9O0",
+        "l": "steven%20wilson",
         "g": [
-          "heavy",
-          "power metal"
+          "progressive metal",
+          "progressive rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-09-29T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/pierce-the-veil",
+    "title": "Pierce The Veil",
+    "location": "afaslive",
+    "price": 29,
+    "longText": "../public/texts/afaslive/bGl2ZS5ubC9hZ2VuZGEvcGllcmNlLXRoZS12ZWls.html",
+    "image": "../public/event-images/afaslive/bGl2ZS5ubC9hZ2VuZGEvcGllcmNlLXRoZS12ZWls",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "pierce the veil": {
+        "s": "4ijlpqclelzobcbifm8fzv",
+        "l": "pierce%20the%20veil",
+        "g": [
+          "pop punk",
+          "screamo"
         ]
       }
     }
