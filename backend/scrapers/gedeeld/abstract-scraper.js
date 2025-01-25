@@ -428,8 +428,6 @@ export default class AbstractScraper extends ScraperConfig {
      * waarschuwt naar monitor wie uitvalt
      * controleert op verboden woorden zoals 'verplaatst' etc.
      *
-     * // TODO maak aparte property 'check for afgelastetc'. Bij https://gebrdenobel.nl/programma/nazareth-14-dec-2022/
-     * // bv staat 'afgelast' in de soort van titelbalk maar niet helemaal.
      *
      * @return {boolean}
      * @memberof AbstractScraper
