@@ -194,10 +194,13 @@ scraper.singlePage = async function ({ page, event }) {
         pageInfo.price = 0;
     }
 
-    const { mediaForHTML, socialsForHTML, textForHTML } =
-        await longTextSocialsIframes(page, event, pageInfo);
+    const { mediaForHTML, textForHTML } = await longTextSocialsIframes(
+        page,
+        event,
+        pageInfo
+    );
     pageInfo.mediaForHTML = mediaForHTML;
-    pageInfo.socialsForHTML = socialsForHTML;
+
     pageInfo.textForHTML = textForHTML;
 
     return this.singlePageEnd({

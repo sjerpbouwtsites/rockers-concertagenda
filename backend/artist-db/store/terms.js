@@ -150,7 +150,7 @@ const globalForbiddenGenres = [
     "new-wave"
 ];
 
-const globalGoodCategories = ["metal", "black", "crossover", "doom"];
+const globalGoodCategories = ["metal", "black metal", "crossover", "doom"];
 
 const wikipediaGoodGenres = [
     "[href$=metal]",

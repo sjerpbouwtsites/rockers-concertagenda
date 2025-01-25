@@ -204,10 +204,13 @@ dbsScraper.singlePage = async function ({ page, event }) {
     pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
     pageInfo.image = imageRes.image;
 
-    const { mediaForHTML, socialsForHTML, textForHTML } =
-        await longTextSocialsIframes(page, event, pageInfo);
+    const { mediaForHTML, textForHTML } = await longTextSocialsIframes(
+        page,
+        event,
+        pageInfo
+    );
     pageInfo.mediaForHTML = mediaForHTML;
-    pageInfo.socialsForHTML = socialsForHTML;
+
     pageInfo.textForHTML = textForHTML;
 
     if (pageInfo.ticketURL && !pageInfo.unavailable) {
