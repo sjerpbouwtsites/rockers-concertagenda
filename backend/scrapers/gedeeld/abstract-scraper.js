@@ -269,37 +269,23 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     async checkBaseEventAvailable(searching) {
-        // if (!shell?.keepBaseEvents) {
-        //     return false;
-        // }
+        const r = fs.readdirSync(fsDirections.baseEventlists);
+        this.dirtyTalk({
+            title: `check base event available`,
+            baseEventLists: r,
+            searching
+        });
 
-        const baseEventFiles = fs.readdirSync(fsDirections.baseEventlists);
-        const theseBaseEvents = baseEventFiles.filter((filenames) =>
-            filenames.includes(searching)
-        );
-        if (!theseBaseEvents || theseBaseEvents.length < 1) {
-            return false;
-        }
-        const thisBaseEvent = theseBaseEvents[0];
-        // 20231201
-        const baseEventDate = thisBaseEvent.split("T")[1].split(".json")[0];
-        const refDate = this.baseEventDate();
-        if (refDate !== baseEventDate) {
-            return false;
-        }
+        const baseEvent = r.find((bel) => bel.includes(searching));
+
+        if (!baseEvent) return false;
+
         WorkerStatus.registerFamilyDoneWithBaseEvents(workerData.family);
-        try {
-            const baseEventList = fs.readFileSync(
-                `${fsDirections.baseEventlists}/${thisBaseEvent}`
-            );
-            return JSON.parse(baseEventList);
-        } catch (error) {
-            this.handleError(
-                error,
-                `geen base event ${thisBaseEvent} gevonden van ${workerData.family} op locatie ${fsDirections.baseEventlists}/${thisBaseEvent}`
-            );
-            return {};
-        }
+
+        const baseEventList = fs.readFileSync(
+            `${fsDirections.baseEventlists}/${baseEvent}`
+        );
+        return JSON.parse(baseEventList);
     }
 
     async saveBaseEventlist(key, data) {

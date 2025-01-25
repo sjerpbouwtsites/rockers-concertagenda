@@ -2850,29 +2850,6 @@
     "artists": {}
   },
   {
-    "door": "2025-02-20T19:00:00",
-    "start": "2025-02-20T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/86139/love-letter",
-    "title": "Love Letter",
-    "location": "013",
-    "price": 17.3,
-    "shortText": "",
-    "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzg2MTM5L2xvdmUtbGV0dGVy.html",
-    "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzg2MTM5L2xvdmUtbGV0dGVy",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "love letter": {
-        "s": "41DJIv2qEvmvkcOsj7scTA",
-        "l": "love%20letter",
-        "g": [
-          "melodic hardcore"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-02-20T19:30:00",
     "start": "2025-02-20T19:30:00",
     "venueEventUrl": "https://www.013.nl/programma/90333/ploegendienst",
@@ -2892,6 +2869,29 @@
         "g": [
           "dutch indie rock",
           "dutch punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-02-20T19:00:00",
+    "start": "2025-02-20T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/86139/love-letter",
+    "title": "Love Letter",
+    "location": "013",
+    "price": 17.3,
+    "shortText": "",
+    "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzg2MTM5L2xvdmUtbGV0dGVy.html",
+    "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzg2MTM5L2xvdmUtbGV0dGVy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "love letter": {
+        "s": "41DJIv2qEvmvkcOsj7scTA",
+        "l": "love%20letter",
+        "g": [
+          "melodic hardcore"
         ]
       }
     }

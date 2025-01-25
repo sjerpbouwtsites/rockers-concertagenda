@@ -126,7 +126,8 @@ async function recursiveStartWorkers(workerConfig) {
 
 async function init() {
     const workerConfig = getWorkerConfig();
-    await houseKeeping(workerConfig);
+    console.log(workerConfig);
+    await houseKeeping();
 
     monitorWebsocketServer = await initMonitorBackend();
     RockWorker.monitorWebsocketServer = monitorWebsocketServer;
