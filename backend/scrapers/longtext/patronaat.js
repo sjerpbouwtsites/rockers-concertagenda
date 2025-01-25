@@ -53,7 +53,7 @@ export default async function longTextSocialsIframes(page, event) {
                     ? `, ${mediaSelector} *, ${mediaSelector}`
                     : ""
             }`;
-            const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;
+            const textSocEnMedia = `${textSelector} ${mediaAttrRemSelAdd}`;
             document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
                 attributesToRemove.forEach((attr) => {
                     if (elToStrip.hasAttribute(attr)) {

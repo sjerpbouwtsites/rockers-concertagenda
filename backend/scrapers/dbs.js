@@ -43,6 +43,7 @@ const dbsScraper = new AbstractScraper({
                 "spotifyConfirmation",
                 "hasGoodTerms",
                 "forbiddenTerms",
+                "goodCategoriesInLongHTML",
                 "failure"
             ]
         }

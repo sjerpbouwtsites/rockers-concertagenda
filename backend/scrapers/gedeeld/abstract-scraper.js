@@ -26,10 +26,12 @@ import {
     asyncExplicitEventCategories,
     asyncMetalEncyclopediaConfirmation,
     asyncHasAllowedArtist,
+    asyncGoodCategoriesInLongHTML,
     asyncSuccess,
     asyncFailure
 } from "./artist-db-interface.js";
 import DbInterFaceToScraper from "./db-interface-to-scraper.js";
+import terms from "../../artist-db/store/terms.js";
 
 // #endregion                                              IMPORTS
 
@@ -117,6 +119,9 @@ export default class AbstractScraper extends ScraperConfig {
 
         this.asyncHarvestArtists = asyncHarvestArtists;
         this.asyncHarvestArtists.bind(this);
+
+        this.asyncGoodCategoriesInLongHTML = asyncGoodCategoriesInLongHTML;
+        this.asyncGoodCategoriesInLongHTML.bind(this);
 
         this.asyncSuccess = asyncSuccess;
         this.asyncSuccess.bind(this);
@@ -1026,6 +1031,12 @@ export default class AbstractScraper extends ScraperConfig {
             throw new Error("page info ontbreekt.");
         }
 
+        pageInfo.goodTermsInLongHTML = terms.goodCategories.filter(
+            (goodCategory) => {
+                return pageInfo.textForHTML.includes(goodCategory);
+            }
+        );
+
         if (!Array.isArray(pageInfo?.errors)) {
             pageInfo.errors = [
                 {
@@ -1377,6 +1388,7 @@ export default class AbstractScraper extends ScraperConfig {
                 "asyncMetalEncyclopediaConfirmation",
             explicitEventGenres: "asyncExplicitEventCategories",
             hasAllowedArtist: "asyncHasAllowedArtist",
+            goodCategoriesInLongHTML: "asyncGoodCategoriesInLongHTML",
             success: "asyncSuccess",
             failure: "asyncFailure"
 
