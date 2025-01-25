@@ -14,9 +14,7 @@ export default async function longTextSocialsIframes(page, event) {
                 `${textSelector} iframe[src*='spotify']`
             ].join(", ");
             const removeEmptyHTMLFrom = textSelector;
-            const socialSelector = [
-                ".description-list__detail a[href*='facebook'][href*='events']"
-            ].join(", ");
+
             const removeSelectors = [
                 `${textSelector} [class*='icon-']`,
                 `${textSelector} [class*='fa-']`,
@@ -53,10 +51,6 @@ export default async function longTextSocialsIframes(page, event) {
                 "Let op bij het kopen"
             ];
 
-            // eerst onzin attributes wegslopen
-            const socAttrRemSelAdd = `${
-                socialSelector.length ? `, ${socialSelector}` : ""
-            }`;
             const mediaAttrRemSelAdd = `${
                 mediaSelector.length
                     ? `, ${mediaSelector} *, ${mediaSelector}`
@@ -115,8 +109,6 @@ export default async function longTextSocialsIframes(page, event) {
                       }
                   );
 
-            // socials obj maken voordat HTML verdwijnt
-            res.socialsForHTML = "";
             // stript HTML tbv text
             removeSelectors.length &&
                 document

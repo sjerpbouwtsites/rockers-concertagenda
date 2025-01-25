@@ -12,9 +12,7 @@ export default async function longTextSocialsIframes(page, event) {
                 "[class*='styles_embed-list__list'] iframe"
             ].join(", ");
             const removeEmptyHTMLFrom = textSelector;
-            const socialSelector = [
-                "[class*='styles_event-meta-data'] [href*='facebook']"
-            ].join(", ");
+
             const removeSelectors = [
                 `${textSelector} [class*='icon-']`,
                 `${textSelector} [class*='fa-']`,
@@ -47,10 +45,6 @@ export default async function longTextSocialsIframes(page, event) {
             const attributesToRemoveSecondRound = ["class", "id"];
             const removeHTMLWithStrings = [];
 
-            // eerst onzin attributes wegslopen
-            const socAttrRemSelAdd = `${
-                socialSelector.length ? `, ${socialSelector}` : ""
-            }`;
             const mediaAttrRemSelAdd = `${
                 mediaSelector.length
                     ? `, ${mediaSelector} *, ${mediaSelector}`
@@ -97,9 +91,6 @@ export default async function longTextSocialsIframes(page, event) {
                           };
                       }
                   );
-
-            // socials obj maken voordat HTML verdwijnt
-            res.socialsForHTML = "";
 
             // stript HTML tbv text
             removeSelectors.length &&

@@ -74,10 +74,6 @@ export default async function longTextSocialsIframes(page, event) {
             const attributesToRemoveSecondRound = ["class", "id"];
             const removeHTMLWithStrings = ["Iets voor jou"];
 
-            // eerst onzin attributes wegslopen
-            const socAttrRemSelAdd = `${
-                socialSelector.length ? `, ${socialSelector}` : ""
-            }`;
             const mediaAttrRemSelAdd = `${
                 mediaSelector.length
                     ? `, ${mediaSelector} *, ${mediaSelector}`
@@ -134,8 +130,6 @@ export default async function longTextSocialsIframes(page, event) {
                 };
             });
 
-            // socials obj maken voordat HTML verdwijnt
-            res.socialsForHTML = "";
             // stript HTML tbv text
             removeSelectors.length &&
                 document

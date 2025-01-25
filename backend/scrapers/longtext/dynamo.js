@@ -12,7 +12,7 @@ export default async function longTextSocialsIframes(page, event) {
                 ".wp-block-dynamo-eindhoven-container .rll-youtube-player, .wp-block-dynamo-eindhoven-container iframe"
             ].join(", ");
             const removeEmptyHTMLFrom = textSelector;
-            const socialSelector = [].join(", ");
+
             const removeSelectors = [
                 `${textSelector} [class*='icon-']`,
                 `${textSelector} [class*='fa-']`,
@@ -53,10 +53,6 @@ export default async function longTextSocialsIframes(page, event) {
             //     );
             // end custom dynamo
 
-            // eerst onzin attributes wegslopen
-            const socAttrRemSelAdd = `${
-                socialSelector.length ? `, ${socialSelector}` : ""
-            }`;
             const mediaAttrRemSelAdd = `${
                 mediaSelector.length
                     ? `, ${mediaSelector} *, ${mediaSelector}`
@@ -89,9 +85,6 @@ export default async function longTextSocialsIframes(page, event) {
                         : "bandcamp"
                 };
             });
-
-            // socials obj maken voordat HTML verdwijnt
-            res.socialsForHTML = "";
 
             // stript HTML tbv text
             removeSelectors.length &&

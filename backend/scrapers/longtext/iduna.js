@@ -10,9 +10,7 @@ export default async function longTextSocialsIframes(page, event) {
             const textSelector = "#text_block-53-7";
             const mediaSelector = ["#code_block-94-7 iframe"].join(", ");
             const removeEmptyHTMLFrom = textSelector;
-            const socialSelector = [".artiesten-items [href*='facebook']"].join(
-                ", "
-            );
+
             const removeSelectors = [
                 `${textSelector} [class*='icon-']`,
                 `${textSelector} [class*='fa-']`,
@@ -42,10 +40,6 @@ export default async function longTextSocialsIframes(page, event) {
             const attributesToRemoveSecondRound = ["class", "id"];
             const removeHTMLWithStrings = [];
 
-            // eerst onzin attributes wegslopen
-            const socAttrRemSelAdd = `${
-                socialSelector.length ? `, ${socialSelector}` : ""
-            }`;
             const mediaAttrRemSelAdd = `${
                 mediaSelector.length
                     ? `, ${mediaSelector} *, ${mediaSelector}`
@@ -111,9 +105,6 @@ export default async function longTextSocialsIframes(page, event) {
                         : "bandcamp"
                 };
             });
-
-            // socials obj maken voordat HTML verdwijnt
-            res.socialsForHTML = "";
 
             // stript HTML tbv text
             removeSelectors.length &&

@@ -24,7 +24,7 @@ export default async function longTextSocialsIframes(page, event) {
                 `${textSelector} .avia-button + p`,
                 `${textSelector} .avia-button`
             ].join(", ");
-            const socialSelector = [].join(", ");
+
             const attributesToRemove = [
                 "style",
                 "hidden",
@@ -35,8 +35,6 @@ export default async function longTextSocialsIframes(page, event) {
             ];
             const attributesToRemoveSecondRound = ["class", "id"];
 
-            // eerst onzin attributes wegslopen
-            const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ""}`;
             const mediaAttrRemSelAdd = `${
                 mediaSelector.length
                     ? `, ${mediaSelector} *, ${mediaSelector}`
@@ -63,40 +61,10 @@ export default async function longTextSocialsIframes(page, event) {
                     type: src.includes("spotify")
                         ? "spotify"
                         : src.includes("youtube")
-                          ? "youtube"
-                          : "bandcamp"
+                        ? "youtube"
+                        : "bandcamp"
                 };
             });
-
-            // socials obj maken voordat HTML verdwijnt
-            res.socialsForHTML = !socialSelector
-                ? ""
-                : Array.from(document.querySelectorAll(socialSelector)).map(
-                      (el) => {
-                          el.querySelectorAll("i, svg, img").forEach((rm) =>
-                              rm.parentNode.removeChild(rm)
-                          );
-                          if (!el.textContent.trim().length) {
-                              if (
-                                  el.href.includes("facebook") ||
-                                  el.href.includes("fb.me")
-                              ) {
-                                  if (el.href.includes("facebook.com/events")) {
-                                      el.textContent = `FB event ${event.title}`;
-                                  } else {
-                                      el.textContent = "Facebook";
-                                  }
-                              } else if (el.href.includes("twitter")) {
-                                  el.textContent = "Tweet";
-                              } else if (el.href.includes("instagram")) {
-                                  el.textContent = "Insta";
-                              }
-                          }
-                          el.className = "long-html__social-list-link";
-                          el.target = "_blank";
-                          return el.outerHTML;
-                      }
-                  );
 
             // stript HTML tbv text
             removeSelectors.length &&

@@ -21,7 +21,7 @@ export default async function longTextSocialsIframes(page, event) {
                 `${textSelector} form`,
                 `${textSelector} img`
             ];
-            const socialSelector = [];
+
             const attributesToRemove = [
                 "style",
                 "hidden",
@@ -48,10 +48,6 @@ export default async function longTextSocialsIframes(page, event) {
                 tweedeWys[1].parentNode.removeChild(tweedeWys[1]);
             }
 
-            // eerst onzin attributes wegslopen
-            const socAttrRemSelAdd = `${
-                socialSelector.length ? `, ${socialSelector}` : ""
-            }`;
             const mediaAttrRemSelAdd = `${
                 mediaSelector.length
                     ? `, ${mediaSelector} *, ${mediaSelector}`
