@@ -175,6 +175,18 @@ ${BEMify("event-block", [
 
     // eslint-disable-next-line
     createImageHTML(musicEvent, selectors) {
+        if (musicEvent.image.includes("https")) {
+            return (
+                <img
+                    src={musicEvent.image}
+                    width="440"
+                    height="220"
+                    className={selectors.image}
+                    alt={musicEvent.title}
+                />
+            );
+        }
+
         let imgSrc = musicEvent.image // FIXME naar eigen component
             ? `${musicEvent.image}`
             : `/location-images/${musicEvent.location}`;
@@ -396,6 +408,7 @@ ${BEMify("event-block", [
                 )}
                 href={musicEvent.venueEventUrl}
                 target="_blank"
+                rel="noreferrer"
             >
                 <span className="ticketemoji contrast-with-dark">{emoji}</span>
                 <span className={priceSelectors}>{priceText}</span>

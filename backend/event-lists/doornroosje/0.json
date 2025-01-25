@@ -8,6 +8,7 @@
     "price": null,
     "shortText": "+ Kingfisher Skymetal, symfonische metal",
     "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvZGVsYWluLTIv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/06/Delain-1200x630.jpg",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
@@ -42,6 +43,80 @@
     }
   },
   {
+    "door": "2025-02-05T21:00:00.000",
+    "start": "2025-02-05T22:00:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/vower/",
+    "title": "Vower",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "metal, progressive metal",
+    "longText": "../public/texts/doornroosje/d3cuZG9vcm5yb29zamUubmwvZXZlbnQvdm93ZXIv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/11/VOWER-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "vower": {
+        "s": "4B27SA6MuuYfEbzz1BObjY",
+        "l": "vower",
+        "g": [
+          "progressive metal"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-02-06T21:00:00.000",
+    "start": "2025-02-06T22:00:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/cobra-the-impaler/",
+    "title": "Cobra the Impaler",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "metal",
+    "longText": "../public/texts/doornroosje/amUubmwvZXZlbnQvY29icmEtdGhlLWltcGFsZXIv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/09/Cobra-the-Impaler-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "cobra the impaler": {
+        "s": "3GF4mtTUUptBbUoJNclS4A",
+        "l": "cobra%20the%20impaler",
+        "g": [
+          "progressive metalcore"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-02-08T19:30:00.000",
     "start": "2025-02-08T20:15:00.000",
     "venueEventUrl": "https://www.doornroosje.nl/event/high-vis/",
@@ -50,6 +125,7 @@
     "price": null,
     "shortText": "+ Narrow Headrock, post punk, hardcore, doornroosjepas",
     "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvaGlnaC12aXMv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/07/High-Vis-min-1200x630.jpg",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
@@ -71,235 +147,41 @@
     }
   },
   {
-    "door": "2025-03-01T19:00:00.000",
-    "start": "2025-03-01T20:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/dubioza-kolektiv-3/",
-    "title": "Dubioza Kolektiv",
+    "door": "2025-02-09T19:00:00.000",
+    "start": "2025-02-09T19:30:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/tesseract-4/",
+    "title": "Tesseract",
     "location": "doornroosje",
     "price": null,
-    "shortText": "rock, punk, hip hop, ska, electronic, dub, balkan",
-    "longText": "../public/texts/doornroosje/ZS5ubC9ldmVudC9kdWJpb3phLWtvbGVrdGl2LTMv.html",
+    "shortText": "+ Novelists + The Omnificmetal, djent metal, progressieve metal",
+    "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvdGVzc2VyYWN0LTQv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/07/Tesseract-1200x630.jpg",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "dubioza kolektiv": {
-        "s": "02IFYoziC7CpQRK8fbehUY",
-        "l": "dubioza%20kolektiv",
+      "tesseract": {
+        "s": "23ytwhg1pzx6divwrwvw1r",
+        "l": "tesseract",
         "g": [
-          "balkan brass",
-          "balkan punk",
-          "bosnian indie"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-12T20:00:00.000",
-    "start": "2025-03-12T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/1914/",
-    "title": "1914",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Katlametal, black metal, death metal, doornroosjepas",
-    "longText": "../public/texts/doornroosje/d3d3LmRvb3Jucm9vc2plLm5sL2V2ZW50LzE5MTQv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "1914": {
-        "s": null,
-        "l": "ukraine",
-        "g": [
-          "death metal",
-          "blackened death metal",
-          "sludge",
-          "doom metal",
-          "doom"
-        ]
-      },
-      "katla": {
-        "s": "19oXs2v8uFyKgCiGuDMBAc",
-        "l": "katla",
-        "g": [
-          "icelandic black metal",
-          "icelandic metal",
-          "stoner",
-          "sludge",
-          "doom metal"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
+          "djent",
           "progressive metal"
         ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-29T17:30:00.000",
-    "start": "2025-03-29T18:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/suffocation/",
-    "title": "Suffocation",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Angelmaker + Fuming Mouth + Carcosa + Mélancoliametal, death metal, deathcore",
-    "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvc3VmZm9jYXRpb24v.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "suffocation": {
-        "s": "4itrdiouodpnw6nm4tydk1",
-        "l": "suffocation",
+      },
+      "the omnific": {
+        "s": "5yn8jrJH5Z5PaGFStNUvgR",
+        "l": "the%20omnific",
         "g": [
-          "black metal",
-          "brutal death metal",
-          "death metal",
-          "metal",
-          "new york death metal",
-          "technical death metal"
+          "djent",
+          "progressive jazz fusion"
         ]
       },
-      "fuming mouth": {
-        "s": "2I7atnUFOmvMyGPuesD7cB",
-        "l": "fuming%20mouth",
+      "novelists": {
+        "s": "6o8sdnihczpm1sixvjkiys",
+        "l": "novelists",
         "g": [
-          "chaotic hardcore",
-          "metallic hardcore",
-          "death metal",
-          "crust"
-        ]
-      },
-      "angelmaker": {
-        "s": "1AdrYGYDz4oa9dvW2jfFrG",
-        "l": "angelmaker",
-        "g": [
-          "blackened deathcore",
-          "deathcore",
+          "djent",
           "melodic metalcore",
-          "slamming deathcore",
-          "vancouver metal",
-          "deathcore"
-        ]
-      },
-      "carcosa": {
-        "s": "2bhtSpyMNiPZJlkisy4T9G",
-        "l": "carcosa",
-        "g": [
-          "deathcore",
-          "melodic metalcore",
-          "death metal",
-          "hardcore"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-27T20:00:00.000",
-    "start": "2025-04-27T20:45:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/gnod-white-hills/",
-    "title": "Gnod & White Hills",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, kraut rock, psychedelische rock, noise rock, doornroosjepas",
-    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L2dub2Qtd2hpdGUtaGlsbHMv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "gnod": {
-        "s": "0M7HBnNJoTfTWouL5O7FtO",
-        "l": "gnod",
-        "g": [
-          "double drumming",
-          "noise rock",
-          "uk noise rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-08-27T19:00:00.000",
-    "start": "2025-08-27T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering-11/",
-    "title": "The Gathering",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "Final extra showrock, progressieve rock, metal, symfonische metal",
-    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L3RoZS1nYXRoZXJpbmctMTEv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "the gathering": {
-        "s": "2kO6zjt4a1OIqxOERhliEX",
-        "l": "the%20gathering",
-        "g": [
-          "atmospheric doom",
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "symphonic metal",
-          "death",
-          "doom metal, atmospheric doom metal (early)",
-          " atmospheric rock (later)"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-10-17T19:15:00.000",
-    "start": "2025-10-17T20:15:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/floor-jansen-2/",
-    "title": "Floor Jansen",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "pop, symphonic metal, power metal",
-    "longText": "../public/texts/doornroosje/b29zamUubmwvZXZlbnQvZmxvb3ItamFuc2VuLTIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "floor jansen": {
-        "s": "2zntj9bu9qmjwbbomspqgj",
-        "l": "floor%20jansen",
-        "g": [
-          "hel"
+          "metalcore"
         ]
       },
       "metal": {

@@ -1,330 +1,5 @@
 [
   {
-    "door": "2025-01-24T19:00:00",
-    "start": "2025-01-24T19:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/triggerfinger-2025",
-    "title": "Triggerfinger",
-    "location": "victorie",
-    "price": 39.5,
-    "shortText": "Victorie 15 jaar",
-    "longText": "../public/texts/victorie/bC9wcm9ncmFtbWEvdHJpZ2dlcmZpbmdlci0yMDI1.html",
-    "image": "../public/event-images/victorie/bC9wcm9ncmFtbWEvdHJpZ2dlcmZpbmdlci0yMDI1",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "triggerfinger": {
-        "s": "3uhilk54oe4ja06v962ptu",
-        "l": "triggerfinger",
-        "g": [
-          "belgian rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-24T19:30:00",
-    "start": "2025-01-24T20:15:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/10893380/wardruna-releaseparty-24-01-2025",
-    "title": "Wardruna releaseparty",
-    "location": "tivolivredenburg",
-    "price": 10,
-    "shortText": "Exclusieve video première: Live at the Acropolis",
-    "longText": "../public/texts/tivolivredenburg/cmRydW5hLXJlbGVhc2VwYXJ0eS0yNC0wMS0yMDI1.html",
-    "image": "../public/event-images/tivolivredenburg/cmRydW5hLXJlbGVhc2VwYXJ0eS0yNC0wMS0yMDI1",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "wardruna": {
-        "s": "0nj6wloasaj1pn4vrdtpka",
-        "l": "wardruna",
-        "g": [
-          "nordic folk",
-          "rune folk",
-          "viking folk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-24T18:30:00",
-    "start": "2025-01-24T22:30:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/64838372/bernth-charles-berthoud-24-01-2025",
-    "title": "Bernth + Charles Berthoud",
-    "location": "tivolivredenburg",
-    "price": 39.9,
-    "shortText": "Escape The Internet Tour",
-    "longText": "../public/texts/tivolivredenburg/dGgtY2hhcmxlcy1iZXJ0aG91ZC0yNC0wMS0yMDI1.html",
-    "image": "../public/event-images/tivolivredenburg/dGgtY2hhcmxlcy1iZXJ0aG91ZC0yNC0wMS0yMDI1",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-01-24T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/hardcore-vrijdag-2/",
-    "title": "Hardcore Vrijdag",
-    "location": "neushoorn",
-    "price": 5,
-    "shortText": "Je tweemaandelijkse dosis hardcore punk op vrijdag",
-    "longText": "../public/texts/neushoorn/cHJvZHVjdGlvbi9oYXJkY29yZS12cmlqZGFnLTIv.html",
-    "image": "../public/event-images/neushoorn/cHJvZHVjdGlvbi9oYXJkY29yZS12cmlqZGFnLTIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "hardcore": {
-        "s": "3N11n3hTyVlcOg77IGefjz",
-        "l": "hardcore",
-        "g": [
-          "death metal",
-          "hardcore"
-        ]
-      }
-    }
-  },
-  {
-    "title": "Delain, Serenity en Kingfisher Sky",
-    "start": "2025-01-24",
-    "eventLocationName": "hedon",
-    "shortText": "Hedon, Zwolle",
-    "image": "../public/location-images/hedon",
-    "location": "hedon"
-  },
-  {
-    "start": "2025-01-24T21:30:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/sha-la-lees-b-nl/",
-    "title": "Sha-la-lees (b/nl)",
-    "location": "littledevil",
-    "price": 10,
-    "shortText": "protopunk garage rock 'n roll - LP release HEX",
-    "longText": "../public/texts/littledevil/Lm5sL2NhbGVuZGFyL3NoYS1sYS1sZWVzLWItbmwv.html",
-    "image": "../public/event-images/littledevil/Lm5sL2NhbGVuZGFyL3NoYS1sYS1sZWVzLWItbmwv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-01-24T15:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/engel-blues-festival-5-danny-bryant-heath-richville-more-tba/",
-    "title": "Engel Blues Festival 5: Danny Bryant ",
-    "location": "groeneengel",
-    "price": 15,
-    "shortText": " HEATH  +  Richville  +  more tba undefined",
-    "longText": "../public/texts/groeneengel/eWFudC1oZWF0aC1yaWNodmlsbGUtbW9yZS10YmEv.html",
-    "image": "../public/event-images/groeneengel/eWFudC1oZWF0aC1yaWNodmlsbGUtbW9yZS10YmEv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "heath": {
-        "s": null,
-        "l": "heath",
-        "g": [
-          "black",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-24T15:00:00",
-    "start": "2025-01-24T15:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/ambitus-presents-matteo-myderwyck/",
-    "title": "Ambitus presents: Matteo Myderwyk",
-    "location": "groeneengel",
-    "price": 11,
-    "longText": "../public/texts/groeneengel/dHVzLXByZXNlbnRzLW1hdHRlby1teWRlcnd5Y2sv.html",
-    "image": "../public/event-images/groeneengel/dHVzLXByZXNlbnRzLW1hdHRlby1teWRlcnd5Y2sv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-24T19:30:00",
-    "start": "2025-01-24T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/fleetwood-mac-gold-dust-women-a-tribute-to-stevie-nicks-christine-mcvie/",
-    "title": "Fleetwood Mac: Gold Dust Women A tribute to Stevie Nicks & Christine McVie",
-    "location": "groeneengel",
-    "price": 20,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/LXN0ZXZpZS1uaWNrcy1jaHJpc3RpbmUtbWN2aWUv.html",
-    "image": "../public/event-images/groeneengel/LXN0ZXZpZS1uaWNrcy1jaHJpc3RpbmUtbWN2aWUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-24T19:30:00",
-    "start": "2025-01-24T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/jared-grant-support/",
-    "title": "Jared Grant + support",
-    "location": "groeneengel",
-    "price": 21,
-    "longText": "../public/texts/groeneengel/cHJvZ3JhbW1hL2phcmVkLWdyYW50LXN1cHBvcnQv.html",
-    "image": "../public/event-images/groeneengel/cHJvZ3JhbW1hL2phcmVkLWdyYW50LXN1cHBvcnQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-24T19:00:00",
-    "start": "2025-01-24T19:35:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/rockronde/",
-    "title": "Rockronde",
-    "location": "groeneengel",
-    "price": 19,
-    "longText": "../public/texts/groeneengel/LWVuZ2VsLm5sL3Byb2dyYW1tYS9yb2Nrcm9uZGUv.html",
-    "image": "../public/event-images/groeneengel/LWVuZ2VsLm5sL3Byb2dyYW1tYS9yb2Nrcm9uZGUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-01-24T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/dana-van-bergen/",
-    "title": "Dana van Bergen",
-    "location": "groeneengel",
-    "price": 20,
-    "longText": "../public/texts/groeneengel/Lm5sL3Byb2dyYW1tYS9kYW5hLXZhbi1iZXJnZW4v.html",
-    "image": "../public/event-images/groeneengel/Lm5sL3Byb2dyYW1tYS9kYW5hLXZhbi1iZXJnZW4v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "danava": {
-        "s": null,
-        "l": "danava%20(usa)&%c%us",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2025-01-24T19:30:00",
-    "start": "2025-01-24T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/physical-graffiti-the-ultimate-led-zeppelin-experience/",
-    "title": "Physical Graffiti – The Ultimate Led Zeppelin Experience",
-    "location": "groeneengel",
-    "price": 15,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/aW1hdGUtbGVkLXplcHBlbGluLWV4cGVyaWVuY2Uv.html",
-    "image": "../public/event-images/groeneengel/aW1hdGUtbGVkLXplcHBlbGluLWV4cGVyaWVuY2Uv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "physical graffiti": {
-        "s": null,
-        "l": "physical%20graffiti",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2025-01-24T19:30:00",
-    "start": "2025-01-24T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/mitch-ryder-band/",
-    "title": "Mitch Ryder & Band",
-    "location": "groeneengel",
-    "price": 20,
-    "longText": "../public/texts/groeneengel/bmwvcHJvZ3JhbW1hL21pdGNoLXJ5ZGVyLWJhbmQv.html",
-    "image": "../public/event-images/groeneengel/bmwvcHJvZ3JhbW1hL21pdGNoLXJ5ZGVyLWJhbmQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-24T22:00:00",
-    "start": "2025-01-24T22:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/black-smoke-brigade-aftershow-wild-romance/",
-    "title": "Black Smoke Brigade – Aftershow Wild Romance",
-    "location": "groeneengel",
-    "price": 31,
-    "longText": "../public/texts/groeneengel/cmlnYWRlLWFmdGVyc2hvdy13aWxkLXJvbWFuY2Uv.html",
-    "image": "../public/event-images/groeneengel/cmlnYWRlLWFmdGVyc2hvdy13aWxkLXJvbWFuY2Uv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-24T19:30:00",
-    "start": "2025-01-24T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/berget-lewis-ft-leif-de-leeuw-band-clubtour-2025/",
-    "title": "Berget Lewis ft. Leif de Leeuw Band – Clubtour 2025",
-    "location": "groeneengel",
-    "price": 24,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/Zi1kZS1sZWV1dy1iYW5kLWNsdWJ0b3VyLTIwMjUv.html",
-    "image": "../public/event-images/groeneengel/Zi1kZS1sZWV1dy1iYW5kLWNsdWJ0b3VyLTIwMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-24T19:00:00",
-    "start": "2025-01-24T19:00:00",
-    "end": "2025-01-24T22:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/queerhoven-boardgame-night/",
-    "title": "Queerhoven Boardgame Night",
-    "location": "dynamo",
-    "price": 2400,
-    "shortText": "The boardgame night is a recurring event from Queerhoven. Join us for an evening of boardgames and hanging out with your fellow queer people!",
-    "longText": "../public/texts/dynamo/bnQvcXVlZXJob3Zlbi1ib2FyZGdhbWUtbmlnaHQv.html",
-    "image": "../public/event-images/dynamo/bnQvcXVlZXJob3Zlbi1ib2FyZGdhbWUtbmlnaHQv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-01-24T20:00:00",
-    "end": "2025-01-24T02:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/devils-lair/",
-    "title": "Devils Lair",
-    "location": "dynamo",
-    "price": 13,
-    "shortText": "Underground Hiphop meets Duistere Drum ’n Bass",
-    "longText": "../public/texts/dynamo/b3Zlbi5ubC9ldmVuZW1lbnQvZGV2aWxzLWxhaXIv.html",
-    "image": "../public/event-images/dynamo/b3Zlbi5ubC9ldmVuZW1lbnQvZGV2aWxzLWxhaXIv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "bass": {
-        "s": null,
-        "l": "bass",
-        "g": [
-          "doom",
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
     "start": "2025-01-25T19:00:00",
     "venueEventUrl": "https://www.willemeen.nl/programma/von-mollestein-sledeon-estering-existance-scenyte/",
     "title": "Von Mollestein ",
@@ -710,6 +385,7 @@
     "price": null,
     "shortText": "+ Kingfisher Skymetal, symfonische metal",
     "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvZGVsYWluLTIv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/06/Delain-1200x630.jpg",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
@@ -1067,8 +743,7 @@
     "artists": {}
   },
   {
-    "door": "2025-01-10T20:00:00+01:00",
-    "start": "2025-01-30T20:00:00+01:00",
+    "start": "2025-01-30T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/91320/the-brian-jonestown-massacre",
     "title": "The Brian Jonestown Massacre",
     "location": "013",
@@ -1121,8 +796,8 @@
     }
   },
   {
-    "door": "2025-01-31T20:30:00+01:00",
-    "start": "2025-01-31T20:30:00+01:00",
+    "door": "2025-01-31T19:00:00",
+    "start": "2025-01-31T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/86023/feuerengel",
     "title": "Feuerengel",
     "location": "013",
@@ -1147,8 +822,8 @@
     }
   },
   {
-    "door": "2025-01-31T18:30:00+01:00",
-    "start": "2025-01-31T18:30:00+01:00",
+    "door": "2025-01-31T18:00:00",
+    "start": "2025-01-31T18:00:00",
     "venueEventUrl": "https://www.013.nl/programma/92332/distant-enterprise-earth",
     "title": "Distant + Enterprise Earth",
     "location": "013",
@@ -1528,8 +1203,8 @@
     "artists": {}
   },
   {
-    "door": "2025-02-02T17:20:00+01:00",
-    "start": "2025-02-02T17:20:00+01:00",
+    "door": "2025-02-02T17:00:00",
+    "start": "2025-02-02T17:00:00",
     "venueEventUrl": "https://www.013.nl/programma/90358/paganfest-2025",
     "title": "Paganfest 2025",
     "location": "013",
@@ -1579,8 +1254,8 @@
     }
   },
   {
-    "door": "2025-02-03T20:00:00+01:00",
-    "start": "2025-02-03T20:00:00+01:00",
+    "door": "2025-02-03T19:00:00",
+    "start": "2025-02-03T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/88336/tremonti",
     "title": "Tremonti",
     "location": "013",
@@ -1642,8 +1317,8 @@
     }
   },
   {
-    "door": "2025-02-04T20:00:00+01:00",
-    "start": "2025-02-04T20:00:00+01:00",
+    "door": "2025-02-04T19:00:00",
+    "start": "2025-02-04T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/88624/rise-against",
     "title": "Rise Against",
     "location": "013",
@@ -1753,6 +1428,7 @@
     "price": null,
     "shortText": "metal, progressive metal",
     "longText": "../public/texts/doornroosje/d3cuZG9vcm5yb29zamUubmwvZXZlbnQvdm93ZXIv.html",
+    "image": "../public/event-images/doornroosje/d3cuZG9vcm5yb29zamUubmwvZXZlbnQvdm93ZXIv",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
@@ -1836,6 +1512,7 @@
     "price": null,
     "shortText": "metal",
     "longText": "../public/texts/doornroosje/amUubmwvZXZlbnQvY29icmEtdGhlLWltcGFsZXIv.html",
+    "image": "../public/event-images/doornroosje/amUubmwvZXZlbnQvY29icmEtdGhlLWltcGFsZXIv",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
@@ -1987,8 +1664,8 @@
     }
   },
   {
-    "door": "2025-02-07T20:00:00+01:00",
-    "start": "2025-02-07T20:00:00+01:00",
+    "door": "2025-02-07T19:00:00",
+    "start": "2025-02-07T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/85967/leprous",
     "title": "Leprous",
     "location": "013",
@@ -2142,6 +1819,7 @@
     "price": null,
     "shortText": "+ Narrow Headrock, post punk, hardcore, doornroosjepas",
     "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvaGlnaC12aXMv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/07/High-Vis-min-1200x630.jpg",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
@@ -2163,8 +1841,8 @@
     }
   },
   {
-    "door": "2025-02-08T20:30:00+01:00",
-    "start": "2025-02-08T20:30:00+01:00",
+    "door": "2025-02-08T19:00:00",
+    "start": "2025-02-08T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/82767/ronnie-james-dio-the-memorial-concert",
     "title": "Ronnie James Dio",
     "location": "013",
@@ -2241,6 +1919,7 @@
     "price": null,
     "shortText": "+ Novelists + The Omnificmetal, djent metal, progressieve metal",
     "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvdGVzc2VyYWN0LTQv.html",
+    "image": "../public/event-images/doornroosje/cm5yb29zamUubmwvZXZlbnQvdGVzc2VyYWN0LTQv",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
@@ -2383,6 +2062,7 @@
     }
   },
   {
+    "door": "2025-02-11T17:30:00",
     "start": "2025-02-11T17:30:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/bullet-for-my-valentine-trivium",
     "title": "Bullet For My Valentine & Trivium",
@@ -2611,8 +2291,8 @@
     }
   },
   {
-    "door": "2025-02-14T19:00:00+01:00",
-    "start": "2025-02-14T19:00:00+01:00",
+    "door": "2025-02-14T18:00:00",
+    "start": "2025-02-14T18:00:00",
     "venueEventUrl": "https://www.013.nl/programma/80019/motionless-in-white",
     "title": "Motionless in White",
     "location": "013",
@@ -2635,8 +2315,8 @@
     }
   },
   {
-    "door": "2025-02-14T20:30:00+01:00",
-    "start": "2025-02-14T20:30:00+01:00",
+    "door": "2025-02-14T20:00:00",
+    "start": "2025-02-14T20:00:00",
     "venueEventUrl": "https://www.013.nl/programma/92177/cobra-the-impaler",
     "title": "Cobra The Impaler",
     "location": "013",
@@ -2874,8 +2554,8 @@
     }
   },
   {
-    "door": "2025-02-16T19:00:00+01:00",
-    "start": "2025-02-16T19:00:00+01:00",
+    "door": "2025-02-16T18:00:00",
+    "start": "2025-02-16T18:00:00",
     "venueEventUrl": "https://www.013.nl/programma/84793/spiritbox",
     "title": "Spiritbox",
     "location": "013",
@@ -2892,29 +2572,6 @@
         "l": "spiritbox",
         "g": [
           "canadian metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-17T20:00:00.000",
-    "start": "2025-02-17T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/delivery/",
-    "title": "Delivery",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, punk, post punk",
-    "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvZGVsaXZlcnkv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "delivery": {
-        "s": "44qDh9SR4FYA9V1yb7Amig",
-        "l": "delivery",
-        "g": [
-          "australian post-punk",
-          "grindcore",
-          "death metal"
         ]
       }
     }
@@ -3094,8 +2751,8 @@
     "artists": {}
   },
   {
-    "door": "2025-02-20T20:00:00+01:00",
-    "start": "2025-02-20T20:00:00+01:00",
+    "door": "2025-02-20T19:00:00",
+    "start": "2025-02-20T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/86139/love-letter",
     "title": "Love Letter",
     "location": "013",
@@ -3117,8 +2774,8 @@
     }
   },
   {
-    "door": "2025-02-20T20:00:00+01:00",
-    "start": "2025-02-20T20:00:00+01:00",
+    "door": "2025-02-20T19:30:00",
+    "start": "2025-02-20T19:30:00",
     "venueEventUrl": "https://www.013.nl/programma/90333/ploegendienst",
     "title": "Ploegendienst",
     "location": "013",
@@ -3351,8 +3008,8 @@
     }
   },
   {
-    "door": "2025-02-21T18:15:00+01:00",
-    "start": "2025-02-21T18:15:00+01:00",
+    "door": "2025-02-21T17:30:00",
+    "start": "2025-02-21T17:30:00",
     "venueEventUrl": "https://www.013.nl/programma/85373/paleface-swiss",
     "title": "Paleface Swiss",
     "location": "013",
@@ -3627,8 +3284,7 @@
     "location": "anciennebelgique"
   },
   {
-    "door": "2025-01-22T18:30:00+01:00",
-    "start": "2025-02-23T18:30:00+01:00",
+    "start": "2025-02-23T18:00:00",
     "venueEventUrl": "https://www.013.nl/programma/92680/cattle-decapition-shadow-of-intent",
     "title": "Cattle Decapitation + Shadow Of Intent",
     "location": "013",
@@ -3977,70 +3633,6 @@
     }
   },
   {
-    "door": "2025-03-01T21:00:00.000",
-    "start": "2025-03-01T22:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/the-meffs/",
-    "title": "The Meffs",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Meryl Streekrock, punk, noise",
-    "longText": "../public/texts/doornroosje/b29ybnJvb3NqZS5ubC9ldmVudC90aGUtbWVmZnMv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "the meffs": {
-        "s": "0py1x64i2ewlucppunajry",
-        "l": "the%20meffs",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2025-03-01T20:00:00.000",
-    "start": "2025-03-01T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/ploegendienst-2/",
-    "title": "Ploegendienst",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Loopeyrock, punk, punkrock, doornroosjepas",
-    "longText": "../public/texts/doornroosje/b3NqZS5ubC9ldmVudC9wbG9lZ2VuZGllbnN0LTIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "ploegendienst": {
-        "s": "2aJUvAtem0t0zRKxJsRoea",
-        "l": "ploegendienst",
-        "g": [
-          "dutch indie rock",
-          "dutch punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-01T19:00:00.000",
-    "start": "2025-03-01T20:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/dubioza-kolektiv-3/",
-    "title": "Dubioza Kolektiv",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, punk, hip hop, ska, electronic, dub, balkan",
-    "longText": "../public/texts/doornroosje/ZS5ubC9ldmVudC9kdWJpb3phLWtvbGVrdGl2LTMv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "dubioza kolektiv": {
-        "s": "02IFYoziC7CpQRK8fbehUY",
-        "l": "dubioza%20kolektiv",
-        "g": [
-          "balkan brass",
-          "balkan punk",
-          "bosnian indie"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-03-01T20:00:00",
     "start": "2025-03-01T21:00:00",
     "venueEventUrl": "https://www.cpunt.nl/agenda/freak-kitchen",
@@ -4116,8 +3708,8 @@
     }
   },
   {
-    "door": "2025-03-02T19:15:00+01:00",
-    "start": "2025-03-02T19:15:00+01:00",
+    "door": "2025-03-02T18:30:00",
+    "start": "2025-03-02T18:30:00",
     "venueEventUrl": "https://www.013.nl/programma/93333/saxon",
     "title": "Saxon",
     "location": "013",
@@ -4189,8 +3781,8 @@
     }
   },
   {
-    "door": "2025-03-05T19:00:00+01:00",
-    "start": "2025-03-05T19:00:00+01:00",
+    "door": "2025-03-05T18:30:00",
+    "start": "2025-03-05T18:30:00",
     "venueEventUrl": "https://www.013.nl/programma/98835/dynazty-nanowar-of-steel",
     "title": "Dynazty + Nanowar of Steel",
     "location": "013",
@@ -4299,8 +3891,8 @@
     "artists": {}
   },
   {
-    "door": "2025-03-06T20:00:00+01:00",
-    "start": "2025-03-06T20:00:00+01:00",
+    "door": "2025-03-06T19:30:00",
+    "start": "2025-03-06T19:30:00",
     "venueEventUrl": "https://www.013.nl/programma/98625/the-raven-age",
     "title": "The Raven Age",
     "location": "013",
@@ -4806,57 +4398,6 @@
     }
   },
   {
-    "door": "2025-03-12T20:00:00.000",
-    "start": "2025-03-12T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/1914/",
-    "title": "1914",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Katlametal, black metal, death metal, doornroosjepas",
-    "longText": "../public/texts/doornroosje/d3d3LmRvb3Jucm9vc2plLm5sL2V2ZW50LzE5MTQv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "1914": {
-        "s": null,
-        "l": "ukraine",
-        "g": [
-          "death metal",
-          "blackened death metal",
-          "sludge",
-          "doom metal",
-          "doom"
-        ]
-      },
-      "katla": {
-        "s": "19oXs2v8uFyKgCiGuDMBAc",
-        "l": "katla",
-        "g": [
-          "icelandic black metal",
-          "icelandic metal",
-          "stoner",
-          "sludge",
-          "doom metal"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
     "start": "2025-03-12T19:00:00",
     "end": "2025-03-12T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/3-eyed-kids-12-03-2025/",
@@ -4879,8 +4420,8 @@
     }
   },
   {
-    "door": "2025-03-12T20:00:00+01:00",
-    "start": "2025-03-12T20:00:00+01:00",
+    "door": "2025-03-12T19:00:00",
+    "start": "2025-03-12T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/88157/animals-as-leaders",
     "title": "Animals As Leaders",
     "location": "013",
@@ -5133,8 +4674,8 @@
     }
   },
   {
-    "door": "2025-03-14T20:00:00+01:00",
-    "start": "2025-03-14T20:00:00+01:00",
+    "door": "2025-03-14T19:00:00",
+    "start": "2025-03-14T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/98202/3-eyed-kids",
     "title": "3 eyed kids",
     "location": "013",
@@ -5449,8 +4990,8 @@
     }
   },
   {
-    "door": "2025-03-16T19:30:00+01:00",
-    "start": "2025-03-16T19:30:00+01:00",
+    "door": "2025-03-16T19:00:00",
+    "start": "2025-03-16T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/81196/punk-rock-factory",
     "title": "Punk Rock Factory",
     "location": "013",
@@ -5472,8 +5013,8 @@
     }
   },
   {
-    "door": "2025-03-16T20:00:00+01:00",
-    "start": "2025-03-16T20:00:00+01:00",
+    "door": "2025-03-16T19:00:00",
+    "start": "2025-03-16T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/97793/zakk-sabbath",
     "title": "Zakk Sabbath",
     "location": "013",
@@ -5553,8 +5094,8 @@
     "location": "trix"
   },
   {
-    "door": "2025-03-18T19:00:00+01:00",
-    "start": "2025-03-18T19:00:00+01:00",
+    "door": "2025-03-18T18:30:00",
+    "start": "2025-03-18T18:30:00",
     "venueEventUrl": "https://www.013.nl/programma/99522/temperance",
     "title": "Temperance",
     "location": "013",
@@ -5613,34 +5154,6 @@
     }
   },
   {
-    "door": "2025-03-19T21:00:00.000",
-    "start": "2025-03-19T22:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/pure-adult/",
-    "title": "Pure Adult + Cassels",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "punk, noise",
-    "longText": "../public/texts/doornroosje/b3Jucm9vc2plLm5sL2V2ZW50L3B1cmUtYWR1bHQv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "pure adult": {
-        "s": "1Mc4HuGUhs102TZAEVX1Kk",
-        "l": "pure%20adult",
-        "g": [
-          "american post-punk"
-        ]
-      },
-      "cassels": {
-        "s": "4tTRgwk8L4eDg74OI9dKL2",
-        "l": "cassels",
-        "g": [
-          "noise rock"
-        ]
-      }
-    }
-  },
-  {
     "title": "Temperance, Ignea en Induction",
     "start": "2025-03-20",
     "eventLocationName": "matrix",
@@ -5649,8 +5162,8 @@
     "location": "matrix"
   },
   {
-    "door": "2025-03-20T19:00:00+01:00",
-    "start": "2025-03-20T19:00:00+01:00",
+    "door": "2025-03-20T18:00:00",
+    "start": "2025-03-20T18:00:00",
     "venueEventUrl": "https://www.013.nl/programma/95389/knocked-loose",
     "title": "Knocked Loose",
     "location": "013",
@@ -5766,8 +5279,8 @@
     }
   },
   {
-    "door": "2025-03-21T22:00:00+01:00",
-    "start": "2025-03-21T22:00:00+01:00",
+    "door": "2025-03-21T22:00:00",
+    "start": "2025-03-21T22:00:00",
     "venueEventUrl": "https://www.013.nl/programma/7869/no-barrier",
     "title": "No barrier",
     "location": "013",
@@ -5802,8 +5315,8 @@
     }
   },
   {
-    "door": "2025-03-21T20:00:00+01:00",
-    "start": "2025-03-21T20:00:00+01:00",
+    "door": "2025-03-21T19:00:00",
+    "start": "2025-03-21T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/103545/ni",
     "title": "Ni",
     "location": "013",
@@ -6222,8 +5735,8 @@
     }
   },
   {
-    "door": "2025-03-26T20:00:00+01:00",
-    "start": "2025-03-26T20:00:00+01:00",
+    "door": "2025-03-26T19:00:00",
+    "start": "2025-03-26T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/88230/avantasia",
     "title": "Avantasia",
     "location": "013",
@@ -6262,8 +5775,8 @@
     "location": "muziekgieterij"
   },
   {
-    "door": "2025-03-27T21:00:00+01:00",
-    "start": "2025-03-27T21:00:00+01:00",
+    "door": "2025-03-27T20:00:00",
+    "start": "2025-03-27T20:00:00",
     "venueEventUrl": "https://www.013.nl/programma/103423/hexis",
     "title": "Hexis",
     "location": "013",
@@ -6438,64 +5951,6 @@
     }
   },
   {
-    "door": "2025-03-28T19:00:00.000",
-    "start": "2025-03-28T19:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/life-of-agony-biohazard/",
-    "title": "Biohazard + Life of Agony",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ LYLVCmetal, hardcore",
-    "longText": "../public/texts/doornroosje/ZXZlbnQvbGlmZS1vZi1hZ29ueS1iaW9oYXphcmQv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "life of agony": {
-        "s": "4gyzqpfg5yqzjt2jj0ikel",
-        "l": "life%20of%20agony",
-        "g": []
-      },
-      "biohazard": {
-        "s": "3nhxXtHwC2TookQyqQlFK1",
-        "l": "biohazard",
-        "g": [
-          "alternative metal",
-          "funk metal",
-          "groove metal",
-          "hardcore",
-          "nu metal",
-          "nyhc",
-          "rap metal",
-          "rap rock",
-          "black",
-          "death metal"
-        ]
-      },
-      "hardcore": {
-        "s": "3N11n3hTyVlcOg77IGefjz",
-        "l": "hardcore",
-        "g": [
-          "death metal",
-          "hardcore"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-03-28T19:30:00",
     "start": "2025-03-28T20:00:00",
     "venueEventUrl": "https://bibelot.net/programma/zoekhetuitman-album-release/",
@@ -6519,8 +5974,8 @@
     }
   },
   {
-    "door": "2025-03-28T20:00:00+01:00",
-    "start": "2025-03-28T20:00:00+01:00",
+    "door": "2025-03-28T19:00:00",
+    "start": "2025-03-28T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/98550/the-intersphere",
     "title": "The Intersphere",
     "location": "013",
@@ -6719,79 +6174,6 @@
           "power metal",
           "heavy metal",
           "hard rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-29T17:30:00.000",
-    "start": "2025-03-29T18:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/suffocation/",
-    "title": "Suffocation",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Angelmaker + Fuming Mouth + Carcosa + Mélancoliametal, death metal, deathcore",
-    "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvc3VmZm9jYXRpb24v.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "suffocation": {
-        "s": "4itrdiouodpnw6nm4tydk1",
-        "l": "suffocation",
-        "g": [
-          "black metal",
-          "brutal death metal",
-          "death metal",
-          "metal",
-          "new york death metal",
-          "technical death metal"
-        ]
-      },
-      "fuming mouth": {
-        "s": "2I7atnUFOmvMyGPuesD7cB",
-        "l": "fuming%20mouth",
-        "g": [
-          "chaotic hardcore",
-          "metallic hardcore",
-          "death metal",
-          "crust"
-        ]
-      },
-      "angelmaker": {
-        "s": "1AdrYGYDz4oa9dvW2jfFrG",
-        "l": "angelmaker",
-        "g": [
-          "blackened deathcore",
-          "deathcore",
-          "melodic metalcore",
-          "slamming deathcore",
-          "vancouver metal",
-          "deathcore"
-        ]
-      },
-      "carcosa": {
-        "s": "2bhtSpyMNiPZJlkisy4T9G",
-        "l": "carcosa",
-        "g": [
-          "deathcore",
-          "melodic metalcore",
-          "death metal",
-          "hardcore"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
         ]
       }
     }
@@ -7088,8 +6470,8 @@
     }
   },
   {
-    "door": "2025-03-30T20:00:00+02:00",
-    "start": "2025-03-30T20:00:00+02:00",
+    "door": "2025-03-30T19:00:00",
+    "start": "2025-03-30T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/93763/bong-ra",
     "title": "Bong-Ra",
     "location": "013",
@@ -7131,8 +6513,7 @@
     "artists": {}
   },
   {
-    "door": "2024-12-04T21:00:00+01:00",
-    "start": "2025-04-02T21:00:00+02:00",
+    "start": "2025-04-02T20:00:00",
     "venueEventUrl": "https://www.013.nl/programma/99286/cats-cult",
     "title": "Cat's Cult",
     "location": "013",
@@ -7152,8 +6533,8 @@
     }
   },
   {
-    "door": "2025-04-02T20:00:00+02:00",
-    "start": "2025-04-02T20:00:00+02:00",
+    "door": "2025-04-02T19:00:00",
+    "start": "2025-04-02T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/98493/social-distortion",
     "title": "Social Distortion",
     "location": "013",
@@ -7259,28 +6640,6 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
-  },
-  {
-    "door": "2025-04-03T20:00:00.000",
-    "start": "2025-04-03T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/iv-and-the-strange-band/",
-    "title": "IV and the Strange Band",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "folk, punk, country, doornroosjepas",
-    "longText": "../public/texts/doornroosje/ZXZlbnQvaXYtYW5kLXRoZS1zdHJhbmdlLWJhbmQv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
   },
   {
     "door": "2025-04-04T19:30:00",
@@ -7551,8 +6910,8 @@
     }
   },
   {
-    "door": "2025-04-06T19:30:00+02:00",
-    "start": "2025-04-06T19:30:00+02:00",
+    "door": "2025-04-06T19:00:00",
+    "start": "2025-04-06T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/97934/and-so-i-watch-you-from-afar",
     "title": "And So I Watch You From Afar",
     "location": "013",
@@ -7733,21 +7092,8 @@
     }
   },
   {
-    "door": "2025-04-11T21:00:00.000",
-    "start": "2025-04-11T22:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/magic-tom-yuri-eten-bloed/",
-    "title": "Magic Tom & Yuri eten bloed",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "punk, comedy, theater",
-    "longText": "../public/texts/doornroosje/ZW50L21hZ2ljLXRvbS15dXJpLWV0ZW4tYmxvZWQv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-04-11T19:30:00+02:00",
-    "start": "2025-04-11T19:30:00+02:00",
+    "door": "2025-04-11T19:00:00",
+    "start": "2025-04-11T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/103210/state-power",
     "title": "State Power",
     "location": "013",
@@ -7982,8 +7328,8 @@
     "artists": {}
   },
   {
-    "door": "2025-04-13T19:00:00+02:00",
-    "start": "2025-04-13T19:00:00+02:00",
+    "door": "2025-04-13T18:00:00",
+    "start": "2025-04-13T18:00:00",
     "venueEventUrl": "https://www.013.nl/programma/88183/behemoth",
     "title": "Behemoth",
     "location": "013",
@@ -8179,7 +7525,7 @@
     }
   },
   {
-    "start": "2025-04-17T14:00:00+02:00",
+    "start": "2025-04-17T14:00:00",
     "venueEventUrl": "https://www.013.nl/programma/90319/roadburn-2025",
     "title": "Roadburn 2025",
     "location": "013",
@@ -8381,7 +7727,7 @@
     }
   },
   {
-    "start": "2025-04-18T14:00:00+02:00",
+    "start": "2025-04-18T14:00:00",
     "venueEventUrl": "https://www.013.nl/programma/90323/roadburn-2025-2",
     "title": "Roadburn 2025",
     "location": "013",
@@ -8486,7 +7832,7 @@
     }
   },
   {
-    "start": "2025-04-19T14:00:00+02:00",
+    "start": "2025-04-19T14:00:00",
     "venueEventUrl": "https://www.013.nl/programma/90329/roadburn-2025",
     "title": "Roadburn 2025",
     "location": "013",
@@ -8700,7 +8046,7 @@
     }
   },
   {
-    "start": "2025-04-20T14:00:00+02:00",
+    "start": "2025-04-20T14:00:00",
     "venueEventUrl": "https://www.013.nl/programma/90286/roadburn-2025",
     "title": "Roadburn 2025",
     "location": "013",
@@ -8798,8 +8144,8 @@
     "location": "bolwerk"
   },
   {
-    "door": "2025-04-24T22:00:00+02:00",
-    "start": "2025-04-24T22:00:00+02:00",
+    "door": "2025-04-24T18:00:00",
+    "start": "2025-04-24T18:00:00",
     "venueEventUrl": "https://www.013.nl/programma/92107/aborted",
     "title": "Aborted",
     "location": "013",
@@ -8939,8 +8285,8 @@
     "location": "poppodiumboerderij"
   },
   {
-    "door": "2025-04-25T20:00:00+02:00",
-    "start": "2025-04-25T20:00:00+02:00",
+    "door": "2025-04-25T19:00:00",
+    "start": "2025-04-25T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/97296/neckbreakker",
     "title": "Neckbreakker",
     "location": "013",
@@ -8958,29 +8304,6 @@
         "g": [
           "death",
           "groove metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-27T20:00:00.000",
-    "start": "2025-04-27T20:45:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/gnod-white-hills/",
-    "title": "Gnod & White Hills",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, kraut rock, psychedelische rock, noise rock, doornroosjepas",
-    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L2dub2Qtd2hpdGUtaGlsbHMv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "gnod": {
-        "s": "0M7HBnNJoTfTWouL5O7FtO",
-        "l": "gnod",
-        "g": [
-          "double drumming",
-          "noise rock",
-          "uk noise rock"
         ]
       }
     }
@@ -9126,29 +8449,8 @@
     }
   },
   {
-    "door": "2025-05-02T20:00:00.000",
-    "start": "2025-05-02T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/wodan-boys-2/",
-    "title": "Wodan Boys",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, punk",
-    "longText": "../public/texts/doornroosje/bnJvb3NqZS5ubC9ldmVudC93b2Rhbi1ib3lzLTIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "wodan boys": {
-        "s": "0kmkbibevmq4luqquahdmr",
-        "l": "wodan%20boys",
-        "g": [
-          "dutch rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-02T20:00:00+02:00",
-    "start": "2025-05-02T20:00:00+02:00",
+    "door": "2025-05-02T19:00:00",
+    "start": "2025-05-02T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/100073/tss",
     "title": "Tss",
     "location": "013",
@@ -9217,8 +8519,8 @@
     "location": "poppodiumemmen"
   },
   {
-    "door": "2025-05-04T20:00:00+02:00",
-    "start": "2025-05-04T20:00:00+02:00",
+    "door": "2025-05-04T19:00:00",
+    "start": "2025-05-04T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/95081/swallow-the-sun",
     "title": "Swallow The Sun",
     "location": "013",
@@ -9361,8 +8663,7 @@
     }
   },
   {
-    "door": "2024-12-04T21:00:00+01:00",
-    "start": "2025-05-07T21:00:00+02:00",
+    "start": "2025-05-07T20:00:00",
     "venueEventUrl": "https://www.013.nl/programma/99309/cats-cult",
     "title": "Cat's Cult",
     "location": "013",
@@ -9417,30 +8718,8 @@
     }
   },
   {
-    "door": "2025-05-08T21:00:00.000",
-    "start": "2025-05-08T22:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/knives/",
-    "title": "Knives",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, punk",
-    "longText": "../public/texts/doornroosje/dy5kb29ybnJvb3NqZS5ubC9ldmVudC9rbml2ZXMv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "knives": {
-        "s": "2YoHhPouaTT96k3dUQ8WZK",
-        "l": "knives",
-        "g": [
-          "grindcore",
-          "death 'n' roll"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-09T20:00:00+02:00",
-    "start": "2025-05-09T20:00:00+02:00",
+    "door": "2025-05-09T19:00:00",
+    "start": "2025-05-09T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/99699/viagra-boys",
     "title": "Viagra Boys",
     "location": "013",
@@ -10100,8 +9379,8 @@
     }
   },
   {
-    "door": "2025-05-21T20:00:00+02:00",
-    "start": "2025-05-21T20:00:00+02:00",
+    "door": "2025-05-21T19:00:00",
+    "start": "2025-05-21T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/100500/weather-systems",
     "title": "Weather Systems",
     "location": "013",
@@ -10335,8 +9614,8 @@
     "artists": {}
   },
   {
-    "door": "2025-05-25T20:00:00+02:00",
-    "start": "2025-05-25T20:00:00+02:00",
+    "door": "2025-05-25T19:00:00",
+    "start": "2025-05-25T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/98273/crimson-glory",
     "title": "Crimson Glory",
     "location": "013",
@@ -10611,8 +9890,7 @@
     "location": "musicon"
   },
   {
-    "door": "2024-12-04T21:00:00+01:00",
-    "start": "2025-06-04T21:00:00+02:00",
+    "start": "2025-06-04T20:00:00",
     "venueEventUrl": "https://www.013.nl/programma/99334/cats-cult",
     "title": "Cat's Cult",
     "location": "013",
@@ -10720,8 +9998,8 @@
     }
   },
   {
-    "door": "2025-06-07T20:00:00+02:00",
-    "start": "2025-06-07T20:00:00+02:00",
+    "door": "2025-06-07T19:00:00",
+    "start": "2025-06-07T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/103287/mojo-the-kitchen-brothers",
     "title": "Mojo & The Kitchen Brothers",
     "location": "013",
@@ -10796,8 +10074,8 @@
     }
   },
   {
-    "door": "2025-06-11T19:00:00+02:00",
-    "start": "2025-06-11T19:00:00+02:00",
+    "door": "2025-06-11T18:00:00",
+    "start": "2025-06-11T18:00:00",
     "venueEventUrl": "https://www.013.nl/programma/99920/king-diamond",
     "title": "King Diamond",
     "location": "013",
@@ -11226,8 +10504,32 @@
     "location": "gelredome"
   },
   {
-    "door": "2025-07-29T19:30:00+02:00",
-    "start": "2025-07-29T19:30:00+02:00",
+    "start": "2025-07-28T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/alice-cooper",
+    "title": "Alice Cooper",
+    "location": "afaslive",
+    "price": 28,
+    "longText": "../public/texts/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvYWxpY2UtY29vcGVy.html",
+    "image": "../public/event-images/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvYWxpY2UtY29vcGVy",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "lice": {
+        "s": "4JC8PfKoENbnkxLB2k3ZGo",
+        "l": "lice",
+        "g": [
+          "bristol indie",
+          "crank wave",
+          "uk post-punk revival",
+          "melodic death",
+          "groove metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-07-29T19:00:00",
+    "start": "2025-07-29T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/100388/tarja",
     "title": "Tarja",
     "location": "013",
@@ -11264,8 +10566,8 @@
     "location": "wackenduitslandmetmachinehead"
   },
   {
-    "door": "2025-08-06T18:45:00+02:00",
-    "start": "2025-08-06T18:45:00+02:00",
+    "door": "2025-08-06T18:00:00",
+    "start": "2025-08-06T18:00:00",
     "venueEventUrl": "https://www.013.nl/programma/98543/dimmu-borgir",
     "title": "Dimmu borgir",
     "location": "013",
@@ -11426,8 +10728,8 @@
     }
   },
   {
-    "door": "2025-08-14T20:00:00+02:00",
-    "start": "2025-08-14T20:00:00+02:00",
+    "door": "2025-08-14T19:00:00",
+    "start": "2025-08-14T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/99823/blind-guardian",
     "title": "Blind Guardian",
     "location": "013",
@@ -11496,135 +10798,6 @@
     }
   },
   {
-    "door": "2025-08-27T19:00:00.000",
-    "start": "2025-08-27T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering-11/",
-    "title": "The Gathering",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "Final extra showrock, progressieve rock, metal, symfonische metal",
-    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L3RoZS1nYXRoZXJpbmctMTEv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "the gathering": {
-        "s": "2kO6zjt4a1OIqxOERhliEX",
-        "l": "the%20gathering",
-        "g": [
-          "atmospheric doom",
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "symphonic metal",
-          "death",
-          "doom metal, atmospheric doom metal (early)",
-          " atmospheric rock (later)"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-08-28T19:00:00.000",
-    "start": "2025-08-28T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering-10/",
-    "title": "The Gathering",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "Extra showrock, progressieve rock, metal, symfonische metal",
-    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L3RoZS1nYXRoZXJpbmctMTAv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "the gathering": {
-        "s": "2kO6zjt4a1OIqxOERhliEX",
-        "l": "the%20gathering",
-        "g": [
-          "atmospheric doom",
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "symphonic metal",
-          "death",
-          "doom metal, atmospheric doom metal (early)",
-          " atmospheric rock (later)"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-08-31T19:00:00.000",
-    "start": "2025-08-31T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering-9/",
-    "title": "The Gathering",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "Extra showrock, progressieve rock, metal, symfonische metal",
-    "longText": "../public/texts/doornroosje/b3NqZS5ubC9ldmVudC90aGUtZ2F0aGVyaW5nLTkv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "the gathering": {
-        "s": "2kO6zjt4a1OIqxOERhliEX",
-        "l": "the%20gathering",
-        "g": [
-          "atmospheric doom",
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "symphonic metal",
-          "death",
-          "doom metal, atmospheric doom metal (early)",
-          " atmospheric rock (later)"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
     "title": "Pendragon",
     "start": "2025-09-10",
     "eventLocationName": "boerderij",
@@ -11661,8 +10834,8 @@
     }
   },
   {
-    "door": "2025-09-12T20:30:00+02:00",
-    "start": "2025-09-12T20:30:00+02:00",
+    "door": "2025-09-12T19:00:00",
+    "start": "2025-09-12T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/94542/ayreon",
     "title": "Ayreon",
     "location": "013",
@@ -11731,8 +10904,8 @@
     }
   },
   {
-    "door": "2025-09-13T20:30:00+02:00",
-    "start": "2025-09-13T20:30:00+02:00",
+    "door": "2025-09-13T19:00:00",
+    "start": "2025-09-13T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/94529/ayreon",
     "title": "Ayreon",
     "location": "013",
@@ -11760,8 +10933,8 @@
     }
   },
   {
-    "door": "2025-09-13T14:00:00+02:00",
-    "start": "2025-09-13T14:00:00+02:00",
+    "door": "2025-09-13T12:30:00",
+    "start": "2025-09-13T12:30:00",
     "venueEventUrl": "https://www.013.nl/programma/94540/ayreon",
     "title": "Ayreon",
     "location": "013",
@@ -11789,8 +10962,8 @@
     }
   },
   {
-    "door": "2025-09-14T14:00:00+02:00",
-    "start": "2025-09-14T14:00:00+02:00",
+    "door": "2025-09-14T12:30:00",
+    "start": "2025-09-14T12:30:00",
     "venueEventUrl": "https://www.013.nl/programma/94545/ayreon",
     "title": "Ayreon",
     "location": "013",
@@ -11818,8 +10991,8 @@
     }
   },
   {
-    "door": "2025-09-14T20:30:00+02:00",
-    "start": "2025-09-14T20:30:00+02:00",
+    "door": "2025-09-14T19:00:00",
+    "start": "2025-09-14T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/94548/ayreon",
     "title": "Ayreon",
     "location": "013",
@@ -11958,8 +11131,8 @@
     "artists": {}
   },
   {
-    "door": "2025-10-04T20:00:00+02:00",
-    "start": "2025-10-04T20:00:00+02:00",
+    "door": "2025-10-04T19:00:00",
+    "start": "2025-10-04T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/95484/after-forever",
     "title": "After Forever",
     "location": "013",
@@ -11987,8 +11160,8 @@
     }
   },
   {
-    "door": "2025-10-05T20:00:00+02:00",
-    "start": "2025-10-05T20:00:00+02:00",
+    "door": "2025-10-05T19:00:00",
+    "start": "2025-10-05T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/95780/after-forever",
     "title": "After Forever",
     "location": "013",
@@ -12043,8 +11216,8 @@
     }
   },
   {
-    "door": "2025-10-08T19:00:00+02:00",
-    "start": "2025-10-08T19:00:00+02:00",
+    "door": "2025-10-08T18:00:00",
+    "start": "2025-10-08T18:00:00",
     "venueEventUrl": "https://www.013.nl/programma/88519/bleed-from-within",
     "title": "Bleed From Within",
     "location": "013",
@@ -12094,8 +11267,8 @@
     "artists": {}
   },
   {
-    "door": "2025-10-10T20:00:00+02:00",
-    "start": "2025-10-10T20:00:00+02:00",
+    "door": "2025-10-10T19:00:00",
+    "start": "2025-10-10T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/98144/floor-jansen",
     "title": "Floor Jansen",
     "location": "013",
@@ -12133,44 +11306,8 @@
     "location": "brabanthallen"
   },
   {
-    "door": "2025-10-17T19:15:00.000",
-    "start": "2025-10-17T20:15:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/floor-jansen-2/",
-    "title": "Floor Jansen",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "pop, symphonic metal, power metal",
-    "longText": "../public/texts/doornroosje/b29zamUubmwvZXZlbnQvZmxvb3ItamFuc2VuLTIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "floor jansen": {
-        "s": "2zntj9bu9qmjwbbomspqgj",
-        "l": "floor%20jansen",
-        "g": [
-          "hel"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-10-18T19:00:00+02:00",
-    "start": "2025-10-18T19:00:00+02:00",
+    "door": "2025-10-18T18:00:00",
+    "start": "2025-10-18T18:00:00",
     "venueEventUrl": "https://www.013.nl/programma/96905/helloween-beast-in-black",
     "title": "Helloween + Beast In Black",
     "location": "013",
@@ -12415,19 +11552,6 @@
     "artists": {}
   },
   {
-    "door": "2025-11-07T20:00:00.000",
-    "start": "2025-11-07T21:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/eskorzo-2/",
-    "title": "Eskorzo",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "punk, cumbia, afro, gypsy",
-    "longText": "../public/texts/doornroosje/b29ybnJvb3NqZS5ubC9ldmVudC9lc2tvcnpvLTIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
     "title": "New Model Army en Amy Montgomery",
     "start": "2025-11-21",
     "eventLocationName": "grenswerk",
@@ -12563,8 +11687,8 @@
     }
   },
   {
-    "door": "2025-12-16T20:00:00+01:00",
-    "start": "2025-12-16T20:00:00+01:00",
+    "door": "2025-12-16T19:00:00",
+    "start": "2025-12-16T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/98930/imminence",
     "title": "Imminence",
     "location": "013",
@@ -12613,44 +11737,6 @@
     "shortText": "RTM Stage, Rotterdam",
     "image": "../public/location-images/rtmstage",
     "location": "rtmstage"
-  },
-  {
-    "door": "2026-02-06T19:00:00.000",
-    "start": "2026-02-06T19:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/beyond-the-black/",
-    "title": "Beyond the Black",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "metal, symfonische metal",
-    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L2JleW9uZC10aGUtYmxhY2sv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "beyond the black": {
-        "s": "6swnqil41bd4go2fnaxxrf",
-        "l": "beyond%20the%20black",
-        "g": [
-          "gothic symphonic metal",
-          "slayer",
-          "symphonic metal"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
-        ]
-      }
-    }
   },
   {
     "title": "Channel Zero",
