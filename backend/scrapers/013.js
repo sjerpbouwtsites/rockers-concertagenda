@@ -94,7 +94,9 @@ scraper.mainPage = async function () {
                         unavailabiltyTerms.join("|"),
                         "gi"
                     );
-                    res.unavailable = !!eventEl.textContent.match(uaRex);
+                    res.unavailable = !!eventEl
+                        .querySelector(".ribbon_basic.ribbon_small")
+                        ?.textContent.match(uaRex);
                     res.soldOut =
                         !!eventEl?.innerHTML.match(/uitverkocht|sold\s?out/i) ??
                         false;

@@ -13,12 +13,12 @@ export const AbstractWorkerConfig = {
 };
 
 export const workerConfig = {
-    // "013": {
-    //     workerCount: 3,
-    //     CPUReq: "low",
-    //     workerConcurrent: 3,
-    //     forceSet: 0
-    // }
+    "013": {
+        workerCount: 3,
+        CPUReq: "low",
+        workerConcurrent: 3,
+        forceSet: 0
+    }
     // afaslive: {
     //     workerCount: 1,
     //     workerConcurrent: 2,
@@ -71,25 +71,25 @@ export const workerConfig = {
     //     forceSet: 4,
     //     CPUReq: "high"
     // },
-    littledevil: {
-        workerCount: 1,
-        workerConcurrent: 2,
-        forceSet: 4
-    },
-    melkweg: {
-        workerCount: 2,
-        CPUReq: "high",
-        workerConcurrent: 1,
-        forceSet: 4
-    },
-    metropool: {
-        workerCount: 2,
-        workerConcurrent: 1,
-        CPUReq: "high",
-        forceSet: 4
-    },
-    metalfan: { workerCount: 1, CPUReq: "low", workerConcurrent: 1 },
-    neushoorn: { workerCount: 2, workerConcurrent: 1, forceSet: 5 }
+    // littledevil: {
+    //     workerCount: 1,
+    //     workerConcurrent: 2,
+    //     forceSet: 4
+    // },
+    // melkweg: {
+    //     workerCount: 2,
+    //     CPUReq: "high",
+    //     workerConcurrent: 1,
+    //     forceSet: 4
+    // },
+    // metropool: {
+    //     workerCount: 2,
+    //     workerConcurrent: 1,
+    //     CPUReq: "high",
+    //     forceSet: 4
+    // },
+    // metalfan: { workerCount: 1, CPUReq: "low", workerConcurrent: 1 },
+    // neushoorn: { workerCount: 2, workerConcurrent: 1, forceSet: 5 }
     // nieuwenor: { workerCount: 1, workerConcurrent: 2, forceSet: 5 },
     // occii: {
     //     workerCount: 1,
