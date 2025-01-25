@@ -64,6 +64,9 @@ scraper.mainPage = async function () {
 
     const { stopFunctie, page } = await this.mainPageStart();
 
+    await this.autoScroll(page);
+    await this.autoScroll(page);
+
     let rawEvents = await page.evaluate(
         // eslint-disable-next-line no-shadow
         ({ workerData, unavailabiltyTerms }) =>

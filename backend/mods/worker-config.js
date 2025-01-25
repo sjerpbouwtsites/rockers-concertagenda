@@ -38,12 +38,12 @@ export const workerConfig = {
     //     workerConcurrent: 1,
     //     forceSet: 2
     // },
-    doornroosje: {
-        workerCount: 1,
-        workerConcurrent: 1,
-        CPUReq: "high",
-        forceSet: 2
-    }
+    // doornroosje: {
+    //     workerCount: 1,
+    //     workerConcurrent: 1,
+    //     CPUReq: "high",
+    //     forceSet: 2
+    // }
     // dynamo: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
     // effenaar: {
     //     workerCount: 3,
@@ -57,12 +57,12 @@ export const workerConfig = {
     //     CPUReq: "high",
     //     forceSet: 3
     // },
-    // gebrdenobel: {
-    //     workerCount: 1,
-    //     workerConcurrent: 1,
-    //     CPUReq: "high",
-    //     forceSet: 3
-    // },
+    gebrdenobel: {
+        workerCount: 1,
+        workerConcurrent: 1,
+        CPUReq: "high",
+        forceSet: 3
+    }
     // groeneengel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
     // iduna: { workerCount: 1, workerConcurrent: 1, forceSet: 4 },
     // kavka: {
@@ -75,7 +75,7 @@ export const workerConfig = {
     //     workerCount: 1,
     //     workerConcurrent: 2,
     //     forceSet: 4
-    // },
+    // }
     // melkweg: {
     //     workerCount: 2,
     //     CPUReq: "high",

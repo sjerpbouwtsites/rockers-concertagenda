@@ -1,8 +1,8 @@
 const debugSettings = {
     debugDebug: false,
     debugCorruptedUnavailable: false,
-    debugsinglePageAsyncCheck: false,
-    debugRawEventAsyncCheck: false,
+    debugsinglePageAsyncCheck: true,
+    debugRawEventAsyncCheck: true,
     debugBaseEvents: true,
     debugPageInfo: true,
     debugPrice: false,
