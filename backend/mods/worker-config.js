@@ -9,8 +9,7 @@ export const AbstractWorkerConfig = {
     path: null,
     name: null,
     family: null,
-    workerCount: null,
-    scraper: true // TODO word dit gebruikt
+    workerCount: null
 };
 
 export const workerConfig = {
