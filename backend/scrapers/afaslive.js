@@ -152,12 +152,27 @@ scraper.singlePage = async function ({ page, event }) {
                 errors: []
             };
 
-            const stM = document
-                .querySelector(".timesTable")
-                .textContent.toLowerCase()
-                .match(/aanvang.*(\d\d:\d\d)/);
+            const timeTableText =
+                document
+                    .querySelector(".dates + .timesTable")
+                    ?.textContent.trim()
+                    .toLowerCase() ?? "";
+
+            const dtM = timeTableText.match(/deuren.*(\d\d:\d\d)/);
+            if (Array.isArray(dtM)) {
+                res.mapToDoorTime = dtM[1];
+            }
+
+            const stM = timeTableText.match(/aanvang.*(\d\d:\d\d)/);
             if (Array.isArray(stM)) {
                 res.mapToStartTime = stM[1];
+            }
+
+            if (!res.mapToStartTime && res.mapToDoorTime) {
+                res.mapToStartTime = res.mapToDoorTime;
+                res.mapToDoorTime = null;
+            } else if (!res.mapToStartTime && !res.mapToDoorTime) {
+                res.mapToStartTime = "20:00";
             }
 
             document

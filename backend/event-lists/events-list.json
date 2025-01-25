@@ -1,330 +1,5 @@
 [
   {
-    "door": "2025-01-24T19:00:00",
-    "start": "2025-01-24T19:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/triggerfinger-2025",
-    "title": "Triggerfinger",
-    "location": "victorie",
-    "price": 39.5,
-    "shortText": "Victorie 15 jaar",
-    "longText": "../public/texts/victorie/bC9wcm9ncmFtbWEvdHJpZ2dlcmZpbmdlci0yMDI1.html",
-    "image": "../public/event-images/victorie/bC9wcm9ncmFtbWEvdHJpZ2dlcmZpbmdlci0yMDI1",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "triggerfinger": {
-        "s": "3uhilk54oe4ja06v962ptu",
-        "l": "triggerfinger",
-        "g": [
-          "belgian rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-24T19:30:00",
-    "start": "2025-01-24T20:15:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/10893380/wardruna-releaseparty-24-01-2025",
-    "title": "Wardruna releaseparty",
-    "location": "tivolivredenburg",
-    "price": 10,
-    "shortText": "Exclusieve video première: Live at the Acropolis",
-    "longText": "../public/texts/tivolivredenburg/cmRydW5hLXJlbGVhc2VwYXJ0eS0yNC0wMS0yMDI1.html",
-    "image": "../public/event-images/tivolivredenburg/cmRydW5hLXJlbGVhc2VwYXJ0eS0yNC0wMS0yMDI1",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "wardruna": {
-        "s": "0nj6wloasaj1pn4vrdtpka",
-        "l": "wardruna",
-        "g": [
-          "nordic folk",
-          "rune folk",
-          "viking folk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-24T18:30:00",
-    "start": "2025-01-24T22:30:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/64838372/bernth-charles-berthoud-24-01-2025",
-    "title": "Bernth + Charles Berthoud",
-    "location": "tivolivredenburg",
-    "price": 39.9,
-    "shortText": "Escape The Internet Tour",
-    "longText": "../public/texts/tivolivredenburg/dGgtY2hhcmxlcy1iZXJ0aG91ZC0yNC0wMS0yMDI1.html",
-    "image": "../public/event-images/tivolivredenburg/dGgtY2hhcmxlcy1iZXJ0aG91ZC0yNC0wMS0yMDI1",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-01-24T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/hardcore-vrijdag-2/",
-    "title": "Hardcore Vrijdag",
-    "location": "neushoorn",
-    "price": 5,
-    "shortText": "Je tweemaandelijkse dosis hardcore punk op vrijdag",
-    "longText": "../public/texts/neushoorn/cHJvZHVjdGlvbi9oYXJkY29yZS12cmlqZGFnLTIv.html",
-    "image": "../public/event-images/neushoorn/cHJvZHVjdGlvbi9oYXJkY29yZS12cmlqZGFnLTIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "hardcore": {
-        "s": "3N11n3hTyVlcOg77IGefjz",
-        "l": "hardcore",
-        "g": [
-          "death metal",
-          "hardcore"
-        ]
-      }
-    }
-  },
-  {
-    "title": "Delain, Serenity en Kingfisher Sky",
-    "start": "2025-01-24",
-    "eventLocationName": "hedon",
-    "shortText": "Hedon, Zwolle",
-    "image": "../public/location-images/hedon",
-    "location": "hedon"
-  },
-  {
-    "start": "2025-01-24T21:30:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/sha-la-lees-b-nl/",
-    "title": "Sha-la-lees (b/nl)",
-    "location": "littledevil",
-    "price": 10,
-    "shortText": "protopunk garage rock 'n roll - LP release HEX",
-    "longText": "../public/texts/littledevil/Lm5sL2NhbGVuZGFyL3NoYS1sYS1sZWVzLWItbmwv.html",
-    "image": "../public/event-images/littledevil/Lm5sL2NhbGVuZGFyL3NoYS1sYS1sZWVzLWItbmwv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-01-24T15:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/engel-blues-festival-5-danny-bryant-heath-richville-more-tba/",
-    "title": "Engel Blues Festival 5: Danny Bryant ",
-    "location": "groeneengel",
-    "price": 15,
-    "shortText": " HEATH  +  Richville  +  more tba undefined",
-    "longText": "../public/texts/groeneengel/eWFudC1oZWF0aC1yaWNodmlsbGUtbW9yZS10YmEv.html",
-    "image": "../public/event-images/groeneengel/eWFudC1oZWF0aC1yaWNodmlsbGUtbW9yZS10YmEv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "heath": {
-        "s": null,
-        "l": "heath",
-        "g": [
-          "black",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-24T15:00:00",
-    "start": "2025-01-24T15:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/ambitus-presents-matteo-myderwyck/",
-    "title": "Ambitus presents: Matteo Myderwyk",
-    "location": "groeneengel",
-    "price": 11,
-    "longText": "../public/texts/groeneengel/dHVzLXByZXNlbnRzLW1hdHRlby1teWRlcnd5Y2sv.html",
-    "image": "../public/event-images/groeneengel/dHVzLXByZXNlbnRzLW1hdHRlby1teWRlcnd5Y2sv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-24T19:30:00",
-    "start": "2025-01-24T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/fleetwood-mac-gold-dust-women-a-tribute-to-stevie-nicks-christine-mcvie/",
-    "title": "Fleetwood Mac: Gold Dust Women A tribute to Stevie Nicks & Christine McVie",
-    "location": "groeneengel",
-    "price": 20,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/LXN0ZXZpZS1uaWNrcy1jaHJpc3RpbmUtbWN2aWUv.html",
-    "image": "../public/event-images/groeneengel/LXN0ZXZpZS1uaWNrcy1jaHJpc3RpbmUtbWN2aWUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-24T19:30:00",
-    "start": "2025-01-24T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/jared-grant-support/",
-    "title": "Jared Grant + support",
-    "location": "groeneengel",
-    "price": 21,
-    "longText": "../public/texts/groeneengel/cHJvZ3JhbW1hL2phcmVkLWdyYW50LXN1cHBvcnQv.html",
-    "image": "../public/event-images/groeneengel/cHJvZ3JhbW1hL2phcmVkLWdyYW50LXN1cHBvcnQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-24T19:00:00",
-    "start": "2025-01-24T19:35:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/rockronde/",
-    "title": "Rockronde",
-    "location": "groeneengel",
-    "price": 19,
-    "longText": "../public/texts/groeneengel/LWVuZ2VsLm5sL3Byb2dyYW1tYS9yb2Nrcm9uZGUv.html",
-    "image": "../public/event-images/groeneengel/LWVuZ2VsLm5sL3Byb2dyYW1tYS9yb2Nrcm9uZGUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-01-24T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/dana-van-bergen/",
-    "title": "Dana van Bergen",
-    "location": "groeneengel",
-    "price": 20,
-    "longText": "../public/texts/groeneengel/Lm5sL3Byb2dyYW1tYS9kYW5hLXZhbi1iZXJnZW4v.html",
-    "image": "../public/event-images/groeneengel/Lm5sL3Byb2dyYW1tYS9kYW5hLXZhbi1iZXJnZW4v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "danava": {
-        "s": null,
-        "l": "danava%20(usa)&%c%us",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2025-01-24T19:30:00",
-    "start": "2025-01-24T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/physical-graffiti-the-ultimate-led-zeppelin-experience/",
-    "title": "Physical Graffiti – The Ultimate Led Zeppelin Experience",
-    "location": "groeneengel",
-    "price": 15,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/aW1hdGUtbGVkLXplcHBlbGluLWV4cGVyaWVuY2Uv.html",
-    "image": "../public/event-images/groeneengel/aW1hdGUtbGVkLXplcHBlbGluLWV4cGVyaWVuY2Uv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "physical graffiti": {
-        "s": null,
-        "l": "physical%20graffiti",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2025-01-24T19:30:00",
-    "start": "2025-01-24T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/mitch-ryder-band/",
-    "title": "Mitch Ryder & Band",
-    "location": "groeneengel",
-    "price": 20,
-    "longText": "../public/texts/groeneengel/bmwvcHJvZ3JhbW1hL21pdGNoLXJ5ZGVyLWJhbmQv.html",
-    "image": "../public/event-images/groeneengel/bmwvcHJvZ3JhbW1hL21pdGNoLXJ5ZGVyLWJhbmQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-24T22:00:00",
-    "start": "2025-01-24T22:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/black-smoke-brigade-aftershow-wild-romance/",
-    "title": "Black Smoke Brigade – Aftershow Wild Romance",
-    "location": "groeneengel",
-    "price": 31,
-    "longText": "../public/texts/groeneengel/cmlnYWRlLWFmdGVyc2hvdy13aWxkLXJvbWFuY2Uv.html",
-    "image": "../public/event-images/groeneengel/cmlnYWRlLWFmdGVyc2hvdy13aWxkLXJvbWFuY2Uv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-24T19:30:00",
-    "start": "2025-01-24T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/berget-lewis-ft-leif-de-leeuw-band-clubtour-2025/",
-    "title": "Berget Lewis ft. Leif de Leeuw Band – Clubtour 2025",
-    "location": "groeneengel",
-    "price": 24,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/Zi1kZS1sZWV1dy1iYW5kLWNsdWJ0b3VyLTIwMjUv.html",
-    "image": "../public/event-images/groeneengel/Zi1kZS1sZWV1dy1iYW5kLWNsdWJ0b3VyLTIwMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-24T19:00:00",
-    "start": "2025-01-24T19:00:00",
-    "end": "2025-01-24T22:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/queerhoven-boardgame-night/",
-    "title": "Queerhoven Boardgame Night",
-    "location": "dynamo",
-    "price": 2400,
-    "shortText": "The boardgame night is a recurring event from Queerhoven. Join us for an evening of boardgames and hanging out with your fellow queer people!",
-    "longText": "../public/texts/dynamo/bnQvcXVlZXJob3Zlbi1ib2FyZGdhbWUtbmlnaHQv.html",
-    "image": "../public/event-images/dynamo/bnQvcXVlZXJob3Zlbi1ib2FyZGdhbWUtbmlnaHQv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-01-24T20:00:00",
-    "end": "2025-01-24T02:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/devils-lair/",
-    "title": "Devils Lair",
-    "location": "dynamo",
-    "price": 13,
-    "shortText": "Underground Hiphop meets Duistere Drum ’n Bass",
-    "longText": "../public/texts/dynamo/b3Zlbi5ubC9ldmVuZW1lbnQvZGV2aWxzLWxhaXIv.html",
-    "image": "../public/event-images/dynamo/b3Zlbi5ubC9ldmVuZW1lbnQvZGV2aWxzLWxhaXIv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "bass": {
-        "s": null,
-        "l": "bass",
-        "g": [
-          "doom",
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
     "start": "2025-01-25T19:00:00",
     "venueEventUrl": "https://www.willemeen.nl/programma/von-mollestein-sledeon-estering-existance-scenyte/",
     "title": "Von Mollestein ",
@@ -2382,6 +2057,7 @@
     }
   },
   {
+    "door": "2025-02-11T17:30:00",
     "start": "2025-02-11T17:30:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/bullet-for-my-valentine-trivium",
     "title": "Bullet For My Valentine & Trivium",
@@ -11219,6 +10895,30 @@
     "shortText": "Gelredome, Arnhem",
     "image": "../public/location-images/gelredome",
     "location": "gelredome"
+  },
+  {
+    "start": "2025-07-28T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/alice-cooper",
+    "title": "Alice Cooper",
+    "location": "afaslive",
+    "price": 28,
+    "longText": "../public/texts/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvYWxpY2UtY29vcGVy.html",
+    "image": "../public/event-images/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvYWxpY2UtY29vcGVy",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "lice": {
+        "s": "4JC8PfKoENbnkxLB2k3ZGo",
+        "l": "lice",
+        "g": [
+          "bristol indie",
+          "crank wave",
+          "uk post-punk revival",
+          "melodic death",
+          "groove metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-07-29T19:00:00",

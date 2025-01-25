@@ -27,6 +27,70 @@
     }
   },
   {
+    "door": "2025-02-11T17:30:00",
+    "start": "2025-02-11T17:30:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/bullet-for-my-valentine-trivium",
+    "title": "Bullet For My Valentine & Trivium",
+    "location": "afaslive",
+    "price": 11,
+    "longText": "../public/texts/afaslive/dWxsZXQtZm9yLW15LXZhbGVudGluZS10cml2aXVt.html",
+    "image": "../public/event-images/afaslive/dWxsZXQtZm9yLW15LXZhbGVudGluZS10cml2aXVt",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "bullet for my valentine": {
+        "s": "7iWiAD5LLKyiox2grgfmUT",
+        "l": "bullet%20for%20my%20valentine",
+        "g": [
+          "alternative metal",
+          "melodic metalcore",
+          "nu metal",
+          "post-grunge",
+          "uk metalcore",
+          "welsh metal"
+        ]
+      },
+      "trivium": {
+        "s": "278ZYwGhdK6QTzE3MFePnP",
+        "l": "trivium",
+        "g": [
+          "alternative metal",
+          "groove metal",
+          "melodic metalcore",
+          "melodic thrash",
+          "metal",
+          "metalcore",
+          "nu metal",
+          "post-grunge",
+          "metalcore, thrash",
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-02-13T17:30:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/sticks",
+    "title": "Sticks",
+    "location": "afaslive",
+    "price": 13,
+    "longText": "../public/texts/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvc3RpY2tz.html",
+    "image": "../public/event-images/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvc3RpY2tz",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "sticks": {
+        "s": "0DnbOatBnP7UDkeiQACgxd",
+        "l": "sticks",
+        "g": [
+          "dutch hip hop",
+          "groove metal",
+          "hardcore"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-02-19T17:30:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/marilyn-manson",
     "title": "Marilyn Manson",
@@ -54,6 +118,57 @@
     }
   },
   {
+    "start": "2025-02-22T17:30:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/opeth",
+    "title": "Opeth",
+    "location": "afaslive",
+    "price": 22,
+    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL29wZXRo.html",
+    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL29wZXRo",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "opeth": {
+        "s": "0ybFZ2Ab08V8hueghSXm6E",
+        "l": "opeth",
+        "g": [
+          "alternative metal",
+          "metal",
+          "progressive death metal",
+          "progressive metal",
+          "swedish metal",
+          "swedish progressive metal",
+          "progressive death metal, progressive rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-08T14:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/major-conspiracy",
+    "title": "Major Conspiracy",
+    "location": "afaslive",
+    "price": 2025,
+    "longText": "../public/texts/afaslive/aXZlLm5sL2FnZW5kYS9tYWpvci1jb25zcGlyYWN5.html",
+    "image": "../public/event-images/afaslive/aXZlLm5sL2FnZW5kYS9tYWpvci1jb25zcGlyYWN5",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "major conspiracy": {
+        "s": "0WjzjRwo3dcv6HCPs70Rnc",
+        "l": "major%20conspiracy",
+        "g": [
+          "hardcore",
+          "frenchcore",
+          "hardstyle",
+          "gabber",
+          "speedcore",
+          "hardcore techno"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-05-22T17:30:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/steven-wilson",
     "title": "Steven Wilson",
@@ -75,6 +190,51 @@
     }
   },
   {
+    "start": "2025-06-23T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/satchvai-band",
+    "title": "SatchVai Band",
+    "location": "afaslive",
+    "price": 23,
+    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zYXRjaHZhaS1iYW5k.html",
+    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zYXRjaHZhaS1iYW5k",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-07-28T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/alice-cooper",
+    "title": "Alice Cooper",
+    "location": "afaslive",
+    "price": 28,
+    "longText": "../public/texts/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvYWxpY2UtY29vcGVy.html",
+    "image": "../public/event-images/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvYWxpY2UtY29vcGVy",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "lice": {
+        "s": "4JC8PfKoENbnkxLB2k3ZGo",
+        "l": "lice",
+        "g": [
+          "bristol indie",
+          "crank wave",
+          "uk post-punk revival",
+          "melodic death",
+          "groove metal"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-09-29T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/pierce-the-veil",
     "title": "Pierce The Veil",
@@ -91,6 +251,36 @@
         "g": [
           "pop punk",
           "screamo"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-10-28T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/arch-enemy",
+    "title": "Arch Enemy",
+    "location": "afaslive",
+    "price": 28,
+    "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9hcmNoLWVuZW15.html",
+    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9hcmNoLWVuZW15",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "arch enemy": {
+        "s": "0DCw6lHkzh9t7f8Hb4Z0Sx",
+        "l": "arch%20enemy",
+        "g": [
+          "alternative metal",
+          "death metal",
+          "melodic death metal",
+          "metal",
+          "power metal",
+          "speed metal",
+          "swedish death metal",
+          "swedish melodeath",
+          "swedish metal",
+          "symphonic metal",
+          "melodic death metal"
         ]
       }
     }
