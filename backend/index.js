@@ -125,7 +125,8 @@ async function recursiveStartWorkers(workerConfig) {
 }
 
 async function init() {
-    await houseKeeping();
+    const workerConfig = getWorkerConfig();
+    await houseKeeping(workerConfig);
 
     monitorWebsocketServer = await initMonitorBackend();
     RockWorker.monitorWebsocketServer = monitorWebsocketServer;
@@ -133,7 +134,6 @@ async function init() {
     WorkerStatus.ArtistInst = ArtistInst;
 
     WorkerStatus.monitorCPUS();
-    const workerConfig = getWorkerConfig();
     WorkerStatus.totalWorkers = workerConfig.numberOfWorkers;
     WorkerStatus.registerAllWorkersAsWaiting(workerConfig.listCopy());
     recursiveStartWorkers(workerConfig);

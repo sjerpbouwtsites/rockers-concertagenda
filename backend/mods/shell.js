@@ -40,14 +40,15 @@ const shell = {
             ) ?? []
         );
     },
-    get forceAndRemoveBaseEvents() {
-        return (this._arguments?.force?.split(",") ?? [])
-            .filter((a) => a.includes("%"))
-            .map((f) => f.replace("%", ""));
+
+    get resetActiveWorkersBases() {
+        return (
+            (this._arguments?.resetActiveWorkersBases &&
+                this._arguments?.resetActiveWorkersBases === "true") ||
+            false
+        );
     },
-    get keepBaseEvents() {
-        return this._arguments?.keepBaseEvents || false;
-    },
+
     get keepImages() {
         return this._arguments?.keepImages || false;
     },

@@ -269,9 +269,9 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     async checkBaseEventAvailable(searching) {
-        if (!shell?.keepBaseEvents) {
-            return false;
-        }
+        // if (!shell?.keepBaseEvents) {
+        //     return false;
+        // }
 
         const baseEventFiles = fs.readdirSync(fsDirections.baseEventlists);
         const theseBaseEvents = baseEventFiles.filter((filenames) =>
@@ -303,9 +303,6 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     async saveBaseEventlist(key, data) {
-        if (!shell?.keepBaseEvents) {
-            return false;
-        }
         WorkerStatus.registerFamilyDoneWithBaseEvents(workerData.family);
         if (!data) {
             this.handleError(

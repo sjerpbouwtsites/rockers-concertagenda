@@ -27,12 +27,12 @@ export const workerConfig = {
     // baroeg: { workerCount: 1, workerConcurrent: 2, forceSet: 0 },
     // bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
     // cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
-    dbs: {
-        workerCount: 3,
-        workerConcurrent: 3,
-        CPUReq: "high",
-        forceSet: 1
-    }
+    // dbs: {
+    //     workerCount: 3,
+    //     workerConcurrent: 3,
+    //     CPUReq: "high",
+    //     forceSet: 1
+    // }
     // dehelling: {
     //     workerCount: 1,
     //     workerConcurrent: 1,
@@ -71,25 +71,25 @@ export const workerConfig = {
     //     forceSet: 4,
     //     CPUReq: "high"
     // },
-    // littledevil: {
-    //     workerCount: 1,
-    //     workerConcurrent: 2,
-    //     forceSet: 4
-    // }
-    // melkweg: {
-    //     workerCount: 2,
-    //     CPUReq: "high",
-    //     workerConcurrent: 1,
-    //     forceSet: 4
-    // },
-    // metropool: {
-    //     workerCount: 2,
-    //     workerConcurrent: 1,
-    //     CPUReq: "high",
-    //     forceSet: 4
-    // },
-    // metalfan: { workerCount: 1, CPUReq: "low", workerConcurrent: 1 },
-    // neushoorn: { workerCount: 2, workerConcurrent: 1, forceSet: 5 },
+    littledevil: {
+        workerCount: 1,
+        workerConcurrent: 2,
+        forceSet: 4
+    },
+    melkweg: {
+        workerCount: 2,
+        CPUReq: "high",
+        workerConcurrent: 1,
+        forceSet: 4
+    },
+    metropool: {
+        workerCount: 2,
+        workerConcurrent: 1,
+        CPUReq: "high",
+        forceSet: 4
+    },
+    metalfan: { workerCount: 1, CPUReq: "low", workerConcurrent: 1 },
+    neushoorn: { workerCount: 2, workerConcurrent: 1, forceSet: 5 }
     // nieuwenor: { workerCount: 1, workerConcurrent: 2, forceSet: 5 },
     // occii: {
     //     workerCount: 1,
