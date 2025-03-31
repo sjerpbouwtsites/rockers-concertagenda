@@ -59,42 +59,46 @@ export default async function longTextSocialsIframes(page, event) {
             // media obj maken voordat HTML verdwijnt
             res.mediaForHTML = Array.from(
                 document.querySelectorAll(mediaSelector)
-            ).map((bron) => {
-                bron.className = "";
-                // custom gebr de nobel
+            )
+                .map((bron) => {
+                    bron.className = "";
+                    // custom gebr de nobel
 
-                // DE VIDEO BIJ NOBEL IS EEN EIGEN IFRAME OM YOUTUBES IFRAME HEEN. VALT NIET UIT TE LEZEN.
+                    if (bron.src.includes("ventix.shop")) return null;
 
-                // if (bron.hasAttribute('data-video-id')) {
-                //   return {
-                //     outer: null,
-                //     src: null,
-                //     id: bron.getAttribute('data-video-id'),
-                //     type: 'youtube',
-                //   };
-                // }
-                if (bron.src.includes("spotify")) {
+                    // DE VIDEO BIJ NOBEL IS EEN EIGEN IFRAME OM YOUTUBES IFRAME HEEN. VALT NIET UIT TE LEZEN.
+
+                    // if (bron.hasAttribute('data-video-id')) {
+                    //   return {
+                    //     outer: null,
+                    //     src: null,
+                    //     id: bron.getAttribute('data-video-id'),
+                    //     type: 'youtube',
+                    //   };
+                    // }
+                    if (bron.src.includes("spotify")) {
+                        return {
+                            outer: bron.outerHTML,
+                            src: bron.src,
+                            id: null,
+                            type: "spotify"
+                        };
+                    }
+                    // end custom gebr de nobel
+
+                    // terugval???? nog niet bekend met alle opties.
                     return {
                         outer: bron.outerHTML,
                         src: bron.src,
                         id: null,
-                        type: "spotify"
+                        type: bron.src.includes("spotify")
+                            ? "spotify"
+                            : bron.src.includes("youtube")
+                            ? "youtube"
+                            : "bandcamp"
                     };
-                }
-                // end custom gebr de nobel
-
-                // terugval???? nog niet bekend met alle opties.
-                return {
-                    outer: bron.outerHTML,
-                    src: bron.src,
-                    id: null,
-                    type: bron.src.includes("spotify")
-                        ? "spotify"
-                        : bron.src.includes("youtube")
-                        ? "youtube"
-                        : "bandcamp"
-                };
-            });
+                })
+                .filter((a) => a);
 
             // stript HTML tbv text
             removeSelectors.length &&

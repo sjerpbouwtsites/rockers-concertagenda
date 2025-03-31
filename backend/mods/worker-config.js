@@ -56,13 +56,13 @@ export const workerConfig = {
     //     workerConcurrent: 1,
     //     CPUReq: "high",
     //     forceSet: 3
-    // },
-    // gebrdenobel: {
-    //     workerCount: 1,
-    //     workerConcurrent: 1,
-    //     CPUReq: "high",
-    //     forceSet: 3
     // }
+    gebrdenobel: {
+        workerCount: 1,
+        workerConcurrent: 1,
+        CPUReq: "high",
+        forceSet: 3
+    }
     // groeneengel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
     // iduna: { workerCount: 1, workerConcurrent: 1, forceSet: 4 },
     // kavka: {

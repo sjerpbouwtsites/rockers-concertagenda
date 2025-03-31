@@ -1,151 +1,12 @@
 [
   {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T20:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/t-strijd-2025-tribute/",
-    "title": "T-Strijd 2025 - tribute",
-    "location": "gebouwt",
-    "price": 0,
-    "shortText": "Olalala + Dookie + De Neefjes",
-    "longText": "../public/texts/gebouwt/L2FnZW5kYS90LXN0cmlqZC0yMDI1LXRyaWJ1dGUv.html",
-    "image": "../public/event-images/gebouwt/L2FnZW5kYS90LXN0cmlqZC0yMDI1LXRyaWJ1dGUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T20:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/t-strijd-2025-rock-heavy/",
-    "title": "T-Strijd 2025 - rock & heavy",
-    "location": "gebouwt",
-    "price": null,
-    "shortText": "Nobody Asked + Two Second Before + The Morning Indefinite",
-    "longText": "../public/texts/gebouwt/ZW5kYS90LXN0cmlqZC0yMDI1LXJvY2staGVhdnkv.html",
-    "image": "../public/event-images/gebouwt/ZW5kYS90LXN0cmlqZC0yMDI1LXJvY2staGVhdnkv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T20:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/ian-paice-deep-purple-ft-purpendicular/",
-    "title": "Ian Paice (Deep Purple) ft. Purpendicular",
-    "location": "gebouwt",
-    "price": 40.25,
-    "shortText": "Performing Classic Deep Purple",
-    "longText": "../public/texts/gebouwt/LWRlZXAtcHVycGxlLWZ0LXB1cnBlbmRpY3VsYXIv.html",
-    "image": "../public/event-images/gebouwt/LWRlZXAtcHVycGxlLWZ0LXB1cnBlbmRpY3VsYXIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "purpendicular": {
-        "s": "7dtykvbh2qxkicazbxtrkf",
-        "l": "purpendicular",
-        "g": []
-      },
-      "ian paice": {
-        "s": "2gndxbhyibxhwvurrlruaq",
-        "l": "ian%20paice",
-        "g": [
-          "rock drums",
-          "heavy metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T20:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/autarkh-farer-alkahest/",
-    "title": "Autarkh + Farer + Alkahest",
-    "location": "gebouwt",
-    "price": 17.25,
-    "shortText": "Imponerende experimental metal",
-    "longText": "../public/texts/gebouwt/YWdlbmRhL2F1dGFya2gtZmFyZXItYWxrYWhlc3Qv.html",
-    "image": "../public/event-images/gebouwt/YWdlbmRhL2F1dGFya2gtZmFyZXItYWxrYWhlc3Qv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "alkahest": {
-        "s": "53vjMkvxWt9UZAXlnwsPrj",
-        "l": "alkahest",
-        "g": [
-          "atmospheric sludge",
-          "doom metal",
-          "post-rock"
-        ]
-      },
-      "autarkh": {
-        "s": "1h39mvskrqbzrsf3vfnsp5",
-        "l": "autarkh",
-        "g": [
-          "industrial metal"
-        ]
-      },
-      "farer": {
-        "s": "529WaKnDwThqAtgOLNjwMp",
-        "l": "farer",
-        "g": [
-          "atmospheric sludge",
-          "post-metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-25T19:30:00",
-    "start": "2025-01-25T19:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/legends-of-rock-tribute-tour-7/",
-    "title": "Legends of Rock Tribute Tour",
-    "location": "gebouwt",
-    "price": 27.25,
-    "shortText": "Tributes aan Metallica, Motörhead en Judas Priest",
-    "longText": "../public/texts/gebouwt/ZWdlbmRzLW9mLXJvY2stdHJpYnV0ZS10b3VyLTcv.html",
-    "image": "../public/event-images/gebouwt/ZWdlbmRzLW9mLXJvY2stdHJpYnV0ZS10b3VyLTcv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T20:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/plan-nine/",
-    "title": "Lucassen & Soeterboek's Plan Nine",
-    "location": "gebouwt",
-    "price": 22.25,
-    "shortText": "Long Lost Tour",
-    "longText": "../public/texts/gebouwt/L2dlYm91dy10Lm5sL2FnZW5kYS9wbGFuLW5pbmUv.html",
-    "image": "../public/event-images/gebouwt/L2dlYm91dy10Lm5sL2FnZW5kYS9wbGFuLW5pbmUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "lucassen & soeterboek's plan nine": {
-        "s": "3hTFJa0cS8g0LJMQs2RkPG",
-        "l": "lucassen%20&%20soeterboek's%20plan%20nine",
-        "g": [
-          "album rock",
-          "arena rock",
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T20:30:00",
+    "door": "2025-04-06T19:30:00",
+    "start": "2025-04-06T19:30:00",
     "venueEventUrl": "https://gebouw-t.nl/agenda/anneke-van-giersbergen-2/",
     "title": "Anneke van Giersbergen",
     "location": "gebouwt",
     "price": 26.25,
-    "shortText": "Clubtour 2025",
+    "shortText": "Support: Ebony Buckle",
     "longText": "../public/texts/gebouwt/ZW5kYS9hbm5la2UtdmFuLWdpZXJzYmVyZ2VuLTIv.html",
     "image": "../public/event-images/gebouwt/ZW5kYS9hbm5la2UtdmFuLWdpZXJzYmVyZ2VuLTIv",
     "soldOut": false,
@@ -162,13 +23,13 @@
     }
   },
   {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T20:30:00",
+    "door": "2025-04-06T20:00:00",
+    "start": "2025-04-06T20:00:00",
     "venueEventUrl": "https://gebouw-t.nl/agenda/the-exploited/",
     "title": "The Exploited",
     "location": "gebouwt",
     "price": 30,
-    "shortText": "Legendarisch stel relschoppers uit Edinburgh",
+    "shortText": "Legendarisch stel relschoppers uit Edinburgh | support: RITES",
     "longText": "../public/texts/gebouwt/b3V3LXQubmwvYWdlbmRhL3RoZS1leHBsb2l0ZWQv.html",
     "image": "../public/event-images/gebouwt/b3V3LXQubmwvYWdlbmRhL3RoZS1leHBsb2l0ZWQv",
     "soldOut": false,
@@ -190,8 +51,8 @@
     }
   },
   {
-    "door": "2025-01-25T20:00:00",
-    "start": "2025-01-25T20:00:00",
+    "door": "2025-04-06T20:00:00",
+    "start": "2025-04-06T20:00:00",
     "venueEventUrl": "https://gebouw-t.nl/agenda/bongloard-maria-iskariot/",
     "title": "Bongloard + Maria Iskariot",
     "location": "gebouwt",
@@ -213,13 +74,13 @@
     }
   },
   {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T20:30:00",
+    "door": "2025-04-06T20:30:00",
+    "start": "2025-04-06T20:30:00",
     "venueEventUrl": "https://gebouw-t.nl/agenda/slash-n-roses/",
     "title": "Slash n' Roses",
     "location": "gebouwt",
     "price": 0,
-    "shortText": "GRATIS ENTREE - Claim je ticket en verzeker jezelf van een plek",
+    "shortText": "Gratis entree",
     "longText": "../public/texts/gebouwt/b3V3LXQubmwvYWdlbmRhL3NsYXNoLW4tcm9zZXMv.html",
     "image": "../public/event-images/gebouwt/b3V3LXQubmwvYWdlbmRhL3NsYXNoLW4tcm9zZXMv",
     "soldOut": false,
@@ -236,8 +97,8 @@
     }
   },
   {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T20:30:00",
+    "door": "2025-04-06T20:00:00",
+    "start": "2025-04-06T20:00:00",
     "venueEventUrl": "https://gebouw-t.nl/agenda/u2two/",
     "title": "U2two",
     "location": "gebouwt",
@@ -251,8 +112,8 @@
     "artists": {}
   },
   {
-    "door": "2025-01-25T20:00:00",
-    "start": "2025-01-25T20:00:00",
+    "door": "2025-04-06T20:00:00",
+    "start": "2025-04-06T20:00:00",
     "venueEventUrl": "https://gebouw-t.nl/agenda/rumours-atl/",
     "title": "Rumours ATL: A Fleetwood Mac Tribute",
     "location": "gebouwt",
@@ -266,8 +127,76 @@
     "artists": {}
   },
   {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T20:30:00",
+    "door": "2025-04-06T20:00:00",
+    "start": "2025-04-06T20:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/highway-chile/",
+    "title": "Highway Chile",
+    "location": "gebouwt",
+    "price": 25.75,
+    "shortText": "Een van Nederlands meest roemruchte hardrockbands",
+    "longText": "../public/texts/gebouwt/b3V3LXQubmwvYWdlbmRhL2hpZ2h3YXktY2hpbGUv.html",
+    "image": "../public/event-images/gebouwt/b3V3LXQubmwvYWdlbmRhL2hpZ2h3YXktY2hpbGUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "highway chile": {
+        "s": "2UfTnC6ZHYKyXZVzM6kTFS",
+        "l": "highway%20chile",
+        "g": [
+          "heavy metal, hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-06T14:00:00",
+    "start": "2025-04-06T14:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/t-strijd-2025-finale/",
+    "title": "T-Strijd 2025 - finale",
+    "location": "gebouwt",
+    "price": 0,
+    "shortText": "Bon Sirah + Nobody Asked",
+    "longText": "../public/texts/gebouwt/bC9hZ2VuZGEvdC1zdHJpamQtMjAyNS1maW5hbGUv.html",
+    "image": "../public/event-images/gebouwt/bC9hZ2VuZGEvdC1zdHJpamQtMjAyNS1maW5hbGUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-04-06T20:00:00",
+    "start": "2025-04-06T20:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/wild-romance-suburban-tour/",
+    "title": "Wild Romance",
+    "location": "gebouwt",
+    "price": 21.5,
+    "shortText": "Suburban Tour",
+    "longText": "../public/texts/gebouwt/ZGEvd2lsZC1yb21hbmNlLXN1YnVyYmFuLXRvdXIv.html",
+    "image": "../public/event-images/gebouwt/ZGEvd2lsZC1yb21hbmNlLXN1YnVyYmFuLXRvdXIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-04-06T20:00:00",
+    "start": "2025-04-06T20:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/rock-party-of-the-year/",
+    "title": "Rock Party Of The Year",
+    "location": "gebouwt",
+    "price": 32.25,
+    "shortText": "De beste rocknummers uit de geschiedenis",
+    "longText": "../public/texts/gebouwt/YWdlbmRhL3JvY2stcGFydHktb2YtdGhlLXllYXIv.html",
+    "image": "../public/event-images/gebouwt/YWdlbmRhL3JvY2stcGFydHktb2YtdGhlLXllYXIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-04-06T20:00:00",
+    "start": "2025-04-06T20:00:00",
     "venueEventUrl": "https://gebouw-t.nl/agenda/daredevils-zing-nederlands-met-me/",
     "title": "Daredevils: Zing Nederlands Met Me",
     "location": "gebouwt",

@@ -7,4 +7,4 @@ node index.js workers=3 \
     keepBaseEvents=false \
     artistDBWrite=false \
     ;
-# prettier --write "../public/texts/**/*.html"
+prettier --write "../public/texts/**/*.html"
