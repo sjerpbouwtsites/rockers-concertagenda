@@ -45,7 +45,7 @@ export default async function longTextSocialsIframes(page, event) {
                 "onclick",
                 "aria-hidden"
             ];
-            const attributesToRemoveSecondRound = ["class", "id"];
+            const attributesToRemoveSecondRound = ["id"];
 
             const mediaAttrRemSelAdd = `${
                 mediaSelector.length

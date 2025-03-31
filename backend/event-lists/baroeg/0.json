@@ -4,7 +4,7 @@
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-soundville-in-the-grip-of-winter-presents-anchillys-facing-the-madness-mancuerda/",
     "title": "Baroeg On Tour @SoundVille: In The Grip Of Winter presents: Anchillys ",
     "location": "baroeg",
-    "price": 14,
+    "price": null,
     "shortText": " Facing The Madness  +  Mancuerda In The Grip Of Winter voor het eerst in SoundVille.",
     "longText": "../public/texts/baroeg/LWZhY2luZy10aGUtbWFkbmVzcy1tYW5jdWVyZGEv.html",
     "image": "../public/event-images/baroeg/LWZhY2luZy10aGUtbWFkbmVzcy1tYW5jdWVyZGEv",
@@ -62,7 +62,7 @@
     "shortText": " Nadat The Cure, The Cult, The Sisters Of Mercy én The Smiths al naar SoundVille zijn gekomen, is het nu tijd voor een andere grootmacht: Depeche Mode!",
     "longText": "../public/texts/baroeg/ZS1kZXBlY2hlLW1vb2QtZGpzLWNvMi1kZW5uaXov.html",
     "image": "../public/event-images/baroeg/ZS1kZXBlY2hlLW1vb2QtZGpzLWNvMi1kZW5uaXov",
-    "soldOut": true,
+    "soldOut": false,
     "eventGenres": [
       "new wave / electro / industrial"
     ],
@@ -93,7 +93,7 @@
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-v11-16/",
     "title": "Baroeg On Tour @V11: Riffsniffer presents: -(16)- ",
     "location": "baroeg",
-    "price": 14,
+    "price": null,
     "shortText": " Modder Dit is de enige show van –(16)- in de Benelux!",
     "longText": "../public/texts/baroeg/b2R1Y3RpZS9iYXJvZWctb24tdG91ci12MTEtMTYv.html",
     "image": "../public/event-images/baroeg/b2R1Y3RpZS9iYXJvZWctb24tdG91ci12MTEtMTYv",
@@ -114,7 +114,7 @@
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-de-beuk-metal-battle-voorronde-zuid-holland/",
     "title": "Baroeg On Tour @De Beuk: Metal Battle voorronde Zuid-Holland: Ann My Dice ",
     "location": "baroeg",
-    "price": 5,
+    "price": null,
     "shortText": " Phrasing  +  Redikin  +  Sea Of Consciousness Voorronde voor de Veldslag West die op zaterdag 22 maart 2025 uitgevochten wordt.",
     "longText": "../public/texts/baroeg/YmF0dGxlLXZvb3Jyb25kZS16dWlkLWhvbGxhbmQv.html",
     "image": "../public/event-images/baroeg/YmF0dGxlLXZvb3Jyb25kZS16dWlkLWhvbGxhbmQv",
@@ -198,7 +198,7 @@
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-grounds-riffsniffer-presents-planet-of-zeus/",
     "title": "Baroeg On Tour @Grounds: Riffsniffer presents: Planet Of Zeus ",
     "location": "baroeg",
-    "price": 16,
+    "price": null,
     "shortText": " Stonus  +  Hell Valley High Deze band is meer onderweg dan dat ze thuis aan de ouzo zitten.",
     "longText": "../public/texts/baroeg/aWZmZXItcHJlc2VudHMtcGxhbmV0LW9mLXpldXMv.html",
     "image": "../public/event-images/baroeg/aWZmZXItcHJlc2VudHMtcGxhbmV0LW9mLXpldXMv",
@@ -259,7 +259,7 @@
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-soundville-in-the-grip-of-winter-presents-kurb-saatus-bloodcrypt-rectum-stretchers/",
     "title": "Baroeg On Tour @SoundVille: In The Grip Of Winter presents: Kurb Saatus ",
     "location": "baroeg",
-    "price": 14,
+    "price": null,
     "shortText": " Bloodcrypt  +  Rectum Stretchers De tweede editie van In The Grip Of Winter in SoundVille.",
     "longText": "../public/texts/baroeg/LWJsb29kY3J5cHQtcmVjdHVtLXN0cmV0Y2hlcnMv.html",
     "image": "../public/event-images/baroeg/LWJsb29kY3J5cHQtcmVjdHVtLXN0cmV0Y2hlcnMv",
@@ -326,11 +326,63 @@
     }
   },
   {
+    "start": "2025-03-22T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-de-beuk-metal-battle-veldslag-west/",
+    "title": "Baroeg On Tour @De Beuk: Metal Battle Veldslag West",
+    "location": "baroeg",
+    "price": null,
+    "shortText": " Met de winnaars van de voorrondes van Noord-Brabant, Noord-Holland, Zeeland en Zuid-Holland.",
+    "longText": "../public/texts/baroeg/dWstbWV0YWwtYmF0dGxlLXZlbGRzbGFnLXdlc3Qv.html",
+    "image": "../public/event-images/baroeg/dWstbWV0YWwtYmF0dGxlLXZlbGRzbGFnLXdlc3Qv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal"
+    ],
+    "artists": {
+      "battle veldslag west": {
+        "s": null,
+        "l": "battle%20veldslag%20west",
+        "g": [
+          "metal"
+        ]
+      },
+      "battle": {
+        "s": null,
+        "l": "battle",
+        "g": [
+          "black metal"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      },
+      "met de winnaars van de voorrondes van noord-brabant, noord-holland, zeeland en zuid-holland.": {
+        "s": null,
+        "l": "met%20de%20winnaars%20van%20de%20voorrondes%20van%20noord-brabant,%20noord-holland,%20zeeland%20en%20zuid-holland.",
+        "g": [
+          "metal"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-03-23T15:00:00",
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-roodkapje-riffsniffer-presents-nightstalker-daily-thompson/",
     "title": "Baroeg On Tour @Roodkapje: Riffsniffer presents: Nightstalker ",
     "location": "baroeg",
-    "price": 17.5,
+    "price": null,
     "shortText": " Daily Thompson  +  Support FFO 1000mods, Monster Magnet, Mos Generator.",
     "longText": "../public/texts/baroeg/cy1uaWdodHN0YWxrZXItZGFpbHktdGhvbXBzb24v.html",
     "image": "../public/event-images/baroeg/cy1uaWdodHN0YWxrZXItZGFpbHktdGhvbXBzb24v",
@@ -395,7 +447,7 @@
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-bibelot-power-stage-cult-of-fire-the-great-old-ones-caronte/",
     "title": "Baroeg On Tour @Bibelot (Power Stage): Cult Of Fire ",
     "location": "baroeg",
-    "price": 22.5,
+    "price": null,
     "shortText": " The Great Old Ones  +  Caronte Baroeg haalt zeer bijzonder schouwspel naar Dordrecht.",
     "longText": "../public/texts/baroeg/cmUtdGhlLWdyZWF0LW9sZC1vbmVzLWNhcm9udGUv.html",
     "image": "../public/event-images/baroeg/cmUtdGhlLWdyZWF0LW9sZC1vbmVzLWNhcm9udGUv",
