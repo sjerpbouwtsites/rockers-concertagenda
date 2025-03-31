@@ -1,5 +1,30 @@
 [
   {
+    "door": "2025-04-01T20:00:00",
+    "start": "2025-04-01T20:30:00",
+    "end": "2025-04-01T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/riot-but-cute-that-same-street/",
+    "title": "Riot But Cute + That Same Street",
+    "location": "dynamo",
+    "price": 7.5,
+    "shortText": "Support: Maeve Chustar",
+    "longText": "../public/texts/dynamo/aW90LWJ1dC1jdXRlLXRoYXQtc2FtZS1zdHJlZXQv.html",
+    "image": "../public/event-images/dynamo/aW90LWJ1dC1jdXRlLXRoYXQtc2FtZS1zdHJlZXQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "that same street": {
+        "s": "6ZRjnJsIOLmgMWt8AXikFB",
+        "l": "that%20same%20street",
+        "g": [
+          "screamo",
+          "math rock",
+          "midwest emo"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-04-02T19:30:00",
     "start": "2025-04-02T20:30:00",
     "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/71463765/kai-hahto-02-04-2025",
@@ -116,6 +141,29 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "door": "2025-04-03T20:00:00.000",
+    "start": "2025-04-03T20:30:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/iv-and-the-strange-band/",
+    "title": "IV and the Strange Band",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "folk, punk, country, doornroosjepas",
+    "longText": "../public/texts/doornroosje/ZXZlbnQvaXYtYW5kLXRoZS1zdHJhbmdlLWJhbmQv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/12/Hank-IV-and-the-Strange-Band-1200x630.jpeg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
   },
   {
     "start": "2025-04-03T08:00:00",
@@ -253,6 +301,20 @@
         ]
       }
     }
+  },
+  {
+    "start": "2025-04-04T22:00:00",
+    "end": "2025-04-04T04:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/handhaven/",
+    "title": "Handhaven",
+    "location": "dynamo",
+    "price": 400,
+    "shortText": "Dit evenement is geannuleerd.",
+    "longText": "../public/texts/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9oYW5kaGF2ZW4v.html",
+    "image": "../public/event-images/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9oYW5kaGF2ZW4v",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "start": "2025-04-04T07:00:00",
@@ -533,18 +595,47 @@
     "title": "Save Face",
     "location": "dynamo",
     "price": 20,
-    "shortText": "plus support",
+    "shortText": "Support: The Nightmares",
     "longText": "../public/texts/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9zYXZlLWZhY2Uv.html",
     "image": "../public/event-images/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9zYXZlLWZhY2Uv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "plus": {
-        "s": null,
-        "l": "plus",
+      "ares": {
+        "s": "1ynleumazoba4q3zki0hjz",
+        "l": "ares",
         "g": [
-          "death",
-          "black metal"
+          "neo-trad metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-08T20:00:00.000",
+    "start": "2025-04-08T21:00:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/de-roos-voorronde-1-3/",
+    "title": "De Roos voorronde #1",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "Spit for the Masses + Grandad + POMME-GRENADEblack metal, punk, grunge",
+    "longText": "../public/texts/doornroosje/bC9ldmVudC9kZS1yb29zLXZvb3Jyb25kZS0xLTMv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/02/banner-met-rozentakjes-1200x630.jpeg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
         ]
       }
     }
@@ -571,6 +662,31 @@
     "shortText": "Boerderij, Zoetermeer",
     "image": "../public/location-images/boerderij",
     "location": "boerderij"
+  },
+  {
+    "door": "2025-04-09T19:00:00",
+    "start": "2025-04-09T19:00:00",
+    "end": "2025-04-09T21:30:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/the-brainfreeze-club-dialogue-session-mental-health-5/",
+    "title": "The Brainfreeze Club – Dialogue session: mental health",
+    "location": "dynamo",
+    "price": 900,
+    "shortText": " wo 09-apr-2025DynamoGratis The Brainfreeze Club – Dialogue session: mental health A newly introduced dialogue session about mental health.",
+    "longText": "../public/texts/dynamo/bG9ndWUtc2Vzc2lvbi1tZW50YWwtaGVhbHRoLTUv.html",
+    "image": "../public/event-images/dynamo/bG9ndWUtc2Vzc2lvbi1tZW50YWwtaGVhbHRoLTUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "mental health": {
+        "s": "0nGhvggBRdDHh9c1jW74uu",
+        "l": "mental%20health",
+        "g": [
+          "meme rap",
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
   },
   {
     "start": "2025-04-10T08:00:00",
@@ -687,6 +803,34 @@
     }
   },
   {
+    "start": "2025-04-11T22:00:00",
+    "end": "2025-04-11T04:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/the-pharmacy-2/",
+    "title": "The pharmacy",
+    "location": "dynamo",
+    "price": 10,
+    "shortText": "[HARDGROOVE | GARAGE | BREAKBEAT | DNB]",
+    "longText": "../public/texts/dynamo/bi5ubC9ldmVuZW1lbnQvdGhlLXBoYXJtYWN5LTIv.html",
+    "image": "../public/event-images/dynamo/bi5ubC9ldmVuZW1lbnQvdGhlLXBoYXJtYWN5LTIv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-04-11T21:00:00.000",
+    "start": "2025-04-11T22:00:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/magic-tom-yuri-eten-bloed/",
+    "title": "Magic Tom & Yuri eten bloed",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "punk, comedy, theater",
+    "longText": "../public/texts/doornroosje/ZW50L21hZ2ljLXRvbS15dXJpLWV0ZW4tYmxvZWQv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/10/1600x800-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "start": "2025-04-11T08:00:00",
     "end": "2025-04-11T11:00:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/neuk/",
@@ -797,6 +941,68 @@
     "shortText": "Boerderij, Zoetermeer",
     "image": "../public/location-images/boerderij",
     "location": "boerderij"
+  },
+  {
+    "door": "2025-04-12T19:00:00",
+    "start": "2025-04-12T19:20:00",
+    "end": "2025-04-12T23:30:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/guts-glory/",
+    "title": "Guts & Glory",
+    "location": "dynamo",
+    "price": 1200,
+    "shortText": "Jera on Air Bandbattle",
+    "longText": "../public/texts/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L2d1dHMtZ2xvcnkv.html",
+    "image": "../public/event-images/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L2d1dHMtZ2xvcnkv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "battle": {
+        "s": null,
+        "l": "battle",
+        "g": [
+          "black metal"
+        ]
+      },
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      },
+      "guts & glory": {
+        "s": null,
+        "l": "guts%20&%20glory",
+        "g": [
+          "death metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-12T19:30:00",
+    "end": "2025-04-12T23:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/enemy-inside-12-04-2025/",
+    "title": "Enemy Inside",
+    "location": "dehelling",
+    "price": 20.2,
+    "shortText": "Moderne metal met oorwurmen van refreinen",
+    "longText": "../public/texts/dehelling/Z2VuZGEvZW5lbXktaW5zaWRlLTEyLTA0LTIwMjUv.html",
+    "image": "../public/event-images/dehelling/Z2VuZGEvZW5lbXktaW5zaWRlLTEyLTA0LTIwMjUv",
+    "eventGenres": null,
+    "artists": {
+      "enemy inside": {
+        "s": "4DX0ctdZRMWec9KCiigIXy",
+        "l": "enemy%20inside",
+        "g": [
+          "dark rock",
+          "gothic symphonic metal",
+          "slayer",
+          "thrash metal"
+        ]
+      }
+    }
   },
   {
     "start": "2025-04-12T07:00:00",
@@ -939,7 +1145,7 @@
     }
   },
   {
-    "start": "2025-04-13T19:00:00",
+    "start": "2025-04-13T19:30:00",
     "end": "2025-04-13T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/anneke-van-giersbergen-13-04-2025/",
     "title": "Anneke van Giersbergen",
@@ -1547,6 +1753,21 @@
     "artists": {}
   },
   {
+    "door": "2025-04-19T14:30:00",
+    "start": "2025-04-19T14:30:00",
+    "end": "2025-04-19T17:30:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/queerhoven/",
+    "title": "Queerhoven Townhall",
+    "location": "dynamo",
+    "price": 1900,
+    "shortText": "za 19-apr-2025Room 7Gratis Queerhoven Townhall Get involved!",
+    "longText": "../public/texts/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L3F1ZWVyaG92ZW4v.html",
+    "image": "../public/event-images/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L3F1ZWVyaG92ZW4v",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2025-04-19T19:30:00",
     "start": "2025-04-19T20:00:00",
     "end": "2025-04-19T23:15:00",
@@ -1569,6 +1790,20 @@
         ]
       }
     }
+  },
+  {
+    "start": "2025-04-19T23:59:00",
+    "end": "2025-04-19T06:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/blasttek-4/",
+    "title": "Blasttek",
+    "location": "dynamo",
+    "price": 20,
+    "shortText": "[DARKPSY | HITECH | TEKNO | PSYCORE]",
+    "longText": "../public/texts/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L2JsYXN0dGVrLTQv.html",
+    "image": "../public/event-images/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L2JsYXN0dGVrLTQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "start": "2025-04-19T06:00:00",
@@ -1895,7 +2130,7 @@
     "artists": {}
   },
   {
-    "start": "2025-04-21T19:00:00",
+    "start": "2025-04-21T19:30:00",
     "end": "2025-04-21T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/spectral-wound-lamp-of-murmuur-21-04-2025/",
     "title": "Spectral Wound + Lamp Of Murmuur",
@@ -2128,6 +2363,61 @@
     "location": "poppodiumboerderij"
   },
   {
+    "door": "2025-04-25T19:00:00",
+    "start": "2025-04-25T19:00:00",
+    "end": "2025-04-25T22:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/queerhoven-boardgame-night-3/",
+    "title": "Queerhoven Boardgame Night",
+    "location": "dynamo",
+    "price": 2500,
+    "shortText": "The boardgame night is a recurring event from Queerhoven. Join us for an evening of boardgames and hanging out with your fellow queer people!",
+    "longText": "../public/texts/dynamo/L3F1ZWVyaG92ZW4tYm9hcmRnYW1lLW5pZ2h0LTMv.html",
+    "image": "../public/event-images/dynamo/L3F1ZWVyaG92ZW4tYm9hcmRnYW1lLW5pZ2h0LTMv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-04-25T19:00:00",
+    "start": "2025-04-25T19:30:00",
+    "end": "2025-04-25T00:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/royal-rawk-2025/",
+    "title": "Royal rawk 2025",
+    "location": "dynamo",
+    "price": 2500,
+    "shortText": "w/ Tankzilla + Bullbar + Headless Hunter and more",
+    "longText": "../public/texts/dynamo/Lm5sL2V2ZW5lbWVudC9yb3lhbC1yYXdrLTIwMjUv.html",
+    "image": "../public/event-images/dynamo/Lm5sL2V2ZW5lbWVudC9yb3lhbC1yYXdrLTIwMjUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "headless hunter": {
+        "s": "4aFxWu9DFqbM5wQt4TpQwC",
+        "l": "headless%20hunter",
+        "g": [
+          "thrash metal",
+          "speed metal",
+          "groove metal",
+          "thrash metal"
+        ]
+      },
+      "tankzilla": {
+        "s": "5awg3tvcpk6gluonsry3no",
+        "l": "tankzilla",
+        "g": [
+          "dutch stoner rock"
+        ]
+      },
+      "bullbar": {
+        "s": "0RLFLytICExQ3fboNv8MK6",
+        "l": "bullbar",
+        "g": [
+          "hardcore punk"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-04-25T20:00:00",
     "start": "2025-04-25T20:30:00",
     "venueEventUrl": "https://bibelot.net/programma/the-flying-luttenbachers-us-albatre-polarized-combo-qazam/",
@@ -2220,6 +2510,20 @@
     }
   },
   {
+    "start": "2025-04-26T15:00:00",
+    "end": "2025-04-26T01:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/puin-kingsday/",
+    "title": "Puin: kingsday",
+    "location": "dynamo",
+    "price": 0,
+    "shortText": "[HARDGROOVE – TECHNO]",
+    "longText": "../public/texts/dynamo/ZW4ubmwvZXZlbmVtZW50L3B1aW4ta2luZ3NkYXkv.html",
+    "image": "../public/event-images/dynamo/ZW4ubmwvZXZlbmVtZW50L3B1aW4ta2luZ3NkYXkv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2025-04-26T15:00:00",
     "start": "2025-04-26T16:00:00",
     "venueEventUrl": "https://bibelot.net/programma/temper-koningsdag-parker-fans-gespuys-fit-de-badslippers-sasha-sailor-meer/",
@@ -2252,6 +2556,42 @@
           "electro ",
           "punk ",
           "rock "
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-27T20:00:00.000",
+    "start": "2025-04-27T20:45:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/gnod-white-hills/",
+    "title": "Gnod + White Hills",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "rock, kraut rock, psychedelische rock, noise rock, doornroosjepas",
+    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L2dub2Qtd2hpdGUtaGlsbHMv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/01/Gnod-White-Hills-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "gnod": {
+        "s": "0M7HBnNJoTfTWouL5O7FtO",
+        "l": "gnod",
+        "g": [
+          "double drumming",
+          "noise rock",
+          "uk noise rock"
+        ]
+      },
+      "white hills": {
+        "s": "0ttvGAnfEC6KZLrljUdIyX",
+        "l": "white%20hills",
+        "g": [
+          "space rock",
+          "krautrock",
+          "psychedelic rock",
+          "stoner rock",
+          "acid rock",
+          "noise rock"
         ]
       }
     }
@@ -2457,6 +2797,56 @@
     }
   },
   {
+    "door": "2025-05-02T23:00:00",
+    "start": "2025-05-02T23:00:00",
+    "end": "2025-05-02T04:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/obsession/",
+    "title": "Obsession",
+    "location": "dynamo",
+    "price": 11.2,
+    "shortText": "[HARD TECHNO]",
+    "longText": "../public/texts/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9vYnNlc3Npb24v.html",
+    "image": "../public/event-images/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9vYnNlc3Npb24v",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "obsession": {
+        "s": "5BDLRKwXZrrrr0WXTqfCYg",
+        "l": "obsession",
+        "g": [
+          "speed metal",
+          "hi-nrg",
+          "heavy metal",
+          "power metal",
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-02T20:00:00.000",
+    "start": "2025-05-02T20:30:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/wodan-boys-2/",
+    "title": "Wodan Boys",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "+ Fuzzy Teethrock, punk",
+    "longText": "../public/texts/doornroosje/bnJvb3NqZS5ubC9ldmVudC93b2Rhbi1ib3lzLTIv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/11/Wodan-Boys-WEB-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "wodan boys": {
+        "s": "0kmkbibevmq4luqquahdmr",
+        "l": "wodan%20boys",
+        "g": [
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-05-02T07:30:00",
     "end": "2025-05-02T11:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/the-one-woman-band-fest-w-dead-elvis-van-tastik-belly-hole-freak-the-blues-against-youth-nono-electra/",
@@ -2545,6 +2935,21 @@
         ]
       }
     }
+  },
+  {
+    "door": "2025-05-03T14:00:00",
+    "start": "2025-05-03T14:00:00",
+    "end": "2025-05-03T17:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/queer-art-club-2/",
+    "title": "Queer Art club",
+    "location": "dynamo",
+    "price": 5,
+    "shortText": "za 03-mei-2025Room 7€ 5,- Queer Art club Slime making",
+    "longText": "../public/texts/dynamo/bmwvZXZlbmVtZW50L3F1ZWVyLWFydC1jbHViLTIv.html",
+    "image": "../public/event-images/dynamo/bmwvZXZlbmVtZW50L3F1ZWVyLWFydC1jbHViLTIv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "door": "2025-05-03T20:00:00",
@@ -2798,6 +3203,20 @@
     }
   },
   {
+    "start": "2025-05-09T22:00:00",
+    "end": "2025-05-09T04:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/draadloos/",
+    "title": "Draadloos",
+    "location": "dynamo",
+    "price": 15.29,
+    "shortText": "[UKG – TECHNO – GHETTO TECH – JUNGLE – AMBIENT]",
+    "longText": "../public/texts/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9kcmFhZGxvb3Mv.html",
+    "image": "../public/event-images/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9kcmFhZGxvb3Mv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "start": "2025-05-09T08:00:00",
     "end": "2025-05-09T10:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/ronker-b-supports/",
@@ -2930,6 +3349,21 @@
         ]
       }
     }
+  },
+  {
+    "door": "2025-05-10T20:00:00",
+    "start": "2025-05-10T20:00:00",
+    "end": "2025-05-10T03:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/animewatcherz-official-party/",
+    "title": "Animewatcherz Official Party",
+    "location": "dynamo",
+    "price": 11.5,
+    "shortText": "za 10-mei-2025Haven€ 11,50 Animewatcherz Official Party THE ULTIMATE ANIME RAVE",
+    "longText": "../public/texts/dynamo/L2FuaW1ld2F0Y2hlcnotb2ZmaWNpYWwtcGFydHkv.html",
+    "image": "../public/event-images/dynamo/L2FuaW1ld2F0Y2hlcnotb2ZmaWNpYWwtcGFydHkv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "door": "2025-05-11T18:00:00",
@@ -3108,6 +3542,31 @@
     }
   },
   {
+    "door": "2025-05-14T19:00:00",
+    "start": "2025-05-14T19:00:00",
+    "end": "2025-05-14T21:30:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/the-brainfreeze-club-dialogue-session-mental-health-6/",
+    "title": "The Brainfreeze Club – Dialogue session: mental health",
+    "location": "dynamo",
+    "price": 1400,
+    "shortText": " wo 14-mei-2025DynamoGratis The Brainfreeze Club – Dialogue session: mental health A newly introduced dialogue session about mental health.",
+    "longText": "../public/texts/dynamo/bG9ndWUtc2Vzc2lvbi1tZW50YWwtaGVhbHRoLTYv.html",
+    "image": "../public/event-images/dynamo/bG9ndWUtc2Vzc2lvbi1tZW50YWwtaGVhbHRoLTYv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "mental health": {
+        "s": "0nGhvggBRdDHh9c1jW74uu",
+        "l": "mental%20health",
+        "g": [
+          "meme rap",
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-05-15T19:00:00",
     "start": "2025-05-15T19:45:00",
     "venueEventUrl": "https://www.podiumvictorie.nl/programma/neuk!-69-charger-skroetbalg",
@@ -3238,6 +3697,19 @@
     }
   },
   {
+    "start": "2025-05-16T15:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/egf-official-lan-party/",
+    "title": "EGF – official lan party",
+    "location": "dynamo",
+    "price": 46.5,
+    "shortText": "Eindhoven game festival",
+    "longText": "../public/texts/dynamo/bmVtZW50L2VnZi1vZmZpY2lhbC1sYW4tcGFydHkv.html",
+    "image": "../public/event-images/dynamo/bmVtZW50L2VnZi1vZmZpY2lhbC1sYW4tcGFydHkv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2025-05-16T19:30:00",
     "start": "2025-05-16T20:00:00",
     "end": "2025-05-16T23:00:00",
@@ -3299,6 +3771,19 @@
         ]
       }
     }
+  },
+  {
+    "start": "2025-05-17T15:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/egf-official-lan-party-3/",
+    "title": "EGF – official lan party",
+    "location": "dynamo",
+    "price": 46.5,
+    "shortText": "Eindhoven game festival",
+    "longText": "../public/texts/dynamo/bWVudC9lZ2Ytb2ZmaWNpYWwtbGFuLXBhcnR5LTMv.html",
+    "image": "../public/event-images/dynamo/bWVudC9lZ2Ytb2ZmaWNpYWwtbGFuLXBhcnR5LTMv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "start": "2025-05-17T07:30:00",
@@ -3451,6 +3936,55 @@
           "garage rock",
           "noise rock",
           "krautrock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-18T12:00:00",
+    "end": "2025-05-18T18:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/eindhoven-game-festival/",
+    "title": "Eindhoven game festival",
+    "location": "dynamo",
+    "price": 9,
+    "shortText": "Third annual edition",
+    "longText": "../public/texts/dynamo/ZW1lbnQvZWluZGhvdmVuLWdhbWUtZmVzdGl2YWwv.html",
+    "image": "../public/event-images/dynamo/ZW1lbnQvZWluZGhvdmVuLWdhbWUtZmVzdGl2YWwv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-05-18T15:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/egf-official-lan-party-2/",
+    "title": "EGF – official lan party",
+    "location": "dynamo",
+    "price": 46.5,
+    "shortText": "Eindhoven game festival",
+    "longText": "../public/texts/dynamo/bWVudC9lZ2Ytb2ZmaWNpYWwtbGFuLXBhcnR5LTIv.html",
+    "image": "../public/event-images/dynamo/bWVudC9lZ2Ytb2ZmaWNpYWwtbGFuLXBhcnR5LTIv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-05-18T19:30:00",
+    "end": "2025-05-18T23:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/combichrist-extize-crimson-veil-esoterik-18-05-2025/",
+    "title": "Combichrist + Extize + Crimson Veil + Esoterik",
+    "location": "dehelling",
+    "price": 27.2,
+    "shortText": " Genadeloze combi van industrial techno en metal",
+    "longText": "../public/texts/dehelling/bXNvbi12ZWlsLWVzb3RlcmlrLTE4LTA1LTIwMjUv.html",
+    "image": "../public/event-images/dehelling/bXNvbi12ZWlsLWVzb3RlcmlrLTE4LTA1LTIwMjUv",
+    "eventGenres": null,
+    "artists": {
+      "crim": {
+        "s": null,
+        "l": "crim",
+        "g": [
+          "melodic death metal",
+          "metalcore"
         ]
       }
     }
@@ -3629,7 +4163,7 @@
     }
   },
   {
-    "start": "2025-05-22T19:00:00",
+    "start": "2025-05-22T19:30:00",
     "end": "2025-05-22T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/phantom-elite-ep-release-22-05-2025/",
     "title": "Phantom Elite EP release",
@@ -3863,6 +4397,45 @@
     }
   },
   {
+    "door": "2025-05-23T22:00:00",
+    "start": "2025-05-23T22:00:00",
+    "end": "2025-05-23T04:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/bunkerbass-3/",
+    "title": "bunkerbass",
+    "location": "dynamo",
+    "price": 2300,
+    "shortText": "[DRUM AND BASS]",
+    "longText": "../public/texts/dynamo/dmVuLm5sL2V2ZW5lbWVudC9idW5rZXJiYXNzLTMv.html",
+    "image": "../public/event-images/dynamo/dmVuLm5sL2V2ZW5lbWVudC9idW5rZXJiYXNzLTMv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "bass": {
+        "s": null,
+        "l": "bass",
+        "g": [
+          "doom",
+          "death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-23T19:00:00",
+    "start": "2025-05-23T19:00:00",
+    "end": "2025-05-23T22:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/queerhoven-boardgame-night-4/",
+    "title": "Queerhoven Boardgame Night",
+    "location": "dynamo",
+    "price": 2300,
+    "shortText": "The boardgame night is a recurring event from Queerhoven. Join us for an evening of boardgames and hanging out with your fellow queer people!",
+    "longText": "../public/texts/dynamo/L3F1ZWVyaG92ZW4tYm9hcmRnYW1lLW5pZ2h0LTQv.html",
+    "image": "../public/event-images/dynamo/L3F1ZWVyaG92ZW4tYm9hcmRnYW1lLW5pZ2h0LTQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "start": "2025-05-23T08:00:00",
     "end": "2025-05-23T11:00:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/kboy-en-de-goedzo-jongens-release-party-met-ook-quincy-the-david-one-another/",
@@ -3918,6 +4491,59 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "door": "2025-05-24T19:30:00",
+    "start": "2025-05-24T20:00:00",
+    "end": "2025-05-24T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/the-hotelier/",
+    "title": "The Hotelier",
+    "location": "dynamo",
+    "price": 22,
+    "shortText": "Plus support",
+    "longText": "../public/texts/dynamo/dmVuLm5sL2V2ZW5lbWVudC90aGUtaG90ZWxpZXIv.html",
+    "image": "../public/event-images/dynamo/dmVuLm5sL2V2ZW5lbWVudC90aGUtaG90ZWxpZXIv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "plus": {
+        "s": null,
+        "l": "plus",
+        "g": [
+          "death",
+          "black metal"
+        ]
+      },
+      "the hotelier": {
+        "s": "3kzNckjE5FzHQhe4pJiLKa",
+        "l": "the%20hotelier",
+        "g": [
+          "midwest emo",
+          "emo",
+          "math rock",
+          "emo pop"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-24T19:30:00",
+    "end": "2025-05-24T23:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/no-barrier-24-05-2025/",
+    "title": "No barrier",
+    "location": "dehelling",
+    "price": 14.2,
+    "shortText": "Poppunk, Emo, Rock & Metalcore Party",
+    "longText": "../public/texts/dehelling/L2FnZW5kYS9uby1iYXJyaWVyLTI0LTA1LTIwMjUv.html",
+    "image": "../public/event-images/dehelling/L2FnZW5kYS9uby1iYXJyaWVyLTI0LTA1LTIwMjUv",
+    "eventGenres": null,
+    "artists": {
+      "no barrier": {
+        "s": "2am0proxk0wcivgl5rza3a",
+        "l": "no%20barrier",
+        "g": []
+      }
+    }
   },
   {
     "door": "2025-05-25T19:00:00",
@@ -4099,6 +4725,20 @@
     }
   },
   {
+    "start": "2025-05-30T22:00:00",
+    "end": "2025-05-30T04:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/commit/",
+    "title": "Club commit",
+    "location": "dynamo",
+    "price": 3000,
+    "shortText": "[UK GARAGE | JUNGLE | AFROBEAT | GHETTOTECH]",
+    "longText": "../public/texts/dynamo/ZWluZGhvdmVuLm5sL2V2ZW5lbWVudC9jb21taXQv.html",
+    "image": "../public/event-images/dynamo/ZWluZGhvdmVuLm5sL2V2ZW5lbWVudC9jb21taXQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2025-05-30T20:00:00",
     "start": "2025-05-30T20:00:00",
     "venueEventUrl": "https://bibelot.net/programma/its-not-a-phase-mom-sum41-some41-the-offspring-by-the-offspin-uk/",
@@ -4189,6 +4829,21 @@
         ]
       }
     }
+  },
+  {
+    "door": "2025-05-31T14:00:00",
+    "start": "2025-05-31T14:00:00",
+    "end": "2025-05-31T17:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/queer-art-club-3/",
+    "title": "Queer Art club",
+    "location": "dynamo",
+    "price": 5,
+    "shortText": "za 31-mei-2025Room 7€ 5,- Queer Art club Community idea",
+    "longText": "../public/texts/dynamo/bmwvZXZlbmVtZW50L3F1ZWVyLWFydC1jbHViLTMv.html",
+    "image": "../public/event-images/dynamo/bmwvZXZlbmVtZW50L3F1ZWVyLWFydC1jbHViLTMv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "start": "2025-05-31T07:30:00",
@@ -4406,6 +5061,20 @@
     }
   },
   {
+    "start": "2025-06-06T22:00:00",
+    "end": "2025-06-06T04:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/selecta-4/",
+    "title": "Selecta",
+    "location": "dynamo",
+    "price": 0,
+    "shortText": "[DUBSTEP | GRIME | UK GARAGE | JUNGLE]",
+    "longText": "../public/texts/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9zZWxlY3RhLTQv.html",
+    "image": "../public/event-images/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9zZWxlY3RhLTQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2025-06-06T19:30:00",
     "start": "2025-06-06T20:00:00",
     "end": "2025-06-06T23:00:00",
@@ -4575,6 +5244,31 @@
     }
   },
   {
+    "door": "2025-06-11T19:00:00",
+    "start": "2025-06-11T19:00:00",
+    "end": "2025-06-11T21:30:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/the-brainfreeze-club-dialogue-session-mental-health-7/",
+    "title": "The Brainfreeze Club – Dialogue session: mental health",
+    "location": "dynamo",
+    "price": 1100,
+    "shortText": " wo 11-jun-2025DynamoGratis The Brainfreeze Club – Dialogue session: mental health A newly introduced dialogue session about mental health.",
+    "longText": "../public/texts/dynamo/bG9ndWUtc2Vzc2lvbi1tZW50YWwtaGVhbHRoLTcv.html",
+    "image": "../public/event-images/dynamo/bG9ndWUtc2Vzc2lvbi1tZW50YWwtaGVhbHRoLTcv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "mental health": {
+        "s": "0nGhvggBRdDHh9c1jW74uu",
+        "l": "mental%20health",
+        "g": [
+          "meme rap",
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-06-11T18:00:00",
     "start": "2025-06-11T18:00:00",
     "venueEventUrl": "https://www.013.nl/programma/99920/king-diamond",
@@ -4597,6 +5291,60 @@
           "metal",
           "thrash metal",
           "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-06-12T18:30:00",
+    "start": "2025-06-12T19:15:00",
+    "end": "2025-06-12T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/cattle-decapitation/",
+    "title": "Cattle Decapitation",
+    "location": "dynamo",
+    "price": 29.5,
+    "shortText": "Support: Severe Torture + Skeletal Remains",
+    "longText": "../public/texts/dynamo/ZXZlbmVtZW50L2NhdHRsZS1kZWNhcGl0YXRpb24v.html",
+    "image": "../public/event-images/dynamo/ZXZlbmVtZW50L2NhdHRsZS1kZWNhcGl0YXRpb24v",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "cattle decapitation": {
+        "s": "67zmmta88ddo0gturrzgjn",
+        "l": "cattle%20decapitation",
+        "g": [
+          "american grindcore",
+          "brutal death metal",
+          "death metal",
+          "deathcore",
+          "deathgrind",
+          "goregrind",
+          "grindcore",
+          "technical death metal",
+          "technical grindcore"
+        ]
+      },
+      "skeletal remains": {
+        "s": "4Rh3NPxVMADeaSIduAsykN",
+        "l": "skeletal%20remains",
+        "g": [
+          "brutal death metal",
+          "death metal",
+          "deathgrind",
+          "grisly death metal",
+          "new wave of osdm",
+          "technical death metal",
+          "death metal"
+        ]
+      },
+      "severe torture": {
+        "s": "2LkGWKBS0nNlEtqx4khGf1",
+        "l": "severe%20torture",
+        "g": [
+          "death metal",
+          "grindcore",
+          "speed metal",
+          "death metal"
         ]
       }
     }
@@ -4830,6 +5578,20 @@
     "location": "dessel"
   },
   {
+    "start": "2025-06-20T22:00:00",
+    "end": "2025-06-20T04:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/the-pharmacy-3/",
+    "title": "The pharmacy",
+    "location": "dynamo",
+    "price": 2000,
+    "shortText": "[HARDGROOVE | GARAGE | BREAKBEAT | DNB]",
+    "longText": "../public/texts/dynamo/bi5ubC9ldmVuZW1lbnQvdGhlLXBoYXJtYWN5LTMv.html",
+    "image": "../public/event-images/dynamo/bi5ubC9ldmVuZW1lbnQvdGhlLXBoYXJtYWN5LTMv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "start": "2025-06-20T08:00:00",
     "end": "2025-06-20T11:00:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/ultha-d-grey-aura/",
@@ -4866,6 +5628,21 @@
     }
   },
   {
+    "door": "2025-06-21T14:30:00",
+    "start": "2025-06-21T14:30:00",
+    "end": "2025-06-21T17:30:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/queerhoven-townhall/",
+    "title": "Queerhoven Townhall",
+    "location": "dynamo",
+    "price": 2100,
+    "shortText": "za 21-jun-2025Room 7Gratis Queerhoven Townhall Get involved!",
+    "longText": "../public/texts/dynamo/ZXZlbmVtZW50L3F1ZWVyaG92ZW4tdG93bmhhbGwv.html",
+    "image": "../public/event-images/dynamo/ZXZlbmVtZW50L3F1ZWVyaG92ZW4tdG93bmhhbGwv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "start": "2025-06-23T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/satchvai-band",
     "title": "SatchVai Band",
@@ -4893,6 +5670,54 @@
     "shortText": "\nMet Turnstile, Sex Pistols, Bullet For My Valentine, Jinjer, Knocked Loose, Nothing More e.v.a.",
     "image": "../public/location-images/ysselstynmetturnstile",
     "location": "ysselstynmetturnstile"
+  },
+  {
+    "door": "2025-06-27T19:00:00",
+    "start": "2025-06-27T19:00:00",
+    "end": "2025-06-27T22:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/queerhoven-boardgame-night-5/",
+    "title": "Queerhoven Boardgame Night",
+    "location": "dynamo",
+    "price": 2700,
+    "shortText": "The boardgame night is a recurring event from Queerhoven. Join us for an evening of boardgames and hanging out with your fellow queer people!",
+    "longText": "../public/texts/dynamo/L3F1ZWVyaG92ZW4tYm9hcmRnYW1lLW5pZ2h0LTUv.html",
+    "image": "../public/event-images/dynamo/L3F1ZWVyaG92ZW4tYm9hcmRnYW1lLW5pZ2h0LTUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-06-27T22:00:00",
+    "end": "2025-06-27T04:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/nebula-4/",
+    "title": "NEBULA x faction x dublex",
+    "location": "dynamo",
+    "price": 2700,
+    "shortText": "[DRUM AND BASS]",
+    "longText": "../public/texts/dynamo/bmRob3Zlbi5ubC9ldmVuZW1lbnQvbmVidWxhLTQv.html",
+    "image": "../public/event-images/dynamo/bmRob3Zlbi5ubC9ldmVuZW1lbnQvbmVidWxhLTQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "nebula": {
+        "s": "1czkorb9in0ejpeyekbikf",
+        "l": "nebula",
+        "g": [
+          "cosmic post-rock",
+          "instrumental post-rock",
+          "polish post-rock",
+          "post-rock"
+        ]
+      },
+      "bass": {
+        "s": null,
+        "l": "bass",
+        "g": [
+          "doom",
+          "death metal"
+        ]
+      }
+    }
   },
   {
     "start": "2025-06-27T08:00:00",
@@ -4946,6 +5771,21 @@
     }
   },
   {
+    "door": "2025-06-28T14:00:00",
+    "start": "2025-06-28T14:00:00",
+    "end": "2025-06-28T17:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/queer-art-club-4/",
+    "title": "Queer Art club",
+    "location": "dynamo",
+    "price": 5,
+    "shortText": "za 28-jun-2025Room 7€ 5,- Queer Art club Collage",
+    "longText": "../public/texts/dynamo/bmwvZXZlbmVtZW50L3F1ZWVyLWFydC1jbHViLTQv.html",
+    "image": "../public/event-images/dynamo/bmwvZXZlbmVtZW50L3F1ZWVyLWFydC1jbHViLTQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "start": "2025-06-28T08:00:00",
     "end": "2025-06-28T11:00:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/the-subhumans-uk-anarcho-punk-legends/",
@@ -4981,6 +5821,36 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "door": "2025-06-29T19:30:00",
+    "start": "2025-06-29T20:15:00",
+    "end": "2025-06-29T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/the-gathering/",
+    "title": "The Gathering",
+    "location": "dynamo",
+    "price": 26.5,
+    "shortText": "Uitverkocht",
+    "longText": "../public/texts/dynamo/ZW4ubmwvZXZlbmVtZW50L3RoZS1nYXRoZXJpbmcv.html",
+    "image": "../public/event-images/dynamo/ZW4ubmwvZXZlbmVtZW50L3RoZS1nYXRoZXJpbmcv",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "the gathering": {
+        "s": "2kO6zjt4a1OIqxOERhliEX",
+        "l": "the%20gathering",
+        "g": [
+          "atmospheric doom",
+          "dutch metal",
+          "gothic metal",
+          "gothic symphonic metal",
+          "symphonic metal",
+          "death",
+          "doom metal, atmospheric doom metal (early)",
+          " atmospheric rock (later)"
+        ]
+      }
+    }
   },
   {
     "start": "2025-07-01T20:00:00",
@@ -5025,6 +5895,31 @@
           "pirate",
           "power metal",
           "scottish metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-07-03T19:30:00",
+    "start": "2025-07-03T20:00:00",
+    "end": "2025-07-03T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/hell-can-wait/",
+    "title": "Hell Can Wait",
+    "location": "dynamo",
+    "price": 16.5,
+    "shortText": "Support: I’ll Get By",
+    "longText": "../public/texts/dynamo/ZW4ubmwvZXZlbmVtZW50L2hlbGwtY2FuLXdhaXQv.html",
+    "image": "../public/event-images/dynamo/ZW4ubmwvZXZlbmVtZW50L2hlbGwtY2FuLXdhaXQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "hell can wait": {
+        "s": "7y4ASsLqvxgWja0ym7SBYs",
+        "l": "hell%20can%20wait",
+        "g": [
+          "melodic hardcore",
+          "metalcore",
+          "post-hardcore"
         ]
       }
     }
@@ -5405,6 +6300,53 @@
     "location": "wackenduitslandmetmachinehead"
   },
   {
+    "door": "2025-08-03T15:00:00",
+    "start": "2025-08-03T15:30:00",
+    "end": "2025-08-03T19:30:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/forbidden/",
+    "title": "Forbidden",
+    "location": "dynamo",
+    "price": 29.5,
+    "shortText": "Support: Warbringer + Headless Hunter",
+    "longText": "../public/texts/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9mb3JiaWRkZW4v.html",
+    "image": "../public/event-images/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9mb3JiaWRkZW4v",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "headless hunter": {
+        "s": "4aFxWu9DFqbM5wQt4TpQwC",
+        "l": "headless%20hunter",
+        "g": [
+          "thrash metal",
+          "speed metal",
+          "groove metal",
+          "thrash metal"
+        ]
+      },
+      "warbringer": {
+        "s": "4ukkkgkjnwx8ktuvea66k1",
+        "l": "warbringer",
+        "g": [
+          "metal",
+          "new wave of thrash metal",
+          "speed metal",
+          "thrash metal"
+        ]
+      },
+      "forbidden": {
+        "s": "5MhPZVXE28sD9rXE3GU1uN",
+        "l": "forbidden",
+        "g": [
+          "thrash metal",
+          "speed metal",
+          "groove metal",
+          "metal",
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-08-06T18:00:00",
     "start": "2025-08-06T18:00:00",
     "venueEventUrl": "https://www.013.nl/programma/98543/dimmu-borgir",
@@ -5440,6 +6382,28 @@
         "s": "5sywd6fu4rdgishox40hma",
         "l": "the%20chosen",
         "g": []
+      }
+    }
+  },
+  {
+    "start": "2025-08-09T19:30:00",
+    "end": "2025-08-09T23:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/wednesday-13-09-08-2025/",
+    "title": "Wednesday 13",
+    "location": "dehelling",
+    "price": 25.2,
+    "shortText": "Bloedstollende horrorpunk laat je nachtmerries op sprookjes lijken",
+    "longText": "../public/texts/dehelling/Z2VuZGEvd2VkbmVzZGF5LTEzLTA5LTA4LTIwMjUv.html",
+    "image": "../public/event-images/dehelling/Z2VuZGEvd2VkbmVzZGF5LTEzLTA5LTA4LTIwMjUv",
+    "eventGenres": null,
+    "artists": {
+      "wednesday 13": {
+        "s": "6Cvzf33JDzCIw2eJU8npQo",
+        "l": "wednesday%2013",
+        "g": [
+          "horror punk",
+          "industrial metal"
+        ]
       }
     }
   },
@@ -6035,6 +6999,31 @@
     }
   },
   {
+    "start": "2025-09-25T19:30:00",
+    "end": "2025-09-25T23:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/wolfheart-25-09-2025/",
+    "title": "Wolfheart",
+    "location": "dehelling",
+    "price": 24.7,
+    "shortText": "Melancholische Finse death metal lawine verplettert alles op zijn pad",
+    "longText": "../public/texts/dehelling/bC9hZ2VuZGEvd29sZmhlYXJ0LTI1LTA5LTIwMjUv.html",
+    "image": "../public/event-images/dehelling/bC9hZ2VuZGEvd29sZmhlYXJ0LTI1LTA5LTIwMjUv",
+    "eventGenres": null,
+    "artists": {
+      "wolfheart": {
+        "s": "11EAP8MX0cfrW9lzkK424H",
+        "l": "wolfheart",
+        "g": [
+          "finnish death metal",
+          "finnish melodeath",
+          "finnish metal",
+          "melodic death metal",
+          "melodic death metal"
+        ]
+      }
+    }
+  },
+  {
     "title": "Floor Jansen",
     "start": "2025-09-26",
     "eventLocationName": "de harmonie",
@@ -6060,6 +7049,31 @@
         "l": "into%20the%20void",
         "g": [
           "deathcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-09-28T19:30:00",
+    "end": "2025-09-28T23:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/night-verses-28-09-2025/",
+    "title": "Night Verses",
+    "location": "dehelling",
+    "price": 24.2,
+    "shortText": "Post-metal spacerock pioniers katapulteren je de ruimte in",
+    "longText": "../public/texts/dehelling/Z2VuZGEvbmlnaHQtdmVyc2VzLTI4LTA5LTIwMjUv.html",
+    "image": "../public/event-images/dehelling/Z2VuZGEvbmlnaHQtdmVyc2VzLTI4LTA5LTIwMjUv",
+    "eventGenres": null,
+    "artists": {
+      "night verses": {
+        "s": "55GUoQ2E2hze3842bFs4bb",
+        "l": "night%20verses",
+        "g": [
+          "progressive metal",
+          "djent",
+          "post-rock",
+          "post-hardcore",
+          "math rock"
         ]
       }
     }
@@ -6347,6 +7361,21 @@
     "longText": "../public/texts/dbs/cHJlc2VudHMtdC05OS1iYWNvbi1mYXQtbG91aXMv.html",
     "image": "../public/event-images/dbs/cHJlc2VudHMtdC05OS1iYWNvbi1mYXQtbG91aXMv",
     "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-10-18T14:30:00",
+    "start": "2025-10-18T14:30:00",
+    "end": "2025-10-18T17:30:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/queerhoven-townhall-2/",
+    "title": "Queerhoven Townhall",
+    "location": "dynamo",
+    "price": 1800,
+    "shortText": "za 18-okt-2025Room 7Gratis Queerhoven Townhall Get involved!",
+    "longText": "../public/texts/dynamo/ZW5lbWVudC9xdWVlcmhvdmVuLXRvd25oYWxsLTIv.html",
+    "image": "../public/event-images/dynamo/ZW5lbWVudC9xdWVlcmhvdmVuLXRvd25oYWxsLTIv",
+    "soldOut": false,
     "eventGenres": null,
     "artists": {}
   },

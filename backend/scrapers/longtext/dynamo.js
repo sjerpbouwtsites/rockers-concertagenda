@@ -7,6 +7,8 @@ export default async function longTextSocialsIframes(page, event) {
         ({ event }) => {
             const res = {};
 
+            res.textForHTML = "";
+
             const textSelector = ".wp-block-dynamo-eindhoven-container";
             const mediaSelector = [
                 ".wp-block-dynamo-eindhoven-container .rll-youtube-player, .wp-block-dynamo-eindhoven-container iframe"
@@ -94,27 +96,6 @@ export default async function longTextSocialsIframes(page, event) {
                         toRemove.parentNode.removeChild(toRemove)
                     );
 
-            // dynamo custom
-            const textBlokken = Array.from(
-                document.querySelectorAll(
-                    `${textSelector} h3, ${textSelector} p`
-                )
-            );
-            if (textBlokken.length) {
-                const laatsteBlok = textBlokken[textBlokken.length - 1];
-                if (
-                    laatsteBlok.textContent.includes("voorverkoop") ||
-                    laatsteBlok.textContent.includes("sale") ||
-                    laatsteBlok
-                        .querySelector("h6")
-                        ?.textContent.toLowerCase()
-                        .includes("info")
-                ) {
-                    laatsteBlok.parentNode.removeChild(laatsteBlok);
-                }
-            }
-            // eind dynamo custom
-
             // verwijder ongewenste paragrafen over bv restaurants
             Array.from(
                 document.querySelectorAll(
@@ -130,16 +111,17 @@ export default async function longTextSocialsIframes(page, event) {
             });
 
             // lege HTML eruit cq HTML zonder tekst of getallen
-            document
-                .querySelectorAll(`${removeEmptyHTMLFrom} > *`)
-                .forEach((checkForEmpty) => {
-                    const leegMatch = checkForEmpty.innerHTML
-                        .replace("&nbsp;", "")
-                        .match(/[\w\d]/g);
-                    if (!Array.isArray(leegMatch)) {
-                        checkForEmpty.parentNode.removeChild(checkForEmpty);
-                    }
-                });
+            // document
+            //     .querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+            //     .forEach((checkForEmpty) => {
+            //         const leegMatch = checkForEmpty.innerHTML
+            //             .replace("&nbsp;", "")
+            //             .match(/[\w\d]/g);
+            //         if (!Array.isArray(leegMatch)) {
+            //             checkForEmpty.parentNode.removeChild(checkForEmpty);
+            //         }
+            //     });
+
             document
                 .querySelectorAll(textSelector)
                 .forEach((ts) => ts.setAttribute("data-text", "1"));

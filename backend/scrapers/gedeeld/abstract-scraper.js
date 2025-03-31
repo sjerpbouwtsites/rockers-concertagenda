@@ -1015,11 +1015,14 @@ export default class AbstractScraper extends ScraperConfig {
             throw new Error("page info ontbreekt.");
         }
 
-        pageInfo.goodTermsInLongHTML = terms.goodCategories.filter(
-            (goodCategory) => {
-                return pageInfo.textForHTML.includes(goodCategory);
-            }
-        );
+        pageInfo.goodTermsInLongHTML = [];
+        if (pageInfo?.textForHTML ?? null) {
+            pageInfo.goodTermsInLongHTML = terms.goodCategories.filter(
+                (goodCategory) => {
+                    return pageInfo.textForHTML.includes(goodCategory);
+                }
+            );
+        }
 
         if (!Array.isArray(pageInfo?.errors)) {
             pageInfo.errors = [

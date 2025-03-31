@@ -1,30 +1,40 @@
 [
   {
-    "door": "2025-01-25T19:00:00.000",
-    "start": "2025-01-25T19:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/delain-2/",
-    "title": "Delain",
+    "door": "2025-04-03T20:00:00.000",
+    "start": "2025-04-03T20:30:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/iv-and-the-strange-band/",
+    "title": "IV and the Strange Band",
     "location": "doornroosje",
     "price": null,
-    "shortText": "+ Kingfisher Skymetal, symfonische metal",
-    "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvZGVsYWluLTIv.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2024/06/Delain-1200x630.jpg",
+    "shortText": "folk, punk, country, doornroosjepas",
+    "longText": "../public/texts/doornroosje/ZXZlbnQvaXYtYW5kLXRoZS1zdHJhbmdlLWJhbmQv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/12/Hank-IV-and-the-Strange-Band-1200x630.jpeg",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "delain": {
-        "s": "6pIRdCtSE5hLFfIfcTAicI",
-        "l": "delain",
+      "band": {
+        "s": null,
+        "l": "band",
         "g": [
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "power metal",
-          "symphonic metal",
-          "symphonic metal",
-          "rock"
+          "heavy",
+          "power metal"
         ]
-      },
+      }
+    }
+  },
+  {
+    "door": "2025-04-08T20:00:00.000",
+    "start": "2025-04-08T21:00:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/de-roos-voorronde-1-3/",
+    "title": "De Roos voorronde #1",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "Spit for the Masses + Grandad + POMME-GRENADEblack metal, punk, grunge",
+    "longText": "../public/texts/doornroosje/bC9ldmVudC9kZS1yb29zLXZvb3Jyb25kZS0xLTMv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/02/banner-met-rozentakjes-1200x630.jpeg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
       "metal": {
         "s": null,
         "l": "metal",
@@ -43,160 +53,73 @@
     }
   },
   {
-    "door": "2025-02-05T21:00:00.000",
-    "start": "2025-02-05T22:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/vower/",
-    "title": "Vower",
+    "door": "2025-04-11T21:00:00.000",
+    "start": "2025-04-11T22:00:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/magic-tom-yuri-eten-bloed/",
+    "title": "Magic Tom & Yuri eten bloed",
     "location": "doornroosje",
     "price": null,
-    "shortText": "metal, progressive metal",
-    "longText": "../public/texts/doornroosje/d3cuZG9vcm5yb29zamUubmwvZXZlbnQvdm93ZXIv.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2024/11/VOWER-1200x630.jpg",
+    "shortText": "punk, comedy, theater",
+    "longText": "../public/texts/doornroosje/ZW50L21hZ2ljLXRvbS15dXJpLWV0ZW4tYmxvZWQv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/10/1600x800-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-04-27T20:00:00.000",
+    "start": "2025-04-27T20:45:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/gnod-white-hills/",
+    "title": "Gnod + White Hills",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "rock, kraut rock, psychedelische rock, noise rock, doornroosjepas",
+    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L2dub2Qtd2hpdGUtaGlsbHMv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/01/Gnod-White-Hills-1200x630.jpg",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "vower": {
-        "s": "4B27SA6MuuYfEbzz1BObjY",
-        "l": "vower",
+      "gnod": {
+        "s": "0M7HBnNJoTfTWouL5O7FtO",
+        "l": "gnod",
         "g": [
-          "progressive metal"
+          "double drumming",
+          "noise rock",
+          "uk noise rock"
         ]
       },
-      "metal": {
-        "s": null,
-        "l": "metal",
+      "white hills": {
+        "s": "0ttvGAnfEC6KZLrljUdIyX",
+        "l": "white%20hills",
         "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
+          "space rock",
+          "krautrock",
+          "psychedelic rock",
+          "stoner rock",
+          "acid rock",
+          "noise rock"
         ]
       }
     }
   },
   {
-    "door": "2025-02-06T21:00:00.000",
-    "start": "2025-02-06T22:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/cobra-the-impaler/",
-    "title": "Cobra the Impaler",
+    "door": "2025-05-02T20:00:00.000",
+    "start": "2025-05-02T20:30:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/wodan-boys-2/",
+    "title": "Wodan Boys",
     "location": "doornroosje",
     "price": null,
-    "shortText": "metal",
-    "longText": "../public/texts/doornroosje/amUubmwvZXZlbnQvY29icmEtdGhlLWltcGFsZXIv.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2024/09/Cobra-the-Impaler-1200x630.jpg",
+    "shortText": "+ Fuzzy Teethrock, punk",
+    "longText": "../public/texts/doornroosje/bnJvb3NqZS5ubC9ldmVudC93b2Rhbi1ib3lzLTIv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/11/Wodan-Boys-WEB-1200x630.jpg",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "cobra the impaler": {
-        "s": "3GF4mtTUUptBbUoJNclS4A",
-        "l": "cobra%20the%20impaler",
+      "wodan boys": {
+        "s": "0kmkbibevmq4luqquahdmr",
+        "l": "wodan%20boys",
         "g": [
-          "progressive metalcore"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-08T19:30:00.000",
-    "start": "2025-02-08T20:15:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/high-vis/",
-    "title": "High Vis",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Narrow Headrock, post punk, hardcore, doornroosjepas",
-    "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvaGlnaC12aXMv.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2024/07/High-Vis-min-1200x630.jpg",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "high vis": {
-        "s": "4gmrt82h2vjgjnp67sg5nw",
-        "l": "high%20vis",
-        "g": [
-          "uk post-punk revival"
-        ]
-      },
-      "hardcore": {
-        "s": "3N11n3hTyVlcOg77IGefjz",
-        "l": "hardcore",
-        "g": [
-          "death metal",
-          "hardcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-09T19:00:00.000",
-    "start": "2025-02-09T19:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/tesseract-4/",
-    "title": "Tesseract",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Novelists + The Omnificmetal, djent metal, progressieve metal",
-    "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvdGVzc2VyYWN0LTQv.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2024/07/Tesseract-1200x630.jpg",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "tesseract": {
-        "s": "23ytwhg1pzx6divwrwvw1r",
-        "l": "tesseract",
-        "g": [
-          "djent",
-          "progressive metal"
-        ]
-      },
-      "the omnific": {
-        "s": "5yn8jrJH5Z5PaGFStNUvgR",
-        "l": "the%20omnific",
-        "g": [
-          "djent",
-          "progressive jazz fusion"
-        ]
-      },
-      "novelists": {
-        "s": "6o8sdnihczpm1sixvjkiys",
-        "l": "novelists",
-        "g": [
-          "djent",
-          "melodic metalcore",
-          "metalcore"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
+          "dutch rock"
         ]
       }
     }

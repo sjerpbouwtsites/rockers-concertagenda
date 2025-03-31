@@ -1,5 +1,5 @@
 /* global document */
-import { workerData } from "worker_threads";
+import { threadId, workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import longTextSocialsIframes from "./longtext/dynamo.js";
 import getImage from "./gedeeld/image.js";
@@ -230,9 +230,14 @@ scraper.singlePage = async function ({ page, event }) {
         event,
         pageInfo
     );
+    if (!textForHTML || typeof textForHTML === "undefined") {
+        const eee = new Error(`geen textForHTML bij ${event.title}`);
+        this.handleError(eee);
+        pageInfo.textForHTML = "";
+    } else {
+        pageInfo.textForHTML = textForHTML;
+    }
     pageInfo.mediaForHTML = mediaForHTML;
-
-    pageInfo.textForHTML = textForHTML;
 
     return this.singlePageEnd({
         pageInfo,
