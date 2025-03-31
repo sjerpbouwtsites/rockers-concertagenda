@@ -147,11 +147,12 @@ export default class AbstractScraper extends ScraperConfig {
      *
      * @param {*} logSource wat dan ook.
      * @param {string} [key=null] hint voor in console.
+     * @param {dir/log} dir of log
      * @memberof AbstractScraper
      */
-    dirtyLog(logSource, key = null) {
+    dirtyLog(logSource, key = null, type = "dir") {
         const logThis = key ? { [`${key}`]: logSource } : logSource;
-        parentPort.postMessage(this.qwm.toConsole(logThis));
+        parentPort.postMessage(this.qwm.toConsole(logThis, type));
     }
 
     /**
@@ -213,7 +214,7 @@ export default class AbstractScraper extends ScraperConfig {
         );
 
         if (debugSettings.debugBaseEvents) {
-            this.dirtyLog(baseMusicEvents);
+            this.dirtyLog(baseMusicEvents, "base Music Events", "log");
         }
 
         if (!baseMusicEvents) {

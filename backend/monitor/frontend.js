@@ -233,18 +233,38 @@ function eventToClientsLog(eventMsg, fields) {
         console.dir(eventMsg);
         fields.errorField.updateError(updateErrorMsg);
     }
+
     if (eventMsg.subtype.includes("log")) {
         console.log("");
-        console.log(`${eventMsg.messageData?.content?.workerData?.name}`);
-        console.log(debug);
+
+        let tt = "";
+        let ttt = [];
+        try {
+            ttt = Object.keys(
+                eventMsg.messageData?.content?.debug ?? { noKey: true }
+            );
+            tt = ttt.join(" ");
+        } catch (error) {
+            console.error(error);
+        }
+
+        console.group(
+            `${tt} ${eventMsg.messageData?.content?.workerData?.name}`
+        );
+        ttt.forEach((t) => {
+            console.log(debug[t]);
+        });
+        console.groupEnd();
         return;
     }
     if (Array.isArray(debug)) {
-        console.log("");
-        console.log(`${eventMsg.messageData?.content?.workerData?.name}`);
-        console.dir(debug);
+        console.group(`${eventMsg.messageData?.content?.workerData?.name}`);
+        console.log(debug);
+        console.groupEnd();
     } else if (debug instanceof Object) {
-        console.dir(debug);
+        console.group(`${eventMsg.messageData?.content?.workerData?.name}`);
+        console.log(debug);
+        console.groupEnd();
         // const keys = Object.keys(debug);
         // const values = Object.values(debug);
         // // console.log(

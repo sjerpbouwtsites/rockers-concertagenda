@@ -532,6 +532,38 @@
     }
   },
   {
+    "door": "2025-04-10T19:30:00",
+    "start": "2025-04-10T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/starving-wolves",
+    "title": "Starving Wolves",
+    "location": "cpunt",
+    "price": 15,
+    "shortText": "Support: Disturbance",
+    "longText": "../public/texts/cpunt/cHVudC5ubC9hZ2VuZGEvc3RhcnZpbmctd29sdmVz.html",
+    "image": "../public/event-images/cpunt/cHVudC5ubC9hZ2VuZGEvc3RhcnZpbmctd29sdmVz",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "disturbance": {
+        "s": "2yomkyw73nz5n19dyzp0j8",
+        "l": "spain",
+        "g": [
+          "dutch punk",
+          "lowlands hardcore",
+          "grindcore"
+        ]
+      },
+      "starving wolves": {
+        "s": "2Z5MDcgKWhtCLSFkGaAsoq",
+        "l": "starving%20wolves",
+        "g": [
+          "punk"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-04-11T19:00:00",
     "venueEventUrl": "https://www.willemeen.nl/programma/metal-battle-2025/",
     "title": "Metal Battle 2025",
@@ -1416,7 +1448,7 @@
     "title": "Reaching As We Fall",
     "location": "cpunt",
     "price": 10,
-    "shortText": "Deeproot & I'll Get By",
+    "shortText": "Support: DEEPROOT & I'll Get By",
     "longText": "../public/texts/cpunt/Lm5sL2FnZW5kYS9yZWFjaGluZy1hcy13ZS1mYWxs.html",
     "image": "../public/event-images/cpunt/Lm5sL2FnZW5kYS9yZWFjaGluZy1hcy13ZS1mYWxs",
     "soldOut": false,
@@ -2022,6 +2054,31 @@
     }
   },
   {
+    "door": "2025-04-27T15:30:00",
+    "start": "2025-04-27T16:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/slugger-savage-beat",
+    "title": "Slugger & Savage Beat",
+    "location": "cpunt",
+    "price": 12.5,
+    "shortText": "Eurpean Tour 2025",
+    "longText": "../public/texts/cpunt/Lm5sL2FnZW5kYS9zbHVnZ2VyLXNhdmFnZS1iZWF0.html",
+    "image": "../public/event-images/cpunt/Lm5sL2FnZW5kYS9zbHVnZ2VyLXNhdmFnZS1iZWF0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "savage beat": {
+        "s": "5cX4t1wynwEgM2noNwJ4XF",
+        "l": "savage%20beat",
+        "g": [
+          "dutch punk",
+          "oi",
+          "skinhead oi"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-04-29T20:30:00",
     "start": "2025-04-29T20:30:00",
     "venueEventUrl": "https://www.paradiso.nl/en/program/motorpsycho/2432631",
@@ -2259,6 +2316,21 @@
     }
   },
   {
+    "door": "2025-05-03T20:00:00",
+    "start": "2025-05-03T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/hardcover-boneripper-tba",
+    "title": "Hardcover + Boneripper + TBA",
+    "location": "cpunt",
+    "price": 10,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/Z2VuZGEvaGFyZGNvdmVyLWJvbmVyaXBwZXItdGJh.html",
+    "image": "../public/event-images/cpunt/Z2VuZGEvaGFyZGNvdmVyLWJvbmVyaXBwZXItdGJh",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "title": "Against Evil en Angelic Forces",
     "start": "2025-05-04",
     "eventLocationName": "poppodium emmen",
@@ -2493,6 +2565,21 @@
         ]
       }
     }
+  },
+  {
+    "door": "2025-05-09T20:00:00",
+    "start": "2025-05-09T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/alternative-90s-october-rust-psychosocial",
+    "title": "Alternative 90s: October Rust + Psychosocial",
+    "location": "cpunt",
+    "price": 17.5,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/LTkwcy1vY3RvYmVyLXJ1c3QtcHN5Y2hvc29jaWFs.html",
+    "image": "../public/event-images/cpunt/LTkwcy1vY3RvYmVyLXJ1c3QtcHN5Y2hvc29jaWFs",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "door": "2025-05-09T19:00:00",
@@ -3805,6 +3892,32 @@
     }
   },
   {
+    "door": "2025-05-31T20:00:00",
+    "start": "2025-05-31T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/eyehategod",
+    "title": "Eyehategod",
+    "location": "cpunt",
+    "price": 22.5,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/d3d3LmNwdW50Lm5sL2FnZW5kYS9leWVoYXRlZ29k.html",
+    "image": "../public/event-images/cpunt/d3d3LmNwdW50Lm5sL2FnZW5kYS9leWVoYXRlZ29k",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "eyehategod": {
+        "s": "3brjxpdvt56y2g5ds3xyzs",
+        "l": "eyehategod",
+        "g": [
+          "doom metal",
+          "drone metal",
+          "louisiana metal",
+          "sludge metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-06-01T19:00:00",
     "start": "2025-06-01T20:00:00",
     "venueEventUrl": "https://patronaat.nl/event/living-colour-support-01-06-25/",
@@ -4904,6 +5017,40 @@
     }
   },
   {
+    "door": "2025-08-14T18:30:00",
+    "start": "2025-08-14T19:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/drowning-pool",
+    "title": "Drowning Pool",
+    "location": "cpunt",
+    "price": 25.5,
+    "shortText": "Support: Liliac & Terradown",
+    "longText": "../public/texts/cpunt/LmNwdW50Lm5sL2FnZW5kYS9kcm93bmluZy1wb29s.html",
+    "image": "../public/event-images/cpunt/LmNwdW50Lm5sL2FnZW5kYS9kcm93bmluZy1wb29s",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "terradown": {
+        "s": "376qQKIyviwh5xgbVj02LC",
+        "l": "terradown",
+        "g": [
+          "melodic death",
+          "groove metal"
+        ]
+      },
+      "drowning pool": {
+        "s": "1E4r4z7ivGUcSAnCbINJ9v",
+        "l": "drowning%20pool",
+        "g": [
+          "nu metal",
+          "alternative metal",
+          "rap metal",
+          "metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-08-14T19:00:00",
     "start": "2025-08-14T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/99823/blind-guardian",
@@ -5035,6 +5182,21 @@
     }
   },
   {
+    "door": "2025-09-12T20:00:00",
+    "start": "2025-09-12T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/oi-in-hoofddorp-festival",
+    "title": "Oi! in Hoofddorp Festival",
+    "location": "cpunt",
+    "price": 5,
+    "shortText": "Vrijdag & Zaterdag",
+    "longText": "../public/texts/cpunt/Z2VuZGEvb2ktaW4taG9vZmRkb3JwLWZlc3RpdmFs.html",
+    "image": "../public/event-images/cpunt/Z2VuZGEvb2ktaW4taG9vZmRkb3JwLWZlc3RpdmFs",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2025-09-12T19:00:00",
     "start": "2025-09-12T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/94542/ayreon",
@@ -5062,6 +5224,21 @@
         ]
       }
     }
+  },
+  {
+    "door": "2025-09-13T20:00:00",
+    "start": "2025-09-13T15:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/oi-in-hoofddorp-festival",
+    "title": "Oi! in Hoofddorp Festival",
+    "location": "cpunt",
+    "price": 5,
+    "shortText": "Vrijdag & Zaterdag",
+    "longText": "../public/texts/cpunt/Z2VuZGEvb2ktaW4taG9vZmRkb3JwLWZlc3RpdmFs.html",
+    "image": "../public/event-images/cpunt/Z2VuZGEvb2ktaW4taG9vZmRkb3JwLWZlc3RpdmFs",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "start": "2025-09-13T12:00:00",

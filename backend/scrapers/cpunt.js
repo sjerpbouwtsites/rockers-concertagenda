@@ -23,7 +23,9 @@ const scraper = new AbstractScraper({
     mainPage: {
         timeout: 30014,
         waitUntil: "load",
-        url: "https://www.cpunt.nl/agenda?q=&genre=metalpunkheavy&StartDate=&EndDate=#filter"
+        url: `https://www.cpunt.nl/agenda?q=&genre=metalpunkheavy&StartDate=${new Date()
+            .toISOString()
+            .substring(0, 10)}&EndDate=#filter`
     },
     singlePage: {
         timeout: 15000

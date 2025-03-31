@@ -7,7 +7,7 @@ export default async function longTextSocialsIframes(page, event) {
         ({ event }) => {
             const res = {};
             const mediaSelector = [".contentblock-Video iframe"].join(", ");
-            const textSelector = ".contentblock-TextOneColumn .text";
+            const textSelector = ".contentblock-TextOneColumn";
             const removeEmptyHTMLFrom = textSelector;
 
             const removeSelectors = [
@@ -31,7 +31,7 @@ export default async function longTextSocialsIframes(page, event) {
                 "onclick",
                 "aria-hidden"
             ];
-            const attributesToRemoveSecondRound = ["class", "id"];
+            const attributesToRemoveSecondRound = ["id"];
             const removeHTMLWithStrings = [];
 
             const mediaAttrRemSelAdd = `${
