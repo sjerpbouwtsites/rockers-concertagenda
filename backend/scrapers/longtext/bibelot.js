@@ -8,8 +8,7 @@ export default async function longTextSocialsIframes(page, event) {
             const res = {};
 
             const mediaSelector = [".vide0-block iframe"].join(", ");
-            const textSelector =
-                ".programmainfo-block .large-order-1.large-5.cell.fade-in";
+            const textSelector = ".grid-container p";
             const removeEmptyHTMLFrom = textSelector; // textSelector;
 
             const removeSelectors = [
