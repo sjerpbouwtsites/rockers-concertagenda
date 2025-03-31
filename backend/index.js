@@ -52,27 +52,27 @@ async function startWorker(workerConfig) {
     }
 
     // of er momenteel nog een base event list gemaakt word
-    if (
-        !WorkerStatus.familyDoneWithBaseEvents(thisConfig.family) &&
-        workingThisFamily
-    ) {
-        // console.log('base event needs to be finished solo');
-        workerConfig.takeBackRejected(thisConfig);
-        await waitTime(5);
-        return startWorker(workerConfig);
-    }
+    // if (
+    //     !WorkerStatus.familyDoneWithBaseEvents(thisConfig.family) &&
+    //     workingThisFamily
+    // ) {
+    //     // console.log('base event needs to be finished solo');
+    //     workerConfig.takeBackRejected(thisConfig);
+    //     await waitTime(5);
+    //     return startWorker(workerConfig);
+    // }
 
     // of nog niet alle families al werken
-    if (
-        workingThisFamily > 0 &&
-        WorkerStatus.familyDoneWithBaseEvents.length !==
-            WorkerStatus.numberOfFamilies
-    ) {
-        //  console.log('nog niet allen werken reeds');
-        workerConfig.takeBackRejected(thisConfig);
-        await waitTime(5);
-        return startWorker(workerConfig);
-    }
+    // if (
+    //     workingThisFamily > 0 &&
+    //     WorkerStatus.familyDoneWithBaseEvents.length !==
+    //         WorkerStatus.numberOfFamilies
+    // ) {
+    //     //  console.log('nog niet allen werken reeds');
+    //     workerConfig.takeBackRejected(thisConfig);
+    //     await waitTime(5);
+    //     return startWorker(workerConfig);
+    // }
 
     // als er niet veel OS ruimte is maar deze veel nodig heeft
     if (!WorkerStatus.OSHasALotOfSpace && thisConfig.CPUReq === "high") {
@@ -126,7 +126,6 @@ async function recursiveStartWorkers(workerConfig) {
 
 async function init() {
     const workerConfig = getWorkerConfig();
-    console.log(workerConfig);
     await houseKeeping();
 
     monitorWebsocketServer = await initMonitorBackend();

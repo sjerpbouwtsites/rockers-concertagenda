@@ -1,292 +1,5 @@
 [
   {
-    "start": "2025-01-30T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/91320/the-brian-jonestown-massacre",
-    "title": "The Brian Jonestown Massacre",
-    "location": "013",
-    "price": 34.8,
-    "shortText": "",
-    "longText": "../public/texts/013/MC90aGUtYnJpYW4tam9uZXN0b3duLW1hc3NhY3Jl.html",
-    "image": "../public/event-images/013/MC90aGUtYnJpYW4tam9uZXN0b3duLW1hc3NhY3Jl",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-02-02T17:00:00",
-    "start": "2025-02-02T17:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/90358/paganfest-2025",
-    "title": "Paganfest 2025",
-    "location": "013",
-    "price": 55.8,
-    "shortText": "ALESTORM - ENSIFERUM - TÝR - HEIDEVOLK - ELVENKING",
-    "longText": "../public/texts/013/cHJvZ3JhbW1hLzkwMzU4L3BhZ2FuZmVzdC0yMDI1.html",
-    "image": "../public/event-images/013/cHJvZ3JhbW1hLzkwMzU4L3BhZ2FuZmVzdC0yMDI1",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ensiferum": {
-        "s": "0krxcikthz13p8o0v2tksh",
-        "l": "ensiferum",
-        "g": [
-          "finnish melodeath",
-          "finnish metal",
-          "folk metal",
-          "melodic death metal",
-          "metal",
-          "nordic folk metal",
-          "power metal",
-          "symphonic metal",
-          "viking metal"
-        ]
-      },
-      "heidevolk": {
-        "s": "0a2yao4tufejvnn5hvjfxa",
-        "l": "heidevolk",
-        "g": [
-          "dutch metal",
-          "folk metal",
-          "viking metal"
-        ]
-      },
-      "alestorm": {
-        "s": "3opqu68jpzlzvjajj3b2da",
-        "l": "alestorm",
-        "g": [
-          "british power metal",
-          "comic metal",
-          "pirate",
-          "power metal",
-          "scottish metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-07T19:00:00",
-    "start": "2025-02-07T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/85967/leprous",
-    "title": "Leprous",
-    "location": "013",
-    "price": 37.3,
-    "shortText": "",
-    "longText": "../public/texts/013/MDEzLm5sL3Byb2dyYW1tYS84NTk2Ny9sZXByb3Vz.html",
-    "image": "../public/event-images/013/MDEzLm5sL3Byb2dyYW1tYS84NTk2Ny9sZXByb3Vz",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "leprous": {
-        "s": "4lgrzshsg2fla89um2fdo5",
-        "l": "leprous",
-        "g": [
-          "norwegian metal",
-          "prog metal",
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-14T20:00:00",
-    "start": "2025-02-14T20:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/92177/cobra-the-impaler",
-    "title": "Cobra The Impaler",
-    "location": "013",
-    "price": 18.3,
-    "shortText": "",
-    "longText": "../public/texts/013/Z3JhbW1hLzkyMTc3L2NvYnJhLXRoZS1pbXBhbGVy.html",
-    "image": "../public/event-images/013/Z3JhbW1hLzkyMTc3L2NvYnJhLXRoZS1pbXBhbGVy",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "cobra the impaler": {
-        "s": "3GF4mtTUUptBbUoJNclS4A",
-        "l": "cobra%20the%20impaler",
-        "g": [
-          "progressive metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-20T19:00:00",
-    "start": "2025-02-20T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/86139/love-letter",
-    "title": "Love Letter",
-    "location": "013",
-    "price": 17.3,
-    "shortText": "",
-    "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzg2MTM5L2xvdmUtbGV0dGVy.html",
-    "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzg2MTM5L2xvdmUtbGV0dGVy",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "love letter": {
-        "s": "41DJIv2qEvmvkcOsj7scTA",
-        "l": "love%20letter",
-        "g": [
-          "melodic hardcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-02T18:30:00",
-    "start": "2025-03-02T18:30:00",
-    "venueEventUrl": "https://www.013.nl/programma/93333/saxon",
-    "title": "Saxon",
-    "location": "013",
-    "price": 46.08,
-    "shortText": "Hell, Fire and Steel European Tour",
-    "longText": "../public/texts/013/dy4wMTMubmwvcHJvZ3JhbW1hLzkzMzMzL3NheG9u.html",
-    "image": "../public/event-images/013/dy4wMTMubmwvcHJvZ3JhbW1hLzkzMzMzL3NheG9u",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "saxon": {
-        "s": "71vVmHeNgCVSa5SVmfvscU",
-        "l": "saxon",
-        "g": [
-          "glam metal",
-          "hard rock",
-          "metal",
-          "nwobhm",
-          "power metal",
-          "nwobhm, heavy metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-12T19:00:00",
-    "start": "2025-03-12T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/88157/animals-as-leaders",
-    "title": "Animals As Leaders",
-    "location": "013",
-    "price": 34.8,
-    "shortText": "10 years ‘The Joy Of Motion’",
-    "longText": "../public/texts/013/cmFtbWEvODgxNTcvYW5pbWFscy1hcy1sZWFkZXJz.html",
-    "image": "../public/event-images/013/cmFtbWEvODgxNTcvYW5pbWFscy1hcy1sZWFkZXJz",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "animals as leaders": {
-        "s": "65c6unk7nhg2acnvuapmo8",
-        "l": "animals%20as%20leaders",
-        "g": [
-          "djent",
-          "instrumental djent",
-          "instrumental rock",
-          "jazz metal",
-          "progressive jazz fusion",
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-16T19:00:00",
-    "start": "2025-03-16T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/97793/zakk-sabbath",
-    "title": "Zakk Sabbath",
-    "location": "013",
-    "price": 44.8,
-    "shortText": "",
-    "longText": "../public/texts/013/bC9wcm9ncmFtbWEvOTc3OTMvemFray1zYWJiYXRo.html",
-    "image": "../public/event-images/013/bC9wcm9ncmFtbWEvOTc3OTMvemFray1zYWJiYXRo",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "abbath": {
-        "s": "1epgwdbju7jsgvbhlqptpx",
-        "l": "abbath",
-        "g": [
-          "black 'n' roll",
-          "black metal",
-          "death metal",
-          "metal",
-          "norwegian black metal",
-          "symphonic black metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-21T19:00:00",
-    "start": "2025-03-21T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/103545/ni",
-    "title": "Ni",
-    "location": "013",
-    "price": 18.3,
-    "shortText": "",
-    "longText": "../public/texts/013/d3d3LjAxMy5ubC9wcm9ncmFtbWEvMTAzNTQ1L25p.html",
-    "image": "../public/event-images/013/d3d3LjAxMy5ubC9wcm9ncmFtbWEvMTAzNTQ1L25p",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-03-27T20:00:00",
-    "start": "2025-03-27T20:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/103423/hexis",
-    "title": "Hexis",
-    "location": "013",
-    "price": 16,
-    "shortText": "15 years anniversary tour",
-    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvMTAzNDIzL2hleGlz.html",
-    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvMTAzNDIzL2hleGlz",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "hexis": {
-        "s": "1gA55xnafhPiBIM07ZlXHA",
-        "l": "hexis",
-        "g": [
-          "black metal",
-          "sludge metal",
-          "black metal",
-          "hardcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-02T19:00:00",
-    "start": "2025-04-02T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/98493/social-distortion",
-    "title": "Social Distortion",
-    "location": "013",
-    "price": 43.8,
-    "shortText": "European Tour 2025",
-    "longText": "../public/texts/013/Z3JhbW1hLzk4NDkzL3NvY2lhbC1kaXN0b3J0aW9u.html",
-    "image": "../public/event-images/013/Z3JhbW1hLzk4NDkzL3NvY2lhbC1kaXN0b3J0aW9u",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "social distortion": {
-        "s": "16nn7kCHPWIB6uK09GQCNI",
-        "l": "social%20distortion",
-        "g": [
-          "punk",
-          "punk 'n' roll",
-          "skate punk",
-          "socal pop punk"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-04-11T19:00:00",
     "start": "2025-04-11T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/103210/state-power",
@@ -311,165 +24,275 @@
     }
   },
   {
-    "start": "2025-04-18T14:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/90323/roadburn-2025-2",
+    "door": "2025-04-16T19:00:00",
+    "start": "2025-04-16T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/108558/the-spark",
+    "title": "The Spark",
+    "location": "013",
+    "price": 0,
+    "shortText": "Roadburn pre-party: Thou, Temple Fang, Rattenburcht",
+    "longText": "../public/texts/013/Lm5sL3Byb2dyYW1tYS8xMDg1NTgvdGhlLXNwYXJr.html",
+    "image": "../public/event-images/013/Lm5sL3Byb2dyYW1tYS8xMDg1NTgvdGhlLXNwYXJr",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "rattenburcht": {
+        "s": null,
+        "l": "rattenburcht",
+        "g": []
+      },
+      "temple fang": {
+        "s": null,
+        "l": null,
+        "g": [
+          "space rock",
+          "doom",
+          "psych",
+          "heavy psych",
+          "stoner"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-19T13:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/90329/roadburn-2025",
     "title": "Roadburn 2025",
     "location": "013",
     "price": 269,
-    "shortText": "envy, Thou, Messa, Midwife en meer",
-    "longText": "../public/texts/013/cm9ncmFtbWEvOTAzMjMvcm9hZGJ1cm4tMjAyNS0y.html",
-    "image": "../public/event-images/013/cm9ncmFtbWEvOTAzMjMvcm9hZGJ1cm4tMjAyNS0y",
+    "shortText": "Altın Gün, Chat Pile, Dødheimsgard, ØXN, Midwife en meer",
+    "longText": "../public/texts/013/L3Byb2dyYW1tYS85MDMyOS9yb2FkYnVybi0yMDI1.html",
+    "image": "../public/event-images/013/L3Byb2dyYW1tYS85MDMyOS9yb2FkYnVybi0yMDI1",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
   },
   {
-    "door": "2025-04-24T18:00:00",
-    "start": "2025-04-24T18:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/92107/aborted",
-    "title": "Aborted",
+    "door": "2025-04-25T19:00:00",
+    "start": "2025-04-25T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/97296/neckbreakker",
+    "title": "Neckbreakker",
     "location": "013",
-    "price": 28.3,
+    "price": 20.3,
     "shortText": "",
-    "longText": "../public/texts/013/MDEzLm5sL3Byb2dyYW1tYS85MjEwNy9hYm9ydGVk.html",
-    "image": "../public/event-images/013/MDEzLm5sL3Byb2dyYW1tYS85MjEwNy9hYm9ydGVk",
+    "longText": "../public/texts/013/bC9wcm9ncmFtbWEvOTcyOTYvbmVja2JyZWFra2Vy.html",
+    "image": "../public/event-images/013/bC9wcm9ncmFtbWEvOTcyOTYvbmVja2JyZWFra2Vy",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "aborted": {
-        "s": "1XRhUgCyzIdeT8d9KMfeDR",
-        "l": "aborted",
+      "neckbreakker": {
+        "s": "4bEKeZm7yf8aOqam6RI4cJ",
+        "l": "neckbreakker",
         "g": [
-          "belgian death metal",
-          "belgian metal",
-          "brutal death metal",
-          "death metal",
-          "deathgrind",
-          "goregrind",
-          "grindcore",
-          "technical death metal",
-          "death metal"
+          "death",
+          "groove metal"
         ]
       }
     }
   },
   {
-    "door": "2025-05-04T19:00:00",
-    "start": "2025-05-04T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/95081/swallow-the-sun",
-    "title": "Swallow The Sun",
+    "start": "2025-05-07T20:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/99309/cats-cult",
+    "title": "Cat's Cult",
     "location": "013",
-    "price": 27.3,
-    "shortText": "",
-    "longText": "../public/texts/013/cm9ncmFtbWEvOTUwODEvc3dhbGxvdy10aGUtc3Vu.html",
-    "image": "../public/event-images/013/cm9ncmFtbWEvOTUwODEvc3dhbGxvdy10aGUtc3Vu",
+    "price": 0,
+    "shortText": "The Protos + Waterschade",
+    "longText": "../public/texts/013/My5ubC9wcm9ncmFtbWEvOTkzMDkvY2F0cy1jdWx0.html",
+    "image": "../public/event-images/013/My5ubC9wcm9ncmFtbWEvOTkzMDkvY2F0cy1jdWx0",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "swallow the sun": {
-        "s": "0ulKlNlo0iPx5ZS6VMTHWQ",
-        "l": "swallow%20the%20sun",
+      "cat's cult": {
+        "s": "39easu1lufd34xctyotlvu",
+        "l": "cat's%20cult",
+        "g": []
+      },
+      "the protos": {
+        "s": "3AiDZWRonNaAuieCLcWUIF",
+        "l": "the%20protos",
         "g": [
-          "doom metal",
-          "finnish death metal",
-          "finnish doom metal",
-          "finnish melodeath",
-          "finnish metal",
-          "melodic death metal",
-          "melodic doom",
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-21T19:00:00",
-    "start": "2025-05-21T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/100500/weather-systems",
-    "title": "Weather Systems",
-    "location": "013",
-    "price": 29.3,
-    "shortText": "Oceans Without A Shore - Live in 25",
-    "longText": "../public/texts/013/b2dyYW1tYS8xMDA1MDAvd2VhdGhlci1zeXN0ZW1z.html",
-    "image": "../public/event-images/013/b2dyYW1tYS8xMDA1MDAvd2VhdGhlci1zeXN0ZW1z",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "weather systems": {
-        "s": "79pII4A4OPL8CZRfAmAZOq",
-        "l": "weather%20systems",
-        "g": [
-          "progressive rock",
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-06-07T19:00:00",
-    "start": "2025-06-07T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/103287/mojo-the-kitchen-brothers",
-    "title": "Mojo & The Kitchen Brothers",
-    "location": "013",
-    "price": 17.3,
-    "shortText": "",
-    "longText": "../public/texts/013/MzI4Ny9tb2pvLXRoZS1raXRjaGVuLWJyb3RoZXJz.html",
-    "image": "../public/event-images/013/MzI4Ny9tb2pvLXRoZS1raXRjaGVuLWJyb3RoZXJz",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "mojo": {
-        "s": "1nxfzZDDm0a0msuLz0W4lx",
-        "l": "mojo",
-        "g": [
-          "stoner",
-          "doom metal",
-          "rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-08-06T18:00:00",
-    "start": "2025-08-06T18:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/98543/dimmu-borgir",
-    "title": "Dimmu borgir",
-    "location": "013",
-    "price": 66.6,
-    "shortText": "The Chosen Legacy Tour 2025",
-    "longText": "../public/texts/013/bC9wcm9ncmFtbWEvOTg1NDMvZGltbXUtYm9yZ2ly.html",
-    "image": "../public/event-images/013/bC9wcm9ncmFtbWEvOTg1NDMvZGltbXUtYm9yZ2ly",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "dimmu borgir": {
-        "s": "6e8ISIsI7UQZPyEorefAhK",
-        "l": "dimmu%20borgir",
-        "g": [
-          "black metal",
-          "gothic metal",
-          "melodic death metal",
-          "metal",
-          "norwegian black metal",
-          "norwegian metal",
-          "power metal",
-          "speed metal",
-          "symphonic black metal",
-          "symphonic metal",
-          "viking metal",
-          "symphonic black metal"
+          "proto-punk",
+          "garage rock",
+          "power pop"
         ]
       },
-      "the chosen": {
-        "s": "5sywd6fu4rdgishox40hma",
-        "l": "the%20chosen",
-        "g": []
+      "waterschade": {
+        "s": "2YX33NJbnVmk7I3B3O2cdT",
+        "l": "waterschade",
+        "g": [
+          "hardcore punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-22T19:00:00",
+    "start": "2025-05-22T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/105578/deaf-f%C3%B6rever",
+    "title": "Deaf Förever",
+    "location": "013",
+    "price": 19.3,
+    "shortText": "Celebrating 50 years of Motörhead",
+    "longText": "../public/texts/013/cmFtbWEvMTA1NTc4L2RlYWYtZiVDMyVCNnJldmVy.html",
+    "image": "../public/event-images/013/cmFtbWEvMTA1NTc4L2RlYWYtZiVDMyVCNnJldmVy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "rhea": {
+        "s": "3iTqZTjeziB8WtVJeIUrLD",
+        "l": "rhea",
+        "g": [
+          "belgian rock",
+          "atmospheric death",
+          "doom metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-06-01T18:30:00",
+    "start": "2025-06-01T18:30:00",
+    "venueEventUrl": "https://www.013.nl/programma/106299/reformist",
+    "title": "Reformist",
+    "location": "013",
+    "price": 16,
+    "shortText": "Album Release Show",
+    "longText": "../public/texts/013/Lm5sL3Byb2dyYW1tYS8xMDYyOTkvcmVmb3JtaXN0.html",
+    "image": "../public/event-images/013/Lm5sL3Byb2dyYW1tYS8xMDYyOTkvcmVmb3JtaXN0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "reformist": {
+        "s": "6xFMODZuwYPuLeILtpuOqI",
+        "l": "reformist",
+        "g": [
+          "metalcore",
+          "deathcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-06-06T18:30:00",
+    "start": "2025-06-06T18:30:00",
+    "venueEventUrl": "https://www.013.nl/programma/106183/neal-morse-the-resonance-the-flower-kings",
+    "title": "Neal Morse & the Resonance + The Flower Kings",
+    "location": "013",
+    "price": 42.8,
+    "shortText": "Accross Europe 2025",
+    "longText": "../public/texts/013/dGhlLXJlc29uYW5jZS10aGUtZmxvd2VyLWtpbmdz.html",
+    "image": "../public/event-images/013/dGhlLXJlc29uYW5jZS10aGUtZmxvd2VyLWtpbmdz",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-06-11T18:00:00",
+    "start": "2025-06-11T18:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/99920/king-diamond",
+    "title": "King Diamond",
+    "location": "013",
+    "price": 66.6,
+    "shortText": "",
+    "longText": "../public/texts/013/bC9wcm9ncmFtbWEvOTk5MjAva2luZy1kaWFtb25k.html",
+    "image": "../public/event-images/013/bC9wcm9ncmFtbWEvOTk5MjAva2luZy1kaWFtb25k",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "king diamond": {
+        "s": "5i0ph60TnwTlIGrOZAmcZa",
+        "l": "king%20diamond",
+        "g": [
+          "danish metal",
+          "hard rock",
+          "metal",
+          "thrash metal",
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-06-19T19:00:00",
+    "start": "2025-06-19T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/105358/skillet",
+    "title": "Skillet",
+    "location": "013",
+    "price": 42.3,
+    "shortText": "",
+    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzEwNTM1OC9za2lsbGV0.html",
+    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzEwNTM1OC9za2lsbGV0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-07-29T19:00:00",
+    "start": "2025-07-29T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/100388/tarja",
+    "title": "Tarja",
+    "location": "013",
+    "price": 39.8,
+    "shortText": "LIVING THE DREAM – THE HITS TOUR SUMMER 2025",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvMTAwMzg4L3Rhcmph.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvMTAwMzg4L3Rhcmph",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "tarja": {
+        "s": "5IRFMGI8aEtZdN07OYrBZc",
+        "l": "tarja",
+        "g": [
+          "gothic metal",
+          "gothic symphonic metal",
+          "hel",
+          "opera metal",
+          "power metal",
+          "symphonic metal",
+          "symphonic metal",
+          "rock, neoclassical"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-14T19:00:00",
+    "start": "2025-08-14T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/99823/blind-guardian",
+    "title": "Blind Guardian",
+    "location": "013",
+    "price": 34.8,
+    "shortText": "The God Machine Tour 2025",
+    "longText": "../public/texts/013/cHJvZ3JhbW1hLzk5ODIzL2JsaW5kLWd1YXJkaWFu.html",
+    "image": "../public/event-images/013/cHJvZ3JhbW1hLzk5ODIzL2JsaW5kLWd1YXJkaWFu",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "blind guardian": {
+        "s": "7jxj25p0ppjk0mstlon6o6",
+        "l": "germany",
+        "g": [
+          "fantasy metal",
+          "german metal",
+          "german power metal",
+          "metal",
+          "power metal",
+          "speed metal",
+          "symphonic metal",
+          "speed metal",
+          "power metal"
+        ]
       }
     }
   },
@@ -561,25 +384,94 @@
     }
   },
   {
-    "door": "2025-12-16T19:00:00",
-    "start": "2025-12-16T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/98930/imminence",
-    "title": "Imminence",
+    "door": "2025-10-18T18:00:00",
+    "start": "2025-10-18T18:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/96905/helloween-beast-in-black",
+    "title": "Helloween + Beast In Black",
     "location": "013",
-    "price": 38.8,
-    "shortText": "The Black Finale - Live with String Quartet",
-    "longText": "../public/texts/013/My5ubC9wcm9ncmFtbWEvOTg5MzAvaW1taW5lbmNl.html",
-    "image": "../public/event-images/013/My5ubC9wcm9ncmFtbWEvOTg5MzAvaW1taW5lbmNl",
+    "price": 55.8,
+    "shortText": "Helloween 40 Years Anniversary Tour",
+    "longText": "../public/texts/013/OTY5MDUvaGVsbG93ZWVuLWJlYXN0LWluLWJsYWNr.html",
+    "image": "../public/event-images/013/OTY5MDUvaGVsbG93ZWVuLWJlYXN0LWluLWJsYWNr",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "imminence": {
-        "s": "7rqJQQxuUOCk052MK5kLsH",
-        "l": "imminence",
+      "beast in black": {
+        "s": "0reuatplmhlvincjrg3neh",
+        "l": "beast%20in%20black",
         "g": [
-          "metalcore",
-          "swedish metalcore"
+          "finnish heavy metal",
+          "finnish power metal",
+          "power metal"
+        ]
+      },
+      "helloween": {
+        "s": "4pQN0GB0fNEEOfQCaWotsY",
+        "l": "helloween",
+        "g": [
+          "german metal",
+          "german power metal",
+          "hard rock",
+          "metal",
+          "old school thrash",
+          "power metal",
+          "speed metal",
+          "symphonic metal",
+          "thrash metal",
+          "power",
+          "speed metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-11-03T18:00:00",
+    "start": "2025-11-03T18:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/106847/the-plot-in-you",
+    "title": "The Plot In You",
+    "location": "013",
+    "price": 39.8,
+    "shortText": "",
+    "longText": "../public/texts/013/b2dyYW1tYS8xMDY4NDcvdGhlLXBsb3QtaW4teW91.html",
+    "image": "../public/event-images/013/b2dyYW1tYS8xMDY4NDcvdGhlLXBsb3QtaW4teW91",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the plot in you": {
+        "s": "1cJ5tVoeAEFcZBAwSZ0CtF",
+        "l": "the%20plot%20in%20you",
+        "g": [
+          "metalcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-11-07T19:00:00",
+    "start": "2025-11-07T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/106045/ad-infinitum",
+    "title": "Ad Infinitum",
+    "location": "013",
+    "price": 26.3,
+    "shortText": "Into the abyss tour 2025",
+    "longText": "../public/texts/013/L3Byb2dyYW1tYS8xMDYwNDUvYWQtaW5maW5pdHVt.html",
+    "image": "../public/event-images/013/L3Byb2dyYW1tYS8xMDYwNDUvYWQtaW5maW5pdHVt",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ad infinitum": {
+        "s": "2X3qFQFHkm1sOGo5ppIoSD",
+        "l": "ad%20infinitum",
+        "g": [
+          "gothic symphonic metal",
+          "melodic metal",
+          "slayer",
+          "symphonic metal",
+          "symphonic metal",
+          "rock"
         ]
       }
     }

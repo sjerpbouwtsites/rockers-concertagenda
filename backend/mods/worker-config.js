@@ -13,20 +13,20 @@ export const AbstractWorkerConfig = {
 };
 
 export const workerConfig = {
-    "013": {
-        workerCount: 3,
-        CPUReq: "low",
-        workerConcurrent: 3,
+    // "013": {
+    //     workerCount: 3,
+    //     CPUReq: "low",
+    //     workerConcurrent: 3,
+    //     forceSet: 0
+    // }
+    afaslive: {
+        workerCount: 1,
+        workerConcurrent: 2,
         forceSet: 0
     }
-    // afaslive: {
-    //     workerCount: 1,
-    //     workerConcurrent: 2,
-    //     forceSet: 0
-    // },
-    // baroeg: { workerCount: 1, workerConcurrent: 2, forceSet: 0 },
+    // baroeg: { workerCount: 1, workerConcurrent: 2, forceSet: 0 }
     // bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
-    // cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
+    // cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 }
     // dbs: {
     //     workerCount: 3,
     //     workerConcurrent: 3,
@@ -209,7 +209,7 @@ class WorkerListConf {
             return true;
         }
         if (shell.force?.includes(familyName) ?? null) return true;
-        if (familyName.includes("metalfan")) return false; // metalfan alleen bij all of force
+
         if (!this.baseEventlistsStart.join("").includes(familyName))
             return true;
         const actueelGevonden = this.baseEventlistsStart.find(

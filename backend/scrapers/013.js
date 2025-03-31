@@ -1,9 +1,8 @@
 /* global document */
-import { threadId, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import longTextSocialsIframes from "./longtext/013.js";
 import {
-    mapToStartDate,
     mapToDoorTime,
     mapToEndTime,
     mapToStartTime,
@@ -55,7 +54,7 @@ scraper.mainPage = async function () {
     const availableBaseEvents = await this.checkBaseEventAvailable(
         workerData.family
     );
-    this.dirtyLog(availableBaseEvents);
+
     if (availableBaseEvents) {
         const thisWorkersEvents = availableBaseEvents.filter(
             (eventEl, index) =>

@@ -232,6 +232,11 @@ scraper.singlePage = async function ({ page, event }) {
 
     pageInfo.textForHTML = textForHTML;
 
+    this.dirtyDebug({
+        textForHTMLVan: event.title,
+        text: textForHTML
+    });
+
     return this.singlePageEnd({
         pageInfo,
         stopFunctie,
