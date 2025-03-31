@@ -1,195 +1,542 @@
 [
   {
-    "start": "2025-01-26T16:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/savage-beat-malad-diamond-dogs/",
-    "title": "Savage Beat + Malad + City Riot",
+    "start": "2025-04-05T21:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/deepwhite-deep-purple-whitesnake-tribute/",
+    "title": "DeepWhite – Deep Purple & Whitesnake Tribute",
     "location": "littledevil",
     "price": 10,
-    "shortText": "streetpunk matinee",
-    "longText": "../public/texts/littledevil/YXZhZ2UtYmVhdC1tYWxhZC1kaWFtb25kLWRvZ3Mv.html",
-    "image": "../public/event-images/littledevil/YXZhZ2UtYmVhdC1tYWxhZC1kaWFtb25kLWRvZ3Mv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "savage beat": {
-        "s": "5cX4t1wynwEgM2noNwJ4XF",
-        "l": "savage%20beat",
-        "g": [
-          "dutch punk",
-          "oi",
-          "skinhead oi"
-        ]
-      },
-      "city riot": {
-        "s": "5A91FYahDG9GH37wuL61rr",
-        "l": "city%20riot",
-        "g": [
-          "hardcore punk"
-        ]
-      },
-      "malad": {
-        "s": "21fzlwdq72k9w3ozypcxyr",
-        "l": null,
-        "g": [
-          "punk",
-          "street punk"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-01-31T19:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/remain-untamed-chaos-unleashed-acidbait-fading-echo/",
-    "title": "Remain Untamed ",
-    "location": "littledevil",
-    "price": 5,
-    "shortText": " Hallowed Fire  +  Acidbait  +  Fading Echo EP release party - thrash metal - presented by HB concerts",
-    "longText": "../public/texts/littledevil/bmxlYXNoZWQtYWNpZGJhaXQtZmFkaW5nLWVjaG8v.html",
-    "image": "../public/event-images/littledevil/bmxlYXNoZWQtYWNpZGJhaXQtZmFkaW5nLWVjaG8v",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "acidbait": {
-        "s": "2yaxHzLBIPiwA9eRqce2hk",
-        "l": "acidbait",
-        "g": [
-          "groove metal"
-        ]
-      },
-      "fading": {
-        "s": null,
-        "l": "fading",
-        "g": [
-          "epic",
-          "melodic death metal"
-        ]
-      },
-      "echo": {
-        "s": "0fgykf9avljex0l9wt5b8z",
-        "l": "echo",
-        "g": [
-          "alternative rock",
-          "new romantic",
-          "new wave",
-          "permanent wave"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-02-01T20:30:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/schirenc-plays-pungent-stench-at/",
-    "title": "Schirenc plays Pungent Stench (AT)",
-    "location": "littledevil",
-    "price": 18.5,
-    "shortText": "death metal",
-    "longText": "../public/texts/littledevil/aXJlbmMtcGxheXMtcHVuZ2VudC1zdGVuY2gtYXQv.html",
-    "image": "../public/event-images/littledevil/aXJlbmMtcGxheXMtcHVuZ2VudC1zdGVuY2gtYXQv",
+    "shortText": "Deep Purple & Whitesnake tribute - presented by H&H concerts",
+    "longText": "../public/texts/littledevil/ZWVwLXB1cnBsZS13aGl0ZXNuYWtlLXRyaWJ1dGUv.html",
+    "image": "../public/event-images/littledevil/ZWVwLXB1cnBsZS13aGl0ZXNuYWtlLXRyaWJ1dGUv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {}
   },
   {
-    "start": "2025-02-02T14:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/paganfest-picknick-free-warmup-show-with-mourning-wood/",
-    "title": "Paganfest Picknick – Free warmup-show with Mourning Wood",
+    "start": "2025-04-06T18:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/mean-mistreater-usa-violent-sin-b/",
+    "title": "Mean Mistreater (USA) + Violent Sin (B)",
+    "location": "littledevil",
+    "price": 10,
+    "shortText": "heavy metal - speed metal - presented by Rusty Nails",
+    "longText": "../public/texts/littledevil/LW1pc3RyZWF0ZXItdXNhLXZpb2xlbnQtc2luLWIv.html",
+    "image": "../public/event-images/littledevil/LW1pc3RyZWF0ZXItdXNhLXZpb2xlbnQtc2luLWIv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "mean mistreater": {
+        "s": "53cmpvEngBVcRTdEDLsHzU",
+        "l": "mean%20mistreater",
+        "g": [
+          "speed metal",
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-11T19:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/state-power-braces-premonition/",
+    "title": "State Power + BRACES + Premonition",
+    "location": "littledevil",
+    "price": 11.7,
+    "shortText": "hardcore punk - hardcore - deathcore",
+    "longText": "../public/texts/littledevil/dGF0ZS1wb3dlci1icmFjZXMtcHJlbW9uaXRpb24v.html",
+    "image": "../public/event-images/littledevil/dGF0ZS1wb3dlci1icmFjZXMtcHJlbW9uaXRpb24v",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "state power": {
+        "s": "2ZksA5DzgDlR4hTXquufqU",
+        "l": "state%20power",
+        "g": [
+          "hardcore punk",
+          "hardcore"
+        ]
+      },
+      "braces": {
+        "s": "1oZBET0PBRusndmvbnlz9W",
+        "l": "braces",
+        "g": [
+          "black",
+          "deathcore",
+          "oi!",
+          "punk",
+          "street punk",
+          "thrash metal"
+        ]
+      },
+      "premonition": {
+        "s": "0vShN5Qc9EG8nfPQnCICth",
+        "l": "premonition",
+        "g": [
+          "hardcore",
+          "hardcore punk",
+          "melodic heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-12T20:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/bruusk-suicide-prophet/",
+    "title": "Bruusk + Suicide Prophet",
     "location": "littledevil",
     "price": 0,
-    "shortText": " Paganfest - warmup-show",
-    "longText": "../public/texts/littledevil/YXJtdXAtc2hvdy13aXRoLW1vdXJuaW5nLXdvb2Qv.html",
-    "image": "../public/event-images/littledevil/YXJtdXAtc2hvdy13aXRoLW1vdXJuaW5nLXdvb2Qv",
+    "shortText": "melodic groove metal - groovy hardcore - open feest",
+    "longText": "../public/texts/littledevil/bGVuZGFyL2JydXVzay1zdWljaWRlLXByb3BoZXQv.html",
+    "image": "../public/event-images/littledevil/bGVuZGFyL2JydXVzay1zdWljaWRlLXByb3BoZXQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "bruusk": {
+        "s": "2zoRLs3IPbxDiqr54xP2KA",
+        "l": "bruusk",
+        "g": [
+          "melodic death",
+          "groove metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-13T14:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/dwaalboktour-lente-2025/",
+    "title": "Dwaalboktour Lente 2025",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": "",
+    "longText": "../public/texts/littledevil/ZW5kYXIvZHdhYWxib2t0b3VyLWxlbnRlLTIwMjUv.html",
+    "image": "../public/event-images/littledevil/ZW5kYXIvZHdhYWxib2t0b3VyLWxlbnRlLTIwMjUv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {}
   },
   {
-    "start": "2025-02-07T19:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/noctambulist-yantras-radeloos-ziedend/",
-    "title": "Noctambulist + Yantras + Radeloos///Ziedend",
+    "start": "2025-04-15T17:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/offroad-night-of-the-devils-beer-menu/",
+    "title": "OFFROAD: Night of the Devil’s Beer Menu",
     "location": "littledevil",
-    "price": 5,
-    "shortText": "release show - post-black metal - post-doom",
-    "longText": "../public/texts/littledevil/bGlzdC15YW50cmFzLXJhZGVsb29zLXppZWRlbmQv.html",
-    "image": "../public/event-images/littledevil/bGlzdC15YW50cmFzLXJhZGVsb29zLXppZWRlbmQv",
+    "price": null,
+    "shortText": "DJ Read more",
+    "longText": "../public/texts/littledevil/bmlnaHQtb2YtdGhlLWRldmlscy1iZWVyLW1lbnUv.html",
+    "image": "../public/event-images/littledevil/bmlnaHQtb2YtdGhlLWRldmlscy1iZWVyLW1lbnUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-04-16T17:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/offroad-request-night/",
+    "title": "Offroad: request night",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": "Heavy beer drinking and headbanging",
+    "longText": "../public/texts/littledevil/YWxlbmRhci9vZmZyb2FkLXJlcXVlc3QtbmlnaHQv.html",
+    "image": "../public/event-images/littledevil/YWxlbmRhci9vZmZyb2FkLXJlcXVlc3QtbmlnaHQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-04-17T15:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/offroad-mantra-machine-duskhead/",
+    "title": "OFFROAD: Mantra Machine + Duskhead",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": "Heavy beer drinking and headbanging - DJ",
+    "longText": "../public/texts/littledevil/ZnJvYWQtbWFudHJhLW1hY2hpbmUtZHVza2hlYWQv.html",
+    "image": "../public/event-images/littledevil/ZnJvYWQtbWFudHJhLW1hY2hpbmUtZHVza2hlYWQv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "radeloos///ziedend": {
-        "s": "6l0nxnfykkn3chx6mw1xcj",
-        "l": "radeloos///ziedend",
-        "g": []
-      },
-      "noctambulist": {
-        "s": "1k7JWDTAwZRGoGg9rCxU2o",
-        "l": "noctambulist",
+      "duskhead": {
+        "s": "3qCh50gtiPJ2MiTq23Dyno",
+        "l": "duskhead",
         "g": [
-          "black metal",
-          "post-black metal"
-        ]
-      },
-      "yantras": {
-        "s": "4JUyZMVdrUBchwH8c2asWY",
-        "l": "yantras",
-        "g": [
-          "sludge metal",
           "stoner rock"
         ]
       }
     }
   },
   {
-    "start": "2025-02-14T20:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/cobra-the-impaler/",
-    "title": "Cobra The Impaler",
+    "start": "2025-04-18T15:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/offroad-an-evening-with-knives-oltas-dead-duck/",
+    "title": "Offroad: an evening with knives ",
     "location": "littledevil",
-    "price": 18.3,
-    "shortText": "heavy metal",
-    "longText": "../public/texts/littledevil/bmwvY2FsZW5kYXIvY29icmEtdGhlLWltcGFsZXIv.html",
-    "image": "../public/event-images/littledevil/bmwvY2FsZW5kYXIvY29icmEtdGhlLWltcGFsZXIv",
+    "price": 0,
+    "shortText": " oltas  +  dead duck Heavy beer drinking and headbanging - DJ",
+    "longText": "../public/texts/littledevil/Zy13aXRoLWtuaXZlcy1vbHRhcy1kZWFkLWR1Y2sv.html",
+    "image": "../public/event-images/littledevil/Zy13aXRoLWtuaXZlcy1vbHRhcy1kZWFkLWR1Y2sv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "cobra the impaler": {
-        "s": "3GF4mtTUUptBbUoJNclS4A",
-        "l": "cobra%20the%20impaler",
+      "an evening with knives": {
+        "s": "3FAXLvVlUZ34x2nlGr570X",
+        "l": "an%20evening%20with%20knives",
         "g": [
-          "progressive metalcore"
+          "dutch stoner rock",
+          "stoner",
+          "doom metal",
+          "rock"
+        ]
+      },
+      "knives": {
+        "s": "2YoHhPouaTT96k3dUQ8WZK",
+        "l": "knives",
+        "g": [
+          "grindcore",
+          "death 'n' roll"
+        ]
+      },
+      "oltas": {
+        "s": "1vXOgdgPzetuJTXlbHi6Qi",
+        "l": "oltas",
+        "g": [
+          "doom",
+          "death metal"
         ]
       }
     }
   },
   {
-    "start": "2025-03-01T09:30:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/woa-metal-battle-voorronde-noord-brabant/",
-    "title": "W:O:A: Metal Battle Voorronde Noord-Brabant",
+    "start": "2025-04-19T15:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/offroad-ibex-angel-order-dystopia-alkahest/",
+    "title": "OFFROAD: Ibex Angel Order ",
     "location": "littledevil",
     "price": 0,
-    "shortText": "W:O:A: Metal Battle",
-    "longText": "../public/texts/littledevil/YXR0bGUtdm9vcnJvbmRlLW5vb3JkLWJyYWJhbnQv.html",
-    "image": "../public/event-images/littledevil/YXR0bGUtdm9vcnJvbmRlLW5vb3JkLWJyYWJhbnQv",
+    "shortText": " Dystopia  +  Alkahest Heavy beer drinking and headbanging - DJ",
+    "longText": "../public/texts/littledevil/YW5nZWwtb3JkZXItZHlzdG9waWEtYWxrYWhlc3Qv.html",
+    "image": "../public/event-images/littledevil/YW5nZWwtb3JkZXItZHlzdG9waWEtYWxrYWhlc3Qv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "battle": {
-        "s": null,
-        "l": "battle",
+      "alkahest": {
+        "s": "53vjMkvxWt9UZAXlnwsPrj",
+        "l": "alkahest",
         "g": [
-          "black metal"
+          "atmospheric sludge",
+          "doom metal",
+          "post-rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-20T15:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/offroad-bark-cthuluminati/",
+    "title": "Offroad: bark + cthuluminati",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": "Heavy beer drinking and headbanging - DJ",
+    "longText": "../public/texts/littledevil/ZGFyL29mZnJvYWQtYmFyay1jdGh1bHVtaW5hdGkv.html",
+    "image": "../public/event-images/littledevil/ZGFyL29mZnJvYWQtYmFyay1jdGh1bHVtaW5hdGkv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "bark": {
+        "s": "6bCDvJKQCr3404Fe1j7egd",
+        "l": "bark",
+        "g": [
+          "j-rap",
+          "groove metal",
+          "death 'n' roll"
         ]
       },
-      "metal": {
-        "s": null,
-        "l": "metal",
+      "cthuluminati": {
+        "s": "3nVkXWKJxipv27aqVAb0nW",
+        "l": "cthuluminati",
         "g": [
-          "death metal"
+          "progressive",
+          "blackened stoner",
+          "doom metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-25T20:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/neckbreakker-dk-galge-dk/",
+    "title": "Neckbreakker (DK) + Galge (DK)",
+    "location": "littledevil",
+    "price": 17,
+    "shortText": "death metal - death-black",
+    "longText": "../public/texts/littledevil/bmRhci9uZWNrYnJlYWtrZXItZGstZ2FsZ2UtZGsv.html",
+    "image": "../public/event-images/littledevil/bmRhci9uZWNrYnJlYWtrZXItZGstZ2FsZ2UtZGsv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "neckbreakker": {
+        "s": "4bEKeZm7yf8aOqam6RI4cJ",
+        "l": "neckbreakker",
+        "g": [
+          "death",
+          "groove metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-26T19:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/rising-tides-fest-2025-kanine-f-stalk-out-of-the-blue/",
+    "title": "Rising Tides Fest 2025: Kanine (F) ",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": " Stalk  +  Out of the Blue ",
+    "longText": "../public/texts/littledevil/YW5pbmUtZi1zdGFsay1vdXQtb2YtdGhlLWJsdWUv.html",
+    "image": "../public/event-images/littledevil/YW5pbmUtZi1zdGFsay1vdXQtb2YtdGhlLWJsdWUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "talk": {
+        "s": null,
+        "l": "talk",
+        "g": [
+          "crossover",
+          "hardcore",
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-27T19:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/rising-tides-fest-2025-changing-tides-torn-from-oblivion-deeproot-bloodcrypt-canyon-literature/",
+    "title": "Rising Tides Fest 2025: Changing Tides ",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": " Torn From Oblivion  +  DEEPROOT  +  Bloodcrypt  +  Canyon Literature ",
+    "longText": "../public/texts/littledevil/LWJsb29kY3J5cHQtY2FueW9uLWxpdGVyYXR1cmUv.html",
+    "image": "../public/event-images/littledevil/LWJsb29kY3J5cHQtY2FueW9uLWxpdGVyYXR1cmUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "changing tides": {
+        "s": "4fdvjqh3xqrmfvpb4n5hqu",
+        "l": "changing%20tides",
+        "g": []
+      },
+      "bloodcrypt": {
+        "s": null,
+        "l": "bloodcrypt",
+        "g": []
+      },
+      "deeproot": {
+        "s": "497D31qNuomZa2eCIOuEa5",
+        "l": "deeproot",
+        "g": [
+          "deathcore"
         ]
       },
-      "meta": {
-        "s": null,
-        "l": "meta",
+      "torn from oblivion": {
+        "s": "5IXqeHYM84k26hwnTNDuZS",
+        "l": "torn%20from%20oblivion",
         "g": [
-          "groove",
-          "progressive metal"
+          "deathcore",
+          "metalcore"
+        ]
+      },
+      "canyon literature": {
+        "s": "4KXXP4WTgnzQQQgv77cagF",
+        "l": "canyon%20literature",
+        "g": [
+          "deathcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-28T18:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/mdc-usa-barackca-hun/",
+    "title": "Mdc (usa) + barackca (hun)",
+    "location": "littledevil",
+    "price": 15,
+    "shortText": "hardcore punk pioneers",
+    "longText": "../public/texts/littledevil/Y2FsZW5kYXIvbWRjLXVzYS1iYXJhY2tjYS1odW4v.html",
+    "image": "../public/event-images/littledevil/Y2FsZW5kYXIvbWRjLXVzYS1iYXJhY2tjYS1odW4v",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-05-03T21:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/bob-wayne-uitverkocht/",
+    "title": "Bob Wayne (uitverkocht)",
+    "location": "littledevil",
+    "price": 16,
+    "shortText": "outlaw country - folk - soul - punk - country",
+    "longText": "../public/texts/littledevil/YWxlbmRhci9ib2Itd2F5bmUtdWl0dmVya29jaHQv.html",
+    "image": "../public/event-images/littledevil/YWxlbmRhci9ib2Itd2F5bmUtdWl0dmVya29jaHQv",
+    "soldOut": [
+      "uitverkocht"
+    ],
+    "eventGenres": null,
+    "artists": {
+      "bob wayne": {
+        "s": "6LWREZSd4429wq2MHt3KC4",
+        "l": "bob%20wayne",
+        "g": [
+          "gothic country",
+          "psychobilly",
+          "rockabilly",
+          "bluegrass",
+          "alt country"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-10T15:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/little-devil-doom-day-v-2/",
+    "title": "Little Devil Doom Day VII",
+    "location": "littledevil",
+    "price": 25,
+    "shortText": "",
+    "longText": "../public/texts/littledevil/ZGFyL2xpdHRsZS1kZXZpbC1kb29tLWRheS12LTIv.html",
+    "image": "../public/event-images/littledevil/ZGFyL2xpdHRsZS1kZXZpbC1kb29tLWRheS12LTIv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-05-29T20:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/2-minutes-2-midnight-lds-2-voor-12-variant-3/",
+    "title": "2 Minutes 2 Midnight – LD’s 2 voor 12 variant",
+    "location": "littledevil",
+    "price": 2,
+    "shortText": "quizmaster Peter - aanmelden via E-mail",
+    "longText": "../public/texts/littledevil/bmlnaHQtbGRzLTItdm9vci0xMi12YXJpYW50LTMv.html",
+    "image": "../public/event-images/littledevil/bmlnaHQtbGRzLTItdm9vci0xMi12YXJpYW50LTMv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-05-30T21:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/vengeance-uitverkocht/",
+    "title": "Vengeance (uitverkocht)",
+    "location": "littledevil",
+    "price": 10,
+    "shortText": "dutch hardrock - classic heavy rock - presented by H&H concerts",
+    "longText": "../public/texts/littledevil/YWxlbmRhci92ZW5nZWFuY2UtdWl0dmVya29jaHQv.html",
+    "image": "../public/event-images/littledevil/YWxlbmRhci92ZW5nZWFuY2UtdWl0dmVya29jaHQv",
+    "soldOut": [
+      "uitverkocht"
+    ],
+    "eventGenres": null,
+    "artists": {
+      "vengeance": {
+        "s": "0rkZewDpEnFUDab7m5A4Tz",
+        "l": "vengeance",
+        "g": [
+          "frenchcore",
+          "hardcore",
+          "heavy",
+          "speed metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-31T21:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/vengeance-extra-show/",
+    "title": "Vengeance (extra show)",
+    "location": "littledevil",
+    "price": 10,
+    "shortText": "dutch hardrock - classic heavy rock - presented by H&H concerts",
+    "longText": "../public/texts/littledevil/Y2FsZW5kYXIvdmVuZ2VhbmNlLWV4dHJhLXNob3cv.html",
+    "image": "../public/event-images/littledevil/Y2FsZW5kYXIvdmVuZ2VhbmNlLWV4dHJhLXNob3cv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "vengeance": {
+        "s": "0rkZewDpEnFUDab7m5A4Tz",
+        "l": "vengeance",
+        "g": [
+          "frenchcore",
+          "hardcore",
+          "heavy",
+          "speed metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-06-06T20:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/tygers-of-pan-tang-uk/",
+    "title": "Tygers of pan tang (uk)",
+    "location": "littledevil",
+    "price": 13.5,
+    "shortText": "NWOBHM",
+    "longText": "../public/texts/littledevil/YWxlbmRhci90eWdlcnMtb2YtcGFuLXRhbmctdWsv.html",
+    "image": "../public/event-images/littledevil/YWxlbmRhci90eWdlcnMtb2YtcGFuLXRhbmctdWsv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "tygers of pan tang": {
+        "s": "1MZ8NERIuOS610KBhr6yna",
+        "l": "tygers%20of%20pan%20tang",
+        "g": [
+          "heavy metal",
+          "speed metal",
+          "hard rock",
+          "nwobhm",
+          "heavy metal (early)",
+          " hard rock",
+          "aor (mid)",
+          " heavy metal (later)"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-06-28T20:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/the-midnight-ghost-train-usa-sons-of-node/",
+    "title": "The Midnight Ghost Train (USA) + Sons of Node",
+    "location": "littledevil",
+    "price": 14,
+    "shortText": "stoner rock - heavy blues",
+    "longText": "../public/texts/littledevil/LWdob3N0LXRyYWluLXVzYS1zb25zLW9mLW5vZGUv.html",
+    "image": "../public/event-images/littledevil/LWdob3N0LXRyYWluLXVzYS1zb25zLW9mLW5vZGUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "ghost": {
+        "s": "1qp56t7n950o3egmssl81d",
+        "l": "ghost",
+        "g": [
+          "hard rock",
+          "metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-07-17T20:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/kaonashi-god-complex/",
+    "title": "Kaonashi + God Complex",
+    "location": "littledevil",
+    "price": 15,
+    "shortText": "emo - post-hardcore - mathcore",
+    "longText": "../public/texts/littledevil/Y2FsZW5kYXIva2FvbmFzaGktZ29kLWNvbXBsZXgv.html",
+    "image": "../public/event-images/littledevil/Y2FsZW5kYXIva2FvbmFzaGktZ29kLWNvbXBsZXgv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "kaonashi": {
+        "s": "60Zpxsk0QxhPEyyvWfSv0I",
+        "l": "kaonashi",
+        "g": [
+          "metalcore"
+        ]
+      },
+      "god complex": {
+        "s": "4Ase9pfG4FCMoiuyRduc8k",
+        "l": "god%20complex",
+        "g": [
+          "deathcore",
+          "metalcore",
+          "hardcore"
         ]
       }
     }

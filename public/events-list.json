@@ -1,5 +1,108 @@
 [
   {
+    "start": "2025-04-01T15:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/engel-blues-festival/",
+    "title": "Engel Blues Festival 5: Danny Bryant ",
+    "location": "groeneengel",
+    "price": 15,
+    "shortText": " HEATH  +  Richville  +  more tba undefined",
+    "longText": "../public/texts/groeneengel/cm9ncmFtbWEvZW5nZWwtYmx1ZXMtZmVzdGl2YWwv.html",
+    "image": "../public/event-images/groeneengel/cm9ncmFtbWEvZW5nZWwtYmx1ZXMtZmVzdGl2YWwv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "heath": {
+        "s": null,
+        "l": "heath",
+        "g": [
+          "black",
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-01T20:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/hippie-death-cult-drive-by-wire/",
+    "title": "Hippie Death Cult + Drive By Wire",
+    "location": "groeneengel",
+    "price": 15,
+    "longText": "../public/texts/groeneengel/cHBpZS1kZWF0aC1jdWx0LWRyaXZlLWJ5LXdpcmUv.html",
+    "image": "../public/event-images/groeneengel/cHBpZS1kZWF0aC1jdWx0LWRyaXZlLWJ5LXdpcmUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "hippie death cult": {
+        "s": "4izavjyt6nf7m5fq31pjxl",
+        "l": "hippie%20death%20cult",
+        "g": [
+          "psychedelic doom"
+        ]
+      },
+      "drive by wire": {
+        "s": "2gHRDBgrG9h6DUWOrsgNI1",
+        "l": "drive%20by%20wire",
+        "g": [
+          "stoner rock",
+          "space rock",
+          "doom metal",
+          "sludge metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-01T19:30:00",
+    "start": "2025-04-01T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/joy-division-undercover-closer-to-curtis/",
+    "title": "Joy Division Undercover – Closer To Curtis",
+    "location": "groeneengel",
+    "price": 20,
+    "longText": "../public/texts/groeneengel/bi11bmRlcmNvdmVyLWNsb3Nlci10by1jdXJ0aXMv.html",
+    "image": "../public/event-images/groeneengel/bi11bmRlcmNvdmVyLWNsb3Nlci10by1jdXJ0aXMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "joy division": {
+        "s": null,
+        "l": "joy%20division",
+        "g": []
+      },
+      "undercover": {
+        "s": "5EQMhqNfNmnIIAgwQX1WZ7",
+        "l": "undercover",
+        "g": [
+          "christian punk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-01T20:15:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/big-band-oss/",
+    "title": "Big Band Oss",
+    "location": "groeneengel",
+    "price": 20,
+    "longText": "../public/texts/groeneengel/Z2VsLm5sL3Byb2dyYW1tYS9iaWctYmFuZC1vc3Mv.html",
+    "image": "../public/event-images/groeneengel/Z2VsLm5sL3Byb2dyYW1tYS9iaWctYmFuZC1vc3Mv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-04-01T20:00:00",
     "start": "2025-04-01T20:30:00",
     "end": "2025-04-01T23:00:00",
@@ -38,6 +141,14 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "title": "Bridear en Lords Of The Trident",
+    "start": "2025-04-02",
+    "eventLocationName": "musicon",
+    "shortText": "Musicon, Den Haag",
+    "image": "../public/location-images/musicon",
+    "location": "musicon"
   },
   {
     "start": "2025-04-02T20:00:00",
@@ -141,6 +252,14 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "title": "Very 'Eavy Festival",
+    "start": "2025-04-03",
+    "eventLocationName": "de spont",
+    "shortText": "\nMet Raven, Satan, Elise, Tokyo Blade e.a.",
+    "image": "../public/location-images/despont",
+    "location": "despont"
   },
   {
     "door": "2025-04-03T20:00:00.000",
@@ -356,6 +475,35 @@
     }
   },
   {
+    "title": "Your Highness, Mould, The Fifth Alliance en LowMad",
+    "start": "2025-04-05",
+    "eventLocationName": "de spot",
+    "shortText": "De Spot, Middelburg",
+    "image": "../public/location-images/despot",
+    "location": "despot"
+  },
+  {
+    "title": "Salacious Gods, Oerheks en Nubivagant",
+    "start": "2025-04-05",
+    "eventLocationName": "the jack",
+    "shortText": "The Jack, Eindhoven",
+    "image": "../public/location-images/thejack",
+    "location": "thejack"
+  },
+  {
+    "start": "2025-04-05T21:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/deepwhite-deep-purple-whitesnake-tribute/",
+    "title": "DeepWhite – Deep Purple & Whitesnake Tribute",
+    "location": "littledevil",
+    "price": 10,
+    "shortText": "Deep Purple & Whitesnake tribute - presented by H&H concerts",
+    "longText": "../public/texts/littledevil/ZWVwLXB1cnBsZS13aGl0ZXNuYWtlLXRyaWJ1dGUv.html",
+    "image": "../public/event-images/littledevil/ZWVwLXB1cnBsZS13aGl0ZXNuYWtlLXRyaWJ1dGUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2025-04-05T19:30:00",
     "start": "2025-04-05T20:00:00",
     "venueEventUrl": "https://www.effenaar.nl/agenda/eternaleclipse-5apr",
@@ -498,6 +646,28 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "start": "2025-04-06T18:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/mean-mistreater-usa-violent-sin-b/",
+    "title": "Mean Mistreater (USA) + Violent Sin (B)",
+    "location": "littledevil",
+    "price": 10,
+    "shortText": "heavy metal - speed metal - presented by Rusty Nails",
+    "longText": "../public/texts/littledevil/LW1pc3RyZWF0ZXItdXNhLXZpb2xlbnQtc2luLWIv.html",
+    "image": "../public/event-images/littledevil/LW1pc3RyZWF0ZXItdXNhLXZpb2xlbnQtc2luLWIv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "mean mistreater": {
+        "s": "53cmpvEngBVcRTdEDLsHzU",
+        "l": "mean%20mistreater",
+        "g": [
+          "speed metal",
+          "heavy metal"
+        ]
+      }
+    }
   },
   {
     "start": "2025-04-06T19:00:00",
@@ -899,6 +1069,21 @@
     }
   },
   {
+    "door": "2025-04-10T20:45:00",
+    "start": "2025-04-10T21:15:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/we-are-fugazi-from-washington-dc-2024-10-04-2025/",
+    "title": "We are fugazi from washington, d.c. (2024)",
+    "location": "melkweg",
+    "price": 12,
+    "shortText": "concertfilm · posthardcore Doc'n Roll Film Festival",
+    "longText": "../public/texts/melkweg/d2FzaGluZ3Rvbi1kYy0yMDI0LTEwLTA0LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/d2FzaGluZ3Rvbi1kYy0yMDI0LTEwLTA0LTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "start": "2025-04-10T08:00:00",
     "end": "2025-04-10T10:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/dean-wareham-plays-galaxie-500-more-2/",
@@ -1008,6 +1193,57 @@
         "l": "deadly%20alliance",
         "g": [
           "thrash metal"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Grindpad, Taskforce Toxicator en Braggâh",
+    "start": "2025-04-11",
+    "eventLocationName": "musicon",
+    "shortText": "Musicon, Den Haag",
+    "image": "../public/location-images/musicon",
+    "location": "musicon"
+  },
+  {
+    "start": "2025-04-11T19:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/state-power-braces-premonition/",
+    "title": "State Power + BRACES + Premonition",
+    "location": "littledevil",
+    "price": 11.7,
+    "shortText": "hardcore punk - hardcore - deathcore",
+    "longText": "../public/texts/littledevil/dGF0ZS1wb3dlci1icmFjZXMtcHJlbW9uaXRpb24v.html",
+    "image": "../public/event-images/littledevil/dGF0ZS1wb3dlci1icmFjZXMtcHJlbW9uaXRpb24v",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "state power": {
+        "s": "2ZksA5DzgDlR4hTXquufqU",
+        "l": "state%20power",
+        "g": [
+          "hardcore punk",
+          "hardcore"
+        ]
+      },
+      "braces": {
+        "s": "1oZBET0PBRusndmvbnlz9W",
+        "l": "braces",
+        "g": [
+          "black",
+          "deathcore",
+          "oi!",
+          "punk",
+          "street punk",
+          "thrash metal"
+        ]
+      },
+      "premonition": {
+        "s": "0vShN5Qc9EG8nfPQnCICth",
+        "l": "premonition",
+        "g": [
+          "hardcore",
+          "hardcore punk",
+          "melodic heavy metal"
         ]
       }
     }
@@ -1175,12 +1411,42 @@
     "location": "hedon"
   },
   {
+    "title": "Hippotraktor",
+    "start": "2025-04-12",
+    "eventLocationName": "de kroepoekfabriek",
+    "shortText": "De Kroepoekfabriek, Vlaardingen",
+    "image": "../public/location-images/dekroepoekfabriek",
+    "location": "dekroepoekfabriek"
+  },
+  {
     "title": "Axel Rudi Pell",
     "start": "2025-04-12",
     "eventLocationName": "boerderij",
     "shortText": "Boerderij, Zoetermeer",
     "image": "../public/location-images/boerderij",
     "location": "boerderij"
+  },
+  {
+    "start": "2025-04-12T20:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/bruusk-suicide-prophet/",
+    "title": "Bruusk + Suicide Prophet",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": "melodic groove metal - groovy hardcore - open feest",
+    "longText": "../public/texts/littledevil/bGVuZGFyL2JydXVzay1zdWljaWRlLXByb3BoZXQv.html",
+    "image": "../public/event-images/littledevil/bGVuZGFyL2JydXVzay1zdWljaWRlLXByb3BoZXQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "bruusk": {
+        "s": "2zoRLs3IPbxDiqr54xP2KA",
+        "l": "bruusk",
+        "g": [
+          "melodic death",
+          "groove metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-04-12T19:00:00",
@@ -1385,6 +1651,19 @@
     }
   },
   {
+    "start": "2025-04-13T14:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/dwaalboktour-lente-2025/",
+    "title": "Dwaalboktour Lente 2025",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": "",
+    "longText": "../public/texts/littledevil/ZW5kYXIvZHdhYWxib2t0b3VyLWxlbnRlLTIwMjUv.html",
+    "image": "../public/event-images/littledevil/ZW5kYXIvZHdhYWxib2t0b3VyLWxlbnRlLTIwMjUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "start": "2025-04-13T19:30:00",
     "end": "2025-04-13T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/anneke-van-giersbergen-13-04-2025/",
@@ -1510,12 +1789,54 @@
     }
   },
   {
+    "start": "2025-04-14T19:00:00",
+    "venueEventUrl": "https://kavka.be/event/swallow-the-sun/",
+    "title": "Swallow the sun",
+    "location": "kavka",
+    "price": null,
+    "shortText": "Swallow the Sun is a Finnish death-doom band founded in 2000 by Juha Raivio. Their…",
+    "longText": "../public/texts/kavka/YXZrYS5iZS9ldmVudC9zd2FsbG93LXRoZS1zdW4v.html",
+    "image": "../public/event-images/kavka/YXZrYS5iZS9ldmVudC9zd2FsbG93LXRoZS1zdW4v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "swallow the sun": {
+        "s": "0ulKlNlo0iPx5ZS6VMTHWQ",
+        "l": "swallow%20the%20sun",
+        "g": [
+          "doom metal",
+          "finnish death metal",
+          "finnish doom metal",
+          "finnish melodeath",
+          "finnish metal",
+          "melodic death metal",
+          "melodic doom",
+          "death metal"
+        ]
+      }
+    }
+  },
+  {
     "title": "Behemoth, Satyricon en Rotting Christ",
     "start": "2025-04-15",
     "eventLocationName": "e-werk",
     "shortText": "E-Werk, Keulen",
     "image": "../public/location-images/ewerk",
     "location": "ewerk"
+  },
+  {
+    "start": "2025-04-15T17:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/offroad-night-of-the-devils-beer-menu/",
+    "title": "OFFROAD: Night of the Devil’s Beer Menu",
+    "location": "littledevil",
+    "price": null,
+    "shortText": "DJ Read more",
+    "longText": "../public/texts/littledevil/bmlnaHQtb2YtdGhlLWRldmlscy1iZWVyLW1lbnUv.html",
+    "image": "../public/event-images/littledevil/bmlnaHQtb2YtdGhlLWRldmlscy1iZWVyLW1lbnUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "start": "2025-04-15T19:00:00",
@@ -1615,6 +1936,19 @@
     }
   },
   {
+    "start": "2025-04-16T17:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/offroad-request-night/",
+    "title": "Offroad: request night",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": "Heavy beer drinking and headbanging",
+    "longText": "../public/texts/littledevil/YWxlbmRhci9vZmZyb2FkLXJlcXVlc3QtbmlnaHQv.html",
+    "image": "../public/event-images/littledevil/YWxlbmRhci9vZmZyb2FkLXJlcXVlc3QtbmlnaHQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2025-04-16T19:00:00",
     "start": "2025-04-16T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/108558/the-spark",
@@ -1653,6 +1987,27 @@
     "shortText": "Hedon, Zwolle",
     "image": "../public/location-images/hedon",
     "location": "hedon"
+  },
+  {
+    "start": "2025-04-17T15:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/offroad-mantra-machine-duskhead/",
+    "title": "OFFROAD: Mantra Machine + Duskhead",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": "Heavy beer drinking and headbanging - DJ",
+    "longText": "../public/texts/littledevil/ZnJvYWQtbWFudHJhLW1hY2hpbmUtZHVza2hlYWQv.html",
+    "image": "../public/event-images/littledevil/ZnJvYWQtbWFudHJhLW1hY2hpbmUtZHVza2hlYWQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "duskhead": {
+        "s": "3qCh50gtiPJ2MiTq23Dyno",
+        "l": "duskhead",
+        "g": [
+          "stoner rock"
+        ]
+      }
+    }
   },
   {
     "door": "2025-04-17T20:00:00",
@@ -1853,6 +2208,105 @@
     "location": "onsdorp"
   },
   {
+    "title": "Agent Steel",
+    "start": "2025-04-18",
+    "eventLocationName": "fluor",
+    "shortText": "Fluor, Amersfoort",
+    "image": "../public/location-images/fluor",
+    "location": "fluor"
+  },
+  {
+    "start": "2025-04-18T15:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/offroad-an-evening-with-knives-oltas-dead-duck/",
+    "title": "Offroad: an evening with knives ",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": " oltas  +  dead duck Heavy beer drinking and headbanging - DJ",
+    "longText": "../public/texts/littledevil/Zy13aXRoLWtuaXZlcy1vbHRhcy1kZWFkLWR1Y2sv.html",
+    "image": "../public/event-images/littledevil/Zy13aXRoLWtuaXZlcy1vbHRhcy1kZWFkLWR1Y2sv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "an evening with knives": {
+        "s": "3FAXLvVlUZ34x2nlGr570X",
+        "l": "an%20evening%20with%20knives",
+        "g": [
+          "dutch stoner rock",
+          "stoner",
+          "doom metal",
+          "rock"
+        ]
+      },
+      "knives": {
+        "s": "2YoHhPouaTT96k3dUQ8WZK",
+        "l": "knives",
+        "g": [
+          "grindcore",
+          "death 'n' roll"
+        ]
+      },
+      "oltas": {
+        "s": "1vXOgdgPzetuJTXlbHi6Qi",
+        "l": "oltas",
+        "g": [
+          "doom",
+          "death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-18T18:30:00",
+    "start": "2025-04-18T19:00:00",
+    "end": "2025-04-18T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/patriarkh-dogma-nidhogg/",
+    "title": "Patriarkh ",
+    "location": "iduna",
+    "price": 18,
+    "shortText": "  •  Dogma  •  Nidhogg  •  Infernal Angels  null",
+    "longText": "../public/texts/iduna/Z2VuZGEvcGF0cmlhcmtoLWRvZ21hLW5pZGhvZ2cv.html",
+    "image": "../public/event-images/iduna/Z2VuZGEvcGF0cmlhcmtoLWRvZ21hLW5pZGhvZ2cv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "patriarkh": {
+        "s": "15LsRgSmN0t8VLcsUFYW5J",
+        "l": "patriarkh",
+        "g": [
+          "black metal",
+          "black metal"
+        ]
+      },
+      "dogma": {
+        "s": "4R6XPuqGShFESRVkCePaxj",
+        "l": "dogma",
+        "g": [
+          "groove metal"
+        ]
+      },
+      "nidhogg": {
+        "s": "4bkO4QWnpMCKGdfevM6n64",
+        "l": "nidhogg",
+        "g": [
+          "black metal",
+          "dark ambient",
+          "heavy",
+          "power",
+          "folk metal"
+        ]
+      },
+      "infernal angels": {
+        "s": "4sfHQrlNPnoxfhlrdzWN8s",
+        "l": "infernal%20angels",
+        "g": [
+          "black metal",
+          "melodic black metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-04-18T19:30:00",
     "start": "2025-04-18T20:30:00",
     "venueEventUrl": "https://www.effenaar.nl/agenda/esprit-dair",
@@ -1977,6 +2431,29 @@
     "shortText": "Hell, Diest",
     "image": "../public/location-images/hell",
     "location": "hell"
+  },
+  {
+    "start": "2025-04-19T15:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/offroad-ibex-angel-order-dystopia-alkahest/",
+    "title": "OFFROAD: Ibex Angel Order ",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": " Dystopia  +  Alkahest Heavy beer drinking and headbanging - DJ",
+    "longText": "../public/texts/littledevil/YW5nZWwtb3JkZXItZHlzdG9waWEtYWxrYWhlc3Qv.html",
+    "image": "../public/event-images/littledevil/YW5nZWwtb3JkZXItZHlzdG9waWEtYWxrYWhlc3Qv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "alkahest": {
+        "s": "53vjMkvxWt9UZAXlnwsPrj",
+        "l": "alkahest",
+        "g": [
+          "atmospheric sludge",
+          "doom metal",
+          "post-rock"
+        ]
+      }
+    }
   },
   {
     "door": "2025-04-19T19:30:00",
@@ -2152,12 +2629,71 @@
     "artists": {}
   },
   {
+    "start": "2025-04-20T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/agent-steel",
+    "title": "Agent Steel",
+    "location": "metropool",
+    "price": 25.5,
+    "shortText": "Galactische metal die niet van deze wereld is",
+    "longText": "../public/texts/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL2FnZW50LXN0ZWVs.html",
+    "image": "../public/event-images/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL2FnZW50LXN0ZWVs",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "agent steel": {
+        "s": "1FQv3rI4iJPitbZiTxBGut",
+        "l": "agent%20steel",
+        "g": [
+          "melodic thrash",
+          "old school thrash",
+          "us power metal",
+          "power",
+          "speed",
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
     "title": "Festerfest",
     "start": "2025-04-20",
     "eventLocationName": "musicon",
     "shortText": "\nmet o.a. The Wounded, Dystopia en Obstruktor",
     "image": "../public/location-images/musicon",
     "location": "musicon"
+  },
+  {
+    "start": "2025-04-20T15:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/offroad-bark-cthuluminati/",
+    "title": "Offroad: bark + cthuluminati",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": "Heavy beer drinking and headbanging - DJ",
+    "longText": "../public/texts/littledevil/ZGFyL29mZnJvYWQtYmFyay1jdGh1bHVtaW5hdGkv.html",
+    "image": "../public/event-images/littledevil/ZGFyL29mZnJvYWQtYmFyay1jdGh1bHVtaW5hdGkv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "bark": {
+        "s": "6bCDvJKQCr3404Fe1j7egd",
+        "l": "bark",
+        "g": [
+          "j-rap",
+          "groove metal",
+          "death 'n' roll"
+        ]
+      },
+      "cthuluminati": {
+        "s": "3nVkXWKJxipv27aqVAb0nW",
+        "l": "cthuluminati",
+        "g": [
+          "progressive",
+          "blackened stoner",
+          "doom metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-04-20T15:00:00",
@@ -2605,12 +3141,42 @@
     }
   },
   {
+    "title": "John Coffey",
+    "start": "2025-04-25",
+    "eventLocationName": "altstadt",
+    "shortText": "Altstadt, Eindhoven",
+    "image": "../public/location-images/altstadt",
+    "location": "altstadt"
+  },
+  {
     "title": "Imperial Age",
     "start": "2025-04-25",
     "eventLocationName": "poppodium boerderij",
     "shortText": "Poppodium Boerderij",
     "image": "../public/location-images/poppodiumboerderij",
     "location": "poppodiumboerderij"
+  },
+  {
+    "start": "2025-04-25T20:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/neckbreakker-dk-galge-dk/",
+    "title": "Neckbreakker (DK) + Galge (DK)",
+    "location": "littledevil",
+    "price": 17,
+    "shortText": "death metal - death-black",
+    "longText": "../public/texts/littledevil/bmRhci9uZWNrYnJlYWtrZXItZGstZ2FsZ2UtZGsv.html",
+    "image": "../public/event-images/littledevil/bmRhci9uZWNrYnJlYWtrZXItZGstZ2FsZ2UtZGsv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "neckbreakker": {
+        "s": "4bEKeZm7yf8aOqam6RI4cJ",
+        "l": "neckbreakker",
+        "g": [
+          "death",
+          "groove metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-04-25T20:00:00",
@@ -2784,6 +3350,29 @@
     }
   },
   {
+    "start": "2025-04-26T19:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/rising-tides-fest-2025-kanine-f-stalk-out-of-the-blue/",
+    "title": "Rising Tides Fest 2025: Kanine (F) ",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": " Stalk  +  Out of the Blue ",
+    "longText": "../public/texts/littledevil/YW5pbmUtZi1zdGFsay1vdXQtb2YtdGhlLWJsdWUv.html",
+    "image": "../public/event-images/littledevil/YW5pbmUtZi1zdGFsay1vdXQtb2YtdGhlLWJsdWUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "talk": {
+        "s": null,
+        "l": "talk",
+        "g": [
+          "crossover",
+          "hardcore",
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-04-26T15:00:00",
     "end": "2025-04-26T01:00:00",
     "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/puin-kingsday/",
@@ -2830,6 +3419,60 @@
           "electro ",
           "punk ",
           "rock "
+        ]
+      }
+    }
+  },
+  {
+    "title": "FemME (Female Metal Event)",
+    "start": "2025-04-27",
+    "eventLocationName": "muziekcafé",
+    "shortText": "Muziekcafé, Helmond",
+    "image": "../public/location-images/muziekcaf",
+    "location": "muziekcaf"
+  },
+  {
+    "start": "2025-04-27T19:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/rising-tides-fest-2025-changing-tides-torn-from-oblivion-deeproot-bloodcrypt-canyon-literature/",
+    "title": "Rising Tides Fest 2025: Changing Tides ",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": " Torn From Oblivion  +  DEEPROOT  +  Bloodcrypt  +  Canyon Literature ",
+    "longText": "../public/texts/littledevil/LWJsb29kY3J5cHQtY2FueW9uLWxpdGVyYXR1cmUv.html",
+    "image": "../public/event-images/littledevil/LWJsb29kY3J5cHQtY2FueW9uLWxpdGVyYXR1cmUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "changing tides": {
+        "s": "4fdvjqh3xqrmfvpb4n5hqu",
+        "l": "changing%20tides",
+        "g": []
+      },
+      "bloodcrypt": {
+        "s": null,
+        "l": "bloodcrypt",
+        "g": []
+      },
+      "deeproot": {
+        "s": "497D31qNuomZa2eCIOuEa5",
+        "l": "deeproot",
+        "g": [
+          "deathcore"
+        ]
+      },
+      "torn from oblivion": {
+        "s": "5IXqeHYM84k26hwnTNDuZS",
+        "l": "torn%20from%20oblivion",
+        "g": [
+          "deathcore",
+          "metalcore"
+        ]
+      },
+      "canyon literature": {
+        "s": "4KXXP4WTgnzQQQgv77cagF",
+        "l": "canyon%20literature",
+        "g": [
+          "deathcore"
         ]
       }
     }
@@ -2894,6 +3537,19 @@
         ]
       }
     }
+  },
+  {
+    "start": "2025-04-28T18:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/mdc-usa-barackca-hun/",
+    "title": "Mdc (usa) + barackca (hun)",
+    "location": "littledevil",
+    "price": 15,
+    "shortText": "hardcore punk pioneers",
+    "longText": "../public/texts/littledevil/Y2FsZW5kYXIvbWRjLXVzYS1iYXJhY2tjYS1odW4v.html",
+    "image": "../public/event-images/littledevil/Y2FsZW5kYXIvbWRjLXVzYS1iYXJhY2tjYS1odW4v",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "door": "2025-04-29T20:30:00",
@@ -2989,6 +3645,14 @@
     }
   },
   {
+    "title": "Venom Inc, Krisiun, Hate en Ater",
+    "start": "2025-04-30",
+    "eventLocationName": "paard",
+    "shortText": "Paard, Den Haag",
+    "image": "../public/location-images/paard",
+    "location": "paard"
+  },
+  {
     "start": "2025-05-01T20:00:00",
     "venueEventUrl": "https://neushoorn.nl/production/wodan-boys/",
     "title": "Wodan Boys",
@@ -3017,6 +3681,74 @@
     "shortText": "ECI Cultuurfabriek, Roermond",
     "image": "../public/location-images/ecicultuurfabriek",
     "location": "ecicultuurfabriek"
+  },
+  {
+    "title": "Death Goals en Stormo",
+    "start": "2025-05-01",
+    "eventLocationName": "the jack",
+    "shortText": "The Jack, Eindhoven",
+    "image": "../public/location-images/thejack",
+    "location": "thejack"
+  },
+  {
+    "door": "2025-05-01T18:30:00",
+    "start": "2025-05-01T19:00:00",
+    "end": "2025-05-01T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/venom-inc-krisiun-hate-ater/",
+    "title": "Venom inc. • krisiun •  • hate • ater",
+    "location": "iduna",
+    "price": 18,
+    "shortText": null,
+    "longText": "../public/texts/iduna/YS92ZW5vbS1pbmMta3Jpc2l1bi1oYXRlLWF0ZXIv.html",
+    "image": "../public/event-images/iduna/YS92ZW5vbS1pbmMta3Jpc2l1bi1oYXRlLWF0ZXIv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "krisiun": {
+        "s": "3pzaw9xs16rx8fukh8wv6n",
+        "l": "krisiun",
+        "g": [
+          "brazilian death metal",
+          "brazilian metal",
+          "brutal death metal",
+          "death metal",
+          "deathgrind",
+          "metal",
+          "metal gaucho",
+          "technical death metal",
+          "thrash metal"
+        ]
+      },
+      "venom inc.": {
+        "s": "3MHIoEboWZOn2vX4O3GrjM",
+        "l": "venom%20inc.",
+        "g": [
+          "speed metal",
+          "thrash metal",
+          "black metal",
+          "heavy metal"
+        ]
+      },
+      "hate": {
+        "s": "13XggX75z0Hk0VNvOuTJoB",
+        "l": "hate",
+        "g": [
+          "death metal",
+          "black metal",
+          "thrash metal (early)",
+          " hard rock (later)"
+        ]
+      },
+      "ater": {
+        "s": "1HpPzWF2E6G8KfD5pOM6La",
+        "l": "ater",
+        "g": [
+          "djent",
+          "black metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-05-01T19:30:00",
@@ -3084,6 +3816,37 @@
         ]
       }
     }
+  },
+  {
+    "start": "2025-05-02T21:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/wille-and-the-bandits",
+    "title": "Wille and the Bandits",
+    "location": "metropool",
+    "price": 22.5,
+    "shortText": "Een muzikale reis door rauwe blues en krachtige rock",
+    "longText": "../public/texts/metropool/bC9hZ2VuZGEvd2lsbGUtYW5kLXRoZS1iYW5kaXRz.html",
+    "image": "../public/event-images/metropool/bC9hZ2VuZGEvd2lsbGUtYW5kLXRoZS1iYW5kaXRz",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "title": "RedHook en Comastatic",
+    "start": "2025-05-02",
+    "eventLocationName": "the jack",
+    "shortText": "The Jack, Eindhoven",
+    "image": "../public/location-images/thejack",
+    "location": "thejack"
   },
   {
     "door": "2025-05-02T19:30:00",
@@ -3307,6 +4070,33 @@
     }
   },
   {
+    "start": "2025-05-03T21:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/bob-wayne-uitverkocht/",
+    "title": "Bob Wayne (uitverkocht)",
+    "location": "littledevil",
+    "price": 16,
+    "shortText": "outlaw country - folk - soul - punk - country",
+    "longText": "../public/texts/littledevil/YWxlbmRhci9ib2Itd2F5bmUtdWl0dmVya29jaHQv.html",
+    "image": "../public/event-images/littledevil/YWxlbmRhci9ib2Itd2F5bmUtdWl0dmVya29jaHQv",
+    "soldOut": [
+      "uitverkocht"
+    ],
+    "eventGenres": null,
+    "artists": {
+      "bob wayne": {
+        "s": "6LWREZSd4429wq2MHt3KC4",
+        "l": "bob%20wayne",
+        "g": [
+          "gothic country",
+          "psychobilly",
+          "rockabilly",
+          "bluegrass",
+          "alt country"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-05-03T14:00:00",
     "start": "2025-05-03T14:00:00",
     "end": "2025-05-03T17:00:00",
@@ -3335,6 +4125,14 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "title": "Harem Scarem en Cassidy Paris",
+    "start": "2025-05-04",
+    "eventLocationName": "musicon",
+    "shortText": "Musicon, Den Haag",
+    "image": "../public/location-images/musicon",
+    "location": "musicon"
   },
   {
     "title": "Against Evil en Angelic Forces",
@@ -3480,6 +4278,14 @@
     }
   },
   {
+    "title": "Dvne",
+    "start": "2025-05-07",
+    "eventLocationName": "vera",
+    "shortText": "Vera, Groningen",
+    "image": "../public/location-images/vera",
+    "location": "vera"
+  },
+  {
     "door": "2025-05-07T19:30:00",
     "start": "2025-05-07T20:00:00",
     "venueEventUrl": "https://www.effenaar.nl/agenda/knives",
@@ -3571,6 +4377,70 @@
         ]
       }
     }
+  },
+  {
+    "start": "2025-05-08T19:00:00",
+    "venueEventUrl": "https://kavka.be/event/waste-divided/",
+    "title": "Waste + divided",
+    "location": "kavka",
+    "price": null,
+    "shortText": "WASTE maakt lawaai. Véél lawaai. De band staat voor een metaforische kreet van destructiviteit en…",
+    "longText": "../public/texts/kavka/L2thdmthLmJlL2V2ZW50L3dhc3RlLWRpdmlkZWQv.html",
+    "image": "../public/event-images/kavka/L2thdmthLmJlL2V2ZW50L3dhc3RlLWRpdmlkZWQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "waste": {
+        "s": "2XuyPcxHeNlK7tOej51mqj",
+        "l": "waste",
+        "g": [
+          "deathcore",
+          "metalcore",
+          "brutal death metal"
+        ]
+      },
+      "divided": {
+        "s": "0uRSsdrzKsjyXDZ4vBXa8z",
+        "l": "divided",
+        "g": [
+          "sludge metal",
+          "technical death metal"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Makemake",
+    "start": "2025-05-09",
+    "eventLocationName": "musicon",
+    "shortText": "Musicon, Den Haag",
+    "image": "../public/location-images/musicon",
+    "location": "musicon"
+  },
+  {
+    "title": "Klone en Kingcrow",
+    "start": "2025-05-09",
+    "eventLocationName": "hedon",
+    "shortText": "Hedon, Zwolle",
+    "image": "../public/location-images/hedon",
+    "location": "hedon"
+  },
+  {
+    "door": "2025-05-09T20:00:00",
+    "start": "2025-05-09T20:30:00",
+    "end": "2025-05-09T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/luna-kills/",
+    "title": "Luna Kills",
+    "location": "iduna",
+    "price": 20,
+    "shortText": null,
+    "longText": "../public/texts/iduna/Oi8vaWR1bmEubmwvYWdlbmRhL2x1bmEta2lsbHMv.html",
+    "image": "../public/event-images/iduna/Oi8vaWR1bmEubmwvYWdlbmRhL2x1bmEta2lsbHMv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "start": "2025-05-09T22:00:00",
@@ -3716,6 +4586,50 @@
         "l": "the project",
         "g": [
           "industrial death metal"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Klone en Kingcrow",
+    "start": "2025-05-10",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "start": "2025-05-10T15:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/little-devil-doom-day-v-2/",
+    "title": "Little Devil Doom Day VII",
+    "location": "littledevil",
+    "price": 25,
+    "shortText": "",
+    "longText": "../public/texts/littledevil/ZGFyL2xpdHRsZS1kZXZpbC1kb29tLWRheS12LTIv.html",
+    "image": "../public/event-images/littledevil/ZGFyL2xpdHRsZS1kZXZpbC1kb29tLWRheS12LTIv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-05-10T19:30:00",
+    "venueEventUrl": "https://kavka.be/event/scowl-us-modern-color-us/",
+    "title": "Scowl (us) + modern color (us)",
+    "location": "kavka",
+    "price": null,
+    "shortText": "MENDVILLE presents SCOWL (us) Scowl has quickly made a name for themselves as one…",
+    "longText": "../public/texts/kavka/dmVudC9zY293bC11cy1tb2Rlcm4tY29sb3ItdXMv.html",
+    "image": "../public/event-images/kavka/dmVudC9zY293bC11cy1tb2Rlcm4tY29sb3ItdXMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "scowl": {
+        "s": "6hw33nvhpelaxug2hq0qop",
+        "l": "scowl",
+        "g": [
+          "california hardcore",
+          "modern hardcore"
         ]
       }
     }
@@ -3942,6 +4856,20 @@
     }
   },
   {
+    "start": "2025-05-14T19:30:00",
+    "venueEventUrl": "https://kavka.be/event/tumult-castle-rat-apex-ten/",
+    "title": "Tumult // castle rat & apex ten",
+    "location": "kavka",
+    "price": null,
+    "shortText": "CASTLE RAT Castle Rat is a fantasy doom metal band hailing from NYC led by…",
+    "longText": "../public/texts/kavka/bnQvdHVtdWx0LWNhc3RsZS1yYXQtYXBleC10ZW4v.html",
+    "image": "../public/event-images/kavka/bnQvdHVtdWx0LWNhc3RsZS1yYXQtYXBleC10ZW4v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2025-05-14T19:00:00",
     "start": "2025-05-14T19:00:00",
     "end": "2025-05-14T21:30:00",
@@ -4097,6 +5025,22 @@
     }
   },
   {
+    "title": "Temple Fang en Heath",
+    "start": "2025-05-16",
+    "eventLocationName": "vera",
+    "shortText": "Vera, Groningen",
+    "image": "../public/location-images/vera",
+    "location": "vera"
+  },
+  {
+    "title": "Komatsu en del-Toros",
+    "start": "2025-05-16",
+    "eventLocationName": "altstadt",
+    "shortText": "Altstadt, Eindhoven",
+    "image": "../public/location-images/altstadt",
+    "location": "altstadt"
+  },
+  {
     "door": "2025-05-16T20:00:00",
     "start": "2025-05-16T20:30:00",
     "venueEventUrl": "https://www.effenaar.nl/agenda/komatsu-album-release",
@@ -4162,6 +5106,14 @@
         ]
       }
     }
+  },
+  {
+    "title": "The Hague Death Fest",
+    "start": "2025-05-17",
+    "eventLocationName": "musicon",
+    "shortText": "\nMet Fleshcrawl, Hellwitch, Storm Upon The Masses e.a.",
+    "image": "../public/location-images/musicon",
+    "location": "musicon"
   },
   {
     "title": "Elsrock",
@@ -4536,6 +5488,14 @@
     }
   },
   {
+    "title": "Convulse",
+    "start": "2025-05-20",
+    "eventLocationName": "musicon",
+    "shortText": "Musicon, Den Haag",
+    "image": "../public/location-images/musicon",
+    "location": "musicon"
+  },
+  {
     "start": "2025-05-20T20:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-jesus-lizard-20-05-2025/",
     "title": "the Jesus Lizard",
@@ -4560,6 +5520,20 @@
         ]
       }
     }
+  },
+  {
+    "start": "2025-05-21T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-brian-jonestown-massacre-21-05-2025/",
+    "title": "The Brian Jonestown Massacre",
+    "location": "melkweg",
+    "price": 33.35,
+    "shortText": "psychedelisch · fuzz · rock",
+    "longText": "../public/texts/melkweg/am9uZXN0b3duLW1hc3NhY3JlLTIxLTA1LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/am9uZXN0b3duLW1hc3NhY3JlLTIxLTA1LTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "door": "2025-05-21T19:00:00",
@@ -4939,6 +5913,66 @@
     "artists": {}
   },
   {
+    "start": "2025-05-24T19:00:00",
+    "venueEventUrl": "https://kavka.be/event/tumult-grima-ultar-houle-suldusk-aquilus/",
+    "title": "Tumult // grima ",
+    "location": "kavka",
+    "price": null,
+    "shortText": " ultar  +  houle  +  suldusk  +  aquilus 𝐆𝐑𝐈𝐌𝐀 Started in 2014 as a studio project by two twin brothers (Vilhelm and Morbius)…",
+    "longText": "../public/texts/kavka/YS11bHRhci1ob3VsZS1zdWxkdXNrLWFxdWlsdXMv.html",
+    "image": "../public/event-images/kavka/YS11bHRhci1ob3VsZS1zdWxkdXNrLWFxdWlsdXMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "aquilus": {
+        "s": "1AKQ12On2ydAN0jykcB929",
+        "l": "aquilus",
+        "g": [
+          "black metal",
+          "atmospheric black",
+          "folk metal",
+          "neoclassical"
+        ]
+      },
+      "suldusk": {
+        "s": "27bhelNsrdlX5Y5H7yigfg",
+        "l": "suldusk",
+        "g": [
+          "neofolk",
+          "black metal"
+        ]
+      },
+      "grima": {
+        "s": "7KSPZyeCKkfkhMkX8rYIhD",
+        "l": "grima",
+        "g": [
+          "atmospheric black metal",
+          "russian black metal",
+          "voidgaze",
+          "atmospheric black metal"
+        ]
+      },
+      "ultar": {
+        "s": "6qBmMTIQANnluSglXkcRV0",
+        "l": "ultar",
+        "g": [
+          "black metal",
+          "post-black metal"
+        ]
+      },
+      "houle": {
+        "s": "7kyEbclVUPx4zFdUdNbMUI",
+        "l": "houle",
+        "g": [
+          "dark ambient",
+          "ambient",
+          "black metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-05-24T20:00:00",
     "start": "2025-05-24T20:30:00",
     "venueEventUrl": "https://www.effenaar.nl/agenda/bowl",
@@ -5133,7 +6167,7 @@
     "shortText": " punkrock · hardcore punk Reconstruction Tour 2025",
     "longText": "../public/texts/melkweg/ZWNvbnN0cnVjdGlvbi10b3VyLTI4LTA1LTIwMjUv.html",
     "image": "../public/event-images/melkweg/ZWNvbnN0cnVjdGlvbi10b3VyLTI4LTA1LTIwMjUv",
-    "soldOut": false,
+    "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
@@ -5175,6 +6209,19 @@
     }
   },
   {
+    "start": "2025-05-29T20:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/2-minutes-2-midnight-lds-2-voor-12-variant-3/",
+    "title": "2 Minutes 2 Midnight – LD’s 2 voor 12 variant",
+    "location": "littledevil",
+    "price": 2,
+    "shortText": "quizmaster Peter - aanmelden via E-mail",
+    "longText": "../public/texts/littledevil/bmlnaHQtbGRzLTItdm9vci0xMi12YXJpYW50LTMv.html",
+    "image": "../public/event-images/littledevil/bmlnaHQtbGRzLTItdm9vci0xMi12YXJpYW50LTMv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2025-05-29T19:00:00",
     "start": "2025-05-29T20:00:00",
     "end": "2025-05-29T23:00:00",
@@ -5196,6 +6243,40 @@
           "power metal",
           "speed metal",
           "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Graveland Festival",
+    "start": "2025-05-30",
+    "eventLocationName": "hoogeveen\nmet leprous",
+    "shortText": "\nMet Leprous, Dark Tranquillity, Sólstafir, Grave e.v.a.",
+    "image": "../public/location-images/hoogeveenmetleprous",
+    "location": "hoogeveenmetleprous"
+  },
+  {
+    "start": "2025-05-30T21:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/vengeance-uitverkocht/",
+    "title": "Vengeance (uitverkocht)",
+    "location": "littledevil",
+    "price": 10,
+    "shortText": "dutch hardrock - classic heavy rock - presented by H&H concerts",
+    "longText": "../public/texts/littledevil/YWxlbmRhci92ZW5nZWFuY2UtdWl0dmVya29jaHQv.html",
+    "image": "../public/event-images/littledevil/YWxlbmRhci92ZW5nZWFuY2UtdWl0dmVya29jaHQv",
+    "soldOut": [
+      "uitverkocht"
+    ],
+    "eventGenres": null,
+    "artists": {
+      "vengeance": {
+        "s": "0rkZewDpEnFUDab7m5A4Tz",
+        "l": "vengeance",
+        "g": [
+          "frenchcore",
+          "hardcore",
+          "heavy",
+          "speed metal"
         ]
       }
     }
@@ -5302,6 +6383,104 @@
           "sci-fi metal",
           "scottish metal",
           "progressive sludge/post-metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-31T21:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/vengeance-extra-show/",
+    "title": "Vengeance (extra show)",
+    "location": "littledevil",
+    "price": 10,
+    "shortText": "dutch hardrock - classic heavy rock - presented by H&H concerts",
+    "longText": "../public/texts/littledevil/Y2FsZW5kYXIvdmVuZ2VhbmNlLWV4dHJhLXNob3cv.html",
+    "image": "../public/event-images/littledevil/Y2FsZW5kYXIvdmVuZ2VhbmNlLWV4dHJhLXNob3cv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "vengeance": {
+        "s": "0rkZewDpEnFUDab7m5A4Tz",
+        "l": "vengeance",
+        "g": [
+          "frenchcore",
+          "hardcore",
+          "heavy",
+          "speed metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-31T17:00:00",
+    "venueEventUrl": "https://kavka.be/event/harmony-metal-fest/",
+    "title": "Harmony metal fest",
+    "location": "kavka",
+    "price": null,
+    "shortText": "Harmony Metal Fest is where the magic happens! A fine selection of symphonic metal bands…",
+    "longText": "../public/texts/kavka/YS5iZS9ldmVudC9oYXJtb255LW1ldGFsLWZlc3Qv.html",
+    "image": "../public/event-images/kavka/YS5iZS9ldmVudC9oYXJtb255LW1ldGFsLWZlc3Qv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-31T19:30:00",
+    "start": "2025-05-31T20:00:00",
+    "end": "2025-05-31T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/incantation-convulse-deadspeak/",
+    "title": "Incantation • • Convulse • Deadspeak",
+    "location": "iduna",
+    "price": 19,
+    "shortText": null,
+    "longText": "../public/texts/iduna/bmNhbnRhdGlvbi1jb252dWxzZS1kZWFkc3BlYWsv.html",
+    "image": "../public/event-images/iduna/bmNhbnRhdGlvbi1jb252dWxzZS1kZWFkc3BlYWsv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "deadspeak": {
+        "s": "5U0DUA9QRLtIrKIYfp8qiw",
+        "l": "deadspeak",
+        "g": [
+          "death metal"
+        ]
+      },
+      "incantation": {
+        "s": "66AXpP038gUcoKVQoO98Fz",
+        "l": "incantation",
+        "g": [
+          "death metal",
+          "grindcore",
+          "death metal"
+        ]
+      },
+      "convulse": {
+        "s": "2v2h7Rs6h910kvmn8Y63IE",
+        "l": "convulse",
+        "g": [
+          "death metal",
+          "grindcore",
+          "death metal (early)",
+          " death 'n' roll (mid)",
+          " progressive death metal (later)"
         ]
       }
     }
@@ -5537,6 +6716,48 @@
     }
   },
   {
+    "start": "2025-06-06T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/fokofpolisiekar-van-pletzen-early-b-06-06-2025/",
+    "title": "Fokofpolisiekar / Van Pletzen / Early B",
+    "location": "melkweg",
+    "price": 46,
+    "shortText": "alternative rock · punk · feelgood",
+    "longText": "../public/texts/melkweg/YW4tcGxldHplbi1lYXJseS1iLTA2LTA2LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/YW4tcGxldHplbi1lYXJseS1iLTA2LTA2LTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-06-06T20:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/tygers-of-pan-tang-uk/",
+    "title": "Tygers of pan tang (uk)",
+    "location": "littledevil",
+    "price": 13.5,
+    "shortText": "NWOBHM",
+    "longText": "../public/texts/littledevil/YWxlbmRhci90eWdlcnMtb2YtcGFuLXRhbmctdWsv.html",
+    "image": "../public/event-images/littledevil/YWxlbmRhci90eWdlcnMtb2YtcGFuLXRhbmctdWsv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "tygers of pan tang": {
+        "s": "1MZ8NERIuOS610KBhr6yna",
+        "l": "tygers%20of%20pan%20tang",
+        "g": [
+          "heavy metal",
+          "speed metal",
+          "hard rock",
+          "nwobhm",
+          "heavy metal (early)",
+          " hard rock",
+          "aor (mid)",
+          " heavy metal (later)"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-06-06T22:00:00",
     "end": "2025-06-06T04:00:00",
     "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/selecta-4/",
@@ -5616,6 +6837,14 @@
         ]
       }
     }
+  },
+  {
+    "title": "South Of Heaven\nmet onder meer Meshuggah, In Flames, Accept en Hatebreed",
+    "start": "2025-06-07",
+    "eventLocationName": "gashouder",
+    "shortText": "Gashouder, Maastricht",
+    "image": "../public/location-images/gashouder",
+    "location": "gashouder"
   },
   {
     "door": "2025-06-07T19:00:00",
@@ -5849,6 +7078,30 @@
     "artists": {}
   },
   {
+    "start": "2025-06-16T19:30:00",
+    "venueEventUrl": "https://kavka.be/event/mil-spec-can-restraining-order-us-wild-side-can/",
+    "title": "Mil-spec (can) ",
+    "location": "kavka",
+    "price": null,
+    "shortText": " restraining order (us)  +  wild side (can) RESTRAINING ORDER (us) Hardcore/punk from with a touch of garage/rock ’n roll to keeps things…",
+    "longText": "../public/texts/kavka/YWluaW5nLW9yZGVyLXVzLXdpbGQtc2lkZS1jYW4v.html",
+    "image": "../public/event-images/kavka/YWluaW5nLW9yZGVyLXVzLXdpbGQtc2lkZS1jYW4v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "mil-spec": {
+        "s": "5iWmisoEhjZGn4QYLRqzuy",
+        "l": "mil-spec",
+        "g": [
+          "melodic hardcore",
+          "hardcore punk",
+          "hardcore"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-06-16T19:00:00",
     "start": "2025-06-16T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/104742/peyton-parrish",
@@ -5900,6 +7153,31 @@
           "melodic hardcore",
           "groove",
           "thrash metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-06-17T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/me-first-and-the-gimme-gimmes-17-06-2025/",
+    "title": "Me First And The Gimme Gimmes",
+    "location": "melkweg",
+    "price": 40.25,
+    "shortText": "punkrock · covers",
+    "longText": "../public/texts/melkweg/ZC10aGUtZ2ltbWUtZ2ltbWVzLTE3LTA2LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/ZC10aGUtZ2ltbWUtZ2ltbWVzLTE3LTA2LTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "me first and the gimme gimmes": {
+        "s": "0covrc8eowdwxrs3jtrrn5",
+        "l": "me%20first%20and%20the%20gimme%20gimmes",
+        "g": [
+          "punk",
+          "ska",
+          "ska punk",
+          "skate punk"
         ]
       }
     }
@@ -6005,6 +7283,14 @@
     }
   },
   {
+    "title": "Graspop Metal Meeting",
+    "start": "2025-06-19",
+    "eventLocationName": "dessel",
+    "shortText": "\nMet Iron Maiden, Nine Inch Nails, Slipknot, Judas Priest e.v.a.",
+    "image": "../public/location-images/dessel",
+    "location": "dessel"
+  },
+  {
     "start": "2025-06-19T20:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/jerry-cantrell-19-06-2025/",
     "title": "Jerry Cantrell",
@@ -6044,14 +7330,6 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
-  },
-  {
-    "title": "Graspop Metal Meeting",
-    "start": "2025-06-20",
-    "eventLocationName": "dessel",
-    "shortText": "Dessel, BelgiÃ«",
-    "image": "../public/location-images/dessel",
-    "location": "dessel"
   },
   {
     "start": "2025-06-20T22:00:00",
@@ -6119,6 +7397,20 @@
     "artists": {}
   },
   {
+    "start": "2025-06-23T19:30:00",
+    "venueEventUrl": "https://kavka.be/event/spy-us-bib-us-flux-be/",
+    "title": "Spy (us) + bib (us) + flux (be)",
+    "location": "kavka",
+    "price": null,
+    "shortText": "MENDVILLE PRESENTS SPY (us)SPY is a five-piece hardcore punk band from the San Francisco Bay…",
+    "longText": "../public/texts/kavka/ZS9ldmVudC9zcHktdXMtYmliLXVzLWZsdXgtYmUv.html",
+    "image": "../public/event-images/kavka/ZS9ldmVudC9zcHktdXMtYmliLXVzLWZsdXgtYmUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "start": "2025-06-23T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/satchvai-band",
     "title": "SatchVai Band",
@@ -6140,12 +7432,62 @@
     }
   },
   {
+    "start": "2025-06-24T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/alien-ant-farm-24-06-2025/",
+    "title": "Alien Ant Farm",
+    "location": "melkweg",
+    "price": 34.5,
+    "shortText": "nu metal · alternative rock",
+    "longText": "../public/texts/melkweg/bmRhL2FsaWVuLWFudC1mYXJtLTI0LTA2LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bmRhL2FsaWVuLWFudC1mYXJtLTI0LTA2LTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "alien ant farm": {
+        "s": "6TZdvF1kFzwnQLgHQynzsO",
+        "l": "alien%20ant%20farm",
+        "g": [
+          "alternative metal",
+          "funk metal",
+          "nu metal",
+          "post-grunge"
+        ]
+      }
+    }
+  },
+  {
     "title": "Jera On Air",
     "start": "2025-06-26",
     "eventLocationName": "ysselstyn\nmet turnstile",
     "shortText": "\nMet Turnstile, Sex Pistols, Bullet For My Valentine, Jinjer, Knocked Loose, Nothing More e.v.a.",
     "image": "../public/location-images/ysselstynmetturnstile",
     "location": "ysselstynmetturnstile"
+  },
+  {
+    "start": "2025-06-26T19:30:00",
+    "venueEventUrl": "https://kavka.be/event/earth-crisis-support-tbc/",
+    "title": "Earth crisis",
+    "location": "kavka",
+    "price": null,
+    "shortText": "Earth Crisis is an American metallic hardcore band from Syracuse, New York, active from 1989…",
+    "longText": "../public/texts/kavka/dmVudC9lYXJ0aC1jcmlzaXMtc3VwcG9ydC10YmMv.html",
+    "image": "../public/event-images/kavka/dmVudC9lYXJ0aC1jcmlzaXMtc3VwcG9ydC10YmMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "earth crisis": {
+        "s": "4ITkzAQWPILwWpEWJxHB9g",
+        "l": "earth%20crisis",
+        "g": [
+          "hardcore",
+          "hardcore punk",
+          "metalcore",
+          "groove metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-06-27T19:00:00",
@@ -6247,6 +7589,28 @@
     }
   },
   {
+    "start": "2025-06-28T20:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/the-midnight-ghost-train-usa-sons-of-node/",
+    "title": "The Midnight Ghost Train (USA) + Sons of Node",
+    "location": "littledevil",
+    "price": 14,
+    "shortText": "stoner rock - heavy blues",
+    "longText": "../public/texts/littledevil/LWdob3N0LXRyYWluLXVzYS1zb25zLW9mLW5vZGUv.html",
+    "image": "../public/event-images/littledevil/LWdob3N0LXRyYWluLXVzYS1zb25zLW9mLW5vZGUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "ghost": {
+        "s": "1qp56t7n950o3egmssl81d",
+        "l": "ghost",
+        "g": [
+          "hard rock",
+          "metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-06-28T14:00:00",
     "start": "2025-06-28T14:00:00",
     "end": "2025-06-28T17:00:00",
@@ -6290,7 +7654,7 @@
     "title": "Pussy Riot",
     "location": "metropool",
     "price": 29.5,
-    "shortText": "De politieke punkrockers komen met Riot Days naar Hengelo",
+    "shortText": "Tijdens de NAVO-top klinkt in Hengelo de stem van verzet",
     "longText": "../public/texts/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9wdXNzeS1yaW90.html",
     "image": "../public/event-images/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9wdXNzeS1yaW90",
     "soldOut": false,
@@ -6399,6 +7763,14 @@
         ]
       }
     }
+  },
+  {
+    "title": "Hemelbestormer",
+    "start": "2025-07-04",
+    "eventLocationName": "musicon",
+    "shortText": "Musicon, Den Haag",
+    "image": "../public/location-images/musicon",
+    "location": "musicon"
   },
   {
     "title": "Hellmond Open Air",
@@ -6542,6 +7914,14 @@
     }
   },
   {
+    "title": "Pitfest",
+    "start": "2025-07-10",
+    "eventLocationName": "emmen\nmet cradle of filth",
+    "shortText": "\nMet Cradle Of Filth, Tribulation, Ignite, Benediction, Misery Index, D.R.I. e.v.a.",
+    "image": "../public/location-images/emmenmetcradleoffilth",
+    "location": "emmenmetcradleoffilth"
+  },
+  {
     "start": "2025-07-11T19:30:00",
     "venueEventUrl": "https://neushoorn.nl/production/nervana/",
     "title": "Nervana",
@@ -6637,6 +8017,14 @@
     }
   },
   {
+    "title": "Cradle Of Filth en Nervosa",
+    "start": "2025-07-13",
+    "eventLocationName": "muziekgieterij",
+    "shortText": "Muziekgieterij, Maastricht",
+    "image": "../public/location-images/muziekgieterij",
+    "location": "muziekgieterij"
+  },
+  {
     "start": "2025-07-15T08:00:00",
     "end": "2025-07-15T11:00:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/dbs-tivre-present-battlesnake-aus/",
@@ -6657,6 +8045,14 @@
         ]
       }
     }
+  },
+  {
+    "title": "Battlesnake",
+    "start": "2025-07-16",
+    "eventLocationName": "altstadt",
+    "shortText": "Altstadt, Eindhoven",
+    "image": "../public/location-images/altstadt",
+    "location": "altstadt"
   },
   {
     "door": "2025-07-16T20:00:00",
@@ -6698,6 +8094,36 @@
         "l": "snake",
         "g": [
           "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-07-17T20:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/kaonashi-god-complex/",
+    "title": "Kaonashi + God Complex",
+    "location": "littledevil",
+    "price": 15,
+    "shortText": "emo - post-hardcore - mathcore",
+    "longText": "../public/texts/littledevil/Y2FsZW5kYXIva2FvbmFzaGktZ29kLWNvbXBsZXgv.html",
+    "image": "../public/event-images/littledevil/Y2FsZW5kYXIva2FvbmFzaGktZ29kLWNvbXBsZXgv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "kaonashi": {
+        "s": "60Zpxsk0QxhPEyyvWfSv0I",
+        "l": "kaonashi",
+        "g": [
+          "metalcore"
+        ]
+      },
+      "god complex": {
+        "s": "4Ase9pfG4FCMoiuyRduc8k",
+        "l": "god%20complex",
+        "g": [
+          "deathcore",
+          "metalcore",
+          "hardcore"
         ]
       }
     }
@@ -6756,6 +8182,28 @@
     "shortText": "Gelredome, Arnhem",
     "image": "../public/location-images/gelredome",
     "location": "gelredome"
+  },
+  {
+    "start": "2025-07-28T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/wine-lips-28-07-2025/",
+    "title": "Wine Lips",
+    "location": "melkweg",
+    "price": 23,
+    "shortText": "punk · garagerock · fuzz",
+    "longText": "../public/texts/melkweg/bC9hZ2VuZGEvd2luZS1saXBzLTI4LTA3LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bC9hZ2VuZGEvd2luZS1saXBzLTI4LTA3LTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "wine lips": {
+        "s": "4fPl9Aa0FMkATDiA7AnBNM",
+        "l": "wine%20lips",
+        "g": [
+          "canadian garage rock"
+        ]
+      }
+    }
   },
   {
     "start": "2025-07-28T20:00:00",
@@ -6818,6 +8266,33 @@
     "shortText": "\nMet Machine Head, Papa Roach, Gojira, Apocalyptica, Within Temptation e.v.a.",
     "image": "../public/location-images/wackenduitslandmetmachinehead",
     "location": "wackenduitslandmetmachinehead"
+  },
+  {
+    "start": "2025-08-03T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/august-burns-red-03-08-2025/",
+    "title": "August Burns Red",
+    "location": "melkweg",
+    "price": 34.5,
+    "shortText": "metalcore · progressive · melodic European Tour Twenty Twenty-Five",
+    "longText": "../public/texts/melkweg/YS9hdWd1c3QtYnVybnMtcmVkLTAzLTA4LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/YS9hdWd1c3QtYnVybnMtcmVkLTAzLTA4LTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "august burns red": {
+        "s": "5p9CTsn5ueGU4oScNX1axu",
+        "l": "august%20burns%20red",
+        "g": [
+          "metalcore",
+          "metal",
+          "deathcore",
+          "djent",
+          "post-hardcore",
+          "screamo"
+        ]
+      }
+    }
   },
   {
     "door": "2025-08-03T15:00:00",
@@ -6904,6 +8379,14 @@
         "g": []
       }
     }
+  },
+  {
+    "title": "Snot",
+    "start": "2025-08-07",
+    "eventLocationName": "altstadt",
+    "shortText": "Altstadt, Eindhoven",
+    "image": "../public/location-images/altstadt",
+    "location": "altstadt"
   },
   {
     "door": "2025-08-07T20:00:00",
@@ -7011,12 +8494,12 @@
     }
   },
   {
-    "title": "Sleepytime Gorillla Museum en Faun Fables",
+    "title": "Machine Head en Diggeth",
     "start": "2025-08-13",
-    "eventLocationName": "cpunt",
-    "shortText": "Cpunt, Hoofddorp",
-    "image": "../public/location-images/cpunt",
-    "location": "cpunt"
+    "eventLocationName": "musis sacrum",
+    "shortText": "Musis Sacrum, Arnhem",
+    "image": "../public/location-images/musissacrum",
+    "location": "musissacrum"
   },
   {
     "door": "2025-08-13T19:30:00",
@@ -7207,6 +8690,28 @@
     "location": "boerderij"
   },
   {
+    "start": "2025-08-22T19:00:00",
+    "venueEventUrl": "https://kavka.be/event/the-callous-daoboys/",
+    "title": "The callous daoboys",
+    "location": "kavka",
+    "price": null,
+    "shortText": "The CALLOUS DAOBOYS A recklessly free-spirited collective, THE CALLOUS DAOBOYS is made of six members,…",
+    "longText": "../public/texts/kavka/LmJlL2V2ZW50L3RoZS1jYWxsb3VzLWRhb2JveXMv.html",
+    "image": "../public/event-images/kavka/LmJlL2V2ZW50L3RoZS1jYWxsb3VzLWRhb2JveXMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the callous daoboys": {
+        "s": "4ZWRLOs7c4drt9mKGc0Ds0",
+        "l": "the%20callous%20daoboys",
+        "g": [
+          "metalcore"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-08-22T19:00:00",
     "start": "2025-08-22T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/108201/papangu",
@@ -7263,6 +8768,52 @@
     }
   },
   {
+    "door": "2025-08-23T20:00:00",
+    "start": "2025-08-23T20:30:00",
+    "end": "2025-08-23T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/flotsam-and-jetsam-support/",
+    "title": "FlotsamAnd Jetsam",
+    "location": "iduna",
+    "price": 20,
+    "shortText": null,
+    "longText": "../public/texts/iduna/ZGEvZmxvdHNhbS1hbmQtamV0c2FtLXN1cHBvcnQv.html",
+    "image": "../public/event-images/iduna/ZGEvZmxvdHNhbS1hbmQtamV0c2FtLXN1cHBvcnQv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-08-24T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/flotsam-jetsam",
+    "title": "Flotsam & Jetsam",
+    "location": "metropool",
+    "price": 27.5,
+    "shortText": "Al veertig jaar een vaste waarde in de thrashmetal-scene",
+    "longText": "../public/texts/metropool/b3Bvb2wubmwvYWdlbmRhL2Zsb3RzYW0tamV0c2Ft.html",
+    "image": "../public/event-images/metropool/b3Bvb2wubmwvYWdlbmRhL2Zsb3RzYW0tamV0c2Ft",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "flotsam": {
+        "s": "6OPDM0yzC3CmonQLmC4WAs",
+        "l": "flotsam",
+        "g": [
+          "power",
+          "thrash metal"
+        ]
+      },
+      "jetsam": {
+        "s": "7gNUlg0kH9M4lMrZxRWkaT",
+        "l": "jetsam",
+        "g": [
+          "post-metal"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-09-05T08:00:00",
     "end": "2025-09-05T10:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/the-courettes/",
@@ -7275,6 +8826,30 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "start": "2025-09-08T19:00:00",
+    "venueEventUrl": "https://kavka.be/event/ten56/",
+    "title": "Ten56.",
+    "location": "kavka",
+    "price": null,
+    "shortText": "Since their emergence in 2021, ten56. has cemented itself as a prominent force in modern…",
+    "longText": "../public/texts/kavka/aHR0cHM6Ly9rYXZrYS5iZS9ldmVudC90ZW41Ni8=.html",
+    "image": "../public/event-images/kavka/aHR0cHM6Ly9rYXZrYS5iZS9ldmVudC90ZW41Ni8=",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ten56.": {
+        "s": "28dpy0DQotTkBXcTlniQii",
+        "l": "ten56.",
+        "g": [
+          "deathcore",
+          "metalcore",
+          "djent"
+        ]
+      }
+    }
   },
   {
     "title": "Pendragon",
@@ -7529,6 +9104,32 @@
     }
   },
   {
+    "start": "2025-09-15T19:00:00",
+    "venueEventUrl": "https://kavka.be/event/night-verses/",
+    "title": "Night verses",
+    "location": "kavka",
+    "price": null,
+    "shortText": "Hailing from Fullerton, CA, NIGHT VERSES, comprising drummer Aric Improta, guitarist Nick DePirro, and bassist…",
+    "longText": "../public/texts/kavka/Ly9rYXZrYS5iZS9ldmVudC9uaWdodC12ZXJzZXMv.html",
+    "image": "../public/event-images/kavka/Ly9rYXZrYS5iZS9ldmVudC9uaWdodC12ZXJzZXMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "night verses": {
+        "s": "55GUoQ2E2hze3842bFs4bb",
+        "l": "night%20verses",
+        "g": [
+          "progressive metal",
+          "djent",
+          "post-rock",
+          "post-hardcore",
+          "math rock"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-09-19T20:00:00",
     "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-the-optimist-in-me/",
     "title": "The Optimist In Me",
@@ -7547,6 +9148,14 @@
         "g": []
       }
     }
+  },
+  {
+    "title": "Primal Fear en Eleine",
+    "start": "2025-09-21",
+    "eventLocationName": "de casino",
+    "shortText": "De Casino, Sint Niklaas",
+    "image": "../public/location-images/decasino",
+    "location": "decasino"
   },
   {
     "start": "2025-09-23T20:00:00",
@@ -7606,6 +9215,20 @@
     "shortText": "De Harmonie, Leeuwarden",
     "image": "../public/location-images/deharmonie",
     "location": "deharmonie"
+  },
+  {
+    "start": "2025-09-26T19:00:00",
+    "venueEventUrl": "https://kavka.be/event/tankcsapda/",
+    "title": "Tankcsapda",
+    "location": "kavka",
+    "price": null,
+    "shortText": "Hungary’s Nr 1 rock band Tankcsapda plays in Antwerp for the very first time! The…",
+    "longText": "../public/texts/kavka/czovL2thdmthLmJlL2V2ZW50L3Rhbmtjc2FwZGEv.html",
+    "image": "../public/event-images/kavka/czovL2thdmthLmJlL2V2ZW50L3Rhbmtjc2FwZGEv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "start": "2025-09-27T12:15:00",
@@ -7674,6 +9297,22 @@
         ]
       }
     }
+  },
+  {
+    "title": "Parkway Drive, Thy Art is Murder en The Amity Affliction",
+    "start": "2025-09-30",
+    "eventLocationName": "ziggo dome",
+    "shortText": "Ziggo Dome, Amsterdam",
+    "image": "../public/location-images/ziggodome",
+    "location": "ziggodome"
+  },
+  {
+    "title": "Wolfheart",
+    "start": "2025-10-03",
+    "eventLocationName": "turock",
+    "shortText": "Turock, Essen",
+    "image": "../public/location-images/turock",
+    "location": "turock"
   },
   {
     "door": "2025-10-03T20:00:00",
@@ -7847,6 +9486,28 @@
     }
   },
   {
+    "start": "2025-10-07T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/yt",
+    "title": "Y&t",
+    "location": "metropool",
+    "price": 38,
+    "shortText": "De band die hardrock definieerde",
+    "longText": "../public/texts/metropool/aHR0cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL3l0.html",
+    "image": "../public/event-images/metropool/aHR0cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL3l0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "y&t": {
+        "s": null,
+        "l": null,
+        "g": [
+          "symfonische rock"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-10-08T20:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/atreyu-08-10-2025/",
     "title": "Atreyu",
@@ -7898,6 +9559,29 @@
           "scottish metal",
           "uk metalcore",
           "metalcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-10-09T19:00:00",
+    "venueEventUrl": "https://kavka.be/event/nasty-gods-hate-mssing-link/",
+    "title": "Nasty + god’s hate + mssing link",
+    "location": "kavka",
+    "price": null,
+    "shortText": "Get ready for a night of hardcore! Nasty is back with their hard-hitting sound and…",
+    "longText": "../public/texts/kavka/dC9uYXN0eS1nb2RzLWhhdGUtbXNzaW5nLWxpbmsv.html",
+    "image": "../public/event-images/kavka/dC9uYXN0eS1nb2RzLWhhdGUtbXNzaW5nLWxpbmsv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "nasty": {
+        "s": "7gnx7pgxdwtlobs16b1mfb",
+        "l": "france",
+        "g": [
+          "beatdown",
+          "death/thrash metal"
         ]
       }
     }
@@ -8000,6 +9684,34 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "start": "2025-10-18T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/delain",
+    "title": "Delain",
+    "location": "metropool",
+    "price": 30,
+    "shortText": "Een exclusieve show van de Nederlandse symfonische-metalband",
+    "longText": "../public/texts/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvZGVsYWlu.html",
+    "image": "../public/event-images/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvZGVsYWlu",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "delain": {
+        "s": "6pIRdCtSE5hLFfIfcTAicI",
+        "l": "delain",
+        "g": [
+          "dutch metal",
+          "gothic metal",
+          "gothic symphonic metal",
+          "power metal",
+          "symphonic metal",
+          "symphonic metal",
+          "rock"
+        ]
+      }
+    }
   },
   {
     "door": "2025-10-18T14:30:00",
@@ -8280,6 +9992,13 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "from fall to spring": {
+        "s": "373XSzgRHjl6imFLdGNlQm",
+        "l": "from%20fall%20to%20spring",
+        "g": [
+          "metalcore"
+        ]
+      },
       "allt": {
         "s": "6YRr0btzGqfQ5K7r23qjEM",
         "l": "allt",
@@ -8315,6 +10034,26 @@
     }
   },
   {
+    "start": "2025-11-01T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/no-barrier-01-11-2025/",
+    "title": "No Barrier",
+    "location": "melkweg",
+    "price": 15.5,
+    "shortText": "metalcore · poppunk · emo Punk, rock & metalcore party met DJ's en liveband",
+    "longText": "../public/texts/melkweg/L2FnZW5kYS9uby1iYXJyaWVyLTAxLTExLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/L2FnZW5kYS9uby1iYXJyaWVyLTAxLTExLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "no barrier": {
+        "s": "2am0proxk0wcivgl5rza3a",
+        "l": "no%20barrier",
+        "g": []
+      }
+    }
+  },
+  {
     "start": "2025-11-01T08:00:00",
     "end": "2025-11-01T10:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/dub-pistols-uk/",
@@ -8327,6 +10066,14 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "title": "Battle Beast, Dominum en Majestica",
+    "start": "2025-11-02",
+    "eventLocationName": "trix",
+    "shortText": "Trix, Antwerpen",
+    "image": "../public/location-images/trix",
+    "location": "trix"
   },
   {
     "door": "2025-11-02T15:00:00",
@@ -8464,6 +10211,74 @@
     }
   },
   {
+    "door": "2025-11-08T20:00:00",
+    "start": "2025-11-08T20:30:00",
+    "end": "2025-11-08T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/pene-corrida/",
+    "title": "Pene Corrida",
+    "location": "iduna",
+    "price": 20,
+    "shortText": null,
+    "longText": "../public/texts/iduna/L2lkdW5hLm5sL2FnZW5kYS9wZW5lLWNvcnJpZGEv.html",
+    "image": "../public/event-images/iduna/L2lkdW5hLm5sL2FnZW5kYS9wZW5lLWNvcnJpZGEv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "pene corrida": {
+        "s": "1hw2ywipnsowbtb8flzcca",
+        "l": "pene%20corrida",
+        "g": []
+      }
+    }
+  },
+  {
+    "start": "2025-11-11T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/hanabie-11-11-2025/",
+    "title": "Hanabie.",
+    "location": "melkweg",
+    "price": 34.5,
+    "shortText": "harajuku-core · metalcore · japan",
+    "longText": "../public/texts/melkweg/L25sL2FnZW5kYS9oYW5hYmllLTExLTExLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/L25sL2FnZW5kYS9oYW5hYmllLTExLTExLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-11-12T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/mono-jp-12-11-2025/",
+    "title": "Mono (jp)",
+    "location": "melkweg",
+    "price": 32.2,
+    "shortText": "postrock · ambient · instrumentaal",
+    "longText": "../public/texts/melkweg/L25sL2FnZW5kYS9tb25vLWpwLTEyLTExLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/L25sL2FnZW5kYS9tb25vLWpwLTEyLTExLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "mono": {
+        "s": "53LVoipNTQ4lvUSJ61XKU3",
+        "l": "mono",
+        "g": [
+          "post-rock",
+          "math rock",
+          "sludge metal"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Lacuna Coil en Nonpoint",
+    "start": "2025-11-18",
+    "eventLocationName": "ancienne belgique",
+    "shortText": "Ancienne Belgique, Brussel (België)",
+    "image": "../public/location-images/anciennebelgique",
+    "location": "anciennebelgique"
+  },
+  {
     "door": "2025-11-20T19:30:00",
     "start": "2025-11-20T20:15:00",
     "venueEventUrl": "https://www.effenaar.nl/agenda/lacuna-coil",
@@ -8591,6 +10406,28 @@
     }
   },
   {
+    "start": "2025-11-28T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/danko-jones-28-11-2025/",
+    "title": "Danko Jones",
+    "location": "melkweg",
+    "price": 31.05,
+    "shortText": "hardrock · rock-‘n-roll IS WHAT YOU NEED TOUR 2025",
+    "longText": "../public/texts/melkweg/YWdlbmRhL2RhbmtvLWpvbmVzLTI4LTExLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/YWdlbmRhL2RhbmtvLWpvbmVzLTI4LTExLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "danko jones": {
+        "s": "7cgovigsnxymgobkxk8dtw",
+        "l": "danko%20jones",
+        "g": [
+          "punk 'n' roll"
+        ]
+      }
+    }
+  },
+  {
     "title": "Sabaton",
     "start": "2025-12-01",
     "eventLocationName": "ziggo dome",
@@ -8623,6 +10460,20 @@
     }
   },
   {
+    "start": "2025-12-10T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/ramkot-10-12-2025/",
+    "title": "Ramkot",
+    "location": "melkweg",
+    "price": 23,
+    "shortText": "hardrock · heavy · stonerrock",
+    "longText": "../public/texts/melkweg/bC9ubC9hZ2VuZGEvcmFta290LTEwLTEyLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bC9ubC9hZ2VuZGEvcmFta290LTEwLTEyLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2025-12-11T20:30:00",
     "start": "2025-12-11T20:30:00",
     "venueEventUrl": "https://www.paradiso.nl/en/program/clutch/2438454",
@@ -8650,6 +10501,14 @@
         ]
       }
     }
+  },
+  {
+    "title": "Battle Beast, Dominum en Majestica",
+    "start": "2025-12-12",
+    "eventLocationName": "turbinenhalle",
+    "shortText": "Turbinenhalle, Oberhausen",
+    "image": "../public/location-images/turbinenhalle",
+    "location": "turbinenhalle"
   },
   {
     "door": "2025-12-12T15:00:00",
@@ -8740,6 +10599,39 @@
     }
   },
   {
+    "start": "2025-12-14T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/katatonia-14-12-2025/",
+    "title": "Katatonia",
+    "location": "melkweg",
+    "price": 39.1,
+    "shortText": "melancholisch · doom · progressieve metal UK & Europe Tour 2025",
+    "longText": "../public/texts/melkweg/bC9hZ2VuZGEva2F0YXRvbmlhLTE0LTEyLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bC9hZ2VuZGEva2F0YXRvbmlhLTE0LTEyLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "katatonia": {
+        "s": "2CWWgbxApjbyByxBBCvGTm",
+        "l": "katatonia",
+        "g": [
+          "doom metal",
+          "gothic metal",
+          "progressive metal",
+          "swedish doom metal",
+          "swedish metal",
+          "swedish progressive metal",
+          "doom",
+          "death metal (early)",
+          " gothic",
+          "alternative",
+          "progressive rock",
+          "metal (later)"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-12-16T19:00:00",
     "start": "2025-12-16T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/98930/imminence",
@@ -8820,6 +10712,14 @@
     "shortText": "RTM Stage, Rotterdam",
     "image": "../public/location-images/rtmstage",
     "location": "rtmstage"
+  },
+  {
+    "title": "Epica, Amaranthe en Charlotte Wessels",
+    "start": "2026-02-07",
+    "eventLocationName": "ziggo dome",
+    "shortText": "Ziggo Dome, Amsterdam",
+    "image": "../public/location-images/ziggodome",
+    "location": "ziggodome"
   },
   {
     "title": "Channel Zero",
