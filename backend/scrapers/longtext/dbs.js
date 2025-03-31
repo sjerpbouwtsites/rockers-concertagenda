@@ -106,6 +106,10 @@ export default async function longTextSocialsIframes(page, event) {
                 .map((el) => el.innerHTML)
                 .join("");
 
+            document
+                .querySelectorAll(textSelector)
+                .forEach((ts) => ts.setAttribute("data-text", "1"));
+
             // laatste attributen eruit.
             document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
                 attributesToRemoveSecondRound.forEach((attr) => {
@@ -117,7 +121,7 @@ export default async function longTextSocialsIframes(page, event) {
 
             // tekst
             res.textForHTML = Array.from(
-                document.querySelectorAll(textSelector)
+                document.querySelectorAll("[data-text]")
             )
                 .map((el) => el.innerHTML)
                 .join("");

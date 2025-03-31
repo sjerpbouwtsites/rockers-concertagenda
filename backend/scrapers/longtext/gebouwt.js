@@ -123,7 +123,9 @@ export default async function longTextSocialsIframes(page, event) {
                         checkForEmpty.parentNode.removeChild(checkForEmpty);
                     }
                 });
-
+            document
+                .querySelectorAll(textSelector)
+                .forEach((ts) => ts.setAttribute("data-text", "1"));
             // laatste attributen eruit.
             document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
                 attributesToRemoveSecondRound.forEach((attr) => {
@@ -134,7 +136,7 @@ export default async function longTextSocialsIframes(page, event) {
             });
 
             // tekst.
-            const d = document.querySelectorAll(textSelector);
+            const d = document.querySelectorAll("[data-text]");
             res.textForHTML =
                 Array.from(d)
                     .map((el) => el.innerHTML)
