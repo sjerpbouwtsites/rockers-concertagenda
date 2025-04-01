@@ -9,8 +9,7 @@ export const AbstractWorkerConfig = {
     path: null,
     name: null,
     family: null,
-    workerCount: null,
-    scraper: true // TODO word dit gebruikt
+    workerCount: null
 };
 
 export const workerConfig = {
@@ -21,9 +20,10 @@ export const workerConfig = {
     //     forceSet: 0
     // },
     // afaslive: {
-    //     workerCount: 3,
+    //     workerCount: 1,
     //     workerConcurrent: 2,
-    //     forceSet: 0
+    //     forceSet: 0,
+    //     CPUReq: "high"
     // },
     // baroeg: { workerCount: 1, workerConcurrent: 2, forceSet: 0 },
     // bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
@@ -40,36 +40,37 @@ export const workerConfig = {
     //     forceSet: 2
     // },
     // doornroosje: {
-    //     workerCount: 3,
+    //     workerCount: 1,
     //     workerConcurrent: 1,
     //     CPUReq: "high",
     //     forceSet: 2
     // },
-    // dynamo: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
     // effenaar: {
     //     workerCount: 3,
     //     CPUReq: "high",
     //     workerConcurrent: 2,
     //     forceSet: 3
     // },
-    gebouwt: {
-        workerCount: 1,
-        workerConcurrent: 1,
-        CPUReq: "high",
-        forceSet: 3
-    }
-    // gebrdenobel: {
+    // gebouwt: {
     //     workerCount: 1,
     //     workerConcurrent: 1,
     //     CPUReq: "high",
     //     forceSet: 3
     // },
-    // groeneengel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 }
+    // gebrdenobel: {
+    //     workerCount: 1,
+    //     workerConcurrent: 1,
+    //     CPUReq: "high",
+    //     forceSet: 3
+    // }
+    //    dynamo: { workerCount: 2, workerConcurrent: 1, forceSet: 3 }
+    // groeneengel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
     // iduna: { workerCount: 1, workerConcurrent: 1, forceSet: 4 },
     // kavka: {
     //     workerCount: 1,
     //     workerConcurrent: 2,
-    //     forceSet: 4
+    //     forceSet: 4,
+    //     CPUReq: "high"
     // },
     // littledevil: {
     //     workerCount: 1,
@@ -82,43 +83,43 @@ export const workerConfig = {
     //     workerConcurrent: 1,
     //     forceSet: 4
     // },
+    // metalfan: { workerCount: 1, CPUReq: "low", workerConcurrent: 1 },
     // metropool: {
     //     workerCount: 2,
     //     workerConcurrent: 1,
     //     CPUReq: "high",
     //     forceSet: 4
-    // },
-    // metalfan: { workerCount: 1, CPUReq: "low", workerConcurrent: 1 },
-    // neushoorn: { workerCount: 2, workerConcurrent: 1, forceSet: 5 },
-    // nieuwenor: { workerCount: 1, workerConcurrent: 2, forceSet: 5 },
-    // occii: {
-    //     workerCount: 1,
-    //     workerConcurrent: 1,
-    //     forceSet: 5
-    // },
-    // oosterpoort: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
-    // p60: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
-    // patronaat: {
-    //     workerCount: 2,
-    //     workerConcurrent: 1,
-    //     forceSet: 6,
-    //     CPUReq: "high"
-    // },
-    // paradiso: {
-    //     workerCount: 2,
-    //     workerConcurrent: 2,
-    //     forceSet: 5,
-    //     CPUReq: "high"
-    // },
-    // tivolivredenburg: {
-    //     workerCount: 2,
-    //     workerConcurrent: 2,
-    //     forceSet: 6,
-    //     CPUReq: "low"
-    // },
-    // victorie: { workerCount: 1, workerConcurrent: 2, forceSet: 6 },
-    // volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
-    // willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 }
+    // }
+    neushoorn: { workerCount: 2, workerConcurrent: 1, forceSet: 5 },
+    nieuwenor: { workerCount: 1, workerConcurrent: 2, forceSet: 5 },
+    occii: {
+        workerCount: 1,
+        workerConcurrent: 1,
+        forceSet: 5
+    },
+    oosterpoort: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
+    p60: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
+    patronaat: {
+        workerCount: 2,
+        workerConcurrent: 1,
+        forceSet: 6,
+        CPUReq: "high"
+    },
+    paradiso: {
+        workerCount: 2,
+        workerConcurrent: 2,
+        forceSet: 5,
+        CPUReq: "high"
+    },
+    tivolivredenburg: {
+        workerCount: 2,
+        workerConcurrent: 2,
+        forceSet: 6,
+        CPUReq: "low"
+    },
+    victorie: { workerCount: 1, workerConcurrent: 2, forceSet: 6 },
+    volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
+    willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 }
 };
 
 // deflux: { workerCount: 1, workerConcurrent: 1, forceSet: 2 },
@@ -209,7 +210,7 @@ class WorkerListConf {
             return true;
         }
         if (shell.force?.includes(familyName) ?? null) return true;
-        if (familyName.includes("metalfan")) return false; // metalfan alleen bij all of force
+
         if (!this.baseEventlistsStart.join("").includes(familyName))
             return true;
         const actueelGevonden = this.baseEventlistsStart.find(

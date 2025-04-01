@@ -17,7 +17,7 @@ const scraper = new AbstractScraper({
         url: `https://poppodiumboerderij.nl/includes/ajax/events.php?filters=6,7,8&search=&limit=69420&offset=0&lang_id=1&rooms=2,1&month=&year=`
     },
     singlePage: {
-        timeout: 20006
+        timeout: 10000
     },
     app: {
         harvest: {

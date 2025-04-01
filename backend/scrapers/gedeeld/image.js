@@ -39,6 +39,10 @@ async function downloadImageCompress({
     imagePath,
     familyOverSchrijving = ""
 }) {
+    if (!image) {
+        return "empty image";
+    }
+
     let fam = "";
     if (familyOverSchrijving) {
         fam = familyOverSchrijving;
@@ -51,13 +55,17 @@ async function downloadImageCompress({
     }
 
     if (image.includes("event-images")) {
-        return true;
+        return "image includes event images";
     }
 
     const extMatch = image.match(/.jpg|.jpeg|.png|.webp/);
     const extension = Array.isArray(extMatch) ? extMatch[0] : "onbekend";
 
-    await downloadImage(image, `${imagePath}-ori${extension}`, workerData)
+    const diRes = await downloadImage(
+        image,
+        `${imagePath}-ori${extension}`,
+        workerData
+    )
         .then(() => {
             sharp(`${imagePath}-ori${extension}`)
                 .resize(440, 250)
@@ -73,24 +81,39 @@ async function downloadImageCompress({
                 .webp()
                 .toFile(`${imagePath}-vol.webp`, () => {});
         })
-
+        .then(() => "success")
         .catch((err) => {
-            // TODO error handling
+            return `err: ${err.message}`;
         });
 
-    return true;
+    return diRes;
 }
 
 export default async function getImage({
     _this,
     page,
+    workerData,
     event,
     pageInfo,
     selectors,
     mode,
-    workerData,
-    directInput = null
+    directImageSrc = null
 }) {
+    if (mode === "direct-input") {
+        return await getImageDirectInput(
+            _this,
+            page,
+            event,
+            pageInfo,
+            workerData,
+            directImageSrc
+        );
+    }
+
+    if (!selectors || selectors === null) {
+        selectors = [];
+    }
+
     const res = {
         errors: []
     };
@@ -146,9 +169,7 @@ export default async function getImage({
     const pi = pageInfo?.anker ? pageInfo?.anker : event?.pageInfo;
     let image = null;
     const selectorsCopy = [...selectors];
-    if (mode === "direct-input") {
-        image = directInput;
-    } else if (mode === "image-src") {
+    if (mode === "image-src") {
         while (!image && selectorsCopy.length > 0) {
             const selector = selectorsCopy.shift();
             // eslint-disable-next-line no-await-in-loop
@@ -223,11 +244,14 @@ export default async function getImage({
         }
     }
 
+    res.mode = mode;
+
     if (!image && ogImage) {
         image = ogImage;
     }
 
     if (!image) {
+        res.ditdan2 = "ook geen ogimage dus location jpg gepakt";
         image = `${fsDirections.publicLocationImages}/${event.location}.jpg`;
     }
 
@@ -239,29 +263,93 @@ export default async function getImage({
     ).toString("base64");
     let imagePath = `${_this.eventImagesFolder}/${workerData.family}/${base64String}`;
 
-    if (
-        !workerData?.shellArguments?.keepImages ||
-        workerData?.shellArguments?.keepImages === "false"
-    ) {
-        if (fs.existsSync(`${imagePath}-vol.webp`)) {
-            // niets doen!
-        } else {
-            const diCompressRes = await downloadImageCompress({
-                image,
-                imagePath,
-                workerData,
-                _this
-            });
-            if (!diCompressRes) {
-                res.errors.push({
-                    remarks: `download compress ${event.title} ${image} fail`
-                });
-                imagePath = "";
-            }
+    const ki = workerData?.shellArguments?.keepImages;
+    const behoudAfbeeldingen = !!ki && ki === "true";
+
+    if (behoudAfbeeldingen) {
+        const afbeeldingBestaat = fs.existsSync(`${imagePath}-vol.webp`);
+        if (afbeeldingBestaat) {
+            res.image = imagePath;
+            return res;
         }
     }
 
+    const diCompressRes = await downloadImageCompress({
+        _this,
+        image,
+        workerData,
+        imagePath
+    });
+    res.diCompressRes = diCompressRes;
+    if (!diCompressRes) {
+        res.neeHe = "jaja";
+        res.errors.push({
+            remarks: `download compress ${event.title} ${image} fail`
+        });
+        imagePath = "";
+    }
+
     res.image = imagePath;
+    return res;
+}
+
+async function getImageDirectInput(
+    _this,
+    page,
+    event,
+    pageInfo,
+    workerData,
+    imageSrc = null
+) {
+    const res = {
+        errors: []
+    };
+    res.arguments = arguments;
+
+    const base64String = Buffer.from(
+        event.venueEventUrl.substring(
+            event.venueEventUrl.length - 30,
+            event.venueEventUrl.length
+        )
+    ).toString("base64");
+    res.imagePath = `${_this.eventImagesFolder}/${workerData.family}/${base64String}`;
+    const ki = workerData?.shellArguments?.keepImages;
+    const behoudAfbeeldingen = !!ki && ki === "true";
+
+    if (behoudAfbeeldingen) {
+        res.behoudAFb = "true";
+        const afbeeldingBestaat = fs.existsSync(`${res.imagePath}-vol.webp`);
+        if (afbeeldingBestaat) {
+            res.afbBestaat = "true";
+            res.image = res.imagePath;
+            return res;
+        } else {
+            res.afbBestaat = "false";
+        }
+    } else {
+        res.behoudAfb = "false";
+    }
+
+    const diCompressRes = await downloadImageCompress({
+        _this,
+        image: imageSrc,
+        workerData,
+        imagePath: res.imagePath
+    });
+
+    res.imageSrc = imageSrc;
+
+    res.diCompressRes = diCompressRes;
+    if (typeof diCompressRes === "string" && diCompressRes.includes("err")) {
+        res.neeHe = "jaja";
+        res.errors.push({
+            error: new Error(diCompressRes),
+            remarks: `download compress ${event.title} ${imageSrc} fail`
+        });
+        res.imagePath = imageSrc;
+    }
+
+    res.image = res.imagePath;
     return res;
 }
 

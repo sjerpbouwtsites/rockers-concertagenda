@@ -1,194 +1,80 @@
 [
   {
-    "door": "2025-01-25T19:00:00.000",
-    "start": "2025-01-25T19:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/delain-2/",
-    "title": "Delain",
+    "door": "2025-04-03T20:00:00.000",
+    "start": "2025-04-03T20:30:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/iv-and-the-strange-band/",
+    "title": "IV and the Strange Band",
     "location": "doornroosje",
     "price": null,
-    "shortText": "+ Kingfisher Skymetal, symfonische metal",
-    "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvZGVsYWluLTIv.html",
+    "shortText": "folk, punk, country, doornroosjepas",
+    "longText": "../public/texts/doornroosje/ZXZlbnQvaXYtYW5kLXRoZS1zdHJhbmdlLWJhbmQv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/12/Hank-IV-and-the-Strange-Band-1200x630.jpeg",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "delain": {
-        "s": "6pIRdCtSE5hLFfIfcTAicI",
-        "l": "delain",
+      "band": {
+        "s": null,
+        "l": "band",
         "g": [
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "power metal",
-          "symphonic metal",
-          "symphonic metal",
-          "rock"
+          "heavy",
+          "power metal"
         ]
-      },
+      }
+    }
+  },
+  {
+    "door": "2025-04-08T20:00:00.000",
+    "start": "2025-04-08T21:00:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/de-roos-voorronde-1-3/",
+    "title": "De Roos voorronde #1",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "Spit for the Masses + Grandad + POMME-GRENADEblack metal, punk, grunge",
+    "longText": "../public/texts/doornroosje/bC9ldmVudC9kZS1yb29zLXZvb3Jyb25kZS0xLTMv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/02/banner-met-rozentakjes-1200x630.jpeg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
       "metal": {
         "s": null,
         "l": "metal",
         "g": [
           "death metal"
         ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-08T19:30:00.000",
-    "start": "2025-02-08T20:15:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/high-vis/",
-    "title": "High Vis",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Narrow Headrock, post punk, hardcore, doornroosjepas",
-    "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvaGlnaC12aXMv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "high vis": {
-        "s": "4gmrt82h2vjgjnp67sg5nw",
-        "l": "high%20vis",
-        "g": [
-          "uk post-punk revival"
-        ]
       },
-      "hardcore": {
-        "s": "3N11n3hTyVlcOg77IGefjz",
-        "l": "hardcore",
-        "g": [
-          "death metal",
-          "hardcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-01T19:00:00.000",
-    "start": "2025-03-01T20:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/dubioza-kolektiv-3/",
-    "title": "Dubioza Kolektiv",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, punk, hip hop, ska, electronic, dub, balkan",
-    "longText": "../public/texts/doornroosje/ZS5ubC9ldmVudC9kdWJpb3phLWtvbGVrdGl2LTMv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "dubioza kolektiv": {
-        "s": "02IFYoziC7CpQRK8fbehUY",
-        "l": "dubioza%20kolektiv",
-        "g": [
-          "balkan brass",
-          "balkan punk",
-          "bosnian indie"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-12T20:00:00.000",
-    "start": "2025-03-12T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/1914/",
-    "title": "1914",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Katlametal, black metal, death metal, doornroosjepas",
-    "longText": "../public/texts/doornroosje/d3d3LmRvb3Jucm9vc2plLm5sL2V2ZW50LzE5MTQv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "1914": {
+      "meta": {
         "s": null,
-        "l": "ukraine",
+        "l": "meta",
         "g": [
-          "death metal",
-          "blackened death metal",
-          "sludge",
-          "doom metal",
-          "doom"
-        ]
-      },
-      "katla": {
-        "s": "19oXs2v8uFyKgCiGuDMBAc",
-        "l": "katla",
-        "g": [
-          "icelandic black metal",
-          "icelandic metal",
-          "stoner",
-          "sludge",
-          "doom metal"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
+          "groove",
+          "progressive metal"
         ]
       }
     }
   },
   {
-    "door": "2025-03-29T17:30:00.000",
-    "start": "2025-03-29T18:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/suffocation/",
-    "title": "Suffocation",
+    "door": "2025-04-11T21:00:00.000",
+    "start": "2025-04-11T22:00:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/magic-tom-yuri-eten-bloed/",
+    "title": "Magic Tom & Yuri eten bloed",
     "location": "doornroosje",
     "price": null,
-    "shortText": "+ Angelmaker + Fuming Mouth + Carcosa + Mélancoliametal, death metal, deathcore",
-    "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvc3VmZm9jYXRpb24v.html",
+    "shortText": "punk, comedy, theater",
+    "longText": "../public/texts/doornroosje/ZW50L21hZ2ljLXRvbS15dXJpLWV0ZW4tYmxvZWQv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/10/1600x800-1200x630.jpg",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "suffocation": {
-        "s": "4itrdiouodpnw6nm4tydk1",
-        "l": "suffocation",
+      "ater": {
+        "s": "1HpPzWF2E6G8KfD5pOM6La",
+        "l": "ater",
         "g": [
+          "djent",
           "black metal",
-          "brutal death metal",
+          "black",
           "death metal",
-          "metal",
-          "new york death metal",
-          "technical death metal"
-        ]
-      },
-      "fuming mouth": {
-        "s": "2I7atnUFOmvMyGPuesD7cB",
-        "l": "fuming%20mouth",
-        "g": [
-          "chaotic hardcore",
-          "metallic hardcore",
-          "death metal",
-          "crust"
-        ]
-      },
-      "angelmaker": {
-        "s": "1AdrYGYDz4oa9dvW2jfFrG",
-        "l": "angelmaker",
-        "g": [
-          "blackened deathcore",
-          "deathcore",
-          "melodic metalcore",
-          "slamming deathcore",
-          "vancouver metal",
-          "deathcore"
-        ]
-      },
-      "carcosa": {
-        "s": "2bhtSpyMNiPZJlkisy4T9G",
-        "l": "carcosa",
-        "g": [
-          "deathcore",
-          "melodic metalcore",
-          "death metal",
-          "hardcore"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
+          "extreme metal",
+          "heavy metal"
         ]
       }
     }
@@ -197,11 +83,12 @@
     "door": "2025-04-27T20:00:00.000",
     "start": "2025-04-27T20:45:00.000",
     "venueEventUrl": "https://www.doornroosje.nl/event/gnod-white-hills/",
-    "title": "Gnod & White Hills",
+    "title": "Gnod + White Hills",
     "location": "doornroosje",
     "price": null,
     "shortText": "rock, kraut rock, psychedelische rock, noise rock, doornroosjepas",
     "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L2dub2Qtd2hpdGUtaGlsbHMv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/01/Gnod-White-Hills-1200x630.jpg",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
@@ -213,68 +100,55 @@
           "noise rock",
           "uk noise rock"
         ]
-      }
-    }
-  },
-  {
-    "door": "2025-08-27T19:00:00.000",
-    "start": "2025-08-27T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering-11/",
-    "title": "The Gathering",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "Final extra showrock, progressieve rock, metal, symfonische metal",
-    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L3RoZS1nYXRoZXJpbmctMTEv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "the gathering": {
-        "s": "2kO6zjt4a1OIqxOERhliEX",
-        "l": "the%20gathering",
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
         "g": [
-          "atmospheric doom",
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "symphonic metal",
-          "death",
-          "doom metal, atmospheric doom metal (early)",
-          " atmospheric rock (later)"
+          "heavy metal",
+          "hard rock"
         ]
       },
-      "metal": {
-        "s": null,
-        "l": "metal",
+      "white hills": {
+        "s": "0ttvGAnfEC6KZLrljUdIyX",
+        "l": "white%20hills",
         "g": [
-          "death metal"
+          "space rock",
+          "krautrock",
+          "psychedelic rock",
+          "stoner rock",
+          "acid rock",
+          "noise rock"
         ]
       }
     }
   },
   {
-    "door": "2025-10-17T19:15:00.000",
-    "start": "2025-10-17T20:15:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/floor-jansen-2/",
-    "title": "Floor Jansen",
+    "door": "2025-05-02T20:00:00.000",
+    "start": "2025-05-02T20:30:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/wodan-boys-2/",
+    "title": "Wodan Boys",
     "location": "doornroosje",
     "price": null,
-    "shortText": "pop, symphonic metal, power metal",
-    "longText": "../public/texts/doornroosje/b29zamUubmwvZXZlbnQvZmxvb3ItamFuc2VuLTIv.html",
+    "shortText": "+ Fuzzy Teethrock, punk",
+    "longText": "../public/texts/doornroosje/bnJvb3NqZS5ubC9ldmVudC93b2Rhbi1ib3lzLTIv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/11/Wodan-Boys-WEB-1200x630.jpg",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "floor jansen": {
-        "s": "2zntj9bu9qmjwbbomspqgj",
-        "l": "floor%20jansen",
+      "wodan boys": {
+        "s": "0kmkbibevmq4luqquahdmr",
+        "l": "wodan%20boys",
         "g": [
-          "hel"
+          "dutch rock"
         ]
       },
-      "metal": {
+      "rock": {
         "s": null,
-        "l": "metal",
+        "l": "rock",
         "g": [
-          "death metal"
+          "heavy metal",
+          "hard rock"
         ]
       }
     }

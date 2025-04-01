@@ -8,6 +8,7 @@
     "price": null,
     "shortText": "metal, progressive metal",
     "longText": "../public/texts/doornroosje/d3cuZG9vcm5yb29zamUubmwvZXZlbnQvdm93ZXIv.html",
+    "image": "../public/event-images/doornroosje/d3cuZG9vcm5yb29zamUubmwvZXZlbnQvdm93ZXIv",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
@@ -24,6 +25,14 @@
         "g": [
           "death metal"
         ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
       }
     }
   },
@@ -36,6 +45,7 @@
     "price": null,
     "shortText": "+ Novelists + The Omnificmetal, djent metal, progressieve metal",
     "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvdGVzc2VyYWN0LTQv.html",
+    "image": "../public/event-images/doornroosje/cm5yb29zamUubmwvZXZlbnQvdGVzc2VyYWN0LTQv",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
@@ -70,148 +80,15 @@
         "g": [
           "death metal"
         ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-01T20:00:00.000",
-    "start": "2025-03-01T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/ploegendienst-2/",
-    "title": "Ploegendienst",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Loopeyrock, punk, punkrock, doornroosjepas",
-    "longText": "../public/texts/doornroosje/b3NqZS5ubC9ldmVudC9wbG9lZ2VuZGllbnN0LTIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "ploegendienst": {
-        "s": "2aJUvAtem0t0zRKxJsRoea",
-        "l": "ploegendienst",
-        "g": [
-          "dutch indie rock",
-          "dutch punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-19T21:00:00.000",
-    "start": "2025-03-19T22:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/pure-adult/",
-    "title": "Pure Adult + Cassels",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "punk, noise",
-    "longText": "../public/texts/doornroosje/b3Jucm9vc2plLm5sL2V2ZW50L3B1cmUtYWR1bHQv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "pure adult": {
-        "s": "1Mc4HuGUhs102TZAEVX1Kk",
-        "l": "pure%20adult",
-        "g": [
-          "american post-punk"
-        ]
       },
-      "cassels": {
-        "s": "4tTRgwk8L4eDg74OI9dKL2",
-        "l": "cassels",
-        "g": [
-          "noise rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-03T20:00:00.000",
-    "start": "2025-04-03T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/iv-and-the-strange-band/",
-    "title": "IV and the Strange Band",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "folk, punk, country, doornroosjepas",
-    "longText": "../public/texts/doornroosje/ZXZlbnQvaXYtYW5kLXRoZS1zdHJhbmdlLWJhbmQv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "band": {
+      "meta": {
         "s": null,
-        "l": "band",
+        "l": "meta",
         "g": [
-          "heavy",
-          "power metal"
+          "groove",
+          "progressive metal"
         ]
       }
     }
-  },
-  {
-    "door": "2025-05-02T20:00:00.000",
-    "start": "2025-05-02T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/wodan-boys-2/",
-    "title": "Wodan Boys",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, punk",
-    "longText": "../public/texts/doornroosje/bnJvb3NqZS5ubC9ldmVudC93b2Rhbi1ib3lzLTIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "wodan boys": {
-        "s": "0kmkbibevmq4luqquahdmr",
-        "l": "wodan%20boys",
-        "g": [
-          "dutch rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-08-28T19:00:00.000",
-    "start": "2025-08-28T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering-10/",
-    "title": "The Gathering",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "Extra showrock, progressieve rock, metal, symfonische metal",
-    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L3RoZS1nYXRoZXJpbmctMTAv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "the gathering": {
-        "s": "2kO6zjt4a1OIqxOERhliEX",
-        "l": "the%20gathering",
-        "g": [
-          "atmospheric doom",
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "symphonic metal",
-          "death",
-          "doom metal, atmospheric doom metal (early)",
-          " atmospheric rock (later)"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-11-07T20:00:00.000",
-    "start": "2025-11-07T21:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/eskorzo-2/",
-    "title": "Eskorzo",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "punk, cumbia, afro, gypsy",
-    "longText": "../public/texts/doornroosje/b29ybnJvb3NqZS5ubC9ldmVudC9lc2tvcnpvLTIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {}
   }
 ]

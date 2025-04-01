@@ -19,7 +19,7 @@ const scraper = new AbstractScraper({
         url: "https://baroeg.nl/agenda/"
     },
     singlePage: {
-        timeout: 30000
+        timeout: 15000
     },
     app: {
         harvest: {
@@ -215,11 +215,14 @@ scraper.singlePage = async function ({ page, event }) {
     pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
     pageInfo.price = priceRes.price;
 
-    const { mediaForHTML, socialsForHTML, textForHTML } =
-        await longTextSocialsIframes(page, event, pageInfo);
+    const { mediaForHTML, textForHTML } = await longTextSocialsIframes(
+        page,
+        event,
+        pageInfo
+    );
 
     pageInfo.mediaForHTML = mediaForHTML;
-    pageInfo.socialsForHTML = socialsForHTML;
+
     pageInfo.textForHTML = textForHTML;
 
     return this.singlePageEnd({

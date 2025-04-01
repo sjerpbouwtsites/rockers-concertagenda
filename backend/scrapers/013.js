@@ -2,7 +2,14 @@
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import longTextSocialsIframes from "./longtext/013.js";
-import { mapToStart, mapToDoor, mapToShortDate } from "./gedeeld/datums.js";
+import {
+    mapToDoorTime,
+    mapToEndTime,
+    mapToStartTime,
+    mapToShortDate,
+    combineDoorTimeStartDate,
+    combineStartTimeStartDate
+} from "./gedeeld/datums.js";
 import getImage from "./gedeeld/image.js";
 import terms from "../artist-db/store/terms.js";
 import workTitleAndSlug from "./gedeeld/slug.js";
@@ -12,6 +19,9 @@ const scraper = new AbstractScraper({
     workerData: { ...workerData },
     mainPage: {
         url: "https://www.013.nl/programma/heavy"
+    },
+    singlePage: {
+        timeout: 10000
     },
     app: {
         harvest: {
@@ -44,6 +54,7 @@ scraper.mainPage = async function () {
     const availableBaseEvents = await this.checkBaseEventAvailable(
         workerData.family
     );
+
     if (availableBaseEvents) {
         const thisWorkersEvents = availableBaseEvents.filter(
             (eventEl, index) =>
@@ -74,15 +85,18 @@ scraper.mainPage = async function () {
                     res.venueEventUrl =
                         eventEl.querySelector("a")?.href ?? null;
 
-                    res.mapToStart =
+                    res.startDate =
                         eventEl
                             .querySelector("time")
-                            ?.getAttribute("datetime") ?? "";
+                            ?.getAttribute("datetime")
+                            .substring(0, 10) ?? "";
                     const uaRex = new RegExp(
                         unavailabiltyTerms.join("|"),
                         "gi"
                     );
-                    res.unavailable = !!eventEl.textContent.match(uaRex);
+                    res.unavailable = !!eventEl
+                        .querySelector(".ribbon_basic.ribbon_small")
+                        ?.textContent.match(uaRex);
                     res.soldOut =
                         !!eventEl?.innerHTML.match(/uitverkocht|sold\s?out/i) ??
                         false;
@@ -96,7 +110,6 @@ scraper.mainPage = async function () {
     );
 
     rawEvents = rawEvents
-        .map(mapToStart)
         .map(mapToShortDate)
         .map(workTitleAndSlug)
         .map(this.isMusicEventCorruptedMapper);
@@ -134,25 +147,46 @@ scraper.singlePage = async function ({ page, event }) {
                 errors: []
             };
 
-            document
-                .querySelectorAll(".side_wrapper time")
-                .forEach((timeEl, index) => {
-                    const j = index + 1;
-                    // eslint-disable-next-line no-param-reassign
-                    timeEl.id = `time-el-${j}`;
-                });
-
-            res.mapToDoor =
+            let tijdenTekst =
                 document
-                    .querySelector("#time-el-2")
-                    ?.getAttribute("datetime") ?? "";
+                    .querySelector(".side_wrapper > ul.specs_table + div")
+                    ?.textContent.replaceAll(/\s{2,500}/g, " ")
+                    .toLowerCase() ?? "";
+
+            const dM = tijdenTekst.match(/(\d\d:\d\d).*zaal open/);
+            const sM = tijdenTekst.match(/(\d\d:\d\d).*aanvang/);
+            const eM = tijdenTekst.match(/(\d\d:\d\d).*einde/);
+
+            if (Array.isArray(dM)) {
+                res.mapToDoorTime = dM[1];
+                tijdenTekst = tijdenTekst.replace(/\d\d:\d\d.*zaal open/, "");
+            }
+            if (Array.isArray(sM)) {
+                res.mapToStartTime = sM[1];
+                tijdenTekst = tijdenTekst.replace(/\d\d:\d\d.*aanvang/, "");
+            }
+
+            if (Array.isArray(eM)) {
+                res.mapToEndTime = eM[1];
+            }
+
+            if (!res.mapToStartTime && res.mapToDoorTime) {
+                res.mapToStartTime = res.mapToDoorTime;
+                res.mapToDoorTime = null;
+            }
 
             return res;
         },
         { event }
     );
 
-    pageInfo = mapToDoor(pageInfo);
+    pageInfo.startDate = event.startDate;
+
+    pageInfo = mapToDoorTime(pageInfo);
+    pageInfo = mapToEndTime(pageInfo);
+    pageInfo = mapToStartTime(pageInfo);
+    pageInfo = combineDoorTimeStartDate(pageInfo);
+    pageInfo = combineStartTimeStartDate(pageInfo);
 
     const imageRes = await getImage({
         _this: this,
@@ -175,10 +209,13 @@ scraper.singlePage = async function ({ page, event }) {
     pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
     pageInfo.price = priceRes.price;
 
-    const { mediaForHTML, socialsForHTML, textForHTML } =
-        await longTextSocialsIframes(page, event, pageInfo);
+    const { mediaForHTML, textForHTML } = await longTextSocialsIframes(
+        page,
+        event,
+        pageInfo
+    );
     pageInfo.mediaForHTML = mediaForHTML;
-    pageInfo.socialsForHTML = socialsForHTML;
+
     pageInfo.textForHTML = textForHTML;
 
     return this.singlePageEnd({

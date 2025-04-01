@@ -1,72 +1,35 @@
 [
   {
-    "door": "2025-03-01T20:00:00",
-    "start": "2025-03-01T21:00:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/freak-kitchen",
-    "title": "Freak Kitchen",
+    "door": "2025-04-10T19:30:00",
+    "start": "2025-04-10T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/starving-wolves",
+    "title": "Starving Wolves",
     "location": "cpunt",
-    "price": 20,
-    "shortText": "Progressieve hardrock",
-    "longText": "../public/texts/cpunt/LmNwdW50Lm5sL2FnZW5kYS9mcmVhay1raXRjaGVu.html",
-    "image": "../public/event-images/cpunt/LmNwdW50Lm5sL2FnZW5kYS9mcmVhay1raXRjaGVu",
+    "price": 15,
+    "shortText": "Support: Disturbance",
+    "longText": "../public/texts/cpunt/cHVudC5ubC9hZ2VuZGEvc3RhcnZpbmctd29sdmVz.html",
+    "image": "../public/event-images/cpunt/cHVudC5ubC9hZ2VuZGEvc3RhcnZpbmctd29sdmVz",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "freak kitchen": {
-        "s": "0HtEZODdzPzZhdehDcF3fX",
-        "l": "freak%20kitchen",
+      "disturbance": {
+        "s": "2yomkyw73nz5n19dyzp0j8",
+        "l": "spain",
         "g": [
-          "swedish progressive metal",
-          "experimental heavy metal"
+          "dutch punk",
+          "lowlands hardcore",
+          "grindcore"
+        ]
+      },
+      "starving wolves": {
+        "s": "2Z5MDcgKWhtCLSFkGaAsoq",
+        "l": "starving%20wolves",
+        "g": [
+          "punk"
         ]
       }
     }
-  },
-  {
-    "door": "2025-03-06T20:00:00",
-    "start": "2025-03-06T20:30:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/transport-league-komatsu",
-    "title": "Transport League + Komatsu",
-    "location": "cpunt",
-    "price": 14.5,
-    "shortText": "",
-    "longText": "../public/texts/cpunt/Z2VuZGEvdHJhbnNwb3J0LWxlYWd1ZS1rb21hdHN1.html",
-    "image": "../public/event-images/cpunt/Z2VuZGEvdHJhbnNwb3J0LWxlYWd1ZS1rb21hdHN1",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-03-09T19:30:00",
-    "start": "2025-03-09T20:00:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/alex-skolnick-trio-clinic",
-    "title": "Alex Skolnick Trio + Clinic",
-    "location": "cpunt",
-    "price": 19.5,
-    "shortText": "Prove You're Not A Robot Tour",
-    "longText": "../public/texts/cpunt/ZW5kYS9hbGV4LXNrb2xuaWNrLXRyaW8tY2xpbmlj.html",
-    "image": "../public/event-images/cpunt/ZW5kYS9hbGV4LXNrb2xuaWNrLXRyaW8tY2xpbmlj",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-03-23T19:30:00",
-    "start": "2025-03-23T20:00:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/zu",
-    "title": "Zu",
-    "location": "cpunt",
-    "price": 20,
-    "shortText": "",
-    "longText": "../public/texts/cpunt/aHR0cHM6Ly93d3cuY3B1bnQubmwvYWdlbmRhL3p1.html",
-    "image": "../public/event-images/cpunt/aHR0cHM6Ly93d3cuY3B1bnQubmwvYWdlbmRhL3p1",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
   },
   {
     "door": "2025-04-19T19:30:00",
@@ -75,7 +38,7 @@
     "title": "Reaching As We Fall",
     "location": "cpunt",
     "price": 10,
-    "shortText": "Deeproot & I'll Get By",
+    "shortText": "Support: DEEPROOT & I'll Get By",
     "longText": "../public/texts/cpunt/Lm5sL2FnZW5kYS9yZWFjaGluZy1hcy13ZS1mYWxs.html",
     "image": "../public/event-images/cpunt/Lm5sL2FnZW5kYS9yZWFjaGluZy1hcy13ZS1mYWxs",
     "soldOut": false,
@@ -99,6 +62,117 @@
     }
   },
   {
+    "door": "2025-04-27T15:30:00",
+    "start": "2025-04-27T16:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/slugger-savage-beat",
+    "title": "Slugger & Savage Beat",
+    "location": "cpunt",
+    "price": 12.5,
+    "shortText": "European Tour 2025",
+    "longText": "../public/texts/cpunt/Lm5sL2FnZW5kYS9zbHVnZ2VyLXNhdmFnZS1iZWF0.html",
+    "image": "../public/event-images/cpunt/Lm5sL2FnZW5kYS9zbHVnZ2VyLXNhdmFnZS1iZWF0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "savage beat": {
+        "s": "5cX4t1wynwEgM2noNwJ4XF",
+        "l": "savage%20beat",
+        "g": [
+          "dutch punk",
+          "oi",
+          "skinhead oi"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-03T20:00:00",
+    "start": "2025-05-03T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/hardcover-boneripper-tba",
+    "title": "Hardcover + Boneripper + TBA",
+    "location": "cpunt",
+    "price": 10,
+    "shortText": "Ode aan de grondleggers van hard- en metalcore",
+    "longText": "../public/texts/cpunt/Z2VuZGEvaGFyZGNvdmVyLWJvbmVyaXBwZXItdGJh.html",
+    "image": "../public/event-images/cpunt/Z2VuZGEvaGFyZGNvdmVyLWJvbmVyaXBwZXItdGJh",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-09T20:00:00",
+    "start": "2025-05-09T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/alternative-90s-october-rust-psychosocial",
+    "title": "Alternative 90s: October Rust + Psychosocial",
+    "location": "cpunt",
+    "price": 17.5,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/LTkwcy1vY3RvYmVyLXJ1c3QtcHN5Y2hvc29jaWFs.html",
+    "image": "../public/event-images/cpunt/LTkwcy1vY3RvYmVyLXJ1c3QtcHN5Y2hvc29jaWFs",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-05-31T20:00:00",
+    "start": "2025-05-31T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/eyehategod",
+    "title": "Eyehategod",
+    "location": "cpunt",
+    "price": 22.5,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/d3d3LmNwdW50Lm5sL2FnZW5kYS9leWVoYXRlZ29k.html",
+    "image": "../public/event-images/cpunt/d3d3LmNwdW50Lm5sL2FnZW5kYS9leWVoYXRlZ29k",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "eyehategod": {
+        "s": "3brjxpdvt56y2g5ds3xyzs",
+        "l": "eyehategod",
+        "g": [
+          "doom metal",
+          "drone metal",
+          "louisiana metal",
+          "sludge metal"
+        ]
+      },
+      "hate": {
+        "s": "13XggX75z0Hk0VNvOuTJoB",
+        "l": "hate",
+        "g": [
+          "death metal",
+          "black metal",
+          "thrash metal (early)",
+          " hard rock (later)",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-08-13T19:30:00",
     "start": "2025-08-13T20:15:00",
     "venueEventUrl": "https://www.cpunt.nl/agenda/sleepytime-gorilla-museum",
@@ -112,15 +186,6 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "faun": {
-        "s": "2wpognq6ew3x73uijz4yfe",
-        "l": "faun",
-        "g": [
-          "hurdy-gurdy",
-          "medieval folk",
-          "medieval rock"
-        ]
-      },
       "sleepytime gorilla museum": {
         "s": "74KPeP60dRLSAAk7sFtWTC",
         "l": "sleepytime%20gorilla%20museum",
@@ -137,6 +202,126 @@
         "g": [
           "experimental black metal"
         ]
+      },
+      "faun": {
+        "s": "2wpognq6ew3x73uijz4yfe",
+        "l": "faun",
+        "g": [
+          "hurdy-gurdy",
+          "medieval folk",
+          "medieval rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-14T18:30:00",
+    "start": "2025-08-14T19:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/drowning-pool",
+    "title": "Drowning Pool",
+    "location": "cpunt",
+    "price": 25.5,
+    "shortText": "Support: Liliac & Terradown",
+    "longText": "../public/texts/cpunt/LmNwdW50Lm5sL2FnZW5kYS9kcm93bmluZy1wb29s.html",
+    "image": "../public/event-images/cpunt/LmNwdW50Lm5sL2FnZW5kYS9kcm93bmluZy1wb29s",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "terradown": {
+        "s": "376qQKIyviwh5xgbVj02LC",
+        "l": "terradown",
+        "g": [
+          "melodic death",
+          "groove metal"
+        ]
+      },
+      "drowning pool": {
+        "s": "1E4r4z7ivGUcSAnCbINJ9v",
+        "l": "drowning%20pool",
+        "g": [
+          "nu metal",
+          "alternative metal",
+          "rap metal",
+          "metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-09-12T20:00:00",
+    "start": "2025-09-12T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/oi-in-hoofddorp-festival",
+    "title": "Oi! in Hoofddorp Festival",
+    "location": "cpunt",
+    "price": 5,
+    "shortText": "Vrijdag & Zaterdag",
+    "longText": "../public/texts/cpunt/Z2VuZGEvb2ktaW4taG9vZmRkb3JwLWZlc3RpdmFs.html",
+    "image": "../public/event-images/cpunt/Z2VuZGEvb2ktaW4taG9vZmRkb3JwLWZlc3RpdmFs",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ater": {
+        "s": "1HpPzWF2E6G8KfD5pOM6La",
+        "l": "ater",
+        "g": [
+          "djent",
+          "black metal",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-09-13T20:00:00",
+    "start": "2025-09-13T15:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/oi-in-hoofddorp-festival",
+    "title": "Oi! in Hoofddorp Festival",
+    "location": "cpunt",
+    "price": 5,
+    "shortText": "Vrijdag & Zaterdag",
+    "longText": "../public/texts/cpunt/Z2VuZGEvb2ktaW4taG9vZmRkb3JwLWZlc3RpdmFs.html",
+    "image": "../public/event-images/cpunt/Z2VuZGEvb2ktaW4taG9vZmRkb3JwLWZlc3RpdmFs",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ater": {
+        "s": "1HpPzWF2E6G8KfD5pOM6La",
+        "l": "ater",
+        "g": [
+          "djent",
+          "black metal",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-11-09T19:30:00",
+    "start": "2025-11-09T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/the-perfect-tool",
+    "title": "The Perfect Tool",
+    "location": "cpunt",
+    "price": 23,
+    "shortText": "Tribute to 35 Years of Tool",
+    "longText": "../public/texts/cpunt/dW50Lm5sL2FnZW5kYS90aGUtcGVyZmVjdC10b29s.html",
+    "image": "../public/event-images/cpunt/dW50Lm5sL2FnZW5kYS90aGUtcGVyZmVjdC10b29s",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the perfect tool": {
+        "s": null,
+        "l": "the%20perfect%20tool",
+        "g": []
       }
     }
   }

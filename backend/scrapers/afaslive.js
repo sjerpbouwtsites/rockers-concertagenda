@@ -21,7 +21,7 @@ const scraper = new AbstractScraper({
         url: "https://www.afaslive.nl/agenda"
     },
     singlePage: {
-        timeout: 20000
+        timeout: 15000
     },
     app: {
         harvest: {
@@ -152,12 +152,27 @@ scraper.singlePage = async function ({ page, event }) {
                 errors: []
             };
 
-            const stM = document
-                .querySelector(".timesTable")
-                .textContent.toLowerCase()
-                .match(/aanvang.*(\d\d:\d\d)/);
+            const timeTableText =
+                document
+                    .querySelector(".dates + .timesTable")
+                    ?.textContent.trim()
+                    .toLowerCase() ?? "";
+
+            const dtM = timeTableText.match(/deuren.*(\d\d:\d\d)/);
+            if (Array.isArray(dtM)) {
+                res.mapToDoorTime = dtM[1];
+            }
+
+            const stM = timeTableText.match(/aanvang.*(\d\d:\d\d)/);
             if (Array.isArray(stM)) {
                 res.mapToStartTime = stM[1];
+            }
+
+            if (!res.mapToStartTime && res.mapToDoorTime) {
+                res.mapToStartTime = res.mapToDoorTime;
+                res.mapToDoorTime = null;
+            } else if (!res.mapToStartTime && !res.mapToDoorTime) {
+                res.mapToStartTime = "20:00";
             }
 
             document
@@ -208,11 +223,19 @@ scraper.singlePage = async function ({ page, event }) {
     pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
     pageInfo.price = priceRes.price;
 
-    const { mediaForHTML, socialsForHTML, textForHTML } =
-        await longTextSocialsIframes(page, event, pageInfo);
+    const { mediaForHTML, textForHTML } = await longTextSocialsIframes(
+        page,
+        event,
+        pageInfo
+    );
     pageInfo.mediaForHTML = mediaForHTML;
-    pageInfo.socialsForHTML = socialsForHTML;
+
     pageInfo.textForHTML = textForHTML;
+
+    this.dirtyDebug({
+        textForHTMLVan: event.title,
+        text: textForHTML
+    });
 
     return this.singlePageEnd({
         pageInfo,

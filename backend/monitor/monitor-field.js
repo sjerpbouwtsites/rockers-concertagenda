@@ -211,6 +211,12 @@ export default class MonitorField {
                         rollRow.messageData?.name ?? ""
                     }`;
 
+                    if (!rollRow?.messageData?.text) {
+                        console.group(`fout in data naar foutmelding`);
+                        console.log(rollRow);
+                        console.groupEnd();
+                    }
+
                     const bewerkteFoutTekst = rollRow.messageData.text
                         .split(/[\r\n]/)
                         .filter((a) => a)
@@ -290,6 +296,10 @@ export default class MonitorField {
                         currentErrorsForThisWorkerCount =
                             errorsPerWorkerCounter[errorsPerWorkerCounter];
                     }
+
+                    console.group("niet standaard error");
+                    console.log(rollRow);
+                    console.groupEnd();
 
                     return `<li class='monitorfield__list-item' id='error-ref-${
                         rollRow.messageData?.name

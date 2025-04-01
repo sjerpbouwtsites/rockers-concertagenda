@@ -18,10 +18,10 @@ import terms from "../artist-db/store/terms.js";
 const scraper = new AbstractScraper({
     workerData: { ...workerData },
     mainPage: {
-        url: "https://gebouw-t.nl/evenementen/?genre=metal,rock,punk"
+        url: "https://gebouw-t.nl/agenda/?genre=&search=&themes%5B%5D=gitaren"
     },
     singlePage: {
-        timeout: 20000
+        timeout: 10000
     },
     app: {
         harvest: {
@@ -190,10 +190,13 @@ scraper.singlePage = async function ({ page, event }) {
         pageInfo.price = priceRes.price;
     }
 
-    const { mediaForHTML, socialsForHTML, textForHTML } =
-        await longTextSocialsIframes(page, event, pageInfo);
+    const { mediaForHTML, textForHTML } = await longTextSocialsIframes(
+        page,
+        event,
+        pageInfo
+    );
     pageInfo.mediaForHTML = mediaForHTML;
-    pageInfo.socialsForHTML = socialsForHTML;
+
     pageInfo.textForHTML = textForHTML;
     return this.singlePageEnd({
         pageInfo,

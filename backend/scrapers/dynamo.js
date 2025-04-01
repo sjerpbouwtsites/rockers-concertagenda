@@ -1,5 +1,5 @@
 /* global document */
-import { workerData } from "worker_threads";
+import { threadId, workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import longTextSocialsIframes from "./longtext/dynamo.js";
 import getImage from "./gedeeld/image.js";
@@ -21,10 +21,10 @@ const scraper = new AbstractScraper({
 
     mainPage: {
         timeout: 35060,
-        url: "https://www.dynamo-eindhoven.nl/programma/?_sfm_fw%3Aopt%3Astyle=15"
+        url: "https://www.dynamo-eindhoven.nl/evenementen/?_stroming_id=842"
     },
     singlePage: {
-        timeout: 25061
+        timeout: 15000
     },
     app: {
         harvest: {
@@ -40,7 +40,8 @@ const scraper = new AbstractScraper({
                 "forbiddenTerms",
                 "hasGoodTerms",
                 "hasAllowedArtist",
-                "spotifyConfirmation"
+                "spotifyConfirmation",
+                "failure"
             ]
         },
         singlePage: {
@@ -225,11 +226,19 @@ scraper.singlePage = async function ({ page, event }) {
     pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
     pageInfo.price = priceRes.price;
 
-    const { mediaForHTML, socialsForHTML, textForHTML } =
-        await longTextSocialsIframes(page, event, pageInfo);
+    const { mediaForHTML, textForHTML } = await longTextSocialsIframes(
+        page,
+        event,
+        pageInfo
+    );
+    if (!textForHTML || typeof textForHTML === "undefined") {
+        const eee = new Error(`geen textForHTML bij ${event.title}`);
+        this.handleError(eee);
+        pageInfo.textForHTML = "";
+    } else {
+        pageInfo.textForHTML = textForHTML;
+    }
     pageInfo.mediaForHTML = mediaForHTML;
-    pageInfo.socialsForHTML = socialsForHTML;
-    pageInfo.textForHTML = textForHTML;
 
     return this.singlePageEnd({
         pageInfo,

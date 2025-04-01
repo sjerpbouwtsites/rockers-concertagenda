@@ -16,7 +16,7 @@ const scraper = new AbstractScraper({
         url: "https://kavka.be/programma/"
     },
     singlePage: {
-        timeout: 30016
+        timeout: 15000
     },
     app: {
         harvest: {
@@ -264,10 +264,13 @@ scraper.singlePage = async function ({ page, event }) {
         pageInfo.price = null;
     }
 
-    const { mediaForHTML, socialsForHTML, textForHTML } =
-        await longTextSocialsIframes(page, event, pageInfo);
+    const { mediaForHTML, textForHTML } = await longTextSocialsIframes(
+        page,
+        event,
+        pageInfo
+    );
     pageInfo.mediaForHTML = mediaForHTML;
-    pageInfo.socialsForHTML = socialsForHTML;
+
     pageInfo.textForHTML = textForHTML;
 
     return this.singlePageEnd({ pageInfo, stopFunctie, page });

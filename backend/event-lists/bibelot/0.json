@@ -1,305 +1,153 @@
 [
   {
-    "door": "2025-02-01T20:00:00",
-    "start": "2025-02-01T20:30:00",
-    "venueEventUrl": "https://bibelot.net/programma/de-plaag-album-release/",
-    "title": "De Plaag – Album Release",
+    "door": "2025-04-05T22:00:00",
+    "start": "2025-04-05T22:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/its-not-a-phase-mom-deftones-by-shove-it/",
+    "title": "It’s Not a Phase, Mom: Deftones by Shove It",
     "location": "bibelot",
     "price": 2025,
-    "longText": "../public/texts/bibelot/Z3JhbW1hL2RlLXBsYWFnLWFsYnVtLXJlbGVhc2Uv.html",
-    "image": "../public/event-images/bibelot/Z3JhbW1hL2RlLXBsYWFnLWFsYnVtLXJlbGVhc2Uv",
+    "longText": "../public/texts/bibelot/aGFzZS1tb20tZGVmdG9uZXMtYnktc2hvdmUtaXQv.html",
+    "image": "../public/event-images/bibelot/aGFzZS1tb20tZGVmdG9uZXMtYnktc2hvdmUtaXQv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal ",
+      "rock "
+    ],
+    "artists": {
+      "deftones by shove it": {
+        "s": null,
+        "l": "deftones%20by%20shove%20it",
+        "g": [
+          "metal ",
+          "rock "
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-18T19:00:00",
+    "start": "2025-04-18T19:30:00",
+    "venueEventUrl": "https://bibelot.net/programma/inherited-album-release/",
+    "title": "Inherited – Album Release",
+    "location": "bibelot",
+    "price": 18,
+    "longText": "../public/texts/bibelot/cmFtbWEvaW5oZXJpdGVkLWFsYnVtLXJlbGVhc2Uv.html",
+    "image": "../public/event-images/bibelot/cmFtbWEvaW5oZXJpdGVkLWFsYnVtLXJlbGVhc2Uv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal "
+    ],
+    "artists": {
+      "inherited": {
+        "s": "74r5dmgt1473kf2lg4ndxe",
+        "l": "united states",
+        "g": [
+          "black/death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-25T20:00:00",
+    "start": "2025-04-25T20:30:00",
+    "venueEventUrl": "https://bibelot.net/programma/the-flying-luttenbachers-us-albatre-polarized-combo-qazam/",
+    "title": "The Flying Luttenbachers (US) ",
+    "location": "bibelot",
+    "price": 0,
+    "shortText": " Albatre  +  Polarized  +  Combo Qazam undefined",
+    "longText": "../public/texts/bibelot/YWxiYXRyZS1wb2xhcml6ZWQtY29tYm8tcWF6YW0v.html",
+    "image": "../public/event-images/bibelot/YWxiYXRyZS1wb2xhcml6ZWQtY29tYm8tcWF6YW0v",
+    "soldOut": false,
+    "eventGenres": [
+      "jazz ",
+      "progressive rock ",
+      "punk "
+    ],
+    "artists": {
+      "undefined": {
+        "s": "6NMVL5NGYZKTl6AZuxybbV",
+        "l": "undefined",
+        "g": [
+          "metalcore",
+          "new wave ",
+          "punk "
+        ]
+      },
+      "albatre": {
+        "s": "2OIlzTJrqUrk320QlZicjp",
+        "l": "albatre",
+        "g": [
+          "free jazz",
+          "jazz ",
+          "progressive rock ",
+          "punk "
+        ]
+      },
+      "polarized": {
+        "s": "30oa7GX0upKm0TvcsiUvi5",
+        "l": "polarized",
+        "g": [
+          "thrash metal",
+          "jazz ",
+          "progressive rock ",
+          "punk "
+        ]
+      },
+      "combo qazam": {
+        "s": "7knDpm1ZleLQxKi49eCnCd",
+        "l": "combo%20qazam",
+        "g": [
+          "krautrock",
+          "noise rock",
+          "jazz ",
+          "progressive rock ",
+          "punk "
+        ]
+      },
+      "albatre polarized": {
+        "s": null,
+        "l": "albatre polarized",
+        "g": [
+          "jazz ",
+          "progressive rock ",
+          "punk "
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-26T15:00:00",
+    "start": "2025-04-26T16:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/temper-koningsdag-parker-fans-gespuys-fit-de-badslippers-sasha-sailor-meer/",
+    "title": "TEMPER Koningsdag: Parker Fans, Gespuys, Fit, De Badslippers, Sasha Sailor & meer",
+    "location": "bibelot",
+    "price": 0,
+    "shortText": " undefined",
+    "longText": "../public/texts/bibelot/YmFkc2xpcHBlcnMtc2FzaGEtc2FpbG9yLW1lZXIv.html",
+    "image": "../public/event-images/bibelot/YmFkc2xpcHBlcnMtc2FzaGEtc2FpbG9yLW1lZXIv",
     "soldOut": false,
     "eventGenres": [
       "electro ",
-      "hiphop ",
-      "punk "
+      "punk ",
+      "rock "
     ],
     "artists": {
-      "de plaag –": {
+      "undefined": {
+        "s": "6NMVL5NGYZKTl6AZuxybbV",
+        "l": "undefined",
+        "g": [
+          "metalcore",
+          "new wave ",
+          "punk "
+        ]
+      },
+      "parker fans, gespuys, fit, de badslippers, sasha sailor &": {
         "s": null,
-        "l": "de%20plaag%20%E2%80%93",
+        "l": "parker%20fans,%20gespuys,%20fit,%20de%20badslippers,%20sasha%20sailor%20&",
         "g": [
           "electro ",
-          "hiphop ",
-          "punk "
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-15T18:30:00",
-    "start": "2025-02-15T19:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/dordrecht-metal-fest-3/",
-    "title": "Dordrecht Metal Fest",
-    "location": "bibelot",
-    "price": 15,
-    "longText": "../public/texts/bibelot/Z3JhbW1hL2RvcmRyZWNodC1tZXRhbC1mZXN0LTMv.html",
-    "image": "../public/event-images/bibelot/Z3JhbW1hL2RvcmRyZWNodC1tZXRhbC1mZXN0LTMv",
-    "soldOut": false,
-    "eventGenres": [
-      "metal "
-    ],
-    "artists": {
-      "dordrecht metal fest": {
-        "s": null,
-        "l": "dordrecht%20metal%20fest",
-        "g": [
-          "metal "
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-21T20:00:00",
-    "start": "2025-02-21T20:30:00",
-    "venueEventUrl": "https://bibelot.net/programma/charlotte-wessels/",
-    "title": "Charlotte Wessels",
-    "location": "bibelot",
-    "price": 0,
-    "longText": "../public/texts/bibelot/dC9wcm9ncmFtbWEvY2hhcmxvdHRlLXdlc3NlbHMv.html",
-    "image": "../public/event-images/bibelot/dC9wcm9ncmFtbWEvY2hhcmxvdHRlLXdlc3NlbHMv",
-    "soldOut": false,
-    "eventGenres": [
-      "metal ",
-      "pop "
-    ],
-    "artists": {
-      "charlotte wessels": {
-        "s": "6yyPaE45AE346XVgFJgiaI",
-        "l": "charlotte%20wessels",
-        "g": [
-          "gothic symphonic metal",
-          "hel",
-          "symphonic metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-08T16:00:00",
-    "start": "2025-03-08T16:40:00",
-    "venueEventUrl": "https://bibelot.net/programma/celeste-fr-for-i-am-king-ultha-de-tigerknife-demichron/",
-    "title": "Celeste (FR) ",
-    "location": "bibelot",
-    "price": 2025,
-    "shortText": " For I Am King  +  Ultha (DE)  +  Tigerknife  +  Demichron undefined",
-    "longText": "../public/texts/bibelot/dWx0aGEtZGUtdGlnZXJrbmlmZS1kZW1pY2hyb24v.html",
-    "image": "../public/event-images/bibelot/dWx0aGEtZGUtdGlnZXJrbmlmZS1kZW1pY2hyb24v",
-    "soldOut": false,
-    "eventGenres": [
-      "hardcore (punk) ",
-      "metal ",
-      "punk "
-    ],
-    "artists": {
-      "tigerknife": {
-        "s": "6a8xKomJX3KswQ1WOhNoJy",
-        "l": "tigerknife",
-        "g": [
-          "hardcore (punk) ",
-          "metal ",
-          "punk "
-        ]
-      },
-      "demichron": {
-        "s": "6NMYSnWscxdZZkjttaRgyp",
-        "l": "demichron",
-        "g": [
-          "hardcore (punk) ",
-          "metal ",
-          "punk "
-        ]
-      },
-      "celeste": {
-        "s": "49HlOY4gkHqsYG9GCuhkcc",
-        "l": "celeste",
-        "g": [
-          "british soul",
-          "black",
-          "sludge metal",
-          "post-hardcore"
-        ]
-      },
-      "for i am king": {
-        "s": null,
-        "l": "for%20i%20am%20king",
-        "g": []
-      },
-      "undefined": {
-        "s": "6NMVL5NGYZKTl6AZuxybbV",
-        "l": "undefined",
-        "g": [
-          "metalcore",
-          "new wave ",
-          "punk "
-        ]
-      },
-      "ultha": {
-        "s": "2dNNRreuWrVDbNX2srDdag",
-        "l": "ultha",
-        "g": [
-          "black metal",
-          "black metal",
-          "hardcore (punk) ",
-          "metal ",
-          "punk "
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-15T20:00:00",
-    "start": "2025-03-15T20:30:00",
-    "venueEventUrl": "https://bibelot.net/programma/st-patricks-day-the-royal-sputs-bunch-of-bastards-the-burning-pubcrawlers/",
-    "title": "St. Patrick’s Day: The Royal Sputs ",
-    "location": "bibelot",
-    "price": 15,
-    "shortText": " Bunch Of Bastards  +  The Burning Pubcrawlers undefined",
-    "longText": "../public/texts/bibelot/dGFyZHMtdGhlLWJ1cm5pbmctcHViY3Jhd2xlcnMv.html",
-    "image": "../public/event-images/bibelot/dGFyZHMtdGhlLWJ1cm5pbmctcHViY3Jhd2xlcnMv",
-    "soldOut": false,
-    "eventGenres": [
-      "folk ",
-      "punk ",
-      "ska "
-    ],
-    "artists": {
-      "burning": {
-        "s": null,
-        "l": "burning",
-        "g": [
-          "thrash metal"
-        ]
-      },
-      "undefined": {
-        "s": "6NMVL5NGYZKTl6AZuxybbV",
-        "l": "undefined",
-        "g": [
-          "metalcore",
-          "new wave ",
-          "punk "
-        ]
-      },
-      "the royal sputs bunch of bastards": {
-        "s": null,
-        "l": "the royal sputs bunch of bastards",
-        "g": [
-          "folk ",
           "punk ",
-          "ska "
-        ]
-      },
-      "the pubcrawlers": {
-        "s": "3UImFCoyCFOVsD7fUVgTbv",
-        "l": "the pubcrawlers",
-        "g": [
-          "celtic rock",
-          "pirate metal",
-          "celtic",
-          "folk punk",
-          "sea shanties",
-          "folk ",
-          "punk ",
-          "ska "
-        ]
-      },
-      "bunch of bastards the pubcrawlers": {
-        "s": null,
-        "l": "bunch of bastards the pubcrawlers",
-        "g": [
-          "folk ",
-          "punk ",
-          "ska "
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-28T19:30:00",
-    "start": "2025-03-28T20:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/zoekhetuitman-album-release/",
-    "title": "Zoekhetuitman – album release",
-    "location": "bibelot",
-    "price": 28,
-    "longText": "../public/texts/bibelot/YS96b2VraGV0dWl0bWFuLWFsYnVtLXJlbGVhc2Uv.html",
-    "image": "../public/event-images/bibelot/YS96b2VraGV0dWl0bWFuLWFsYnVtLXJlbGVhc2Uv",
-    "soldOut": false,
-    "eventGenres": [
-      "punk "
-    ],
-    "artists": {
-      "zoekhetuitman –": {
-        "s": null,
-        "l": "zoekhetuitman%20%E2%80%93",
-        "g": [
-          "punk "
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-30T16:00:00",
-    "start": "2025-03-30T16:40:00",
-    "venueEventUrl": "https://bibelot.net/programma/mantras-for-peaceful-death-over-europe/",
-    "title": "Cult Of Fire + The Great Old Ones + Caronte",
-    "location": "bibelot",
-    "price": 30,
-    "longText": "../public/texts/bibelot/b3ItcGVhY2VmdWwtZGVhdGgtb3Zlci1ldXJvcGUv.html",
-    "image": "../public/event-images/bibelot/b3ItcGVhY2VmdWwtZGVhdGgtb3Zlci1ldXJvcGUv",
-    "soldOut": false,
-    "eventGenres": [
-      "metal "
-    ],
-    "artists": {
-      "the great old ones": {
-        "s": "1U6VZQrgQ4CNXbS6FpP0QC",
-        "l": "the%20great%20old%20ones",
-        "g": [
-          "atmospheric black metal",
-          "avant-garde metal",
-          "blackgaze",
-          "french black metal",
-          "french metal",
-          "lovecraftian metal",
-          "post-black metal",
-          "voidgaze",
-          "post-black metal",
-          "black",
-          "doom",
-          "post-black"
-        ]
-      },
-      "cult of fire": {
-        "s": "1GNzgaXdYGtEP5xOqCsdSq",
-        "l": "cult%20of%20fire",
-        "g": [
-          "atmospheric black metal",
-          "black metal",
-          "czsk black metal",
-          "epic black metal",
-          "voidgaze",
-          "epic black metal",
-          "black",
-          "doom",
-          "post-black"
-        ]
-      },
-      "caronte": {
-        "s": "1EsM1ENlZYKKqv4I3NvwNd",
-        "l": "caronte",
-        "g": [
-          "italian doom metal",
-          "black metal",
-          "black",
-          "doom",
-          "post-black"
+          "rock "
         ]
       }
     }
@@ -310,7 +158,7 @@
     "venueEventUrl": "https://bibelot.net/programma/wodan-boys/",
     "title": "Wodan Boys",
     "location": "bibelot",
-    "price": 0,
+    "price": 17,
     "longText": "../public/texts/bibelot/ZWxvdC5uZXQvcHJvZ3JhbW1hL3dvZGFuLWJveXMv.html",
     "image": "../public/event-images/bibelot/ZWxvdC5uZXQvcHJvZ3JhbW1hL3dvZGFuLWJveXMv",
     "soldOut": false,
@@ -328,12 +176,73 @@
     }
   },
   {
+    "door": "2025-05-17T20:00:00",
+    "start": "2025-05-17T21:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/ksu-farben-lehre-pl/",
+    "title": "Ksu + farben lehre (pl)",
+    "location": "bibelot",
+    "price": 0,
+    "longText": "../public/texts/bibelot/cHJvZ3JhbW1hL2tzdS1mYXJiZW4tbGVocmUtcGwv.html",
+    "image": "../public/event-images/bibelot/cHJvZ3JhbW1hL2tzdS1mYXJiZW4tbGVocmUtcGwv",
+    "soldOut": false,
+    "eventGenres": [
+      "punk ",
+      "rock "
+    ],
+    "artists": {
+      "farben lehre": {
+        "s": "3O9bFJBTRddC4HOsZixhuw",
+        "l": "farben%20lehre",
+        "g": [
+          "punk",
+          "punk ",
+          "rock "
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-22T20:00:00",
+    "start": "2025-05-22T20:30:00",
+    "venueEventUrl": "https://bibelot.net/programma/bibelot-x-door-test-plan-uk-mye-taai/",
+    "title": "Bibelot x door: test plan (uk) + mye taai",
+    "location": "bibelot",
+    "price": 0,
+    "longText": "../public/texts/bibelot/LXgtZG9vci10ZXN0LXBsYW4tdWstbXllLXRhYWkv.html",
+    "image": "../public/event-images/bibelot/LXgtZG9vci10ZXN0LXBsYW4tdWstbXllLXRhYWkv",
+    "soldOut": false,
+    "eventGenres": [
+      "electro ",
+      "punk "
+    ],
+    "artists": {
+      "test plan": {
+        "s": "51hfP8BcSbQoL3DFrwNNCA",
+        "l": "test%20plan",
+        "g": [
+          "noise rock",
+          "post-punk",
+          "electro ",
+          "punk "
+        ]
+      },
+      "mye taai": {
+        "s": null,
+        "l": "mye%20taai",
+        "g": [
+          "electro ",
+          "punk "
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-05-23T20:00:00",
     "start": "2025-05-23T20:45:00",
     "venueEventUrl": "https://bibelot.net/programma/jaya-the-cat-us-nl/",
     "title": "Jaya the cat (us/nl)",
     "location": "bibelot",
-    "price": 23,
+    "price": 0,
     "longText": "../public/texts/bibelot/L3Byb2dyYW1tYS9qYXlhLXRoZS1jYXQtdXMtbmwv.html",
     "image": "../public/event-images/bibelot/L3Byb2dyYW1tYS9qYXlhLXRoZS1jYXQtdXMtbmwv",
     "soldOut": false,
@@ -356,7 +265,7 @@
     "venueEventUrl": "https://bibelot.net/programma/its-not-a-phase-mom-sum41-some41-the-offspring-by-the-offspin-uk/",
     "title": "It’s not a phase mom: sum41 (some41) & the offspring (by the offspin) (uk)",
     "location": "bibelot",
-    "price": 30,
+    "price": 0,
     "shortText": " undefined",
     "longText": "../public/texts/bibelot/ZS1vZmZzcHJpbmctYnktdGhlLW9mZnNwaW4tdWsv.html",
     "image": "../public/event-images/bibelot/ZS1vZmZzcHJpbmctYnktdGhlLW9mZnNwaW4tdWsv",
@@ -383,6 +292,98 @@
           "metalcore",
           "new wave ",
           "punk "
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-10-03T19:00:00",
+    "start": "2025-10-03T19:30:00",
+    "venueEventUrl": "https://bibelot.net/programma/dordrecht-metal-fest-4/",
+    "title": "Dordrecht Metal Fest",
+    "location": "bibelot",
+    "price": 2025,
+    "longText": "../public/texts/bibelot/Z3JhbW1hL2RvcmRyZWNodC1tZXRhbC1mZXN0LTQv.html",
+    "image": "../public/event-images/bibelot/Z3JhbW1hL2RvcmRyZWNodC1tZXRhbC1mZXN0LTQv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal "
+    ],
+    "artists": {
+      "dordrecht metal fest": {
+        "s": null,
+        "l": "dordrecht%20metal%20fest",
+        "g": [
+          "metal "
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-12-05T20:00:00",
+    "start": "2025-12-05T21:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/acindc/",
+    "title": "Acindc",
+    "location": "bibelot",
+    "price": 2025,
+    "longText": "../public/texts/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS9hY2luZGMv.html",
+    "image": "../public/event-images/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS9hY2luZGMv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal ",
+      "rock "
+    ],
+    "artists": {
+      "acindc": {
+        "s": null,
+        "l": "acindc",
+        "g": [
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-12-20T20:30:00",
+    "start": "2025-12-20T21:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/pene-corrida-the-penergy-tour/",
+    "title": "Pene Corrida – The Penergy Tour",
+    "location": "bibelot",
+    "price": 20,
+    "longText": "../public/texts/bibelot/cGVuZS1jb3JyaWRhLXRoZS1wZW5lcmd5LXRvdXIv.html",
+    "image": "../public/event-images/bibelot/cGVuZS1jb3JyaWRhLXRoZS1wZW5lcmd5LXRvdXIv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal ",
+      "pop "
+    ],
+    "artists": {
+      "pene corrida": {
+        "s": "1hw2ywipnsowbtb8flzcca",
+        "l": "pene%20corrida",
+        "g": []
+      },
+      "– the penergy tour": {
+        "s": null,
+        "l": "%E2%80%93%20the%20penergy%20tour",
+        "g": [
+          "metal ",
+          "pop "
         ]
       }
     }

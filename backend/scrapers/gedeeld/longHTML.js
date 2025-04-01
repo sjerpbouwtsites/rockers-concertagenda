@@ -21,10 +21,14 @@ export default function makeLongHTML(event) {
                       return `<div class='iframe-wrapper-generiek'>${bron.outer}</div>`;
                   }
                   if (bron.src && bron.type === "youtube") {
-                      return `<div class='iframe-wrapper-16-9'>${youtubeSRCToIframe(bron.src)}</div>`;
+                      return `<div class='iframe-wrapper-16-9'>${youtubeSRCToIframe(
+                          bron.src
+                      )}</div>`.replace('"=""', ""); //TODO hack
                   }
                   if (bron.id && bron.type === "youtube") {
-                      return `<div class='iframe-wrapper-16-9'>${youtubeIDToIframe(bron.id)}</div>`;
+                      return `<div class='iframe-wrapper-16-9'>${youtubeIDToIframe(
+                          bron.id
+                      )}</div>`;
                   }
                   if (bron.src && bron.type !== "youtube") {
                       return `onbekende type ${bron.type}`;
@@ -35,21 +39,6 @@ export default function makeLongHTML(event) {
 
     const mediaSection = mediaHTML
         ? `<section class='long-html__music-videos'>${mediaHTML}</section>`
-        : "";
-    const socialsHTML = !Array.isArray(event.socialsForHTML)
-        ? ""
-        : event.socialsForHTML
-              .map(
-                  (socialHTML) =>
-                      `<li class='long-html__social-list-item'>${socialHTML}</li>`
-              )
-              .join("");
-    const socialsSection = socialsHTML.length
-        ? `<nav class="long-html__social">
-    <ul class='long-html__social-list'>
-      ${socialsHTML}
-    </ul>
-  </nav>`
         : "";
 
     // headings omlaag gooien.
@@ -68,7 +57,6 @@ export default function makeLongHTML(event) {
     ${thtml}
     </section>
     ${mediaSection}
-    ${socialsSection}
     </div>
   `;
 

@@ -1,255 +1,71 @@
 [
   {
-    "door": "2025-02-15T19:30:00",
-    "start": "2025-02-15T20:15:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/vnv-nation",
-    "title": "VNV Nation",
+    "door": "2025-04-11T19:30:00",
+    "start": "2025-04-11T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/effenaar-club-card-concert2025",
+    "title": "Effenaar Club Card concert: Marathon ",
     "location": "effenaar",
-    "price": 37.5,
-    "shortText": "Construct // Destruct - Live Tour 2025 | + Special Guest: Straight Razor",
-    "longText": "../public/texts/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS92bnYtbmF0aW9u.html",
-    "image": "../public/event-images/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS92bnYtbmF0aW9u",
+    "price": 0,
+    "shortText": " Texoprint  +  Baklawai Exclusief voor onze Club Card houders",
+    "longText": "../public/texts/effenaar/ZWZmZW5hYXItY2x1Yi1jYXJkLWNvbmNlcnQyMDI1.html",
+    "image": "../public/event-images/effenaar/ZWZmZW5hYXItY2x1Yi1jYXJkLWNvbmNlcnQyMDI1",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "vnv nation": {
-        "s": "4KlYg0F5KG9QNDFKaeTNAy",
-        "l": "vnv%20nation",
+      "texoprint": {
+        "s": "3Crxw3x5GQwDrhY51BNcMi",
+        "l": "texoprint",
         "g": [
-          "ebm",
-          "industrial",
-          "synthpop",
-          "darkwave"
+          "dutch post-punk"
         ]
       },
-      "straight razor": {
-        "s": "6hcKJiqNxY4w5nFAno0scD",
-        "l": "straight%20razor",
+      "marathon": {
+        "s": "4AmPhWuKz1UIdx2Mvt4yAw",
+        "l": "marathon",
         "g": [
-          "darkwave",
-          "ebm",
-          "industrial"
+          "dutch post-punk",
+          "dutch shoegaze"
         ]
       }
     }
   },
   {
-    "door": "2025-02-21T19:30:00",
-    "start": "2025-02-21T20:15:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/obscura",
-    "title": "Obscura",
-    "location": "effenaar",
-    "price": 26.5,
-    "shortText": "Technische deathmetal van wereldklasse met special guests Skeletal Remains + Gorod",
-    "longText": "../public/texts/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9vYnNjdXJh.html",
-    "image": "../public/event-images/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9vYnNjdXJh",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "obscura": {
-        "s": "7i82bJxWj1Tggc7pnU1hzt",
-        "l": "obscura",
-        "g": [
-          "brutal death metal",
-          "cosmic death metal",
-          "death metal",
-          "deathgrind",
-          "melodic death metal",
-          "progressive death metal",
-          "progressive technical death metal",
-          "sci-fi metal",
-          "technical death metal",
-          "thrash",
-          "death",
-          "groove metal"
-        ]
-      },
-      "skeletal remains": {
-        "s": "4Rh3NPxVMADeaSIduAsykN",
-        "l": "skeletal%20remains",
-        "g": [
-          "brutal death metal",
-          "death metal",
-          "deathgrind",
-          "grisly death metal",
-          "new wave of osdm",
-          "technical death metal",
-          "death metal"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-15T20:00:00",
-    "start": "2025-03-15T20:30:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/evening-knives",
-    "title": "An Evening With Knives",
-    "location": "effenaar",
-    "price": 15,
-    "shortText": "Album release show | Mix van post-metal, psychedelische rock en doommetal",
-    "longText": "../public/texts/effenaar/ZW5hYXIubmwvYWdlbmRhL2V2ZW5pbmcta25pdmVz.html",
-    "image": "../public/event-images/effenaar/ZW5hYXIubmwvYWdlbmRhL2V2ZW5pbmcta25pdmVz",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "an evening with knives": {
-        "s": "3FAXLvVlUZ34x2nlGr570X",
-        "l": "an%20evening%20with%20knives",
-        "g": [
-          "dutch stoner rock",
-          "stoner",
-          "doom metal",
-          "rock"
-        ]
-      },
-      "knives": {
-        "s": "2YoHhPouaTT96k3dUQ8WZK",
-        "l": "knives",
-        "g": [
-          "grindcore",
-          "death 'n' roll"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-23T19:00:00",
-    "start": "2025-03-23T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/descendents",
-    "title": "Descendents ",
-    "location": "effenaar",
-    "price": 35.5,
-    "shortText": " Circle Jerks  +  Negative Approach Old school punklegendes",
-    "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2Rlc2NlbmRlbnRz.html",
-    "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2Rlc2NlbmRlbnRz",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "negative approach": {
-        "s": "1DijMV2W1I2CfGLcarzgav",
-        "l": "negative%20approach",
-        "g": [
-          "anarcho-punk",
-          "chain punk",
-          "crust punk",
-          "hardcore",
-          "hardcore punk",
-          "punk",
-          "straight edge"
-        ]
-      },
-      "circle jerks": {
-        "s": "4ubY8RYfXkcEqgjEMDuLYl",
-        "l": "circle%20jerks",
-        "g": [
-          "hardcore punk",
-          "punk"
-        ]
-      },
-      "descendents": {
-        "s": "1FGH4Bh7g9W6V4fUcKZWp5",
-        "l": "descendents",
-        "g": [
-          "hardcore punk",
-          "punk",
-          "skate punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-04T19:30:00",
-    "start": "2025-04-04T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/greenleaf",
-    "title": "Greenleaf",
+    "door": "2025-04-25T20:00:00",
+    "start": "2025-04-25T20:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/johncoffey2025",
+    "title": "John Coffey",
     "location": "effenaar",
     "price": 22.5,
-    "shortText": "+ Gnome + High Desert Queen",
-    "longText": "../public/texts/effenaar/dy5lZmZlbmFhci5ubC9hZ2VuZGEvZ3JlZW5sZWFm.html",
-    "image": "../public/event-images/effenaar/dy5lZmZlbmFhci5ubC9hZ2VuZGEvZ3JlZW5sZWFm",
-    "soldOut": false,
+    "shortText": "Utrechtse punkers naar Altstadt met underplayed show",
+    "longText": "../public/texts/effenaar/ZW5hYXIubmwvYWdlbmRhL2pvaG5jb2ZmZXkyMDI1.html",
+    "image": "../public/event-images/effenaar/ZW5hYXIubmwvYWdlbmRhL2pvaG5jb2ZmZXkyMDI1",
+    "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "greenleaf": {
-        "s": "2mjr7nb7vy7aqwxgskdlm7",
-        "l": "greenleaf",
+      "john coffey": {
+        "s": "4kffvdsomgp0boibxvgeya",
+        "l": "john%20coffey",
         "g": [
-          "modern blues rock",
-          "psychedelic doom",
-          "retro metal",
-          "stoner metal",
-          "stoner rock",
-          "swedish stoner rock"
-        ]
-      },
-      "high desert queen": {
-        "s": "41RTJDSsIKHfYUpSNzztJK",
-        "l": "high%20desert%20queen",
-        "g": [
-          "austin metal",
-          "psychedelic doom",
-          "stoner metal",
-          "rock"
-        ]
-      },
-      "gnome": {
-        "s": "6clbqb5cobaxrbi4qvckmo",
-        "l": "gnome",
-        "g": [
-          "belgian stoner rock"
+          "dutch indie",
+          "dutch rock",
+          "hardcore punk"
         ]
       }
     }
   },
   {
-    "door": "2025-04-19T19:30:00",
-    "start": "2025-04-19T20:15:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/carsick",
-    "title": "Carsick",
+    "door": "2025-05-02T19:30:00",
+    "start": "2025-05-02T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/redhook",
+    "title": "RedHook",
     "location": "effenaar",
-    "price": 16,
-    "shortText": "Voor fans van: IDLES, Soft Play, Bob Vylan en Frank Carter",
-    "longText": "../public/texts/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9jYXJzaWNr.html",
-    "image": "../public/event-images/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9jYXJzaWNr",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-05-07T19:30:00",
-    "start": "2025-05-07T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/knives",
-    "title": "Knives",
-    "location": "effenaar",
-    "price": 15,
-    "shortText": "Hosted by Stroomhuis | Moshpit-waardige mix van elementen uit postpunk, hardcore, rap en noise",
-    "longText": "../public/texts/effenaar/L3d3dy5lZmZlbmFhci5ubC9hZ2VuZGEva25pdmVz.html",
-    "image": "../public/event-images/effenaar/L3d3dy5lZmZlbmFhci5ubC9hZ2VuZGEva25pdmVz",
+    "price": 17,
+    "shortText": "Een poppy mix van alternatieve metal, post-hardcore en metalcore | + Comastatic",
+    "longText": "../public/texts/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9yZWRob29r.html",
+    "image": "../public/event-images/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9yZWRob29r",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "knives": {
-        "s": "2YoHhPouaTT96k3dUQ8WZK",
-        "l": "knives",
-        "g": [
-          "grindcore",
-          "death 'n' roll"
-        ]
-      },
       "hardcore": {
         "s": "3N11n3hTyVlcOg77IGefjz",
         "l": "hardcore",
@@ -257,21 +73,194 @@
           "death metal",
           "hardcore"
         ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-10T19:30:00",
+    "start": "2025-05-10T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/luna-kills",
+    "title": "Luna kills",
+    "location": "effenaar",
+    "price": 15,
+    "shortText": "Alternative/nu-metal met electronics geïnspireerd door game-soundtracks | + Artificial",
+    "longText": "../public/texts/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS9sdW5hLWtpbGxz.html",
+    "image": "../public/event-images/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS9sdW5hLWtpbGxz",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-24T20:00:00",
+    "start": "2025-05-24T20:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/bowl",
+    "title": "Bowl",
+    "location": "effenaar",
+    "price": 16,
+    "shortText": "Kenmerkende mix van gruizige garagerock en desoriënterende postpunk",
+    "longText": "../public/texts/effenaar/Oi8vd3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9ib3ds.html",
+    "image": "../public/event-images/effenaar/Oi8vd3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9ib3ds",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "bowl": {
+        "s": "3g2APnmJ1jNf0WDYF4rZCm",
+        "l": "bowl",
+        "g": [
+          "post-punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-07-16T20:00:00",
+    "start": "2025-07-16T20:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/battlesnake",
+    "title": "Battlesnake",
+    "location": "effenaar",
+    "price": 17,
+    "shortText": "Titanen van de theatrale heavy metal",
+    "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2JhdHRsZXNuYWtl.html",
+    "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2JhdHRsZXNuYWtl",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "battle": {
+        "s": null,
+        "l": "battle",
+        "g": [
+          "black metal"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      },
+      "snake": {
+        "s": null,
+        "l": "snake",
+        "g": [
+          "heavy metal"
+        ]
       }
     }
   },
   {
     "door": "2025-10-04T15:00:00",
     "start": "2025-10-04T15:30:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/come-you-are-2025",
-    "title": "Come as you are 2025",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/caya2025",
+    "title": "Come As You Are 2025",
     "location": "effenaar",
     "price": 49.5,
-    "shortText": "Het beste van drie decennia gitaarmuziek",
-    "longText": "../public/texts/effenaar/YXIubmwvYWdlbmRhL2NvbWUteW91LWFyZS0yMDI1.html",
-    "image": "../public/event-images/effenaar/YXIubmwvYWdlbmRhL2NvbWUteW91LWFyZS0yMDI1",
+    "shortText": " o.a. Fun Lovin' Criminals, Claw Boys Claw, Afterpartees en meer  Het beste van drie decennia gitaarmuziek",
+    "longText": "../public/texts/effenaar/d3cuZWZmZW5hYXIubmwvYWdlbmRhL2NheWEyMDI1.html",
+    "image": "../public/event-images/effenaar/d3cuZWZmZW5hYXIubmwvYWdlbmRhL2NheWEyMDI1",
     "soldOut": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "claw boys claw": {
+        "s": "5t378xbmytaymycg84zipv",
+        "l": "claw%20boys%20claw",
+        "g": [
+          "dutch blues",
+          "dutch indie",
+          "dutch rock"
+        ]
+      },
+      "crim": {
+        "s": null,
+        "l": "crim",
+        "g": [
+          "melodic death metal",
+          "metalcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-12-12T15:00:00",
+    "start": "2025-12-12T15:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-2025-day-1",
+    "title": "Eindhoven Metal Meeting 2025 - Day 1",
+    "location": "effenaar",
+    "price": 140,
+    "shortText": "Met o.a. TRIPTYKON, SINISTER en ANGSTSKRIG",
+    "longText": "../public/texts/effenaar/aG92ZW4tbWV0YWwtbWVldGluZy0yMDI1LWRheS0x.html",
+    "image": "../public/event-images/effenaar/aG92ZW4tbWV0YWwtbWVldGluZy0yMDI1LWRheS0x",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      },
+      "triptykon": {
+        "s": "37fG1EQuwb6zBHyFYUGfj8",
+        "l": "triptykon",
+        "g": [
+          "black metal",
+          "doom metal",
+          "swiss black metal",
+          "swiss metal",
+          "gothic",
+          "doom",
+          "death",
+          "black metal"
+        ]
+      }
+    }
   }
 ]

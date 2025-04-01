@@ -7,12 +7,14 @@ export default async function longTextSocialsIframes(page, event) {
         ({ event }) => {
             const res = {};
 
+            res.textForHTML = "";
+
             const textSelector = ".wp-block-dynamo-eindhoven-container";
             const mediaSelector = [
                 ".wp-block-dynamo-eindhoven-container .rll-youtube-player, .wp-block-dynamo-eindhoven-container iframe"
             ].join(", ");
             const removeEmptyHTMLFrom = textSelector;
-            const socialSelector = [].join(", ");
+
             const removeSelectors = [
                 `${textSelector} [class*='icon-']`,
                 `${textSelector} [class*='fa-']`,
@@ -53,16 +55,12 @@ export default async function longTextSocialsIframes(page, event) {
             //     );
             // end custom dynamo
 
-            // eerst onzin attributes wegslopen
-            const socAttrRemSelAdd = `${
-                socialSelector.length ? `, ${socialSelector}` : ""
-            }`;
             const mediaAttrRemSelAdd = `${
                 mediaSelector.length
                     ? `, ${mediaSelector} *, ${mediaSelector}`
                     : ""
             }`;
-            const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;
+            const textSocEnMedia = `${textSelector} ${mediaAttrRemSelAdd}`;
             document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
                 attributesToRemove.forEach((attr) => {
                     if (elToStrip.hasAttribute(attr)) {
@@ -90,9 +88,6 @@ export default async function longTextSocialsIframes(page, event) {
                 };
             });
 
-            // socials obj maken voordat HTML verdwijnt
-            res.socialsForHTML = "";
-
             // stript HTML tbv text
             removeSelectors.length &&
                 document
@@ -100,27 +95,6 @@ export default async function longTextSocialsIframes(page, event) {
                     .forEach((toRemove) =>
                         toRemove.parentNode.removeChild(toRemove)
                     );
-
-            // dynamo custom
-            const textBlokken = Array.from(
-                document.querySelectorAll(
-                    `${textSelector} h3, ${textSelector} p`
-                )
-            );
-            if (textBlokken.length) {
-                const laatsteBlok = textBlokken[textBlokken.length - 1];
-                if (
-                    laatsteBlok.textContent.includes("voorverkoop") ||
-                    laatsteBlok.textContent.includes("sale") ||
-                    laatsteBlok
-                        .querySelector("h6")
-                        ?.textContent.toLowerCase()
-                        .includes("info")
-                ) {
-                    laatsteBlok.parentNode.removeChild(laatsteBlok);
-                }
-            }
-            // eind dynamo custom
 
             // verwijder ongewenste paragrafen over bv restaurants
             Array.from(
@@ -137,17 +111,20 @@ export default async function longTextSocialsIframes(page, event) {
             });
 
             // lege HTML eruit cq HTML zonder tekst of getallen
-            document
-                .querySelectorAll(`${removeEmptyHTMLFrom} > *`)
-                .forEach((checkForEmpty) => {
-                    const leegMatch = checkForEmpty.innerHTML
-                        .replace("&nbsp;", "")
-                        .match(/[\w\d]/g);
-                    if (!Array.isArray(leegMatch)) {
-                        checkForEmpty.parentNode.removeChild(checkForEmpty);
-                    }
-                });
+            // document
+            //     .querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+            //     .forEach((checkForEmpty) => {
+            //         const leegMatch = checkForEmpty.innerHTML
+            //             .replace("&nbsp;", "")
+            //             .match(/[\w\d]/g);
+            //         if (!Array.isArray(leegMatch)) {
+            //             checkForEmpty.parentNode.removeChild(checkForEmpty);
+            //         }
+            //     });
 
+            document
+                .querySelectorAll(textSelector)
+                .forEach((ts) => ts.setAttribute("data-text", "1"));
             // laatste attributen eruit.
             document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
                 attributesToRemoveSecondRound.forEach((attr) => {
@@ -159,7 +136,7 @@ export default async function longTextSocialsIframes(page, event) {
 
             // tekst.
             res.textForHTML = Array.from(
-                document.querySelectorAll(textSelector)
+                document.querySelectorAll("[data-text]")
             )
                 .map((el) => el.innerHTML)
                 .join("");

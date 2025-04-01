@@ -15,7 +15,7 @@ const scraper = new AbstractScraper({
         url: "https://bibelot.net/programma/?_categories=punk%2Cmetal%2Cgaragerock%2Cgrunge"
     },
     singlePage: {
-        timeout: 20003
+        timeout: 10000
     },
     app: {
         harvest: {
@@ -194,10 +194,13 @@ scraper.singlePage = async function ({ page, event }) {
         pageInfo.price = 0;
     }
 
-    const { mediaForHTML, socialsForHTML, textForHTML } =
-        await longTextSocialsIframes(page, event, pageInfo);
+    const { mediaForHTML, textForHTML } = await longTextSocialsIframes(
+        page,
+        event,
+        pageInfo
+    );
     pageInfo.mediaForHTML = mediaForHTML;
-    pageInfo.socialsForHTML = socialsForHTML;
+
     pageInfo.textForHTML = textForHTML;
 
     return this.singlePageEnd({

@@ -82,6 +82,8 @@ function openClientWebsocket(fields) {
             text: "De server lijkt afgesloten te zijn."
         });
         eventToUpdates(msg, fields);
+        var msg2 = new SpeechSynthesisUtterance("Scrapers zijn klaar");
+        window.speechSynthesis.speak(msg2);
     });
 
     socket.addEventListener("message", (event) => {
@@ -183,22 +185,17 @@ function initiateClosingClient() {
         }
     }, 20000);
     setTimeout(() => {
+        if (document.body.hasAttribute("data-dont-close")) {
+            return;
+        }
+
         const divdiv = document.createElement("div");
         divdiv.className = "warning-client-closing";
         divdiv.id = "warning-client-closing";
         divdiv.innerHTML =
-            "De server is klaar. De monitor word afgesloten over 15 seconden. Klik op het scherm om dit scherm te behouden.";
+            "De server is klaar. De monitor word afgesloten over 20 seconden. Klik op het scherm om dit scherm te behouden.";
         document.body.appendChild(divdiv);
-        document.body.addEventListener("click", () => {
-            if (!document.body.hasAttribute("data-dont-close")) {
-                document.body.setAttribute("data-dont-close", true);
-                const diediv = document.getElementById(
-                    "warning-client-closing"
-                );
-                diediv.parentNode.removeChild(diediv);
-            }
-        });
-    }, 5000);
+    }, 50);
 }
 
 function eventToWarning(eventMsg) {
@@ -236,18 +233,38 @@ function eventToClientsLog(eventMsg, fields) {
         console.dir(eventMsg);
         fields.errorField.updateError(updateErrorMsg);
     }
+
     if (eventMsg.subtype.includes("log")) {
         console.log("");
-        console.log(`${eventMsg.messageData?.content?.workerData?.name}`);
-        console.log(debug);
+
+        let tt = "";
+        let ttt = [];
+        try {
+            ttt = Object.keys(
+                eventMsg.messageData?.content?.debug ?? { noKey: true }
+            );
+            tt = ttt.join(" ");
+        } catch (error) {
+            console.error(error);
+        }
+
+        console.group(
+            `${tt} ${eventMsg.messageData?.content?.workerData?.name}`
+        );
+        ttt.forEach((t) => {
+            console.log(debug[t]);
+        });
+        console.groupEnd();
         return;
     }
     if (Array.isArray(debug)) {
-        console.log("");
-        console.log(`${eventMsg.messageData?.content?.workerData?.name}`);
-        console.dir(debug);
+        console.group(`${eventMsg.messageData?.content?.workerData?.name}`);
+        console.log(debug);
+        console.groupEnd();
     } else if (debug instanceof Object) {
-        console.dir(debug);
+        console.group(`${eventMsg.messageData?.content?.workerData?.name}`);
+        console.log(debug);
+        console.groupEnd();
         // const keys = Object.keys(debug);
         // const values = Object.values(debug);
         // // console.log(
@@ -274,9 +291,22 @@ function eventToClientsLog(eventMsg, fields) {
     }
 }
 
+function zetNietSluitenEventHandler(e) {
+    document
+        .getElementById("sluit-scherm-niet")
+        .addEventListener("click", (e) => {
+            e.preventDefault();
+            e.target.parentNode.removeChild(e.target);
+            if (!document.body.hasAttribute("data-dont-close")) {
+                document.body.setAttribute("data-dont-close", true);
+            }
+        });
+}
+
 function initFrontend() {
     const fields = createFields();
     openClientWebsocket(fields);
+    zetNietSluitenEventHandler();
 }
 
 initFrontend();

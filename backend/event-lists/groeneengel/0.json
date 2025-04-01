@@ -1,181 +1,109 @@
 [
   {
-    "door": "2025-01-24T19:30:00",
-    "start": "2025-01-24T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/berget-lewis-ft-leif-de-leeuw-band-clubtour-2025/",
-    "title": "Berget Lewis ft. Leif de Leeuw Band – Clubtour 2025",
+    "door": "2025-04-01T14:00:00",
+    "start": "2025-04-01T14:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/rapunzel-het-kleine-theater/",
+    "title": "Rapunzel – Het kleine theater",
     "location": "groeneengel",
-    "price": 24,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/Zi1kZS1sZWV1dy1iYW5kLWNsdWJ0b3VyLTIwMjUv.html",
-    "image": "../public/event-images/groeneengel/Zi1kZS1sZWV1dy1iYW5kLWNsdWJ0b3VyLTIwMjUv",
+    "price": 13,
+    "longText": "../public/texts/groeneengel/YS9yYXB1bnplbC1oZXQta2xlaW5lLXRoZWF0ZXIv.html",
+    "image": "../public/event-images/groeneengel/YS9yYXB1bnplbC1oZXQta2xlaW5lLXRoZWF0ZXIv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
+      "ater": {
+        "s": "1HpPzWF2E6G8KfD5pOM6La",
+        "l": "ater",
         "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-24T22:00:00",
-    "start": "2025-01-24T22:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/black-smoke-brigade-aftershow-wild-romance/",
-    "title": "Black Smoke Brigade – Aftershow Wild Romance",
-    "location": "groeneengel",
-    "price": 31,
-    "longText": "../public/texts/groeneengel/cmlnYWRlLWFmdGVyc2hvdy13aWxkLXJvbWFuY2Uv.html",
-    "image": "../public/event-images/groeneengel/cmlnYWRlLWFmdGVyc2hvdy13aWxkLXJvbWFuY2Uv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-24T19:30:00",
-    "start": "2025-01-24T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/mitch-ryder-band/",
-    "title": "Mitch Ryder & Band",
-    "location": "groeneengel",
-    "price": 20,
-    "longText": "../public/texts/groeneengel/bmwvcHJvZ3JhbW1hL21pdGNoLXJ5ZGVyLWJhbmQv.html",
-    "image": "../public/event-images/groeneengel/bmwvcHJvZ3JhbW1hL21pdGNoLXJ5ZGVyLWJhbmQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-24T19:30:00",
-    "start": "2025-01-24T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/physical-graffiti-the-ultimate-led-zeppelin-experience/",
-    "title": "Physical Graffiti – The Ultimate Led Zeppelin Experience",
-    "location": "groeneengel",
-    "price": 15,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/aW1hdGUtbGVkLXplcHBlbGluLWV4cGVyaWVuY2Uv.html",
-    "image": "../public/event-images/groeneengel/aW1hdGUtbGVkLXplcHBlbGluLWV4cGVyaWVuY2Uv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "physical graffiti": {
-        "s": null,
-        "l": "physical%20graffiti",
-        "g": []
-      }
-    }
-  },
-  {
-    "start": "2025-01-24T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/dana-van-bergen/",
-    "title": "Dana van Bergen",
-    "location": "groeneengel",
-    "price": 20,
-    "longText": "../public/texts/groeneengel/Lm5sL3Byb2dyYW1tYS9kYW5hLXZhbi1iZXJnZW4v.html",
-    "image": "../public/event-images/groeneengel/Lm5sL3Byb2dyYW1tYS9kYW5hLXZhbi1iZXJnZW4v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "danava": {
-        "s": null,
-        "l": "danava%20(usa)&%c%us",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2025-01-24T19:00:00",
-    "start": "2025-01-24T19:35:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/rockronde/",
-    "title": "Rockronde",
-    "location": "groeneengel",
-    "price": 19,
-    "longText": "../public/texts/groeneengel/LWVuZ2VsLm5sL3Byb2dyYW1tYS9yb2Nrcm9uZGUv.html",
-    "image": "../public/event-images/groeneengel/LWVuZ2VsLm5sL3Byb2dyYW1tYS9yb2Nrcm9uZGUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-24T19:30:00",
-    "start": "2025-01-24T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/jared-grant-support/",
-    "title": "Jared Grant + support",
-    "location": "groeneengel",
-    "price": 21,
-    "longText": "../public/texts/groeneengel/cHJvZ3JhbW1hL2phcmVkLWdyYW50LXN1cHBvcnQv.html",
-    "image": "../public/event-images/groeneengel/cHJvZ3JhbW1hL2phcmVkLWdyYW50LXN1cHBvcnQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-24T19:30:00",
-    "start": "2025-01-24T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/fleetwood-mac-gold-dust-women-a-tribute-to-stevie-nicks-christine-mcvie/",
-    "title": "Fleetwood Mac: Gold Dust Women A tribute to Stevie Nicks & Christine McVie",
-    "location": "groeneengel",
-    "price": 20,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/LXN0ZXZpZS1uaWNrcy1jaHJpc3RpbmUtbWN2aWUv.html",
-    "image": "../public/event-images/groeneengel/LXN0ZXZpZS1uaWNrcy1jaHJpc3RpbmUtbWN2aWUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-24T15:00:00",
-    "start": "2025-01-24T15:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/ambitus-presents-matteo-myderwyck/",
-    "title": "Ambitus presents: Matteo Myderwyk",
-    "location": "groeneengel",
-    "price": 11,
-    "longText": "../public/texts/groeneengel/dHVzLXByZXNlbnRzLW1hdHRlby1teWRlcnd5Y2sv.html",
-    "image": "../public/event-images/groeneengel/dHVzLXByZXNlbnRzLW1hdHRlby1teWRlcnd5Y2sv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-01-24T15:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/engel-blues-festival-5-danny-bryant-heath-richville-more-tba/",
-    "title": "Engel Blues Festival 5: Danny Bryant ",
-    "location": "groeneengel",
-    "price": 15,
-    "shortText": " HEATH  +  Richville  +  more tba undefined",
-    "longText": "../public/texts/groeneengel/eWFudC1oZWF0aC1yaWNodmlsbGUtbW9yZS10YmEv.html",
-    "image": "../public/event-images/groeneengel/eWFudC1oZWF0aC1yaWNodmlsbGUtbW9yZS10YmEv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "heath": {
-        "s": null,
-        "l": "heath",
-        "g": [
+          "djent",
+          "black metal",
           "black",
-          "thrash metal"
+          "death metal",
+          "extreme metal",
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-01T20:00:00",
+    "start": "2025-04-01T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/lost-kings-of-entertainment-osse-muzikanten-eren-rockhelden/",
+    "title": "Lost Kings Of Entertainment: Osse muzikanten eren Rockhelden!",
+    "location": "groeneengel",
+    "price": 25,
+    "shortText": " undefined",
+    "longText": "../public/texts/groeneengel/c2UtbXV6aWthbnRlbi1lcmVuLXJvY2toZWxkZW4v.html",
+    "image": "../public/event-images/groeneengel/c2UtbXV6aWthbnRlbi1lcmVuLXJvY2toZWxkZW4v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-01T19:30:00",
+    "start": "2025-04-01T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/joy-division-undercover-closer-to-curtis/",
+    "title": "Joy Division Undercover – Closer To Curtis",
+    "location": "groeneengel",
+    "price": 20,
+    "longText": "../public/texts/groeneengel/bi11bmRlcmNvdmVyLWNsb3Nlci10by1jdXJ0aXMv.html",
+    "image": "../public/event-images/groeneengel/bi11bmRlcmNvdmVyLWNsb3Nlci10by1jdXJ0aXMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "joy division": {
+        "s": null,
+        "l": "joy%20division",
+        "g": []
+      },
+      "undercover": {
+        "s": "5EQMhqNfNmnIIAgwQX1WZ7",
+        "l": "undercover",
+        "g": [
+          "christian punk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-01T20:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/hippie-death-cult-drive-by-wire/",
+    "title": "Hippie Death Cult + Drive By Wire",
+    "location": "groeneengel",
+    "price": 15,
+    "longText": "../public/texts/groeneengel/cHBpZS1kZWF0aC1jdWx0LWRyaXZlLWJ5LXdpcmUv.html",
+    "image": "../public/event-images/groeneengel/cHBpZS1kZWF0aC1jdWx0LWRyaXZlLWJ5LXdpcmUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "hippie death cult": {
+        "s": "4izavjyt6nf7m5fq31pjxl",
+        "l": "hippie%20death%20cult",
+        "g": [
+          "psychedelic doom"
+        ]
+      },
+      "drive by wire": {
+        "s": "2gHRDBgrG9h6DUWOrsgNI1",
+        "l": "drive%20by%20wire",
+        "g": [
+          "stoner rock",
+          "space rock",
+          "doom metal",
+          "sludge metal"
         ]
       }
     }

@@ -10,9 +10,7 @@ export default async function longTextSocialsIframes(page, event) {
             const textSelector = "#content-box";
             const mediaSelector = [".video-wrap iframe"].join(", ");
             const removeEmptyHTMLFrom = textSelector;
-            const socialSelector = [
-                ".social-link[href*='facebook'][href*='events']"
-            ].join(", ");
+
             const removeSelectors = [
                 `${textSelector} [class*='icon-']`,
                 `${textSelector} [class*='fa-']`,
@@ -39,15 +37,12 @@ export default async function longTextSocialsIframes(page, event) {
             ];
             const attributesToRemoveSecondRound = ["class", "id"];
             const removeHTMLWithStrings = [];
-
-            // eerst onzin attributes wegslopen
-            const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ""}`;
             const mediaAttrRemSelAdd = `${
                 mediaSelector.length
                     ? `, ${mediaSelector} *, ${mediaSelector}`
                     : ""
             }`;
-            const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;
+            const textSocEnMedia = `${textSelector} ${mediaAttrRemSelAdd}`;
             document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
                 attributesToRemove.forEach((attr) => {
                     if (elToStrip.hasAttribute(attr)) {
@@ -68,42 +63,10 @@ export default async function longTextSocialsIframes(page, event) {
                     type: src.includes("spotify")
                         ? "spotify"
                         : src.includes("youtube")
-                          ? "youtube"
-                          : "bandcamp"
+                        ? "youtube"
+                        : "bandcamp"
                 };
             });
-
-            // socials obj maken voordat HTML verdwijnt
-            res.socialsForHTML = !socialSelector
-                ? ""
-                : Array.from(document.querySelectorAll(socialSelector)).map(
-                      (el) => {
-                          el.querySelectorAll("i, svg, img").forEach((rm) =>
-                              rm.parentNode.removeChild(rm)
-                          );
-                          if (!el.textContent.trim().length) {
-                              if (
-                                  el.href.includes("facebook") ||
-                                  el.href.includes("fb.me")
-                              ) {
-                                  if (el.href.includes("facebook.com/events")) {
-                                      el.textContent = `FB event ${event.title}`;
-                                  } else {
-                                      el.textContent = "Facebook";
-                                  }
-                              } else if (el.href.includes("twitter")) {
-                                  el.textContent = "Tweet";
-                              } else if (el.href.includes("instagram")) {
-                                  el.textContent = "Insta";
-                              } else {
-                                  el.textContent = "Social";
-                              }
-                          }
-                          el.className = "long-html__social-list-link";
-                          el.target = "_blank";
-                          return el.outerHTML;
-                      }
-                  );
 
             // stript HTML tbv text
             removeSelectors.length &&
@@ -138,7 +101,9 @@ export default async function longTextSocialsIframes(page, event) {
                         checkForEmpty.parentNode.removeChild(checkForEmpty);
                     }
                 });
-
+            document
+                .querySelectorAll(textSelector)
+                .forEach((ts) => ts.setAttribute("data-text", "1"));
             // laatste attributen eruit.
             document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
                 attributesToRemoveSecondRound.forEach((attr) => {
@@ -150,7 +115,7 @@ export default async function longTextSocialsIframes(page, event) {
 
             // tekst.
             res.textForHTML = Array.from(
-                document.querySelectorAll(textSelector)
+                document.querySelectorAll("[data-text]")
             )
                 .map((el) => el.innerHTML)
                 .join("");

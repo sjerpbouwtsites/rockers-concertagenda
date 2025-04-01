@@ -1,170 +1,5 @@
 [
   {
-    "door": "2025-01-24T19:00:00",
-    "start": "2025-01-24T19:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/triggerfinger-2025",
-    "title": "Triggerfinger",
-    "location": "victorie",
-    "price": 39.5,
-    "shortText": "Victorie 15 jaar",
-    "longText": "../public/texts/victorie/bC9wcm9ncmFtbWEvdHJpZ2dlcmZpbmdlci0yMDI1.html",
-    "image": "../public/event-images/victorie/bC9wcm9ncmFtbWEvdHJpZ2dlcmZpbmdlci0yMDI1",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "triggerfinger": {
-        "s": "3uhilk54oe4ja06v962ptu",
-        "l": "triggerfinger",
-        "g": [
-          "belgian rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-14T19:00:00",
-    "start": "2025-02-14T19:30:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/metal-battle-14/02/25",
-    "title": "Metal Battle",
-    "location": "victorie",
-    "price": 8.5,
-    "shortText": "Vier veelbelovende bands strijden om een plek in de nationale finale",
-    "longText": "../public/texts/victorie/cm9ncmFtbWEvbWV0YWwtYmF0dGxlLTE0LzAyLzI1.html",
-    "image": "../public/event-images/victorie/cm9ncmFtbWEvbWV0YWwtYmF0dGxlLTE0LzAyLzI1",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "battle": {
-        "s": null,
-        "l": "battle",
-        "g": [
-          "black metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-20T19:15:00",
-    "start": "2025-02-20T19:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/berget-lewis-ft.-leif-de-leeuw-band",
-    "title": "Berget Lewis ft. Leif de Leeuw Band",
-    "location": "victorie",
-    "price": 33.35,
-    "shortText": "samensmelting van southern rock en soulvolle vocalen",
-    "longText": "../public/texts/victorie/dC1sZXdpcy1mdC4tbGVpZi1kZS1sZWV1dy1iYW5k.html",
-    "image": "../public/event-images/victorie/dC1sZXdpcy1mdC4tbGVpZi1kZS1sZWV1dy1iYW5k",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-21T19:45:00",
-    "start": "2025-02-21T20:15:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/speedmobile-2025",
-    "title": "Speedmobile",
-    "location": "victorie",
-    "price": 21.5,
-    "shortText": "Hardrockformatie met leden van Batmobile en Peter Pan Speedrock",
-    "longText": "../public/texts/victorie/Lm5sL3Byb2dyYW1tYS9zcGVlZG1vYmlsZS0yMDI1.html",
-    "image": "../public/event-images/victorie/Lm5sL3Byb2dyYW1tYS9zcGVlZG1vYmlsZS0yMDI1",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "speedmobile": {
-        "s": "15qfmszEuUlcKcPcwt5P05",
-        "l": "speedmobile",
-        "g": [
-          "punk ",
-          "rock "
-        ]
-      },
-      "speed": {
-        "s": "4wf6GGNBqaU79839E6yjfn",
-        "l": "speed",
-        "g": [
-          "australian hardcore",
-          "heavy",
-          "speed metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-07T19:45:00",
-    "start": "2025-03-07T20:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/bizkit-park",
-    "title": "Bizkit Park",
-    "location": "victorie",
-    "price": 25.9,
-    "shortText": "Ode aan de nu metal",
-    "longText": "../public/texts/victorie/dG9yaWUubmwvcHJvZ3JhbW1hL2JpemtpdC1wYXJr.html",
-    "image": "../public/event-images/victorie/dG9yaWUubmwvcHJvZ3JhbW1hL2JpemtpdC1wYXJr",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-03-13T19:00:00",
-    "start": "2025-03-13T20:30:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/manfred-manns-earth-band-2025",
-    "title": "Manfred Mann's Earth Band",
-    "location": "victorie",
-    "price": 36.4,
-    "shortText": "progrockband bekend van wereldhit 'Blinded By The Light'",
-    "longText": "../public/texts/victorie/L21hbmZyZWQtbWFubnMtZWFydGgtYmFuZC0yMDI1.html",
-    "image": "../public/event-images/victorie/L21hbmZyZWQtbWFubnMtZWFydGgtYmFuZC0yMDI1",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-29T19:15:00",
-    "start": "2025-03-29T19:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/nick-schilder",
-    "title": "Nick Schilder",
-    "location": "victorie",
-    "price": 31.65,
-    "shortText": "Shatterproof Clubtour",
-    "longText": "../public/texts/victorie/cmllLm5sL3Byb2dyYW1tYS9uaWNrLXNjaGlsZGVy.html",
-    "image": "../public/event-images/victorie/cmllLm5sL3Byb2dyYW1tYS9uaWNrLXNjaGlsZGVy",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "child": {
-        "s": null,
-        "l": "child",
-        "g": [
-          "grindcore"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-04-03T19:15:00",
     "start": "2025-04-03T19:45:00",
     "venueEventUrl": "https://www.podiumvictorie.nl/programma/anneke-van-giersbergen-2025",
@@ -226,6 +61,46 @@
     "artists": {}
   },
   {
+    "door": "2025-04-18T19:30:00",
+    "start": "2025-04-18T20:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/knives-out!-meltheads,-bug,-no-brains",
+    "title": "Knives out! meltheads, bug, no brains",
+    "location": "victorie",
+    "price": 14.5,
+    "shortText": "(post)punkavond",
+    "longText": "../public/texts/victorie/b3V0IS1tZWx0aGVhZHMsLWJ1Zywtbm8tYnJhaW5z.html",
+    "image": "../public/event-images/victorie/b3V0IS1tZWx0aGVhZHMsLWJ1Zywtbm8tYnJhaW5z",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "no brains": {
+        "s": "5zwy9rbvpvxw49wgpfxv0t",
+        "l": null,
+        "g": [
+          "punk",
+          "street punk"
+        ]
+      },
+      "knives": {
+        "s": "2YoHhPouaTT96k3dUQ8WZK",
+        "l": "knives",
+        "g": [
+          "grindcore",
+          "death 'n' roll"
+        ]
+      },
+      "heads": {
+        "s": null,
+        "l": "heads",
+        "g": [
+          "death",
+          "thrash",
+          "black metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-05-15T19:00:00",
     "start": "2025-05-15T19:45:00",
     "venueEventUrl": "https://www.podiumvictorie.nl/programma/neuk!-69-charger-skroetbalg",
@@ -254,6 +129,42 @@
     }
   },
   {
+    "door": "2025-05-29T19:15:00",
+    "start": "2025-05-29T19:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/dikke-dennis-en-de-r%C3%B8ckers",
+    "title": "Dikke Dennis & de Røckers",
+    "location": "victorie",
+    "price": 15.5,
+    "shortText": "Voormalig mascotte van Peter Pan Speedrock heeft nu eigen band",
+    "longText": "../public/texts/victorie/aWtrZS1kZW5uaXMtZW4tZGUtciVDMyVCOGNrZXJz.html",
+    "image": "../public/event-images/victorie/aWtrZS1kZW5uaXMtZW4tZGUtciVDMyVCOGNrZXJz",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "dikke dennis &": {
+        "s": null,
+        "l": "dikke%20dennis%20&",
+        "g": [
+          "punk ",
+          "rock "
+        ]
+      },
+      "de røckers": {
+        "s": "4gnyohyczuql9vf0vbjffq",
+        "l": null,
+        "g": []
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-07-10T19:30:00",
     "start": "2025-07-10T20:15:00",
     "venueEventUrl": "https://www.podiumvictorie.nl/programma/valient-thorr-10/07/25",
@@ -274,6 +185,74 @@
           "heavy",
           "southern metal",
           "rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-09-12T19:15:00",
+    "start": "2025-09-12T20:00:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/band-of-friends",
+    "title": "Band of Friends",
+    "location": "victorie",
+    "price": 25.88,
+    "shortText": "Bluesrockformatie",
+    "longText": "../public/texts/victorie/ZS5ubC9wcm9ncmFtbWEvYmFuZC1vZi1mcmllbmRz.html",
+    "image": "../public/event-images/victorie/ZS5ubC9wcm9ncmFtbWEvYmFuZC1vZi1mcmllbmRz",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-10-26T14:30:00",
+    "start": "2025-10-26T15:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/and-the-band-played-on",
+    "title": "And The Band Played On",
+    "location": "victorie",
+    "price": 25.9,
+    "shortText": "Tribute aan The Band",
+    "longText": "../public/texts/victorie/b2dyYW1tYS9hbmQtdGhlLWJhbmQtcGxheWVkLW9u.html",
+    "image": "../public/event-images/victorie/b2dyYW1tYS9hbmQtdGhlLWJhbmQtcGxheWVkLW9u",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-11-28T19:30:00",
+    "start": "2025-11-28T20:45:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/acindc",
+    "title": "Acindc",
+    "location": "victorie",
+    "price": 28.75,
+    "shortText": "Eerbetoon aan AC/DC",
+    "longText": "../public/texts/victorie/dW12aWN0b3JpZS5ubC9wcm9ncmFtbWEvYWNpbmRj.html",
+    "image": "../public/event-images/victorie/dW12aWN0b3JpZS5ubC9wcm9ncmFtbWEvYWNpbmRj",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "acindc": {
+        "s": null,
+        "l": "acindc",
+        "g": [
+          "hard rock"
         ]
       }
     }

@@ -1,44 +1,52 @@
 [
   {
-    "start": "2025-02-28T19:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/marduk",
-    "title": "Marduk",
+    "start": "2025-04-11T21:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/deadly-alliance-ep-release",
+    "title": "Deadly Alliance - EP release",
     "location": "metropool",
-    "price": 30.5,
-    "shortText": "Met als special guests: Doodswens + Irae + Lithost",
-    "longText": "../public/texts/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvbWFyZHVr.html",
-    "image": "../public/event-images/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvbWFyZHVr",
+    "price": 10,
+    "shortText": "De mannen brengen de rauwheid van de thrash-scene terug",
+    "longText": "../public/texts/metropool/bmRhL2RlYWRseS1hbGxpYW5jZS1lcC1yZWxlYXNl.html",
+    "image": "../public/event-images/metropool/bmRhL2RlYWRseS1hbGxpYW5jZS1lcC1yZWxlYXNl",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "marduk": {
-        "s": "2lxB5NTcQXj7GGRR4xAVaH",
-        "l": "marduk",
+      "deadly alliance": {
+        "s": "6PhKl46OGC5fSK21tYUJEu",
+        "l": "deadly%20alliance",
         "g": [
-          "black metal",
-          "death metal",
-          "metal",
-          "swedish black metal",
-          "swedish metal",
-          "black metal"
+          "thrash metal"
         ]
       }
     }
   },
   {
-    "start": "2025-03-29T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/cryptosis-album-release",
-    "title": "Cryptosis - Album release",
+    "start": "2025-04-20T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/agent-steel",
+    "title": "Agent Steel",
     "location": "metropool",
-    "price": 20,
-    "shortText": "Een muzikale tornado waarin black-, death- en thrashmetal samensmelten",
-    "longText": "../public/texts/metropool/YWdlbmRhL2NyeXB0b3Npcy1hbGJ1bS1yZWxlYXNl.html",
-    "image": "../public/event-images/metropool/YWdlbmRhL2NyeXB0b3Npcy1hbGJ1bS1yZWxlYXNl",
+    "price": 25.5,
+    "shortText": "Galactische metal die niet van deze wereld is",
+    "longText": "../public/texts/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL2FnZW50LXN0ZWVs.html",
+    "image": "../public/event-images/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL2FnZW50LXN0ZWVs",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "agent steel": {
+        "s": "1FQv3rI4iJPitbZiTxBGut",
+        "l": "agent%20steel",
+        "g": [
+          "melodic thrash",
+          "old school thrash",
+          "us power metal",
+          "power",
+          "speed",
+          "thrash metal"
+        ]
+      }
+    }
   },
   {
     "start": "2025-05-14T18:30:00",
@@ -114,12 +122,70 @@
     "title": "Pussy Riot",
     "location": "metropool",
     "price": 29.5,
-    "shortText": "De politieke punkrockers komen met Riot Days naar Hengelo",
+    "shortText": "Tijdens de NAVO-top klinkt in Hengelo de stem van verzet",
     "longText": "../public/texts/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9wdXNzeS1yaW90.html",
     "image": "../public/event-images/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9wdXNzeS1yaW90",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "start": "2025-08-24T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/flotsam-jetsam",
+    "title": "Flotsam & Jetsam",
+    "location": "metropool",
+    "price": 27.5,
+    "shortText": "Al veertig jaar een vaste waarde in de thrashmetal-scene",
+    "longText": "../public/texts/metropool/b3Bvb2wubmwvYWdlbmRhL2Zsb3RzYW0tamV0c2Ft.html",
+    "image": "../public/event-images/metropool/b3Bvb2wubmwvYWdlbmRhL2Zsb3RzYW0tamV0c2Ft",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "flotsam": {
+        "s": "6OPDM0yzC3CmonQLmC4WAs",
+        "l": "flotsam",
+        "g": [
+          "power",
+          "thrash metal"
+        ]
+      },
+      "jetsam": {
+        "s": "7gNUlg0kH9M4lMrZxRWkaT",
+        "l": "jetsam",
+        "g": [
+          "post-metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-10-18T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/delain",
+    "title": "Delain",
+    "location": "metropool",
+    "price": 30,
+    "shortText": "Een exclusieve show van de Nederlandse symfonische-metalband",
+    "longText": "../public/texts/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvZGVsYWlu.html",
+    "image": "../public/event-images/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvZGVsYWlu",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "delain": {
+        "s": "6pIRdCtSE5hLFfIfcTAicI",
+        "l": "delain",
+        "g": [
+          "dutch metal",
+          "gothic metal",
+          "gothic symphonic metal",
+          "power metal",
+          "symphonic metal",
+          "symphonic metal",
+          "rock"
+        ]
+      }
+    }
   }
 ]

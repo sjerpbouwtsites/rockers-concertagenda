@@ -21,7 +21,7 @@ const scraper = new AbstractScraper({
         url: "https://neushoorn.nl/#/search?category=Heavy"
     },
     singlePage: {
-        timeout: 20000
+        timeout: 10000
     },
     app: {
         harvest: {
@@ -56,6 +56,9 @@ scraper.mainPage = async function () {
     const availableBaseEvents = await this.checkBaseEventAvailable(
         workerData.family
     );
+
+    this.dirtyTalk(`${availableBaseEvents ? `🟩 JA baselists` : `🟥 nee`}`);
+
     if (availableBaseEvents) {
         const thisWorkersEvents = availableBaseEvents.filter(
             (eventEl, index) =>
@@ -217,10 +220,13 @@ scraper.singlePage = async function ({ page, event }) {
         pageInfo.price = priceRes.price;
     }
 
-    const { mediaForHTML, socialsForHTML, textForHTML } =
-        await longTextSocialsIframes(page, event, pageInfo);
+    const { mediaForHTML, textForHTML } = await longTextSocialsIframes(
+        page,
+        event,
+        pageInfo
+    );
     pageInfo.mediaForHTML = mediaForHTML;
-    pageInfo.socialsForHTML = socialsForHTML;
+
     pageInfo.textForHTML = textForHTML;
 
     return this.singlePageEnd({

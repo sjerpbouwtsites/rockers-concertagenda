@@ -349,6 +349,15 @@ export default class Artists {
             return this.checkExplicitEventCategories(message.data.genres);
         }
 
+        if (message.request === "getGoodCategoriesInLongHTML") {
+            const d = message.data;
+            return this.getGoodCategoriesInLongHTML(
+                d.title,
+                d.slug,
+                d.categories
+            );
+        }
+
         if (message.request === "getSpotifyConfirmation") {
             if (this.typeCheckInputFromScrapers) {
                 const hasTitle = Object.prototype.hasOwnProperty.call(
@@ -910,6 +919,28 @@ export default class Artists {
         });
     }
     // #endregion
+
+    // #region GOOD CATEGORIES IN LONG HTML
+    /**
+     * antwoord letterlijk terug wat de event
+     * @param {string} titleslugshorttext
+     * @returns successMessage met evt. artistData
+     */
+    getGoodCategoriesInLongHTML(title, slug, categories) {
+        if (categories && categories.length) {
+            return this.post({
+                success: true,
+                data: categories,
+                reason: `🟩 Long HTML has ${categories.join(" ")} aa91`
+            });
+        }
+        return this.post({
+            success: null,
+            data: categories,
+            reason: `⬜ Long HTML no good term aa92`
+        });
+    }
+    // #endregion getGoodCategoriesInLongHTML
 
     // #region CHECK EXPL. EV. CATS
     /**

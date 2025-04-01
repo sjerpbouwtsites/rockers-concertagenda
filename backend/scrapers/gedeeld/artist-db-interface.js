@@ -42,6 +42,8 @@ function talkTitleAndSlug(subtype, event, extraData = {}) {
 // saveAllowedArtist: 'asyncSaveAllowedArtist',
 // saveUnclearArtist: 'asyncSaveUnclearArtist',
 
+// goodCategoriesInLongHTML: asyncGoodCategoriesInLongHTML
+
 // success: 'asyncSuccess',
 // failure: 'asyncFailure',
 // #endregion SCR.NAMEN & DBNAMEN
@@ -205,6 +207,36 @@ export async function asyncGoodTerms(event, olderReasons) {
     return DBToScraper;
 }
 // #endregion AS. GOOD TERMS
+
+// #region AS. GOOD CATEGORIES IN LONG HTML
+export async function asyncGoodCategoriesInLongHTML(event, olderReasons) {
+    this.talkToDB(
+        talkTitleAndSlug("getGoodCategoriesInLongHTML", event, {
+            categories: event.goodTermsInLongHTML
+        })
+    );
+    const dbAnswer = await this.checkDBhasAnswered();
+    const DBToScraper = new DbInterFaceToScraper(
+        dbAnswer,
+        olderReasons,
+        "async good categories in long HTML"
+    );
+    DBToScraper.setReason();
+
+    if (DBToScraper.isSuccess) {
+        DBToScraper.setBreak(true);
+        return DBToScraper;
+    }
+    if (!DBToScraper.isError) return DBToScraper;
+
+    this.handleError(
+        DBToScraper?.data?.error,
+        DBToScraper.lastReason,
+        "close-thread"
+    );
+    return DBToScraper;
+}
+// #region AS. GOOD CATEGORIES IN LONG HTML
 
 // #region AS. EXPL EVENT CATS
 export async function asyncExplicitEventCategories(event, olderReasons) {

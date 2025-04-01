@@ -23,10 +23,12 @@ const scraper = new AbstractScraper({
     mainPage: {
         timeout: 30014,
         waitUntil: "load",
-        url: "https://www.cpunt.nl/agenda?q=&genre=metalpunkheavy&StartDate=&EndDate=#filter"
+        url: `https://www.cpunt.nl/agenda?q=&genre=metalpunkheavy&StartDate=${new Date()
+            .toISOString()
+            .substring(0, 10)}&EndDate=#filter`
     },
     singlePage: {
-        timeout: 30012
+        timeout: 15000
     },
     app: {
         harvest: {
@@ -203,10 +205,13 @@ scraper.singlePage = async function ({ page, event }) {
         pageInfo.price = priceRes.price;
     }
 
-    const { mediaForHTML, socialsForHTML, textForHTML } =
-        await longTextSocialsIframes(page, event, pageInfo);
+    const { mediaForHTML, textForHTML } = await longTextSocialsIframes(
+        page,
+        event,
+        pageInfo
+    );
     pageInfo.mediaForHTML = mediaForHTML;
-    pageInfo.socialsForHTML = socialsForHTML;
+
     pageInfo.textForHTML = textForHTML;
 
     return this.singlePageEnd({

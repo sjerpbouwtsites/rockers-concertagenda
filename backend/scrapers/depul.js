@@ -14,7 +14,7 @@ const scraper = new AbstractScraper({
         url: "https://www.livepul.com/agenda/"
     },
     singlePage: {
-        timeout: 25000
+        timeout: 10000
     },
     app: {
         mainPage: {
@@ -180,9 +180,9 @@ scraper.singlePage = async function ({ page, event }) {
                                 Array.isArray(startDateMatch) &&
                                 startDateMatch.length === 4
                             ) {
-                                res.startDate = `${startDateMatch[3]}-${months[startDateMatch[2]]}-${
-                                    startDateMatch[1]
-                                }`;
+                                res.startDate = `${startDateMatch[3]}-${
+                                    months[startDateMatch[2]]
+                                }-${startDateMatch[1]}`;
                                 if (!res.startDate) {
                                     throw Error("geen start date");
                                 }
@@ -276,10 +276,13 @@ scraper.singlePage = async function ({ page, event }) {
     pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
     pageInfo.price = priceRes.price;
 
-    const { mediaForHTML, socialsForHTML, textForHTML } =
-        await longTextSocialsIframes(page, event, pageInfo);
+    const { mediaForHTML, textForHTML } = await longTextSocialsIframes(
+        page,
+        event,
+        pageInfo
+    );
     pageInfo.mediaForHTML = mediaForHTML;
-    pageInfo.socialsForHTML = socialsForHTML;
+
     pageInfo.textForHTML = textForHTML;
 
     return this.singlePageEnd({

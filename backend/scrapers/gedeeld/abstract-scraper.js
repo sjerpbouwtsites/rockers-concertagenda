@@ -26,10 +26,12 @@ import {
     asyncExplicitEventCategories,
     asyncMetalEncyclopediaConfirmation,
     asyncHasAllowedArtist,
+    asyncGoodCategoriesInLongHTML,
     asyncSuccess,
     asyncFailure
 } from "./artist-db-interface.js";
 import DbInterFaceToScraper from "./db-interface-to-scraper.js";
+import terms from "../../artist-db/store/terms.js";
 
 // #endregion                                              IMPORTS
 
@@ -118,6 +120,9 @@ export default class AbstractScraper extends ScraperConfig {
         this.asyncHarvestArtists = asyncHarvestArtists;
         this.asyncHarvestArtists.bind(this);
 
+        this.asyncGoodCategoriesInLongHTML = asyncGoodCategoriesInLongHTML;
+        this.asyncGoodCategoriesInLongHTML.bind(this);
+
         this.asyncSuccess = asyncSuccess;
         this.asyncSuccess.bind(this);
 
@@ -142,11 +147,12 @@ export default class AbstractScraper extends ScraperConfig {
      *
      * @param {*} logSource wat dan ook.
      * @param {string} [key=null] hint voor in console.
+     * @param {dir/log} dir of log
      * @memberof AbstractScraper
      */
-    dirtyLog(logSource, key = null) {
+    dirtyLog(logSource, key = null, type = "dir") {
         const logThis = key ? { [`${key}`]: logSource } : logSource;
-        parentPort.postMessage(this.qwm.toConsole(logThis));
+        parentPort.postMessage(this.qwm.toConsole(logThis, type));
     }
 
     /**
@@ -208,7 +214,7 @@ export default class AbstractScraper extends ScraperConfig {
         );
 
         if (debugSettings.debugBaseEvents) {
-            this.dirtyLog(baseMusicEvents);
+            this.dirtyLog(baseMusicEvents, "base Music Events", "log");
         }
 
         if (!baseMusicEvents) {
@@ -264,43 +270,21 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     async checkBaseEventAvailable(searching) {
-        if (!shell?.keepBaseEvents) {
-            return false;
-        }
+        const r = fs.readdirSync(fsDirections.baseEventlists);
 
-        const baseEventFiles = fs.readdirSync(fsDirections.baseEventlists);
-        const theseBaseEvents = baseEventFiles.filter((filenames) =>
-            filenames.includes(searching)
-        );
-        if (!theseBaseEvents || theseBaseEvents.length < 1) {
-            return false;
-        }
-        const thisBaseEvent = theseBaseEvents[0];
-        // 20231201
-        const baseEventDate = thisBaseEvent.split("T")[1].split(".json")[0];
-        const refDate = this.baseEventDate();
-        if (refDate !== baseEventDate) {
-            return false;
-        }
+        const baseEvent = r.find((bel) => bel.includes(searching));
+
+        if (!baseEvent) return false;
+
         WorkerStatus.registerFamilyDoneWithBaseEvents(workerData.family);
-        try {
-            const baseEventList = fs.readFileSync(
-                `${fsDirections.baseEventlists}/${thisBaseEvent}`
-            );
-            return JSON.parse(baseEventList);
-        } catch (error) {
-            this.handleError(
-                error,
-                `geen base event ${thisBaseEvent} gevonden van ${workerData.family} op locatie ${fsDirections.baseEventlists}/${thisBaseEvent}`
-            );
-            return {};
-        }
+
+        const baseEventList = fs.readFileSync(
+            `${fsDirections.baseEventlists}/${baseEvent}`
+        );
+        return JSON.parse(baseEventList);
     }
 
     async saveBaseEventlist(key, data) {
-        if (!shell?.keepBaseEvents) {
-            return false;
-        }
         WorkerStatus.registerFamilyDoneWithBaseEvents(workerData.family);
         if (!data) {
             this.handleError(
@@ -428,8 +412,6 @@ export default class AbstractScraper extends ScraperConfig {
      * waarschuwt naar monitor wie uitvalt
      * controleert op verboden woorden zoals 'verplaatst' etc.
      *
-     * // TODO maak aparte property 'check for afgelastetc'. Bij https://gebrdenobel.nl/programma/nazareth-14-dec-2022/
-     * // bv staat 'afgelast' in de soort van titelbalk maar niet helemaal.
      *
      * @return {boolean}
      * @memberof AbstractScraper
@@ -911,29 +893,34 @@ export default class AbstractScraper extends ScraperConfig {
      * @memberof AbstractScraper
      */
     async createSinglePage(event) {
-        try {
-            const page = await this.browser.newPage();
-            try {
-                await page.goto(event.venueEventUrl, this.singlePage);
-            } catch (error) {
-                this.handleError(
-                    error,
-                    `Mislukken single <a class='single-page-failure error-link' href='${event.venueEventUrl}'>${event.title}</a>`,
-                    "notice",
-                    event
-                );
-            }
+        const page = await this.browser.newPage();
+        let err1 = null;
+        let err2 = null;
+        await page.goto(event.venueEventUrl, this.singlePage).catch((err) => {
+            err1 = err;
+        });
+        if (!err1) return page;
 
-            return page;
-        } catch (error) {
-            this.handleError(
-                error,
-                `Mislukken single pagina <a class='single-page-failure error-link' href='${event.venueEventUrl}'>${event.title}</a> wss duurt te lang`,
-                "notice",
-                null
-            );
-        }
-        return null;
+        this.handleError(
+            err2,
+            `Eerste keer mislukt single <a class='single-page-failure error-link' href='${event.venueEventUrl}'>${event.title}</a>`,
+            "notice",
+            event
+        );
+
+        await this.waitTime(500);
+
+        await page.goto(event.venueEventUrl, this.singlePage).catch((err) => {
+            err2 = err;
+        });
+        if (!err2) return page;
+
+        this.handleError(
+            err2,
+            `Tweede keer mislukt single <a class='single-page-failure error-link' href='${event.venueEventUrl}'>${event.title}</a>`,
+            "notice",
+            event
+        );
     }
 
     titelShorttextPostfix(musicEvent) {
@@ -1021,6 +1008,15 @@ export default class AbstractScraper extends ScraperConfig {
         if (!pageInfo) {
             if (page && !page.isClosed()) page.close();
             throw new Error("page info ontbreekt.");
+        }
+
+        pageInfo.goodTermsInLongHTML = [];
+        if (pageInfo?.textForHTML ?? null) {
+            pageInfo.goodTermsInLongHTML = terms.goodCategories.filter(
+                (goodCategory) => {
+                    return pageInfo.textForHTML.includes(goodCategory);
+                }
+            );
         }
 
         if (!Array.isArray(pageInfo?.errors)) {
@@ -1172,11 +1168,18 @@ export default class AbstractScraper extends ScraperConfig {
 
     // step 4.5
     async closeBrowser() {
-        if (
-            this.browser &&
-            Object.prototype.hasOwnProperty.call(this.browser, "close")
-        ) {
-            this.browser.close();
+        try {
+            if (
+                this.browser &&
+                Object.prototype.hasOwnProperty.call(this.browser, "close")
+            ) {
+                this.browser.close();
+            }
+        } catch (error) {
+            this.handleError(
+                error,
+                `mislukt browser sluiten ${workerData.name}`
+            );
         }
         return true;
     }
@@ -1367,6 +1370,7 @@ export default class AbstractScraper extends ScraperConfig {
                 "asyncMetalEncyclopediaConfirmation",
             explicitEventGenres: "asyncExplicitEventCategories",
             hasAllowedArtist: "asyncHasAllowedArtist",
+            goodCategoriesInLongHTML: "asyncGoodCategoriesInLongHTML",
             success: "asyncSuccess",
             failure: "asyncFailure"
 

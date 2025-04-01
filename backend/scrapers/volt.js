@@ -10,7 +10,9 @@ import terms from "../artist-db/store/terms.js";
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
     workerData: { ...workerData },
-
+    singlePage: {
+        timeout: 10000
+    },
     mainPage: {
         waitUntil: "load",
         url: "https://www.poppodium-volt.nl/programma?f%5B0%5D=activity_itix_genres%3A9&f%5B1%5D=activity_itix_genres%3A30"
@@ -79,9 +81,8 @@ scraper.mainPage = async function () {
     let rawEvents = await page.evaluate(
         // eslint-disable-next-line no-shadow
         ({ workerData, unavailabiltyTerms }) =>
-            Array.from(document.querySelectorAll(".card-activity"))
-
-                .map((rawEvent) => {
+            Array.from(document.querySelectorAll(".card-activity")).map(
+                (rawEvent) => {
                     const anchor =
                         rawEvent.querySelector(".card-activity__title a") ??
                         null;
@@ -113,7 +114,8 @@ scraper.mainPage = async function () {
                             ?.textContent.trim()
                             .toLowerCase() ?? "";
                     return res;
-                }),
+                }
+            ),
         { workerData, unavailabiltyTerms: terms.unavailability }
     );
 
@@ -235,10 +237,13 @@ scraper.singlePage = async function ({ page, url, event }) {
     pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
     pageInfo.price = priceRes.price;
 
-    const { mediaForHTML, socialsForHTML, textForHTML } =
-        await longTextSocialsIframes(page, event, pageInfo);
+    const { mediaForHTML, textForHTML } = await longTextSocialsIframes(
+        page,
+        event,
+        pageInfo
+    );
     pageInfo.mediaForHTML = mediaForHTML;
-    pageInfo.socialsForHTML = socialsForHTML;
+
     pageInfo.textForHTML = textForHTML;
 
     return this.singlePageEnd({
