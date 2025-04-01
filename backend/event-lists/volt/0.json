@@ -1,61 +1,7 @@
 [
   {
-    "start": "2025-02-08T20:00:00",
-    "end": "2025-02-08T00:00:00",
-    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/siamese?show=336",
-    "title": "Siamese",
-    "location": "volt",
-    "price": 22,
-    "shortText": "Metal",
-    "longText": "../public/texts/volt/bmwvYWN0aXZpdGVpdC9zaWFtZXNlP3Nob3c9MzM2.html",
-    "image": "../public/event-images/volt/bmwvYWN0aXZpdGVpdC9zaWFtZXNlP3Nob3c9MzM2",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "siamese": {
-        "s": "0Hx4gv3eoiodtu6XYHF1X0",
-        "l": "siamese",
-        "g": [
-          "metalcore",
-          "post-hardcore",
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-03-30T19:00:00",
-    "end": "2025-03-30T22:30:00",
-    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/lordi-special-guest?show=367",
-    "title": "Lordi + special guest",
-    "location": "volt",
-    "price": 25,
-    "shortText": "Metal",
-    "longText": "../public/texts/volt/dC9sb3JkaS1zcGVjaWFsLWd1ZXN0P3Nob3c9MzY3.html",
-    "image": "../public/event-images/volt/dC9sb3JkaS1zcGVjaWFsLWd1ZXN0P3Nob3c9MzY3",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "lordi": {
-        "s": "14SgKNlOCKAI0PfRD1HnWh",
-        "l": "lordi",
-        "g": [
-          "comic metal",
-          "finnish hard rock",
-          "finnish heavy metal",
-          "lapland metal",
-          "power metal",
-          "heavy metal",
-          "hard rock"
-        ]
-      }
-    }
-  },
-  {
     "start": "2025-04-06T19:00:00",
-    "end": "2025-04-06T23:00:00",
+    "end": "2025-04-06T23:10:00",
     "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/benediction-jungle-rot-master?show=368",
     "title": "Benediction + Jungle Rot + Master",
     "location": "volt",
@@ -90,6 +36,32 @@
           "gothic symphonic metal",
           "slayer",
           "symphonic metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-08-13T19:00:00",
+    "end": "2025-08-13T22:30:00",
+    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/drowning-pool?show=390",
+    "title": "Drowning Pool",
+    "location": "volt",
+    "price": 23,
+    "shortText": "Metal",
+    "longText": "../public/texts/volt/aXZpdGVpdC9kcm93bmluZy1wb29sP3Nob3c9Mzkw.html",
+    "image": "../public/event-images/volt/aXZpdGVpdC9kcm93bmluZy1wb29sP3Nob3c9Mzkw",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "drowning pool": {
+        "s": "1E4r4z7ivGUcSAnCbINJ9v",
+        "l": "drowning%20pool",
+        "g": [
+          "nu metal",
+          "alternative metal",
+          "rap metal",
+          "metal"
         ]
       }
     }

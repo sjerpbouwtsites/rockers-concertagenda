@@ -1,22 +1,51 @@
 [
   {
-    "start": "2025-04-01T20:15:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/big-band-oss/",
-    "title": "Big Band Oss",
+    "door": "2025-04-01T14:00:00",
+    "start": "2025-04-01T14:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/rapunzel-het-kleine-theater/",
+    "title": "Rapunzel – Het kleine theater",
     "location": "groeneengel",
-    "price": 20,
-    "longText": "../public/texts/groeneengel/Z2VsLm5sL3Byb2dyYW1tYS9iaWctYmFuZC1vc3Mv.html",
-    "image": "../public/event-images/groeneengel/Z2VsLm5sL3Byb2dyYW1tYS9iaWctYmFuZC1vc3Mv",
+    "price": 13,
+    "longText": "../public/texts/groeneengel/YS9yYXB1bnplbC1oZXQta2xlaW5lLXRoZWF0ZXIv.html",
+    "image": "../public/event-images/groeneengel/YS9yYXB1bnplbC1oZXQta2xlaW5lLXRoZWF0ZXIv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
+      "ater": {
+        "s": "1HpPzWF2E6G8KfD5pOM6La",
+        "l": "ater",
         "g": [
-          "heavy",
-          "power metal"
+          "djent",
+          "black metal",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-01T20:00:00",
+    "start": "2025-04-01T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/lost-kings-of-entertainment-osse-muzikanten-eren-rockhelden/",
+    "title": "Lost Kings Of Entertainment: Osse muzikanten eren Rockhelden!",
+    "location": "groeneengel",
+    "price": 25,
+    "shortText": " undefined",
+    "longText": "../public/texts/groeneengel/c2UtbXV6aWthbnRlbi1lcmVuLXJvY2toZWxkZW4v.html",
+    "image": "../public/event-images/groeneengel/c2UtbXV6aWthbnRlbi1lcmVuLXJvY2toZWxkZW4v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
         ]
       }
     }
@@ -75,29 +104,6 @@
           "space rock",
           "doom metal",
           "sludge metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-04-01T15:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/engel-blues-festival/",
-    "title": "Engel Blues Festival 5: Danny Bryant ",
-    "location": "groeneengel",
-    "price": 15,
-    "shortText": " HEATH  +  Richville  +  more tba undefined",
-    "longText": "../public/texts/groeneengel/cm9ncmFtbWEvZW5nZWwtYmx1ZXMtZmVzdGl2YWwv.html",
-    "image": "../public/event-images/groeneengel/cm9ncmFtbWEvZW5nZWwtYmx1ZXMtZmVzdGl2YWwv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "heath": {
-        "s": null,
-        "l": "heath",
-        "g": [
-          "black",
-          "thrash metal"
         ]
       }
     }

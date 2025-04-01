@@ -1,167 +1,126 @@
 [
   {
-    "start": "2025-04-20T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/agent-steel",
-    "title": "Agent Steel",
-    "location": "metropool",
-    "price": 25.5,
-    "shortText": "Galactische metal die niet van deze wereld is",
-    "longText": "../public/texts/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL2FnZW50LXN0ZWVs.html",
-    "image": "../public/event-images/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL2FnZW50LXN0ZWVs",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "agent steel": {
-        "s": "1FQv3rI4iJPitbZiTxBGut",
-        "l": "agent%20steel",
-        "g": [
-          "melodic thrash",
-          "old school thrash",
-          "us power metal",
-          "power",
-          "speed",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-14T18:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/decapitated-cryptopsy-warbringer-carnation",
-    "title": "Decapitated ",
-    "location": "metropool",
-    "price": 33,
-    "shortText": " Cryptopsy  +  Warbringer  +  Carnation Internal Bloodshed Over Europe 2025",
-    "longText": "../public/texts/metropool/Y3J5cHRvcHN5LXdhcmJyaW5nZXItY2FybmF0aW9u.html",
-    "image": "../public/event-images/metropool/Y3J5cHRvcHN5LXdhcmJyaW5nZXItY2FybmF0aW9u",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "decapitated": {
-        "s": "17mbhjoaaphuwnrawu9xkc",
-        "l": "decapitated",
-        "g": [
-          "brutal death metal",
-          "death metal",
-          "deathgrind",
-          "groove metal",
-          "metal",
-          "polish death metal",
-          "polish metal",
-          "technical death metal",
-          "technical groove metal",
-          "thrash metal"
-        ]
-      },
-      "warbringer": {
-        "s": "4ukkkgkjnwx8ktuvea66k1",
-        "l": "warbringer",
-        "g": [
-          "metal",
-          "new wave of thrash metal",
-          "speed metal",
-          "thrash metal"
-        ]
-      },
-      "carnation": {
-        "s": "7s6smrbyqvp26jn5ebnu9u",
-        "l": "carnation",
-        "g": [
-          "belgian death metal",
-          "belgian metal",
-          "dutch metal",
-          "voidgrind"
-        ]
-      },
-      "cryptopsy": {
-        "s": "29PgYwTelpNl6370XLqFtN",
-        "l": "cryptopsy",
-        "g": [
-          "black metal",
-          "brutal death metal",
-          "canadian metal",
-          "death metal",
-          "quebec death metal",
-          "technical death metal",
-          "technical deathcore",
-          "technical melodic death metal",
-          "thrash metal",
-          "brutal",
-          "technical death metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-06-29T20:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/pussy-riot",
-    "title": "Pussy Riot",
+    "start": "2025-04-17T19:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/patriarkh-dogma",
+    "title": "Patriarkh + dogma",
     "location": "metropool",
     "price": 29.5,
-    "shortText": "Tijdens de NAVO-top klinkt in Hengelo de stem van verzet",
-    "longText": "../public/texts/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9wdXNzeS1yaW90.html",
-    "image": "../public/event-images/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9wdXNzeS1yaW90",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-08-24T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/flotsam-jetsam",
-    "title": "Flotsam & Jetsam",
-    "location": "metropool",
-    "price": 27.5,
-    "shortText": "Al veertig jaar een vaste waarde in de thrashmetal-scene",
-    "longText": "../public/texts/metropool/b3Bvb2wubmwvYWdlbmRhL2Zsb3RzYW0tamV0c2Ft.html",
-    "image": "../public/event-images/metropool/b3Bvb2wubmwvYWdlbmRhL2Zsb3RzYW0tamV0c2Ft",
+    "shortText": "Een duistere muzikale ervaring",
+    "longText": "../public/texts/metropool/cG9vbC5ubC9hZ2VuZGEvcGF0cmlhcmtoLWRvZ21h.html",
+    "image": "../public/event-images/metropool/cG9vbC5ubC9hZ2VuZGEvcGF0cmlhcmtoLWRvZ21h",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "flotsam": {
-        "s": "6OPDM0yzC3CmonQLmC4WAs",
-        "l": "flotsam",
+      "patriarkh": {
+        "s": null,
+        "l": null,
         "g": [
-          "power",
-          "thrash metal"
+          "black metal",
+          "doom metal"
         ]
       },
-      "jetsam": {
-        "s": "7gNUlg0kH9M4lMrZxRWkaT",
-        "l": "jetsam",
+      "dogma": {
+        "s": "4R6XPuqGShFESRVkCePaxj",
+        "l": "dogma",
         "g": [
-          "post-metal"
+          "groove metal"
         ]
       }
     }
   },
   {
-    "start": "2025-10-18T20:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/delain",
-    "title": "Delain",
+    "start": "2025-05-02T21:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/wille-and-the-bandits",
+    "title": "Wille and the Bandits",
     "location": "metropool",
-    "price": 30,
-    "shortText": "Een exclusieve show van de Nederlandse symfonische-metalband",
-    "longText": "../public/texts/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvZGVsYWlu.html",
-    "image": "../public/event-images/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvZGVsYWlu",
+    "price": 22.5,
+    "shortText": "Een muzikale reis door rauwe blues en krachtige rock",
+    "longText": "../public/texts/metropool/bC9hZ2VuZGEvd2lsbGUtYW5kLXRoZS1iYW5kaXRz.html",
+    "image": "../public/event-images/metropool/bC9hZ2VuZGEvd2lsbGUtYW5kLXRoZS1iYW5kaXRz",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "delain": {
-        "s": "6pIRdCtSE5hLFfIfcTAicI",
-        "l": "delain",
+      "band": {
+        "s": null,
+        "l": "band",
         "g": [
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "power metal",
-          "symphonic metal",
-          "symphonic metal",
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-28T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/arena",
+    "title": "Arena",
+    "location": "metropool",
+    "price": 33,
+    "shortText": "De rockband viert de dertigste verjaardag van debuutalbum Songs From The Lions Cage",
+    "longText": "../public/texts/metropool/cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2FyZW5h.html",
+    "image": "../public/event-images/metropool/cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2FyZW5h",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "arena": {
+        "s": "5n72qzNEfzCXvNDxKComR7",
+        "l": "arena",
+        "g": [
+          "neo-progressive",
+          "progressive metal",
+          "progressive rock",
+          "symphonic rock",
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-07-11T21:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/valient-thorr",
+    "title": "Valient Thorr",
+    "location": "metropool",
+    "price": 22.5,
+    "shortText": "De iconische rockers vieren het 21-jarig jubileum van hun debuutalbum",
+    "longText": "../public/texts/metropool/cm9wb29sLm5sL2FnZW5kYS92YWxpZW50LXRob3Jy.html",
+    "image": "../public/event-images/metropool/cm9wb29sLm5sL2FnZW5kYS92YWxpZW50LXRob3Jy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "valient thorr": {
+        "s": "6rVaRHgldZoRMvERFyZmAH",
+        "l": "valient%20thorr",
+        "g": [
+          "north carolina metal",
+          "heavy",
+          "southern metal",
           "rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-10-07T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/yt",
+    "title": "Y&t",
+    "location": "metropool",
+    "price": 38,
+    "shortText": "De band die hardrock definieerde",
+    "longText": "../public/texts/metropool/aHR0cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL3l0.html",
+    "image": "../public/event-images/metropool/aHR0cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL3l0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "y&t": {
+        "s": null,
+        "l": null,
+        "g": [
+          "symfonische rock"
         ]
       }
     }

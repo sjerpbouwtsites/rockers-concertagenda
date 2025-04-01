@@ -10,7 +10,15 @@
     "image": "../public/event-images/littledevil/ZWVwLXB1cnBsZS13aGl0ZXNuYWtlLXRyaWJ1dGUv",
     "soldOut": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "snake": {
+        "s": null,
+        "l": "snake",
+        "g": [
+          "heavy metal"
+        ]
+      }
+    }
   },
   {
     "start": "2025-04-06T18:30:00",
@@ -24,11 +32,15 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "mean mistreater": {
-        "s": "53cmpvEngBVcRTdEDLsHzU",
-        "l": "mean%20mistreater",
+      "ater": {
+        "s": "1HpPzWF2E6G8KfD5pOM6La",
+        "l": "ater",
         "g": [
-          "speed metal",
+          "djent",
+          "black metal",
+          "black",
+          "death metal",
+          "extreme metal",
           "heavy metal"
         ]
       }

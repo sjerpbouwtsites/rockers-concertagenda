@@ -21,7 +21,7 @@ const scraper = new AbstractScraper({
 
     mainPage: {
         timeout: 35060,
-        url: "https://www.dynamo-eindhoven.nl/programma/?_sfm_fw%3Aopt%3Astyle=15"
+        url: "https://www.dynamo-eindhoven.nl/evenementen/?_stroming_id=842"
     },
     singlePage: {
         timeout: 15000
@@ -40,7 +40,8 @@ const scraper = new AbstractScraper({
                 "forbiddenTerms",
                 "hasGoodTerms",
                 "hasAllowedArtist",
-                "spotifyConfirmation"
+                "spotifyConfirmation",
+                "failure"
             ]
         },
         singlePage: {

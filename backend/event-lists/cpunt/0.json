@@ -68,7 +68,7 @@
     "title": "Slugger & Savage Beat",
     "location": "cpunt",
     "price": 12.5,
-    "shortText": "Eurpean Tour 2025",
+    "shortText": "European Tour 2025",
     "longText": "../public/texts/cpunt/Lm5sL2FnZW5kYS9zbHVnZ2VyLXNhdmFnZS1iZWF0.html",
     "image": "../public/event-images/cpunt/Lm5sL2FnZW5kYS9zbHVnZ2VyLXNhdmFnZS1iZWF0",
     "soldOut": false,
@@ -93,13 +93,29 @@
     "title": "Hardcover + Boneripper + TBA",
     "location": "cpunt",
     "price": 10,
-    "shortText": "",
+    "shortText": "Ode aan de grondleggers van hard- en metalcore",
     "longText": "../public/texts/cpunt/Z2VuZGEvaGFyZGNvdmVyLWJvbmVyaXBwZXItdGJh.html",
     "image": "../public/event-images/cpunt/Z2VuZGEvaGFyZGNvdmVyLWJvbmVyaXBwZXItdGJh",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-05-09T20:00:00",
@@ -138,6 +154,20 @@
           "drone metal",
           "louisiana metal",
           "sludge metal"
+        ]
+      },
+      "hate": {
+        "s": "13XggX75z0Hk0VNvOuTJoB",
+        "l": "hate",
+        "g": [
+          "death metal",
+          "black metal",
+          "thrash metal (early)",
+          " hard rock (later)",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
         ]
       }
     }
@@ -231,7 +261,20 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "ater": {
+        "s": "1HpPzWF2E6G8KfD5pOM6La",
+        "l": "ater",
+        "g": [
+          "djent",
+          "black metal",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-09-13T20:00:00",
@@ -246,6 +289,40 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "ater": {
+        "s": "1HpPzWF2E6G8KfD5pOM6La",
+        "l": "ater",
+        "g": [
+          "djent",
+          "black metal",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-11-09T19:30:00",
+    "start": "2025-11-09T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/the-perfect-tool",
+    "title": "The Perfect Tool",
+    "location": "cpunt",
+    "price": 23,
+    "shortText": "Tribute to 35 Years of Tool",
+    "longText": "../public/texts/cpunt/dW50Lm5sL2FnZW5kYS90aGUtcGVyZmVjdC10b29s.html",
+    "image": "../public/event-images/cpunt/dW50Lm5sL2FnZW5kYS90aGUtcGVyZmVjdC10b29s",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the perfect tool": {
+        "s": null,
+        "l": "the%20perfect%20tool",
+        "g": []
+      }
+    }
   }
 ]

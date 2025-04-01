@@ -131,7 +131,18 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "castle": {
+        "s": null,
+        "l": "castle",
+        "g": [
+          "heavy",
+          "doom metal",
+          "doom",
+          "heavy metal"
+        ]
+      }
+    }
   },
   {
     "start": "2025-05-24T19:00:00",
@@ -446,6 +457,20 @@
           "beatdown",
           "death/thrash metal"
         ]
+      },
+      "hate": {
+        "s": "13XggX75z0Hk0VNvOuTJoB",
+        "l": "hate",
+        "g": [
+          "death metal",
+          "black metal",
+          "thrash metal (early)",
+          " hard rock (later)",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
+        ]
       }
     }
   },
@@ -492,6 +517,13 @@
         "l": "from%20fall%20to%20spring",
         "g": [
           "metalcore"
+        ]
+      },
+      "fall": {
+        "s": null,
+        "l": "fall",
+        "g": [
+          "death metal"
         ]
       },
       "allt": {

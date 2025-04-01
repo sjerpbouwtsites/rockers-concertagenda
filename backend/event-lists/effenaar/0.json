@@ -106,6 +106,20 @@
           "thrash metal"
         ]
       },
+      "venom inc.": {
+        "s": "3MHIoEboWZOn2vX4O3GrjM",
+        "l": "venom%20inc.",
+        "g": [
+          "speed metal",
+          "thrash metal",
+          "black metal",
+          "heavy metal",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
+        ]
+      },
       "extreme": {
         "s": "6w7j5wq5ai5oqylcm15s2l",
         "l": "extreme",
@@ -130,13 +144,29 @@
           "progressive metal"
         ]
       },
-      "venom inc.": {
-        "s": "3MHIoEboWZOn2vX4O3GrjM",
-        "l": "venom%20inc.",
+      "hate": {
+        "s": "13XggX75z0Hk0VNvOuTJoB",
+        "l": "hate",
         "g": [
-          "speed metal",
-          "thrash metal",
+          "death metal",
           "black metal",
+          "thrash metal (early)",
+          " hard rock (later)",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
+        ]
+      },
+      "ater": {
+        "s": "1HpPzWF2E6G8KfD5pOM6La",
+        "l": "ater",
+        "g": [
+          "djent",
+          "black metal",
+          "black",
+          "death metal",
+          "extreme metal",
           "heavy metal"
         ]
       }
@@ -182,6 +212,14 @@
           "heavy",
           "power metal"
         ]
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
       }
     }
   },
@@ -198,12 +236,12 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "del-toros": {
-        "s": "2CDkIhg3quw7otEsbqyi2a",
-        "l": "del-toros",
+      "rock": {
+        "s": null,
+        "l": "rock",
         "g": [
-          "stoner rock",
-          "psychobilly"
+          "heavy metal",
+          "hard rock"
         ]
       }
     }

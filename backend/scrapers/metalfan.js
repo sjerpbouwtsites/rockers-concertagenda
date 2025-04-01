@@ -53,6 +53,7 @@ async function metalFanDoURL(page, url, qwm) {
         "stroomhuis",
         "tivolivredenburg",
         "volt",
+        "victorie",
         "willemeen"
     ]);
 

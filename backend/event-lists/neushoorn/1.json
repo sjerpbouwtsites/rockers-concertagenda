@@ -1,143 +1,135 @@
 [
   {
-    "start": "2025-02-01T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/distant-enterprise-earth/",
-    "title": "Distant + Enterprise Earth",
-    "location": "neushoorn",
-    "price": 23,
-    "shortText": "Een nacht van ongekende brutaliteit",
-    "longText": "../public/texts/neushoorn/dGlvbi9kaXN0YW50LWVudGVycHJpc2UtZWFydGgv.html",
-    "image": "../public/event-images/neushoorn/dGlvbi9kaXN0YW50LWVudGVycHJpc2UtZWFydGgv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "enterprise earth": {
-        "s": "1l3cAmALCtGbjWGVtRwhoh",
-        "l": "enterprise%20earth",
-        "g": [
-          "brutal deathcore",
-          "deathcore",
-          "melodic metalcore",
-          "progressive deathcore"
-        ]
-      },
-      "distant": {
-        "s": "7dfpBi0QvO9FmlhBK6XHwJ",
-        "l": "distant",
-        "g": [
-          "deathcore",
-          "downtempo deathcore",
-          "slamming deathcore",
-          "groove metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-03-01T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/bizkit-park/",
-    "title": "Bizkit Park",
-    "location": "neushoorn",
-    "price": 20,
-    "shortText": "Earth’s mightiest Nu-Metal tribute band",
-    "longText": "../public/texts/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vYml6a2l0LXBhcmsv.html",
-    "image": "../public/event-images/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vYml6a2l0LXBhcmsv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-03-21T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/slash-n-roses-bad-medicine/",
-    "title": "Slash N' Roses + Bad Medicine",
+    "start": "2025-04-07T19:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/and-so-i-watch-you-from-afar/",
+    "title": "And So I Watch You From Afar",
     "location": "neushoorn",
     "price": 25,
-    "shortText": "Pas op: je stembanden gaan het zwaar krijgen!",
-    "longText": "../public/texts/neushoorn/b24vc2xhc2gtbi1yb3Nlcy1iYWQtbWVkaWNpbmUv.html",
-    "image": "../public/event-images/neushoorn/b24vc2xhc2gtbi1yb3Nlcy1iYWQtbWVkaWNpbmUv",
+    "shortText": "Maar je hoort ze van dichtbij!",
+    "longText": "../public/texts/neushoorn/L2FuZC1zby1pLXdhdGNoLXlvdS1mcm9tLWFmYXIv.html",
+    "image": "../public/event-images/neushoorn/L2FuZC1zby1pLXdhdGNoLXlvdS1mcm9tLWFmYXIv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "slash n' roses": {
-        "s": null,
-        "l": null,
+      "and so i watch you from afar": {
+        "s": "7qKMNwlACMZOUdMG3acwst",
+        "l": "and%20so%20i%20watch%20you%20from%20afar",
         "g": [
-          "hard rock"
-        ]
-      },
-      "bad medicine": {
-        "s": null,
-        "l": null,
-        "g": [
-          "hard rock",
-          "coverband",
-          "bon jovi"
+          "british post-rock",
+          "instrumental post-rock",
+          "instrumental rock",
+          "math rock",
+          "post-rock"
         ]
       }
     }
   },
   {
-    "start": "2025-04-13T19:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/freeways-can-aardvark-aus-ritvs-ger/",
-    "title": "Freeways (can) + aardvark (aus) + ritvs (ger)",
+    "start": "2025-04-18T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/3-eyed-kids/",
+    "title": "3 eyed kids",
     "location": "neushoorn",
-    "price": 13,
-    "shortText": "Dying Victims tripple package",
-    "longText": "../public/texts/neushoorn/eXMtY2FuLWFhcmR2YXJrLWF1cy1yaXR2cy1nZXIv.html",
-    "image": "../public/event-images/neushoorn/eXMtY2FuLWFhcmR2YXJrLWF1cy1yaXR2cy1nZXIv",
+    "price": 10,
+    "shortText": "Een brute mix van metal en hiphop",
+    "longText": "../public/texts/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vMy1leWVkLWtpZHMv.html",
+    "image": "../public/event-images/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vMy1leWVkLWtpZHMv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "freeways": {
-        "s": null,
+      "3 eyed kids": {
+        "s": "4cmx6rsoa66tynathlh0in",
         "l": null,
         "g": [
-          "heavy metal",
-          "hard rock",
-          "70s metal"
-        ]
-      },
-      "aardvark": {
-        "s": null,
-        "l": null,
-        "g": [
-          "heavy metal",
-          "nwobhm"
-        ]
-      },
-      "ritvs": {
-        "s": null,
-        "l": null,
-        "g": [
-          "hard rock",
-          "krautrock",
-          "70s metal"
+          "metalcore",
+          "progressive"
         ]
       }
     }
   },
   {
-    "start": "2025-05-01T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/wodan-boys/",
-    "title": "Wodan Boys",
+    "start": "2025-05-02T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/blossom-wither-gavran-dodenbezweerder/",
+    "title": "Blossom & Wither + Gavran + Dodenbezweerder",
     "location": "neushoorn",
-    "price": 18,
-    "shortText": "Een rauwe liveshow waar de Noorse god Wodan trots op zou zijn",
-    "longText": "../public/texts/neushoorn/b29ybi5ubC9wcm9kdWN0aW9uL3dvZGFuLWJveXMv.html",
-    "image": "../public/event-images/neushoorn/b29ybi5ubC9wcm9kdWN0aW9uL3dvZGFuLWJveXMv",
+    "price": 9,
+    "shortText": "Albumpresentatie 'Nevermore'",
+    "longText": "../public/texts/neushoorn/d2l0aGVyLWdhdnJhbi1kb2RlbmJlendlZXJkZXIv.html",
+    "image": "../public/event-images/neushoorn/d2l0aGVyLWdhdnJhbi1kb2RlbmJlendlZXJkZXIv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "wodan boys": {
-        "s": "0kmkbibevmq4luqquahdmr",
-        "l": "wodan%20boys",
+      "gavran": {
+        "s": "0Z7JnoZUMxgmaLgApKMYpl",
+        "l": "gavran",
         "g": [
-          "dutch rock"
+          "sludge metal",
+          "doom metal",
+          "sludge",
+          "doom metal"
+        ]
+      },
+      "dodenbezweerder": {
+        "s": "0hdcR32dwjcQsbcBxy6SoM",
+        "l": "dodenbezweerder",
+        "g": [
+          "black metal",
+          "avant-garde",
+          "raw black metal",
+          "ambient"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-17T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/ter-ziele-onhou/",
+    "title": "Ter Ziele + Onhou",
+    "location": "neushoorn",
+    "price": 15,
+    "shortText": "Albumpresentatie 'Embodiment Of Death'",
+    "longText": "../public/texts/neushoorn/bmwvcHJvZHVjdGlvbi90ZXItemllbGUtb25ob3Uv.html",
+    "image": "../public/event-images/neushoorn/bmwvcHJvZHVjdGlvbi90ZXItemllbGUtb25ob3Uv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ter ziele": {
+        "s": "4zaaeasrkr1rdqtcdlui6g",
+        "l": "ter%20ziele",
+        "g": []
+      },
+      "onhou": {
+        "s": null,
+        "l": "onhou",
+        "g": []
+      }
+    }
+  },
+  {
+    "start": "2025-06-06T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/komatsu/",
+    "title": "Komatsu",
+    "location": "neushoorn",
+    "price": 7.5,
+    "shortText": "Brute stoner/sludge die je trommelvlies laat smachten naar meer!",
+    "longText": "../public/texts/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL2tvbWF0c3Uv.html",
+    "image": "../public/event-images/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL2tvbWF0c3Uv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "komatsu": {
+        "s": "4R9jLgeJ3j1vgivPJTCG2K",
+        "l": "komatsu",
+        "g": [
+          "stoner rock",
+          "sludge metal",
+          "space rock",
+          "doom metal",
+          "stoner metal"
         ]
       }
     }
@@ -181,6 +173,28 @@
         "s": "3qmkrrjqjtixsbgjgwwmmu",
         "l": "the%20optimist%20in%20me",
         "g": []
+      }
+    }
+  },
+  {
+    "start": "2025-10-03T19:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/yandt/",
+    "title": "Y&t",
+    "location": "neushoorn",
+    "price": 39.75,
+    "shortText": "An evening with Y&T",
+    "longText": "../public/texts/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24veWFuZHQv.html",
+    "image": "../public/event-images/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24veWFuZHQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "y&t": {
+        "s": null,
+        "l": null,
+        "g": [
+          "symfonische rock"
+        ]
       }
     }
   }

@@ -18,7 +18,7 @@ import terms from "../artist-db/store/terms.js";
 const scraper = new AbstractScraper({
     workerData: { ...workerData },
     mainPage: {
-        url: "https://gebouw-t.nl/evenementen/?genre=metal,rock,punk"
+        url: "https://gebouw-t.nl/agenda/?genre=&search=&themes%5B%5D=gitaren"
     },
     singlePage: {
         timeout: 10000

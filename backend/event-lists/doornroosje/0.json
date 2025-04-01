@@ -64,7 +64,20 @@
     "image": "https://www.doornroosje.nl/app/uploads/2024/10/1600x800-1200x630.jpg",
     "soldOut": true,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "ater": {
+        "s": "1HpPzWF2E6G8KfD5pOM6La",
+        "l": "ater",
+        "g": [
+          "djent",
+          "black metal",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-04-27T20:00:00.000",
@@ -86,6 +99,14 @@
           "double drumming",
           "noise rock",
           "uk noise rock"
+        ]
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
         ]
       },
       "white hills": {
@@ -120,6 +141,14 @@
         "l": "wodan%20boys",
         "g": [
           "dutch rock"
+        ]
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
         ]
       }
     }

@@ -1,10 +1,10 @@
 cd /home/sjerp/hosted/rockagenda/backend
 killall -s 9 chrome
 clear
-node index.js workers=3 \
+node index.js workers=2 \
     force=all \
     keepImages=true \
-    keepBaseEvents=false \
-    artistDBWrite=false \
+    keepBaseEvents=true \
+    artistDBWrite=true \
     ;
-prettier --write "../public/texts/**/*.html"
+# prettier --write "../public/texts/**/*.html"

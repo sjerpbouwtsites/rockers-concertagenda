@@ -39,6 +39,10 @@ async function downloadImageCompress({
     imagePath,
     familyOverSchrijving = ""
 }) {
+    if (!image) {
+        return "empty image";
+    }
+
     let fam = "";
     if (familyOverSchrijving) {
         fam = familyOverSchrijving;

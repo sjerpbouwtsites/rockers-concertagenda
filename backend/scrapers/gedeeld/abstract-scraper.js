@@ -271,11 +271,6 @@ export default class AbstractScraper extends ScraperConfig {
 
     async checkBaseEventAvailable(searching) {
         const r = fs.readdirSync(fsDirections.baseEventlists);
-        this.dirtyDebug({
-            title: `check base event available`,
-            baseEventLists: r,
-            searching
-        });
 
         const baseEvent = r.find((bel) => bel.includes(searching));
 
