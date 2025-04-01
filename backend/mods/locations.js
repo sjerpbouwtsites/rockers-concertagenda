@@ -30,6 +30,7 @@ const locations = {
     }),
     afaslive: new Location({ name: "Afas Live", city: "Amsterdam" }),
     ahoy: new Location({ name: "Ahoy", city: "Rotterdam" }),
+    altstadt: new Location({ name: "Altstadt", city: "Eindhoven" }),
     amphitheater: new Location({ name: "Amphitheater", city: "Gelsenkirchen" }),
     anciennebelgique: new Location({
         name: "Ancienne Belgique",
@@ -63,6 +64,12 @@ const locations = {
     depeppel: new Location({ name: "De Peppel", city: "Zeist" }),
     depul: new Location({ name: "De Pul", city: "Uden" }),
     deflux: new Location({ name: "De Flux", city: "Zaandam" }),
+    dekroepoekfabriek: new Location({
+        name: "De Kroepoekfabriek",
+        city: "Vlissingen"
+    }),
+    despont: new Location({ name: "De Spont", city: "Stadskanaal" }),
+    despot: new Location({ name: "De Spot", city: "Middelburg" }),
     deverlichtegeest: new Location({
         name: "De Verlichte Geest",
         city: "Roeselare"
@@ -75,6 +82,11 @@ const locations = {
         city: "Ulft"
     }),
     cpunt: new Location({ name: "Cpunt", city: "Hoofddorp" }),
+    dinkel: new Location({ name: "Summer Breeze", city: "Beieren" }),
+    ecicultuurfabriek: new Location({
+        name: "ECI cultuurfabriek",
+        city: "Roermond"
+    }),
     effenaar: new Location({ name: "Effenaar", city: "Eindhoven" }),
     entrepot: new Location({ name: "Entrepot", city: "Eindhoven" }),
     eilandbuitenvest: new Location({
@@ -82,7 +94,9 @@ const locations = {
         city: "Hulst"
     }),
     essigfabrik: new Location({ name: "Essigfabrik", city: "Keulen" }),
+    ewerk: new Location({ name: "E-werk", city: "Keulen" }),
     feesttentpesse: new Location({ name: "Feesttent", city: "Pesse" }),
+    fluor: new Location({ name: "Fluor", city: "Amersfoort" }),
     foxfarm: new Location({ name: "Foxfarm", city: "Tilburg" }),
     festivalterrein: new Location({ name: "Festivalterrein", city: "Overal" }),
     fortressjosefoz: new Location({
@@ -92,6 +106,7 @@ const locations = {
     gebouwt: new Location({ name: "Gebouw T", city: "Bergen op Zoom" }),
     gebrdenobel: new Location({ name: "Gebr. De Nobel", city: "Leiden" }),
     gelredome: new Location({ name: "Gelredome", city: "Arnhem" }),
+    gigant: new Location({ name: "Gigant", city: "Apeldoorn" }),
     goffertpark: new Location({ name: "Goffertpark", city: "Nijmegen" }),
     graspopmetalmeeting: new Location({
         name: "Graspop Metal Meeting",
@@ -157,6 +172,10 @@ const locations = {
         name: "Oldehoofsterkerkhof",
         city: "Leeuwarden"
     }),
+    onsdorp: new Location({
+        name: "Ons-dorp",
+        city: "Emmer-Compascuum"
+    }),
     oosterpoort: new Location({
         name: "Oosterpoort",
         city: "Groningen"
@@ -166,6 +185,7 @@ const locations = {
         city: "Haarlem"
     }),
     orangerie: new Location({ name: "Orangerie", city: "Den Bosch" }),
+    paard: new Location({ name: "Paard", city: "Den Haag" }),
     paleis12: new Location({ name: "Paleis12", city: "Brussel" }),
     palladium: new Location({ name: "Palladium", city: "Keulen" }),
     paradiso: new Location({ name: "Paradiso", city: "Amsterdam" }),
@@ -182,6 +202,7 @@ const locations = {
     perlapalace: new Location({ name: "Perla Palaca", city: "Utrecht" }),
     pitfest: new Location({ name: "Pitfest", city: "Emmen" }),
     p60: new Location({ name: "P60", city: "Amstelveen" }),
+    poppodiumemmen: new Location({ name: "Poppodium Emmen", city: "Emmen" }),
     qfactory: new Location({ name: "Qfactory", city: "Amsterdam" }),
     ragnarok: new Location({ name: "Ragnarok", city: "Bree" }),
     redbox: new Location({ name: "Redbox", city: "Moenchengladbach" }),
@@ -189,10 +210,12 @@ const locations = {
     refraktor: new Location({ name: "ReFraktor", city: "Luik" }),
     rtmstage: new Location({ name: "RTM Stage", city: "Rotterdam" }),
     rotown: new Location({ name: "Rotown", city: "Rotterdam" }),
+    rockpalast: new Location({ name: "Rockpalast", city: "Bochum" }),
     simplon: new Location({ name: "Simplon", city: "Groningen" }),
     sintannazaal: new Location({ name: "Sint Anna zaal", city: "Aalst" }),
     spiritof66: new Location({ name: "Spirit of 66", city: "Verviers" }),
     stadspark: new Location({ name: "Stadspark", city: "Groningen" }),
+    studio15: new Location({ name: "Studio 15", city: "Almelo" }),
     sportpaleis: new Location({ name: "Sportpaleis", city: "Antwerpen" }),
     spotdeoosterpoort: new Location({
         name: "Spot de Oostpoort",
@@ -200,12 +223,12 @@ const locations = {
     }),
     stevenskerk: new Location({ name: "Stevenskerk", city: "Nijmegen" }),
     stroomhuis: new Location({ name: "Stroomhuis", city: "Eindhoven" }),
-    dinkel: new Location({ name: "Summer Breeze", city: "Beieren" }),
     tivolivredenburg: new Location({
         name: "Tivoli Vredenburg",
         city: "Utrecht"
     }),
 
+    thejack: new Location({ name: "The Jack", city: "Eindhoven" }),
     theloods: new Location({ name: "The Loods", city: "Roosendaal" }),
     tolhuistuin: new Location({ name: "Tolhuistuin", city: "Amsterdam" }),
     trix: new Location({ name: "Trix", city: "Antwerpen" }),

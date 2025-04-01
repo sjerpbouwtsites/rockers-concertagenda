@@ -92,7 +92,9 @@ async function metalFanDoURL(page, url, qwm) {
         langemunt: "langemunte",
         merleyn: "doornroosje", // onderdeel doornroosje
         nobel: "gebrnobel",
+        poppodiumboerderij: "boerderij",
         surhuizummetoathehaunted: "surhuzumopenair",
+        rockaplastmatrix: "rockpalast",
         wackenduitsland: "wacken",
         wackenduitslandmetoaironmaiden: "wacken",
         wackenduitslandmetoamegadeth: "wacken",
