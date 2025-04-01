@@ -372,6 +372,16 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "disquiet": {
+        "s": "6H0uUeAtmzEmv7VYsW2Iro",
+        "l": "disquiet",
+        "g": [
+          "thrash metal",
+          "groove metal",
+          "melodic death metal",
+          "melodic thrash metal"
+        ]
+      },
       "plague": {
         "s": "080xip1qfuknbnyeypuh1v",
         "l": "plague",
@@ -388,16 +398,6 @@
         "l": "fall",
         "g": [
           "death metal"
-        ]
-      },
-      "disquiet": {
-        "s": "6H0uUeAtmzEmv7VYsW2Iro",
-        "l": "disquiet",
-        "g": [
-          "thrash metal",
-          "groove metal",
-          "melodic death metal",
-          "melodic thrash metal"
         ]
       }
     }
@@ -449,42 +449,62 @@
     }
   },
   {
-    "door": "2025-10-09T19:30:00",
-    "start": "2025-10-09T20:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/hang-youth-support-09-10-25/",
-    "title": "Hang Youth + support",
+    "door": "2025-10-05T19:30:00",
+    "start": "2025-10-05T20:30:00",
+    "venueEventUrl": "https://patronaat.nl/event/yt-05-10-25/",
+    "title": "Y&t",
     "location": "patronaat",
-    "price": 23.5,
-    "shortText": "Dé belichaming van Nederlandse punk anno nu",
-    "longText": "../public/texts/patronaat/dC9oYW5nLXlvdXRoLXN1cHBvcnQtMDktMTAtMjUv.html",
-    "image": "../public/event-images/patronaat/dC9oYW5nLXlvdXRoLXN1cHBvcnQtMDktMTAtMjUv",
+    "price": 40.5,
+    "shortText": "Ware hardrock pioniers",
+    "longText": "../public/texts/patronaat/YXRyb25hYXQubmwvZXZlbnQveXQtMDUtMTAtMjUv.html",
+    "image": "../public/event-images/patronaat/YXRyb25hYXQubmwvZXZlbnQveXQtMDUtMTAtMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "hang youth": {
-        "s": "33s4eablBmnrPlE3y6CZFR",
-        "l": "hang%20youth",
+      "y&t": {
+        "s": null,
+        "l": null,
         "g": [
-          "dutch indie",
-          "lowlands hardcore"
+          "symfonische rock"
         ]
       }
     }
   },
   {
-    "door": "2025-10-20T16:30:00",
-    "start": "2025-10-20T16:30:00",
-    "venueEventUrl": "https://patronaat.nl/event/common-thread-tour-day-2-20-10-25/",
+    "door": "2025-10-19T15:00:00",
+    "start": "2025-10-19T15:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/common-thread-tour-day-1-19-10-25/",
     "title": "Common Thread Tour",
     "location": "patronaat",
-    "price": null,
+    "price": 45.5,
     "shortText": "Tweedaags punk-, emo- en hardcore-festival",
-    "longText": "../public/texts/patronaat/b24tdGhyZWFkLXRvdXItZGF5LTItMjAtMTAtMjUv.html",
-    "image": "../public/event-images/patronaat/b24tdGhyZWFkLXRvdXItZGF5LTItMjAtMTAtMjUv",
+    "longText": "../public/texts/patronaat/b24tdGhyZWFkLXRvdXItZGF5LTEtMTktMTAtMjUv.html",
+    "image": "../public/event-images/patronaat/b24tdGhyZWFkLXRvdXItZGF5LTEtMTktMTAtMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "door": "2025-12-05T19:30:00",
+    "start": "2025-12-05T20:15:00",
+    "venueEventUrl": "https://patronaat.nl/event/pene-corrida-05-12-25/",
+    "title": "Pene Corrida",
+    "location": "patronaat",
+    "price": null,
+    "shortText": "Een tornado van scheurende gitaren en herkenbare dancebeats",
+    "longText": "../public/texts/patronaat/bC9ldmVudC9wZW5lLWNvcnJpZGEtMDUtMTItMjUv.html",
+    "image": "../public/event-images/patronaat/bC9ldmVudC9wZW5lLWNvcnJpZGEtMDUtMTItMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "pene corrida": {
+        "s": "1hw2ywipnsowbtb8flzcca",
+        "l": "pene%20corrida",
+        "g": []
+      }
+    }
   }
 ]

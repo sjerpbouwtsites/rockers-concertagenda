@@ -13,6 +13,14 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "eurydice": {
+        "s": "7iY2EYh4gAOcWg8NYpJXi8",
+        "l": "eurydice",
+        "g": [
+          "death metal",
+          "hardcore"
+        ]
+      },
       "rhea": {
         "s": "3iTqZTjeziB8WtVJeIUrLD",
         "l": "rhea",
@@ -20,14 +28,6 @@
           "belgian rock",
           "atmospheric death",
           "doom metal"
-        ]
-      },
-      "eurydice": {
-        "s": "7iY2EYh4gAOcWg8NYpJXi8",
-        "l": "eurydice",
-        "g": [
-          "death metal",
-          "hardcore"
         ]
       }
     }
@@ -105,13 +105,6 @@
           "doom metal"
         ]
       },
-      "dogma": {
-        "s": "4R6XPuqGShFESRVkCePaxj",
-        "l": "dogma",
-        "g": [
-          "groove metal"
-        ]
-      },
       "nidhogg": {
         "s": "4bkO4QWnpMCKGdfevM6n64",
         "l": "nidhogg",
@@ -121,6 +114,13 @@
           "heavy",
           "power",
           "folk metal"
+        ]
+      },
+      "dogma": {
+        "s": "4R6XPuqGShFESRVkCePaxj",
+        "l": "dogma",
+        "g": [
+          "groove metal"
         ]
       }
     }
@@ -275,16 +275,16 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "deeproot": {
-        "s": "497D31qNuomZa2eCIOuEa5",
-        "l": "deeproot",
+      "heavy//hitter": {
+        "s": "67VjKj4enx3D6auLtAZKCU",
+        "l": "heavy//hitter",
         "g": [
           "deathcore"
         ]
       },
-      "heavy//hitter": {
-        "s": "67VjKj4enx3D6auLtAZKCU",
-        "l": "heavy//hitter",
+      "deeproot": {
+        "s": "497D31qNuomZa2eCIOuEa5",
+        "l": "deeproot",
         "g": [
           "deathcore"
         ]

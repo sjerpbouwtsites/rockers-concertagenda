@@ -77,6 +77,14 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "divided": {
+        "s": "0uRSsdrzKsjyXDZ4vBXa8z",
+        "l": "divided",
+        "g": [
+          "sludge metal",
+          "technical death metal"
+        ]
+      },
       "waste": {
         "s": "2XuyPcxHeNlK7tOej51mqj",
         "l": "waste",
@@ -84,14 +92,6 @@
           "deathcore",
           "metalcore",
           "brutal death metal"
-        ]
-      },
-      "divided": {
-        "s": "0uRSsdrzKsjyXDZ4vBXa8z",
-        "l": "divided",
-        "g": [
-          "sludge metal",
-          "technical death metal"
         ]
       }
     }
@@ -230,30 +230,6 @@
         "g": [
           "groove",
           "progressive metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-06-16T19:30:00",
-    "venueEventUrl": "https://kavka.be/event/mil-spec-can-restraining-order-us-wild-side-can/",
-    "title": "Mil-spec (can) ",
-    "location": "kavka",
-    "price": null,
-    "shortText": " restraining order (us)  +  wild side (can) RESTRAINING ORDER (us) Hardcore/punk from with a touch of garage/rock ’n roll to keeps things…",
-    "longText": "../public/texts/kavka/YWluaW5nLW9yZGVyLXVzLXdpbGQtc2lkZS1jYW4v.html",
-    "image": "../public/event-images/kavka/YWluaW5nLW9yZGVyLXVzLXdpbGQtc2lkZS1jYW4v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "mil-spec": {
-        "s": "5iWmisoEhjZGn4QYLRqzuy",
-        "l": "mil-spec",
-        "g": [
-          "melodic hardcore",
-          "hardcore punk",
-          "hardcore"
         ]
       }
     }

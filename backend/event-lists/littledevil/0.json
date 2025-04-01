@@ -66,6 +66,15 @@
           "hardcore"
         ]
       },
+      "premonition": {
+        "s": "0vShN5Qc9EG8nfPQnCICth",
+        "l": "premonition",
+        "g": [
+          "hardcore",
+          "hardcore punk",
+          "melodic heavy metal"
+        ]
+      },
       "braces": {
         "s": "1oZBET0PBRusndmvbnlz9W",
         "l": "braces",
@@ -76,15 +85,6 @@
           "punk",
           "street punk",
           "thrash metal"
-        ]
-      },
-      "premonition": {
-        "s": "0vShN5Qc9EG8nfPQnCICth",
-        "l": "premonition",
-        "g": [
-          "hardcore",
-          "hardcore punk",
-          "melodic heavy metal"
         ]
       }
     }
@@ -246,15 +246,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "bark": {
-        "s": "6bCDvJKQCr3404Fe1j7egd",
-        "l": "bark",
-        "g": [
-          "j-rap",
-          "groove metal",
-          "death 'n' roll"
-        ]
-      },
       "cthuluminati": {
         "s": "3nVkXWKJxipv27aqVAb0nW",
         "l": "cthuluminati",
@@ -262,6 +253,15 @@
           "progressive",
           "blackened stoner",
           "doom metal"
+        ]
+      },
+      "bark": {
+        "s": "6bCDvJKQCr3404Fe1j7egd",
+        "l": "bark",
+        "g": [
+          "j-rap",
+          "groove metal",
+          "death 'n' roll"
         ]
       }
     }
@@ -323,6 +323,21 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "torn from oblivion": {
+        "s": "5IXqeHYM84k26hwnTNDuZS",
+        "l": "torn%20from%20oblivion",
+        "g": [
+          "deathcore",
+          "metalcore"
+        ]
+      },
+      "canyon literature": {
+        "s": "4KXXP4WTgnzQQQgv77cagF",
+        "l": "canyon%20literature",
+        "g": [
+          "deathcore"
+        ]
+      },
       "changing tides": {
         "s": "4fdvjqh3xqrmfvpb4n5hqu",
         "l": "changing%20tides",
@@ -340,19 +355,12 @@
           "deathcore"
         ]
       },
-      "torn from oblivion": {
-        "s": "5IXqeHYM84k26hwnTNDuZS",
-        "l": "torn%20from%20oblivion",
+      "blood": {
+        "s": null,
+        "l": "blood",
         "g": [
-          "deathcore",
-          "metalcore"
-        ]
-      },
-      "canyon literature": {
-        "s": "4KXXP4WTgnzQQQgv77cagF",
-        "l": "canyon%20literature",
-        "g": [
-          "deathcore"
+          "death metal",
+          "grindcore"
         ]
       }
     }
@@ -535,13 +543,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "kaonashi": {
-        "s": "60Zpxsk0QxhPEyyvWfSv0I",
-        "l": "kaonashi",
-        "g": [
-          "metalcore"
-        ]
-      },
       "god complex": {
         "s": "4Ase9pfG4FCMoiuyRduc8k",
         "l": "god%20complex",
@@ -549,6 +550,13 @@
           "deathcore",
           "metalcore",
           "hardcore"
+        ]
+      },
+      "kaonashi": {
+        "s": "60Zpxsk0QxhPEyyvWfSv0I",
+        "l": "kaonashi",
+        "g": [
+          "metalcore"
         ]
       }
     }

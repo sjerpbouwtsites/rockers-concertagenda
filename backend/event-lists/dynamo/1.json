@@ -36,6 +36,13 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "guts & glory": {
+        "s": null,
+        "l": "guts%20&%20glory",
+        "g": [
+          "death metal"
+        ]
+      },
       "battle": {
         "s": null,
         "l": "battle",
@@ -49,13 +56,6 @@
         "g": [
           "heavy",
           "power metal"
-        ]
-      },
-      "guts & glory": {
-        "s": null,
-        "l": "guts%20&%20glory",
-        "g": [
-          "death metal"
         ]
       }
     }
@@ -199,14 +199,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "plus": {
-        "s": null,
-        "l": "plus",
-        "g": [
-          "death",
-          "black metal"
-        ]
-      },
       "the hotelier": {
         "s": "3kzNckjE5FzHQhe4pJiLKa",
         "l": "the%20hotelier",
@@ -215,6 +207,14 @@
           "emo",
           "math rock",
           "emo pop"
+        ]
+      },
+      "plus": {
+        "s": null,
+        "l": "plus",
+        "g": [
+          "death",
+          "black metal"
         ]
       }
     }
@@ -346,6 +346,17 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "forbidden": {
+        "s": "5MhPZVXE28sD9rXE3GU1uN",
+        "l": "forbidden",
+        "g": [
+          "thrash metal",
+          "speed metal",
+          "groove metal",
+          "metal",
+          "thrash metal"
+        ]
+      },
       "headless hunter": {
         "s": "4aFxWu9DFqbM5wQt4TpQwC",
         "l": "headless%20hunter",
@@ -363,17 +374,6 @@
           "metal",
           "new wave of thrash metal",
           "speed metal",
-          "thrash metal"
-        ]
-      },
-      "forbidden": {
-        "s": "5MhPZVXE28sD9rXE3GU1uN",
-        "l": "forbidden",
-        "g": [
-          "thrash metal",
-          "speed metal",
-          "groove metal",
-          "metal",
           "thrash metal"
         ]
       }

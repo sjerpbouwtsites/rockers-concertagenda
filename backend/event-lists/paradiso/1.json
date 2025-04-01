@@ -62,18 +62,18 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "wodan boys": {
-        "s": "0kmkbibevmq4luqquahdmr",
-        "l": "wodan%20boys",
-        "g": [
-          "dutch rock"
-        ]
-      },
       "black leather jacket": {
         "s": "5jamQayQPp3Res7HrO8tW1",
         "l": "black%20leather%20jacket",
         "g": [
           "garage rock"
+        ]
+      },
+      "wodan boys": {
+        "s": "0kmkbibevmq4luqquahdmr",
+        "l": "wodan%20boys",
+        "g": [
+          "dutch rock"
         ]
       }
     }
@@ -152,6 +152,13 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "theatre of": {
+        "s": null,
+        "l": "theatre%20of",
+        "g": [
+          "extreme progressive metal"
+        ]
+      },
       "hate": {
         "s": "13XggX75z0Hk0VNvOuTJoB",
         "l": "hate",
@@ -164,13 +171,6 @@
           "death metal",
           "extreme metal",
           "heavy metal"
-        ]
-      },
-      "theatre of": {
-        "s": null,
-        "l": "theatre%20of",
-        "g": [
-          "extreme progressive metal"
         ]
       }
     }

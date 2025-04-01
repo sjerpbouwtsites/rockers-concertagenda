@@ -60,6 +60,30 @@
     }
   },
   {
+    "start": "2025-06-11T20:00:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/sven-hammond/",
+    "title": "Sven Hammond+ support: Miss Meredith",
+    "location": "oosterpoort",
+    "price": 28.1,
+    "shortText": "Sven Hammond+ support: Miss Meredith",
+    "longText": "../public/texts/oosterpoort/Z2VuLm5sL3Byb2dyYW1tYS9zdmVuLWhhbW1vbmQv.html",
+    "image": "../public/event-images/oosterpoort/Z2VuLm5sL3Byb2dyYW1tYS9zdmVuLWhhbW1vbmQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "miss": {
+        "s": null,
+        "l": "miss",
+        "g": [
+          "sludge",
+          "doom metal",
+          "death 'n' roll"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-06-18T20:00:00+02:00",
     "venueEventUrl": "https://www.spotgroningen.nl/programma/the-hu/",
     "title": "The Hu",
@@ -155,6 +179,30 @@
           "death metal",
           "extreme metal",
           "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-10-04T20:00:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/goldkimono-2/",
+    "title": "GoldkimonoGoldkimono Tour 2025",
+    "location": "oosterpoort",
+    "price": 30.1,
+    "shortText": "GoldkimonoGoldkimono Tour 2025",
+    "longText": "../public/texts/oosterpoort/Z2VuLm5sL3Byb2dyYW1tYS9nb2xka2ltb25vLTIv.html",
+    "image": "../public/event-images/oosterpoort/Z2VuLm5sL3Byb2dyYW1tYS9nb2xka2ltb25vLTIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "mono": {
+        "s": "53LVoipNTQ4lvUSJ61XKU3",
+        "l": "mono",
+        "g": [
+          "post-rock",
+          "math rock",
+          "sludge metal"
         ]
       }
     }

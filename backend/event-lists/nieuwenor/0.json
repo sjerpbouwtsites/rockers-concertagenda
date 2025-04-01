@@ -104,20 +104,20 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "bass": {
-        "s": null,
-        "l": "bass",
-        "g": [
-          "doom",
-          "death metal"
-        ]
-      },
       "first": {
         "s": null,
         "l": "first",
         "g": [
           "melodic heavy metal",
           "rock"
+        ]
+      },
+      "bass": {
+        "s": null,
+        "l": "bass",
+        "g": [
+          "doom",
+          "death metal"
         ]
       }
     }

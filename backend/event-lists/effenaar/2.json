@@ -140,6 +140,14 @@
         "g": [
           "post-punk"
         ]
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
       }
     }
   },
@@ -163,6 +171,13 @@
           "black metal"
         ]
       },
+      "snake": {
+        "s": null,
+        "l": "snake",
+        "g": [
+          "heavy metal"
+        ]
+      },
       "metal": {
         "s": null,
         "l": "metal",
@@ -176,13 +191,6 @@
         "g": [
           "groove",
           "progressive metal"
-        ]
-      },
-      "snake": {
-        "s": null,
-        "l": "snake",
-        "g": [
-          "heavy metal"
         ]
       }
     }

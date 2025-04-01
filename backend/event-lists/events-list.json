@@ -1,6 +1,29 @@
 [
   {
     "start": "2025-04-01T20:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/north-mississippi-allstars-25th-anniversary-of-shake-hands-with-shorty/",
+    "title": "North Mississippi Allstars",
+    "location": "groeneengel",
+    "price": 20,
+    "longText": "../public/texts/groeneengel/cnktb2Ytc2hha2UtaGFuZHMtd2l0aC1zaG9ydHkv.html",
+    "image": "../public/event-images/groeneengel/cnktb2Ytc2hha2UtaGFuZHMtd2l0aC1zaG9ydHkv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "miss": {
+        "s": null,
+        "l": "miss",
+        "g": [
+          "sludge",
+          "doom metal",
+          "death 'n' roll"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-01T20:00:00",
     "venueEventUrl": "https://www.groene-engel.nl/programma/hippie-death-cult-drive-by-wire/",
     "title": "Hippie Death Cult + Drive By Wire",
     "location": "groeneengel",
@@ -174,6 +197,27 @@
     }
   },
   {
+    "door": "2025-04-03T19:30:00",
+    "start": "2025-04-03T22:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/19988782/frog-leap-03-04-2025",
+    "title": "Frog Leap",
+    "location": "tivolivredenburg",
+    "price": 31.25,
+    "shortText": "YouTube-fenomeen haalt covers door metal shredder",
+    "longText": "../public/texts/tivolivredenburg/LzE5OTg4NzgyL2Zyb2ctbGVhcC0wMy0wNC0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/LzE5OTg4NzgyL2Zyb2ctbGVhcC0wMy0wNC0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "frog leap": {
+        "s": "6mjmqm0uhax5nidmdvfbf0",
+        "l": "frog%20leap",
+        "g": []
+      }
+    }
+  },
+  {
     "door": "2025-04-03T19:15:00",
     "start": "2025-04-03T22:15:00",
     "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/48511309/tramhaus-03-04-2025",
@@ -199,27 +243,6 @@
   },
   {
     "door": "2025-04-03T19:30:00",
-    "start": "2025-04-03T22:00:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/19988782/frog-leap-03-04-2025",
-    "title": "Frog Leap",
-    "location": "tivolivredenburg",
-    "price": 31.25,
-    "shortText": "YouTube-fenomeen haalt covers door metal shredder",
-    "longText": "../public/texts/tivolivredenburg/LzE5OTg4NzgyL2Zyb2ctbGVhcC0wMy0wNC0yMDI1.html",
-    "image": "../public/event-images/tivolivredenburg/LzE5OTg4NzgyL2Zyb2ctbGVhcC0wMy0wNC0yMDI1",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "frog leap": {
-        "s": "6mjmqm0uhax5nidmdvfbf0",
-        "l": "frog%20leap",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2025-04-03T19:30:00",
     "start": "2025-04-03T20:00:00",
     "venueEventUrl": "https://patronaat.nl/event/rhea-support-03-04-25/",
     "title": "Rhea + Eurydice",
@@ -232,6 +255,14 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "eurydice": {
+        "s": "7iY2EYh4gAOcWg8NYpJXi8",
+        "l": "eurydice",
+        "g": [
+          "death metal",
+          "hardcore"
+        ]
+      },
       "rhea": {
         "s": "3iTqZTjeziB8WtVJeIUrLD",
         "l": "rhea",
@@ -239,14 +270,6 @@
           "belgian rock",
           "atmospheric death",
           "doom metal"
-        ]
-      },
-      "eurydice": {
-        "s": "7iY2EYh4gAOcWg8NYpJXi8",
-        "l": "eurydice",
-        "g": [
-          "death metal",
-          "hardcore"
         ]
       }
     }
@@ -311,15 +334,6 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "yama": {
-        "s": null,
-        "l": "yama",
-        "g": [
-          "psychedelic doom",
-          "stoner metal",
-          "rock"
-        ]
-      },
       "komatsu": {
         "s": "4R9jLgeJ3j1vgivPJTCG2K",
         "l": "komatsu",
@@ -329,6 +343,15 @@
           "space rock",
           "doom metal",
           "stoner metal"
+        ]
+      },
+      "yama": {
+        "s": null,
+        "l": "yama",
+        "g": [
+          "psychedelic doom",
+          "stoner metal",
+          "rock"
         ]
       }
     }
@@ -370,7 +393,17 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "miss": {
+        "s": null,
+        "l": "miss",
+        "g": [
+          "sludge",
+          "doom metal",
+          "death 'n' roll"
+        ]
+      }
+    }
   },
   {
     "door": "2025-04-04T19:00:00",
@@ -790,7 +823,16 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
   },
   {
     "door": "2025-04-06T20:00:00",
@@ -926,20 +968,6 @@
         ]
       }
     }
-  },
-  {
-    "start": "2025-04-06T04:00:00",
-    "end": "2025-04-06T07:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/paul-collins-plays-the-best-of-the-nerves-paul-collins-beat/",
-    "title": "Paul collins plays the best of the nerves & paul collins beat ",
-    "location": "dbs",
-    "price": 10,
-    "shortText": " misselijk & the hook MATINEE SHOW! aanvang 16 uur.",
-    "longText": "../public/texts/dbs/LXRoZS1uZXJ2ZXMtcGF1bC1jb2xsaW5zLWJlYXQv.html",
-    "image": "../public/event-images/dbs/LXRoZS1uZXJ2ZXMtcGF1bC1jb2xsaW5zLWJlYXQv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
   },
   {
     "start": "2025-04-06T19:00:00",
@@ -1173,6 +1201,13 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "starving wolves": {
+        "s": "2Z5MDcgKWhtCLSFkGaAsoq",
+        "l": "starving%20wolves",
+        "g": [
+          "punk"
+        ]
+      },
       "disturbance": {
         "s": "2yomkyw73nz5n19dyzp0j8",
         "l": "spain",
@@ -1180,13 +1215,6 @@
           "dutch punk",
           "lowlands hardcore",
           "grindcore"
-        ]
-      },
-      "starving wolves": {
-        "s": "2Z5MDcgKWhtCLSFkGaAsoq",
-        "l": "starving%20wolves",
-        "g": [
-          "punk"
         ]
       }
     }
@@ -1303,6 +1331,15 @@
           "hardcore"
         ]
       },
+      "premonition": {
+        "s": "0vShN5Qc9EG8nfPQnCICth",
+        "l": "premonition",
+        "g": [
+          "hardcore",
+          "hardcore punk",
+          "melodic heavy metal"
+        ]
+      },
       "braces": {
         "s": "1oZBET0PBRusndmvbnlz9W",
         "l": "braces",
@@ -1313,15 +1350,6 @@
           "punk",
           "street punk",
           "thrash metal"
-        ]
-      },
-      "premonition": {
-        "s": "0vShN5Qc9EG8nfPQnCICth",
-        "l": "premonition",
-        "g": [
-          "hardcore",
-          "hardcore punk",
-          "melodic heavy metal"
         ]
       }
     }
@@ -1553,6 +1581,13 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "guts & glory": {
+        "s": null,
+        "l": "guts%20&%20glory",
+        "g": [
+          "death metal"
+        ]
+      },
       "battle": {
         "s": null,
         "l": "battle",
@@ -1566,13 +1601,6 @@
         "g": [
           "heavy",
           "power metal"
-        ]
-      },
-      "guts & glory": {
-        "s": null,
-        "l": "guts%20&%20glory",
-        "g": [
-          "death metal"
         ]
       }
     }
@@ -1597,30 +1625,6 @@
           "gothic symphonic metal",
           "slayer",
           "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-04-12T07:00:00",
-    "end": "2025-04-12T11:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/plato-utrecht-dbs-present-phono-w-mauro-pawlowski-cinder-well-usa-badtime-b-the-protos-kate/",
-    "title": "Plato utrecht & db’s present phono w/ mauro pawlowski ",
-    "location": "dbs",
-    "price": 16,
-    "shortText": " cinder well (usa)  +  badtime (b)  +  the protos  +  kate & dj chuck barry Plato Utrecht en dB’s slaan ter gelegenheid van Recordstore Day 2025 de handen ineen om jullie een buitengewoon fijn, en eclectisch muziekprogramma te bieden. We richten ergens in het pand een tweede podium in en trakteren jullie op een breed muzikaal aanbod variërend van de Belgische superster Mauro Pawlowski (dEUS/Evil Superstars) naar de schitterend breekbare folk van Cinder Well, van de synthpunk van het Belgische Badtime naar de onversneden garage rock ‘n roll van The Protos en de indierock van het Haagse multitalent Kate Oram (van o.a. Coco Cocaine). DJ Chuck Barry verzorgt de muzikale input tussendoor en na afloop, strictly vinyl.",
-    "longText": "../public/texts/dbs/dXNhLWJhZHRpbWUtYi10aGUtcHJvdG9zLWthdGUv.html",
-    "image": "../public/event-images/dbs/dXNhLWJhZHRpbWUtYi10aGUtcHJvdG9zLWthdGUv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "the protos": {
-        "s": "3AiDZWRonNaAuieCLcWUIF",
-        "l": "the%20protos",
-        "g": [
-          "proto-punk",
-          "garage rock",
-          "power pop"
         ]
       }
     }
@@ -2264,6 +2268,19 @@
           "heavy",
           "power metal"
         ]
+      },
+      "meer": {
+        "s": "4pAX6VBnbccF9uVcb9EGiq",
+        "l": "meer",
+        "g": [
+          "progressive rock",
+          "progressive metal",
+          "symphonic rock",
+          "art rock",
+          "electro ",
+          "punk ",
+          "rock "
+        ]
       }
     }
   },
@@ -2410,20 +2427,20 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "bass": {
-        "s": null,
-        "l": "bass",
-        "g": [
-          "doom",
-          "death metal"
-        ]
-      },
       "first": {
         "s": null,
         "l": "first",
         "g": [
           "melodic heavy metal",
           "rock"
+        ]
+      },
+      "bass": {
+        "s": null,
+        "l": "bass",
+        "g": [
+          "doom",
+          "death metal"
         ]
       }
     }
@@ -2522,19 +2539,20 @@
     "unavailable": null,
     "eventGenres": null,
     "artists": {
+      "infernal angels": {
+        "s": "4sfHQrlNPnoxfhlrdzWN8s",
+        "l": "infernal%20angels",
+        "g": [
+          "black metal",
+          "melodic black metal"
+        ]
+      },
       "patriarkh": {
         "s": null,
         "l": null,
         "g": [
           "black metal",
           "doom metal"
-        ]
-      },
-      "dogma": {
-        "s": "4R6XPuqGShFESRVkCePaxj",
-        "l": "dogma",
-        "g": [
-          "groove metal"
         ]
       },
       "nidhogg": {
@@ -2548,12 +2566,19 @@
           "folk metal"
         ]
       },
-      "infernal angels": {
-        "s": "4sfHQrlNPnoxfhlrdzWN8s",
-        "l": "infernal%20angels",
+      "dogma": {
+        "s": "4R6XPuqGShFESRVkCePaxj",
+        "l": "dogma",
         "g": [
-          "black metal",
-          "melodic black metal"
+          "groove metal"
+        ]
+      },
+      "null": {
+        "s": "0ayHtPhx8fVXh5HHQUU5Uu",
+        "l": "null",
+        "g": [
+          "german hip hop",
+          "atmospheric black metal"
         ]
       }
     }
@@ -2594,37 +2619,6 @@
     }
   },
   {
-    "start": "2025-04-18T08:00:00",
-    "end": "2025-04-18T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/reverend-james-leg-usa-alive-records/",
-    "title": "Reverend james leg (usa – alive records) ",
-    "location": "dbs",
-    "price": 10,
-    "shortText": " le garage De dB’s volger moet hem kennen, REVEREND JAMES LEG, het podiumbeest op de Fender Rhodes die al met zijn eerste band The Black Diamond Heavies diverse malen in dB’s stond en daarna onder zijn eigen naam met de toevoeging Reverend ook daarna nog vele malen het dB’s podium onveilig maakte.\nTerug gravend in onze annalen zien we dat het 2019 geweest is dat we James Leg voor de laatste keer mochten verwelkomen. Het wordt dus weer hoog tijd voor een avond onversneden rockin’ soul met deze held van het eerste uur.\nWe hopen bovendien dat James Leg zijn, min of meer, vaste Europese drummer MATT GAZ (ook drummer van Mars Red Sky) weer meeneemt en maken ons op voor een warm weerzien. Genre-technisch is James Leg te plaatsen ergens tussen de gospel en soul van Nina Simone, het venijn van de Stooges en de groove van Dr John. Niet te missen dus, beste mensen. NIET te missen, zweet gaat gutsen en er zullen nieuwe fans bijkomen. De Reverend James Leg RULES! NOG STEEDS EN VOOR ALTIJD!!",
-    "longText": "../public/texts/dbs/ZC1qYW1lcy1sZWctdXNhLWFsaXZlLXJlY29yZHMv.html",
-    "image": "../public/event-images/dbs/ZC1qYW1lcy1sZWctdXNhLWFsaXZlLXJlY29yZHMv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "james leg": {
-        "s": "6jNXAv3sQluGbLUdheWe78",
-        "l": "james%20leg",
-        "g": [
-          "garage punk blues",
-          "modern blues rock"
-        ]
-      },
-      "reverend": {
-        "s": "7xlMEszAGIxeH2LUecqF21",
-        "l": "reverend",
-        "g": [
-          "thrash",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-04-18T19:00:00",
     "start": "2025-04-18T19:30:00",
     "venueEventUrl": "https://bibelot.net/programma/inherited-album-release/",
@@ -2659,7 +2653,21 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "meer": {
+        "s": "4pAX6VBnbccF9uVcb9EGiq",
+        "l": "meer",
+        "g": [
+          "progressive rock",
+          "progressive metal",
+          "symphonic rock",
+          "art rock",
+          "electro ",
+          "punk ",
+          "rock "
+        ]
+      }
+    }
   },
   {
     "door": "2025-04-19T18:30:00",
@@ -2683,13 +2691,6 @@
           "doom metal"
         ]
       },
-      "dogma": {
-        "s": "4R6XPuqGShFESRVkCePaxj",
-        "l": "dogma",
-        "g": [
-          "groove metal"
-        ]
-      },
       "nidhogg": {
         "s": "4bkO4QWnpMCKGdfevM6n64",
         "l": "nidhogg",
@@ -2699,6 +2700,13 @@
           "heavy",
           "power",
           "folk metal"
+        ]
+      },
+      "dogma": {
+        "s": "4R6XPuqGShFESRVkCePaxj",
+        "l": "dogma",
+        "g": [
+          "groove metal"
         ]
       }
     }
@@ -2846,6 +2854,13 @@
           "metalcore"
         ]
       },
+      "fall": {
+        "s": null,
+        "l": "fall",
+        "g": [
+          "death metal"
+        ]
+      },
       "deeproot": {
         "s": "497D31qNuomZa2eCIOuEa5",
         "l": "deeproot",
@@ -2939,15 +2954,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "bark": {
-        "s": "6bCDvJKQCr3404Fe1j7egd",
-        "l": "bark",
-        "g": [
-          "j-rap",
-          "groove metal",
-          "death 'n' roll"
-        ]
-      },
       "cthuluminati": {
         "s": "3nVkXWKJxipv27aqVAb0nW",
         "l": "cthuluminati",
@@ -2955,6 +2961,15 @@
           "progressive",
           "blackened stoner",
           "doom metal"
+        ]
+      },
+      "bark": {
+        "s": "6bCDvJKQCr3404Fe1j7egd",
+        "l": "bark",
+        "g": [
+          "j-rap",
+          "groove metal",
+          "death 'n' roll"
         ]
       }
     }
@@ -3163,7 +3178,21 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "meer": {
+        "s": "4pAX6VBnbccF9uVcb9EGiq",
+        "l": "meer",
+        "g": [
+          "progressive rock",
+          "progressive metal",
+          "symphonic rock",
+          "art rock",
+          "electro ",
+          "punk ",
+          "rock "
+        ]
+      }
+    }
   },
   {
     "door": "2025-04-21T19:30:00",
@@ -3215,36 +3244,6 @@
           "atmospheric black metal",
           "metal noir quebecois",
           "voidgaze"
-        ]
-      }
-    }
-  },
-  {
-    "title": "Frozen Crown, Fellowship en Lutharo",
-    "start": "2025-04-22",
-    "eventLocationName": "rockaplast/matrix",
-    "shortText": "Rockaplast/Matrix, Bochum",
-    "image": "../public/location-images/rockaplastmatrix",
-    "location": "rockaplastmatrix"
-  },
-  {
-    "start": "2025-04-23T07:30:00",
-    "end": "2025-04-23T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/stander-usa-teardrinker-genital-shame-usa/",
-    "title": "Stander (usa) ",
-    "location": "dbs",
-    "price": 13,
-    "shortText": " teardrinker  +  genital shame (usa) Een avond in de slipstream van het Roadburn festival met:",
-    "longText": "../public/texts/dbs/dGVhcmRyaW5rZXItZ2VuaXRhbC1zaGFtZS11c2Ev.html",
-    "image": "../public/event-images/dbs/dGVhcmRyaW5rZXItZ2VuaXRhbC1zaGFtZS11c2Ev",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "stander": {
-        "s": "5j8BtIIILfuF9GecZvWXaZ",
-        "l": "stander",
-        "g": [
-          "sludge metal"
         ]
       }
     }
@@ -3428,14 +3427,6 @@
     "location": "altstadt"
   },
   {
-    "title": "Imperial Age",
-    "start": "2025-04-25",
-    "eventLocationName": "poppodium boerderij",
-    "shortText": "Poppodium Boerderij",
-    "image": "../public/location-images/poppodiumboerderij",
-    "location": "poppodiumboerderij"
-  },
-  {
     "start": "2025-04-25T20:30:00",
     "venueEventUrl": "https://www.littledevil.nl/calendar/neckbreakker-dk-galge-dk/",
     "title": "Neckbreakker (DK) + Galge (DK)",
@@ -3538,20 +3529,12 @@
       "punk "
     ],
     "artists": {
-      "undefined": {
-        "s": "6NMVL5NGYZKTl6AZuxybbV",
-        "l": "undefined",
+      "combo qazam": {
+        "s": "7knDpm1ZleLQxKi49eCnCd",
+        "l": "combo%20qazam",
         "g": [
-          "metalcore",
-          "new wave ",
-          "punk "
-        ]
-      },
-      "albatre": {
-        "s": "2OIlzTJrqUrk320QlZicjp",
-        "l": "albatre",
-        "g": [
-          "free jazz",
+          "krautrock",
+          "noise rock",
           "jazz ",
           "progressive rock ",
           "punk "
@@ -3567,23 +3550,22 @@
           "punk "
         ]
       },
-      "combo qazam": {
-        "s": "7knDpm1ZleLQxKi49eCnCd",
-        "l": "combo%20qazam",
+      "albatre": {
+        "s": "2OIlzTJrqUrk320QlZicjp",
+        "l": "albatre",
         "g": [
-          "krautrock",
-          "noise rock",
+          "free jazz",
           "jazz ",
           "progressive rock ",
           "punk "
         ]
       },
-      "albatre polarized": {
-        "s": null,
-        "l": "albatre polarized",
+      "undefined": {
+        "s": "6NMVL5NGYZKTl6AZuxybbV",
+        "l": "undefined",
         "g": [
-          "jazz ",
-          "progressive rock ",
+          "metalcore",
+          "new wave ",
           "punk "
         ]
       }
@@ -3653,6 +3635,15 @@
       "rock "
     ],
     "artists": {
+      "parker fans, gespuys, fit, de badslippers, sasha sailor &": {
+        "s": null,
+        "l": "parker%20fans,%20gespuys,%20fit,%20de%20badslippers,%20sasha%20sailor%20&",
+        "g": [
+          "electro ",
+          "punk ",
+          "rock "
+        ]
+      },
       "undefined": {
         "s": "6NMVL5NGYZKTl6AZuxybbV",
         "l": "undefined",
@@ -3662,10 +3653,14 @@
           "punk "
         ]
       },
-      "parker fans, gespuys, fit, de badslippers, sasha sailor &": {
-        "s": null,
-        "l": "parker%20fans,%20gespuys,%20fit,%20de%20badslippers,%20sasha%20sailor%20&",
+      "meer": {
+        "s": "4pAX6VBnbccF9uVcb9EGiq",
+        "l": "meer",
         "g": [
+          "progressive rock",
+          "progressive metal",
+          "symphonic rock",
+          "art rock",
           "electro ",
           "punk ",
           "rock "
@@ -3730,6 +3725,21 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "torn from oblivion": {
+        "s": "5IXqeHYM84k26hwnTNDuZS",
+        "l": "torn%20from%20oblivion",
+        "g": [
+          "deathcore",
+          "metalcore"
+        ]
+      },
+      "canyon literature": {
+        "s": "4KXXP4WTgnzQQQgv77cagF",
+        "l": "canyon%20literature",
+        "g": [
+          "deathcore"
+        ]
+      },
       "changing tides": {
         "s": "4fdvjqh3xqrmfvpb4n5hqu",
         "l": "changing%20tides",
@@ -3747,19 +3757,12 @@
           "deathcore"
         ]
       },
-      "torn from oblivion": {
-        "s": "5IXqeHYM84k26hwnTNDuZS",
-        "l": "torn%20from%20oblivion",
+      "blood": {
+        "s": null,
+        "l": "blood",
         "g": [
-          "deathcore",
-          "metalcore"
-        ]
-      },
-      "canyon literature": {
-        "s": "4KXXP4WTgnzQQQgv77cagF",
-        "l": "canyon%20literature",
-        "g": [
-          "deathcore"
+          "death metal",
+          "grindcore"
         ]
       }
     }
@@ -3777,6 +3780,18 @@
     "soldOut": true,
     "eventGenres": null,
     "artists": {
+      "white hills": {
+        "s": "0ttvGAnfEC6KZLrljUdIyX",
+        "l": "white%20hills",
+        "g": [
+          "space rock",
+          "krautrock",
+          "psychedelic rock",
+          "stoner rock",
+          "acid rock",
+          "noise rock"
+        ]
+      },
       "gnod": {
         "s": "0M7HBnNJoTfTWouL5O7FtO",
         "l": "gnod",
@@ -3792,18 +3807,6 @@
         "g": [
           "heavy metal",
           "hard rock"
-        ]
-      },
-      "white hills": {
-        "s": "0ttvGAnfEC6KZLrljUdIyX",
-        "l": "white%20hills",
-        "g": [
-          "space rock",
-          "krautrock",
-          "psychedelic rock",
-          "stoner rock",
-          "acid rock",
-          "noise rock"
         ]
       }
     }
@@ -3888,6 +3891,20 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "venom inc.": {
+        "s": "3MHIoEboWZOn2vX4O3GrjM",
+        "l": "venom%20inc.",
+        "g": [
+          "speed metal",
+          "thrash metal",
+          "black metal",
+          "heavy metal",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
+        ]
+      },
       "krisiun": {
         "s": "3pzaw9xs16rx8fukh8wv6n",
         "l": "krisiun",
@@ -3901,20 +3918,6 @@
           "metal gaucho",
           "technical death metal",
           "thrash metal"
-        ]
-      },
-      "venom inc.": {
-        "s": "3MHIoEboWZOn2vX4O3GrjM",
-        "l": "venom%20inc.",
-        "g": [
-          "speed metal",
-          "thrash metal",
-          "black metal",
-          "heavy metal",
-          "black",
-          "death metal",
-          "extreme metal",
-          "heavy metal"
         ]
       },
       "extreme": {
@@ -3994,6 +3997,20 @@
       "heavy metal"
     ],
     "artists": {
+      "venom inc.": {
+        "s": "3MHIoEboWZOn2vX4O3GrjM",
+        "l": "venom%20inc.",
+        "g": [
+          "speed metal",
+          "thrash metal",
+          "black metal",
+          "heavy metal",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
+        ]
+      },
       "krisiun": {
         "s": "3pzaw9xs16rx8fukh8wv6n",
         "l": "krisiun",
@@ -4007,20 +4024,6 @@
           "metal gaucho",
           "technical death metal",
           "thrash metal"
-        ]
-      },
-      "venom inc.": {
-        "s": "3MHIoEboWZOn2vX4O3GrjM",
-        "l": "venom%20inc.",
-        "g": [
-          "speed metal",
-          "thrash metal",
-          "black metal",
-          "heavy metal",
-          "black",
-          "death metal",
-          "extreme metal",
-          "heavy metal"
         ]
       },
       "hate": {
@@ -4049,9 +4052,9 @@
           "heavy metal"
         ]
       },
-      "ater eerste baroeg on tour in paard den haag.": {
+      "eerste baroeg on tour in paard den haag.": {
         "s": null,
-        "l": "ater eerste baroeg on tour in paard den haag.",
+        "l": "eerste baroeg on tour in paard den haag.",
         "g": [
           "black",
           "death metal",
@@ -4184,14 +4187,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "hardcore": {
-        "s": "3N11n3hTyVlcOg77IGefjz",
-        "l": "hardcore",
-        "g": [
-          "death metal",
-          "hardcore"
-        ]
-      },
       "stormo": {
         "s": "6HWwPPwublvn8KbCzcV82m",
         "l": "stormo",
@@ -4199,6 +4194,14 @@
           "screamo",
           "emocore",
           "post-hardcore"
+        ]
+      },
+      "hardcore": {
+        "s": "3N11n3hTyVlcOg77IGefjz",
+        "l": "hardcore",
+        "g": [
+          "death metal",
+          "hardcore"
         ]
       }
     }
@@ -4251,16 +4254,6 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "gavran": {
-        "s": "0Z7JnoZUMxgmaLgApKMYpl",
-        "l": "gavran",
-        "g": [
-          "sludge metal",
-          "doom metal",
-          "sludge",
-          "doom metal"
-        ]
-      },
       "dodenbezweerder": {
         "s": "0hdcR32dwjcQsbcBxy6SoM",
         "l": "dodenbezweerder",
@@ -4269,6 +4262,16 @@
           "avant-garde",
           "raw black metal",
           "ambient"
+        ]
+      },
+      "gavran": {
+        "s": "0Z7JnoZUMxgmaLgApKMYpl",
+        "l": "gavran",
+        "g": [
+          "sludge metal",
+          "doom metal",
+          "sludge",
+          "doom metal"
         ]
       }
     }
@@ -4532,18 +4535,18 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "wodan boys": {
-        "s": "0kmkbibevmq4luqquahdmr",
-        "l": "wodan%20boys",
-        "g": [
-          "dutch rock"
-        ]
-      },
       "black leather jacket": {
         "s": "5jamQayQPp3Res7HrO8tW1",
         "l": "black%20leather%20jacket",
         "g": [
           "garage rock"
+        ]
+      },
+      "wodan boys": {
+        "s": "0kmkbibevmq4luqquahdmr",
+        "l": "wodan%20boys",
+        "g": [
+          "dutch rock"
         ]
       }
     }
@@ -4622,14 +4625,6 @@
       "rockcovers"
     ],
     "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      },
       "morph": {
         "s": null,
         "l": "morph",
@@ -4638,6 +4633,14 @@
           "Covers",
           "Everyone Rocks",
           "rockcovers"
+        ]
+      },
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
         ]
       }
     }
@@ -4978,6 +4981,14 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "divided": {
+        "s": "0uRSsdrzKsjyXDZ4vBXa8z",
+        "l": "divided",
+        "g": [
+          "sludge metal",
+          "technical death metal"
+        ]
+      },
       "waste": {
         "s": "2XuyPcxHeNlK7tOej51mqj",
         "l": "waste",
@@ -4985,14 +4996,6 @@
           "deathcore",
           "metalcore",
           "brutal death metal"
-        ]
-      },
-      "divided": {
-        "s": "0uRSsdrzKsjyXDZ4vBXa8z",
-        "l": "divided",
-        "g": [
-          "sludge metal",
-          "technical death metal"
         ]
       }
     }
@@ -5368,6 +5371,18 @@
       "stoner"
     ],
     "artists": {
+      "the cosmic dead": {
+        "s": "19IfNSUIDUoz5OA5c2POvE",
+        "l": "the%20cosmic%20dead",
+        "g": [
+          "space rock",
+          "stoner rock",
+          "krautrock",
+          "psychedelic rock",
+          "punk",
+          "stoner"
+        ]
+      },
       "godsleep": {
         "s": "0j8wt8rqbmglblscgs1ynb",
         "l": "greece",
@@ -5376,6 +5391,14 @@
           "greek psychedelic rock",
           "greek rock",
           "stoner metal/rock",
+          "stoner"
+        ]
+      },
+      "shitman": {
+        "s": "40YEGYOQGHPz1JcM8UIIda",
+        "l": "shitman",
+        "g": [
+          "punk",
           "stoner"
         ]
       },
@@ -5391,29 +5414,9 @@
           "stoner rock"
         ]
       },
-      "the cosmic dead": {
-        "s": "19IfNSUIDUoz5OA5c2POvE",
-        "l": "the%20cosmic%20dead",
-        "g": [
-          "space rock",
-          "stoner rock",
-          "krautrock",
-          "psychedelic rock",
-          "punk",
-          "stoner"
-        ]
-      },
-      "shitman": {
-        "s": "40YEGYOQGHPz1JcM8UIIda",
-        "l": "shitman",
-        "g": [
-          "punk",
-          "stoner"
-        ]
-      },
-      "the cosmic dead shitman ffo: , daily thompson, .": {
+      "ffo: , daily thompson, .": {
         "s": null,
-        "l": "the cosmic dead shitman ffo: , daily thompson, .",
+        "l": "ffo: , daily thompson, .",
         "g": [
           "punk",
           "stoner"
@@ -5757,6 +5760,17 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "komatsu": {
+        "s": "4R9jLgeJ3j1vgivPJTCG2K",
+        "l": "komatsu",
+        "g": [
+          "stoner rock",
+          "sludge metal",
+          "space rock",
+          "doom metal",
+          "stoner metal"
+        ]
+      },
       "rock": {
         "s": null,
         "l": "rock",
@@ -6098,34 +6112,6 @@
         "g": [
           "melodic death metal",
           "metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-18T04:00:00",
-    "end": "2025-05-18T08:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/subroutine-label-matinee-w-howrah-free-dust-sowt/",
-    "title": "Subroutine label matinee w/ howrah ",
-    "location": "dbs",
-    "price": 10,
-    "shortText": " free dust  +  søwt  +  special guest jack name (usa) Het Nederlandse kwaliteitslabel Subroutine heeft weer wat mooie releases te vieren en dat brengen we graag onder de aandacht. Op deze middag presenteren we optredens van HOWRAH, Free Dust & SØWT\nSpeciale gast is Jack Name, een enigma uit de LA-underground. Zijn nummers werden gecoverd door 𝗖𝗮𝘁𝗲 𝗟𝗲 𝗕𝗼𝗻, 𝗪𝗵𝗶𝘁𝗲 𝗙𝗲𝗻𝗰𝗲 en 𝗨.𝗦. 𝗚𝗶𝗿𝗹𝘀. Zijn experimentele sounds galmden al door het 𝗠𝘂𝘀𝗲𝘂𝗺 𝗼𝗳 𝗖𝗼𝗻𝘁𝗲𝗺𝗽𝗼𝗿𝗮𝗿𝘆 𝗔𝗿𝘁. Releases op 𝗗𝗿𝗮𝗴 𝗖𝗶𝘁𝘆, 𝗖𝗮𝘀𝘁𝗹𝗲-𝗙𝗮𝗰𝗲 en 𝗠𝗮𝗽𝗹𝗲 𝗗𝗲𝗮𝘁𝗵.",
-    "longText": "../public/texts/dbs/dGluZWUtdy1ob3dyYWgtZnJlZS1kdXN0LXNvd3Qv.html",
-    "image": "../public/event-images/dbs/dGluZWUtdy1ob3dyYWgtZnJlZS1kdXN0LXNvd3Qv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "søwt": {
-        "s": null,
-        "l": "s%c3%b8wt",
-        "g": []
-      },
-      "abel": {
-        "s": "0JRVrJQNnlSl10wEsioxOJ",
-        "l": "abel",
-        "g": [
-          "stoner metal",
-          "rock"
         ]
       }
     }
@@ -6681,6 +6667,14 @@
         "g": [
           "post-punk"
         ]
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
       }
     }
   },
@@ -6698,14 +6692,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "plus": {
-        "s": null,
-        "l": "plus",
-        "g": [
-          "death",
-          "black metal"
-        ]
-      },
       "the hotelier": {
         "s": "3kzNckjE5FzHQhe4pJiLKa",
         "l": "the%20hotelier",
@@ -6714,6 +6700,14 @@
           "emo",
           "math rock",
           "emo pop"
+        ]
+      },
+      "plus": {
+        "s": null,
+        "l": "plus",
+        "g": [
+          "death",
+          "black metal"
         ]
       }
     }
@@ -6755,9 +6749,9 @@
       "soul"
     ],
     "artists": {
-      "scream tonight": {
+      "doctor robert and the pills": {
         "s": null,
-        "l": "scream%20tonight",
+        "l": "doctor%20robert%20and%20the%20pills",
         "g": [
           "funk",
           "metal",
@@ -6777,9 +6771,9 @@
           "soul"
         ]
       },
-      "doctor robert and the pills": {
+      "scream tonight": {
         "s": null,
-        "l": "doctor%20robert%20and%20the%20pills",
+        "l": "scream%20tonight",
         "g": [
           "funk",
           "metal",
@@ -6791,6 +6785,17 @@
       "doctor robert and the pills een kleinschalig festival op de stoep bij eterij tapperij café ’t haantje.": {
         "s": null,
         "l": "doctor%20robert%20and%20the%20pills%20een%20kleinschalig%20festival%20op%20de%20stoep%20bij%20eterij%20tapperij%20caf%C3%A9%20%E2%80%99t%20haantje.",
+        "g": [
+          "funk",
+          "metal",
+          "pop",
+          "rock & roll",
+          "soul"
+        ]
+      },
+      "een kleinschalig festival op de stoep bij eterij tapperij café ’t haantje.": {
+        "s": null,
+        "l": "een%20kleinschalig%20festival%20op%20de%20stoep%20bij%20eterij%20tapperij%20caf%C3%A9%20%E2%80%99t%20haantje.",
         "g": [
           "funk",
           "metal",
@@ -7253,20 +7258,20 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "dead congregation": {
+        "s": "5PBErxkQsE0lzNQPrn5oK3",
+        "l": "dead%20congregation",
+        "g": [
+          "death metal",
+          "death metal"
+        ]
+      },
       "incantation": {
         "s": "66AXpP038gUcoKVQoO98Fz",
         "l": "incantation",
         "g": [
           "death metal",
           "grindcore",
-          "death metal"
-        ]
-      },
-      "dead congregation": {
-        "s": "5PBErxkQsE0lzNQPrn5oK3",
-        "l": "dead%20congregation",
-        "g": [
-          "death metal",
           "death metal"
         ]
       }
@@ -7641,6 +7646,19 @@
           "heavy metal"
         ]
       },
+      "meer": {
+        "s": "4pAX6VBnbccF9uVcb9EGiq",
+        "l": "meer",
+        "g": [
+          "progressive rock",
+          "progressive metal",
+          "symphonic rock",
+          "art rock",
+          "electro ",
+          "punk ",
+          "rock "
+        ]
+      },
       "met dan 700 optredens op hun conto kun je alleen maar een goed geoliede machine in het ruim van de v11 verwachten.": {
         "s": null,
         "l": "met dan 700 optredens op hun conto kun je alleen maar een goed geoliede machine in het ruim van de v11 verwachten.",
@@ -7846,20 +7864,6 @@
     "artists": {}
   },
   {
-    "start": "2025-06-06T08:00:00",
-    "end": "2025-06-06T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/wave-invasion-presents-patriarcy-usa-llora-usa/",
-    "title": "Wave invasion presents patriarcy (usa) ",
-    "location": "dbs",
-    "price": 16,
-    "shortText": " llora (usa) Riemen vast voor een avond opwindende en confronterende gothic synth pop, EBM, wave met zelfs een snuif metal. Enter PATRIARCHY & LLORA!",
-    "longText": "../public/texts/dbs/c2VudHMtcGF0cmlhcmN5LXVzYS1sbG9yYS11c2Ev.html",
-    "image": "../public/event-images/dbs/c2VudHMtcGF0cmlhcmN5LXVzYS1sbG9yYS11c2Ev",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
     "door": "2025-06-06T18:30:00",
     "start": "2025-06-06T18:30:00",
     "venueEventUrl": "https://www.013.nl/programma/106183/neal-morse-the-resonance-the-flower-kings",
@@ -7975,6 +7979,30 @@
           "krautrock",
           "electronic rock",
           "sludge metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-06-11T20:00:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/sven-hammond/",
+    "title": "Sven Hammond+ support: Miss Meredith",
+    "location": "oosterpoort",
+    "price": 28.1,
+    "shortText": "Sven Hammond+ support: Miss Meredith",
+    "longText": "../public/texts/oosterpoort/Z2VuLm5sL3Byb2dyYW1tYS9zdmVuLWhhbW1vbmQv.html",
+    "image": "../public/event-images/oosterpoort/Z2VuLm5sL3Byb2dyYW1tYS9zdmVuLWhhbW1vbmQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "miss": {
+        "s": null,
+        "l": "miss",
+        "g": [
+          "sludge",
+          "doom metal",
+          "death 'n' roll"
         ]
       }
     }
@@ -8125,6 +8153,13 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "theatre of": {
+        "s": null,
+        "l": "theatre%20of",
+        "g": [
+          "extreme progressive metal"
+        ]
+      },
       "hate": {
         "s": "13XggX75z0Hk0VNvOuTJoB",
         "l": "hate",
@@ -8137,13 +8172,6 @@
           "death metal",
           "extreme metal",
           "heavy metal"
-        ]
-      },
-      "theatre of": {
-        "s": null,
-        "l": "theatre%20of",
-        "g": [
-          "extreme progressive metal"
         ]
       }
     }
@@ -8186,30 +8214,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {}
-  },
-  {
-    "start": "2025-06-16T19:30:00",
-    "venueEventUrl": "https://kavka.be/event/mil-spec-can-restraining-order-us-wild-side-can/",
-    "title": "Mil-spec (can) ",
-    "location": "kavka",
-    "price": null,
-    "shortText": " restraining order (us)  +  wild side (can) RESTRAINING ORDER (us) Hardcore/punk from with a touch of garage/rock ’n roll to keeps things…",
-    "longText": "../public/texts/kavka/YWluaW5nLW9yZGVyLXVzLXdpbGQtc2lkZS1jYW4v.html",
-    "image": "../public/event-images/kavka/YWluaW5nLW9yZGVyLXVzLXdpbGQtc2lkZS1jYW4v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "mil-spec": {
-        "s": "5iWmisoEhjZGn4QYLRqzuy",
-        "l": "mil-spec",
-        "g": [
-          "melodic hardcore",
-          "hardcore punk",
-          "hardcore"
-        ]
-      }
-    }
   },
   {
     "door": "2025-06-16T19:00:00",
@@ -8264,6 +8268,14 @@
           "groove",
           "thrash metal"
         ]
+      },
+      "first": {
+        "s": null,
+        "l": "first",
+        "g": [
+          "melodic heavy metal",
+          "rock"
+        ]
       }
     }
   },
@@ -8288,6 +8300,14 @@
           "ska",
           "ska punk",
           "skate punk"
+        ]
+      },
+      "first": {
+        "s": null,
+        "l": "first",
+        "g": [
+          "melodic heavy metal",
+          "rock"
         ]
       }
     }
@@ -8315,6 +8335,18 @@
           "metalcore"
         ]
       },
+      "voidclaw": {
+        "s": "6dVtlHFktnqC3LSZQkmalS",
+        "l": "voidclaw",
+        "g": [
+          "sludge metal",
+          "drone",
+          "doom metal",
+          "stoner rock",
+          "doom",
+          "stoner metal"
+        ]
+      },
       "opeth": {
         "s": "0ybFZ2Ab08V8hueghSXm6E",
         "l": "opeth",
@@ -8326,18 +8358,6 @@
           "swedish metal",
           "swedish progressive metal",
           "progressive death metal, progressive rock"
-        ]
-      },
-      "voidclaw": {
-        "s": "6dVtlHFktnqC3LSZQkmalS",
-        "l": "voidclaw",
-        "g": [
-          "sludge metal",
-          "drone",
-          "doom metal",
-          "stoner rock",
-          "doom",
-          "stoner metal"
         ]
       }
     }
@@ -8454,42 +8474,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {}
-  },
-  {
-    "start": "2025-06-20T08:00:00",
-    "end": "2025-06-20T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/ultha-d-grey-aura/",
-    "title": "Ultha (d) + grey aura",
-    "location": "dbs",
-    "price": 10,
-    "shortText": "Het Duitse Ultha is een band voor liefhebbers van lang uitgesponnen black metal met een goeie scheut melancholie, geschoeid op de leest van bands als Ash Borer en Wolves in the Throne Room.",
-    "longText": "../public/texts/dbs/aW8ubmwvZXZlbnQvdWx0aGEtZC1ncmV5LWF1cmEv.html",
-    "image": "../public/event-images/dbs/aW8ubmwvZXZlbnQvdWx0aGEtZC1ncmV5LWF1cmEv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "grey aura": {
-        "s": "5zlsiIekribvslzGzaqBJi",
-        "l": "grey%20aura",
-        "g": [
-          "dutch black metal",
-          "avant-garde",
-          "atmospheric",
-          "post-black metal"
-        ]
-      },
-      "ultha": {
-        "s": "2dNNRreuWrVDbNX2srDdag",
-        "l": "ultha",
-        "g": [
-          "black metal",
-          "black metal",
-          "hardcore (punk) ",
-          "metal ",
-          "punk "
-        ]
-      }
-    }
   },
   {
     "door": "2025-06-22T19:30:00",
@@ -8869,16 +8853,16 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "deeproot": {
-        "s": "497D31qNuomZa2eCIOuEa5",
-        "l": "deeproot",
+      "heavy//hitter": {
+        "s": "67VjKj4enx3D6auLtAZKCU",
+        "l": "heavy//hitter",
         "g": [
           "deathcore"
         ]
       },
-      "heavy//hitter": {
-        "s": "67VjKj4enx3D6auLtAZKCU",
-        "l": "heavy//hitter",
+      "deeproot": {
+        "s": "497D31qNuomZa2eCIOuEa5",
+        "l": "deeproot",
         "g": [
           "deathcore"
         ]
@@ -8907,6 +8891,14 @@
           "pirate",
           "power metal",
           "scottish metal"
+        ]
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
         ]
       }
     }
@@ -9010,6 +9002,26 @@
       "death metal"
     ],
     "artists": {
+      "kontusion": {
+        "s": "2nRdFkICR7xbuTyS9ppFxR",
+        "l": "kontusion",
+        "g": [
+          "death metal",
+          "death metal",
+          "death metal"
+        ]
+      },
+      "molder": {
+        "s": "6edvy7ZayyReFco74MJU5k",
+        "l": "molder",
+        "g": [
+          "death metal",
+          "grindcore",
+          "death",
+          "thrash metal",
+          "death metal"
+        ]
+      },
       "metal": {
         "s": null,
         "l": "metal",
@@ -9025,29 +9037,9 @@
           "progressive metal"
         ]
       },
-      "molder": {
-        "s": "6edvy7ZayyReFco74MJU5k",
-        "l": "molder",
-        "g": [
-          "death metal",
-          "grindcore",
-          "death",
-          "thrash metal",
-          "death metal"
-        ]
-      },
-      "kontusion": {
-        "s": "2nRdFkICR7xbuTyS9ppFxR",
-        "l": "kontusion",
-        "g": [
-          "death metal",
-          "death metal",
-          "death metal"
-        ]
-      },
-      "kontusion lomp, ranzig, groovy en vooral heavy death thrash en vuige death met een dikke punksaus eroverheen.": {
+      "lomp, ranzig, groovy en vooral heavy death thrash en vuige death met een dikke punksaus eroverheen.": {
         "s": null,
-        "l": "kontusion lomp, ranzig, groovy en vooral heavy death thrash en vuige death met een dikke punksaus eroverheen.",
+        "l": "lomp, ranzig, groovy en vooral heavy death thrash en vuige death met een dikke punksaus eroverheen.",
         "g": [
           "death metal"
         ]
@@ -9068,6 +9060,16 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "disquiet": {
+        "s": "6H0uUeAtmzEmv7VYsW2Iro",
+        "l": "disquiet",
+        "g": [
+          "thrash metal",
+          "groove metal",
+          "melodic death metal",
+          "melodic thrash metal"
+        ]
+      },
       "plague": {
         "s": "080xip1qfuknbnyeypuh1v",
         "l": "plague",
@@ -9084,16 +9086,6 @@
         "l": "fall",
         "g": [
           "death metal"
-        ]
-      },
-      "disquiet": {
-        "s": "6H0uUeAtmzEmv7VYsW2Iro",
-        "l": "disquiet",
-        "g": [
-          "thrash metal",
-          "groove metal",
-          "melodic death metal",
-          "melodic thrash metal"
         ]
       }
     }
@@ -9480,6 +9472,13 @@
           "black metal"
         ]
       },
+      "snake": {
+        "s": null,
+        "l": "snake",
+        "g": [
+          "heavy metal"
+        ]
+      },
       "metal": {
         "s": null,
         "l": "metal",
@@ -9493,13 +9492,6 @@
         "g": [
           "groove",
           "progressive metal"
-        ]
-      },
-      "snake": {
-        "s": null,
-        "l": "snake",
-        "g": [
-          "heavy metal"
         ]
       }
     }
@@ -9516,13 +9508,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "kaonashi": {
-        "s": "60Zpxsk0QxhPEyyvWfSv0I",
-        "l": "kaonashi",
-        "g": [
-          "metalcore"
-        ]
-      },
       "god complex": {
         "s": "4Ase9pfG4FCMoiuyRduc8k",
         "l": "god%20complex",
@@ -9530,6 +9515,13 @@
           "deathcore",
           "metalcore",
           "hardcore"
+        ]
+      },
+      "kaonashi": {
+        "s": "60Zpxsk0QxhPEyyvWfSv0I",
+        "l": "kaonashi",
+        "g": [
+          "metalcore"
         ]
       }
     }
@@ -9754,6 +9746,17 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "forbidden": {
+        "s": "5MhPZVXE28sD9rXE3GU1uN",
+        "l": "forbidden",
+        "g": [
+          "thrash metal",
+          "speed metal",
+          "groove metal",
+          "metal",
+          "thrash metal"
+        ]
+      },
       "headless hunter": {
         "s": "4aFxWu9DFqbM5wQt4TpQwC",
         "l": "headless%20hunter",
@@ -9771,17 +9774,6 @@
           "metal",
           "new wave of thrash metal",
           "speed metal",
-          "thrash metal"
-        ]
-      },
-      "forbidden": {
-        "s": "5MhPZVXE28sD9rXE3GU1uN",
-        "l": "forbidden",
-        "g": [
-          "thrash metal",
-          "speed metal",
-          "groove metal",
-          "metal",
           "thrash metal"
         ]
       }
@@ -9847,6 +9839,17 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "snot": {
+        "s": "6TnlohrPbZ8D0JvJp9S1t8",
+        "l": "snot",
+        "g": [
+          "nu metal",
+          "rap metal",
+          "alternative metal",
+          "funk rock",
+          "death metal"
+        ]
+      },
       "get some": {
         "s": "0aou4fuweaa3so42vjpost",
         "l": null,
@@ -9875,17 +9878,6 @@
         "g": [
           "groove",
           "progressive metal"
-        ]
-      },
-      "snot": {
-        "s": "6TnlohrPbZ8D0JvJp9S1t8",
-        "l": "snot",
-        "g": [
-          "nu metal",
-          "rap metal",
-          "alternative metal",
-          "funk rock",
-          "death metal"
         ]
       }
     }
@@ -10112,7 +10104,16 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "blood": {
+        "s": null,
+        "l": "blood",
+        "g": [
+          "death metal",
+          "grindcore"
+        ]
+      }
+    }
   },
   {
     "door": "2025-08-14T20:30:00",
@@ -10175,14 +10176,6 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "terradown": {
-        "s": "376qQKIyviwh5xgbVj02LC",
-        "l": "terradown",
-        "g": [
-          "melodic death",
-          "groove metal"
-        ]
-      },
       "drowning pool": {
         "s": "1E4r4z7ivGUcSAnCbINJ9v",
         "l": "drowning%20pool",
@@ -10191,6 +10184,14 @@
           "alternative metal",
           "rap metal",
           "metal"
+        ]
+      },
+      "terradown": {
+        "s": "376qQKIyviwh5xgbVj02LC",
+        "l": "terradown",
+        "g": [
+          "melodic death",
+          "groove metal"
         ]
       }
     }
@@ -10248,14 +10249,6 @@
           "stoner rock"
         ]
       },
-      "monster magnet": {
-        "s": "4hvwEwrCmGj22uURGVET7Q",
-        "l": "monster%20magnet",
-        "g": [
-          "stoner metal",
-          "stoner rock"
-        ]
-      },
       "bismut": {
         "s": "3dKb6nEM0QXUR72TmelT08",
         "l": "bismut",
@@ -10268,9 +10261,17 @@
           "stoner rock"
         ]
       },
-      "bismut ffo: , desert queen, my sleeping karma": {
+      "monster magnet": {
+        "s": "4hvwEwrCmGj22uURGVET7Q",
+        "l": "monster%20magnet",
+        "g": [
+          "stoner metal",
+          "stoner rock"
+        ]
+      },
+      "ffo: , desert queen, my sleeping karma": {
         "s": null,
-        "l": "bismut ffo: , desert queen, my sleeping karma",
+        "l": "ffo: , desert queen, my sleeping karma",
         "g": [
           "stoner rock"
         ]
@@ -10878,15 +10879,15 @@
     }
   },
   {
-    "door": "2025-09-14T19:00:00",
-    "start": "2025-09-14T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/94548/ayreon",
+    "door": "2025-09-14T12:30:00",
+    "start": "2025-09-14T12:30:00",
+    "venueEventUrl": "https://www.013.nl/programma/94545/ayreon",
     "title": "Ayreon",
     "location": "013",
     "price": 75,
-    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #5",
-    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDgvYXlyZW9u.html",
-    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDgvYXlyZW9u",
+    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #4 (MATINEE)",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDUvYXlyZW9u.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDUvYXlyZW9u",
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
@@ -10907,15 +10908,15 @@
     }
   },
   {
-    "door": "2025-09-14T12:30:00",
-    "start": "2025-09-14T12:30:00",
-    "venueEventUrl": "https://www.013.nl/programma/94545/ayreon",
+    "door": "2025-09-14T19:00:00",
+    "start": "2025-09-14T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/94548/ayreon",
     "title": "Ayreon",
     "location": "013",
     "price": 75,
-    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #4 (MATINEE)",
-    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDUvYXlyZW9u.html",
-    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDUvYXlyZW9u",
+    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #5",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDgvYXlyZW9u.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDgvYXlyZW9u",
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
@@ -11303,6 +11304,30 @@
     }
   },
   {
+    "start": "2025-10-04T20:00:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/goldkimono-2/",
+    "title": "GoldkimonoGoldkimono Tour 2025",
+    "location": "oosterpoort",
+    "price": 30.1,
+    "shortText": "GoldkimonoGoldkimono Tour 2025",
+    "longText": "../public/texts/oosterpoort/Z2VuLm5sL3Byb2dyYW1tYS9nb2xka2ltb25vLTIv.html",
+    "image": "../public/event-images/oosterpoort/Z2VuLm5sL3Byb2dyYW1tYS9nb2xka2ltb25vLTIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "mono": {
+        "s": "53LVoipNTQ4lvUSJ61XKU3",
+        "l": "mono",
+        "g": [
+          "post-rock",
+          "math rock",
+          "sludge metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-10-04T15:00:00",
     "start": "2025-10-04T15:30:00",
     "venueEventUrl": "https://www.effenaar.nl/agenda/caya2025",
@@ -11489,30 +11514,6 @@
           "scottish metal",
           "uk metalcore",
           "metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-10-09T19:30:00",
-    "start": "2025-10-09T20:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/hang-youth-support-09-10-25/",
-    "title": "Hang Youth + support",
-    "location": "patronaat",
-    "price": 23.5,
-    "shortText": "Dé belichaming van Nederlandse punk anno nu",
-    "longText": "../public/texts/patronaat/dC9oYW5nLXlvdXRoLXN1cHBvcnQtMDktMTAtMjUv.html",
-    "image": "../public/event-images/patronaat/dC9oYW5nLXlvdXRoLXN1cHBvcnQtMDktMTAtMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "hang youth": {
-        "s": "33s4eablBmnrPlE3y6CZFR",
-        "l": "hang%20youth",
-        "g": [
-          "dutch indie",
-          "lowlands hardcore"
         ]
       }
     }
@@ -11804,21 +11805,6 @@
     }
   },
   {
-    "door": "2025-10-20T16:30:00",
-    "start": "2025-10-20T16:30:00",
-    "venueEventUrl": "https://patronaat.nl/event/common-thread-tour-day-2-20-10-25/",
-    "title": "Common Thread Tour",
-    "location": "patronaat",
-    "price": null,
-    "shortText": "Tweedaags punk-, emo- en hardcore-festival",
-    "longText": "../public/texts/patronaat/b24tdGhyZWFkLXRvdXItZGF5LTItMjAtMTAtMjUv.html",
-    "image": "../public/event-images/patronaat/b24tdGhyZWFkLXRvdXItZGF5LTItMjAtMTAtMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
     "door": "2025-10-20T20:00:00",
     "start": "2025-10-20T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/one-ok-rock",
@@ -12015,6 +12001,20 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "from fall to spring": {
+        "s": "373XSzgRHjl6imFLdGNlQm",
+        "l": "from%20fall%20to%20spring",
+        "g": [
+          "metalcore"
+        ]
+      },
+      "fall": {
+        "s": null,
+        "l": "fall",
+        "g": [
+          "death metal"
+        ]
+      },
       "metal": {
         "s": null,
         "l": "metal",
@@ -12036,13 +12036,6 @@
         "g": [
           "heavy metal",
           "hard rock"
-        ]
-      },
-      "from fall to spring": {
-        "s": "373XSzgRHjl6imFLdGNlQm",
-        "l": "from%20fall%20to%20spring",
-        "g": [
-          "metalcore"
         ]
       },
       "allt": {
@@ -12400,6 +12393,26 @@
     }
   },
   {
+    "start": "2025-11-07T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/the-perfect-tool/",
+    "title": "The Perfect Tool",
+    "location": "neushoorn",
+    "price": 22.5,
+    "shortText": "35 jaar Tool in één mokerharde show",
+    "longText": "../public/texts/neushoorn/bC9wcm9kdWN0aW9uL3RoZS1wZXJmZWN0LXRvb2wv.html",
+    "image": "../public/event-images/neushoorn/bC9wcm9kdWN0aW9uL3RoZS1wZXJmZWN0LXRvb2wv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the perfect tool": {
+        "s": null,
+        "l": "the%20perfect%20tool",
+        "g": []
+      }
+    }
+  },
+  {
     "door": "2025-11-07T19:00:00",
     "start": "2025-11-07T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/106045/ad-infinitum",
@@ -12428,22 +12441,23 @@
     }
   },
   {
-    "door": "2025-11-09T19:30:00",
-    "start": "2025-11-09T20:30:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/the-perfect-tool",
-    "title": "The Perfect Tool",
-    "location": "cpunt",
-    "price": 23,
-    "shortText": "Tribute to 35 Years of Tool",
-    "longText": "../public/texts/cpunt/dW50Lm5sL2FnZW5kYS90aGUtcGVyZmVjdC10b29s.html",
-    "image": "../public/event-images/cpunt/dW50Lm5sL2FnZW5kYS90aGUtcGVyZmVjdC10b29s",
+    "door": "2025-11-08T20:00:00",
+    "start": "2025-11-08T20:30:00",
+    "end": "2025-11-08T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/pene-corrida/",
+    "title": "Pene Corrida",
+    "location": "iduna",
+    "price": 20,
+    "shortText": null,
+    "longText": "../public/texts/iduna/L2lkdW5hLm5sL2FnZW5kYS9wZW5lLWNvcnJpZGEv.html",
+    "image": "../public/event-images/iduna/L2lkdW5hLm5sL2FnZW5kYS9wZW5lLWNvcnJpZGEv",
     "soldOut": false,
-    "unavailable": false,
+    "unavailable": null,
     "eventGenres": null,
     "artists": {
-      "the perfect tool": {
-        "s": null,
-        "l": "the%20perfect%20tool",
+      "pene corrida": {
+        "s": "1hw2ywipnsowbtb8flzcca",
+        "l": "pene%20corrida",
         "g": []
       }
     }
@@ -12561,21 +12575,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
-        ]
-      },
       "lacuna coil": {
         "s": "4OAddazJM576euUnFSvXSL",
         "l": "lacuna%20coil",
@@ -12589,6 +12588,21 @@
           "rock (early)",
           " alternative rock",
           "metal (later)"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
         ]
       }
     }
@@ -12749,6 +12763,27 @@
     "shortText": "Ziggo Dome, Amsterdam",
     "image": "../public/location-images/ziggodome",
     "location": "ziggodome"
+  },
+  {
+    "door": "2025-12-05T19:30:00",
+    "start": "2025-12-05T20:15:00",
+    "venueEventUrl": "https://patronaat.nl/event/pene-corrida-05-12-25/",
+    "title": "Pene Corrida",
+    "location": "patronaat",
+    "price": null,
+    "shortText": "Een tornado van scheurende gitaren en herkenbare dancebeats",
+    "longText": "../public/texts/patronaat/bC9ldmVudC9wZW5lLWNvcnJpZGEtMDUtMTItMjUv.html",
+    "image": "../public/event-images/patronaat/bC9ldmVudC9wZW5lLWNvcnJpZGEtMDUtMTItMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "pene corrida": {
+        "s": "1hw2ywipnsowbtb8flzcca",
+        "l": "pene%20corrida",
+        "g": []
+      }
+    }
   },
   {
     "door": "2025-12-05T20:00:00",
@@ -13025,11 +13060,6 @@
       "pop "
     ],
     "artists": {
-      "pene corrida": {
-        "s": "1hw2ywipnsowbtb8flzcca",
-        "l": "pene%20corrida",
-        "g": []
-      },
       "– the penergy tour": {
         "s": null,
         "l": "%E2%80%93%20the%20penergy%20tour",
@@ -13037,6 +13067,11 @@
           "metal ",
           "pop "
         ]
+      },
+      "pene corrida": {
+        "s": "1hw2ywipnsowbtb8flzcca",
+        "l": "pene%20corrida",
+        "g": []
       }
     }
   },

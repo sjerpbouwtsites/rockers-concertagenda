@@ -50,19 +50,20 @@
     "unavailable": null,
     "eventGenres": null,
     "artists": {
+      "infernal angels": {
+        "s": "4sfHQrlNPnoxfhlrdzWN8s",
+        "l": "infernal%20angels",
+        "g": [
+          "black metal",
+          "melodic black metal"
+        ]
+      },
       "patriarkh": {
         "s": null,
         "l": null,
         "g": [
           "black metal",
           "doom metal"
-        ]
-      },
-      "dogma": {
-        "s": "4R6XPuqGShFESRVkCePaxj",
-        "l": "dogma",
-        "g": [
-          "groove metal"
         ]
       },
       "nidhogg": {
@@ -76,12 +77,19 @@
           "folk metal"
         ]
       },
-      "infernal angels": {
-        "s": "4sfHQrlNPnoxfhlrdzWN8s",
-        "l": "infernal%20angels",
+      "dogma": {
+        "s": "4R6XPuqGShFESRVkCePaxj",
+        "l": "dogma",
         "g": [
-          "black metal",
-          "melodic black metal"
+          "groove metal"
+        ]
+      },
+      "null": {
+        "s": "0ayHtPhx8fVXh5HHQUU5Uu",
+        "l": "null",
+        "g": [
+          "german hip hop",
+          "atmospheric black metal"
         ]
       }
     }
@@ -340,5 +348,27 @@
     "unavailable": null,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "door": "2025-11-08T20:00:00",
+    "start": "2025-11-08T20:30:00",
+    "end": "2025-11-08T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/pene-corrida/",
+    "title": "Pene Corrida",
+    "location": "iduna",
+    "price": 20,
+    "shortText": null,
+    "longText": "../public/texts/iduna/L2lkdW5hLm5sL2FnZW5kYS9wZW5lLWNvcnJpZGEv.html",
+    "image": "../public/event-images/iduna/L2lkdW5hLm5sL2FnZW5kYS9wZW5lLWNvcnJpZGEv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "pene corrida": {
+        "s": "1hw2ywipnsowbtb8flzcca",
+        "l": "pene%20corrida",
+        "g": []
+      }
+    }
   }
 ]
