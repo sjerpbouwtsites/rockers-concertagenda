@@ -243,8 +243,9 @@ async function scrapeMetalfan() {
         JSON.stringify(eventsList, null, "  "),
         () => {}
     );
-
-    browser.close();
+    if (browser) {
+        await browser.close();
+    }
 }
 parentPort.on("message", (message) => {
     const pm = JSON.parse(message);

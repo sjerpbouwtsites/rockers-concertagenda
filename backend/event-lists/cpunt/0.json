@@ -13,6 +13,13 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "starving wolves": {
+        "s": "2Z5MDcgKWhtCLSFkGaAsoq",
+        "l": "starving%20wolves",
+        "g": [
+          "punk"
+        ]
+      },
       "disturbance": {
         "s": "2yomkyw73nz5n19dyzp0j8",
         "l": "spain",
@@ -20,13 +27,6 @@
           "dutch punk",
           "lowlands hardcore",
           "grindcore"
-        ]
-      },
-      "starving wolves": {
-        "s": "2Z5MDcgKWhtCLSFkGaAsoq",
-        "l": "starving%20wolves",
-        "g": [
-          "punk"
         ]
       }
     }
@@ -50,6 +50,13 @@
         "l": "reaching%20as%20we%20fall",
         "g": [
           "metalcore"
+        ]
+      },
+      "fall": {
+        "s": null,
+        "l": "fall",
+        "g": [
+          "death metal"
         ]
       },
       "deeproot": {
@@ -228,14 +235,6 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "terradown": {
-        "s": "376qQKIyviwh5xgbVj02LC",
-        "l": "terradown",
-        "g": [
-          "melodic death",
-          "groove metal"
-        ]
-      },
       "drowning pool": {
         "s": "1E4r4z7ivGUcSAnCbINJ9v",
         "l": "drowning%20pool",
@@ -244,6 +243,14 @@
           "alternative metal",
           "rap metal",
           "metal"
+        ]
+      },
+      "terradown": {
+        "s": "376qQKIyviwh5xgbVj02LC",
+        "l": "terradown",
+        "g": [
+          "melodic death",
+          "groove metal"
         ]
       }
     }
@@ -301,27 +308,6 @@
           "extreme metal",
           "heavy metal"
         ]
-      }
-    }
-  },
-  {
-    "door": "2025-11-09T19:30:00",
-    "start": "2025-11-09T20:30:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/the-perfect-tool",
-    "title": "The Perfect Tool",
-    "location": "cpunt",
-    "price": 23,
-    "shortText": "Tribute to 35 Years of Tool",
-    "longText": "../public/texts/cpunt/dW50Lm5sL2FnZW5kYS90aGUtcGVyZmVjdC10b29s.html",
-    "image": "../public/event-images/cpunt/dW50Lm5sL2FnZW5kYS90aGUtcGVyZmVjdC10b29s",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "the perfect tool": {
-        "s": null,
-        "l": "the%20perfect%20tool",
-        "g": []
       }
     }
   }

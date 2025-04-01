@@ -92,6 +92,18 @@
     "soldOut": true,
     "eventGenres": null,
     "artists": {
+      "white hills": {
+        "s": "0ttvGAnfEC6KZLrljUdIyX",
+        "l": "white%20hills",
+        "g": [
+          "space rock",
+          "krautrock",
+          "psychedelic rock",
+          "stoner rock",
+          "acid rock",
+          "noise rock"
+        ]
+      },
       "gnod": {
         "s": "0M7HBnNJoTfTWouL5O7FtO",
         "l": "gnod",
@@ -107,18 +119,6 @@
         "g": [
           "heavy metal",
           "hard rock"
-        ]
-      },
-      "white hills": {
-        "s": "0ttvGAnfEC6KZLrljUdIyX",
-        "l": "white%20hills",
-        "g": [
-          "space rock",
-          "krautrock",
-          "psychedelic rock",
-          "stoner rock",
-          "acid rock",
-          "noise rock"
         ]
       }
     }

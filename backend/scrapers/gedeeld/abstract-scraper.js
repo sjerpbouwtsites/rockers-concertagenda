@@ -373,7 +373,7 @@ export default class AbstractScraper extends ScraperConfig {
             clearTimeout(stopFunctie);
         }
 
-        if (page && !page.isClosed()) page.close();
+        if (page && !page.isClosed()) await page.close();
 
         const eventsWithLongHTMLShortText = rawEvents.map((event) => {
             if (event.longTextHTML) {
@@ -1006,7 +1006,7 @@ export default class AbstractScraper extends ScraperConfig {
         }
 
         if (!pageInfo) {
-            if (page && !page.isClosed()) page.close();
+            if (page && !page.isClosed()) await page.close();
             throw new Error("page info ontbreekt.");
         }
 
@@ -1047,7 +1047,7 @@ export default class AbstractScraper extends ScraperConfig {
             );
         });
 
-        if (page && !page.isClosed()) page.close();
+        if (page && !page.isClosed()) await page.close();
         clearTimeout(stopFunctie);
         return pageInfo;
     }
@@ -1173,7 +1173,7 @@ export default class AbstractScraper extends ScraperConfig {
                 this.browser &&
                 Object.prototype.hasOwnProperty.call(this.browser, "close")
             ) {
-                this.browser.close();
+                await this.browser.close();
             }
         } catch (error) {
             this.handleError(

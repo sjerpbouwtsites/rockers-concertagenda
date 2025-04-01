@@ -93,10 +93,12 @@ ${BEMify("event-block", [
     musicEvent.soldOut ? "sold-out" : "",
     musicEvent.title.length > 36 ? "long-title" : "short-title",
     musicEvent.title.length < 16 ? "tiny-title" : "",
+    musicEvent.longText ? "interactive" : "no-longTextHTML",
     Math.random() > 0.8 ? "random-style" : "",
     Math.random() > 0.5 ? "random-style-2" : "",
     Math.random() > 0.5 ? "random-style-3" : ""
 ])}`,
+
             header: `${BEMify("event-block__header contrast-with-dark", sharedModifiers)}`,
             headerH2: `${BEMify("contrast-with-dark event-block__title", sharedModifiers)}`,
             headerEventTitle: `${BEMify(
@@ -386,7 +388,7 @@ ${BEMify("event-block", [
             // TODO is die origin er nog?
             priceText = "Gratis";
         } else {
-            priceText = "€?";
+            return "";
         }
 
         const sharedModifiers = [

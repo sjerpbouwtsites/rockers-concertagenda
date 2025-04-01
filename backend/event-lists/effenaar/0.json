@@ -91,6 +91,20 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "venom inc.": {
+        "s": "3MHIoEboWZOn2vX4O3GrjM",
+        "l": "venom%20inc.",
+        "g": [
+          "speed metal",
+          "thrash metal",
+          "black metal",
+          "heavy metal",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
+        ]
+      },
       "krisiun": {
         "s": "3pzaw9xs16rx8fukh8wv6n",
         "l": "krisiun",
@@ -104,20 +118,6 @@
           "metal gaucho",
           "technical death metal",
           "thrash metal"
-        ]
-      },
-      "venom inc.": {
-        "s": "3MHIoEboWZOn2vX4O3GrjM",
-        "l": "venom%20inc.",
-        "g": [
-          "speed metal",
-          "thrash metal",
-          "black metal",
-          "heavy metal",
-          "black",
-          "death metal",
-          "extreme metal",
-          "heavy metal"
         ]
       },
       "extreme": {
@@ -236,6 +236,17 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "komatsu": {
+        "s": "4R9jLgeJ3j1vgivPJTCG2K",
+        "l": "komatsu",
+        "g": [
+          "stoner rock",
+          "sludge metal",
+          "space rock",
+          "doom metal",
+          "stoner metal"
+        ]
+      },
       "rock": {
         "s": null,
         "l": "rock",
@@ -302,6 +313,17 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "snot": {
+        "s": "6TnlohrPbZ8D0JvJp9S1t8",
+        "l": "snot",
+        "g": [
+          "nu metal",
+          "rap metal",
+          "alternative metal",
+          "funk rock",
+          "death metal"
+        ]
+      },
       "get some": {
         "s": "0aou4fuweaa3so42vjpost",
         "l": null,
@@ -331,17 +353,6 @@
           "groove",
           "progressive metal"
         ]
-      },
-      "snot": {
-        "s": "6TnlohrPbZ8D0JvJp9S1t8",
-        "l": "snot",
-        "g": [
-          "nu metal",
-          "rap metal",
-          "alternative metal",
-          "funk rock",
-          "death metal"
-        ]
       }
     }
   },
@@ -358,6 +369,20 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "from fall to spring": {
+        "s": "373XSzgRHjl6imFLdGNlQm",
+        "l": "from%20fall%20to%20spring",
+        "g": [
+          "metalcore"
+        ]
+      },
+      "fall": {
+        "s": null,
+        "l": "fall",
+        "g": [
+          "death metal"
+        ]
+      },
       "metal": {
         "s": null,
         "l": "metal",
@@ -379,13 +404,6 @@
         "g": [
           "heavy metal",
           "hard rock"
-        ]
-      },
-      "from fall to spring": {
-        "s": "373XSzgRHjl6imFLdGNlQm",
-        "l": "from%20fall%20to%20spring",
-        "g": [
-          "metalcore"
         ]
       },
       "allt": {

@@ -61,16 +61,6 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "gavran": {
-        "s": "0Z7JnoZUMxgmaLgApKMYpl",
-        "l": "gavran",
-        "g": [
-          "sludge metal",
-          "doom metal",
-          "sludge",
-          "doom metal"
-        ]
-      },
       "dodenbezweerder": {
         "s": "0hdcR32dwjcQsbcBxy6SoM",
         "l": "dodenbezweerder",
@@ -79,6 +69,16 @@
           "avant-garde",
           "raw black metal",
           "ambient"
+        ]
+      },
+      "gavran": {
+        "s": "0Z7JnoZUMxgmaLgApKMYpl",
+        "l": "gavran",
+        "g": [
+          "sludge metal",
+          "doom metal",
+          "sludge",
+          "doom metal"
         ]
       }
     }
@@ -195,6 +195,26 @@
         "g": [
           "symfonische rock"
         ]
+      }
+    }
+  },
+  {
+    "start": "2025-11-07T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/the-perfect-tool/",
+    "title": "The Perfect Tool",
+    "location": "neushoorn",
+    "price": 22.5,
+    "shortText": "35 jaar Tool in één mokerharde show",
+    "longText": "../public/texts/neushoorn/bC9wcm9kdWN0aW9uL3RoZS1wZXJmZWN0LXRvb2wv.html",
+    "image": "../public/event-images/neushoorn/bC9wcm9kdWN0aW9uL3RoZS1wZXJmZWN0LXRvb2wv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the perfect tool": {
+        "s": null,
+        "l": "the%20perfect%20tool",
+        "g": []
       }
     }
   }

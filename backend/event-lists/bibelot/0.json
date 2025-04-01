@@ -64,20 +64,12 @@
       "punk "
     ],
     "artists": {
-      "undefined": {
-        "s": "6NMVL5NGYZKTl6AZuxybbV",
-        "l": "undefined",
+      "combo qazam": {
+        "s": "7knDpm1ZleLQxKi49eCnCd",
+        "l": "combo%20qazam",
         "g": [
-          "metalcore",
-          "new wave ",
-          "punk "
-        ]
-      },
-      "albatre": {
-        "s": "2OIlzTJrqUrk320QlZicjp",
-        "l": "albatre",
-        "g": [
-          "free jazz",
+          "krautrock",
+          "noise rock",
           "jazz ",
           "progressive rock ",
           "punk "
@@ -93,23 +85,22 @@
           "punk "
         ]
       },
-      "combo qazam": {
-        "s": "7knDpm1ZleLQxKi49eCnCd",
-        "l": "combo%20qazam",
+      "albatre": {
+        "s": "2OIlzTJrqUrk320QlZicjp",
+        "l": "albatre",
         "g": [
-          "krautrock",
-          "noise rock",
+          "free jazz",
           "jazz ",
           "progressive rock ",
           "punk "
         ]
       },
-      "albatre polarized": {
-        "s": null,
-        "l": "albatre polarized",
+      "undefined": {
+        "s": "6NMVL5NGYZKTl6AZuxybbV",
+        "l": "undefined",
         "g": [
-          "jazz ",
-          "progressive rock ",
+          "metalcore",
+          "new wave ",
           "punk "
         ]
       }
@@ -132,6 +123,15 @@
       "rock "
     ],
     "artists": {
+      "parker fans, gespuys, fit, de badslippers, sasha sailor &": {
+        "s": null,
+        "l": "parker%20fans,%20gespuys,%20fit,%20de%20badslippers,%20sasha%20sailor%20&",
+        "g": [
+          "electro ",
+          "punk ",
+          "rock "
+        ]
+      },
       "undefined": {
         "s": "6NMVL5NGYZKTl6AZuxybbV",
         "l": "undefined",
@@ -141,10 +141,14 @@
           "punk "
         ]
       },
-      "parker fans, gespuys, fit, de badslippers, sasha sailor &": {
-        "s": null,
-        "l": "parker%20fans,%20gespuys,%20fit,%20de%20badslippers,%20sasha%20sailor%20&",
+      "meer": {
+        "s": "4pAX6VBnbccF9uVcb9EGiq",
+        "l": "meer",
         "g": [
+          "progressive rock",
+          "progressive metal",
+          "symphonic rock",
+          "art rock",
           "electro ",
           "punk ",
           "rock "
@@ -373,11 +377,6 @@
       "pop "
     ],
     "artists": {
-      "pene corrida": {
-        "s": "1hw2ywipnsowbtb8flzcca",
-        "l": "pene%20corrida",
-        "g": []
-      },
       "– the penergy tour": {
         "s": null,
         "l": "%E2%80%93%20the%20penergy%20tour",
@@ -385,6 +384,11 @@
           "metal ",
           "pop "
         ]
+      },
+      "pene corrida": {
+        "s": "1hw2ywipnsowbtb8flzcca",
+        "l": "pene%20corrida",
+        "g": []
       }
     }
   }

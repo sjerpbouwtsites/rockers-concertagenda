@@ -90,14 +90,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "hardcore": {
-        "s": "3N11n3hTyVlcOg77IGefjz",
-        "l": "hardcore",
-        "g": [
-          "death metal",
-          "hardcore"
-        ]
-      },
       "stormo": {
         "s": "6HWwPPwublvn8KbCzcV82m",
         "l": "stormo",
@@ -105,6 +97,14 @@
           "screamo",
           "emocore",
           "post-hardcore"
+        ]
+      },
+      "hardcore": {
+        "s": "3N11n3hTyVlcOg77IGefjz",
+        "l": "hardcore",
+        "g": [
+          "death metal",
+          "hardcore"
         ]
       }
     }
@@ -186,6 +186,14 @@
           "power metal",
           "scottish metal"
         ]
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
       }
     }
   },
@@ -245,21 +253,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
-        ]
-      },
       "lacuna coil": {
         "s": "4OAddazJM576euUnFSvXSL",
         "l": "lacuna%20coil",
@@ -273,6 +266,21 @@
           "rock (early)",
           " alternative rock",
           "metal (later)"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
         ]
       }
     }

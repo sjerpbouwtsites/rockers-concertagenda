@@ -86,7 +86,16 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
   },
   {
     "start": "2025-03-03T19:30:01+0100",
@@ -186,14 +195,6 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "dominum": {
-        "s": "4Nm9FxM65RZa6EgFV2z8S9",
-        "l": "dominum",
-        "g": [
-          "heavy",
-          "power metal, hard rock"
-        ]
-      },
       "majestica": {
         "s": "52lkxAYfC9ypaPJ2EB22ki",
         "l": "majestica",
@@ -202,6 +203,14 @@
           "symphonic metal",
           "melodic metal",
           "symphonic power metal"
+        ]
+      },
+      "dominum": {
+        "s": "4Nm9FxM65RZa6EgFV2z8S9",
+        "l": "dominum",
+        "g": [
+          "heavy",
+          "power metal, hard rock"
         ]
       }
     }
@@ -231,6 +240,14 @@
           "thrash metal (early)",
           " melodic death metal",
           "metalcore (later)"
+        ]
+      },
+      "blood": {
+        "s": null,
+        "l": "blood",
+        "g": [
+          "death metal",
+          "grindcore"
         ]
       }
     }
