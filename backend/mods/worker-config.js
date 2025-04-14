@@ -13,12 +13,12 @@ export const AbstractWorkerConfig = {
 };
 
 export const workerConfig = {
-    // "013": {
-    //     workerCount: 3,
-    //     CPUReq: "low",
-    //     workerConcurrent: 3,
-    //     forceSet: 0
-    // },
+    "013": {
+        workerCount: 3,
+        CPUReq: "low",
+        workerConcurrent: 3,
+        forceSet: 0
+    }
     // afaslive: {
     //     workerCount: 1,
     //     workerConcurrent: 2,
@@ -90,7 +90,7 @@ export const workerConfig = {
     //     CPUReq: "high",
     //     forceSet: 4
     // },
-    neushoorn: { workerCount: 2, workerConcurrent: 1, forceSet: 5 }
+    // neushoorn: { workerCount: 2, workerConcurrent: 1, forceSet: 5 }
     // nieuwenor: { workerCount: 1, workerConcurrent: 2, forceSet: 5 },
     // occii: {
     //     workerCount: 1,
@@ -205,14 +205,6 @@ class WorkerListConf {
     }
 
     workerNeedsWork(familyName) {
-        if (shell.forceAll) {
-            if (shell.forceSet) {
-                return workerConfig[familyName]?.forceSet === shell.forceSet;
-            }
-            return true;
-        }
-        if (shell.force?.includes(familyName) ?? null) return true;
-
         if (!this.baseEventlistsStart.join("").includes(familyName))
             return true;
         const actueelGevonden = this.baseEventlistsStart.find(

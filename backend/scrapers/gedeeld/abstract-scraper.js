@@ -366,10 +366,6 @@ export default class AbstractScraper extends ScraperConfig {
      * @memberof AbstractScraper
      */
     async mainPageEnd({ stopFunctie, page, rawEvents }) {
-        if (shell.force && shell.force.includes(workerData.family)) {
-            this.dirtyLog(rawEvents);
-        }
-
         if (stopFunctie) {
             clearTimeout(stopFunctie);
         }

@@ -263,15 +263,10 @@ export default async function getImage({
     ).toString("base64");
     let imagePath = `${_this.eventImagesFolder}/${workerData.family}/${base64String}`;
 
-    const ki = workerData?.shellArguments?.keepImages;
-    const behoudAfbeeldingen = !!ki && ki === "true";
-
-    if (behoudAfbeeldingen) {
-        const afbeeldingBestaat = fs.existsSync(`${imagePath}-vol.webp`);
-        if (afbeeldingBestaat) {
-            res.image = imagePath;
-            return res;
-        }
+    const afbeeldingBestaat = fs.existsSync(`${imagePath}-vol.webp`);
+    if (afbeeldingBestaat) {
+        res.image = imagePath;
+        return res;
     }
 
     const diCompressRes = await downloadImageCompress({
@@ -313,21 +308,11 @@ async function getImageDirectInput(
         )
     ).toString("base64");
     res.imagePath = `${_this.eventImagesFolder}/${workerData.family}/${base64String}`;
-    const ki = workerData?.shellArguments?.keepImages;
-    const behoudAfbeeldingen = !!ki && ki === "true";
 
-    if (behoudAfbeeldingen) {
-        res.behoudAFb = "true";
-        const afbeeldingBestaat = fs.existsSync(`${res.imagePath}-vol.webp`);
-        if (afbeeldingBestaat) {
-            res.afbBestaat = "true";
-            res.image = res.imagePath;
-            return res;
-        } else {
-            res.afbBestaat = "false";
-        }
-    } else {
-        res.behoudAfb = "false";
+    const afbeeldingBestaat = fs.existsSync(`${res.imagePath}-vol.webp`);
+    if (afbeeldingBestaat) {
+        res.image = res.imagePath;
+        return res;
     }
 
     const diCompressRes = await downloadImageCompress({

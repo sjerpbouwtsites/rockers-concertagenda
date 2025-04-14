@@ -24,39 +24,35 @@ function getShellArguments() {
 
 const shell = {
     _arguments: null,
-    get force() {
-        return this._arguments?.force || null;
+    _c(a) {
+        if (a === false) return a;
+        if (a === "all") return a;
+        if (typeof a === "string") return this._splitArguments(a);
+        return false;
     },
-    get forceSet() {
-        return this._arguments?.forceSet || null;
-    },
-    get forceAll() {
-        return this._arguments?.force?.includes("all") || false;
-    },
-    get forceThese() {
-        return (
-            (this._arguments?.force?.split(",") ?? []).map((f) =>
-                f.replace("%", "")
-            ) ?? []
-        );
+    _splitArguments(args) {
+        return (args.split("%") ?? []).map((f) => f.replace(" ", "")) ?? [];
     },
 
-    get resetActiveWorkersBases() {
-        return (
-            (this._arguments?.resetActiveWorkersBases &&
-                this._arguments?.resetActiveWorkersBases === "true") ||
-            false
-        );
+    get removeBaseEvents() {
+        return this._c(this._arguments?.removeBaseEvents);
     },
 
-    get keepImages() {
-        return this._arguments?.keepImages || false;
+    get removePublicEventImages() {
+        return this._c(this._arguments?.removePublicEventImages);
+    },
+
+    get removeLongTextFiles() {
+        return this._c(this._arguments?.removeLongTextFiles);
+    },
+    get removeSinglePageCache() {
+        return this._c(this._arguments?.removeSinglePageCache);
     },
     get debugLongHTML() {
-        return this._arguments?.debugLongHTML || false;
+        return this._arguments?.debugLongHTML ?? null;
     },
     get workers() {
-        return this._arguments?.workers || null;
+        return this._arguments?.workers;
     },
     /**
      * of de artist db de refused, allowed, unclear etc moet schrijven.

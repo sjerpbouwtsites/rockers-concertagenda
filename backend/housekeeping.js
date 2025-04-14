@@ -3,109 +3,190 @@ import shell from "./mods/shell.js";
 import fsDirections from "./mods/fs-directions.js";
 import { workerNames } from "./mods/worker-config.js";
 
-function removePublicTexts(removeList) {
-    removeList.forEach((forceVal) => {
-        if (!fs.existsSync(`${fsDirections.publicTexts}/${forceVal}`)) {
-            fs.mkdirSync(`${fsDirections.publicTexts}/${forceVal}`);
-        }
-        fs.readdirSync(`${fsDirections.publicTexts}/${forceVal}`).forEach(
-            (file) => {
-                fs.rmSync(`${fsDirections.publicTexts}/${forceVal}/${file}`);
-            }
-        );
-    });
-}
-function removePublicEventImages(removeImagesLocationsList) {
-    const pei = fsDirections.publicEventImages;
-    removeImagesLocationsList.forEach((forced) => {
-        if (!fs.existsSync(`${pei}/${forced}`)) {
-            fs.mkdirSync(`${pei}/${forced}`);
-        }
-        fs.readdirSync(`${pei}/${forced}`).forEach((file) => {
-            fs.rmSync(`${pei}/${forced}/${file}`);
+/**
+ * singlePageCacheCleanup
+ *
+ * Schoont temp/singlePages/podia op
+ * Uit wordt gegaan van de draaiende workers uit worker config.
+ * Indien all dan worden de folders geleegd.
+ * Indien benaamd dan alleen die specifiek
+ * @param {string|bool} cleanInstructions False of "all" of "paradiso%melkweg" etc
+ * @returns {array} verwijderd array met strings van welke workerName hoeveel cachepaginas zijn verwijderd.
+ */
+function singlePageCacheCleanup(cleanInstructions) {
+    const pei = fsDirections.singlePagesCache;
+    const verwijderd = [];
+
+    workerNames.forEach((workerName) => {
+        if (
+            cleanInstructions !== "all" &&
+            !cleanInstructions.includes(workerName)
+        )
+            return;
+        let teller = 0;
+        fs.readdirSync(`${pei}/${workerName}`).forEach((file) => {
+            teller = teller + 1;
+            fs.rmSync(`${pei}/${workerName}/${file}`);
         });
+        verwijderd.push(`${workerName} ${teller} cachepaginas`);
     });
+
+    return verwijderd;
 }
 
-function makeRemoveTextsLists() {
-    // if (shell.keepBaseEvents) {
-    //     return [];
-    // }
-    if (shell.forceAll) {
-        return fs.readdirSync(fsDirections.publicTexts, "utf-8");
-    }
-    return shell.forceThese;
-}
+/**
+ * publicEventImagesCleanup
+ *
+ * Schoont public/event-images/podia op
+ * Uit wordt gegaan van de draaiende workers uit worker config.
+ * Indien all dan worden de folders geleegd.
+ * Indien benaamd dan alleen die specifiek
+ * @param {string|bool} cleanInstructions False of "all" of "paradiso%melkweg" etc
+ * @returns {array} verwijderd array met strings van welke workerName hoeveel images zijn verwijderd.
+ */
+function publicEventImagesCleanup(cleanInstructions) {
+    const pei = fsDirections.publicEventImages;
+    const verwijderd = [];
 
-function makeRemoveImagesLocationsList() {
-    if (shell.keepImages) {
-        return [];
-    }
-    if (shell.forceAll) {
-        return fs.readdirSync(fsDirections.publicEventImages, "utf-8");
-    }
-    return shell.forceThese;
-}
-
-function resetActiveWorkersBasesCleanup() {
-    const bestaandeBaseEventLists = fs.readdirSync(fsDirections.baseEventlists);
-
-    workerNames.forEach((actieveWorkerUitConfig) => {
-        const verwijder = bestaandeBaseEventLists.find((bel) =>
-            bel.includes(actieveWorkerUitConfig)
-        );
-        if (verwijder) {
-            fs.unlinkSync(`${fsDirections.baseEventlists}/${verwijder}`);
-        }
+    workerNames.forEach((workerName) => {
+        if (
+            cleanInstructions !== "all" &&
+            !cleanInstructions.includes(workerName)
+        )
+            return;
+        let teller = 0;
+        fs.readdirSync(`${pei}/${workerName}`).forEach((file) => {
+            teller = teller + 1;
+            fs.rmSync(`${pei}/${workerName}/${file}`);
+        });
+        verwijderd.push(`${workerName} ${teller} images`);
     });
+
+    return verwijderd;
 }
 
+/**
+ * longTextFilesCleanup
+ *
+ * Schoont public/texts/podia op
+ * Uit wordt gegaan van de draaiende workers uit worker config.
+ * Indien all dan worden de folders geleegd.
+ * Indien benaamd dan alleen die specifiek
+ * @param {string|bool} cleanInstructions False of "all" of "paradiso%melkweg" etc
+ * @returns {array} verwijderd array met strings van welke workerName hoeveel texts zijn verwijderd.
+ */
+function longTextFilesCleanup(cleanInstructions) {
+    const pei = fsDirections.publicTexts;
+    const verwijderd = [];
+
+    workerNames.forEach((workerName) => {
+        if (
+            cleanInstructions !== "all" &&
+            !cleanInstructions.includes(workerName)
+        )
+            return;
+        let teller = 0;
+        fs.readdirSync(`${pei}/${workerName}`).forEach((file) => {
+            teller = teller + 1;
+            fs.rmSync(`${pei}/${workerName}/${file}`);
+        });
+        verwijderd.push(`${workerName} ${teller} texts`);
+    });
+
+    return verwijderd;
+}
+
+/**
+ * baseEventsCleanup
+ *
+ * Schoont /temp/base event lists open.
+ * Basis is wat gaat draaien volgens worker config.
+ * Ten eerste worden oude verwijderd op datum.
+ * Ten tweede kan met 'all' of 'paradiso' worden verwijderd.
+ * @param {string|bool} cleanInstructions False of "all" of "paradiso%melkweg" etc
+ * @param {string} vandaag 20250417
+ * @returns {array} verwijderde bestandsnamen
+ */
+function baseEventsCleanup(cleanInstructions, vandaag) {
+    let bestaandeBaseEventLists;
+    const verwijderd = [];
+    if (cleanInstructions === "all") {
+        bestaandeBaseEventLists = fs.readdirSync(fsDirections.baseEventlists);
+        workerNames.forEach((actieveWorkerUitConfig) => {
+            const verwijder = bestaandeBaseEventLists.find((bel) => {
+                return (
+                    bel.includes(actieveWorkerUitConfig) ||
+                    !bel.includes(vandaag)
+                );
+            });
+            if (verwijder) {
+                verwijderd.push(verwijder);
+                fs.unlinkSync(`${fsDirections.baseEventlists}/${verwijder}`);
+            }
+        });
+    }
+    if (Array.isArray(cleanInstructions)) {
+        bestaandeBaseEventLists = fs.readdirSync(fsDirections.baseEventlists);
+        cleanInstructions.forEach((verwijderFamily) => {
+            const gevonden = bestaandeBaseEventLists.find((bel) => {
+                return bel.includes(verwijderFamily) || !bel.includes(vandaag);
+            });
+            if (gevonden) {
+                verwijderd.push(gevonden);
+                fs.unlinkSync(`${fsDirections.baseEventlists}/${gevonden}`);
+            }
+        });
+    }
+    return verwijderd;
+}
+
+/**
+ * houseKeeping
+ *
+ * Kijkt naar de shell commando's zoals removeBaseEvents, removePublicEventImages, removeLongTextFiles,
+ * removeSinglePageCache en stuurt dan de relevante cleaners aan.
+ *
+ * @returns {bool} true
+ */
 export default async function houseKeeping() {
-    if (shell.resetActiveWorkersBases) resetActiveWorkersBasesCleanup();
+    const vandaag = new Date()
+        .toISOString()
+        .substring(0, 10)
+        .replaceAll(/-/g, "");
 
-    const curDay = new Date().toISOString().split("T")[0].replaceAll(/-/g, "");
+    const houseKeepingResults = [];
+    if (shell.removeBaseEvents) {
+        const rbc = baseEventsCleanup(shell.removeBaseEvents, vandaag);
+        houseKeepingResults.push(rbc);
+    }
 
-    const removeImagesLocationsList = makeRemoveImagesLocationsList();
-    const removeTextsList = makeRemoveTextsLists();
-    // if (!shell.keepBaseEvents) {
-    //     fs.readdirSync(fsDirections.baseEventlists)
-    //         .filter((baseEventList) => !baseEventList.includes(curDay))
-    //         .map((baseEventList) => baseEventList.split("T")[0])
-    //         .forEach((toRemove) => {
-    //             if (!removeTextsList.includes(toRemove)) {
-    //                 removeTextsList.push(toRemove);
-    //             }
-    //             if (!removeImagesLocationsList.includes(toRemove)) {
-    //                 removeImagesLocationsList.push(toRemove);
-    //             }
-    //         });
-    //     removePublicTexts(removeTextsList);
-    // }
+    if (shell.removePublicEventImages) {
+        const rbei = publicEventImagesCleanup(shell.removePublicEventImages);
+        houseKeepingResults.push(rbei);
+    }
 
-    if (!shell.keepImages) removePublicEventImages(removeImagesLocationsList);
+    if (shell.removeLongTextFiles) {
+        const rltf = longTextFilesCleanup(shell.removeLongTextFiles);
+        houseKeepingResults.push(rltf);
+    }
 
-    // als !keepBaseEvents, dan alles al gewist.
-    // if (!shell.keepBaseEvents) {
-    //     fs.readdirSync(fsDirections.baseEventlists).forEach((baseEventList) => {
-    //         const magWipen = shell.forceAll
-    //             ? true
-    //             : forcedWipeList.find((forcedWipe) =>
-    //                   baseEventList.includes(forcedWipe)
-    //               );
+    if (shell.removeSinglePageCache) {
+        const rspc = singlePageCacheCleanup(shell.removeSinglePageCache);
+        houseKeepingResults.push(rspc);
+    }
 
-    //         if (magWipen) {
-    //             if (
-    //                 fs.existsSync(
-    //                     `${fsDirections.baseEventlists}/${baseEventList}`
-    //                 )
-    //             ) {
-    //                 fs.rmSync(
-    //                     `${fsDirections.baseEventlists}/${baseEventList}`
-    //                 );
-    //             }
-    //         }
-    //     });
-    // }
+    console.log(`-------------------------`);
+    console.group(`Housekeepings results`);
+    console.log("");
+    console.log(`remove base events shell: ${shell.removeBaseEvents}`);
+    console.log(
+        `remove public event images shell: ${shell.removePublicEventImages}`
+    );
+    console.log(`remove long texts shell: ${shell.removeLongTextFiles}`);
+    console.log(`remove single texts shell: ${shell.removeSinglePageCache}`);
+    console.log("");
+    houseKeepingResults.forEach((hkr) => console.log(hkr));
+    console.groupEnd();
 
     return true;
 }
