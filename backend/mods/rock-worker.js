@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import { Worker } from "worker_threads";
-import shell from "./shell.js";
 import WorkerStatus from "./WorkerStatus.js";
 
 export default class RockWorker extends Worker {
@@ -8,7 +7,7 @@ export default class RockWorker extends Worker {
 
     constructor(confObject) {
         super(confObject.path, {
-            workerData: { ...confObject, shell }
+            workerData: { ...confObject }
         });
         this.name = confObject.name;
         this.family = confObject.family;

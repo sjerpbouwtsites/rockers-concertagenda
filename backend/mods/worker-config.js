@@ -1,5 +1,4 @@
 import fs from "fs";
-import shell from "./shell.js";
 import fsDirections from "./fs-directions.js";
 
 export const AbstractWorkerConfig = {

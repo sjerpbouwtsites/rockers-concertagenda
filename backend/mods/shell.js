@@ -24,29 +24,26 @@ function getShellArguments() {
 
 const shell = {
     _arguments: null,
-    _c(a) {
-        if (a === false) return a;
+    check: function (a) {
+        if (a === "false") return a;
         if (a === "all") return a;
-        if (typeof a === "string") return this._splitArguments(a);
+        if (typeof a === "string") return a.split("%");
         return false;
-    },
-    _splitArguments(args) {
-        return (args.split("%") ?? []).map((f) => f.replace(" ", "")) ?? [];
     },
 
     get removeBaseEvents() {
-        return this._c(this._arguments?.removeBaseEvents);
+        return this.check(this._arguments?.removeBaseEvents);
     },
 
     get removePublicEventImages() {
-        return this._c(this._arguments?.removePublicEventImages);
+        return this.check(this._arguments?.removePublicEventImages);
     },
 
     get removeLongTextFiles() {
-        return this._c(this._arguments?.removeLongTextFiles);
+        return this.check(this._arguments?.removeLongTextFiles);
     },
     get removeSinglePageCache() {
-        return this._c(this._arguments?.removeSinglePageCache);
+        return this.check(this._arguments?.removeSinglePageCache);
     },
     get debugLongHTML() {
         return this._arguments?.debugLongHTML ?? null;

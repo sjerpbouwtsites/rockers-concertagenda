@@ -48,19 +48,21 @@ function publicEventImagesCleanup(cleanInstructions) {
     const pei = fsDirections.publicEventImages;
     const verwijderd = [];
 
-    workerNames.forEach((workerName) => {
-        if (
-            cleanInstructions !== "all" &&
-            !cleanInstructions.includes(workerName)
-        )
-            return;
-        let teller = 0;
-        fs.readdirSync(`${pei}/${workerName}`).forEach((file) => {
-            teller = teller + 1;
-            fs.rmSync(`${pei}/${workerName}/${file}`);
+    workerNames
+        .filter((wn) => {
+            if (cleanInstructions === "all") return true;
+            if (cleanInstructions.includes(wn)) return true;
+            return false;
+        })
+        .forEach((workerName) => {
+            console.log(workerName);
+            let teller = 0;
+            fs.readdirSync(`${pei}/${workerName}`).forEach((file) => {
+                teller = teller + 1;
+                fs.rmSync(`${pei}/${workerName}/${file}`);
+            });
+            verwijderd.push(`${workerName} ${teller} images`);
         });
-        verwijderd.push(`${workerName} ${teller} images`);
-    });
 
     return verwijderd;
 }
@@ -108,35 +110,24 @@ function longTextFilesCleanup(cleanInstructions) {
  * @returns {array} verwijderde bestandsnamen
  */
 function baseEventsCleanup(cleanInstructions, vandaag) {
-    let bestaandeBaseEventLists;
+    const bestaandeBaseEventLists = fs.readdirSync(fsDirections.baseEventlists);
     const verwijderd = [];
-    if (cleanInstructions === "all") {
-        bestaandeBaseEventLists = fs.readdirSync(fsDirections.baseEventlists);
-        workerNames.forEach((actieveWorkerUitConfig) => {
-            const verwijder = bestaandeBaseEventLists.find((bel) => {
-                return (
-                    bel.includes(actieveWorkerUitConfig) ||
-                    !bel.includes(vandaag)
-                );
-            });
-            if (verwijder) {
-                verwijderd.push(verwijder);
-                fs.unlinkSync(`${fsDirections.baseEventlists}/${verwijder}`);
-            }
+    bestaandeBaseEventLists
+        .filter((bel) => {
+            return workerNames.find((wn) => bel.includes(wn));
+        })
+        .forEach((bel) => {
+            const condities = [
+                cleanInstructions === "all",
+                Array.isArray(cleanInstructions) &&
+                    cleanInstructions.find((ci) => bel.includes(ci)),
+                !bel.includes(vandaag)
+            ];
+
+            if (!condities.includes(true)) return;
+            fs.rmSync(`${fsDirections.baseEventlists}/${bel}`);
+            verwijderd.push(`${bel.substring(0, 10)}`);
         });
-    }
-    if (Array.isArray(cleanInstructions)) {
-        bestaandeBaseEventLists = fs.readdirSync(fsDirections.baseEventlists);
-        cleanInstructions.forEach((verwijderFamily) => {
-            const gevonden = bestaandeBaseEventLists.find((bel) => {
-                return bel.includes(verwijderFamily) || !bel.includes(vandaag);
-            });
-            if (gevonden) {
-                verwijderd.push(gevonden);
-                fs.unlinkSync(`${fsDirections.baseEventlists}/${gevonden}`);
-            }
-        });
-    }
     return verwijderd;
 }
 
@@ -185,8 +176,11 @@ export default async function houseKeeping() {
     console.log(`remove long texts shell: ${shell.removeLongTextFiles}`);
     console.log(`remove single texts shell: ${shell.removeSinglePageCache}`);
     console.log("");
-    houseKeepingResults.forEach((hkr) => console.log(hkr));
+    houseKeepingResults.forEach((hkr) => hkr.length && console.log(hkr));
+    console.log("------------------------------");
     console.groupEnd();
+
+    process.exit();
 
     return true;
 }
