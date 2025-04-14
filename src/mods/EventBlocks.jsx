@@ -10,34 +10,42 @@ class EventBlocks extends React.Component {
         super(props);
         this.state = {
             maxEventsShown: 100,
-            musicEvents: [],
+            filteredMusicEvents: [],
             eventDataLoading: false,
             eventDataLoaded: false,
             filterHideSoldOut: false,
-            sendDataUp: false
+            sendDataUp: false,
+            firstFilteringDone: false,
+            lastRegionFilter: ["all"]
         };
         this.currentYear = new Date().getFullYear();
 
         this.createLocationHTML = this.createLocationHTML.bind(this);
         this.createDates = this.createDates.bind(this);
-        this.getEventData = this.getEventData.bind(this);
         this.add100ToMaxEventsShown = this.add100ToMaxEventsShown.bind(this);
         this.escFunction = this.escFunction.bind(this);
         this.hideSoldOut = this.hideSoldOut.bind(this);
+        this.addFirstOfMonth = this.addFirstOfMonth.bind(this);
         this.gescrolledBuitenBeeldEnlarged =
             this.gescrolledBuitenBeeldEnlarged.bind(this);
     }
 
     componentDidMount() {
         document.addEventListener("keydown", this.escFunction, false);
-        const { eventDataLoaded, eventDataLoading } = this.state;
-        if (!eventDataLoaded && !eventDataLoading) {
-            this.getEventData();
-        }
+        this.musicEventFilters();
         this.sluitEnlarged = this.sluitEnlarged.bind(this);
     }
 
-    componentDidUpdate() {}
+    componentDidUpdate() {
+        const sortedLastFilterString = this.state.lastRegionFilter
+            .sort()
+            .join("-");
+        const unsortedCurFilter = this.props.regionFilterSelectedOptions;
+        const sortedCurFilterString = unsortedCurFilter.sort().join("-");
+        if (sortedLastFilterString !== sortedCurFilterString) {
+            this.musicEventFilters();
+        }
+    }
 
     componentWillUnmount() {
         document.removeEventListener("keydown", this.escFunction, false);
@@ -49,60 +57,11 @@ class EventBlocks extends React.Component {
 
     async waitForHasFetchedData() {
         const { hasFetchedData } = this.props;
-        console.log(`hasFetchedData ${hasFetchedData}`);
         if (hasFetchedData) return true;
         else {
             await waitFor(50);
             return this.waitForHasFetchedData();
         }
-    }
-
-    async getEventData() {
-        await this.waitForHasFetchedData();
-        const { locations } = this.props;
-        this.setState({ eventDataLoading: true });
-        return fetch("./events-list.json", {})
-            .then((response) => response.json())
-            .then((musicEvents) => {
-                const me2 = musicEvents
-                    .map((musicEvent) => {
-                        // eslint-disable-next-line
-                        musicEvent.longTextHTML = null;
-                        // eslint-disable-next-line
-                        musicEvent.enlarged = false;
-                        musicEvent.locationCity = "Unknown";
-                        musicEvent.locationName = "Unknown";
-                        musicEvent.locationRegion = "Unknown";
-                        if (!locations.hasOwnProperty(musicEvent.location)) {
-                            console.error(
-                                `Locatie ${musicEvent.location} niet gevonden`
-                            );
-                        }
-                        const locationObj =
-                            locations[musicEvent.location] ?? {};
-                        musicEvent.locationCity = locationObj.city;
-                        musicEvent.locationName = locationObj.name;
-                        musicEvent.locationRegion = locationObj.region;
-
-                        return musicEvent;
-                    })
-                    .filter(filterEventsDateInPast);
-                this.setState({ musicEvents: me2 });
-                this.setState({ eventDataLoaded: true });
-                const { sendDataUp } = this.state;
-                if (sendDataUp || !sendDataUp) {
-                    const { eventBlocksNaarApp } = this.props;
-                    eventBlocksNaarApp(me2);
-                    this.setState({ sendDataUp: true });
-                }
-            })
-            .catch((error) => {
-                console.error(error);
-                this.setState({ eventDataLoaded: false });
-            })
-            .finally(() => {
-                this.setState({ eventDataLoading: false });
-            });
     }
 
     // eslint-disable-next-line
@@ -113,7 +72,7 @@ class EventBlocks extends React.Component {
 provide-dark-contrast
 ${isEven ? "provide-dark-contrast--variation-1" : ""}
 ${BEMify("event-block", [
-    musicEvent.location,
+    musicEvent.location.slug,
     musicEvent.enlarged ? "enlarged" : "",
     musicEvent.soldOut ? "sold-out" : "",
     musicEvent.firstOfMonth ? "first-of-month" : "",
@@ -218,7 +177,7 @@ ${BEMify("event-block", [
 
         let imgSrc = musicEvent.image // FIXME naar eigen component
             ? `${musicEvent.image}`
-            : `/location-images/${musicEvent.location}`;
+            : `/location-images/${musicEvent.location.slug}`;
 
         imgSrc = imgSrc.replace("../public", "");
 
@@ -245,10 +204,10 @@ ${BEMify("event-block", [
         return (
             <span>
                 <span className="event-block__location-row">
-                    {musicEvent.locationName}
+                    {musicEvent.location.name}
                 </span>
                 <span className="event-block__location-row">
-                    {musicEvent.locationCity}
+                    {musicEvent.location.city}
                 </span>
             </span>
         );
@@ -314,23 +273,28 @@ ${BEMify("event-block", [
         e.stopPropagation();
         e.nativeEvent.stopImmediatePropagation();
 
-        let { musicEvents } = this.state;
-        const isMomenteelEnlargedEl = this.someEventIsEnlarged(musicEvents);
+        let { filteredMusicEvents } = this.state;
+        const isMomenteelEnlargedEl = this.someEventIsEnlarged();
         const isMomenteelEnlarged = !!isMomenteelEnlargedEl;
         await this.sluitEnlarged();
 
-        const thisEvent = musicEvents[musicEventKey];
+        const thisEvent = filteredMusicEvents[musicEventKey];
         const thisElement = document.getElementById(
             `event-id-${musicEventKey}`
         );
 
-        musicEvents = musicEvents.map((event) => {
+        console.log(
+            `dit element van ${thisElement.querySelector("h2").textContent}`
+        );
+        console.log(thisElement);
+
+        filteredMusicEvents = filteredMusicEvents.map((event) => {
             event.enlarged = false; // eslint-disable-line
             return event;
         });
-        this.setState({ musicEvents }, () => {
-            //
-        });
+        // this.setState({ musicEvents }, () => {
+        //     //
+        // });
 
         if (isMomenteelEnlarged) {
             return;
@@ -346,10 +310,12 @@ ${BEMify("event-block", [
             .then((response) => response.text())
             .then((text) => {
                 // eslint-disable-next-line
-                let { musicEvents } = this.state;
-                musicEvents[musicEventKey].enlarged = true;
-                musicEvents[musicEventKey].longTextHTML = text;
-                this.setState({ musicEvents: [...musicEvents] });
+
+                filteredMusicEvents[musicEventKey].enlarged = true;
+                filteredMusicEvents[musicEventKey].longTextHTML = text;
+                this.setState({
+                    filteredMusicEvents: [...filteredMusicEvents]
+                });
                 setTimeout(() => {
                     const blockEl = document.getElementById(
                         `event-id-${musicEventKey}`
@@ -449,13 +415,13 @@ ${BEMify("event-block", [
         }
         // document.querySelectorAll('.void-container-for-enlarged--enlarged')
         //   .forEach(voidEl=>voidEl.innerHTML = '')
-        const { musicEvents } = this.state;
-        const nieuweEventsState = musicEvents.map((event) => {
+        const { filteredMusicEvents } = this.state;
+        const nieuweEventsState = filteredMusicEvents.map((event) => {
             // eslint-disable-next-line
             event.enlarged = false;
             return event;
         });
-        this.setState({ musicEvents: nieuweEventsState }, () => {
+        this.setState({ filteredMusicEvents: nieuweEventsState }, () => {
             console.log("na set state");
         });
 
@@ -474,8 +440,7 @@ ${BEMify("event-block", [
         const workingMaxY = maxYOffset;
         setTimeout(() => {
             if (window.scrollY > workingMinY && window.scrollY < workingMaxY) {
-                const { musicEvents } = this.state;
-                if (this.someEventIsEnlarged(musicEvents)) {
+                if (this.someEventIsEnlarged()) {
                     this.gescrolledBuitenBeeldEnlarged(minYOffset, maxYOffset);
                 }
             } else {
@@ -486,8 +451,8 @@ ${BEMify("event-block", [
 
     // eslint-disable-next-line
     someEventIsEnlarged() {
-        const { musicEvents } = this.state;
-        return musicEvents.find((musicEvent) => musicEvent.enlarged);
+        const { filteredMusicEvents } = this.state;
+        return filteredMusicEvents.find((musicEvent) => musicEvent.enlarged);
     }
 
     createHideSoldOutBtn(musicEvent, selectors) {
@@ -507,73 +472,65 @@ ${BEMify("event-block", [
     // #endregion event-block HTML methods
 
     add100ToMaxEventsShown() {
-        const { maxEventsShown, musicEvents } = this.state;
+        const { maxEventsShown, filteredMusicEvents } = this.state;
         let newMax = maxEventsShown + 100;
-        if (newMax > musicEvents.length) {
-            newMax = musicEvents.length;
+        if (newMax > filteredMusicEvents.length) {
+            newMax = filteredMusicEvents.length;
         }
         this.setState({
             maxEventsShown: newMax
         });
     }
 
-    musicEventFilters() {
-        const { filterSettings } = this.props;
-        const { maxEventsShown, musicEvents } = this.state;
-        const filtered = musicEvents
-            .filter(
-                (musicEvent, musicEventKey) => musicEventKey <= maxEventsShown
-            )
-            .filter((musicEvent) => {
-                if (!filterSettings?.podia[musicEvent.location]) {
-                    return true;
-                }
-                return (
-                    filterSettings.podia[musicEvent.location].checked ?? true
-                );
-            })
-            .filter((musicEvent) => {
-                if (!filterSettings?.daterange?.lower) {
-                    return true;
-                }
-                const lowerRangeTime = new Date(
-                    filterSettings.daterange.lower
-                ).getTime();
-                const upperRangeTime = new Date(
-                    filterSettings.daterange.upper
-                ).getTime();
-                const eventTime = new Date(musicEvent.start).getTime();
+    async musicEventFilters() {
+        await this.waitForHasFetchedData();
 
-                if (lowerRangeTime > eventTime) {
-                    return false;
-                }
-                if (upperRangeTime < eventTime) {
-                    return false;
-                }
-                return true;
-            });
-        return filtered.map((musicEvent, musicEventIndex) => {
-            // eslint-disable-next-line
-            musicEvent.firstOfMonth = false;
-            const start = new Date(musicEvent.start);
-            // eslint-disable-next-line
-            musicEvent.eventMonth = start.toLocaleDateString("nl", {
-                year: "numeric",
-                month: "short"
-            });
-            if (!musicEventIndex || !filtered[musicEventIndex - 1]) {
-                // eslint-disable-next-line
-                musicEvent.firstOfMonth = true;
-            }
-            if (
-                musicEvent.eventMonth !==
-                filtered[musicEventIndex - 1]?.eventMonth
-            ) {
-                // eslint-disable-next-line
-                musicEvent.firstOfMonth = true;
-            }
-            return musicEvent;
+        const { eventBlocksNaarApp, regionFilterSelectedOptions, musicEvents } =
+            this.props;
+        console.group("filtering music events on");
+        console.log(regionFilterSelectedOptions);
+        console.groupEnd();
+        const musicEventsInRegion = regionFilterSelectedOptions.includes("all")
+            ? [...musicEvents]
+            : [...musicEvents].filter((musicEvent) => {
+                  return regionFilterSelectedOptions.includes(
+                      musicEvent.location.region
+                  );
+              });
+
+        this.setState({
+            filteredMusicEvents: musicEventsInRegion,
+            firstFilteringDone: true
         });
+
+        eventBlocksNaarApp(musicEventsInRegion.length);
+        this.setState({
+            sendDataUp: true,
+            lastRegionFilter: [...regionFilterSelectedOptions]
+        });
+
+        return musicEventsInRegion;
+
+        // .filter((musicEvent) => {
+        //     if (!filterSettings?.daterange?.lower) {
+        //         return true;
+        //     }
+        //     const lowerRangeTime = new Date(
+        //         filterSettings.daterange.lower
+        //     ).getTime();
+        //     const upperRangeTime = new Date(
+        //         filterSettings.daterange.upper
+        //     ).getTime();
+        //     const eventTime = new Date(musicEvent.start).getTime();
+
+        //     if (lowerRangeTime > eventTime) {
+        //         return false;
+        //     }
+        //     if (upperRangeTime < eventTime) {
+        //         return false;
+        //     }
+        //     return true;
+        // })
     }
 
     // eslint-disable-next-line
@@ -621,16 +578,57 @@ ${BEMify("event-block", [
         return res;
     }
 
+    /**
+     * Pas vlak voor de render weet je, want na filtering,
+     * welke musicEvents de eerste van de maand zijn.
+     */
+    addFirstOfMonth(filteredMusicEvents) {
+        return filteredMusicEvents.map((musicEvent, musicEventIndex) => {
+            // eslint-disable-next-line
+            musicEvent.firstOfMonth = false;
+            const start = new Date(musicEvent.start);
+            // eslint-disable-next-line
+            musicEvent.eventMonth = start.toLocaleDateString("nl", {
+                year: "numeric",
+                month: "short"
+            });
+            if (!musicEventIndex || !filteredMusicEvents[musicEventIndex - 1]) {
+                // eslint-disable-next-line
+                musicEvent.firstOfMonth = true;
+            }
+            if (
+                musicEvent.eventMonth !==
+                filteredMusicEvents[musicEventIndex - 1]?.eventMonth
+            ) {
+                // eslint-disable-next-line
+                musicEvent.firstOfMonth = true;
+            }
+            return musicEvent;
+        });
+    }
     render() {
-        const filteredMusicEvents = this.musicEventFilters();
+        const { hasFetchedData } = this.props;
+        if (!hasFetchedData) return "";
+
         const enlargedClassAddition = this.someEventIsEnlarged()
             ? "some-event-is-enlarged"
             : "nothing-is-enlarged";
-        const { eventDataLoading, filterHideSoldOut } = this.state;
+        const {
+            eventDataLoading,
+            filterHideSoldOut,
+            filteredMusicEvents,
+            maxEventsShown,
+            eventDataLoaded
+        } = this.state;
 
-        const { musicEvents, maxEventsShown, eventDataLoaded } = this.state;
-        const mel = musicEvents.length;
+        if (!filteredMusicEvents.length) {
+            return "";
+        }
+
+        const mel = filteredMusicEvents.length;
         let monthEvenOddCounter = 0;
+
+        const printThis = this.addFirstOfMonth(filteredMusicEvents);
 
         return (
             <div
@@ -639,132 +637,143 @@ ${BEMify("event-block", [
                 }`}
             >
                 {
-                    filteredMusicEvents.map((musicEvent, musicEventKey) => {
-                        if (musicEvent.firstOfMonth) {
-                            monthEvenOddCounter += 1;
-                        }
-                        if (musicEvent.soldOut && filterHideSoldOut) return "";
+                    printThis
+                        .filter((musicEvent, index) => {
+                            if (index + 1 > maxEventsShown) return false;
+                            return true;
+                        })
+                        .map((musicEvent, musicEventKey) => {
+                            if (musicEvent.firstOfMonth) {
+                                monthEvenOddCounter += 1;
+                            }
+                            if (musicEvent.soldOut && filterHideSoldOut)
+                                return "";
 
-                        const sharedModifiers = [
-                            musicEvent.location,
-                            musicEvent.soldOut ? "sold-out" : "",
-                            musicEvent.enlarged ? "enlarged" : ""
-                        ];
-                        const selectors = this.getSelectors(
-                            musicEvent,
-                            sharedModifiers,
-                            monthEvenOddCounter
-                        );
-                        const priceElement = this.priceElement(musicEvent);
-                        const datesHTML = this.createDates(musicEvent);
-                        const hideSoldOutBtn = this.createHideSoldOutBtn(
-                            musicEvent,
-                            selectors
-                        );
-                        const numberOfDates = datesHTML.match(/<time/g).length;
-                        const imageHTML = this.createImageHTML(
-                            musicEvent,
-                            selectors
-                        );
-                        const articleID = `event-id-${musicEventKey}`;
-                        const firstOfMonthBlock = musicEvent.firstOfMonth ? (
-                            <time className="event-block__first-of-month-time">
-                                {musicEvent.eventMonth}
-                            </time>
-                        ) : (
-                            ""
-                        );
+                            const sharedModifiers = [
+                                musicEvent.location.slug,
+                                musicEvent.soldOut ? "sold-out" : "",
+                                musicEvent.enlarged ? "enlarged" : ""
+                            ];
+                            const selectors = this.getSelectors(
+                                musicEvent,
+                                sharedModifiers,
+                                monthEvenOddCounter
+                            );
+                            const priceElement = this.priceElement(musicEvent);
+                            const datesHTML = this.createDates(musicEvent);
+                            const hideSoldOutBtn = this.createHideSoldOutBtn(
+                                musicEvent,
+                                selectors
+                            );
+                            const numberOfDates =
+                                datesHTML.match(/<time/g).length;
+                            const imageHTML = this.createImageHTML(
+                                musicEvent,
+                                selectors
+                            );
+                            const articleID = `event-id-${musicEventKey}`;
+                            const firstOfMonthBlock =
+                                musicEvent.firstOfMonth ? (
+                                    <time className="event-block__first-of-month-time">
+                                        {musicEvent.eventMonth}
+                                    </time>
+                                ) : (
+                                    ""
+                                );
 
-                        const shortTextHTML = this.createShortTextHTML(
-                            musicEvent,
-                            selectors
-                        );
+                            const shortTextHTML = this.createShortTextHTML(
+                                musicEvent,
+                                selectors
+                            );
 
-                        const titelEnShortText =
-                            this.bewerktMusicEventTitle(musicEvent);
+                            const titelEnShortText =
+                                this.bewerktMusicEventTitle(musicEvent);
 
-                        return (
-                            // eslint-disable-next-line
-                            <article
-                                id={articleID}
+                            return (
                                 // eslint-disable-next-line
-                                key={musicEventKey}
-                                data-date={musicEvent.eventMonth}
-                                className={selectors.article}
-                                onClick={
-                                    !musicEvent.enlarged && musicEvent.longText
-                                        ? this.loadLongerText.bind(
-                                              this,
-                                              musicEventKey
-                                          )
-                                        : null
-                                }
-                                title={
-                                    musicEvent.longText
-                                        ? ""
-                                        : "geen verdere info beschikbaar"
-                                }
-                            >
-                                {firstOfMonthBlock}
-                                {imageHTML}
-                                <header className={selectors.header}>
-                                    <h2 className={selectors.headerH2}>
-                                        <span
-                                            className={
-                                                selectors.headerEventTitle
-                                            }
-                                            data-short-text={
-                                                titelEnShortText.shortestText
-                                            }
-                                        >
-                                            {titelEnShortText.title}
-                                        </span>
-                                        <span
-                                            className={`${selectors.headerLocation} number-of-dates-${numberOfDates}`}
-                                        >
-                                            {this.createLocationHTML(
-                                                musicEvent
-                                            )}
+                                <article
+                                    id={articleID}
+                                    // eslint-disable-next-line
+                                    key={musicEventKey}
+                                    data-date={musicEvent.eventMonth}
+                                    className={selectors.article}
+                                    onClick={
+                                        !musicEvent.enlarged &&
+                                        musicEvent.longText
+                                            ? this.loadLongerText.bind(
+                                                  this,
+                                                  musicEventKey
+                                              )
+                                            : null
+                                    }
+                                    title={
+                                        musicEvent.longText
+                                            ? ""
+                                            : "geen verdere info beschikbaar"
+                                    }
+                                >
+                                    {firstOfMonthBlock}
+                                    {imageHTML}
+                                    <header className={selectors.header}>
+                                        <h2 className={selectors.headerH2}>
                                             <span
-                                                dangerouslySetInnerHTML={{
-                                                    __html: datesHTML
-                                                }}
+                                                className={
+                                                    selectors.headerEventTitle
+                                                }
+                                                data-short-text={
+                                                    titelEnShortText.shortestText
+                                                }
+                                            >
+                                                {titelEnShortText.title}
+                                            </span>
+                                            <span
+                                                className={`${selectors.headerLocation} number-of-dates-${numberOfDates}`}
+                                            >
+                                                {this.createLocationHTML(
+                                                    musicEvent
+                                                )}
+                                                <span
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: datesHTML
+                                                    }}
+                                                />
+                                            </span>
+                                        </h2>
+                                        <button
+                                            type="button"
+                                            onClick={this.sluitEnlarged}
+                                            className={
+                                                selectors.sluitEnlargedBtn
+                                            }
+                                        >
+                                            <img
+                                                src={closeIcon}
+                                                width="40"
+                                                height="40"
+                                                alt="sluit uitgelicht scherm"
                                             />
-                                        </span>
-                                    </h2>
-                                    <button
-                                        type="button"
-                                        onClick={this.sluitEnlarged}
-                                        className={selectors.sluitEnlargedBtn}
-                                    >
-                                        <img
-                                            src={closeIcon}
-                                            width="40"
-                                            height="40"
-                                            alt="sluit uitgelicht scherm"
+                                        </button>
+                                    </header>
+                                    <section className={selectors.main}>
+                                        {shortTextHTML}
+                                        <div
+                                            className={
+                                                selectors.mainContainerForEnlarged
+                                            }
+                                            dangerouslySetInnerHTML={{
+                                                __html: musicEvent.enlarged
+                                                    ? musicEvent.longTextHTML
+                                                    : ""
+                                            }}
                                         />
-                                    </button>
-                                </header>
-                                <section className={selectors.main}>
-                                    {shortTextHTML}
-                                    <div
-                                        className={
-                                            selectors.mainContainerForEnlarged
-                                        }
-                                        dangerouslySetInnerHTML={{
-                                            __html: musicEvent.enlarged
-                                                ? musicEvent.longTextHTML
-                                                : ""
-                                        }}
-                                    />
-                                    <footer className={selectors.footer}>
-                                        {priceElement}
-                                    </footer>
-                                </section>
-                                {hideSoldOutBtn}
-                            </article>
-                        );
-                    }) // article mapper
+                                        <footer className={selectors.footer}>
+                                            {priceElement}
+                                        </footer>
+                                    </section>
+                                    {hideSoldOutBtn}
+                                </article>
+                            );
+                        }) // article mapper
                 }
                 <LoadmoreButton
                     musicEventsLength={mel}
