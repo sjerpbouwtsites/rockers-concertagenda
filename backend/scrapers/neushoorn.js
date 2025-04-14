@@ -164,16 +164,14 @@ scraper.singlePage = async function ({ page, event }) {
             res.startDate = event.startDate;
             res.mapToStartTime =
                 document
-                    .querySelector(
-                        ".summary .summary__item .start, .summary .summary__item + .summary__item"
-                    )
+                    .querySelector(".summary__item + .summary__item")
                     ?.textContent.trim()
                     .toLowerCase() ?? "";
-            res.mapToDoorTime =
-                document
-                    .querySelector(".summary .summary__item .deur")
-                    ?.textContent.trim()
-                    .toLowerCase() ?? "";
+            // res.mapToDoorTime =
+            //     document
+            //         .querySelector(".summary .summary__item .deur")
+            //         ?.textContent.trim()
+            //         .toLowerCase() ?? "";
 
             return res;
         },
@@ -181,9 +179,9 @@ scraper.singlePage = async function ({ page, event }) {
     );
 
     pageInfo = mapToStartTime(pageInfo);
-    pageInfo = mapToDoorTime(pageInfo);
+    // pageInfo = mapToDoorTime(pageInfo);
     pageInfo = combineStartTimeStartDate(pageInfo);
-    pageInfo = combineDoorTimeStartDate(pageInfo);
+    // pageInfo = combineDoorTimeStartDate(pageInfo);
 
     const imageRes = await getImage({
         _this: this,

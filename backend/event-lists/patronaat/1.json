@@ -485,5 +485,26 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "door": "2025-12-05T19:30:00",
+    "start": "2025-12-05T20:15:00",
+    "venueEventUrl": "https://patronaat.nl/event/pene-corrida-05-12-25/",
+    "title": "Pene Corrida",
+    "location": "patronaat",
+    "price": null,
+    "shortText": "Een tornado van scheurende gitaren en herkenbare dancebeats",
+    "longText": "../public/texts/patronaat/bC9ldmVudC9wZW5lLWNvcnJpZGEtMDUtMTItMjUv.html",
+    "image": "../public/event-images/patronaat/bC9ldmVudC9wZW5lLWNvcnJpZGEtMDUtMTItMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "pene corrida": {
+        "s": "1hw2ywipnsowbtb8flzcca",
+        "l": "pene%20corrida",
+        "g": []
+      }
+    }
   }
 ]
