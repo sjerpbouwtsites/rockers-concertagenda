@@ -70,6 +70,19 @@ h2.app-title {
         right: 50%;
     }
 }
+
+@media (max-width: 800px) {
+    .region-filter-select {
+        width: 100vw;
+        height: calc(100vh - 106px);
+        top: 106px;
+        left: 0;
+        right: auto;
+        font-size: 2rem;
+        transform: translate(0, 0);
+    }
+}
+
 .region-filter-option {
     width: calc(50% - 20px);
     box-sizing: border-box;
@@ -145,10 +158,16 @@ h2.app-title {
     box-shadow: 2px 2px 2px var(--darkerpink);
     transition: 0.3s all ease-in-out;
     transform: translate(0, 0);
+    margin-left: 10px;
 }
 .banner-button:hover {
     background-color: var(--darkerpink);
     box-shadow: 0 0 0 var(--darkerpink);
     transform: translate(2px, 2px);
     cursor: pointer;
+}
+@media (max-width: 800px) {
+    .banner-button {
+        font-size: 1rem;
+    }
 }

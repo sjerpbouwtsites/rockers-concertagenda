@@ -241,7 +241,7 @@ class App extends React.Component {
                 className="banner-button region-filter-button"
                 onClick={regionFilterBtnClick}
             >
-                Locatie filter
+                Regio filter
             </button>
         );
     }

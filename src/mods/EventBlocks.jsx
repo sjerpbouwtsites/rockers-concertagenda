@@ -321,8 +321,7 @@ ${BEMify("event-block", [
                     const blockEl = document.getElementById(
                         `event-id-${musicEventKey}`
                     );
-                    const appBannerHeight =
-                        document.getElementById("app-banner-top").clientHeight;
+
                     if (window.innerWidth > 1024) {
                         const maxOffset = Math.max(
                             Math.min(
@@ -338,10 +337,7 @@ ${BEMify("event-block", [
                             `top: ${maxOffset}px`
                         );
                     }
-                    window.scrollTo(
-                        0,
-                        blockEl.offsetTop + appBannerHeight - 20
-                    );
+                    window.scrollTo(0, blockEl.offsetTop - 20);
                 }, 360);
                 setTimeout(() => {
                     const blockEl = document.getElementById(
@@ -482,7 +478,6 @@ ${BEMify("event-block", [
 
     async musicEventFilters() {
         await this.waitForHasFetchedData();
-        await this.sluitEnlarged();
 
         const { eventBlocksNaarApp, regionFilterSelectedOptions, musicEvents } =
             this.props;
@@ -497,12 +492,6 @@ ${BEMify("event-block", [
                       musicEvent.location.region
                   );
               });
-
-        console.log(`musicEvents original length:${musicEvents.length}`);
-        console.log(`musicEventsCopy  length:${musicEventsCopy.length}`);
-        console.log(
-            `musicEventsInRegion  length:${musicEventsInRegion.length}`
-        );
 
         this.setState({
             filteredMusicEvents: musicEventsInRegion,
