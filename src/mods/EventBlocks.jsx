@@ -9,7 +9,6 @@ class EventBlocks extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            maxEventsShown: 100,
             filteredMusicEvents: [],
             eventDataLoading: false,
             eventDataLoaded: false,
@@ -19,7 +18,8 @@ class EventBlocks extends React.Component {
             lastRegionFilter: ["all"]
         };
         this.currentYear = new Date().getFullYear();
-
+        this.maxEventsShown = 100;
+        this.musicEventsLength = null;
         this.createLocationHTML = this.createLocationHTML.bind(this);
         this.createDates = this.createDates.bind(this);
         this.add100ToMaxEventsShown = this.add100ToMaxEventsShown.bind(this);
@@ -32,6 +32,7 @@ class EventBlocks extends React.Component {
 
     componentDidMount() {
         document.addEventListener("keydown", this.escFunction, false);
+
         this.musicEventFilters();
         this.sluitEnlarged = this.sluitEnlarged.bind(this);
     }
@@ -314,7 +315,7 @@ ${BEMify("event-block", [
                 filteredMusicEvents[musicEventKey].enlarged = true;
                 filteredMusicEvents[musicEventKey].longTextHTML = text;
                 this.setState({
-                    filteredMusicEvents: [...filteredMusicEvents]
+                    filteredMusicEvents
                 });
                 setTimeout(() => {
                     const blockEl = document.getElementById(
@@ -421,9 +422,7 @@ ${BEMify("event-block", [
             event.enlarged = false;
             return event;
         });
-        this.setState({ filteredMusicEvents: nieuweEventsState }, () => {
-            console.log("na set state");
-        });
+        this.setState({ filteredMusicEvents: nieuweEventsState });
 
         await waitFor(10);
         return this.recursieveStijlEraf();
@@ -472,31 +471,38 @@ ${BEMify("event-block", [
     // #endregion event-block HTML methods
 
     add100ToMaxEventsShown() {
-        const { maxEventsShown, filteredMusicEvents } = this.state;
-        let newMax = maxEventsShown + 100;
-        if (newMax > filteredMusicEvents.length) {
-            newMax = filteredMusicEvents.length;
+        console.log(`add 100 to max events shown draait`);
+
+        let newMax = this.maxEventsShown + 100;
+        if (newMax > this.musicEventsLength) {
+            newMax = this.musicEventsLength;
         }
-        this.setState({
-            maxEventsShown: newMax
-        });
+        this.maxEventsShown = newMax;
     }
 
     async musicEventFilters() {
         await this.waitForHasFetchedData();
+        await this.sluitEnlarged();
 
         const { eventBlocksNaarApp, regionFilterSelectedOptions, musicEvents } =
             this.props;
-        console.group("filtering music events on");
-        console.log(regionFilterSelectedOptions);
-        console.groupEnd();
+
+        const musicEventsCopy = JSON.parse(JSON.stringify(musicEvents));
+        this.musicEventsLength = musicEventsCopy.length;
+
         const musicEventsInRegion = regionFilterSelectedOptions.includes("all")
-            ? [...musicEvents]
-            : [...musicEvents].filter((musicEvent) => {
+            ? musicEventsCopy
+            : musicEventsCopy.filter((musicEvent) => {
                   return regionFilterSelectedOptions.includes(
                       musicEvent.location.region
                   );
               });
+
+        console.log(`musicEvents original length:${musicEvents.length}`);
+        console.log(`musicEventsCopy  length:${musicEventsCopy.length}`);
+        console.log(
+            `musicEventsInRegion  length:${musicEventsInRegion.length}`
+        );
 
         this.setState({
             filteredMusicEvents: musicEventsInRegion,
@@ -617,7 +623,6 @@ ${BEMify("event-block", [
             eventDataLoading,
             filterHideSoldOut,
             filteredMusicEvents,
-            maxEventsShown,
             eventDataLoaded
         } = this.state;
 
@@ -639,7 +644,7 @@ ${BEMify("event-block", [
                 {
                     printThis
                         .filter((musicEvent, index) => {
-                            if (index + 1 > maxEventsShown) return false;
+                            if (index + 1 > this.maxEventsShown) return false;
                             return true;
                         })
                         .map((musicEvent, musicEventKey) => {
@@ -777,7 +782,7 @@ ${BEMify("event-block", [
                 }
                 <LoadmoreButton
                     musicEventsLength={mel}
-                    maxEventsShown={maxEventsShown}
+                    maxEventsShown={this.maxEventsShown}
                     eventDataLoaded={eventDataLoaded}
                     add100ToMaxEventsShown={this.add100ToMaxEventsShown}
                 />
