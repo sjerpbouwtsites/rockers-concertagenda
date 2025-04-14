@@ -1,4 +1,5 @@
 // import * as dotenv from 'dotenv';
+import fs from "fs";
 import WorkerStatus from "./mods/WorkerStatus.js";
 import { printLocationsToPublic } from "./mods/locations.js";
 import initMonitorBackend from "./monitor/backend.js";
@@ -124,8 +125,23 @@ async function recursiveStartWorkers(workerConfig) {
     return startWorker(workerConfig);
 }
 
+async function checkSinglePageCacheExistsRecursive(familyNames) {
+    const fCopy = [...familyNames];
+    const checkFor = fCopy.shift();
+
+    // check if cache folder exists
+    if (!fs.existsSync(`${fsDirections.singlePagesCache}/${checkFor}`)) {
+        fs.mkdirSync(`${fsDirections.singlePagesCache}/${checkFor}`);
+    }
+    if (fCopy.length) return checkSinglePageCacheExistsRecursive(fCopy);
+    return true;
+}
+
 async function init() {
+    printLocationsToPublic();
+
     const workerConfig = getWorkerConfig();
+    await checkSinglePageCacheExistsRecursive(workerConfig.familyNames);
     await houseKeeping();
 
     monitorWebsocketServer = await initMonitorBackend();
@@ -138,7 +154,6 @@ async function init() {
     WorkerStatus.registerAllWorkersAsWaiting(workerConfig.listCopy());
     recursiveStartWorkers(workerConfig);
     WorkerStatus.initializeReporting();
-    printLocationsToPublic();
     doeOnderhoudAanArtistDB(fsDirections);
 }
 

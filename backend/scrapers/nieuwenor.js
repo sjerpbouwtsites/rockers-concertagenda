@@ -35,7 +35,7 @@ const scraper = new AbstractScraper({
                 "spotifyConfirmation",
                 "failure"
             ]
-            // asyncCheckFuncs: ['allowed', 'event', 'refused', 'forbiddenTerms', 'emptySuccess'],
+            // asyncCheckFuncs: ['allowed', 'event', 'refused', 'forbidden', 'emptySuccess'],
         },
         singlePage: {
             requiredProperties: ["start"],
@@ -212,11 +212,16 @@ scraper.singlePage = async function ({ page, event }) {
 
     pageInfo.textForHTML = textForHTML;
 
+    const singlePageHTML = await page.evaluate(() => {
+        return document.body.parentNode.outerHTML;
+    });
+
     return this.singlePageEnd({
         pageInfo,
         stopFunctie,
         page,
-        event
+        event,
+        singlePageHTML
     });
 };
 // #endregion                         SINGLE PAGE

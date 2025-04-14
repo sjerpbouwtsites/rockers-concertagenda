@@ -139,6 +139,8 @@ export const workerNames = Object.keys(workerConfig);
 class WorkerListConf {
     data = [];
 
+    familyNames = Object.keys(workerConfig);
+
     static _self = null;
 
     curDay = new Date().toISOString().split("T")[0].replaceAll(/-/g, "");

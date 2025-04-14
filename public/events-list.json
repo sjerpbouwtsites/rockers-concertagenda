@@ -636,8 +636,8 @@
   },
   {
     "door": "2025-04-05T15:00:00",
-    "start": "2025-04-05T16:00:00",
-    "end": "2025-04-05T23:00:00",
+    "start": "2025-04-05T15:20:00",
+    "end": "2025-04-05T00:30:00",
     "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/grindhoven-xii/",
     "title": "Grindhoven XII",
     "location": "dynamo",
@@ -965,6 +965,30 @@
         "l": "anneke%20van%20giersbergen",
         "g": [
           "metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-06T04:00:00",
+    "end": "2025-04-06T07:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/paul-collins-plays-the-best-of-the-nerves-paul-collins-beat/",
+    "title": "Paul collins plays the best of the nerves & paul collins beat ",
+    "location": "dbs",
+    "price": 10,
+    "shortText": " misselijk & the hook MATINEE SHOW! aanvang 16 uur.",
+    "longText": "../public/texts/dbs/LXRoZS1uZXJ2ZXMtcGF1bC1jb2xsaW5zLWJlYXQv.html",
+    "image": "../public/event-images/dbs/LXRoZS1uZXJ2ZXMtcGF1bC1jb2xsaW5zLWJlYXQv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "miss": {
+        "s": null,
+        "l": "miss",
+        "g": [
+          "sludge",
+          "doom metal",
+          "death 'n' roll"
         ]
       }
     }
@@ -1625,6 +1649,30 @@
           "gothic symphonic metal",
           "slayer",
           "thrash metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-12T07:00:00",
+    "end": "2025-04-12T11:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/plato-utrecht-dbs-present-phono-w-mauro-pawlowski-cinder-well-usa-badtime-b-the-protos-kate/",
+    "title": "Plato utrecht & db’s present phono w/ mauro pawlowski ",
+    "location": "dbs",
+    "price": 16,
+    "shortText": " cinder well (usa)  +  badtime (b)  +  the protos  +  kate & dj chuck barry Plato Utrecht en dB’s slaan ter gelegenheid van Recordstore Day 2025 de handen ineen om jullie een buitengewoon fijn, en eclectisch muziekprogramma te bieden. We richten ergens in het pand een tweede podium in en trakteren jullie op een breed muzikaal aanbod variërend van de Belgische superster Mauro Pawlowski (dEUS/Evil Superstars) naar de schitterend breekbare folk van Cinder Well, van de synthpunk van het Belgische Badtime naar de onversneden garage rock ‘n roll van The Protos en de indierock van het Haagse multitalent Kate Oram (van o.a. Coco Cocaine). DJ Chuck Barry verzorgt de muzikale input tussendoor en na afloop, strictly vinyl.",
+    "longText": "../public/texts/dbs/dXNhLWJhZHRpbWUtYi10aGUtcHJvdG9zLWthdGUv.html",
+    "image": "../public/event-images/dbs/dXNhLWJhZHRpbWUtYi10aGUtcHJvdG9zLWthdGUv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the protos": {
+        "s": "3AiDZWRonNaAuieCLcWUIF",
+        "l": "the%20protos",
+        "g": [
+          "proto-punk",
+          "garage rock",
+          "power pop"
         ]
       }
     }
@@ -2619,6 +2667,37 @@
     }
   },
   {
+    "start": "2025-04-18T08:00:00",
+    "end": "2025-04-18T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/reverend-james-leg-usa-alive-records/",
+    "title": "Reverend james leg (usa – alive records) ",
+    "location": "dbs",
+    "price": 10,
+    "shortText": " le garage De dB’s volger moet hem kennen, REVEREND JAMES LEG, het podiumbeest op de Fender Rhodes die al met zijn eerste band The Black Diamond Heavies diverse malen in dB’s stond en daarna onder zijn eigen naam met de toevoeging Reverend ook daarna nog vele malen het dB’s podium onveilig maakte.\nTerug gravend in onze annalen zien we dat het 2019 geweest is dat we James Leg voor de laatste keer mochten verwelkomen. Het wordt dus weer hoog tijd voor een avond onversneden rockin’ soul met deze held van het eerste uur.\nWe hopen bovendien dat James Leg zijn, min of meer, vaste Europese drummer MATT GAZ (ook drummer van Mars Red Sky) weer meeneemt en maken ons op voor een warm weerzien. Genre-technisch is James Leg te plaatsen ergens tussen de gospel en soul van Nina Simone, het venijn van de Stooges en de groove van Dr John. Niet te missen dus, beste mensen. NIET te missen, zweet gaat gutsen en er zullen nieuwe fans bijkomen. De Reverend James Leg RULES! NOG STEEDS EN VOOR ALTIJD!!",
+    "longText": "../public/texts/dbs/ZC1qYW1lcy1sZWctdXNhLWFsaXZlLXJlY29yZHMv.html",
+    "image": "../public/event-images/dbs/ZC1qYW1lcy1sZWctdXNhLWFsaXZlLXJlY29yZHMv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "james leg": {
+        "s": "6jNXAv3sQluGbLUdheWe78",
+        "l": "james%20leg",
+        "g": [
+          "garage punk blues",
+          "modern blues rock"
+        ]
+      },
+      "reverend": {
+        "s": "7xlMEszAGIxeH2LUecqF21",
+        "l": "reverend",
+        "g": [
+          "thrash",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-04-18T19:00:00",
     "start": "2025-04-18T19:30:00",
     "venueEventUrl": "https://bibelot.net/programma/inherited-album-release/",
@@ -2782,30 +2861,6 @@
     }
   },
   {
-    "door": "2025-04-19T19:30:00",
-    "start": "2025-04-19T20:00:00",
-    "end": "2025-04-19T23:15:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/carsick/",
-    "title": "Carsick",
-    "location": "dynamo",
-    "price": 16,
-    "shortText": "Plus support",
-    "longText": "../public/texts/dynamo/aW5kaG92ZW4ubmwvZXZlbmVtZW50L2NhcnNpY2sv.html",
-    "image": "../public/event-images/dynamo/aW5kaG92ZW4ubmwvZXZlbmVtZW50L2NhcnNpY2sv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "plus": {
-        "s": null,
-        "l": "plus",
-        "g": [
-          "death",
-          "black metal"
-        ]
-      }
-    }
-  },
-  {
     "start": "2025-04-19T06:00:00",
     "end": "2025-04-19T11:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/kutopia-riot-grrrlll-punk-fest-w-workshops-live-music/",
@@ -2882,7 +2937,21 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "meer": {
+        "s": "4pAX6VBnbccF9uVcb9EGiq",
+        "l": "meer",
+        "g": [
+          "progressive rock",
+          "progressive metal",
+          "symphonic rock",
+          "art rock",
+          "electro ",
+          "punk ",
+          "rock "
+        ]
+      }
+    }
   },
   {
     "start": "2025-04-20T20:00:00+02:00",
@@ -3244,6 +3313,28 @@
           "atmospheric black metal",
           "metal noir quebecois",
           "voidgaze"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-23T07:30:00",
+    "end": "2025-04-23T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/stander-usa-teardrinker-genital-shame-usa/",
+    "title": "Stander (usa) ",
+    "location": "dbs",
+    "price": 13,
+    "shortText": " teardrinker  +  genital shame (usa) Een avond in de slipstream van het Roadburn festival met:",
+    "longText": "../public/texts/dbs/dGVhcmRyaW5rZXItZ2VuaXRhbC1zaGFtZS11c2Ev.html",
+    "image": "../public/event-images/dbs/dGVhcmRyaW5rZXItZ2VuaXRhbC1zaGFtZS11c2Ev",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "stander": {
+        "s": "5j8BtIIILfuF9GecZvWXaZ",
+        "l": "stander",
+        "g": [
+          "sludge metal"
         ]
       }
     }
@@ -4617,7 +4708,6 @@
     "price": 11,
     "shortText": " Niemand Minder Sessieband  +  MORPH (Misiconi) Onbeperkt muziekplezier.",
     "longText": "../public/texts/baroeg/ZGVyLXNlc3NpZWJhbmQtbW9ycGgtbWlzaWNvbmkv.html",
-    "image": "../public/event-images/baroeg/ZGVyLXNlc3NpZWJhbmQtbW9ycGgtbWlzaWNvbmkv",
     "soldOut": false,
     "eventGenres": [
       "Covers",
@@ -6112,6 +6202,34 @@
         "g": [
           "melodic death metal",
           "metalcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-18T04:00:00",
+    "end": "2025-05-18T08:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/subroutine-label-matinee-w-howrah-free-dust-sowt/",
+    "title": "Subroutine label matinee w/ howrah ",
+    "location": "dbs",
+    "price": 10,
+    "shortText": " free dust  +  søwt  +  special guest jack name (usa) Het Nederlandse kwaliteitslabel Subroutine heeft weer wat mooie releases te vieren en dat brengen we graag onder de aandacht. Op deze middag presenteren we optredens van HOWRAH, Free Dust & SØWT\nSpeciale gast is Jack Name, een enigma uit de LA-underground. Zijn nummers werden gecoverd door 𝗖𝗮𝘁𝗲 𝗟𝗲 𝗕𝗼𝗻, 𝗪𝗵𝗶𝘁𝗲 𝗙𝗲𝗻𝗰𝗲 en 𝗨.𝗦. 𝗚𝗶𝗿𝗹𝘀. Zijn experimentele sounds galmden al door het 𝗠𝘂𝘀𝗲𝘂𝗺 𝗼𝗳 𝗖𝗼𝗻𝘁𝗲𝗺𝗽𝗼𝗿𝗮𝗿𝘆 𝗔𝗿𝘁. Releases op 𝗗𝗿𝗮𝗴 𝗖𝗶𝘁𝘆, 𝗖𝗮𝘀𝘁𝗹𝗲-𝗙𝗮𝗰𝗲 en 𝗠𝗮𝗽𝗹𝗲 𝗗𝗲𝗮𝘁𝗵.",
+    "longText": "../public/texts/dbs/dGluZWUtdy1ob3dyYWgtZnJlZS1kdXN0LXNvd3Qv.html",
+    "image": "../public/event-images/dbs/dGluZWUtdy1ob3dyYWgtZnJlZS1kdXN0LXNvd3Qv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "søwt": {
+        "s": null,
+        "l": "s%c3%b8wt",
+        "g": []
+      },
+      "abel": {
+        "s": "0JRVrJQNnlSl10wEsioxOJ",
+        "l": "abel",
+        "g": [
+          "stoner metal",
+          "rock"
         ]
       }
     }
@@ -7864,6 +7982,20 @@
     "artists": {}
   },
   {
+    "start": "2025-06-06T08:00:00",
+    "end": "2025-06-06T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/wave-invasion-presents-patriarcy-usa-llora-usa/",
+    "title": "Wave invasion presents patriarcy (usa) ",
+    "location": "dbs",
+    "price": 16,
+    "shortText": " llora (usa) Riemen vast voor een avond opwindende en confronterende gothic synth pop, EBM, wave met zelfs een snuif metal. Enter PATRIARCHY & LLORA!",
+    "longText": "../public/texts/dbs/c2VudHMtcGF0cmlhcmN5LXVzYS1sbG9yYS11c2Ev.html",
+    "image": "../public/event-images/dbs/c2VudHMtcGF0cmlhcmN5LXVzYS1sbG9yYS11c2Ev",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2025-06-06T18:30:00",
     "start": "2025-06-06T18:30:00",
     "venueEventUrl": "https://www.013.nl/programma/106183/neal-morse-the-resonance-the-flower-kings",
@@ -8216,6 +8348,30 @@
     "artists": {}
   },
   {
+    "start": "2025-06-16T19:30:00",
+    "venueEventUrl": "https://kavka.be/event/mil-spec-can-restraining-order-us-wild-side-can/",
+    "title": "Mil-spec (can) ",
+    "location": "kavka",
+    "price": null,
+    "shortText": " restraining order (us)  +  wild side (can) RESTRAINING ORDER (us) Hardcore/punk from with a touch of garage/rock ’n roll to keeps things…",
+    "longText": "../public/texts/kavka/YWluaW5nLW9yZGVyLXVzLXdpbGQtc2lkZS1jYW4v.html",
+    "image": "../public/event-images/kavka/YWluaW5nLW9yZGVyLXVzLXdpbGQtc2lkZS1jYW4v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "mil-spec": {
+        "s": "5iWmisoEhjZGn4QYLRqzuy",
+        "l": "mil-spec",
+        "g": [
+          "melodic hardcore",
+          "hardcore punk",
+          "hardcore"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-06-16T19:00:00",
     "start": "2025-06-16T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/104742/peyton-parrish",
@@ -8474,6 +8630,42 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "start": "2025-06-20T08:00:00",
+    "end": "2025-06-20T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/ultha-d-grey-aura/",
+    "title": "Ultha (d) + grey aura",
+    "location": "dbs",
+    "price": 10,
+    "shortText": "Het Duitse Ultha is een band voor liefhebbers van lang uitgesponnen black metal met een goeie scheut melancholie, geschoeid op de leest van bands als Ash Borer en Wolves in the Throne Room.",
+    "longText": "../public/texts/dbs/aW8ubmwvZXZlbnQvdWx0aGEtZC1ncmV5LWF1cmEv.html",
+    "image": "../public/event-images/dbs/aW8ubmwvZXZlbnQvdWx0aGEtZC1ncmV5LWF1cmEv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "grey aura": {
+        "s": "5zlsiIekribvslzGzaqBJi",
+        "l": "grey%20aura",
+        "g": [
+          "dutch black metal",
+          "avant-garde",
+          "atmospheric",
+          "post-black metal"
+        ]
+      },
+      "ultha": {
+        "s": "2dNNRreuWrVDbNX2srDdag",
+        "l": "ultha",
+        "g": [
+          "black metal",
+          "black metal",
+          "hardcore (punk) ",
+          "metal ",
+          "punk "
+        ]
+      }
+    }
   },
   {
     "door": "2025-06-22T19:30:00",
@@ -10368,6 +10560,19 @@
           "progressive metal",
           "avant-garde"
         ]
+      },
+      "meer": {
+        "s": "4pAX6VBnbccF9uVcb9EGiq",
+        "l": "meer",
+        "g": [
+          "progressive rock",
+          "progressive metal",
+          "symphonic rock",
+          "art rock",
+          "electro ",
+          "punk ",
+          "rock "
+        ]
       }
     }
   },
@@ -10963,6 +11168,50 @@
     }
   },
   {
+    "door": "2025-09-17T19:00:00",
+    "start": "2025-09-17T19:30:00",
+    "venueEventUrl": "https://patronaat.nl/event/ten56-vctms-17-09-25/",
+    "title": "ten56. + VCTMS + The Dali Thundering Concept",
+    "location": "patronaat",
+    "price": null,
+    "shortText": "Muziek als een mokerslag op je borstkas, maar dan met stijl",
+    "longText": "../public/texts/patronaat/bmwvZXZlbnQvdGVuNTYtdmN0bXMtMTctMDktMjUv.html",
+    "image": "../public/event-images/patronaat/bmwvZXZlbnQvdGVuNTYtdmN0bXMtMTctMDktMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ten56.": {
+        "s": "28dpy0DQotTkBXcTlniQii",
+        "l": "ten56.",
+        "g": [
+          "deathcore",
+          "metalcore",
+          "djent"
+        ]
+      },
+      "vctms": {
+        "s": "0Gav1syIZzd1D6fiyhd9dT",
+        "l": "vctms",
+        "g": [
+          "deathcore",
+          "metalcore",
+          "djent"
+        ]
+      },
+      "the dali thundering concept": {
+        "s": "6HZqdaj8X8h6gMTPlD6EPR",
+        "l": "the%20dali%20thundering%20concept",
+        "g": [
+          "djent",
+          "progressive metal",
+          "deathcore",
+          "metalcore"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-09-19T20:00:00+02:00",
     "venueEventUrl": "https://www.spotgroningen.nl/programma/anna-ternheim-2/",
     "title": "Anna Ternheim",
@@ -11356,6 +11605,19 @@
           "melodic death metal",
           "metalcore"
         ]
+      },
+      "meer": {
+        "s": "4pAX6VBnbccF9uVcb9EGiq",
+        "l": "meer",
+        "g": [
+          "progressive rock",
+          "progressive metal",
+          "symphonic rock",
+          "art rock",
+          "electro ",
+          "punk ",
+          "rock "
+        ]
       }
     }
   },
@@ -11514,6 +11776,30 @@
           "scottish metal",
           "uk metalcore",
           "metalcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-10-09T19:30:00",
+    "start": "2025-10-09T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/hang-youth-support-09-10-25/",
+    "title": "Hang Youth + support",
+    "location": "patronaat",
+    "price": 23.5,
+    "shortText": "Dé belichaming van Nederlandse punk anno nu",
+    "longText": "../public/texts/patronaat/dC9oYW5nLXlvdXRoLXN1cHBvcnQtMDktMTAtMjUv.html",
+    "image": "../public/event-images/patronaat/dC9oYW5nLXlvdXRoLXN1cHBvcnQtMDktMTAtMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "hang youth": {
+        "s": "33s4eablBmnrPlE3y6CZFR",
+        "l": "hang%20youth",
+        "g": [
+          "dutch indie",
+          "lowlands hardcore"
         ]
       }
     }
@@ -11803,6 +12089,21 @@
         ]
       }
     }
+  },
+  {
+    "door": "2025-10-20T16:30:00",
+    "start": "2025-10-20T16:30:00",
+    "venueEventUrl": "https://patronaat.nl/event/common-thread-tour-day-2-20-10-25/",
+    "title": "Common Thread Tour",
+    "location": "patronaat",
+    "price": null,
+    "shortText": "Tweedaags punk-, emo- en hardcore-festival",
+    "longText": "../public/texts/patronaat/b24tdGhyZWFkLXRvdXItZGF5LTItMjAtMTAtMjUv.html",
+    "image": "../public/event-images/patronaat/b24tdGhyZWFkLXRvdXItZGF5LTItMjAtMTAtMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "door": "2025-10-20T20:00:00",

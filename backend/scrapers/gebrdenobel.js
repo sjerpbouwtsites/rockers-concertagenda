@@ -174,17 +174,25 @@ scraper.singlePage = async function ({ page, event }) {
     pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
     pageInfo.price = priceRes.price;
 
-    const { mediaForHTML, textForHTML } =
-        await longTextSocialsIframes(page, event, pageInfo);
+    const { mediaForHTML, textForHTML } = await longTextSocialsIframes(
+        page,
+        event,
+        pageInfo
+    );
     pageInfo.mediaForHTML = mediaForHTML;
 
     pageInfo.textForHTML = textForHTML;
+
+    const singlePageHTML = await page.evaluate(() => {
+        return document.body.parentNode.outerHTML;
+    });
 
     return this.singlePageEnd({
         pageInfo,
         stopFunctie,
         page,
-        event
+        event,
+        singlePageHTML
     });
 };
 // #endregion                         SINGLE PAGE

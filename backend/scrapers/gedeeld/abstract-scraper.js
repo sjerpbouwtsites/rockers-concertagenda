@@ -250,7 +250,7 @@ export default class AbstractScraper extends ScraperConfig {
         await this.saveEvents();
         await this.announceToMonitorDone();
 
-        await this.waitTime(250);
+        await this.waitTime(25);
         process.exit();
     }
     // #endregion                                                 SCRAPE INIT & SCRAPE DIE
@@ -346,6 +346,7 @@ export default class AbstractScraper extends ScraperConfig {
         }
 
         const page = await this.browser.newPage();
+
         await page.goto(this._s.mainPage.url, this._s.mainPage);
 
         return {
@@ -634,7 +635,7 @@ export default class AbstractScraper extends ScraperConfig {
      */
     async processSingleMusicEvent(eventsList = []) {
         if (debugSettings.vertraagScraper) {
-            await this.waitTime(250);
+            await this.waitTime(125);
         }
 
         // verwerk events 1
@@ -676,11 +677,20 @@ export default class AbstractScraper extends ScraperConfig {
         }
 
         // page info ophalen
-        const pageInfo = await this.singlePage({
+        const { pageInfo, singlePageHTML } = await this.singlePage({
             page: singleEventPage,
             url: singleEvent.venueEventUrl, // @TODO overal weghalen vervangen met event
             event: singleEvent
         });
+
+        //save in cache if not there
+        const u = singleEvent.venueEventUrl.replaceAll(/\W/g, "").toLowerCase();
+        var b = u.substring(u.length - 25, u.length + 1);
+        const singlePageCachePath = `${fsDirections.singlePagesCache}/${workerData.family}/${b}.html`;
+
+        if (!fs.existsSync(singlePageCachePath)) {
+            fs.writeFileSync(singlePageCachePath, singlePageHTML, "utf-8");
+        }
 
         // samenvoegen & naar EventsList sturen
         let mergedEvent = {
@@ -894,6 +904,23 @@ export default class AbstractScraper extends ScraperConfig {
      */
     async createSinglePage(event) {
         const page = await this.browser.newPage();
+
+        //check if in cache
+        const u = event.venueEventUrl.replaceAll(/\W/g, "").toLowerCase();
+        var b = u.substring(u.length - 25, u.length + 1);
+        const singlePageCachePath = `${fsDirections.singlePagesCache}/${workerData.family}/${b}.html`;
+
+        if (fs.existsSync(singlePageCachePath)) {
+            await page.goto(`file://${singlePageCachePath}`).catch((err) => {
+                this.handleError(
+                    err,
+                    `cache single err titel ${event.title} \n cache path ${singlePageCachePath}`,
+                    "close-app"
+                );
+            });
+            return page;
+        }
+
         let err1 = null;
         let err2 = null;
         await page.goto(event.venueEventUrl, this.singlePage).catch((err) => {
@@ -996,8 +1023,15 @@ export default class AbstractScraper extends ScraperConfig {
      * kijkt naar evt fouten in pageInfo.errors
      * @returns {*} pageInfo
      * @memberof AbstractScraper
+     * @params singlePageHTML volledige HTML van pagina
      */
-    async singlePageEnd({ pageInfo, stopFunctie, page, event }) {
+    async singlePageEnd({
+        pageInfo,
+        stopFunctie,
+        page,
+        event,
+        singlePageHTML = null
+    }) {
         if (this.isForced && debugSettings.debugPageInfo) {
             this.dirtyLog({
                 event,
@@ -1049,7 +1083,7 @@ export default class AbstractScraper extends ScraperConfig {
 
         if (page && !page.isClosed()) await page.close();
         clearTimeout(stopFunctie);
-        return pageInfo;
+        return { pageInfo, singlePageHTML };
     }
 
     /**

@@ -18,6 +18,7 @@ const fsDirections = {
     scrapersDir: path.resolve("./scrapers"),
     temp: path.resolve("./temp"),
     baseEventlists: path.resolve("./temp/baseEventlists"),
+    singlePagesCache: path.resolve("./temp/singlePages"),
     isRockAllow: path.resolve("./temp/isRock/allow.txt"),
     isRockRefuse: path.resolve("./temp/isRock/refuse.txt"),
     artistDBModels: path.resolve("./artist-db/models"),

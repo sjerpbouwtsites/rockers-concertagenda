@@ -63,6 +63,9 @@ const shell = {
      */
     get artistDBWrite() {
         return this._arguments?.artistDBWrite === "true" || null;
+    },
+    get noLocPrint() {
+        return this._arguments?.noLocPrint === "true" || false;
     }
 };
 
