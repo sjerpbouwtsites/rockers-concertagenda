@@ -13,12 +13,6 @@ function getShellArguments() {
         shellArguments[argName] = argValue;
     });
 
-    // if (shellArguments.force && shellArguments.force.includes("all")) {
-    //   shellArguments.force += Object.keys(
-    //     JSON.parse(fs.readFileSync(fsDirections.timestampsJson))
-    //   ).join(";");
-    // }
-
     return shellArguments;
 }
 
@@ -31,22 +25,38 @@ const shell = {
         return false;
     },
 
+    /**
+     * see {@link HouseKeeping#baseEventsCleanup}
+     */
     get removeBaseEvents() {
         return this.check(this._arguments?.removeBaseEvents);
     },
 
+    /**
+     * see {@link HouseKeeping#publicEventImagesCleanup}
+     */
     get removePublicEventImages() {
         return this.check(this._arguments?.removePublicEventImages);
     },
 
+    /**
+     * see {@link HouseKeeping#longTextFilesCleanup}
+     */
     get removeLongTextFiles() {
         return this.check(this._arguments?.removeLongTextFiles);
     },
+
+    /**
+     * see {@link HouseKeeping#singlePageCacheCleanup}
+     */
     get removeSinglePageCache() {
         return this.check(this._arguments?.removeSinglePageCache);
     },
     get debugLongHTML() {
         return this._arguments?.debugLongHTML ?? null;
+    },
+    get scraperEventsLongTextDebug() {
+        return this.check(this._arguments?.scraperEventsLongTextDebug);
     },
     get workers() {
         return this._arguments?.workers;
