@@ -17,7 +17,8 @@ class EventBlocks extends React.Component {
             sendDataUp: false
         };
         this.currentYear = new Date().getFullYear();
-        this.createLocation = this.createLocation.bind(this);
+
+        this.createLocationHTML = this.createLocationHTML.bind(this);
         this.createDates = this.createDates.bind(this);
         this.getEventData = this.getEventData.bind(this);
         this.add100ToMaxEventsShown = this.add100ToMaxEventsShown.bind(this);
@@ -46,7 +47,19 @@ class EventBlocks extends React.Component {
 
     // #region fetch methoden getEventData en loadLongerText
 
+    async waitForHasFetchedData() {
+        const { hasFetchedData } = this.props;
+        console.log(`hasFetchedData ${hasFetchedData}`);
+        if (hasFetchedData) return true;
+        else {
+            await waitFor(50);
+            return this.waitForHasFetchedData();
+        }
+    }
+
     async getEventData() {
+        await this.waitForHasFetchedData();
+        const { locations } = this.props;
         this.setState({ eventDataLoading: true });
         return fetch("./events-list.json", {})
             .then((response) => response.json())
@@ -57,6 +70,20 @@ class EventBlocks extends React.Component {
                         musicEvent.longTextHTML = null;
                         // eslint-disable-next-line
                         musicEvent.enlarged = false;
+                        musicEvent.locationCity = "Unknown";
+                        musicEvent.locationName = "Unknown";
+                        musicEvent.locationRegion = "Unknown";
+                        if (!locations.hasOwnProperty(musicEvent.location)) {
+                            console.error(
+                                `Locatie ${musicEvent.location} niet gevonden`
+                            );
+                        }
+                        const locationObj =
+                            locations[musicEvent.location] ?? {};
+                        musicEvent.locationCity = locationObj.city;
+                        musicEvent.locationName = locationObj.name;
+                        musicEvent.locationRegion = locationObj.region;
+
                         return musicEvent;
                     })
                     .filter(filterEventsDateInPast);
@@ -177,7 +204,7 @@ ${BEMify("event-block", [
 
     // eslint-disable-next-line
     createImageHTML(musicEvent, selectors) {
-        if (musicEvent.image.includes("https")) {
+        if (musicEvent?.image?.includes("https") ?? false) {
             return (
                 <img
                     src={musicEvent.image}
@@ -214,19 +241,14 @@ ${BEMify("event-block", [
         );
     }
 
-    createLocation(musicEvent) {
-        const { locations } = this.props;
-        const locationObj = locations[musicEvent.location] ?? null;
-        if (!locationObj) {
-            return musicEvent.location;
-        }
+    createLocationHTML(musicEvent) {
         return (
             <span>
                 <span className="event-block__location-row">
-                    {locationObj.name}
+                    {musicEvent.locationName}
                 </span>
                 <span className="event-block__location-row">
-                    {locationObj.city}
+                    {musicEvent.locationCity}
                 </span>
             </span>
         );
@@ -700,7 +722,9 @@ ${BEMify("event-block", [
                                         <span
                                             className={`${selectors.headerLocation} number-of-dates-${numberOfDates}`}
                                         >
-                                            {this.createLocation(musicEvent)}
+                                            {this.createLocationHTML(
+                                                musicEvent
+                                            )}
                                             <span
                                                 dangerouslySetInnerHTML={{
                                                     __html: datesHTML

@@ -28,10 +28,11 @@ class App extends React.Component {
             filterSettings: {
                 podia: {},
                 daterange: {
-                    lower: "2023-06-19",
-                    upper: "2025-12-31"
+                    lower: "2025-04-01",
+                    upper: "2026-12-31"
                 }
-            }
+            },
+            hasFetchedData: false
         };
         // this.updateSwitch = this.updateSwitch.bind(this);
         // this.updateSwipeStateFilter = this.updateSwipeStateFilter.bind(this);
@@ -86,6 +87,9 @@ class App extends React.Component {
             .then(() => {
                 this.hasFetchedData = true;
                 this.isFetchingData = false;
+                this.setState({
+                    hasFetchedData: true
+                });
             })
             .catch((err) => {
                 this.isFetchingData = false;
@@ -182,7 +186,8 @@ class App extends React.Component {
             openScreenMoving,
             filterSettings,
             locations,
-            hasRecievedDataFromEventBlocks
+            hasRecievedDataFromEventBlocks,
+            hasFetchedData
         } = this.state;
         return (
             <div>
@@ -199,6 +204,7 @@ class App extends React.Component {
                             eventBlocksNaarApp={this.eventBlocksNaarApp}
                             filterSettings={filterSettings}
                             locations={locations}
+                            hasFetchedData={hasFetchedData}
                         />
                     </main>
                     {this.appBanner("onder")}
