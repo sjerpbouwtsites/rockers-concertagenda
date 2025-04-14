@@ -1,27 +1,32 @@
 .app {
-  /* display: flex; */
-  position: relative;
-  /* background-color: var(--anthracite); */
+    /* display: flex; */
+    position: relative;
+    /* background-color: var(--anthracite); */
+    filter: blur(0) saturate(100%);
+    transition: 0.2s filter 0.1s ease-in-out;
+}
+.app--blur {
+    filter: blur(1px) saturate(60%);
 }
 .app-view {
-  width: 100vw;
+    width: 100vw;
 }
 
 .hidden {
-  display: none !important;
+    display: none !important;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 iframe {
-  border: 0;
+    border: 0;
 }
 
 blockquote {
-  font-size: 0.75em;
-  font-style: italic;
-  margin: 1em 1.5em;
+    font-size: 0.75em;
+    font-style: italic;
+    margin: 1em 1.5em;
 }

@@ -3,7 +3,6 @@ import { parentPort, workerData } from "worker_threads";
 import fs from "fs";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import puppeteer from "puppeteer";
-import { Location } from "../mods/locations.js";
 import QuickWorkerMessage from "../mods/quick-worker-message.js";
 import getVenueMonths from "../mods/months.js";
 import { workerConfig } from "../mods/worker-config.js";
@@ -179,9 +178,16 @@ async function metalFanDoURL(page, url, qwm) {
 
     const musicEvents = eventData
         .map((eventDatum) => {
-            let locationName = Location.makeLocationSlug(
-                eventDatum.eventLocationName
-            );
+            let locationName = "";
+            if (eventDatum.eventLocationName === "013") {
+                locationName = "013";
+            } else {
+                locationName = eventDatum.eventLocationName
+                    .replace(/\s/g, "-")
+                    .replace(/\W/g, "")
+                    .toLowerCase();
+            }
+
             const watchForWeirdLocationNames = Object.keys(rename);
             if (watchForWeirdLocationNames.includes(locationName)) {
                 locationName = watchForWeirdLocationNames[locationName];

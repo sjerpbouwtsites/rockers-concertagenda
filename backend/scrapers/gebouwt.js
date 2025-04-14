@@ -143,8 +143,10 @@ scraper.singlePage = async function ({ page, event }) {
             const lis = Array.from(
                 document.querySelectorAll(".event-info-data li")
             );
-            const openLi = lis.find((li) => li.textContent.includes("open"));
-            let startLi = lis.find((li) => li.textContent.includes("aanvang"));
+            const openLi = lis.find((li) => li?.textContent?.includes("open"));
+            let startLi = lis.find((li) =>
+                li?.textContent?.includes("aanvang")
+            );
             if (!startLi) {
                 startLi = document.querySelector(".event-info-data");
             }
@@ -198,11 +200,16 @@ scraper.singlePage = async function ({ page, event }) {
     pageInfo.mediaForHTML = mediaForHTML;
 
     pageInfo.textForHTML = textForHTML;
+    const singlePageHTML = await page.evaluate(() => {
+        return document.body.parentNode.outerHTML;
+    });
+
     return this.singlePageEnd({
         pageInfo,
         stopFunctie,
         page,
-        event
+        event,
+        singlePageHTML
     });
 };
 // #endregion                         SINGLE PAGE

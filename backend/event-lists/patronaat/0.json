@@ -357,38 +357,83 @@
     }
   },
   {
-    "door": "2025-10-05T19:30:00",
-    "start": "2025-10-05T20:30:00",
-    "venueEventUrl": "https://patronaat.nl/event/yt-05-10-25/",
-    "title": "Y&t",
+    "door": "2025-09-17T19:00:00",
+    "start": "2025-09-17T19:30:00",
+    "venueEventUrl": "https://patronaat.nl/event/ten56-vctms-17-09-25/",
+    "title": "ten56. + VCTMS + The Dali Thundering Concept",
     "location": "patronaat",
-    "price": 40.5,
-    "shortText": "Ware hardrock pioniers",
-    "longText": "../public/texts/patronaat/YXRyb25hYXQubmwvZXZlbnQveXQtMDUtMTAtMjUv.html",
-    "image": "../public/event-images/patronaat/YXRyb25hYXQubmwvZXZlbnQveXQtMDUtMTAtMjUv",
+    "price": null,
+    "shortText": "Muziek als een mokerslag op je borstkas, maar dan met stijl",
+    "longText": "../public/texts/patronaat/bmwvZXZlbnQvdGVuNTYtdmN0bXMtMTctMDktMjUv.html",
+    "image": "../public/event-images/patronaat/bmwvZXZlbnQvdGVuNTYtdmN0bXMtMTctMDktMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "y&t": {
-        "s": null,
-        "l": null,
+      "ten56.": {
+        "s": "28dpy0DQotTkBXcTlniQii",
+        "l": "ten56.",
         "g": [
-          "symfonische rock"
+          "deathcore",
+          "metalcore",
+          "djent"
+        ]
+      },
+      "vctms": {
+        "s": "0Gav1syIZzd1D6fiyhd9dT",
+        "l": "vctms",
+        "g": [
+          "deathcore",
+          "metalcore",
+          "djent"
+        ]
+      },
+      "the dali thundering concept": {
+        "s": "6HZqdaj8X8h6gMTPlD6EPR",
+        "l": "the%20dali%20thundering%20concept",
+        "g": [
+          "djent",
+          "progressive metal",
+          "deathcore",
+          "metalcore"
         ]
       }
     }
   },
   {
-    "door": "2025-10-19T15:00:00",
-    "start": "2025-10-19T15:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/common-thread-tour-day-1-19-10-25/",
+    "door": "2025-10-09T19:30:00",
+    "start": "2025-10-09T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/hang-youth-support-09-10-25/",
+    "title": "Hang Youth + support",
+    "location": "patronaat",
+    "price": 23.5,
+    "shortText": "Dé belichaming van Nederlandse punk anno nu",
+    "longText": "../public/texts/patronaat/dC9oYW5nLXlvdXRoLXN1cHBvcnQtMDktMTAtMjUv.html",
+    "image": "../public/event-images/patronaat/dC9oYW5nLXlvdXRoLXN1cHBvcnQtMDktMTAtMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "hang youth": {
+        "s": "33s4eablBmnrPlE3y6CZFR",
+        "l": "hang%20youth",
+        "g": [
+          "dutch indie",
+          "lowlands hardcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-10-20T16:30:00",
+    "start": "2025-10-20T16:30:00",
+    "venueEventUrl": "https://patronaat.nl/event/common-thread-tour-day-2-20-10-25/",
     "title": "Common Thread Tour",
     "location": "patronaat",
-    "price": 45.5,
+    "price": null,
     "shortText": "Tweedaags punk-, emo- en hardcore-festival",
-    "longText": "../public/texts/patronaat/b24tdGhyZWFkLXRvdXItZGF5LTEtMTktMTAtMjUv.html",
-    "image": "../public/event-images/patronaat/b24tdGhyZWFkLXRvdXItZGF5LTEtMTktMTAtMjUv",
+    "longText": "../public/texts/patronaat/b24tdGhyZWFkLXRvdXItZGF5LTItMjAtMTAtMjUv.html",
+    "image": "../public/event-images/patronaat/b24tdGhyZWFkLXRvdXItZGF5LTItMjAtMTAtMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,

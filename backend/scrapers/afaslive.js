@@ -142,7 +142,7 @@ scraper.mainPage = async function () {
 scraper.singlePage = async function ({ page, event }) {
     const { stopFunctie } = await this.singlePageStart();
 
-    await this.waitTime(250);
+    await this.waitTime(125);
 
     let pageInfo = await page.evaluate(
         // eslint-disable-next-line no-shadow
@@ -232,16 +232,16 @@ scraper.singlePage = async function ({ page, event }) {
 
     pageInfo.textForHTML = textForHTML;
 
-    this.dirtyDebug({
-        textForHTMLVan: event.title,
-        text: textForHTML
+    const singlePageHTML = await page.evaluate(() => {
+        return document.body.parentNode.outerHTML;
     });
 
     return this.singlePageEnd({
         pageInfo,
         stopFunctie,
         page,
-        event
+        event,
+        singlePageHTML
     });
 };
 // #endregion                         SINGLE PAGE

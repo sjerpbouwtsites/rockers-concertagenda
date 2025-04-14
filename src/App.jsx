@@ -17,21 +17,25 @@ import OpenScreen from "./mods/OpenScreen.jsx";
 
 class App extends React.Component {
     title = "Rock Agenda";
-
+    hideTimer = null;
     constructor(props) {
         super(props);
         this.state = {
             openScreenHidden: false,
             locations: {},
+            musicEvents: [],
             musicEventCount: 0,
             hasRecievedDataFromEventBlocks: false,
             filterSettings: {
                 podia: {},
                 daterange: {
-                    lower: "2023-06-19",
-                    upper: "2025-12-31"
+                    lower: "2025-04-01",
+                    upper: "2026-12-31"
                 }
-            }
+            },
+            hasFetchedData: false,
+            canPrintRegionsFilter: false,
+            regionFilterSelectedOptions: ["all"]
         };
         // this.updateSwitch = this.updateSwitch.bind(this);
         // this.updateSwipeStateFilter = this.updateSwipeStateFilter.bind(this);
@@ -40,9 +44,10 @@ class App extends React.Component {
         this.hasFetchedData = false;
         this.isFetchingData = false;
         this.appProcessFilterChange = this.appProcessFilterChange.bind(this);
-        this.getScraperNamesAndLocations =
-            this.getScraperNamesAndLocations.bind(this);
+        this.getLocationsMusicEvents = this.getLocationsMusicEvents.bind(this);
         this.appBanner = this.appBanner.bind(this);
+        this.regionFilterSwitchHTML = this.regionFilterSwitchHTML.bind(this);
+        this.regionFilterHTML = this.regionFilterHTML.bind(this);
         this.eventBlocksNaarApp = this.eventBlocksNaarApp.bind(this);
     }
 
@@ -57,35 +62,76 @@ class App extends React.Component {
                 openScreenMoving: true
             });
         }, 2000);
-    }
-
-    componentDidUpdate() {
         if (!this.hasFetchedData && !this.isFetchingData)
-            this.getScraperNamesAndLocations();
+            this.getLocationsMusicEvents();
     }
 
-    async getScraperNamesAndLocations() {
+    componentDidUpdate() {}
+
+    /**
+     * voegt location objs toe aan musicEvents
+     * @param {Array} [locations, musicEvents] output van promise.all
+     * @returns [locations, musicEventsAndLocs]
+     */
+    async addLocationObjToMusicEvents([locations, musicEvents]) {
+        const musicEventsAndLocs = musicEvents.map((me) => {
+            const ll = me.location + "";
+            const foundLoc = locations.hasOwnProperty(ll)
+                ? locations[ll]
+                : null;
+            if (!foundLoc) {
+                me.location = {
+                    name: ll,
+                    url: null,
+                    latitude: null,
+                    longitude: null,
+                    city: null,
+                    slug: ll,
+                    region: null
+                };
+            } else {
+                me.location = { ...foundLoc, slug: ll };
+            }
+            return me;
+        });
+
+        return [locations, musicEventsAndLocs];
+    }
+
+    /**
+     * fetches locations.json and events-list.json
+     * stores in state
+     * waits for both promises to finish
+     */
+    async getLocationsMusicEvents() {
         this.isFetchingData = true;
-        // const getTimeStamps = fetch('./timestamps.json', {})
-        //   .then((response) => response.json())
-        //   .then((timestamps) => {
-        //     this.setState({
-        //       names: Object.keys(timestamps).filter((key) => key !== 'metalfan'),
-        //     });
-        //   });
 
         const getLocations = fetch("./locations.json", {})
             .then((response) => response.json())
             .then((locations) => {
-                this.setState({
-                    locations
-                });
+                return locations;
             });
 
-        Promise.all([getLocations])
-            .then(() => {
+        const getMusicEvents = fetch("./events-list.json", {})
+            .then((response) => response.json())
+            .then((musicEvents) => {
+                return musicEvents;
+            });
+
+        return await Promise.all([getLocations, getMusicEvents])
+            .then(this.addLocationObjToMusicEvents)
+            .then(([locations, musicEvents]) => {
                 this.hasFetchedData = true;
                 this.isFetchingData = false;
+
+                this.setState({
+                    locations,
+                    musicEvents,
+                    hasFetchedData: true,
+                    canPrintRegionsFilter: true
+                });
+
+                return true;
             })
             .catch((err) => {
                 this.isFetchingData = false;
@@ -93,14 +139,16 @@ class App extends React.Component {
             });
     }
 
-    eventBlocksNaarApp(eventBlocksData) {
-        const l = eventBlocksData.length;
-        console.log(l, eventBlocksData);
+    /**
+     * manier voor eventblocks om terug te koppelen aan app hoeveel musicEventCount er nu is.
+     * @param {number} currentMusicEventsLength
+     */
+    eventBlocksNaarApp(currentMusicEventsLength) {
         this.setState({
             hasRecievedDataFromEventBlocks: true
         });
         this.setState({
-            musicEventCount: l
+            musicEventCount: currentMusicEventsLength
         });
     }
 
@@ -109,52 +157,94 @@ class App extends React.Component {
             filterSettings
         });
     }
-    // abstractSwitchUpdater(setStateFunc, setStateParam) {
-    //   setTimeout(() => {
-    //     window.scrollTo(0, 0);
-    //   }, 50);
-    //   setTimeout(() => {
-    //     setStateFunc(setStateParam);
-    //   }, 300);
-    // }
 
-    // updateSwitch(index, indexLatest, meta) {
-    //   this.abstractSwitchUpdater((index) => {
-    //     this.setState({
-    //       swipeState: index,
-    //     });
-    //   }, index);
-    // }
+    timerHideFilter() {
+        clearTimeout(this.hideTimer);
+        this.hideTimer = setTimeout(() => {
+            if (
+                document
+                    .getElementById("region-filter-wrapper")
+                    .classList.contains("region-filter--showing")
+            )
+                document.getElementById("region-filter-button").click();
+        }, 1500);
+    }
 
-    // updateSwipeStateExplainer() {
-    //   this.abstractSwitchUpdater(() => {
-    //     this.setState({
-    //       swipeState: this.state.swipeState === 1 ? 2 : 1,
-    //     });
-    //   });
-    // }
+    regionFilterHTML(locatie) {
+        if (locatie !== "top") return;
+        if (!this.state.canPrintRegionsFilter)
+            return <div className="region-filter region-filter--no-data"></div>;
+        const { locations } = this.state;
+        const selectedOptions = this.state.regionFilterSelectedOptions;
 
-    // updateSwipeStateFilter() {
-    //   this.abstractSwitchUpdater(() => {
-    //     this.setState({
-    //       swipeState: this.state.swipeState === 0 ? 1 : 0,
-    //     });
-    //   });
-    // }
+        const handleChange = (event) => {
+            const value = Array.from(
+                event.target.selectedOptions,
+                (option) => option.value
+            );
+            this.setState({
+                regionFilterSelectedOptions: value
+            });
+            this.timerHideFilter();
+        };
 
-    // appTitleToExplainer() {
-    //   if (flicketyOptions === 0) {
-    //     return "";
-    //   }
-    //   return this.state.swipeState === 1 ? `Uitleg 👉` : `👈 Agenda`;
-    // }
+        const halfNumberOfRegions = Math.ceil(
+            locations._meta.regions.length / 2
+        );
 
-    // appTitleToFilter() {
-    //   if (this.state.swipeState === 2) {
-    //     return "";
-    //   }
-    //   return this.state.swipeState === 1 ? `👈 Filter` : `Agenda 👉`;
-    // }
+        return (
+            <div
+                id="region-filter-wrapper"
+                className={`region-filter region-filter--has-data region-filter--hidden`}
+            >
+                <select
+                    className="region-filter-select"
+                    name="region-filter-select"
+                    multiple
+                    value={selectedOptions}
+                    onChange={handleChange}
+                >
+                    {locations._meta.regions.map((option, index) => (
+                        <option
+                            className={` option-column--${index < halfNumberOfRegions ? `left` : `right`} option-column-index--${index + 1 - halfNumberOfRegions} region-filter-option`}
+                            key={`region-filter-option-${index}`}
+                            value={option}
+                        >
+                            {option}
+                        </option>
+                    ))}
+                </select>
+            </div>
+        );
+    }
+
+    regionFilterSwitchHTML(locatie) {
+        if (locatie !== "top") return;
+        const regionFilterBtnClick = (event) => {
+            event.preventDefault();
+            const selWrapper = document.getElementById("region-filter-wrapper");
+            if (selWrapper.classList.contains("region-filter--hidden")) {
+                selWrapper.classList.add("region-filter--showing");
+                selWrapper.classList.remove("region-filter--hidden");
+            } else {
+                selWrapper.classList.remove("region-filter--showing");
+                selWrapper.classList.add("region-filter--hidden");
+            }
+            // const curState = this.state.showsRegionFilter;
+            // this.setState({
+            //     showsRegionFilter: !curState
+            // });
+        };
+        return (
+            <button
+                id="region-filter-button"
+                className="banner-button region-filter-button"
+                onClick={regionFilterBtnClick}
+            >
+                Regio filter
+            </button>
+        );
+    }
 
     appBanner(locatie = "top") {
         const { musicEventCount } = this.state;
@@ -172,17 +262,21 @@ class App extends React.Component {
                         - {musicEventCount} concerten!
                     </span>
                 </h1>
+                {this.regionFilterHTML(locatie)}
+                {this.regionFilterSwitchHTML(locatie)}
             </div>
         );
     }
-
     render() {
         const {
             openScreenHidden,
             openScreenMoving,
             filterSettings,
             locations,
-            hasRecievedDataFromEventBlocks
+            hasRecievedDataFromEventBlocks,
+            hasFetchedData,
+            musicEvents,
+            regionFilterSelectedOptions
         } = this.state;
         return (
             <div>
@@ -199,6 +293,11 @@ class App extends React.Component {
                             eventBlocksNaarApp={this.eventBlocksNaarApp}
                             filterSettings={filterSettings}
                             locations={locations}
+                            musicEvents={musicEvents}
+                            hasFetchedData={hasFetchedData}
+                            regionFilterSelectedOptions={
+                                regionFilterSelectedOptions
+                            }
                         />
                     </main>
                     {this.appBanner("onder")}
@@ -209,3 +308,50 @@ class App extends React.Component {
 }
 
 export default App;
+
+// abstractSwitchUpdater(setStateFunc, setStateParam) {
+//   setTimeout(() => {
+//     window.scrollTo(0, 0);
+//   }, 50);
+//   setTimeout(() => {
+//     setStateFunc(setStateParam);
+//   }, 300);
+// }
+
+// updateSwitch(index, indexLatest, meta) {
+//   this.abstractSwitchUpdater((index) => {
+//     this.setState({
+//       swipeState: index,
+//     });
+//   }, index);
+// }
+
+// updateSwipeStateExplainer() {
+//   this.abstractSwitchUpdater(() => {
+//     this.setState({
+//       swipeState: this.state.swipeState === 1 ? 2 : 1,
+//     });
+//   });
+// }
+
+// updateSwipeStateFilter() {
+//   this.abstractSwitchUpdater(() => {
+//     this.setState({
+//       swipeState: this.state.swipeState === 0 ? 1 : 0,
+//     });
+//   });
+// }
+
+// appTitleToExplainer() {
+//   if (flicketyOptions === 0) {
+//     return "";
+//   }
+//   return this.state.swipeState === 1 ? `Uitleg 👉` : `👈 Agenda`;
+// }
+
+// appTitleToFilter() {
+//   if (this.state.swipeState === 2) {
+//     return "";
+//   }
+//   return this.state.swipeState === 1 ? `👈 Filter` : `Agenda 👉`;
+// }

@@ -3,24 +3,171 @@
 */
 
 .app-banner {
-  padding: 1em;
-  background-color: var(--anthracite);
-  color: var(--green);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+    padding: 1em;
+    background-color: var(--anthracite);
+    color: var(--green);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+#app-banner-top {
+    position: sticky;
+    z-index: 2;
+    top: 0;
 }
 
 h2.app-title {
-  font-size: 26px;
+    font-size: 26px;
 }
 .app-title-right {
-  font-weight: bold;
-  font-size: 1.25em;
+    font-weight: bold;
+    font-size: 1.25em;
 }
 .app-title-right span:hover {
-  cursor: pointer;
-  color: var(--pink);
-  font-weight: bold;
+    cursor: pointer;
+    color: var(--pink);
+    font-weight: bold;
+}
+.region-filter-select::before {
+    content: "Kies één of meer gebieden.";
+    position: absolute;
+    top: 5px;
+    color: var(--pink);
+}
+.region-filter-select {
+    position: fixed;
+    top: 50%;
+    right: 50px;
+    z-index: 1999;
+    border: 0;
+    background-color: var(--anthracite);
+    color: white;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    padding-top: 62px;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    transition-property: transform;
+    transition-duration: 1.2s;
+    transition-delay: 0.2s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-sizing: border-box;
+}
+.region-filter-select {
+    font-size: 3rem;
+    height: 705px;
+    width: 450px;
+}
+@media (max-height: 900px) {
+    .region-filter-select {
+        overflow-y: auto;
+    }
+}
+@media (max-width: 1024px) {
+    .region-filter-select {
+        right: 50%;
+    }
+}
+
+@media (max-width: 800px) {
+    .region-filter-select {
+        width: 100vw;
+        height: calc(100vh - 106px);
+        top: 106px;
+        left: 0;
+        right: auto;
+        font-size: 2rem;
+        transform: translate(0, 0);
+    }
+}
+
+.region-filter-option {
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.region-filter-select option:hover {
+    cursor: pointer;
+}
+
+.region-filter--hidden .region-filter-select {
+    transform: translate(-50%, calc(-100vh - 50%));
+}
+
+.option-column--left {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.option-column--right {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    margin-left: 10px;
+}
+.option-column--right.option-column-index--1 {
+    top: calc(0 * 1.35em + 62px);
+}
+.option-column--right.option-column-index--2 {
+    top: calc(1 * 1.35em + 62px);
+}
+.option-column--right.option-column-index--3 {
+    top: calc(2 * 1.35em + 62px);
+}
+.option-column--right.option-column-index--4 {
+    top: calc(3 * 1.35em + 62px);
+}
+.option-column--right.option-column-index--5 {
+    top: calc(4 * 1.35em + 62px);
+}
+.option-column--right.option-column-index--6 {
+    top: calc(5 * 1.35em + 62px);
+}
+.option-column--right.option-column-index--7 {
+    top: calc(6 * 1.35em + 62px);
+}
+.option-column--right.option-column-index--8 {
+    top: calc(7 * 1.35em + 62px);
+}
+.option-column--right.option-column-index--9 {
+    top: calc(8 * 1.35em + 62px);
+}
+.option-column--right.option-column-index--10 {
+    top: calc(9 * 1.35em + 62px);
+}
+.option-column--right.option-column-index--11 {
+    top: calc(10 * 1.35em + 62px);
+}
+.option-column--right.option-column-index--12 {
+    top: calc(11 * 1.35em + 62px);
+}
+.option-column--right.option-column-index--13 {
+    top: calc(12 * 1.35em + 62px);
+}
+.banner-button {
+    border: 0;
+    padding: 0.25em 0.5em;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--pink);
+    color: var(--felgreen);
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 2px 2px 2px var(--darkerpink);
+    transition: 0.3s all ease-in-out;
+    transform: translate(0, 0);
+    margin-left: 10px;
+}
+.banner-button:hover {
+    background-color: var(--darkerpink);
+    box-shadow: 0 0 0 var(--darkerpink);
+    transform: translate(2px, 2px);
+    cursor: pointer;
+}
+@media (max-width: 800px) {
+    .banner-button {
+        font-size: 1rem;
+    }
 }

@@ -3,9 +3,10 @@ killall -s 9 chrome
 clear
 node index.js workers=3 \
     keepImages=true \
-    keepBaseEvents=true \
+    keepBaseEvents=false \
     artistDBWrite=true \
-    force=neushoorn%tivolivredenburg
+    noLocPrint=false \
+    force=all
 
 # force=all \
 # prettier --write "../public/texts/**/*.html"

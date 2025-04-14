@@ -1,221 +1,151 @@
 [
   {
-    "start": "2025-04-07T19:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/and-so-i-watch-you-from-afar/",
-    "title": "And So I Watch You From Afar",
+    "start": "2025-05-01T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/wodan-boys/",
+    "title": "Wodan Boys",
     "location": "neushoorn",
-    "price": 25,
-    "shortText": "Maar je hoort ze van dichtbij!",
-    "longText": "../public/texts/neushoorn/L2FuZC1zby1pLXdhdGNoLXlvdS1mcm9tLWFmYXIv.html",
-    "image": "../public/event-images/neushoorn/L2FuZC1zby1pLXdhdGNoLXlvdS1mcm9tLWFmYXIv",
+    "price": 18,
+    "shortText": "Een rauwe liveshow waar de Noorse god Wodan trots op zou zijn",
+    "longText": "../public/texts/neushoorn/b29ybi5ubC9wcm9kdWN0aW9uL3dvZGFuLWJveXMv.html",
+    "image": "../public/event-images/neushoorn/b29ybi5ubC9wcm9kdWN0aW9uL3dvZGFuLWJveXMv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "and so i watch you from afar": {
-        "s": "7qKMNwlACMZOUdMG3acwst",
-        "l": "and%20so%20i%20watch%20you%20from%20afar",
+      "wodan boys": {
+        "s": "0kmkbibevmq4luqquahdmr",
+        "l": "wodan%20boys",
         "g": [
-          "british post-rock",
-          "instrumental post-rock",
-          "instrumental rock",
-          "math rock",
-          "post-rock"
+          "dutch rock"
         ]
       }
     }
   },
   {
-    "start": "2025-04-18T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/3-eyed-kids/",
-    "title": "3 eyed kids",
-    "location": "neushoorn",
-    "price": 10,
-    "shortText": "Een brute mix van metal en hiphop",
-    "longText": "../public/texts/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vMy1leWVkLWtpZHMv.html",
-    "image": "../public/event-images/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vMy1leWVkLWtpZHMv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "3 eyed kids": {
-        "s": "4cmx6rsoa66tynathlh0in",
-        "l": null,
-        "g": [
-          "metalcore",
-          "progressive"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-02T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/blossom-wither-gavran-dodenbezweerder/",
-    "title": "Blossom & Wither + Gavran + Dodenbezweerder",
-    "location": "neushoorn",
-    "price": 9,
-    "shortText": "Albumpresentatie 'Nevermore'",
-    "longText": "../public/texts/neushoorn/d2l0aGVyLWdhdnJhbi1kb2RlbmJlendlZXJkZXIv.html",
-    "image": "../public/event-images/neushoorn/d2l0aGVyLWdhdnJhbi1kb2RlbmJlendlZXJkZXIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "dodenbezweerder": {
-        "s": "0hdcR32dwjcQsbcBxy6SoM",
-        "l": "dodenbezweerder",
-        "g": [
-          "black metal",
-          "avant-garde",
-          "raw black metal",
-          "ambient"
-        ]
-      },
-      "gavran": {
-        "s": "0Z7JnoZUMxgmaLgApKMYpl",
-        "l": "gavran",
-        "g": [
-          "sludge metal",
-          "doom metal",
-          "sludge",
-          "doom metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-17T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/ter-ziele-onhou/",
-    "title": "Ter Ziele + Onhou",
-    "location": "neushoorn",
-    "price": 15,
-    "shortText": "Albumpresentatie 'Embodiment Of Death'",
-    "longText": "../public/texts/neushoorn/bmwvcHJvZHVjdGlvbi90ZXItemllbGUtb25ob3Uv.html",
-    "image": "../public/event-images/neushoorn/bmwvcHJvZHVjdGlvbi90ZXItemllbGUtb25ob3Uv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ter ziele": {
-        "s": "4zaaeasrkr1rdqtcdlui6g",
-        "l": "ter%20ziele",
-        "g": []
-      },
-      "onhou": {
-        "s": null,
-        "l": "onhou",
-        "g": []
-      }
-    }
-  },
-  {
-    "start": "2025-06-06T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/komatsu/",
-    "title": "Komatsu",
-    "location": "neushoorn",
-    "price": 7.5,
-    "shortText": "Brute stoner/sludge die je trommelvlies laat smachten naar meer!",
-    "longText": "../public/texts/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL2tvbWF0c3Uv.html",
-    "image": "../public/event-images/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL2tvbWF0c3Uv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "komatsu": {
-        "s": "4R9jLgeJ3j1vgivPJTCG2K",
-        "l": "komatsu",
-        "g": [
-          "stoner rock",
-          "sludge metal",
-          "space rock",
-          "doom metal",
-          "stoner metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-07-11T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/nervana/",
-    "title": "Nervana",
+    "start": "2025-05-10T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/the-ayreon-project/",
+    "title": "The Ayreon Project",
     "location": "neushoorn",
     "price": 20,
-    "shortText": "The American Nirvana Tribute",
-    "longText": "../public/texts/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL25lcnZhbmEv.html",
-    "image": "../public/event-images/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL25lcnZhbmEv",
+    "shortText": "Ayreon Project brengt een epische tribute aan Ayreon!",
+    "longText": "../public/texts/neushoorn/cHJvZHVjdGlvbi90aGUtYXlyZW9uLXByb2plY3Qv.html",
+    "image": "../public/event-images/neushoorn/cHJvZHVjdGlvbi90aGUtYXlyZW9uLXByb2plY3Qv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "nervana": {
-        "s": null,
-        "l": null,
+      "ayreon": {
+        "s": "2rsapl0sxcvt8yiy4uapst",
+        "l": "ayreon",
         "g": [
-          "grunge"
+          "celtic metal",
+          "dutch metal",
+          "neo classical metal",
+          "prog metal",
+          "progressive metal",
+          "sci-fi metal",
+          "symphonic metal"
+        ]
+      },
+      "the project": {
+        "s": "3b1Hk0fy0pbHurnR2mzV3r",
+        "l": "the project",
+        "g": [
+          "industrial death metal"
         ]
       }
     }
   },
   {
-    "start": "2025-09-19T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-the-optimist-in-me/",
-    "title": "The Optimist In Me",
+    "start": "2025-05-30T21:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/living-colour/",
+    "title": "Living Colour",
     "location": "neushoorn",
-    "price": 5,
-    "shortText": "Rock jezelf de positiviteit in met The Optimist In Me",
-    "longText": "../public/texts/neushoorn/b24vbmgtY2FmZS10aGUtb3B0aW1pc3QtaW4tbWUv.html",
-    "image": "../public/event-images/neushoorn/b24vbmgtY2FmZS10aGUtb3B0aW1pc3QtaW4tbWUv",
+    "price": null,
+    "shortText": "Een kleurrijke mengelmoes van hardrock, free jazz, heavy metal en funk",
+    "longText": "../public/texts/neushoorn/bi5ubC9wcm9kdWN0aW9uL2xpdmluZy1jb2xvdXIv.html",
+    "image": "../public/event-images/neushoorn/bi5ubC9wcm9kdWN0aW9uL2xpdmluZy1jb2xvdXIv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "the optimist in me": {
-        "s": "3qmkrrjqjtixsbgjgwwmmu",
-        "l": "the%20optimist%20in%20me",
-        "g": []
-      }
-    }
-  },
-  {
-    "start": "2025-10-03T19:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/yandt/",
-    "title": "Y&t",
-    "location": "neushoorn",
-    "price": 39.75,
-    "shortText": "An evening with Y&T",
-    "longText": "../public/texts/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24veWFuZHQv.html",
-    "image": "../public/event-images/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24veWFuZHQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "y&t": {
-        "s": null,
-        "l": null,
+      "living colour": {
+        "s": "6uhp7wa6sjm5zl6xz561de",
+        "l": "living%20colour",
         "g": [
-          "symfonische rock"
+          "funk metal",
+          "funk rock",
+          "hard rock"
         ]
       }
     }
   },
   {
-    "start": "2025-11-07T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/the-perfect-tool/",
-    "title": "The Perfect Tool",
+    "start": "2025-08-14T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/prong/",
+    "title": "Prong",
     "location": "neushoorn",
-    "price": 22.5,
-    "shortText": "35 jaar Tool in één mokerharde show",
-    "longText": "../public/texts/neushoorn/bC9wcm9kdWN0aW9uL3RoZS1wZXJmZWN0LXRvb2wv.html",
-    "image": "../public/event-images/neushoorn/bC9wcm9kdWN0aW9uL3RoZS1wZXJmZWN0LXRvb2wv",
+    "price": 26,
+    "shortText": "31 Years Of Cleansing Tour",
+    "longText": "../public/texts/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vcHJvbmcv.html",
+    "image": "../public/event-images/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vcHJvbmcv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "the perfect tool": {
-        "s": null,
-        "l": "the%20perfect%20tool",
-        "g": []
+      "prong": {
+        "s": "6SER9tY2pDIDVWVf5Ql97B",
+        "l": "prong",
+        "g": [
+          "groove metal",
+          "industrial metal",
+          "thrash metal",
+          "alternative metal",
+          "industrial rock",
+          "metal",
+          "crossover",
+          "thrash metal (early",
+          "later)",
+          " groove",
+          "industrial metal (mid)"
+        ]
       }
     }
+  },
+  {
+    "start": "2025-09-27T12:15:00",
+    "venueEventUrl": "https://neushoorn.nl/production/into-the-void/",
+    "title": "Into The Void",
+    "location": "neushoorn",
+    "price": 59,
+    "shortText": "Internationaal stoner-, sludge- en doomfestival",
+    "longText": "../public/texts/neushoorn/bi5ubC9wcm9kdWN0aW9uL2ludG8tdGhlLXZvaWQv.html",
+    "image": "../public/event-images/neushoorn/bi5ubC9wcm9kdWN0aW9uL2ludG8tdGhlLXZvaWQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "into the void": {
+        "s": "3f8TUzmaZIVUAboVELMaBE",
+        "l": "into%20the%20void",
+        "g": [
+          "deathcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-10-25T15:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/fajtfest-fryslan/",
+    "title": "Fajtfest Fryslân",
+    "location": "neushoorn",
+    "price": 15,
+    "shortText": "Bruut gitaargeweld op Fryske editie van iconisch metal/-core festival",
+    "longText": "../public/texts/neushoorn/bC9wcm9kdWN0aW9uL2ZhanRmZXN0LWZyeXNsYW4v.html",
+    "image": "../public/event-images/neushoorn/bC9wcm9kdWN0aW9uL2ZhanRmZXN0LWZyeXNsYW4v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   }
 ]

@@ -246,11 +246,16 @@ scraper.singlePage = async function ({ page, url, event }) {
 
     pageInfo.textForHTML = textForHTML;
 
+    const singlePageHTML = await page.evaluate(() => {
+        return document.body.parentNode.outerHTML;
+    });
+
     return this.singlePageEnd({
         pageInfo,
         stopFunctie,
         page,
-        event
+        event,
+        singlePageHTML
     });
 };
 // #endregion                         SINGLE PAGE

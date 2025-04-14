@@ -2680,78 +2680,6 @@
     "location": "cacaofabriek"
   },
   {
-    "title": "Bridear en Lords Of The Trident",
-    "start": "2025-04-02",
-    "eventLocationName": "musicon",
-    "shortText": "Musicon, Den Haag",
-    "image": "../public/location-images/musicon",
-    "location": "musicon"
-  },
-  {
-    "title": "Very 'Eavy Festival",
-    "start": "2025-04-03",
-    "eventLocationName": "de spont",
-    "shortText": "\nMet Raven, Satan, Elise, Tokyo Blade e.a.",
-    "image": "../public/location-images/despont",
-    "location": "despont"
-  },
-  {
-    "title": "Salacious Gods, Oerheks en Nubivagant",
-    "start": "2025-04-05",
-    "eventLocationName": "the jack",
-    "shortText": "The Jack, Eindhoven",
-    "image": "../public/location-images/thejack",
-    "location": "thejack"
-  },
-  {
-    "title": "Your Highness, Mould, The Fifth Alliance en LowMad",
-    "start": "2025-04-05",
-    "eventLocationName": "de spot",
-    "shortText": "De Spot, Middelburg",
-    "image": "../public/location-images/despot",
-    "location": "despot"
-  },
-  {
-    "title": "Michael Schenker Group",
-    "start": "2025-04-09",
-    "eventLocationName": "boerderij",
-    "shortText": "Boerderij, Zoetermeer",
-    "image": "../public/location-images/boerderij",
-    "location": "boerderij"
-  },
-  {
-    "title": "Grindpad, Taskforce Toxicator en Braggâh",
-    "start": "2025-04-11",
-    "eventLocationName": "musicon",
-    "shortText": "Musicon, Den Haag",
-    "image": "../public/location-images/musicon",
-    "location": "musicon"
-  },
-  {
-    "title": "Axel Rudi Pell",
-    "start": "2025-04-12",
-    "eventLocationName": "boerderij",
-    "shortText": "Boerderij, Zoetermeer",
-    "image": "../public/location-images/boerderij",
-    "location": "boerderij"
-  },
-  {
-    "title": "Hippotraktor",
-    "start": "2025-04-12",
-    "eventLocationName": "de kroepoekfabriek",
-    "shortText": "De Kroepoekfabriek, Vlaardingen",
-    "image": "../public/location-images/dekroepoekfabriek",
-    "location": "dekroepoekfabriek"
-  },
-  {
-    "title": "Skroetfest",
-    "start": "2025-04-12",
-    "eventLocationName": "hedon",
-    "shortText": "\nMet Skroetbalg, Peter Pan Speedrock, Neuk! en meer",
-    "image": "../public/location-images/hedon",
-    "location": "hedon"
-  },
-  {
     "title": "Behemoth, Satyricon en Rotting Christ",
     "start": "2025-04-15",
     "eventLocationName": "e-werk",
@@ -2766,6 +2694,14 @@
     "shortText": "Turock, Essen",
     "image": "../public/location-images/turock",
     "location": "turock"
+  },
+  {
+    "title": "Prestige en Objector",
+    "start": "2025-04-16",
+    "eventLocationName": "sound dog",
+    "shortText": "Sound Dog, Breda",
+    "image": "../public/location-images/sounddog",
+    "location": "sounddog"
   },
   {
     "title": "Harakiri For The Sky",
@@ -2856,12 +2792,28 @@
     "location": "ecicultuurfabriek"
   },
   {
+    "title": "Hyena",
+    "start": "2025-05-02",
+    "eventLocationName": "sound dog",
+    "shortText": "Sound Dog, Breda",
+    "image": "../public/location-images/sounddog",
+    "location": "sounddog"
+  },
+  {
     "title": "RedHook en Comastatic",
     "start": "2025-05-02",
     "eventLocationName": "the jack",
     "shortText": "The Jack, Eindhoven",
     "image": "../public/location-images/thejack",
     "location": "thejack"
+  },
+  {
+    "title": "Highway Child en Van Camp",
+    "start": "2025-05-03",
+    "eventLocationName": "phoenix",
+    "shortText": "Phoenix, Breda",
+    "image": "../public/location-images/phoenix",
+    "location": "phoenix"
   },
   {
     "title": "Against Evil en Angelic Forces",
@@ -2944,6 +2896,14 @@
     "location": "vera"
   },
   {
+    "title": "Carnosus",
+    "start": "2025-05-17",
+    "eventLocationName": "sound dog",
+    "shortText": "Sound Dog, Breda",
+    "image": "../public/location-images/sounddog",
+    "location": "sounddog"
+  },
+  {
     "title": "Elsrock",
     "start": "2025-05-17",
     "eventLocationName": "studio 15",
@@ -2968,6 +2928,22 @@
     "location": "musicon"
   },
   {
+    "title": "Savage Master en Sanhedrin",
+    "start": "2025-05-23",
+    "eventLocationName": "sound dog",
+    "shortText": "Sound Dog, Breda",
+    "image": "../public/location-images/sounddog",
+    "location": "sounddog"
+  },
+  {
+    "title": "Coven en Queen Of Spades",
+    "start": "2025-05-26",
+    "eventLocationName": "sound dog",
+    "shortText": "Sound Dog, Breda",
+    "image": "../public/location-images/sounddog",
+    "location": "sounddog"
+  },
+  {
     "title": "Graveland Festival",
     "start": "2025-05-30",
     "eventLocationName": "hoogeveen\nmet leprous",
@@ -2982,6 +2958,14 @@
     "shortText": "Musicon, Den Haag",
     "image": "../public/location-images/musicon",
     "location": "musicon"
+  },
+  {
+    "title": "Seax en Warsenal",
+    "start": "2025-06-04",
+    "eventLocationName": "sound dog",
+    "shortText": "Sound Dog, Breda",
+    "image": "../public/location-images/sounddog",
+    "location": "sounddog"
   },
   {
     "title": "South Of Heaven\nmet onder meer Meshuggah, In Flames, Accept en Hatebreed",
@@ -3064,6 +3048,14 @@
     "location": "muziekgieterij"
   },
   {
+    "title": "Anal Vomit en Total Annihilation",
+    "start": "2025-07-16",
+    "eventLocationName": "sound dog",
+    "shortText": "Sound Dog, Breda",
+    "image": "../public/location-images/sounddog",
+    "location": "sounddog"
+  },
+  {
     "title": "Battlesnake",
     "start": "2025-07-16",
     "eventLocationName": "altstadt",
@@ -3120,6 +3112,14 @@
     "location": "boerderij"
   },
   {
+    "title": "Angelcrypt en Artefacts",
+    "start": "2025-09-12",
+    "eventLocationName": "sound dog",
+    "shortText": "Sound Dog, Breda",
+    "image": "../public/location-images/sounddog",
+    "location": "sounddog"
+  },
+  {
     "title": "Primal Fear en Eleine",
     "start": "2025-09-21",
     "eventLocationName": "de casino",
@@ -3134,6 +3134,14 @@
     "shortText": "De Harmonie, Leeuwarden",
     "image": "../public/location-images/deharmonie",
     "location": "deharmonie"
+  },
+  {
+    "title": "Wings Of Steel en Angelic Forces",
+    "start": "2025-09-27",
+    "eventLocationName": "sound dog",
+    "shortText": "Sound Dog, Breda",
+    "image": "../public/location-images/sounddog",
+    "location": "sounddog"
   },
   {
     "title": "Parkway Drive, Thy Art is Murder en The Amity Affliction",
@@ -3206,6 +3214,14 @@
     "shortText": "Grenswerk, Venlo",
     "image": "../public/location-images/grenswerk",
     "location": "grenswerk"
+  },
+  {
+    "title": "Adrian Vandenberg",
+    "start": "2025-11-22",
+    "eventLocationName": "vorstin",
+    "shortText": "Vorstin, Hilversum",
+    "image": "../public/location-images/vorstin",
+    "location": "vorstin"
   },
   {
     "title": "Sabaton",
