@@ -25,8 +25,8 @@ export const workerConfig = {
     //     CPUReq: "high"
     // }
     //baroeg: { workerCount: 1, workerConcurrent: 2, forceSet: 0 }
-    bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 }
-    // cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
+    // bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 }
+    cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 }
     // dbs: {
     //     workerCount: 3,
     //     workerConcurrent: 3,
