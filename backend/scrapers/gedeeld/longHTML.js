@@ -158,6 +158,14 @@ export async function maakMediaHTMLBronnen(page, selectors, event) {
             ({ selectors }) => {
                 return Array.from(document.querySelectorAll(selectors.mediaEls))
                     .map((bron) => {
+                        if (
+                            !bron.hasAttribute("src") &&
+                            bron.hasAttribute("data-src")
+                        ) {
+                            bron.src = bron.getAttribute("data-src");
+                            bron.removeAttribute("data-src");
+                        }
+
                         const isYoutubeAnchor =
                             bron.hasAttribute("href") &&
                             bron.href.includes("youtube");
@@ -286,25 +294,27 @@ export async function removeElementsRecursive(
     if (!tagsListCopy) tagsListCopy = [...selectors.captureTextRemoveEls];
     const thisTag = tagsListCopy.shift();
 
-    await page.evaluate(
-        ({ tag, selectors }) => {
-            // Selecteer alle div-elementen
-            let theseTags = document.querySelectorAll(
-                `${selectors.textBody} ${tag}`
-            );
+    await page
+        .evaluate(
+            ({ tag, selectors }) => {
+                // Selecteer alle div-elementen
+                let theseTags = document.querySelectorAll(
+                    `${selectors.textBody} ${tag}`
+                );
 
-            // Itereer door de geselecteerde div-elementen
-            theseTags.forEach((tag) => {
-                // Vervang de tag door zijn inhoud
-                while (tag.firstChild) {
-                    tag.parentNode.insertBefore(tag.firstChild, tag);
-                }
-                // Verwijder de lege tag
-                tag.parentNode.removeChild(tag);
-            });
-        },
-        { tag: thisTag, selectors }
-    );
+                // Itereer door de geselecteerde div-elementen
+                theseTags.forEach((tag) => {
+                    // Vervang de tag door zijn inhoud
+                    while (tag.firstChild) {
+                        tag.parentNode.insertBefore(tag.firstChild, tag);
+                    }
+                    // Verwijder de lege tag
+                    tag.parentNode.removeChild(tag);
+                });
+            },
+            { tag: thisTag, selectors }
+        )
+        .catch((err) => handleError(err));
     if (tagsListCopy.length) {
         return removeElementsRecursive(page, selectors, tagsListCopy);
     }

@@ -1361,6 +1361,7 @@ export default class AbstractScraper extends ScraperConfig {
             const n = {
                 title: r.title,
                 start: r.start,
+                anker: `<a href='${r.venueEventUrl}'>${r.title}</a>`,
                 link: `<a class='links-naar-longtext-html' style="font-weight: bold; font-size: 18px" target='_blank' href='${`http://localhost/rockagenda/public/texts/${longTextURL}`}'>LongText</a>`
             };
             return n;

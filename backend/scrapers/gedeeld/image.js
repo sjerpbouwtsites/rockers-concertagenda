@@ -4,7 +4,7 @@ import fs from "fs";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import sharp from "sharp";
 import fsDirections from "../../mods/fs-directions.js";
-
+import { parentPort, workerData } from "worker_threads";
 function downloadImage(url, filepath, workerData) {
     return new Promise((resolve, reject) => {
         try {
@@ -118,11 +118,14 @@ export default async function getImage({
         errors: []
     };
 
-    const ogImage = await page.evaluate(() => {
-        return (
-            document.querySelector(`[property="og:image"]`)?.content ?? false
-        );
-    });
+    const ogImage = await page
+        .evaluate(() => {
+            return (
+                document.querySelector(`[property="og:image"]`)?.content ??
+                false
+            );
+        })
+        .catch((err) => handleError(err));
 
     try {
         await page.waitForSelector(selectors[0], {
@@ -173,74 +176,80 @@ export default async function getImage({
         while (!image && selectorsCopy.length > 0) {
             const selector = selectorsCopy.shift();
             // eslint-disable-next-line no-await-in-loop
-            image = await page.evaluate(
-                // eslint-disable-next-line no-shadow
-                ({ selector }) => {
-                    const el = document.querySelector(selector);
-                    let src = null;
-                    if (!el?.src && el?.hasAttribute("data-src")) {
-                        src = el.getAttribute("data-src");
-                    } else if (!el?.src && el?.hasAttribute("srcset")) {
-                        src = el.getAttribute("srcset").split(/\s/)[0];
-                    } else {
-                        src = el?.src ?? null;
-                    }
+            image = await page
+                .evaluate(
+                    // eslint-disable-next-line no-shadow
+                    ({ selector }) => {
+                        const el = document.querySelector(selector);
+                        let src = null;
+                        if (!el?.src && el?.hasAttribute("data-src")) {
+                            src = el.getAttribute("data-src");
+                        } else if (!el?.src && el?.hasAttribute("srcset")) {
+                            src = el.getAttribute("srcset").split(/\s/)[0];
+                        } else {
+                            src = el?.src ?? null;
+                        }
 
-                    if (src && !src.includes("https")) {
-                        src = `${document.location.protocol}//${document.location.hostname}${src}`;
-                    }
+                        if (src && !src.includes("https")) {
+                            src = `${document.location.protocol}//${document.location.hostname}${src}`;
+                        }
 
-                    return src;
-                },
-                { selector }
-            );
+                        return src;
+                    },
+                    { selector }
+                )
+                .catch((err) => handleError(err));
         }
     } else if (mode === "background-src") {
         while (!image && selectorsCopy.length > 0) {
             const selector = selectorsCopy.shift();
             // eslint-disable-next-line no-await-in-loop
-            image = await page.evaluate(
-                // eslint-disable-next-line no-shadow
-                ({ selector }) => {
-                    const mmm =
-                        document
-                            .querySelector(selector)
-                            ?.style.backgroundImage.match(
-                                /https.*.jpg|https.*.jpeg|https.*.png|https.*.webp/
-                            ) ?? null;
-                    if (!Array.isArray(mmm)) return null;
-                    let src = mmm[0];
-                    if (!src.includes("https")) {
-                        src = `${document.location.protocol}//${document.location.hostname}${src}`;
-                    }
-                    return src;
-                },
-                { selector }
-            );
+            image = await page
+                .evaluate(
+                    // eslint-disable-next-line no-shadow
+                    ({ selector }) => {
+                        const mmm =
+                            document
+                                .querySelector(selector)
+                                ?.style.backgroundImage.match(
+                                    /https.*.jpg|https.*.jpeg|https.*.png|https.*.webp/
+                                ) ?? null;
+                        if (!Array.isArray(mmm)) return null;
+                        let src = mmm[0];
+                        if (!src.includes("https")) {
+                            src = `${document.location.protocol}//${document.location.hostname}${src}`;
+                        }
+                        return src;
+                    },
+                    { selector }
+                )
+                .catch((err) => handleError(err));
         }
     } else if (mode === "weird-attr") {
         while (!image && selectorsCopy.length > 0) {
             const selector = selectorsCopy.shift();
             // eslint-disable-next-line no-await-in-loop
-            image = await page.evaluate(
-                // eslint-disable-next-line no-shadow
-                ({ selector }) => {
-                    const el = document.querySelector(selector);
-                    let src = null;
-                    if (!el?.href && el?.hasAttribute("content")) {
-                        src = el.getAttribute("content");
-                    } else {
-                        src = el?.href ?? null;
-                    }
+            image = await page
+                .evaluate(
+                    // eslint-disable-next-line no-shadow
+                    ({ selector }) => {
+                        const el = document.querySelector(selector);
+                        let src = null;
+                        if (!el?.href && el?.hasAttribute("content")) {
+                            src = el.getAttribute("content");
+                        } else {
+                            src = el?.href ?? null;
+                        }
 
-                    if (!src.includes("https")) {
-                        src = `${document.location.protocol}//${document.location.hostname}${src}`;
-                    }
+                        if (!src.includes("https")) {
+                            src = `${document.location.protocol}//${document.location.hostname}${src}`;
+                        }
 
-                    return src;
-                },
-                { selector }
-            );
+                        return src;
+                    },
+                    { selector }
+                )
+                .catch((err) => handleError(err));
         }
     }
 
@@ -274,7 +283,7 @@ export default async function getImage({
         image,
         workerData,
         imagePath
-    });
+    }).catch((err) => handleError(err));
     res.diCompressRes = diCompressRes;
     if (!diCompressRes) {
         res.neeHe = "jaja";
@@ -320,7 +329,7 @@ async function getImageDirectInput(
         image: imageSrc,
         workerData,
         imagePath: res.imagePath
-    });
+    }).catch((err) => handleError(err));
 
     res.imageSrc = imageSrc;
 
@@ -339,3 +348,54 @@ async function getImageDirectInput(
 }
 
 // #endregion                                                 IMAGE
+
+/**
+ * KOPIE VAN ABSTRACT SCRAPER
+ *
+ * @param {} error
+ * @param {*} remarks
+ * @param {*} errorLevel
+ * @param {*} toDebug
+ */
+export function handleError(
+    error,
+    remarks = null,
+    errorLevel = "notify",
+    toDebug = null
+) {
+    // TODO link errors aan debugger
+    const updateErrorMsg = {
+        type: "update",
+        subtype: "error",
+        messageData: {
+            workerData,
+            remarks,
+            status: "error",
+            errorLevel,
+            text: `${error?.message}\n${error?.stack}\nlevel:${errorLevel}`
+        }
+    };
+
+    const clientsLogMsg = {
+        type: "clients-log",
+        subtype: "error",
+        messageData: { error, workerData }
+    };
+    let debuggerMsg;
+    if (toDebug) {
+        debuggerMsg = {
+            type: "update",
+            subtype: "debugger",
+            messageData: {
+                workerData,
+                debug: toDebug
+            }
+        };
+        debuggerMsg.messageData.workerName = workerData.name;
+    }
+    updateErrorMsg.messageData.workerName = workerData.name;
+    clientsLogMsg.messageData.workerName = workerData.name;
+    parentPort.postMessage(JSON.stringify(updateErrorMsg));
+    parentPort.postMessage(JSON.stringify(clientsLogMsg));
+    if (toDebug) parentPort.postMessage(JSON.stringify(debuggerMsg));
+}

@@ -1245,7 +1245,7 @@
     }
   },
   {
-    "start": "2025-04-21T19:30:00",
+    "start": "2025-04-21T19:00:00",
     "end": "2025-04-21T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/spectral-wound-lamp-of-murmuur-21-04-2025/",
     "title": "Spectral Wound + Lamp Of Murmuur",
@@ -4258,7 +4258,7 @@
     }
   },
   {
-    "start": "2025-05-18T19:30:00",
+    "start": "2025-05-18T19:00:00",
     "end": "2025-05-18T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/combichrist-extize-crimson-veil-esoterik-18-05-2025/",
     "title": "Combichrist + Extize + Crimson Veil + Esoterik",
@@ -4484,7 +4484,7 @@
     }
   },
   {
-    "start": "2025-05-22T19:30:00",
+    "start": "2025-05-22T19:00:00",
     "end": "2025-05-22T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/phantom-elite-ep-release-22-05-2025/",
     "title": "Phantom Elite EP release",
@@ -4912,7 +4912,7 @@
     }
   },
   {
-    "start": "2025-05-24T19:30:00",
+    "start": "2025-05-24T19:00:00",
     "end": "2025-05-24T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/no-barrier-24-05-2025/",
     "title": "No barrier",
@@ -8347,7 +8347,7 @@
     }
   },
   {
-    "start": "2025-08-09T19:30:00",
+    "start": "2025-08-09T19:00:00",
     "end": "2025-08-09T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/wednesday-13-09-08-2025/",
     "title": "Wednesday 13",
@@ -8364,6 +8364,37 @@
         "g": [
           "horror punk",
           "industrial metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-08-11T19:00:00",
+    "end": "2025-08-11T23:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/the-fall-of-troy-11-08-2025/",
+    "title": "The Fall Of Troy",
+    "location": "dehelling",
+    "price": 25.2,
+    "shortText": "Posthardcore-legendes vieren twintig jaar Doppelgänger",
+    "longText": "../public/texts/dehelling/YS90aGUtZmFsbC1vZi10cm95LTExLTA4LTIwMjUv.html",
+    "image": "../public/event-images/dehelling/YS90aGUtZmFsbC1vZi10cm95LTExLTA4LTIwMjUv",
+    "eventGenres": null,
+    "artists": {
+      "the fall of troy": {
+        "s": "5fuqrhmrymtoo9uolfad4p",
+        "l": "the%20fall%20of%20troy",
+        "g": [
+          "post-hardcore",
+          "progressive post-hardcore",
+          "screamo",
+          "swancore"
+        ]
+      },
+      "fall": {
+        "s": null,
+        "l": "fall",
+        "g": [
+          "death metal"
         ]
       }
     }
@@ -9560,7 +9591,7 @@
     }
   },
   {
-    "start": "2025-09-25T19:30:00",
+    "start": "2025-09-25T19:00:00",
     "end": "2025-09-25T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/wolfheart-25-09-2025/",
     "title": "Wolfheart",
@@ -9660,7 +9691,7 @@
     "location": "sounddog"
   },
   {
-    "start": "2025-09-28T19:30:00",
+    "start": "2025-09-28T19:00:00",
     "end": "2025-09-28T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/night-verses-28-09-2025/",
     "title": "Night Verses",
