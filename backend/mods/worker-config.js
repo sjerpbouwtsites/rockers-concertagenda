@@ -17,14 +17,14 @@ export const workerConfig = {
         CPUReq: "low",
         workerConcurrent: 3,
         forceSet: 0
-    }
+    },
     // afaslive: {
     //     workerCount: 1,
     //     workerConcurrent: 2,
     //     forceSet: 0,
     //     CPUReq: "high"
-    // },
-    // baroeg: { workerCount: 1, workerConcurrent: 2, forceSet: 0 },
+    // }
+    baroeg: { workerCount: 1, workerConcurrent: 2, forceSet: 0 }
     // bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
     // cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
     // dbs: {

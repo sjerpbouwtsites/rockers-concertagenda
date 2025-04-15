@@ -80,6 +80,29 @@
     }
   },
   {
+    "start": "2025-06-15T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/the-rose-2",
+    "title": "The rose\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t nieuw",
+    "location": "afaslive",
+    "price": 15,
+    "shortText": "  undefined",
+    "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS90aGUtcm9zZS0y.html",
+    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS90aGUtcm9zZS0y",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "the rose": {
+        "s": "5na1lmemk2vznlje9snjyw",
+        "l": "united states",
+        "g": [
+          "k-pop",
+          "k-pop boy group",
+          "symphonic/gothic metal"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-06-23T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/satchvai-band",
     "title": "SatchVai Band",
@@ -146,6 +169,50 @@
     }
   },
   {
+    "start": "2025-09-13T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/jacks-world-series-of-darts-finals-4",
+    "title": "Jack's world series of darts finals\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t13:00",
+    "location": "afaslive",
+    "price": 12,
+    "shortText": "  undefined",
+    "longText": "../public/texts/afaslive/d29ybGQtc2VyaWVzLW9mLWRhcnRzLWZpbmFscy00.html",
+    "image": "../public/event-images/afaslive/d29ybGQtc2VyaWVzLW9mLWRhcnRzLWZpbmFscy00",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "13:00": {
+        "s": null,
+        "l": "13:00",
+        "g": [
+          "technical death metal",
+          "deathcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-09-14T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/jacks-world-series-of-darts-finals-4",
+    "title": "Jack's world series of darts finals\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t13:00",
+    "location": "afaslive",
+    "price": 12,
+    "shortText": "  undefined",
+    "longText": "../public/texts/afaslive/d29ybGQtc2VyaWVzLW9mLWRhcnRzLWZpbmFscy00.html",
+    "image": "../public/event-images/afaslive/d29ybGQtc2VyaWVzLW9mLWRhcnRzLWZpbmFscy00",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "13:00": {
+        "s": null,
+        "l": "13:00",
+        "g": [
+          "technical death metal",
+          "deathcore"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-09-29T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/pierce-the-veil",
     "title": "Pierce The Veil",
@@ -170,10 +237,9 @@
     "door": "2025-10-20T20:00:00",
     "start": "2025-10-20T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/one-ok-rock",
-    "title": "One ok rock\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t nieuw",
+    "title": "One ok rock",
     "location": "afaslive",
     "price": 20,
-    "shortText": "  undefined",
     "longText": "../public/texts/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL29uZS1vay1yb2Nr.html",
     "image": "../public/event-images/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL29uZS1vay1yb2Nr",
     "soldOut": false,

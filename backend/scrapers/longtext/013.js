@@ -11,7 +11,8 @@ import {
     formatHTMLTextBodyNaarEenSpatieMax,
     legeHTMLElementenVerwijderen,
     maakTekstBlokHTML,
-    standaardSelectorConfig
+    standaardSelectorConfig,
+    removeElementsRecursive
 } from "../gedeeld/longHTML.js";
 
 export default async function longTextSocialsIframes(page, event) {
@@ -43,6 +44,8 @@ export default async function longTextSocialsIframes(page, event) {
     await hinderlijkeTekstenEruitSlopen(page, selectors);
 
     await formatHTMLTextBodyNaarEenSpatieMax(page, selectors);
+
+    await removeElementsRecursive(page, selectors);
 
     await legeHTMLElementenVerwijderen(page, selectors);
 

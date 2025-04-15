@@ -1,5 +1,11 @@
 import { parentPort, workerData } from "worker_threads";
 
+// import QuickWorkerMessage from "../../mods/quick-worker-message.js";
+// const qwm = new QuickWorkerMessage(workerData);
+// parentPort.postMessage(
+//     qwm.debugger(tagsListCopy, `tag wordt gekillt ${thisTag}`)
+// );
+
 function youtubeSRCToIframe(src) {
     return `<iframe width="380" data-zelfgebouwd height="214" src="${src}" frameborder="0" allowfullscreen></iframe>`;
 }
@@ -70,6 +76,19 @@ export const standaardSelectorConfig = {
         `img`,
         `iframe`
     ].join(", "),
+    captureTextRemoveEls: [
+        "div",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "strong",
+        "i",
+        "span",
+        "a",
+        "b"
+    ],
     saveTheseAttrsFirst: ["id", "class", "href", "src", "data-src"],
     removeAttrsLastStep: ["class", "id"],
     removeHTMLWithStrings: [],
@@ -133,15 +152,55 @@ export async function maakMediaHTMLBronnen(page, selectors) {
             ({ selectors }) => {
                 return Array.from(document.querySelectorAll(selectors.mediaEls))
                     .map((bron) => {
-                        // youtube link
-                        const h = bron?.href ?? null;
-                        if (!h) return null;
-                        return {
-                            outer: null,
-                            src: h.substring(0, h.indexOf("?")),
-                            id: null,
-                            type: "youtube"
-                        };
+                        const isYoutubeAnchor =
+                            bron.hasAttribute("href") &&
+                            bron.href.includes("youtube");
+                        const isSpotifyIframe =
+                            bron.hasAttribute("src") &&
+                            bron.src.includes("spotify");
+                        const isYoutubeIframe =
+                            bron.hasAttribute("src") &&
+                            bron.src.includes("youtube");
+                        const isBandcampIframe =
+                            bron.hasAttribute("src") &&
+                            bron.src.includes("bandcamp");
+
+                        if (isYoutubeAnchor) {
+                            return {
+                                outer: null,
+                                src: bron.href.substring(
+                                    0,
+                                    bron.href.indexOf("?")
+                                ),
+                                id: null,
+                                type: "youtube"
+                            };
+                        } else if (isSpotifyIframe) {
+                            return {
+                                outer: bron.outerHTML,
+                                src: bron.src,
+                                id: null,
+                                type: "spotify"
+                            };
+                        } else if (isYoutubeIframe) {
+                            return {
+                                outer: bron.outerHTML,
+                                src: bron.src,
+                                id: null,
+                                type: "youtube"
+                            };
+                        } else if (isBandcampIframe) {
+                            return {
+                                outer: bron.outerHTML,
+                                src: bron.src,
+                                id: null,
+                                type: "bandcamp"
+                            };
+                        } else {
+                            throw new Error(
+                                `niet herkende media element ${bron?.src} ${bron?.href} ${bron?.id} ${bron?.className}`
+                            );
+                        }
                     })
                     .filter((a) => a);
             },
@@ -185,6 +244,48 @@ export async function hinderlijkeTekstenEruitSlopen(page, selectors) {
         });
 }
 
+/**
+ * removeElementsRecursive
+ * vervang elementen door hun inhoud.
+ *
+ * @param {Page} page
+ * @param {Array} selectors config
+ * @param {Array} tagsList
+ * @returns {bool} true
+ */
+export async function removeElementsRecursive(
+    page,
+    selectors,
+    tagsListCopy = null
+) {
+    if (!tagsListCopy) tagsListCopy = [...selectors.captureTextRemoveEls];
+    const thisTag = tagsListCopy.shift();
+
+    await page.evaluate(
+        ({ tag, selectors }) => {
+            // Selecteer alle div-elementen
+            let theseTags = document.querySelectorAll(
+                `${selectors.textBody} ${tag}`
+            );
+
+            // Itereer door de geselecteerde div-elementen
+            theseTags.forEach((tag) => {
+                // Vervang de tag door zijn inhoud
+                while (tag.firstChild) {
+                    tag.parentNode.insertBefore(tag.firstChild, tag);
+                }
+                // Verwijder de lege tag
+                tag.parentNode.removeChild(tag);
+            });
+        },
+        { tag: thisTag, selectors }
+    );
+    if (tagsListCopy.length) {
+        return removeElementsRecursive(page, selectors, tagsListCopy);
+    }
+    return true;
+}
+
 // en dan formatten we nu de hele HTML van de tekstBody naar één spatie max
 export async function formatHTMLTextBodyNaarEenSpatieMax(page, selectors) {
     return await page
@@ -203,6 +304,9 @@ export async function formatHTMLTextBodyNaarEenSpatieMax(page, selectors) {
             handleError(err);
         });
 }
+
+// wrapper en ruis elementen verwijderen maar text eruit bewaren
+export async function vangTekstUitElsEnVerwijderEl(page, selector) {}
 
 // lege HTML elementen verwijderen.
 export async function legeHTMLElementenVerwijderen(page, selectors) {

@@ -218,11 +218,6 @@ scraper.singlePage = async function ({ page, event }) {
 
     pageInfo.textForHTML = textForHTML;
 
-    this.dirtyLog({
-        mediaForHTML,
-        textForHTML
-    });
-
     const singlePageHTML = await page.evaluate(() => {
         return document.body.parentNode.outerHTML;
     });
