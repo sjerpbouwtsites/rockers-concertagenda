@@ -11309,7 +11309,7 @@
     "venueEventUrl": "https://bibelot.net/programma/acindc/",
     "title": "Acindc",
     "location": "bibelot",
-    "price": 2025,
+    "price": 0,
     "longText": "../public/texts/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS9hY2luZGMv.html",
     "image": "../public/event-images/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS9hY2luZGMv",
     "soldOut": false,
@@ -11594,7 +11594,7 @@
     "venueEventUrl": "https://bibelot.net/programma/pene-corrida-the-penergy-tour/",
     "title": "Pene Corrida – The Penergy Tour",
     "location": "bibelot",
-    "price": 20,
+    "price": 0,
     "longText": "../public/texts/bibelot/cGVuZS1jb3JyaWRhLXRoZS1wZW5lcmd5LXRvdXIv.html",
     "image": "../public/event-images/bibelot/cGVuZS1jb3JyaWRhLXRoZS1wZW5lcmd5LXRvdXIv",
     "soldOut": false,
@@ -11645,6 +11645,29 @@
     "shortText": "RTM Stage, Rotterdam",
     "image": "../public/location-images/rtmstage",
     "location": "rtmstage"
+  },
+  {
+    "door": "2026-02-06T20:00:00",
+    "start": "2026-02-06T20:45:00",
+    "venueEventUrl": "https://bibelot.net/programma/ronnie-james-dio-the-memorial-concert/",
+    "title": "Ronnie James Dio: The Memorial Concert",
+    "location": "bibelot",
+    "price": 2026,
+    "longText": "../public/texts/bibelot/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv.html",
+    "image": "../public/event-images/bibelot/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal "
+    ],
+    "artists": {
+      "the memorial concert": {
+        "s": null,
+        "l": "the%20memorial%20concert",
+        "g": [
+          "metal "
+        ]
+      }
+    }
   },
   {
     "title": "Epica, Amaranthe en Charlotte Wessels",

@@ -46,7 +46,7 @@ export default async function longTextSocialsIframes(page, event) {
         ".post-content .su-button-center"
     ]);
 
-    res.mediaForHTML = await maakMediaHTMLBronnen(page, selectors);
+    res.mediaForHTML = await maakMediaHTMLBronnen(page, selectors, event);
 
     await ongewensteHTMLUitHeleDocument(page, selectors);
 

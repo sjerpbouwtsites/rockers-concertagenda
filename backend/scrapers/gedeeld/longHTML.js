@@ -1,10 +1,7 @@
 import { parentPort, workerData } from "worker_threads";
 
-// import QuickWorkerMessage from "../../mods/quick-worker-message.js";
-// const qwm = new QuickWorkerMessage(workerData);
-// parentPort.postMessage(
-//     qwm.debugger(tagsListCopy, `tag wordt gekillt ${thisTag}`)
-// );
+import QuickWorkerMessage from "../../mods/quick-worker-message.js";
+const qwm = new QuickWorkerMessage(workerData);
 
 function youtubeSRCToIframe(src) {
     return `<iframe width="380" data-zelfgebouwd height="214" src="${src}" frameborder="0" allowfullscreen></iframe>`;
@@ -144,9 +141,18 @@ export async function eersteLadingOverbodigeAttributesWeg(page, selectors) {
         });
 }
 
+export async function gewoonBerichtDumpen(bericht, hoedan) {
+    if (hoedan === "console") {
+        parentPort.postMessage(qwm.toConsole(bericht));
+    } else {
+        parentPort.postMessage(qwm.debugger(bericht));
+    }
+}
+
 // media HTML maken. CQ iframes eruit halen of construeren.
-export async function maakMediaHTMLBronnen(page, selectors) {
+export async function maakMediaHTMLBronnen(page, selectors, event) {
     if (!selectors.mediaEls.length) return null;
+
     return await page
         .evaluate(
             ({ selectors }) => {
@@ -164,6 +170,9 @@ export async function maakMediaHTMLBronnen(page, selectors) {
                         const isBandcampIframe =
                             bron.hasAttribute("src") &&
                             bron.src.includes("bandcamp");
+                        const isYoutubeImg =
+                            bron.hasAttribute("src") &&
+                            bron.src.includes("ytimg.com");
 
                         if (isYoutubeAnchor) {
                             return {
@@ -190,6 +199,22 @@ export async function maakMediaHTMLBronnen(page, selectors) {
                                 type: "youtube"
                             };
                         } else if (isBandcampIframe) {
+                            return {
+                                outer: bron.outerHTML,
+                                src: bron.src,
+                                id: null,
+                                type: "bandcamp"
+                            };
+                        } else if (isYoutubeImg) {
+                            const idMatch = bron.src.match(/vi\/(.*)\//);
+                            if (Array.isArray(idMatch)) {
+                                return {
+                                    outer: null,
+                                    src: null,
+                                    id: idMatch[1],
+                                    type: "youtube"
+                                };
+                            }
                             return {
                                 outer: bron.outerHTML,
                                 src: bron.src,
@@ -377,6 +402,9 @@ export default function makeLongHTML(event) {
                   if (bron.outer && bron.type === "spotify") {
                       return `<div class='iframe-wrapper-152px'>${bron.outer}</div>`;
                   }
+                  if (bron.outer && bron.type === "bandcamp") {
+                      return `<div class='iframe-wrapper-152px'>${bron.outer}</div>`;
+                  }
                   if (bron.outer) {
                       return `<div class='iframe-wrapper-generiek'>${bron.outer}</div>`;
                   }
@@ -402,14 +430,7 @@ export default function makeLongHTML(event) {
         : "";
 
     // headings omlaag gooien.
-    const thtml =
-        event.textForHTML
-            ?.replaceAll("h6", "strong")
-            .replaceAll("h5", "strong")
-            .replaceAll("h4", "strong")
-            .replaceAll("h3", "h4")
-            .replaceAll("h1", "h2")
-            .replaceAll("h2", "h3") ?? "";
+    const thtml = event.textForHTML;
 
     const reshtml = `
     <div class='long-html'>

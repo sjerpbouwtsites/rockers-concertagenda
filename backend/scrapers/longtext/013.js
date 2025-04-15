@@ -32,14 +32,15 @@ export default async function longTextSocialsIframes(page, event) {
         ...standaardSelectorConfig,
         textBody: "#textbody .prose",
         mediaEls: '.swiper-slide a[href*="youtube"]',
-        removeEmptyHTMLFrom: "#textbody .prose"
+        removeEmptyHTMLFrom: "#textbody .prose",
+        removeHTMLWithStrings: ["hapje en een drankje"]
     };
 
     await ongewensteHTMLUitHeleDocument(page, selectors);
 
     await eersteLadingOverbodigeAttributesWeg(page, selectors);
 
-    res.mediaForHTML = await maakMediaHTMLBronnen(page, selectors);
+    res.mediaForHTML = await maakMediaHTMLBronnen(page, selectors, event);
 
     await hinderlijkeTekstenEruitSlopen(page, selectors);
 

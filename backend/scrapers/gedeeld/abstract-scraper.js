@@ -1353,15 +1353,23 @@ export default class AbstractScraper extends ScraperConfig {
         if (workerData.index != "0") return;
         const eventListFileName = `${fsDirections.eventLists}/${workerData.family}/0.json`;
         const fsRes = JSON.parse(fs.readFileSync(eventListFileName, "utf-8"));
-        this.dirtyDebug(fsRes[0]);
-        const eerste3 = [fsRes[0], fsRes[1], fsRes[2]].map((r) => {
+
+        const eerste3 = [fsRes[0], fsRes[1], fsRes[2]];
+        const eerste3Kort = eerste3.map((r) => {
             if (!r) return r;
             const longTextURL = r.longText.replace("../public/texts/", "");
-            const link = `<a class='links-naar-longtext-html' style="font-weight: bold; font-size: 18px" target='_blank' href='${`http://localhost/rockagenda/public/texts/${longTextURL}`}'>LongText</a>`;
-            r.longText = link;
-            return r;
+            const n = {
+                title: r.title,
+                start: r.start,
+                link: `<a class='links-naar-longtext-html' style="font-weight: bold; font-size: 18px" target='_blank' href='${`http://localhost/rockagenda/public/texts/${longTextURL}`}'>LongText</a>`
+            };
+            return n;
         });
         this.dirtyDebug({
+            title: `event list res ${workerData.family}`,
+            eerste3Kort
+        });
+        this.dirtyLog({
             title: `event list res ${workerData.family}`,
             eerste3
         });
