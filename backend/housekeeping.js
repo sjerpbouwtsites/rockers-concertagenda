@@ -10,13 +10,18 @@ import { workerNames } from "./mods/worker-config.js";
  *
  */
 export default class HouseKeeping {
-    vandaag = new Date().toISOString().substring(0, 10).replaceAll(/-/g, "");
+    vandaag = null;
     houseKeepingResults = [];
-    static _self = null;
 
     constructor() {
-        if (!HouseKeeping._self) return HouseKeeping();
-        return this._self;
+        this.zetVandaag();
+    }
+
+    zetVandaag() {
+        this.vandaag = new Date()
+            .toISOString()
+            .substring(0, 10)
+            .replaceAll(/-/g, "");
     }
 
     /**
@@ -71,6 +76,7 @@ export default class HouseKeeping {
         this.houseKeepingResults.forEach(
             (hkr) => hkr.length && console.log(hkr)
         );
+        console.log("TODO: artist-db backups opschonen");
         console.log("------------------------------");
         console.groupEnd();
     }

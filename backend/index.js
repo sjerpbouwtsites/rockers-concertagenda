@@ -138,12 +138,11 @@ async function checkSinglePageCacheExistsRecursive(familyNames) {
 }
 
 async function init() {
+    new HouseKeeping().init();
     printLocationsToPublic();
 
     const workerConfig = getWorkerConfig();
     await checkSinglePageCacheExistsRecursive(workerConfig.familyNames);
-
-    new HouseKeeping().init();
 
     monitorWebsocketServer = await initMonitorBackend();
     RockWorker.monitorWebsocketServer = monitorWebsocketServer;

@@ -1,63 +1,5 @@
 [
   {
-    "door": "2025-04-14T19:00:00",
-    "start": "2025-04-14T19:30:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/64673130/harakiri-for-the-sky-14-04-2025",
-    "title": "Harakiri For the Sky",
-    "location": "tivolivredenburg",
-    "price": 28.85,
-    "shortText": "Post-blackmetalband met nieuw album Scorched Earth",
-    "longText": "../public/texts/tivolivredenburg/YXJha2lyaS1mb3ItdGhlLXNreS0xNC0wNC0yMDI1.html",
-    "image": "../public/event-images/tivolivredenburg/YXJha2lyaS1mb3ItdGhlLXNreS0xNC0wNC0yMDI1",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "harakiri for the sky": {
-        "s": "58kbq6qkqnfwyrqcjffqqq",
-        "l": "harakiri%20for%20the%20sky",
-        "g": [
-          "atmospheric black metal",
-          "austrian black metal",
-          "austrian metal",
-          "blackgaze",
-          "melodic death metal",
-          "post-black metal",
-          "post-metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-04-14T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/swallow-the-sun/",
-    "title": "Swallow the sun",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Swallow the Sun is a Finnish death-doom band founded in 2000 by Juha Raivio. Their…",
-    "longText": "../public/texts/kavka/YXZrYS5iZS9ldmVudC9zd2FsbG93LXRoZS1zdW4v.html",
-    "image": "../public/event-images/kavka/YXZrYS5iZS9ldmVudC9zd2FsbG93LXRoZS1zdW4v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "swallow the sun": {
-        "s": "0ulKlNlo0iPx5ZS6VMTHWQ",
-        "l": "swallow%20the%20sun",
-        "g": [
-          "doom metal",
-          "finnish death metal",
-          "finnish doom metal",
-          "finnish melodeath",
-          "finnish metal",
-          "melodic death metal",
-          "melodic doom",
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
     "title": "Behemoth, Satyricon en Rotting Christ",
     "start": "2025-04-15",
     "eventLocationName": "e-werk",
@@ -197,7 +139,6 @@
     "artists": {}
   },
   {
-    "door": "2025-04-16T19:00:00",
     "start": "2025-04-16T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/108558/the-spark",
     "title": "The Spark",
@@ -790,21 +731,7 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "meer": {
-        "s": "4pAX6VBnbccF9uVcb9EGiq",
-        "l": "meer",
-        "g": [
-          "progressive rock",
-          "progressive metal",
-          "symphonic rock",
-          "art rock",
-          "electro ",
-          "punk ",
-          "rock "
-        ]
-      }
-    }
+    "artists": {}
   },
   {
     "door": "2025-04-19T18:30:00",
@@ -7137,6 +7064,31 @@
     }
   },
   {
+    "door": "2025-07-03T19:00:00",
+    "start": "2025-07-03T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/108791/unto-others",
+    "title": "Unto Others",
+    "location": "013",
+    "price": 28.3,
+    "shortText": "Never, Neverland Tour",
+    "longText": "../public/texts/013/bC9wcm9ncmFtbWEvMTA4NzkxL3VudG8tb3RoZXJz.html",
+    "image": "../public/event-images/013/bC9wcm9ncmFtbWEvMTA4NzkxL3VudG8tb3RoZXJz",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "unto others": {
+        "s": "1W5khHrkcznsyChxwIBfAI",
+        "l": "unto%20others",
+        "g": [
+          "portland metal",
+          "heavy metal",
+          "gothic rock"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-07-04T19:00:00",
     "venueEventUrl": "https://occii.org/events/rj-birthday-bash/",
     "title": "R/j birthday bash! w/ mörser (de) ",
@@ -7895,6 +7847,29 @@
     "shortText": "\nMet Machine Head, Papa Roach, Gojira, Apocalyptica, Within Temptation e.v.a.",
     "image": "../public/location-images/wackenduitslandmetmachinehead",
     "location": "wackenduitslandmetmachinehead"
+  },
+  {
+    "door": "2025-08-01T19:00:00",
+    "start": "2025-08-01T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/109382/dogma",
+    "title": "Dogma",
+    "location": "013",
+    "price": 18.3,
+    "shortText": "",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvMTA5MzgyL2RvZ21h.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvMTA5MzgyL2RvZ21h",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "dogma": {
+        "s": "4R6XPuqGShFESRVkCePaxj",
+        "l": "dogma",
+        "g": [
+          "groove metal"
+        ]
+      }
+    }
   },
   {
     "start": "2025-08-03T20:00:00",
@@ -8981,15 +8956,15 @@
     }
   },
   {
-    "door": "2025-09-13T19:00:00",
-    "start": "2025-09-13T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/94529/ayreon",
+    "door": "2025-09-13T12:30:00",
+    "start": "2025-09-13T12:30:00",
+    "venueEventUrl": "https://www.013.nl/programma/94540/ayreon",
     "title": "Ayreon",
     "location": "013",
     "price": 75,
-    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #3",
-    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1MjkvYXlyZW9u.html",
-    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1MjkvYXlyZW9u",
+    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #2 (MATINEE)",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDAvYXlyZW9u.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDAvYXlyZW9u",
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
@@ -9010,15 +8985,15 @@
     }
   },
   {
-    "door": "2025-09-13T12:30:00",
-    "start": "2025-09-13T12:30:00",
-    "venueEventUrl": "https://www.013.nl/programma/94540/ayreon",
+    "door": "2025-09-13T19:00:00",
+    "start": "2025-09-13T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/94529/ayreon",
     "title": "Ayreon",
     "location": "013",
     "price": 75,
-    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #2 (MATINEE)",
-    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDAvYXlyZW9u.html",
-    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDAvYXlyZW9u",
+    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #3",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1MjkvYXlyZW9u.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1MjkvYXlyZW9u",
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
@@ -9064,15 +9039,15 @@
     }
   },
   {
-    "door": "2025-09-14T12:30:00",
-    "start": "2025-09-14T12:30:00",
-    "venueEventUrl": "https://www.013.nl/programma/94545/ayreon",
+    "door": "2025-09-14T19:00:00",
+    "start": "2025-09-14T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/94548/ayreon",
     "title": "Ayreon",
     "location": "013",
     "price": 75,
-    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #4 (MATINEE)",
-    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDUvYXlyZW9u.html",
-    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDUvYXlyZW9u",
+    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #5",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDgvYXlyZW9u.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDgvYXlyZW9u",
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
@@ -9093,15 +9068,15 @@
     }
   },
   {
-    "door": "2025-09-14T19:00:00",
-    "start": "2025-09-14T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/94548/ayreon",
+    "door": "2025-09-14T12:30:00",
+    "start": "2025-09-14T12:30:00",
+    "venueEventUrl": "https://www.013.nl/programma/94545/ayreon",
     "title": "Ayreon",
     "location": "013",
     "price": 75,
-    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #5",
-    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDgvYXlyZW9u.html",
-    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDgvYXlyZW9u",
+    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #4 (MATINEE)",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDUvYXlyZW9u.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDUvYXlyZW9u",
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
@@ -9298,6 +9273,29 @@
     }
   },
   {
+    "door": "2025-09-25T19:00:00",
+    "start": "2025-09-25T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/109593/better-lovers",
+    "title": "Better Lovers",
+    "location": "013",
+    "price": 28.3,
+    "shortText": "",
+    "longText": "../public/texts/013/cHJvZ3JhbW1hLzEwOTU5My9iZXR0ZXItbG92ZXJz.html",
+    "image": "../public/event-images/013/cHJvZ3JhbW1hLzEwOTU5My9iZXR0ZXItbG92ZXJz",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "better lovers": {
+        "s": "3mStoA23qANDeMqHi2oqze",
+        "l": "better%20lovers",
+        "g": [
+          "metalcore"
+        ]
+      }
+    }
+  },
+  {
     "title": "Floor Jansen",
     "start": "2025-09-26",
     "eventLocationName": "de harmonie",
@@ -9424,6 +9422,30 @@
           "black metal",
           "pirate metal",
           "viking",
+          "black metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-10-02T19:00:00",
+    "start": "2025-10-02T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/109526/der-weg-einer-freiheit",
+    "title": "Der Weg Einer Freiheit",
+    "location": "013",
+    "price": 29.3,
+    "shortText": "",
+    "longText": "../public/texts/013/LzEwOTUyNi9kZXItd2VnLWVpbmVyLWZyZWloZWl0.html",
+    "image": "../public/event-images/013/LzEwOTUyNi9kZXItd2VnLWVpbmVyLWZyZWloZWl0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "der weg einer freiheit": {
+        "s": "7e823b0KQoVtLG86Ui5xGD",
+        "l": "der%20weg%20einer%20freiheit",
+        "g": [
+          "black metal",
           "black metal"
         ]
       }
@@ -9962,7 +9984,7 @@
     "shortText": "Helloween 40 Years Anniversary Tour",
     "longText": "../public/texts/013/OTY5MDUvaGVsbG93ZWVuLWJlYXN0LWluLWJsYWNr.html",
     "image": "../public/event-images/013/OTY5MDUvaGVsbG93ZWVuLWJlYXN0LWluLWJsYWNr",
-    "soldOut": false,
+    "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
@@ -10655,6 +10677,49 @@
     }
   },
   {
+    "door": "2025-11-06T19:00:00",
+    "start": "2025-11-06T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/107971/king-gizzard-the-lizard-wizard",
+    "title": "King Gizzard & The Lizard Wizard",
+    "location": "013",
+    "price": 53.8,
+    "shortText": "Rave set",
+    "longText": "../public/texts/013/a2luZy1naXp6YXJkLXRoZS1saXphcmQtd2l6YXJk.html",
+    "image": "../public/event-images/013/a2luZy1naXp6YXJkLXRoZS1saXphcmQtd2l6YXJk",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "king gizzard & the lizard wizard": {
+        "s": "6xyvaodge0vmrt83jss9sn",
+        "l": "king%20gizzard%20&%20the%20lizard%20wizard",
+        "g": [
+          "australian psych",
+          "double drumming",
+          "microtonal",
+          "neo-psychedelic"
+        ]
+      },
+      "the lizard wizard": {
+        "s": null,
+        "l": "czechia",
+        "g": [
+          "progressive death metal/grindcore"
+        ]
+      },
+      "king gizzard": {
+        "s": "6xyvaodge0vmrt83jss9sn",
+        "l": "king%20gizzard",
+        "g": [
+          "australian psych",
+          "double drumming",
+          "microtonal",
+          "neo-psychedelic"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-11-07T19:30:00",
     "venueEventUrl": "https://neushoorn.nl/production/the-perfect-tool/",
     "title": "The Perfect Tool",
@@ -11075,6 +11140,31 @@
         "l": "acindc",
         "g": [
           "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-12-05T19:00:00",
+    "start": "2025-12-05T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/108757/ice-nine-kills",
+    "title": "Ice Nine Kills",
+    "location": "013",
+    "price": 43.8,
+    "shortText": "",
+    "longText": "../public/texts/013/cm9ncmFtbWEvMTA4NzU3L2ljZS1uaW5lLWtpbGxz.html",
+    "image": "../public/event-images/013/cm9ncmFtbWEvMTA4NzU3L2ljZS1uaW5lLWtpbGxz",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ice nine kills": {
+        "s": "52qKfVcIV4GS8A8Vay2xtt",
+        "l": "ice%20nine%20kills",
+        "g": [
+          "metalcore",
+          "metal",
+          "post-hardcore"
         ]
       }
     }

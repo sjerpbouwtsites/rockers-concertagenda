@@ -241,6 +241,8 @@ export default class AbstractScraper extends ScraperConfig {
 
         await this.saveEvents();
 
+        await this.debugScraperOutput();
+
         return true;
         // overige catch in om init heen
     }
@@ -302,7 +304,8 @@ export default class AbstractScraper extends ScraperConfig {
         );
         if (theseBaseEvents && theseBaseEvents.length) {
             theseBaseEvents.forEach((file) => {
-                fs.unlinkSync(`${fsDirections.baseEventlists}/${file}`);
+                fs.existsSync(`${fsDirections.baseEventlists}/${file}`) &&
+                    fs.unlinkSync(`${fsDirections.baseEventlists}/${file}`);
             });
         }
         // sla nieuwe op
@@ -1336,11 +1339,32 @@ export default class AbstractScraper extends ScraperConfig {
         const inbetweenFix =
             workerData.index !== null ? `${workerData.index}` : "0";
         const pathToEventListFile = `${pathToEventList}/${workerData.family}/${inbetweenFix}.json`;
-        fs.writeFile(
+        fs.writeFileSync(
             pathToEventListFile,
-            JSON.stringify(this._events, null, "  "),
-            () => {}
+            JSON.stringify(this._events, null, "  ")
         );
+
+        return true;
+    }
+
+    // step 7
+    async debugScraperOutput() {
+        if (!debugSettings.debugScraperOutput) return true;
+        if (workerData.index != "0") return;
+        const eventListFileName = `${fsDirections.eventLists}/${workerData.family}/0.json`;
+        const fsRes = JSON.parse(fs.readFileSync(eventListFileName, "utf-8"));
+        this.dirtyDebug(fsRes[0]);
+        const eerste3 = [fsRes[0], fsRes[1], fsRes[2]].map((r) => {
+            if (!r) return r;
+            const longTextURL = r.longText.replace("../public/texts/", "");
+            const link = `<a class='links-naar-longtext-html' style="font-weight: bold; font-size: 18px" target='_blank' href='${`http://localhost/rockagenda/public/texts/${longTextURL}`}'>LongText</a>`;
+            r.longText = link;
+            return r;
+        });
+        this.dirtyDebug({
+            title: `event list res ${workerData.family}`,
+            eerste3
+        });
 
         return true;
     }

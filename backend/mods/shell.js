@@ -52,12 +52,14 @@ const shell = {
     get removeSinglePageCache() {
         return this.check(this._arguments?.removeSinglePageCache);
     },
+
     get debugLongHTML() {
         return this._arguments?.debugLongHTML ?? null;
     },
-    get scraperEventsLongTextDebug() {
-        return this.check(this._arguments?.scraperEventsLongTextDebug);
-    },
+
+    /**
+     * aantal workers tegelijk mogen draaien.
+     */
     get workers() {
         return this._arguments?.workers;
     },
