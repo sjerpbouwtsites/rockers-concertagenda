@@ -1276,12 +1276,11 @@ export default class AbstractScraper extends ScraperConfig {
 
     async autoScroll(page) {
         this.timesScrolled += 1;
-        this.dirtyTalk(
-            `${workerData.family} ${workerData.index} scroll #${this.timesScrolled}`
-        );
-
-        await page.evaluate(async () => {
-            await new Promise((resolve) => {
+        const startHeight = await page.evaluate(() => {
+            return document.body.scrollHeight;
+        });
+        const endHeight = await page.evaluate(async () => {
+            return await new Promise((resolve) => {
                 let totalHeight = 0;
                 const distance = 500;
                 const timer = setInterval(() => {
@@ -1295,8 +1294,13 @@ export default class AbstractScraper extends ScraperConfig {
                         resolve();
                     }
                 }, 150);
+            }).then(() => {
+                return document.body.scrollHeight;
             });
         });
+        this.dirtyTalk(
+            `${workerData.family} ${workerData.index} scrolled #${this.timesScrolled} from ${startHeight} to ${endHeight}`
+        );
     }
 
     handleOuterScrapeCatch(catchError) {
