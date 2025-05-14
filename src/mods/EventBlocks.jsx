@@ -4,6 +4,7 @@ import closeIcon from "../images/close.png";
 import LoadmoreButton from "./LoadmoreButton.jsx";
 import EventBlocksUtil from "./EventBlocksUtil.jsx";
 import EventBlocksImage from "./EventBlocksImage.jsx";
+import EventBlocksPrice from "./EventBlocksPrice.jsx";
 
 class EventBlocks extends React.Component {
     // #region constructor en life cycle
@@ -91,7 +92,6 @@ class EventBlocks extends React.Component {
     }
 
     async recursieveStijlEraf() {
-        console.log("recursieve stijl eraf");
         document.querySelectorAll(".event-block[style]").forEach((el) => {
             el.setAttribute("data-was-enlarged", true);
             el.removeAttribute("style");
@@ -135,24 +135,12 @@ class EventBlocks extends React.Component {
             `event-id-${musicEventKey}`
         );
 
-        console.log(
-            `dit element van ${thisElement.querySelector("h2").textContent}`
-        );
-        console.log(thisElement);
-
         filteredMusicEvents = filteredMusicEvents.map((event) => {
             event.enlarged = false; // eslint-disable-line
             return event;
         });
-        // this.setState({ musicEvents }, () => {
-        //     //
-        // });
 
-        if (isMomenteelEnlarged) {
-            return;
-        }
-
-        if (!thisEvent.longText) {
+        if (isMomenteelEnlarged || !thisEvent.longText) {
             return;
         }
 
@@ -209,52 +197,52 @@ class EventBlocks extends React.Component {
 
     // #region event-block HTML methods
 
-    priceElement(musicEvent) {
-        // eslint-disable-line
-        // FIXME Naar eigen component
+    // priceElement(musicEvent) {
+    //     // eslint-disable-line
+    //     // FIXME Naar eigen component
 
-        let priceText = null;
-        if (musicEvent.soldOut) {
-            priceText = "Uitverkocht!";
-        } else if (musicEvent?.price === null) {
-            priceText = "€?";
-        } else if (musicEvent?.price) {
-            priceText = `€ ${Number(musicEvent?.price).toFixed(2).toString().replace(".", ",")}`;
-        } else if (musicEvent?.origin === "ticketmaster") {
-            // TODO is die origin er nog?
-            priceText = "Gratis";
-        } else {
-            return "";
-        }
+    //     let priceText = null;
+    //     if (musicEvent.soldOut) {
+    //         priceText = "Uitverkocht!";
+    //     } else if (musicEvent?.price === null) {
+    //         priceText = "€?";
+    //     } else if (musicEvent?.price) {
+    //         priceText = `€ ${Number(musicEvent?.price).toFixed(2).toString().replace(".", ",")}`;
+    //     } else if (musicEvent?.origin === "ticketmaster") {
+    //         // TODO is die origin er nog?
+    //         priceText = "Gratis";
+    //     } else {
+    //         return "";
+    //     }
 
-        const sharedModifiers = [
-            musicEvent.soldOut ? "sold-out" : "",
-            musicEvent.enlarged ? "enlarged" : ""
-        ];
+    //     const sharedModifiers = [
+    //         musicEvent.soldOut ? "sold-out" : "",
+    //         musicEvent.enlarged ? "enlarged" : ""
+    //     ];
 
-        const priceSelectors = BEMify(
-            "event-block__price anthracite-color",
-            sharedModifiers
-        );
+    //     const priceSelectors = BEMify(
+    //         "event-block__price anthracite-color",
+    //         sharedModifiers
+    //     );
 
-        const emoji = musicEvent.soldOut ? "💀" : "🎫";
-        const linkPriceWrapper = (
-            <a
-                className={BEMify(
-                    "event-block__venue-link event-block__price-link-wrapper",
-                    sharedModifiers
-                )}
-                href={musicEvent.venueEventUrl}
-                target="_blank"
-                rel="noreferrer"
-            >
-                <span className="ticketemoji contrast-with-dark">{emoji}</span>
-                <span className={priceSelectors}>{priceText}</span>
-            </a>
-        );
+    //     const emoji = musicEvent.soldOut ? "💀" : "🎫";
+    //     const linkPriceWrapper = (
+    //         <a
+    //             className={BEMify(
+    //                 "event-block__venue-link event-block__price-link-wrapper",
+    //                 sharedModifiers
+    //             )}
+    //             href={musicEvent.venueEventUrl}
+    //             target="_blank"
+    //             rel="noreferrer"
+    //         >
+    //             <span className="ticketemoji contrast-with-dark">{emoji}</span>
+    //             <span className={priceSelectors}>{priceText}</span>
+    //         </a>
+    //     );
 
-        return linkPriceWrapper;
-    }
+    //     return linkPriceWrapper;
+    // }
 
     async sluitEnlarged(e = null) {
         if (e) {
@@ -462,7 +450,7 @@ class EventBlocks extends React.Component {
                                 sharedModifiers,
                                 monthEvenOddCounter
                             );
-                            const priceElement = this.priceElement(musicEvent);
+
                             const datesHTML =
                                 EventBlocksUtil.createDates(musicEvent);
                             const hideSoldOutBtn = this.createHideSoldOutBtn(
@@ -568,7 +556,9 @@ class EventBlocks extends React.Component {
                                             }}
                                         />
                                         <footer className={selectors.footer}>
-                                            {priceElement}
+                                            <EventBlocksPrice
+                                                musicEvent={musicEvent}
+                                            />
                                         </footer>
                                     </section>
                                     {hideSoldOutBtn}
