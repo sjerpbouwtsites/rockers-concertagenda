@@ -4,10 +4,10 @@ clear
 node index.js \
     workers=3 \
     removeBaseEvents=all \
-    removePublicEventImages=false \
-    removeLongTextFiles=all \
+    removePublicEventImages=true \
+    removeLongTextFiles=false \
     removeSinglePageCache=all \
-    scraperEventsLongTextDebug=all \
+    scraperEventsLongTextDebug=false \
     artistDBWrite=false \
     noLocPrint=true \
     debugLongHTML=false

@@ -1,6 +1,6 @@
 /* global document */
 import { workerData } from "worker_threads";
-import getImage from "./gedeeld/image.js";
+import { getImageByCanvas } from "./gedeeld/image.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import longTextSocialsIframes from "./longtext/doornroosje.js";
 import workTitleAndSlug from "./gedeeld/slug.js";
@@ -174,10 +174,14 @@ scraper.mainPage = async function () {
 scraper.singlePage = async function ({ page, event }) {
     const { stopFunctie } = await this.singlePageStart();
 
-    let pageInfo;
+    let pageInfo = {
+        anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
+        errors: []
+    };
     if (
         !event.venueEventUrl.includes("soulcrusher") &&
-        !event.venueEventUrl.includes("festival")
+        !event.venueEventUrl.includes("festival") &&
+        !event.venueEventUrl.includes("sonic-whip")
     ) {
         pageInfo = await page
             .evaluate(
@@ -244,13 +248,15 @@ scraper.singlePage = async function ({ page, event }) {
     } else {
         //TODO
         pageInfo = {
-            corrupted: true
+            corrupted: true,
+            errors: []
         };
         return this.singlePageEnd({
             pageInfo,
             stopFunctie,
             page,
-            event
+            event,
+            singlePageHTML: null
         });
     }
 
@@ -261,23 +267,16 @@ scraper.singlePage = async function ({ page, event }) {
     pageInfo = combineDoorTimeStartDate(pageInfo);
     pageInfo = combineStartTimeStartDate(pageInfo);
 
-    const directImageSrc = await page.evaluate(() => {
-        return document.querySelector("[property='og:image']")?.content ?? null;
-    });
-
-    const imageRes = await getImage({
-        _this: this,
+    const imageRes = await getImageByCanvas(
         page,
-        workerData,
         event,
-        pageInfo,
-        selectors: [],
-        mode: "direct-input",
-        directImageSrc
-    });
+        this,
+        ".c-header-event__image img, .c-festival-header__logo img"
+    ).catch(this.handleError);
 
     pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
     pageInfo.image = imageRes.image;
+    pageInfo.image = null;
 
     const priceRes = await this.getPriceFromHTML({
         page,

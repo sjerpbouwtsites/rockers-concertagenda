@@ -682,13 +682,17 @@ export default class AbstractScraper extends ScraperConfig {
             event: singleEvent
         });
 
-        //save in cache if not there
-        const u = singleEvent.venueEventUrl.replaceAll(/\W/g, "").toLowerCase();
-        var b = u.substring(u.length - 25, u.length + 1);
-        const singlePageCachePath = `${fsDirections.singlePagesCache}/${workerData.family}/${b}.html`;
+        if (singlePageHTML) {
+            //save in cache if not there
+            const u = singleEvent.venueEventUrl
+                .replaceAll(/\W/g, "")
+                .toLowerCase();
+            var b = u.substring(u.length - 25, u.length + 1);
+            const singlePageCachePath = `${fsDirections.singlePagesCache}/${workerData.family}/${b}.html`;
 
-        if (!fs.existsSync(singlePageCachePath)) {
-            fs.writeFileSync(singlePageCachePath, singlePageHTML, "utf-8");
+            if (!fs.existsSync(singlePageCachePath)) {
+                fs.writeFileSync(singlePageCachePath, singlePageHTML, "utf-8");
+            }
         }
 
         // samenvoegen & naar EventsList sturen

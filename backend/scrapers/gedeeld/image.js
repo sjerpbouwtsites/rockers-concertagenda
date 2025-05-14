@@ -89,6 +89,82 @@ async function downloadImageCompress({
     return diRes;
 }
 
+export async function getImageByCanvas(page, event, _this, selector) {
+    const res = {
+        errors: []
+    };
+
+    const dataURI = await page
+        .evaluate((selector) => {
+            const imageEL = document.querySelector(selector);
+            const canv = document.createElement("canvas");
+            canv.id = "rot-op-403";
+            document.body.appendChild(canv);
+            canv.height = imageEL.height;
+            canv.width = imageEL.width;
+
+            const ctx = canv.getContext("2d");
+
+            canv.style = `position: fixed; top: 20px; left: 20px; z-index: 1000`;
+            ctx.drawImage(imageEL, 0, 0, canv.width, canv.height);
+            return document.querySelector("#rot-op-403").toDataURL();
+        }, selector)
+        .catch((err) => {
+            console.log(err);
+            handleError(
+                err,
+                `fout bij puppeteer getImageByCanvas <a _target='_blank' href='${event.venueEventUrl}'>${event.title}</a>`
+            );
+        });
+
+    if (!dataURI) {
+        handleError(
+            new Error(
+                `geen inhoud dataURI ${event.title} ${event.venueEventUrl}`
+            )
+        );
+        return null;
+    }
+
+    // Extract the base64-encoded data
+    const extension = dataURI.includes("png")
+        ? ".png"
+        : dataURI.includes("jpeg")
+        ? ".jpeg"
+        : ".jpg";
+    const base64Data = dataURI.replace(/^data:image\/\w+;base64,/, "");
+
+    // // Convert it into a buffer
+    const imageBuffer = Buffer.from(base64Data, "base64");
+
+    const base64String = Buffer.from(
+        event.venueEventUrl.substring(
+            event.venueEventUrl.length - 30,
+            event.venueEventUrl.length
+        )
+    ).toString("base64");
+    let imagePath = `${_this.eventImagesFolder}/${workerData.family}/${base64String}`;
+
+    fs.writeFileSync(`${imagePath}-ori${extension}`, imageBuffer, "UTF-8");
+
+    sharp(`${imagePath}-ori${extension}`)
+        .resize(440, 250)
+        .webp()
+        .toFile(`${imagePath}-w440.webp`, () => {});
+
+    sharp(`${imagePath}-ori${extension}`)
+        .resize(750, 340)
+        .webp()
+        .toFile(`${imagePath}-w750.webp`, () => {});
+
+    sharp(`${imagePath}-ori${extension}`)
+        .webp()
+        .toFile(`${imagePath}-vol.webp`, () => {});
+
+    res.image = imagePath;
+    return res;
+}
+
 export default async function getImage({
     _this,
     page,
