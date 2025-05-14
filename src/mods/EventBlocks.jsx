@@ -1,5 +1,5 @@
 import React from "react";
-import { BEMify, filterEventsDateInPast, waitFor } from "./util.js";
+import { BEMify, waitFor } from "./util.js";
 import closeIcon from "../images/close.png";
 import LoadmoreButton from "./LoadmoreButton.jsx";
 
