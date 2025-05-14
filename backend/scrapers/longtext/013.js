@@ -1,131 +1,56 @@
 /* eslint-disable  */
 /* eslint-disable indent */
 /* global document */
+
+import {
+    handleError,
+    ongewensteHTMLUitHeleDocument,
+    eersteLadingOverbodigeAttributesWeg,
+    maakMediaHTMLBronnen,
+    hinderlijkeTekstenEruitSlopen,
+    formatHTMLTextBodyNaarEenSpatieMax,
+    legeHTMLElementenVerwijderen,
+    maakTekstBlokHTML,
+    standaardSelectorConfig,
+    removeElementsRecursive
+} from "../gedeeld/longHTML.js";
+
 export default async function longTextSocialsIframes(page, event) {
-    return page.evaluate(
-        // eslint-disable-next-line no-shadow
-        ({ event }) => {
-            const res = {};
-            const textSelector = "main > article article p";
-            const mediaSelector = ['.swiper-slide a[href*="youtube"]'].join(
-                ", "
-            );
-            const removeEmptyHTMLFrom = textSelector;
-            const removeSelectors = [
-                `${textSelector} [class*='icon-']`,
-                `${textSelector} [class*='fa-']`,
-                `${textSelector} .fa`,
-                `${textSelector} script`,
-                `${textSelector} noscript`,
-                `${textSelector} style`,
-                `${textSelector} meta`,
-                `${textSelector} svg`,
-                `${textSelector} form`,
-                `${textSelector} h1`,
-                `${textSelector} img`,
-                `${textSelector} iframe`
-            ].join(", ");
+    //013 hacks
+    await page.evaluate(() => {
+        document.querySelector("article h1").parentNode.parentNode.id =
+            "textbody";
+    });
 
-            const attributesToRemove = [
-                "style",
-                "hidden",
-                "_target",
-                "frameborder",
-                "onclick",
-                "aria-hidden",
-                "allow",
-                "allowfullscreen",
-                "data-deferlazy",
-                "width",
-                "height"
-            ];
-            const attributesToRemoveSecondRound = ["class", "id"];
-            const removeHTMLWithStrings = [];
+    const res = {
+        mediaForHTML: null,
+        textForHTML: null
+    };
+    // in standaard removeEls saveTheseAttrsFirst removeAttrsLastStep
+    // removeHTMLWithStrings htmlElementsWithStringsToRemove
+    const selectors = {
+        ...standaardSelectorConfig,
+        textBody: "#textbody .prose",
+        mediaEls: '.swiper-slide a[href*="youtube"]',
+        removeEmptyHTMLFrom: "#textbody .prose",
+        removeHTMLWithStrings: ["hapje en een drankje"]
+    };
 
-            // eerst onzin attributes wegslopen
-            const mediaAttrRemSelAdd = `${
-                mediaSelector.length
-                    ? `, ${mediaSelector} *, ${mediaSelector}`
-                    : ""
-            }`;
-            const textSocEnMedia = `${textSelector} ${mediaAttrRemSelAdd}`;
-            document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-                attributesToRemove.forEach((attr) => {
-                    if (elToStrip.hasAttribute(attr)) {
-                        elToStrip.removeAttribute(attr);
-                    }
-                });
-            });
+    await ongewensteHTMLUitHeleDocument(page, selectors);
 
-            // media obj maken voordat HTML verdwijnt
-            res.mediaForHTML = !mediaSelector.length
-                ? ""
-                : Array.from(document.querySelectorAll(mediaSelector)).map(
-                      (bron) => {
-                          const h = bron.href;
-                          return {
-                              outer: null,
-                              src: h.substring(0, h.indexOf("?")),
-                              id: null,
-                              type: "youtube"
-                          };
-                      }
-                  );
+    await eersteLadingOverbodigeAttributesWeg(page, selectors);
 
-            // stript HTML tbv text
-            removeSelectors.length &&
-                document
-                    .querySelectorAll(removeSelectors)
-                    .forEach((toRemove) =>
-                        toRemove.parentNode.removeChild(toRemove)
-                    );
+    res.mediaForHTML = await maakMediaHTMLBronnen(page, selectors, event);
 
-            // verwijder ongewenste paragrafen over bv restaurants
-            Array.from(
-                document.querySelectorAll(
-                    `${textSelector} p, ${textSelector} span, ${textSelector} a`
-                )
-            ).forEach((verwijder) => {
-                const heeftEvilString = !!removeHTMLWithStrings.find(
-                    (evilString) => verwijder.textContent.includes(evilString)
-                );
-                if (heeftEvilString) {
-                    verwijder.parentNode.removeChild(verwijder);
-                }
-            });
+    await hinderlijkeTekstenEruitSlopen(page, selectors);
 
-            // lege HTML eruit cq HTML zonder tekst of getallen
-            document
-                .querySelectorAll(`${removeEmptyHTMLFrom} > *`)
-                .forEach((checkForEmpty) => {
-                    const leegMatch = checkForEmpty.innerHTML
-                        .replace("&nbsp;", "")
-                        .match(/[\w\d]/g);
-                    if (!Array.isArray(leegMatch)) {
-                        checkForEmpty.parentNode.removeChild(checkForEmpty);
-                    }
-                });
+    await formatHTMLTextBodyNaarEenSpatieMax(page, selectors);
 
-            document
-                .querySelectorAll(textSelector)
-                .forEach((ts) => ts.setAttribute("data-text", "1"));
+    await removeElementsRecursive(page, selectors);
 
-            // laatste attributen eruit.
-            document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-                attributesToRemoveSecondRound.forEach((attr) => {
-                    if (elToStrip.hasAttribute(attr)) {
-                        elToStrip.removeAttribute(attr);
-                    }
-                });
-            });
+    await legeHTMLElementenVerwijderen(page, selectors);
 
-            res.textForHTML = Array.from(
-                document.querySelectorAll("[data-text]")
-            )
-                .map((el) => el.innerHTML)
-                .join("");
-            return res;
-        },
-        { event }
-    );
+    res.textForHTML = await maakTekstBlokHTML(page, selectors);
+
+    return res;
 }

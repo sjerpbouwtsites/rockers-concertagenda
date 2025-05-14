@@ -1,5 +1,4 @@
 import fs from "fs";
-import shell from "./shell.js";
 import fsDirections from "./fs-directions.js";
 
 export const AbstractWorkerConfig = {
@@ -24,27 +23,27 @@ export const workerConfig = {
     //     workerConcurrent: 2,
     //     forceSet: 0,
     //     CPUReq: "high"
-    // },
-    // baroeg: { workerCount: 1, workerConcurrent: 2, forceSet: 0 },
-    // bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
-    // cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
+    // }
+    //baroeg: { workerCount: 1, workerConcurrent: 2, forceSet: 0 }
+    // bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 }
+    // cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 }
     // dbs: {
     //     workerCount: 3,
     //     workerConcurrent: 3,
     //     CPUReq: "high",
     //     forceSet: 1
-    // },
+    // }
     // dehelling: {
     //     workerCount: 1,
     //     workerConcurrent: 1,
     //     forceSet: 2
-    // },
-    // doornroosje: {
-    //     workerCount: 1,
-    //     workerConcurrent: 1,
-    //     CPUReq: "high",
-    //     forceSet: 2
-    // },
+    // }
+    doornroosje: {
+        workerCount: 1,
+        workerConcurrent: 1,
+        CPUReq: "high",
+        forceSet: 2
+    }
     // effenaar: {
     //     workerCount: 3,
     //     CPUReq: "high",
@@ -90,7 +89,7 @@ export const workerConfig = {
     //     CPUReq: "high",
     //     forceSet: 4
     // },
-    neushoorn: { workerCount: 2, workerConcurrent: 1, forceSet: 5 }
+    // neushoorn: { workerCount: 2, workerConcurrent: 1, forceSet: 5 }
     // nieuwenor: { workerCount: 1, workerConcurrent: 2, forceSet: 5 },
     // occii: {
     //     workerCount: 1,
@@ -205,14 +204,6 @@ class WorkerListConf {
     }
 
     workerNeedsWork(familyName) {
-        if (shell.forceAll) {
-            if (shell.forceSet) {
-                return workerConfig[familyName]?.forceSet === shell.forceSet;
-            }
-            return true;
-        }
-        if (shell.force?.includes(familyName) ?? null) return true;
-
         if (!this.baseEventlistsStart.join("").includes(familyName))
             return true;
         const actueelGevonden = this.baseEventlistsStart.find(

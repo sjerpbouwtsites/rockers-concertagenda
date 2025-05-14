@@ -1,51 +1,6 @@
 [
   {
-    "start": "2025-04-12T19:30:00",
-    "end": "2025-04-12T23:00:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/enemy-inside-12-04-2025/",
-    "title": "Enemy Inside",
-    "location": "dehelling",
-    "price": 20.2,
-    "shortText": "Moderne metal met oorwurmen van refreinen",
-    "longText": "../public/texts/dehelling/Z2VuZGEvZW5lbXktaW5zaWRlLTEyLTA0LTIwMjUv.html",
-    "image": "../public/event-images/dehelling/Z2VuZGEvZW5lbXktaW5zaWRlLTEyLTA0LTIwMjUv",
-    "eventGenres": null,
-    "artists": {
-      "enemy inside": {
-        "s": "4DX0ctdZRMWec9KCiigIXy",
-        "l": "enemy%20inside",
-        "g": [
-          "dark rock",
-          "gothic symphonic metal",
-          "slayer",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-04-13T19:30:00",
-    "end": "2025-04-13T23:00:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/anneke-van-giersbergen-13-04-2025/",
-    "title": "Anneke van Giersbergen",
-    "location": "dehelling",
-    "price": 26.2,
-    "shortText": "Dé rockzangeres des vaderlands",
-    "longText": "../public/texts/dehelling/a2UtdmFuLWdpZXJzYmVyZ2VuLTEzLTA0LTIwMjUv.html",
-    "image": "../public/event-images/dehelling/a2UtdmFuLWdpZXJzYmVyZ2VuLTEzLTA0LTIwMjUv",
-    "eventGenres": null,
-    "artists": {
-      "anneke van giersbergen": {
-        "s": "6tzqjnkayty8hfqbeddf8v",
-        "l": "anneke%20van%20giersbergen",
-        "g": [
-          "metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-04-21T19:30:00",
+    "start": "2025-04-21T19:00:00",
     "end": "2025-04-21T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/spectral-wound-lamp-of-murmuur-21-04-2025/",
     "title": "Spectral Wound + Lamp Of Murmuur",
@@ -75,7 +30,7 @@
     }
   },
   {
-    "start": "2025-05-18T19:30:00",
+    "start": "2025-05-18T19:00:00",
     "end": "2025-05-18T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/combichrist-extize-crimson-veil-esoterik-18-05-2025/",
     "title": "Combichrist + Extize + Crimson Veil + Esoterik",
@@ -97,7 +52,7 @@
     }
   },
   {
-    "start": "2025-05-22T19:30:00",
+    "start": "2025-05-22T19:00:00",
     "end": "2025-05-22T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/phantom-elite-ep-release-22-05-2025/",
     "title": "Phantom Elite EP release",
@@ -110,7 +65,7 @@
     "artists": {}
   },
   {
-    "start": "2025-05-24T19:30:00",
+    "start": "2025-05-24T19:00:00",
     "end": "2025-05-24T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/no-barrier-24-05-2025/",
     "title": "No barrier",
@@ -129,7 +84,7 @@
     }
   },
   {
-    "start": "2025-08-09T19:30:00",
+    "start": "2025-08-09T19:00:00",
     "end": "2025-08-09T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/wednesday-13-09-08-2025/",
     "title": "Wednesday 13",
@@ -151,7 +106,38 @@
     }
   },
   {
-    "start": "2025-09-25T19:30:00",
+    "start": "2025-08-11T19:00:00",
+    "end": "2025-08-11T23:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/the-fall-of-troy-11-08-2025/",
+    "title": "The Fall Of Troy",
+    "location": "dehelling",
+    "price": 25.2,
+    "shortText": "Posthardcore-legendes vieren twintig jaar Doppelgänger",
+    "longText": "../public/texts/dehelling/YS90aGUtZmFsbC1vZi10cm95LTExLTA4LTIwMjUv.html",
+    "image": "../public/event-images/dehelling/YS90aGUtZmFsbC1vZi10cm95LTExLTA4LTIwMjUv",
+    "eventGenres": null,
+    "artists": {
+      "the fall of troy": {
+        "s": "5fuqrhmrymtoo9uolfad4p",
+        "l": "the%20fall%20of%20troy",
+        "g": [
+          "post-hardcore",
+          "progressive post-hardcore",
+          "screamo",
+          "swancore"
+        ]
+      },
+      "fall": {
+        "s": null,
+        "l": "fall",
+        "g": [
+          "death metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-09-25T19:00:00",
     "end": "2025-09-25T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/wolfheart-25-09-2025/",
     "title": "Wolfheart",
@@ -176,7 +162,7 @@
     }
   },
   {
-    "start": "2025-09-28T19:30:00",
+    "start": "2025-09-28T19:00:00",
     "end": "2025-09-28T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/night-verses-28-09-2025/",
     "title": "Night Verses",

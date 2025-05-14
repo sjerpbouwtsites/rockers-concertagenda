@@ -183,7 +183,7 @@ function initiateClosingClient() {
         if (!document.body.hasAttribute("data-dont-close")) {
             window.close();
         }
-    }, 20000);
+    }, 60000);
     setTimeout(() => {
         if (document.body.hasAttribute("data-dont-close")) {
             return;

@@ -1,33 +1,101 @@
 [
   {
-    "start": "2025-04-03T08:00:00",
-    "end": "2025-04-03T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/yama-support/",
-    "title": "Yama + komatsu",
+    "start": "2025-04-17T08:00:00",
+    "end": "2025-04-17T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/bob-wayne-usa-outlaw-country/",
+    "title": "BOB WAYNE (USA Outlaw Country) ",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
-    "longText": "../public/texts/dbs/YnN0dWRpby5ubC9ldmVudC95YW1hLXN1cHBvcnQv.html",
-    "image": "../public/event-images/dbs/YnN0dWRpby5ubC9ldmVudC95YW1hLXN1cHBvcnQv",
+    "price": 10,
+    "shortText": " Hurricane Joe / kitchen open by Lokaol Kabaol Hij komt terug naar dBs! Na minstens vier keer eerder in de oude dBs te zijn geweest (inclusief een legendarische show rond middernacht na een reis van 14 uur om hier te komen die we live streamden), komt Bob Wayne met zijn Outlaw Carnies op -opnieuw- een schier eindeloze EU tour terug naar de nieuwe dBs!",
+    "longText": "../public/texts/dbs/L2JvYi13YXluZS11c2Etb3V0bGF3LWNvdW50cnkv.html",
+    "image": "../public/event-images/dbs/L2JvYi13YXluZS11c2Etb3V0bGF3LWNvdW50cnkv",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "komatsu": {
-        "s": "4R9jLgeJ3j1vgivPJTCG2K",
-        "l": "komatsu",
+      "bob wayne": {
+        "s": "6LWREZSd4429wq2MHt3KC4",
+        "l": "bob%20wayne",
         "g": [
-          "stoner rock",
-          "sludge metal",
-          "space rock",
-          "doom metal",
-          "stoner metal"
+          "gothic country",
+          "psychobilly",
+          "rockabilly",
+          "bluegrass",
+          "alt country"
         ]
-      },
-      "yama": {
-        "s": null,
-        "l": "yama",
+      }
+    }
+  },
+  {
+    "start": "2025-04-19T06:00:00",
+    "end": "2025-04-19T11:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/kutopia-riot-grrrlll-punk-fest-w-workshops-live-music/",
+    "title": "Kutopia > riot grrrlll punk fest live maria iskariot, problem patterns, periot, consensual peggy, & the dolly adlers / kitchen by lokaol kabaol",
+    "location": "dbs",
+    "price": 16,
+    "shortText": " An entire day dedicated to the powers of DIY Riot Grrrl Punk with workshops and blistering live music!\nStarting at noon, The RIOT HOUSE will host the workshops ‘Start Your Own Band In One Day’ and ‘Skate against Patriarchy’. Workshops are free for ticket holders and have limited capacity. Register at jessica@theriothouse.nl",
+    "longText": "../public/texts/dbs/ay1mZXN0LXctd29ya3Nob3BzLWxpdmUtbXVzaWMv.html",
+    "image": "../public/event-images/dbs/ay1mZXN0LXctd29ya3Nob3BzLWxpdmUtbXVzaWMv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-04-24T08:30:00",
+    "end": "2025-04-24T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/club-3voor12-utrecht-met-chrysalis-cest-qui-clemens/",
+    "title": "Club 3voor12 utrecht met chrysalis ",
+    "location": "dbs",
+    "price": 6,
+    "shortText": " c’est qui?  +  clemens Donderdag 24 april presenteren we een nieuwe editie van Club 3voor12 Utrecht in dB’s. Tickets (online 6 euro, deur 7 euro) zijn verkrijgbaar via dB’s en de ticketlink van het event. Op deze editie check je:",
+    "longText": "../public/texts/dbs/ZXQtY2hyeXNhbGlzLWNlc3QtcXVpLWNsZW1lbnMv.html",
+    "image": "../public/event-images/dbs/ZXQtY2hyeXNhbGlzLWNlc3QtcXVpLWNsZW1lbnMv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "clemens": {
+        "s": "6M4RgHnN6u48xM8rbTintP",
+        "l": "clemens",
         "g": [
-          "psychedelic doom",
+          "black metal, classical"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-03T04:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/skad-for-life-iv-festival/",
+    "title": "Ska’d for life iv festival w/ bim skala bim ",
+    "location": "dbs",
+    "price": 20,
+    "shortText": " dr ring ding & more t.b.a. / kitchen by punkdog SKA’D FOR LIFE IV",
+    "longText": "../public/texts/dbs/ZW50L3NrYWQtZm9yLWxpZmUtaXYtZmVzdGl2YWwv.html",
+    "image": "../public/event-images/dbs/ZW50L3NrYWQtZm9yLWxpZmUtaXYtZmVzdGl2YWwv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-05-18T04:00:00",
+    "end": "2025-05-18T08:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/subroutine-label-matinee-w-howrah-free-dust-sowt/",
+    "title": "Subroutine label matinee w/ howrah ",
+    "location": "dbs",
+    "price": 10,
+    "shortText": " free dust  +  søwt  +  special guest jack name (usa) Het Nederlandse kwaliteitslabel Subroutine heeft weer wat mooie releases te vieren en dat brengen we graag onder de aandacht. Op deze middag presenteren we optredens van HOWRAH, Free Dust & SØWT\nSpeciale gast is Jack Name, een enigma uit de LA-underground. Zijn nummers werden gecoverd door 𝗖𝗮𝘁𝗲 𝗟𝗲 𝗕𝗼𝗻, 𝗪𝗵𝗶𝘁𝗲 𝗙𝗲𝗻𝗰𝗲 en 𝗨.𝗦. 𝗚𝗶𝗿𝗹𝘀. Zijn experimentele sounds galmden al door het 𝗠𝘂𝘀𝗲𝘂𝗺 𝗼𝗳 𝗖𝗼𝗻𝘁𝗲𝗺𝗽𝗼𝗿𝗮𝗿𝘆 𝗔𝗿𝘁. Releases op 𝗗𝗿𝗮𝗴 𝗖𝗶𝘁𝘆, 𝗖𝗮𝘀𝘁𝗹𝗲-𝗙𝗮𝗰𝗲 en 𝗠𝗮𝗽𝗹𝗲 𝗗𝗲𝗮𝘁𝗵.",
+    "longText": "../public/texts/dbs/dGluZWUtdy1ob3dyYWgtZnJlZS1kdXN0LXNvd3Qv.html",
+    "image": "../public/event-images/dbs/dGluZWUtdy1ob3dyYWgtZnJlZS1kdXN0LXNvd3Qv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "søwt": {
+        "s": null,
+        "l": "s%c3%b8wt",
+        "g": []
+      },
+      "abel": {
+        "s": "0JRVrJQNnlSl10wEsioxOJ",
+        "l": "abel",
+        "g": [
           "stoner metal",
           "rock"
         ]
@@ -35,82 +103,37 @@
     }
   },
   {
-    "start": "2025-04-10T08:00:00",
-    "end": "2025-04-10T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/dean-wareham-plays-galaxie-500-more-2/",
-    "title": "Dean wareham & band (galaxie 500, luna, dean & britta)",
+    "start": "2025-05-31T07:30:00",
+    "end": "2025-05-31T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/terziele-release-show-hemelbestormer-b-gavran/",
+    "title": "Terziele release show ",
     "location": "dbs",
-    "price": "0",
-    "shortText": " ",
-    "longText": "../public/texts/dbs/ZWhhbS1wbGF5cy1nYWxheGllLTUwMC1tb3JlLTIv.html",
-    "image": "../public/event-images/dbs/ZWhhbS1wbGF5cy1nYWxheGllLTUwMC1tb3JlLTIv",
+    "price": 10,
+    "shortText": " hemelbestormer (b)  +  gavran Ter Ziele Album Release Show – 31 mei dB’s Utrecht",
+    "longText": "../public/texts/dbs/LXNob3ctaGVtZWxiZXN0b3JtZXItYi1nYXZyYW4v.html",
+    "image": "../public/event-images/dbs/LXNob3ctaGVtZWxiZXN0b3JtZXItYi1nYXZyYW4v",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
+      "hemelbestormer": {
+        "s": "5oHzkbFUZZHA2y8t2aAhso",
+        "l": "hemelbestormer",
         "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-01T08:00:00",
-    "end": "2025-05-01T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/black-curse-concrete-winds/",
-    "title": "Black curse + concrete winds",
-    "location": "dbs",
-    "price": "0",
-    "shortText": "",
-    "longText": "../public/texts/dbs/bnQvYmxhY2stY3Vyc2UtY29uY3JldGUtd2luZHMv.html",
-    "image": "../public/event-images/dbs/bnQvYmxhY2stY3Vyc2UtY29uY3JldGUtd2luZHMv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "concrete winds": {
-        "s": "3EgVbnn78KGifB0CL39kET",
-        "l": "concrete%20winds",
-        "g": [
-          "black death",
-          "finnish death metal",
-          "death metal",
-          "grindcore"
+          "sludge metal",
+          "post-rock",
+          "doom metal",
+          "space rock",
+          "post-metal"
         ]
       },
-      "black curse": {
-        "s": "67l4rj0u4rzuc1btmw53xu",
-        "l": "black%20curse",
+      "gavran": {
+        "s": "0Z7JnoZUMxgmaLgApKMYpl",
+        "l": "gavran",
         "g": [
-          "black death",
-          "denver metal",
-          "dissonant death metal",
-          "voidgaze"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-25T04:00:00",
-    "end": "2025-05-25T08:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/boppin-the-rock-presents-gizzelle-the-savoys-wild-records-mischief-cc-jerome-trio/",
-    "title": "Boppin’ the Rock presents GIZZELLE & the Savoys (Wild Records) ",
-    "location": "dbs",
-    "price": "0",
-    "shortText": " Mischief!  +  CC Jerome Trio ",
-    "longText": "../public/texts/dbs/Y29yZHMtbWlzY2hpZWYtY2MtamVyb21lLXRyaW8v.html",
-    "image": "../public/event-images/dbs/Y29yZHMtbWlzY2hpZWYtY2MtamVyb21lLXRyaW8v",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "rock": {
-        "s": null,
-        "l": "rock",
-        "g": [
-          "heavy metal",
-          "hard rock"
+          "sludge metal",
+          "doom metal",
+          "sludge",
+          "doom metal"
         ]
       }
     }
@@ -121,8 +144,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/holy-scum-uk/",
     "title": "Holy scum (uk)",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 10,
+    "shortText": "Niet voor tere zielen, Holy Scum, een soort van underground supergroep samengesteld uit Peter J Taylor (voorheen uit Action Beat), Chris Haslam (GNOD) en John Perry van Suck. Aangevuld met Dälek’s Mike Mare (aka Mike Manteca).",
     "longText": "../public/texts/dbs/YnN0dWRpby5ubC9ldmVudC9ob2x5LXNjdW0tdWsv.html",
     "image": "../public/event-images/dbs/YnN0dWRpby5ubC9ldmVudC9ob2x5LXNjdW0tdWsv",
     "unavailable": false,
@@ -147,8 +170,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/the-midnight-ghost-train-usa-sons-of-node/",
     "title": "The midnight ghost train (usa) + sons of node",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 15,
+    "shortText": "Aight, onze buddies van THE MIDNIGHT GHOST TRAIN keren weer terug naar Europa, dit keer echt voor een allerlaatste keer. Hierna ga je dit trio niet meer aan het werk zien. Als je ze niet kent weet dan dat TMGT een van de beste stonerrocktrio’s van het afgelopen decennium is. Als je ze wel kent, dan haal je beter snel die tickets voor een show die episch zal zijn. Siked dat ze dB’s hoog op hun lijst van favo venues hebben staan en dus ook absoluut hier willen spelen!",
     "longText": "../public/texts/dbs/LWdob3N0LXRyYWluLXVzYS1zb25zLW9mLW5vZGUv.html",
     "image": "../public/event-images/dbs/LWdob3N0LXRyYWluLXVzYS1zb25zLW9mLW5vZGUv",
     "unavailable": false,
@@ -165,51 +188,79 @@
     }
   },
   {
-    "start": "2025-07-11T08:00:00",
-    "end": "2025-07-11T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/pro-pain-usa-legends-of-hardcore-metal/",
-    "title": "Pro-pain (usa legends of hardcore metal)",
+    "start": "2025-07-05T08:00:00",
+    "end": "2025-07-05T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/daddy-long-legs-support/",
+    "title": "Daddy long legs + support",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
-    "longText": "../public/texts/dbs/dXNhLWxlZ2VuZHMtb2YtaGFyZGNvcmUtbWV0YWwv.html",
-    "image": "../public/event-images/dbs/dXNhLWxlZ2VuZHMtb2YtaGFyZGNvcmUtbWV0YWwv",
+    "price": 12.5,
+    "shortText": "Oh Yes! Super siked onze favo Rhythm & Blues Garage Punx DADDY LONG LEGS uit NYC op VLP 63 te verwelkomen.",
+    "longText": "../public/texts/dbs/ZXZlbnQvZGFkZHktbG9uZy1sZWdzLXN1cHBvcnQv.html",
+    "image": "../public/event-images/dbs/ZXZlbnQvZGFkZHktbG9uZy1sZWdzLXN1cHBvcnQv",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "pro-pain": {
-        "s": "56f64pmwssccms1cxanpk8",
-        "l": "pro-pain",
+      "daddy long legs": {
+        "s": "26vp0YsAVautrWTzJXf6Zi",
+        "l": "daddy%20long%20legs",
         "g": [
-          "groove metal",
-          "old school thrash",
-          "thrash metal",
-          "southern metal"
-        ]
-      },
-      "hardcore": {
-        "s": "3N11n3hTyVlcOg77IGefjz",
-        "l": "hardcore",
-        "g": [
-          "death metal",
-          "hardcore"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
+          "modern blues",
+          "garage rock",
+          "blues rock"
         ]
       }
     }
+  },
+  {
+    "start": "2025-07-17T08:00:00",
+    "end": "2025-07-17T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/zeke/",
+    "title": "Zeke",
+    "location": "dbs",
+    "price": 12.5,
+    "shortText": "HARDER SNELLER!\nZEKE, GODDAMN ROCK N ROLL!\nLEGENDS!!\nDeze Amerikaanse hardcoreband uit Seattle heeft een motto: They only play raw, fast, and loud. De onbezonnen punk’n’rollers overdonderen met supersnelle riffs, wat resulteert in een onmiskenbaar geluid. Carrièrehoogtepunten zoals ‘Kicked in the Teeth’, ‘Death Alley’, en ‘Til the Livin’ End’ laten zich allemaal kenmerken door de schreeuwzang van “Blind” Marky Felchtone, de krachtige ritmes en de eenvoud van hun nummers.\nTickets op tijd aanschaffen voor deze enige Nederlandse clubshow!",
+    "longText": "../public/texts/dbs/Oi8vd3d3LmRic3R1ZGlvLm5sL2V2ZW50L3pla2Uv.html",
+    "image": "../public/event-images/dbs/Oi8vd3d3LmRic3R1ZGlvLm5sL2V2ZW50L3pla2Uv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "zeke": {
+        "s": "7HvjR3M6xzluBLTnioRzvu",
+        "l": "zeke",
+        "g": [
+          "punk 'n' roll",
+          "progressive metal",
+          "rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-10-02T08:00:00",
+    "end": "2025-10-02T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/the-lets-gos-japan/",
+    "title": "The let’s go’s (japan)",
+    "location": "dbs",
+    "price": 13.5,
+    "shortText": "Japan, Punk ‘n Roll en drie meiden, dat kan niet fout gaan, enter THE LET’S GO’S uit Tokyo.",
+    "longText": "../public/texts/dbs/by5ubC9ldmVudC90aGUtbGV0cy1nb3MtamFwYW4v.html",
+    "image": "../public/event-images/dbs/by5ubC9ldmVudC90aGUtbGV0cy1nb3MtamFwYW4v",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-11-01T08:00:00",
+    "end": "2025-11-01T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/dub-pistols-uk/",
+    "title": "Dub pistols (uk)",
+    "location": "dbs",
+    "price": 20,
+    "shortText": "Fantastische liveband en een garantie voor a big party!\nDub Pistols bestaat ruim 25 jaar en heeft in die tijd een unieke sound ontwikkelt met invloeden uit dub, punk, jungle, ska, breakbeat, hip-hop, jungle en nog veel meer.",
+    "longText": "../public/texts/dbs/dHVkaW8ubmwvZXZlbnQvZHViLXBpc3RvbHMtdWsv.html",
+    "image": "../public/event-images/dbs/dHVkaW8ubmwvZXZlbnQvZHViLXBpc3RvbHMtdWsv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   }
 ]

@@ -175,9 +175,7 @@ export default class WorkerStatus {
             thisWorker.todo = message.todo;
         }
 
-        const wf = shell.force && shell.force.includes(thisWorker.family);
-
-        if (!statusses.includes("todo") && wf) {
+        if (!statusses.includes("todo")) {
             const forcedMessage = new wsMessage("update", "message-roll", {
                 title: "Status update",
                 content: `${name} is nu ${status}`
@@ -186,6 +184,18 @@ export default class WorkerStatus {
                 WorkerStatus.mwss.broadcast(forcedMessage.json);
             }
         }
+
+        // const wf = shell.force && shell.force.includes(thisWorker.family);
+
+        // if (!statusses.includes("todo") && wf) {
+        //     const forcedMessage = new wsMessage("update", "message-roll", {
+        //         title: "Status update",
+        //         content: `${name} is nu ${status}`
+        //     });
+        //     if (WorkerStatus.mwss) {
+        //         WorkerStatus.mwss.broadcast(forcedMessage.json);
+        //     }
+        // }
     }
 
     static async processError(name, message) {
@@ -300,19 +310,12 @@ export default class WorkerStatus {
         }
         WorkerStatus.printAllToJSON();
 
-        if (shell.debugLongHTML && shell.force) {
-            console.log("debug long HTML");
-            setTimeout(() => {
-                shell.forceThese.forEach((forced) => {
-                    fs.readdirSync(`../public/texts/${forced}`).forEach(
-                        (forcedFile) => {
-                            exec(
-                                `prettier --config .prettierrc ../public/texts/${forced}/${forcedFile} --write; code ../public/texts/${forced}/${forcedFile}`
-                            );
-                        }
-                    );
-                });
-            }, 1000);
+        if (shell.debugLongHTML) {
+            console.log(
+                `TODO BUILD: debug long HTML for ${shell.debugLongHTML}`
+            );
+            // hier komt de debug voor long HTML
+            // van wat gedebuged wordt, eerste drie events pakken, daarvan longHTML openen.
             setTimeout(() => {
                 process.exit();
             }, 5000);

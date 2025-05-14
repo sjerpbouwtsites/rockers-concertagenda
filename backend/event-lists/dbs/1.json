@@ -1,154 +1,134 @@
 [
   {
-    "start": "2025-04-11T08:00:00",
-    "end": "2025-04-11T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/neuk/",
-    "title": "NEUK! + Oproerkraaiers + Ramgoat",
+    "start": "2025-04-18T08:00:00",
+    "end": "2025-04-18T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/reverend-james-leg-usa-alive-records/",
+    "title": "Reverend james leg (usa – alive records) ",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
-    "longText": "../public/texts/dbs/Oi8vd3d3LmRic3R1ZGlvLm5sL2V2ZW50L25ldWsv.html",
-    "image": "../public/event-images/dbs/Oi8vd3d3LmRic3R1ZGlvLm5sL2V2ZW50L25ldWsv",
+    "price": 10,
+    "shortText": " le garage / kitchen open by lokaol kabaol De dB’s volger moet hem kennen, REVEREND JAMES LEG, het podiumbeest op de Fender Rhodes die al met zijn eerste band The Black Diamond Heavies diverse malen in dB’s stond en daarna onder zijn eigen naam met de toevoeging Reverend ook daarna nog vele malen het dB’s podium onveilig maakte.\nTerug gravend in onze annalen zien we dat het 2019 geweest is dat we James Leg voor de laatste keer mochten verwelkomen. Het wordt dus weer hoog tijd voor een avond onversneden rockin’ soul met deze held van het eerste uur.\nWe hopen bovendien dat James Leg zijn, min of meer, vaste Europese drummer MATT GAZ (ook drummer van Mars Red Sky) weer meeneemt en maken ons op voor een warm weerzien. Genre-technisch is James Leg te plaatsen ergens tussen de gospel en soul van Nina Simone, het venijn van de Stooges en de groove van Dr John. Niet te missen dus, beste mensen. NIET te missen, zweet gaat gutsen en er zullen nieuwe fans bijkomen. De Reverend James Leg RULES! NOG STEEDS EN VOOR ALTIJD!!",
+    "longText": "../public/texts/dbs/ZC1qYW1lcy1sZWctdXNhLWFsaXZlLXJlY29yZHMv.html",
+    "image": "../public/event-images/dbs/ZC1qYW1lcy1sZWctdXNhLWFsaXZlLXJlY29yZHMv",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "ramgoat": {
-        "s": "3850q7cmv1Dqg1IZOQKpvU",
-        "l": "ramgoat",
+      "james leg": {
+        "s": "6jNXAv3sQluGbLUdheWe78",
+        "l": "james%20leg",
         "g": [
-          "hardcore punk"
+          "garage punk blues",
+          "modern blues rock"
         ]
       },
-      "neuk!": {
-        "s": "61z4arbgymgk3nsxcyazoa",
-        "l": "neuk!",
-        "g": []
-      }
-    }
-  },
-  {
-    "start": "2025-04-17T08:00:00",
-    "end": "2025-04-17T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/bob-wayne-usa-outlaw-country/",
-    "title": "Bob wayne (usa outlaw country) ",
-    "location": "dbs",
-    "price": "0",
-    "shortText": " hurricane joe ",
-    "longText": "../public/texts/dbs/L2JvYi13YXluZS11c2Etb3V0bGF3LWNvdW50cnkv.html",
-    "image": "../public/event-images/dbs/L2JvYi13YXluZS11c2Etb3V0bGF3LWNvdW50cnkv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "bob wayne": {
-        "s": "6LWREZSd4429wq2MHt3KC4",
-        "l": "bob%20wayne",
+      "reverend": {
+        "s": "7xlMEszAGIxeH2LUecqF21",
+        "l": "reverend",
         "g": [
-          "gothic country",
-          "psychobilly",
-          "rockabilly",
-          "bluegrass",
-          "alt country"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-04-19T06:00:00",
-    "end": "2025-04-19T11:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/kutopia-riot-grrrlll-punk-fest-w-workshops-live-music/",
-    "title": "Kutopia > riot grrrlll punk fest live maria iskariot, problem patterns, periot, consensual peggy, & the dolly adlers",
-    "location": "dbs",
-    "price": "0",
-    "shortText": " ",
-    "longText": "../public/texts/dbs/ay1mZXN0LXctd29ya3Nob3BzLWxpdmUtbXVzaWMv.html",
-    "image": "../public/event-images/dbs/ay1mZXN0LXctd29ya3Nob3BzLWxpdmUtbXVzaWMv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-05-02T07:30:00",
-    "end": "2025-05-02T11:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/the-one-woman-band-fest-w-dead-elvis-van-tastik-belly-hole-freak-the-blues-against-youth-nono-electra/",
-    "title": "The one (wo)man band fest w/ dead elvis ",
-    "location": "dbs",
-    "price": "0",
-    "shortText": " van tastik  +  belly hole freak  +  the blues against youth  +  nono electra ",
-    "longText": "../public/texts/dbs/ZXMtYWdhaW5zdC15b3V0aC1ub25vLWVsZWN0cmEv.html",
-    "image": "../public/event-images/dbs/ZXMtYWdhaW5zdC15b3V0aC1ub25vLWVsZWN0cmEv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "the one": {
-        "s": null,
-        "l": "the%20one",
-        "g": []
-      },
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
+          "thrash",
           "power metal"
         ]
       }
     }
   },
   {
-    "start": "2025-05-17T07:30:00",
-    "end": "2025-05-17T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/doodswens-shagor-lustobject/",
-    "title": "Doodswens + Shagor + Lustobject",
+    "start": "2025-05-01T08:00:00",
+    "end": "2025-05-01T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/black-curse-concrete-winds/",
+    "title": "Black curse ",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
-    "longText": "../public/texts/dbs/dC9kb29kc3dlbnMtc2hhZ29yLWx1c3RvYmplY3Qv.html",
-    "image": "../public/event-images/dbs/dC9kb29kc3dlbnMtc2hhZ29yLWx1c3RvYmplY3Qv",
+    "price": 15,
+    "shortText": " concrete winds/ kitchen by punkdog Beware! This one hurts badly!!",
+    "longText": "../public/texts/dbs/bnQvYmxhY2stY3Vyc2UtY29uY3JldGUtd2luZHMv.html",
+    "image": "../public/event-images/dbs/bnQvYmxhY2stY3Vyc2UtY29uY3JldGUtd2luZHMv",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "lustobject": {
-        "s": null,
-        "l": "lustobject",
-        "g": []
+      "concrete winds": {
+        "s": "3EgVbnn78KGifB0CL39kET",
+        "l": "concrete%20winds",
+        "g": [
+          "black death",
+          "finnish death metal",
+          "death metal",
+          "grindcore"
+        ]
+      },
+      "black curse": {
+        "s": "67l4rj0u4rzuc1btmw53xu",
+        "l": "black%20curse",
+        "g": [
+          "black death",
+          "denver metal",
+          "dissonant death metal",
+          "voidgaze"
+        ]
       }
     }
   },
   {
-    "start": "2025-05-31T07:30:00",
-    "end": "2025-05-31T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/terziele-release-show-hemelbestormer-b-gavran/",
-    "title": "Terziele release show ",
+    "start": "2025-05-04T08:00:00",
+    "end": "2025-05-04T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/jeffrey-lewis-the-voltage/",
+    "title": "Jeffrey lewis & the voltage / kitchen by punkdog",
     "location": "dbs",
-    "price": "0",
-    "shortText": " hemelbestormer (b)  +  gavran ",
-    "longText": "../public/texts/dbs/LXNob3ctaGVtZWxiZXN0b3JtZXItYi1nYXZyYW4v.html",
-    "image": "../public/event-images/dbs/LXNob3ctaGVtZWxiZXN0b3JtZXItYi1nYXZyYW4v",
+    "price": 15,
+    "shortText": " Singer/striptekenaar Jeffrey Lewis komt naar de nieuwe dB’s en dat is geweldig. Lewis is een van de mensen die rond de eeuwwisseling de Anti-folk een verfrissende, hilarische en boeiende boost gaven. Hij maakte onderdeel uit van een stel hippe New Yorkers rondom The SideWalk Cafe, in East-Village, die destijds met geinige teksten en sterke songs de harten van vele indie-liefhebbers veroverden waarvan The Moldy Peaches het bekendst werden. Maar de langste adem van de oorspronkelijke groep Anti-Folkies is die van Jeffrey Lewis",
+    "longText": "../public/texts/dbs/ZW50L2plZmZyZXktbGV3aXMtdGhlLXZvbHRhZ2Uv.html",
+    "image": "../public/event-images/dbs/ZW50L2plZmZyZXktbGV3aXMtdGhlLXZvbHRhZ2Uv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-05-15T08:00:00",
+    "end": "2025-05-15T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/kara-delik-berlin-support/",
+    "title": "Kara delik (berlin) + labasheeda",
+    "location": "dbs",
+    "price": 8,
+    "shortText": "Drie vrienden die samenkwamen door hun liefde voor vreemde maatsoorten en Krautrock, Kara Delik werd geboren in de zomer van 2020. In 2022 verscheen hun eerste EP ‘Tamam’. Het Berlijnse trio heeft net hun debuutalbum opgenomen en gaat er in het voorjaar van 2025 mee op tournee. De Anatolische post-punk-, psych-dubgeluiden van de band zijn geworteld in de geschiedenis van Anatolische rock, Krautrock, Neue Deutsche Welle, new wave en dub. Allemaal gebracht met een pittige, post-punkende, explosieve live-punch. (bron: Eurosonic 2025)",
+    "longText": "../public/texts/dbs/ZW50L2thcmEtZGVsaWstYmVybGluLXN1cHBvcnQv.html",
+    "image": "../public/event-images/dbs/ZW50L2thcmEtZGVsaWstYmVybGluLXN1cHBvcnQv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-05-25T04:00:00",
+    "end": "2025-05-25T08:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/boppin-the-rock-presents-gizzelle-the-savoys-wild-records-mischief-cc-jerome-trio/",
+    "title": "Boppin’ the Rock presents GIZZELLE & the Savoys (Wild Records) ",
+    "location": "dbs",
+    "price": 17.5,
+    "shortText": " Mischief!  +  CC Jerome Trio Behold people, Boppin’ the Rock pakt uit met een formidabele triple bill rond de Amerikaanse zangeres GIZZELLE & The Savoys, de Domtown maestro’s of rockabilly MISCHIEF! en het CC JEROME TRIO.",
+    "longText": "../public/texts/dbs/Y29yZHMtbWlzY2hpZWYtY2MtamVyb21lLXRyaW8v.html",
+    "image": "../public/event-images/dbs/Y29yZHMtbWlzY2hpZWYtY2MtamVyb21lLXRyaW8v",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "hemelbestormer": {
-        "s": "5oHzkbFUZZHA2y8t2aAhso",
-        "l": "hemelbestormer",
+      "rock": {
+        "s": null,
+        "l": "rock",
         "g": [
-          "sludge metal",
-          "post-rock",
-          "doom metal",
-          "space rock",
-          "post-metal"
-        ]
-      },
-      "gavran": {
-        "s": "0Z7JnoZUMxgmaLgApKMYpl",
-        "l": "gavran",
-        "g": [
-          "sludge metal",
-          "doom metal",
-          "sludge",
-          "doom metal"
+          "heavy metal",
+          "hard rock"
         ]
       }
     }
+  },
+  {
+    "start": "2025-06-06T08:00:00",
+    "end": "2025-06-06T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/wave-invasion-presents-patriarcy-usa-llora-usa/",
+    "title": "Wave invasion presents patriarcy (usa) ",
+    "location": "dbs",
+    "price": 15,
+    "shortText": " llora (usa) Riemen vast voor een avond opwindende en confronterende gothic synth pop, EBM, wave met zelfs een snuif metal. Enter PATRIARCHY & LLORA!",
+    "longText": "../public/texts/dbs/c2VudHMtcGF0cmlhcmN5LXVzYS1sbG9yYS11c2Ev.html",
+    "image": "../public/event-images/dbs/c2VudHMtcGF0cmlhcmN5LXVzYS1sbG9yYS11c2Ev",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "start": "2025-06-17T08:00:00",
@@ -156,8 +136,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/dopethrone-can-void-claw/",
     "title": "Dopethrone (can) + voidclaw",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 14,
+    "shortText": "Dopethrone (CA) + Voidclaw",
     "longText": "../public/texts/dbs/dmVudC9kb3BldGhyb25lLWNhbi12b2lkLWNsYXcv.html",
     "image": "../public/event-images/dbs/dmVudC9kb3BldGhyb25lLWNhbi12b2lkLWNsYXcv",
     "unavailable": false,
@@ -206,8 +186,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/the-subhumans-uk-anarcho-punk-legends/",
     "title": "The subhumans (uk anarcho punk legends)",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 10,
+    "shortText": "Zeer invloedrijke aartsvaders en vaandeldragers van de UK Anarcho Punk. Ook bij hen geldt dat hun eerste, én wat latere EP’s ware klassiekers in het genre zijn. Hun eerste EP ‘Demolition War’ kwam uit in 1981 op het Spiderleg label van de Anarcho band Flux of Pink Indians en sloeg overal in als een bom. Gekenmerkt door een wat ‘muzikalere’ sound en songwriting maar niet minder (juist méér) bijtend en agressief in combinatie met de overeenkomstige teksten en ‘delivery’ van zanger Dick Lucas maakten dit de band onweerstaanbaar.\nAnno 2025 trekken The Subhumans nog steeds door stad en land om hun politieke boodschap te verkondigen. Wel ouder niet kouder, en zeker niet minder betrokken spuwen Dick Lucas en de zijnen hun gal over de huidige verrotte wereld. Nu meer dan ooit, anarcho punk to save the world (or die trying).",
     "longText": "../public/texts/dbs/dW1hbnMtdWstYW5hcmNoby1wdW5rLWxlZ2VuZHMv.html",
     "image": "../public/event-images/dbs/dW1hbnMtdWstYW5hcmNoby1wdW5rLWxlZ2VuZHMv",
     "unavailable": false,
@@ -224,30 +204,71 @@
     }
   },
   {
-    "start": "2025-07-15T08:00:00",
-    "end": "2025-07-15T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/dbs-tivre-present-battlesnake-aus/",
-    "title": "Db’s & tivre present battlesnake (aus)",
+    "start": "2025-07-11T08:00:00",
+    "end": "2025-07-11T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/pro-pain-usa-legends-of-hardcore-metal/",
+    "title": "Pro-pain (usa legends of hardcore metal)",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
-    "longText": "../public/texts/dbs/dGl2cmUtcHJlc2VudC1iYXR0bGVzbmFrZS1hdXMv.html",
-    "image": "../public/event-images/dbs/dGl2cmUtcHJlc2VudC1iYXR0bGVzbmFrZS1hdXMv",
+    "price": 21,
+    "shortText": "Zo net voor de grote vakantie pakken we nog weer eens keer uit met de helden van Pro-Pain. Al voor de tweede keer op de nieuwe locatie, ook omdat Gary en de zijnen graag de voortgang willen checken.",
+    "longText": "../public/texts/dbs/dXNhLWxlZ2VuZHMtb2YtaGFyZGNvcmUtbWV0YWwv.html",
+    "image": "../public/event-images/dbs/dXNhLWxlZ2VuZHMtb2YtaGFyZGNvcmUtbWV0YWwv",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "battle": {
-        "s": null,
-        "l": "battle",
+      "pro-pain": {
+        "s": "56f64pmwssccms1cxanpk8",
+        "l": "pro-pain",
         "g": [
-          "black metal"
+          "groove metal",
+          "old school thrash",
+          "thrash metal",
+          "southern metal"
         ]
       },
-      "snake": {
-        "s": null,
-        "l": "snake",
+      "hardcore": {
+        "s": "3N11n3hTyVlcOg77IGefjz",
+        "l": "hardcore",
         "g": [
-          "heavy metal"
+          "death metal",
+          "hardcore"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-08-08T08:00:00",
+    "end": "2025-08-08T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/dogma/",
+    "title": "Dogma",
+    "location": "dbs",
+    "price": 15,
+    "shortText": "Religie? Cult? Wat het ook precies mag zijn, mysterieus is het wel, deze all female rock band die flirt met alle wetten. Vermomd als kwaadaardige nonnen maken deze vrouwen classic harde rock (hoewel de laatste single van Dogma dan weer flirt met tango) met een heel theatrale inslag. Denk aan een all female versie van KISS, of Alice Cooper maar dan anders.\nWie ze precies zijn en waar ze vandaan komen is onbekend maar DOGMA – Lilith, Lamia, Nixe, Rusalka en Abrahel – is vastbesloten de wereld te veroveren met hun explosieve mix van theatrale rock, zware riffs en provocerende teksten. En dat lukt tot nog toe vrij goed getuige de immense following die ze hebben opgebouwd.\nHeel benieuwd hoe dit live bij ons op het podium uit de verf gaat komen. DOGMA gaat uiteindelijk een stadionrockband worden met een goedkeurende Madonna in de VIP seat die meehumt met DOGMA’s versie van Like a Prayer.\nFEMALE POWER!",
+    "longText": "../public/texts/dbs/Ly93d3cuZGJzdHVkaW8ubmwvZXZlbnQvZG9nbWEv.html",
+    "image": "../public/event-images/dbs/Ly93d3cuZGJzdHVkaW8ubmwvZXZlbnQvZG9nbWEv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "dogma": {
+        "s": "4R6XPuqGShFESRVkCePaxj",
+        "l": "dogma",
+        "g": [
+          "groove metal"
         ]
       }
     }
@@ -258,8 +279,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/boppin-the-rock-presents-t-99-bacon-fat-louis/",
     "title": "Boppin’ the Rock presents T-99 ",
     "location": "dbs",
-    "price": "0",
-    "shortText": " Bacon Fat Louis ",
+    "price": 15,
+    "shortText": " Bacon Fat Louis In de Nederlandse roots rock scene kan er maar een de grootste zijn en dat is T-99!\nT-99 is 26 YEARS OF ROOTS ‘N’ ROLL maar ook BLUES, COUNTRY, ROCKABILLY, SURF en verkoop je SOUL maar aan de duivel-muziek. Echte liedjes voor echte mensen vakkundig gebracht door maestro’s Mischa den Haring, Martin de Ruiter en Donné la Fontaine, drie wilde rock-‘n-roll-vrijbuiters met groots grommende gitaren, roffelbeukende drums, pets-kets contrabas en dubbelloops vocalen.\nToonaangevend muziektijdschrift OOR schreef ooit : “T-99 is de meest opwindende en vernieuwende rootsband van Nederland en ver daarbuiten” -en dat citaat hoeft nog steeds niet te worden bijgesteld.  Ga ze live zien. Want op het podium begint T-99 pas echt te glimmen. Daar rocken ze, daar ratelen ze, daar rollen ze, daar schudden en swingen ze. Daar komen die drie bastaardzonen van de blues tot leven alsof de duivel ze op de hielen zit. En zetten ze elke zaal, elke club, elk café, elk gat en elke stad in vuur en vlam zoals Jerry Lee ooit zijn piano. En als je ze live hebt gezien, weet je het voor altijd. Je zult bekeerd worden, een fan voor het leven.",
     "longText": "../public/texts/dbs/cHJlc2VudHMtdC05OS1iYWNvbi1mYXQtbG91aXMv.html",
     "image": "../public/event-images/dbs/cHJlc2VudHMtdC05OS1iYWNvbi1mYXQtbG91aXMv",
     "unavailable": false,

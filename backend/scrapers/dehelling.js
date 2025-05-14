@@ -152,23 +152,36 @@ dehellingScraper.mainPage = async function () {
 dehellingScraper.singlePage = async function ({ page, event }) {
     const { stopFunctie } = await this.singlePageStart();
 
-    const pageInfo = await page.evaluate(
-        // eslint-disable-next-line no-shadow
-        ({ event }) => {
-            const res = {
-                anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
-                errors: []
-            };
+    // cookie accept voor iframes
+    await page
+        .evaluate(() => {
+            const b = document.querySelector("[data-accept-all]");
+            if (!b) return;
+            b.click();
+        })
+        .catch((err) => this.handleError(err));
 
-            const shareEl = document.querySelector(".c-event-content__sharer"); // TODO is dit legacy?
-            if (shareEl) {
-                shareEl.parentNode.removeChild(shareEl);
-            }
+    const pageInfo = await page
+        .evaluate(
+            // eslint-disable-next-line no-shadow
+            ({ event }) => {
+                const res = {
+                    anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
+                    errors: []
+                };
 
-            return res;
-        },
-        { event }
-    );
+                const shareEl = document.querySelector(
+                    ".c-event-content__sharer"
+                ); // TODO is dit legacy?
+                if (shareEl) {
+                    shareEl.parentNode.removeChild(shareEl);
+                }
+
+                return res;
+            },
+            { event }
+        )
+        .catch((err) => this.handleError(err));
 
     const imageRes = await getImage({
         _this: this,
@@ -178,7 +191,7 @@ dehellingScraper.singlePage = async function ({ page, event }) {
         pageInfo,
         selectors: [".img--cover img", ".u-section__inner img"],
         mode: "image-src"
-    });
+    }).catch((err) => this.handleError(err));
     pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
     pageInfo.image = imageRes.image;
 
@@ -187,7 +200,7 @@ dehellingScraper.singlePage = async function ({ page, event }) {
         event,
         pageInfo,
         selectors: [".c-event-meta__table"]
-    });
+    }).catch((err) => this.handleError(err));
     pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
     pageInfo.price = priceRes.price;
 
@@ -195,14 +208,16 @@ dehellingScraper.singlePage = async function ({ page, event }) {
         page,
         event,
         pageInfo
-    );
+    ).catch((err) => this.handleError(err));
     pageInfo.mediaForHTML = mediaForHTML;
 
     pageInfo.textForHTML = textForHTML;
 
-    const singlePageHTML = await page.evaluate(() => {
-        return document.body.parentNode.outerHTML;
-    });
+    const singlePageHTML = await page
+        .evaluate(() => {
+            return document.body.parentNode.outerHTML;
+        })
+        .catch((err) => this.handleError(err));
 
     return this.singlePageEnd({
         pageInfo,

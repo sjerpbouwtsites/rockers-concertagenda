@@ -4,7 +4,13 @@ import getImage from "./gedeeld/image.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import longTextSocialsIframes from "./longtext/doornroosje.js";
 import workTitleAndSlug from "./gedeeld/slug.js";
-import { mapToShortDate } from "./gedeeld/datums.js";
+import {
+    mapToShortDate,
+    mapToDoorTime,
+    mapToStartTime,
+    combineDoorTimeStartDate,
+    combineStartTimeStartDate
+} from "./gedeeld/datums.js";
 
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -12,7 +18,7 @@ const scraper = new AbstractScraper({
 
     mainPage: {
         timeout: 60000,
-        url: "https://www.doornroosje.nl/?genre=metal%252Cpunk%252Cpost-hardcore%252Chardcore%252Cnoise-rock",
+        url: "https://www.doornroosje.nl/?genre=metal%252Cpunk%252Cnoise-rock%252Cdark-folk%252Cdeathcore%252Cdesert-rock%252Cemo%252Cprogressieve-metal%252Cpunkrock%252Cspace-rock%252Ctrash%252Ccrossover-metal%252Cspace-metal",
         waitUntil: "load"
     },
     singlePage: {
@@ -70,9 +76,8 @@ scraper.mainPage = async function () {
     let rawEvents = await page.evaluate(
         // eslint-disable-next-line no-shadow
         ({ workerData, months }) =>
-            Array.from(document.querySelectorAll(".c-program__item"))
-                .filter((a, i) => i < 5)
-                .map((eventEl) => {
+            Array.from(document.querySelectorAll(".c-program__item")).map(
+                (eventEl) => {
                     const title =
                         eventEl
                             .querySelector(".c-program__title--main")
@@ -118,23 +123,24 @@ scraper.mainPage = async function () {
                         dag = dagMatch[0].padStart(2, "0");
                     }
                     if (dag && maand && jaar) {
-                        res.start = `${jaar}-${maand}-${dag}`;
+                        res.startDate = `${jaar}-${maand}-${dag}`;
                     } else {
-                        res.start = null;
+                        res.startDate = null;
                     }
                     return res;
-                }),
+                }
+            ),
         { workerData, months: this.months }
     );
 
     try {
         let lastWorkingEventDate = null;
         rawEvents.forEach((rawEvent) => {
-            if (rawEvent.start) {
-                lastWorkingEventDate = rawEvent.start;
+            if (rawEvent.startDate) {
+                lastWorkingEventDate = rawEvent.startDate;
             } else {
                 // eslint-disable-next-line no-param-reassign
-                rawEvent.start = lastWorkingEventDate;
+                rawEvent.startDate = lastWorkingEventDate;
             }
             return rawEvent;
         });
@@ -173,149 +179,92 @@ scraper.singlePage = async function ({ page, event }) {
         !event.venueEventUrl.includes("soulcrusher") &&
         !event.venueEventUrl.includes("festival")
     ) {
-        pageInfo = await page.evaluate(
-            // eslint-disable-next-line no-shadow
-            ({ months, event }) => {
-                const res = {
-                    anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
-                    errors: []
-                };
+        pageInfo = await page
+            .evaluate(
+                // eslint-disable-next-line no-shadow
+                ({ months, event }) => {
+                    const res = {
+                        anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
+                        errors: []
+                    };
 
-                // genre verwijderen en naar shorttext
-                res.shortText =
-                    (event?.shortText ? event.shortText : "") +
-                    Array.from(document.querySelectorAll(".c-event-row__title"))
-                        .map((title) => {
-                            if (title.textContent.includes("genre")) {
-                                const row = title.parentNode.parentNode;
-                                return row
-                                    .querySelector(".c-event-row__content")
-                                    ?.textContent.toLowerCase()
-                                    .trim();
-                            }
-                            return null;
-                        })
-                        .filter((a) => a)
-                        .join("");
+                    // genre verwijderen en naar shorttext
+                    res.shortText =
+                        (event?.shortText ? event.shortText : "") +
+                        Array.from(
+                            document.querySelectorAll(".c-event-row__title")
+                        )
+                            .map((title) => {
+                                if (title.textContent.includes("genre")) {
+                                    const row = title.parentNode.parentNode;
+                                    return row
+                                        .querySelector(".c-event-row__content")
+                                        ?.textContent.toLowerCase()
+                                        .trim();
+                                }
+                                return null;
+                            })
+                            .filter((a) => a)
+                            .join("");
 
-                const startRauwMatch = document
-                    .querySelector(".c-event-data")
-                    ?.innerHTML.match(
-                        /(\d{1,2})\s*(januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december)\s*(\d{4})/
-                    ); // welke mongool schrijft zo'n regex
-                let startDate = event.start || "";
-                if (!startDate && startRauwMatch && startRauwMatch.length) {
-                    const day = startRauwMatch[1];
-                    const month = months[startRauwMatch[2]];
-                    const year = startRauwMatch[3];
-                    startDate = `${year}-${month}-${day}`;
-                } else if (!startDate) {
-                    res.errors.push({
-                        error: new Error(`Geen startDate ${res.anker}`),
-                        toDebug: {
-                            text: document.querySelector(".c-event-data")
-                                ?.innerHTML
-                        }
-                    });
-                    return res;
-                }
-
-                if (startDate) {
-                    let timeMatches = document
-                        .querySelector(".c-event-data")
-                        .innerHTML.match(/\d\d:\d\d/g);
-
-                    if (!timeMatches) {
-                        timeMatches = ["12:00:00"];
-                    }
-
-                    if (timeMatches && timeMatches.length) {
-                        try {
-                            if (timeMatches.length === 3) {
-                                res.start = `${startDate}T${timeMatches[1]}:00.000`;
-                                res.door = `${startDate}T${timeMatches[0]}:00.000`;
-                                res.end = `${startDate}T${timeMatches[2]}:00.000`;
-                            } else if (timeMatches.length === 2) {
-                                res.start = `${startDate}T${timeMatches[1]}:00.000`;
-                                res.door = `${startDate}T${timeMatches[0]}:00.000`;
-                            } else if (timeMatches.length === 1) {
-                                res.start = `${startDate}T${timeMatches[0]}:00.000`;
-                            }
-                        } catch (caughtError) {
-                            res.errors.push({
-                                error: caughtError,
-                                remarks: `fout bij tijd of datums. matches: ${timeMatches} datum: ${startDate} ${res.anker}`
-                            });
-                            return res;
-                        }
-                    }
-                }
-
-                return res;
-            },
-            { months: this.months, event }
-        );
-    } else {
-        // dus festival
-        pageInfo = await page.evaluate(
-            // eslint-disable-next-line no-shadow
-            ({ event }) => {
-                const res = {
-                    anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
-                    errors: []
-                };
-                if (event.venueEventUrl.includes("soulcrusher")) {
-                    res.start = "2023-10-13T18:00:00.000";
-                } else {
-                    try {
-                        res.start = `${event?.start}T12:00:00`;
-                    } catch (thisError) {
+                    const evData = document.querySelector(
+                        ".container.s-event .c-event-data"
+                    );
+                    const tijdTextMatches =
+                        evData?.textContent
+                            .replaceAll(/\s+\s/g, " ")
+                            .toLowerCase()
+                            .match(/\d\d:\d\d/g) ?? null;
+                    if (!Array.isArray(tijdTextMatches)) {
+                        res.mapToStartTime = "20:00";
                         res.errors.push({
                             error: new Error(
-                                "fout bij tijd/datum festival of datums"
-                            )
+                                `geen tijdTextMatches Doornroosje`
+                            ),
+                            remarks: `${
+                                res.anker
+                            } ".container.s-event .c-event-data" bestaat: ${!!evData?.length}`
                         });
-                        return res;
+                    } else {
+                        if (tijdTextMatches.length > 1) {
+                            res.mapToDoorTime = tijdTextMatches[0];
+                            res.mapToStartTime = tijdTextMatches[1];
+                        } else {
+                            res.mapToStartTime = tijdTextMatches[0];
+                        }
                     }
-                }
 
-                res.priceTextcontent =
-                    document
-                        .querySelector(".b-festival-content__container")
-                        ?.textContent.trim() ?? "";
-
-                res.textForHTML =
-                    (document.querySelector(".b-festival-content__container")
-                        ?.innerHTML ?? "") +
-                    (document.querySelector(".b-festival-line-up__grid")
-                        ?.innerHTML ?? "");
-                res.mediaForHTML = Array.from(
-                    document.querySelectorAll(".c-embed iframe")
-                ).map((embed) => embed.outerHTML);
-                res.socialsForHTML = [];
-
-                if (document.querySelector(".b-festival-line-up__title")) {
-                    const lineupRedux = Array.from(
-                        document.querySelectorAll(".b-festival-line-up__title")
-                    )
-                        .map((title) => title.textContent)
-                        .join(", ");
-                    res.shortText += ` Met oa: ${lineupRedux}`;
-                }
-
-                return res;
-            },
-            { event }
-        );
+                    return res;
+                },
+                { months: this.months, event }
+            )
+            .catch((err) =>
+                this.handleError(err, "ongevangen err pageInfo doornroosje")
+            );
+    } else {
+        //TODO
+        pageInfo = {
+            corrupted: true
+        };
+        return this.singlePageEnd({
+            pageInfo,
+            stopFunctie,
+            page,
+            event
+        });
     }
+
+    pageInfo.startDate = event.startDate;
+
+    pageInfo = mapToDoorTime(pageInfo);
+    pageInfo = mapToStartTime(pageInfo);
+    pageInfo = combineDoorTimeStartDate(pageInfo);
+    pageInfo = combineStartTimeStartDate(pageInfo);
+
     const directImageSrc = await page.evaluate(() => {
         return document.querySelector("[property='og:image']")?.content ?? null;
     });
-    this.dirtyDebug({
-        title: `debug image ${event.title}`,
-        mode: "direct-input",
-        directImageSrc
-    });
+
     const imageRes = await getImage({
         _this: this,
         page,
@@ -326,7 +275,7 @@ scraper.singlePage = async function ({ page, event }) {
         mode: "direct-input",
         directImageSrc
     });
-    this.dirtyLog(imageRes);
+
     pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
     pageInfo.image = imageRes.image;
 

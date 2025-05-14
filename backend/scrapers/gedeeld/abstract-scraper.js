@@ -241,6 +241,8 @@ export default class AbstractScraper extends ScraperConfig {
 
         await this.saveEvents();
 
+        await this.debugScraperOutput();
+
         return true;
         // overige catch in om init heen
     }
@@ -302,7 +304,8 @@ export default class AbstractScraper extends ScraperConfig {
         );
         if (theseBaseEvents && theseBaseEvents.length) {
             theseBaseEvents.forEach((file) => {
-                fs.unlinkSync(`${fsDirections.baseEventlists}/${file}`);
+                fs.existsSync(`${fsDirections.baseEventlists}/${file}`) &&
+                    fs.unlinkSync(`${fsDirections.baseEventlists}/${file}`);
             });
         }
         // sla nieuwe op
@@ -366,10 +369,6 @@ export default class AbstractScraper extends ScraperConfig {
      * @memberof AbstractScraper
      */
     async mainPageEnd({ stopFunctie, page, rawEvents }) {
-        if (shell.force && shell.force.includes(workerData.family)) {
-            this.dirtyLog(rawEvents);
-        }
-
         if (stopFunctie) {
             clearTimeout(stopFunctie);
         }
@@ -1277,12 +1276,11 @@ export default class AbstractScraper extends ScraperConfig {
 
     async autoScroll(page) {
         this.timesScrolled += 1;
-        this.dirtyTalk(
-            `${workerData.family} ${workerData.index} scroll #${this.timesScrolled}`
-        );
-
-        await page.evaluate(async () => {
-            await new Promise((resolve) => {
+        const startHeight = await page.evaluate(() => {
+            return document.body.scrollHeight;
+        });
+        const endHeight = await page.evaluate(async () => {
+            return await new Promise((resolve) => {
                 let totalHeight = 0;
                 const distance = 500;
                 const timer = setInterval(() => {
@@ -1296,8 +1294,13 @@ export default class AbstractScraper extends ScraperConfig {
                         resolve();
                     }
                 }, 150);
+            }).then(() => {
+                return document.body.scrollHeight;
             });
         });
+        this.dirtyTalk(
+            `${workerData.family} ${workerData.index} scrolled #${this.timesScrolled} from ${startHeight} to ${endHeight}`
+        );
     }
 
     handleOuterScrapeCatch(catchError) {
@@ -1340,11 +1343,41 @@ export default class AbstractScraper extends ScraperConfig {
         const inbetweenFix =
             workerData.index !== null ? `${workerData.index}` : "0";
         const pathToEventListFile = `${pathToEventList}/${workerData.family}/${inbetweenFix}.json`;
-        fs.writeFile(
+        fs.writeFileSync(
             pathToEventListFile,
-            JSON.stringify(this._events, null, "  "),
-            () => {}
+            JSON.stringify(this._events, null, "  ")
         );
+
+        return true;
+    }
+
+    // step 7
+    async debugScraperOutput() {
+        if (!debugSettings.debugScraperOutput) return true;
+        if (workerData.index != "0") return;
+        const eventListFileName = `${fsDirections.eventLists}/${workerData.family}/0.json`;
+        const fsRes = JSON.parse(fs.readFileSync(eventListFileName, "utf-8"));
+
+        const eerste3 = [fsRes[0], fsRes[1], fsRes[2]];
+        const eerste3Kort = eerste3.map((r) => {
+            if (!r) return r;
+            const longTextURL = r.longText.replace("../public/texts/", "");
+            const n = {
+                title: r.title,
+                start: r.start,
+                anker: `<a href='${r.venueEventUrl}'>${r.title}</a>`,
+                link: `<a class='links-naar-longtext-html' style="font-weight: bold; font-size: 18px" target='_blank' href='${`http://localhost/rockagenda/public/texts/${longTextURL}`}'>LongText</a>`
+            };
+            return n;
+        });
+        this.dirtyDebug({
+            title: `event list res ${workerData.family}`,
+            eerste3Kort
+        });
+        this.dirtyLog({
+            title: `event list res ${workerData.family}`,
+            eerste3
+        });
 
         return true;
     }

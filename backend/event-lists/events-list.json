@@ -1,63 +1,5 @@
 [
   {
-    "door": "2025-04-14T19:00:00",
-    "start": "2025-04-14T19:30:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/64673130/harakiri-for-the-sky-14-04-2025",
-    "title": "Harakiri For the Sky",
-    "location": "tivolivredenburg",
-    "price": 28.85,
-    "shortText": "Post-blackmetalband met nieuw album Scorched Earth",
-    "longText": "../public/texts/tivolivredenburg/YXJha2lyaS1mb3ItdGhlLXNreS0xNC0wNC0yMDI1.html",
-    "image": "../public/event-images/tivolivredenburg/YXJha2lyaS1mb3ItdGhlLXNreS0xNC0wNC0yMDI1",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "harakiri for the sky": {
-        "s": "58kbq6qkqnfwyrqcjffqqq",
-        "l": "harakiri%20for%20the%20sky",
-        "g": [
-          "atmospheric black metal",
-          "austrian black metal",
-          "austrian metal",
-          "blackgaze",
-          "melodic death metal",
-          "post-black metal",
-          "post-metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-04-14T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/swallow-the-sun/",
-    "title": "Swallow the sun",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Swallow the Sun is a Finnish death-doom band founded in 2000 by Juha Raivio. Their…",
-    "longText": "../public/texts/kavka/YXZrYS5iZS9ldmVudC9zd2FsbG93LXRoZS1zdW4v.html",
-    "image": "../public/event-images/kavka/YXZrYS5iZS9ldmVudC9zd2FsbG93LXRoZS1zdW4v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "swallow the sun": {
-        "s": "0ulKlNlo0iPx5ZS6VMTHWQ",
-        "l": "swallow%20the%20sun",
-        "g": [
-          "doom metal",
-          "finnish death metal",
-          "finnish doom metal",
-          "finnish melodeath",
-          "finnish metal",
-          "melodic death metal",
-          "melodic doom",
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
     "title": "Behemoth, Satyricon en Rotting Christ",
     "start": "2025-04-15",
     "eventLocationName": "e-werk",
@@ -197,7 +139,6 @@
     "artists": {}
   },
   {
-    "door": "2025-04-16T19:00:00",
     "start": "2025-04-16T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/108558/the-spark",
     "title": "The Spark",
@@ -324,13 +265,44 @@
     }
   },
   {
+    "door": "2025-04-17T19:30:00",
+    "start": "2025-04-17T20:15:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/tramhaus/",
+    "title": "Tramhaus",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "+ Afterparteesrock, post punk, punkrock, doornroosjepas",
+    "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvdHJhbWhhdXMv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/09/Tramhaus-1-by-Marc-Elisbeth-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "tramhaus": {
+        "s": "5HXrUfoDwofY8lehLNIykB",
+        "l": "tramhaus",
+        "g": [
+          "post-punk",
+          "noise rock"
+        ]
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-04-17T08:00:00",
     "end": "2025-04-17T10:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/bob-wayne-usa-outlaw-country/",
-    "title": "Bob wayne (usa outlaw country) ",
+    "title": "BOB WAYNE (USA Outlaw Country) ",
     "location": "dbs",
-    "price": "0",
-    "shortText": " hurricane joe ",
+    "price": 10,
+    "shortText": " Hurricane Joe / kitchen open by Lokaol Kabaol Hij komt terug naar dBs! Na minstens vier keer eerder in de oude dBs te zijn geweest (inclusief een legendarische show rond middernacht na een reis van 14 uur om hier te komen die we live streamden), komt Bob Wayne met zijn Outlaw Carnies op -opnieuw- een schier eindeloze EU tour terug naar de nieuwe dBs!",
     "longText": "../public/texts/dbs/L2JvYi13YXluZS11c2Etb3V0bGF3LWNvdW50cnkv.html",
     "image": "../public/event-images/dbs/L2JvYi13YXluZS11c2Etb3V0bGF3LWNvdW50cnkv",
     "unavailable": false,
@@ -730,8 +702,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/reverend-james-leg-usa-alive-records/",
     "title": "Reverend james leg (usa – alive records) ",
     "location": "dbs",
-    "price": "0",
-    "shortText": " le garage ",
+    "price": 10,
+    "shortText": " le garage / kitchen open by lokaol kabaol De dB’s volger moet hem kennen, REVEREND JAMES LEG, het podiumbeest op de Fender Rhodes die al met zijn eerste band The Black Diamond Heavies diverse malen in dB’s stond en daarna onder zijn eigen naam met de toevoeging Reverend ook daarna nog vele malen het dB’s podium onveilig maakte.\nTerug gravend in onze annalen zien we dat het 2019 geweest is dat we James Leg voor de laatste keer mochten verwelkomen. Het wordt dus weer hoog tijd voor een avond onversneden rockin’ soul met deze held van het eerste uur.\nWe hopen bovendien dat James Leg zijn, min of meer, vaste Europese drummer MATT GAZ (ook drummer van Mars Red Sky) weer meeneemt en maken ons op voor een warm weerzien. Genre-technisch is James Leg te plaatsen ergens tussen de gospel en soul van Nina Simone, het venijn van de Stooges en de groove van Dr John. Niet te missen dus, beste mensen. NIET te missen, zweet gaat gutsen en er zullen nieuwe fans bijkomen. De Reverend James Leg RULES! NOG STEEDS EN VOOR ALTIJD!!",
     "longText": "../public/texts/dbs/ZC1qYW1lcy1sZWctdXNhLWFsaXZlLXJlY29yZHMv.html",
     "image": "../public/event-images/dbs/ZC1qYW1lcy1sZWctdXNhLWFsaXZlLXJlY29yZHMv",
     "unavailable": false,
@@ -790,21 +762,7 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "meer": {
-        "s": "4pAX6VBnbccF9uVcb9EGiq",
-        "l": "meer",
-        "g": [
-          "progressive rock",
-          "progressive metal",
-          "symphonic rock",
-          "art rock",
-          "electro ",
-          "punk ",
-          "rock "
-        ]
-      }
-    }
+    "artists": {}
   },
   {
     "door": "2025-04-19T18:30:00",
@@ -919,13 +877,27 @@
     }
   },
   {
+    "start": "2025-04-19T12:00:00",
+    "end": "2025-04-19T05:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/the-riot-house-kutopia-workshops/",
+    "title": "The riot house > kutopia workshops",
+    "location": "dbs",
+    "price": "0",
+    "shortText": "START YOUR PUNK BAND IN 1 DAY",
+    "longText": "../public/texts/dbs/LXJpb3QtaG91c2Uta3V0b3BpYS13b3Jrc2hvcHMv.html",
+    "image": "../public/event-images/dbs/LXJpb3QtaG91c2Uta3V0b3BpYS13b3Jrc2hvcHMv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "start": "2025-04-19T06:00:00",
     "end": "2025-04-19T11:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/kutopia-riot-grrrlll-punk-fest-w-workshops-live-music/",
-    "title": "Kutopia > riot grrrlll punk fest live maria iskariot, problem patterns, periot, consensual peggy, & the dolly adlers",
+    "title": "Kutopia > riot grrrlll punk fest live maria iskariot, problem patterns, periot, consensual peggy, & the dolly adlers / kitchen by lokaol kabaol",
     "location": "dbs",
-    "price": "0",
-    "shortText": " ",
+    "price": 16,
+    "shortText": " An entire day dedicated to the powers of DIY Riot Grrrl Punk with workshops and blistering live music!\nStarting at noon, The RIOT HOUSE will host the workshops ‘Start Your Own Band In One Day’ and ‘Skate against Patriarchy’. Workshops are free for ticket holders and have limited capacity. Register at jessica@theriothouse.nl",
     "longText": "../public/texts/dbs/ay1mZXN0LXctd29ya3Nob3BzLWxpdmUtbXVzaWMv.html",
     "image": "../public/event-images/dbs/ay1mZXN0LXctd29ya3Nob3BzLWxpdmUtbXVzaWMv",
     "unavailable": false,
@@ -1103,7 +1075,7 @@
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-musicon-festerfest/",
     "title": "Baroeg On Tour @Musicon: Festerfest: Wounded ",
     "location": "baroeg",
-    "price": null,
+    "price": 16,
     "shortText": " Dystopia  +  Mispricks  +  Bent Out Of Shape  +  Braces  +  Obstruktor  +  Dr. Fred's Galactic Commotion  +  Goregnomes  +  DJ's Zot & Rot  +  DJ's Vicious & Delicious  +  DJ Harry Merry  +  NOCX  +   DJ Kalex Annual fest to crush the boundaries between different forms of underground music and to spread the knowledge of its diversity.",
     "longText": "../public/texts/baroeg/ZWctb24tdG91ci1tdXNpY29uLWZlc3RlcmZlc3Qv.html",
     "image": "../public/event-images/baroeg/ZWctb24tdG91ci1tdXNpY29uLWZlc3RlcmZlc3Qv",
@@ -1304,7 +1276,7 @@
     }
   },
   {
-    "start": "2025-04-21T19:30:00",
+    "start": "2025-04-21T19:00:00",
     "end": "2025-04-21T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/spectral-wound-lamp-of-murmuur-21-04-2025/",
     "title": "Spectral Wound + Lamp Of Murmuur",
@@ -1339,8 +1311,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/stander-usa-teardrinker-genital-shame-usa/",
     "title": "Stander (usa) ",
     "location": "dbs",
-    "price": "0",
-    "shortText": " teardrinker  +  genital shame (usa) ",
+    "price": 13,
+    "shortText": " teardrinker  +  genital shame (usa) / kitchen by lokaol kabaol Een avond in de slipstream van het Roadburn festival met:",
     "longText": "../public/texts/dbs/dGVhcmRyaW5rZXItZ2VuaXRhbC1zaGFtZS11c2Ev.html",
     "image": "../public/event-images/dbs/dGVhcmRyaW5rZXItZ2VuaXRhbC1zaGFtZS11c2Ev",
     "unavailable": false,
@@ -1391,6 +1363,28 @@
     "shortText": "Bolwerk, Sneek",
     "image": "../public/location-images/bolwerk",
     "location": "bolwerk"
+  },
+  {
+    "start": "2025-04-24T08:30:00",
+    "end": "2025-04-24T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/club-3voor12-utrecht-met-chrysalis-cest-qui-clemens/",
+    "title": "Club 3voor12 utrecht met chrysalis ",
+    "location": "dbs",
+    "price": 6,
+    "shortText": " c’est qui?  +  clemens Donderdag 24 april presenteren we een nieuwe editie van Club 3voor12 Utrecht in dB’s. Tickets (online 6 euro, deur 7 euro) zijn verkrijgbaar via dB’s en de ticketlink van het event. Op deze editie check je:",
+    "longText": "../public/texts/dbs/ZXQtY2hyeXNhbGlzLWNlc3QtcXVpLWNsZW1lbnMv.html",
+    "image": "../public/event-images/dbs/ZXQtY2hyeXNhbGlzLWNlc3QtcXVpLWNsZW1lbnMv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "clemens": {
+        "s": "6M4RgHnN6u48xM8rbTintP",
+        "l": "clemens",
+        "g": [
+          "black metal, classical"
+        ]
+      }
+    }
   },
   {
     "door": "2025-04-24T18:00:00",
@@ -1875,8 +1869,8 @@
     }
   },
   {
-    "door": "2025-04-27T20:00:00.000",
-    "start": "2025-04-27T20:45:00.000",
+    "door": "2025-04-27T19:30:00",
+    "start": "2025-04-27T20:00:00",
     "venueEventUrl": "https://www.doornroosje.nl/event/gnod-white-hills/",
     "title": "Gnod + White Hills",
     "location": "doornroosje",
@@ -2086,6 +2080,20 @@
     "shortText": "Paard, Den Haag",
     "image": "../public/location-images/paard",
     "location": "paard"
+  },
+  {
+    "door": "2025-04-30T19:30:00",
+    "start": "2025-04-30T20:00:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/sowulo-2/",
+    "title": "Sowulo",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "+ Elektro Shamanfolk, dark folk",
+    "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvc293dWxvLTIv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/11/Sowulo-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "start": "2025-04-30T18:30:00",
@@ -2317,10 +2325,10 @@
     "start": "2025-05-01T08:00:00",
     "end": "2025-05-01T10:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/black-curse-concrete-winds/",
-    "title": "Black curse + concrete winds",
+    "title": "Black curse ",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 15,
+    "shortText": " concrete winds/ kitchen by punkdog Beware! This one hurts badly!!",
     "longText": "../public/texts/dbs/bnQvYmxhY2stY3Vyc2UtY29uY3JldGUtd2luZHMv.html",
     "image": "../public/event-images/dbs/bnQvYmxhY2stY3Vyc2UtY29uY3JldGUtd2luZHMv",
     "unavailable": false,
@@ -2548,13 +2556,43 @@
     }
   },
   {
+    "door": "2025-05-02T20:00:00",
+    "start": "2025-05-02T20:30:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/wodan-boys-2/",
+    "title": "Wodan Boys",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "+ Fuzzy Teethrock, punk",
+    "longText": "../public/texts/doornroosje/bnJvb3NqZS5ubC9ldmVudC93b2Rhbi1ib3lzLTIv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/11/Wodan-Boys-WEB-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "wodan boys": {
+        "s": "0kmkbibevmq4luqquahdmr",
+        "l": "wodan%20boys",
+        "g": [
+          "dutch rock"
+        ]
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-05-02T07:30:00",
     "end": "2025-05-02T11:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/the-one-woman-band-fest-w-dead-elvis-van-tastik-belly-hole-freak-the-blues-against-youth-nono-electra/",
     "title": "The one (wo)man band fest w/ dead elvis ",
     "location": "dbs",
-    "price": "0",
-    "shortText": " van tastik  +  belly hole freak  +  the blues against youth  +  nono electra ",
+    "price": 15,
+    "shortText": " van tastik  +  belly hole freak  +  the blues against youth  +  nono electra / kitchen by punkdog Oh yes, we at dB’s have always been fanatics about One Man Bands (in the gender neutral sense of the word of course) and on this Friday the second of May we have another ultra cool OMB line-up for your entertainment.",
     "longText": "../public/texts/dbs/ZXMtYWdhaW5zdC15b3V0aC1ub25vLWVsZWN0cmEv.html",
     "image": "../public/event-images/dbs/ZXMtYWdhaW5zdC15b3V0aC1ub25vLWVsZWN0cmEv",
     "unavailable": false,
@@ -2680,18 +2718,39 @@
     }
   },
   {
+    "start": "2025-05-03T04:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/skad-for-life-iv-festival/",
+    "title": "Ska’d for life iv festival w/ bim skala bim ",
+    "location": "dbs",
+    "price": 20,
+    "shortText": " dr ring ding & more t.b.a. / kitchen by punkdog SKA’D FOR LIFE IV",
+    "longText": "../public/texts/dbs/ZW50L3NrYWQtZm9yLWxpZmUtaXYtZmVzdGl2YWwv.html",
+    "image": "../public/event-images/dbs/ZW50L3NrYWQtZm9yLWxpZmUtaXYtZmVzdGl2YWwv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-05-03T20:00:00",
     "start": "2025-05-03T20:30:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/hardcover-boneripper-tba",
-    "title": "Hardcover + Boneripper + TBA",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/hardcover",
+    "title": "Hardcover + Boneripper + None Shall Fall",
     "location": "cpunt",
-    "price": null,
+    "price": 10,
     "shortText": "Ode aan de grondleggers van hard- en metalcore",
-    "longText": "../public/texts/cpunt/Z2VuZGEvaGFyZGNvdmVyLWJvbmVyaXBwZXItdGJh.html",
-    "image": "../public/event-images/cpunt/Z2VuZGEvaGFyZGNvdmVyLWJvbmVyaXBwZXItdGJh",
+    "longText": "../public/texts/cpunt/L3d3dy5jcHVudC5ubC9hZ2VuZGEvaGFyZGNvdmVy.html",
+    "image": "../public/event-images/cpunt/L3d3dy5jcHVudC5ubC9hZ2VuZGEvaGFyZGNvdmVy",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "fall": {
+        "s": null,
+        "l": "fall",
+        "g": [
+          "death metal"
+        ]
+      },
       "metal": {
         "s": null,
         "l": "metal",
@@ -2714,7 +2773,7 @@
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-podium-islemunda-everyone-rocks-dit-niemand-minder-sessieband-morph-misiconi/",
     "title": "Baroeg On Tour @Podium Islemunda: Everyone Rocks: DIT ",
     "location": "baroeg",
-    "price": null,
+    "price": 11,
     "shortText": " Niemand Minder Sessieband  +  MORPH (Misiconi) Onbeperkt muziekplezier.",
     "longText": "../public/texts/baroeg/ZGVyLXNlc3NpZWJhbmQtbW9ycGgtbWlzaWNvbmkv.html",
     "image": "../public/event-images/baroeg/ZGVyLXNlc3NpZWJhbmQtbW9ycGgtbWlzaWNvbmkv",
@@ -2793,6 +2852,20 @@
     "shortText": "Poppodium Emmen, Emmen",
     "image": "../public/location-images/poppodiumemmen",
     "location": "poppodiumemmen"
+  },
+  {
+    "start": "2025-05-04T08:00:00",
+    "end": "2025-05-04T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/jeffrey-lewis-the-voltage/",
+    "title": "Jeffrey lewis & the voltage / kitchen by punkdog",
+    "location": "dbs",
+    "price": 15,
+    "shortText": " Singer/striptekenaar Jeffrey Lewis komt naar de nieuwe dB’s en dat is geweldig. Lewis is een van de mensen die rond de eeuwwisseling de Anti-folk een verfrissende, hilarische en boeiende boost gaven. Hij maakte onderdeel uit van een stel hippe New Yorkers rondom The SideWalk Cafe, in East-Village, die destijds met geinige teksten en sterke songs de harten van vele indie-liefhebbers veroverden waarvan The Moldy Peaches het bekendst werden. Maar de langste adem van de oorspronkelijke groep Anti-Folkies is die van Jeffrey Lewis",
+    "longText": "../public/texts/dbs/ZW50L2plZmZyZXktbGV3aXMtdGhlLXZvbHRhZ2Uv.html",
+    "image": "../public/event-images/dbs/ZW50L2plZmZyZXktbGV3aXMtdGhlLXZvbHRhZ2Uv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "door": "2025-05-04T19:00:00",
@@ -3101,6 +3174,37 @@
     }
   },
   {
+    "door": "2025-05-08T21:00:00",
+    "start": "2025-05-08T22:00:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/knives/",
+    "title": "Knives",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "+ Death Sellsrock, punk",
+    "longText": "../public/texts/doornroosje/dy5kb29ybnJvb3NqZS5ubC9ldmVudC9rbml2ZXMv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/11/KNIVES-PRESS-SHOT-1-1200x630.png",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "knives": {
+        "s": "2YoHhPouaTT96k3dUQ8WZK",
+        "l": "knives",
+        "g": [
+          "grindcore",
+          "death 'n' roll"
+        ]
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-05-09T18:30:00",
     "venueEventUrl": "https://www.willemeen.nl/programma/seven-spirits-burning-battled-a-life-aligned-receiving-immortality-de-zanderling/",
     "title": "Seven Spirits Burning ",
@@ -3165,10 +3269,10 @@
     "start": "2025-05-09T08:00:00",
     "end": "2025-05-09T10:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/ronker-b-supports/",
-    "title": "Ronker (b) + supports",
+    "title": "Ronker (b) + hee hee shamone + riona",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 15,
+    "shortText": "RONKER kroop in 2021 als een vierkoppig monster uit de moerasgrond van de Dendervallei. Met state-of-the-art speednoise bouwde RONKER een stevige livereputatie op. De band mocht het podium delen met helden Melvins, Show Me The Body en Godflesh. Op eerste EP ‘Self Loathing Self Help’ bewezen de muzikanten niet alleen live een machine te zijn. Album ‘Fear is a Funny Thing, Now Smile Like a Big Boy’ verscheen op 10 mei 2024 via Labelman. “Een vuistslag van een debuut die eindelijk wat snelheid in de Belgische rock pompt.”, aldus Humo.\nOp hun debuutplaat klinkt de band dan ook hongerig, nerveus en grossierend in zijn bipolaire aard: post-punk gepaard aan het betonnen karakter van 90’s alt-metal dragen beide even hard bij aan hun DNA, een explosief brouwsel waar brokken hardcore vermengd worden met noise, indie, prog en punk en geen enkel huisje nog heilig is.\nEen band om live te ondergaan!",
     "longText": "../public/texts/dbs/aW8ubmwvZXZlbnQvcm9ua2VyLWItc3VwcG9ydHMv.html",
     "image": "../public/event-images/dbs/aW8ubmwvZXZlbnQvcm9ua2VyLWItc3VwcG9ydHMv",
     "unavailable": false,
@@ -3461,7 +3565,7 @@
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-soundville-riffsniffer-presents-godsleep-support/",
     "title": "Baroeg On Tour @SoundVille: Riffsniffer presents: Godsleep ",
     "location": "baroeg",
-    "price": null,
+    "price": 14,
     "shortText": " The Cosmic Dead  +  Shitman FFO: 1000mods, Daily Thompson, Blues Pills.",
     "longText": "../public/texts/baroeg/ZmVyLXByZXNlbnRzLWdvZHNsZWVwLXN1cHBvcnQv.html",
     "image": "../public/event-images/baroeg/ZmVyLXByZXNlbnRzLWdvZHNsZWVwLXN1cHBvcnQv",
@@ -3520,6 +3624,63 @@
         "g": [
           "punk",
           "stoner"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-12T19:30:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-v11-dipygus-putridarium/",
+    "title": "Baroeg On Tour @V11: Dipygus + Putridarium",
+    "location": "baroeg",
+    "price": 15.5,
+    "shortText": "Death metal op een maandag in V11.",
+    "longText": "../public/texts/baroeg/LXRvdXItdjExLWRpcHlndXMtcHV0cmlkYXJpdW0v.html",
+    "image": "../public/event-images/baroeg/LXRvdXItdjExLWRpcHlndXMtcHV0cmlkYXJpdW0v",
+    "soldOut": false,
+    "eventGenres": [
+      "death metal"
+    ],
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      },
+      "dipygus": {
+        "s": "23TWZyIfOYMAVnhSJvXGKf",
+        "l": "dipygus",
+        "g": [
+          "death metal",
+          "death metal",
+          "death metal"
+        ]
+      },
+      "putridarium": {
+        "s": "1qJlxZfJtjsChFDiJpbmxj",
+        "l": "putridarium",
+        "g": [
+          "death metal",
+          "death",
+          "doom metal",
+          "death metal"
+        ]
+      },
+      "death op een maandag in v11.": {
+        "s": null,
+        "l": "death op een maandag in v11.",
+        "g": [
+          "death metal"
         ]
       }
     }
@@ -3756,11 +3917,25 @@
     }
   },
   {
+    "start": "2025-05-15T08:00:00",
+    "end": "2025-05-15T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/kara-delik-berlin-support/",
+    "title": "Kara delik (berlin) + labasheeda",
+    "location": "dbs",
+    "price": 8,
+    "shortText": "Drie vrienden die samenkwamen door hun liefde voor vreemde maatsoorten en Krautrock, Kara Delik werd geboren in de zomer van 2020. In 2022 verscheen hun eerste EP ‘Tamam’. Het Berlijnse trio heeft net hun debuutalbum opgenomen en gaat er in het voorjaar van 2025 mee op tournee. De Anatolische post-punk-, psych-dubgeluiden van de band zijn geworteld in de geschiedenis van Anatolische rock, Krautrock, Neue Deutsche Welle, new wave en dub. Allemaal gebracht met een pittige, post-punkende, explosieve live-punch. (bron: Eurosonic 2025)",
+    "longText": "../public/texts/dbs/ZW50L2thcmEtZGVsaWstYmVybGluLXN1cHBvcnQv.html",
+    "image": "../public/event-images/dbs/ZW50L2thcmEtZGVsaWstYmVybGluLXN1cHBvcnQv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "start": "2025-05-15T20:00:00",
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-rotown-temple-fang/",
     "title": "Baroeg On Tour @Rotown: Temple Fang",
     "location": "baroeg",
-    "price": null,
+    "price": 15,
     "shortText": "FFO: Alconaut, Weedpecker, King Buffalo.",
     "longText": "../public/texts/baroeg/ZWctb24tdG91ci1yb3Rvd24tdGVtcGxlLWZhbmcv.html",
     "image": "../public/event-images/baroeg/ZWctb24tdG91ci1yb3Rvd24tdGVtcGxlLWZhbmcv",
@@ -3899,6 +4074,36 @@
     }
   },
   {
+    "start": "2025-05-16T20:00:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/sonic-whip-2025-2/",
+    "title": "Sonic whip 2025",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "",
+    "longText": "../public/texts/doornroosje/amUubmwvZXZlbnQvc29uaWMtd2hpcC0yMDI1LTIv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/12/SONIC_WHIP_2025_WEB_MAIN_VISUAL-1-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "sonic": {
+        "s": "77NlgotgHiVpi79fpChUZc",
+        "l": "sonic",
+        "g": [
+          "melodic death metal",
+          "metalcore"
+        ]
+      },
+      "whip": {
+        "s": "3oadmdbl4wv7f5lkvwrwy2",
+        "l": "whip",
+        "g": [
+          "irish post-punk",
+          "irish rock"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-05-17T20:00:00",
     "venueEventUrl": "https://occii.org/events/%d1%82he-%d1%82ide-of-%d1%82he-%ce%b5nd-present-brak-de-louse-uk-tzu-ni-tw-asch/",
     "title": "Тhe тide øf тhe εnd present: brak (de) ",
@@ -3986,13 +4191,43 @@
     }
   },
   {
+    "start": "2025-05-17T20:00:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/sonic-whip-2025/",
+    "title": "Sonic whip 2025",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "",
+    "longText": "../public/texts/doornroosje/b3NqZS5ubC9ldmVudC9zb25pYy13aGlwLTIwMjUv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/12/SONIC_WHIP_2025_WEB_MAIN_VISUAL-1-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "sonic": {
+        "s": "77NlgotgHiVpi79fpChUZc",
+        "l": "sonic",
+        "g": [
+          "melodic death metal",
+          "metalcore"
+        ]
+      },
+      "whip": {
+        "s": "3oadmdbl4wv7f5lkvwrwy2",
+        "l": "whip",
+        "g": [
+          "irish post-punk",
+          "irish rock"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-05-17T07:30:00",
     "end": "2025-05-17T10:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/doodswens-shagor-lustobject/",
     "title": "Doodswens + Shagor + Lustobject",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 10,
+    "shortText": "Shagor werd opgericht in 2018 en bracht in 2020 hun eerste album uit, getiteld Sotteklugt, via Babylon Doom Cult Records. Sotteklugt ontving lovende kritieken zowel in binnen- als buitenland en was binnen twee maanden uitverkocht op vinyl. In 2023 zette Shagor deze mijlpaal voort met optredens op festivals zoals Roadburn en Samhain. Op 8 februari 2025 presenteert Shagor hun volgende werkstuk: Lyksalver.",
     "longText": "../public/texts/dbs/dC9kb29kc3dlbnMtc2hhZ29yLWx1c3RvYmplY3Qv.html",
     "image": "../public/event-images/dbs/dC9kb29kc3dlbnMtc2hhZ29yLWx1c3RvYmplY3Qv",
     "unavailable": false,
@@ -4189,7 +4424,7 @@
     }
   },
   {
-    "start": "2025-05-18T19:30:00",
+    "start": "2025-05-18T19:00:00",
     "end": "2025-05-18T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/combichrist-extize-crimson-veil-esoterik-18-05-2025/",
     "title": "Combichrist + Extize + Crimson Veil + Esoterik",
@@ -4216,8 +4451,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/subroutine-label-matinee-w-howrah-free-dust-sowt/",
     "title": "Subroutine label matinee w/ howrah ",
     "location": "dbs",
-    "price": "0",
-    "shortText": " free dust  +  søwt  +  special guest jack name (usa) ",
+    "price": 10,
+    "shortText": " free dust  +  søwt  +  special guest jack name (usa) Het Nederlandse kwaliteitslabel Subroutine heeft weer wat mooie releases te vieren en dat brengen we graag onder de aandacht. Op deze middag presenteren we optredens van HOWRAH, Free Dust & SØWT\nSpeciale gast is Jack Name, een enigma uit de LA-underground. Zijn nummers werden gecoverd door 𝗖𝗮𝘁𝗲 𝗟𝗲 𝗕𝗼𝗻, 𝗪𝗵𝗶𝘁𝗲 𝗙𝗲𝗻𝗰𝗲 en 𝗨.𝗦. 𝗚𝗶𝗿𝗹𝘀. Zijn experimentele sounds galmden al door het 𝗠𝘂𝘀𝗲𝘂𝗺 𝗼𝗳 𝗖𝗼𝗻𝘁𝗲𝗺𝗽𝗼𝗿𝗮𝗿𝘆 𝗔𝗿𝘁. Releases op 𝗗𝗿𝗮𝗴 𝗖𝗶𝘁𝘆, 𝗖𝗮𝘀𝘁𝗹𝗲-𝗙𝗮𝗰𝗲 en 𝗠𝗮𝗽𝗹𝗲 𝗗𝗲𝗮𝘁𝗵.",
     "longText": "../public/texts/dbs/dGluZWUtdy1ob3dyYWgtZnJlZS1kdXN0LXNvd3Qv.html",
     "image": "../public/event-images/dbs/dGluZWUtdy1ob3dyYWgtZnJlZS1kdXN0LXNvd3Qv",
     "unavailable": false,
@@ -4243,7 +4478,7 @@
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-maassilo-wavefest-xii-sad-lovers-giants-spasmodique-desinteresse/",
     "title": "Baroeg On Tour @Maassilo: Wavefest XII: Sad Lovers & Giants ",
     "location": "baroeg",
-    "price": null,
+    "price": 25,
     "shortText": " La Bande-Son Imaginaire  +  Spasmodique  +  Smudged  +  Pol  +  Desinteresse Twaalfde editie van Wavefest.",
     "longText": "../public/texts/baroeg/YW50cy1zcGFzbW9kaXF1ZS1kZXNpbnRlcmVzc2Uv.html",
     "image": "../public/event-images/baroeg/YW50cy1zcGFzbW9kaXF1ZS1kZXNpbnRlcmVzc2Uv",
@@ -4415,7 +4650,7 @@
     }
   },
   {
-    "start": "2025-05-22T19:30:00",
+    "start": "2025-05-22T19:00:00",
     "end": "2025-05-22T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/phantom-elite-ep-release-22-05-2025/",
     "title": "Phantom Elite EP release",
@@ -4843,7 +5078,30 @@
     }
   },
   {
-    "start": "2025-05-24T19:30:00",
+    "door": "2025-05-24T20:00:00",
+    "start": "2025-05-24T20:45:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/vieux-farka-toure-3/",
+    "title": "Vieux Farka Touré",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "rock, bluesrock, desert rock, doornroosjepas",
+    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZpZXV4LWZhcmthLXRvdXJlLTMv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/07/Vieux-Farka-Toure-5-R-photo-by-Kiss-Diouara-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-24T19:00:00",
     "end": "2025-05-24T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/no-barrier-24-05-2025/",
     "title": "No barrier",
@@ -4866,7 +5124,7 @@
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-t-haantje-lomba-rock-scream-tonight-wasabi-toothpaste-support/",
     "title": "Baroeg On Tour @’t Haantje: Lomba Rock: Scream Tonight ",
     "location": "baroeg",
-    "price": null,
+    "price": 7.5,
     "shortText": " Wasabi Toothpaste  +  Doctor Robert And The Pills Een kleinschalig festival op de stoep bij Eterij Tapperij Café ’t Haantje.",
     "longText": "../public/texts/baroeg/Z2h0LXdhc2FiaS10b290aHBhc3RlLXN1cHBvcnQv.html",
     "image": "../public/event-images/baroeg/Z2h0LXdhc2FiaS10b290aHBhc3RlLXN1cHBvcnQv",
@@ -4942,8 +5200,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/boppin-the-rock-presents-gizzelle-the-savoys-wild-records-mischief-cc-jerome-trio/",
     "title": "Boppin’ the Rock presents GIZZELLE & the Savoys (Wild Records) ",
     "location": "dbs",
-    "price": "0",
-    "shortText": " Mischief!  +  CC Jerome Trio ",
+    "price": 17.5,
+    "shortText": " Mischief!  +  CC Jerome Trio Behold people, Boppin’ the Rock pakt uit met een formidabele triple bill rond de Amerikaanse zangeres GIZZELLE & The Savoys, de Domtown maestro’s of rockabilly MISCHIEF! en het CC JEROME TRIO.",
     "longText": "../public/texts/dbs/Y29yZHMtbWlzY2hpZWYtY2MtamVyb21lLXRyaW8v.html",
     "image": "../public/event-images/dbs/Y29yZHMtbWlzY2hpZWYtY2MtamVyb21lLXRyaW8v",
     "unavailable": false,
@@ -5172,6 +5430,40 @@
     }
   },
   {
+    "door": "2025-05-28T19:30:00",
+    "start": "2025-05-28T20:00:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/mannequin-pussy/",
+    "title": "Mannequin Pussy",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "emo, punkrock",
+    "longText": "../public/texts/doornroosje/b3NqZS5ubC9ldmVudC9tYW5uZXF1aW4tcHVzc3kv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/01/Mannequin-Pussy_WEB-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "mannequin pussy": {
+        "s": "33yje3hgpNfdXpqdJQcrt9",
+        "l": "mannequin%20pussy",
+        "g": [
+          "bubblegrunge",
+          "indie punk",
+          "modern hardcore",
+          "modern power pop",
+          "riot grrrl"
+        ]
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-05-29T19:15:00",
     "start": "2025-05-29T19:30:00",
     "venueEventUrl": "https://www.podiumvictorie.nl/programma/dikke-dennis-en-de-r%C3%B8ckers",
@@ -5344,6 +5636,89 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "door": "2025-05-30T19:30:00",
+    "start": "2025-05-30T20:00:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/ulcerate-1/",
+    "title": "Ulcerate",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "+ Autarkhmetal, extreme metal, progressieve metal, doornroosjepas",
+    "longText": "../public/texts/doornroosje/b3Jucm9vc2plLm5sL2V2ZW50L3VsY2VyYXRlLTEv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/03/Ulcerate-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "ulcerate": {
+        "s": null,
+        "l": null,
+        "g": [
+          "death metal"
+        ]
+      },
+      "autarkh": {
+        "s": "1h39mvskrqbzrsf3vfnsp5",
+        "l": "autarkh",
+        "g": [
+          "industrial metal"
+        ]
+      },
+      "extreme": {
+        "s": "6w7j5wq5ai5oqylcm15s2l",
+        "l": "extreme",
+        "g": [
+          "funk metal",
+          "glam metal",
+          "hard rock"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-30T08:00:00",
+    "end": "2025-05-30T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/cobra-the-impaler-arson/",
+    "title": "Cobra the impaler + arson",
+    "location": "dbs",
+    "price": 15,
+    "shortText": "Uitgestelde concert van febuari",
+    "longText": "../public/texts/dbs/ZXZlbnQvY29icmEtdGhlLWltcGFsZXItYXJzb24v.html",
+    "image": "../public/event-images/dbs/ZXZlbnQvY29icmEtdGhlLWltcGFsZXItYXJzb24v",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "cobra the impaler": {
+        "s": "3GF4mtTUUptBbUoJNclS4A",
+        "l": "cobra%20the%20impaler",
+        "g": [
+          "progressive metalcore"
+        ]
+      },
+      "arson": {
+        "s": "7jun2nR07meg97xF6mD3BF",
+        "l": "arson",
+        "g": [
+          "melodic death",
+          "black metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-05-30T20:00:00",
@@ -5584,8 +5959,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/terziele-release-show-hemelbestormer-b-gavran/",
     "title": "Terziele release show ",
     "location": "dbs",
-    "price": "0",
-    "shortText": " hemelbestormer (b)  +  gavran ",
+    "price": 10,
+    "shortText": " hemelbestormer (b)  +  gavran Ter Ziele Album Release Show – 31 mei dB’s Utrecht",
     "longText": "../public/texts/dbs/LXNob3ctaGVtZWxiZXN0b3JtZXItYi1nYXZyYW4v.html",
     "image": "../public/event-images/dbs/LXNob3ctaGVtZWxiZXN0b3JtZXItYi1nYXZyYW4v",
     "unavailable": false,
@@ -5772,7 +6147,7 @@
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-v11-castle/",
     "title": "Baroeg On Tour @V11: Castle",
     "location": "baroeg",
-    "price": null,
+    "price": 14,
     "shortText": "Met meer dan 700 optredens op hun conto kun je alleen maar een goed geoliede machine in het ruim van de V11 verwachten.",
     "longText": "../public/texts/baroeg/dGllL2Jhcm9lZy1vbi10b3VyLXYxMS1jYXN0bGUv.html",
     "image": "../public/event-images/baroeg/dGllL2Jhcm9lZy1vbi10b3VyLXYxMS1jYXN0bGUv",
@@ -5790,19 +6165,6 @@
           "doom metal",
           "doom",
           "heavy metal"
-        ]
-      },
-      "meer": {
-        "s": "4pAX6VBnbccF9uVcb9EGiq",
-        "l": "meer",
-        "g": [
-          "progressive rock",
-          "progressive metal",
-          "symphonic rock",
-          "art rock",
-          "electro ",
-          "punk ",
-          "rock "
         ]
       },
       "met dan 700 optredens op hun conto kun je alleen maar een goed geoliede machine in het ruim van de v11 verwachten.": {
@@ -6010,6 +6372,34 @@
     "artists": {}
   },
   {
+    "door": "2025-06-06T18:00:00",
+    "start": "2025-06-06T19:00:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/manu-chao-2/",
+    "title": "Manu Chao",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "Ultra Acoustic Toursinger songwriter, punk, roots, mestizo",
+    "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvbWFudS1jaGFvLTIv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/04/DOORNROOSJE_MANU_CHAO_BRAKKENSTEIN_NIJMEGEN_BANNER-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-06-06T08:00:00",
+    "end": "2025-06-06T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/wave-invasion-presents-patriarcy-usa-llora-usa/",
+    "title": "Wave invasion presents patriarcy (usa) ",
+    "location": "dbs",
+    "price": 15,
+    "shortText": " llora (usa) Riemen vast voor een avond opwindende en confronterende gothic synth pop, EBM, wave met zelfs een snuif metal. Enter PATRIARCHY & LLORA!",
+    "longText": "../public/texts/dbs/c2VudHMtcGF0cmlhcmN5LXVzYS1sbG9yYS11c2Ev.html",
+    "image": "../public/event-images/dbs/c2VudHMtcGF0cmlhcmN5LXVzYS1sbG9yYS11c2Ev",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2025-06-06T18:30:00",
     "start": "2025-06-06T18:30:00",
     "venueEventUrl": "https://www.013.nl/programma/106183/neal-morse-the-resonance-the-flower-kings",
@@ -6086,8 +6476,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/holy-scum-uk/",
     "title": "Holy scum (uk)",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 10,
+    "shortText": "Niet voor tere zielen, Holy Scum, een soort van underground supergroep samengesteld uit Peter J Taylor (voorheen uit Action Beat), Chris Haslam (GNOD) en John Perry van Suck. Aangevuld met Dälek’s Mike Mare (aka Mike Manteca).",
     "longText": "../public/texts/dbs/YnN0dWRpby5ubC9ldmVudC9ob2x5LXNjdW0tdWsv.html",
     "image": "../public/event-images/dbs/YnN0dWRpby5ubC9ldmVudC9ob2x5LXNjdW0tdWsv",
     "unavailable": false,
@@ -6308,6 +6698,62 @@
     "location": "leeuwardenmetexodus"
   },
   {
+    "door": "2025-06-13T20:00:00",
+    "start": "2025-06-13T20:30:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/municipal-waste/",
+    "title": "Municipal Waste",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "metal, thrash metal, crossover metal",
+    "longText": "../public/texts/doornroosje/b3NqZS5ubC9ldmVudC9tdW5pY2lwYWwtd2FzdGUv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/02/Municipal-Waste-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "municipal waste": {
+        "s": "2Ah9OuOj7B57gPD1cbwiaE",
+        "l": "municipal%20waste",
+        "g": [
+          "crossover thrash",
+          "death metal",
+          "groove metal",
+          "metal",
+          "new wave of thrash metal",
+          "speed metal",
+          "thrash metal",
+          "virginia metal",
+          "virginia punk",
+          "thrash metal",
+          "crossover"
+        ]
+      },
+      "waste": {
+        "s": "2XuyPcxHeNlK7tOej51mqj",
+        "l": "waste",
+        "g": [
+          "deathcore",
+          "metalcore",
+          "brutal death metal"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-06-15T18:30:00",
     "start": "2025-06-15T19:30:00",
     "end": "2025-06-15T22:00:00",
@@ -6339,6 +6785,29 @@
     "artists": {}
   },
   {
+    "start": "2025-06-15T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/the-rose-2",
+    "title": "The rose\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t nieuw",
+    "location": "afaslive",
+    "price": 15,
+    "shortText": "  undefined",
+    "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS90aGUtcm9zZS0y.html",
+    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS90aGUtcm9zZS0y",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "the rose": {
+        "s": "5na1lmemk2vznlje9snjyw",
+        "l": "united states",
+        "g": [
+          "k-pop",
+          "k-pop boy group",
+          "symphonic/gothic metal"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-06-16T19:30:00",
     "venueEventUrl": "https://kavka.be/event/mil-spec-can-restraining-order-us-wild-side-can/",
     "title": "Mil-spec (can) ",
@@ -6358,6 +6827,47 @@
           "melodic hardcore",
           "hardcore punk",
           "hardcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-06-16T20:00:00",
+    "start": "2025-06-16T20:30:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/windhand/",
+    "title": "Windhand",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "+ Dorthiametal, doom metal",
+    "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvd2luZGhhbmQv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/02/Windhand-kopie-1024x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      },
+      "windhand": {
+        "s": "6wE3e84Zg41JF04Z39i5wv",
+        "l": "windhand",
+        "g": [
+          "sludge metal",
+          "doom metal",
+          "stoner rock",
+          "stoner",
+          "doom metal"
         ]
       }
     }
@@ -6465,8 +6975,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/dopethrone-can-void-claw/",
     "title": "Dopethrone (can) + voidclaw",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 14,
+    "shortText": "Dopethrone (CA) + Voidclaw",
     "longText": "../public/texts/dbs/dmVudC9kb3BldGhyb25lLWNhbi12b2lkLWNsYXcv.html",
     "image": "../public/event-images/dbs/dmVudC9kb3BldGhyb25lLWNhbi12b2lkLWNsYXcv",
     "unavailable": false,
@@ -6628,8 +7138,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/ultha-d-grey-aura/",
     "title": "Ultha (d) + grey aura",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 10,
+    "shortText": "Het Duitse Ultha is een band voor liefhebbers van lang uitgesponnen black metal met een goeie scheut melancholie, geschoeid op de leest van bands als Ash Borer en Wolves in the Throne Room.",
     "longText": "../public/texts/dbs/aW8ubmwvZXZlbnQvdWx0aGEtZC1ncmV5LWF1cmEv.html",
     "image": "../public/event-images/dbs/aW8ubmwvZXZlbnQvdWx0aGEtZC1ncmV5LWF1cmEv",
     "unavailable": false,
@@ -6657,6 +7167,19 @@
         ]
       }
     }
+  },
+  {
+    "start": "2025-06-21T20:00:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/kids-n-billies-2025/",
+    "title": "Kids ‘n’ billies 2025",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "",
+    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L2tpZHMtbi1iaWxsaWVzLTIwMjUv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/06/KnB-background-4-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "door": "2025-06-22T19:30:00",
@@ -6859,8 +7382,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/the-midnight-ghost-train-usa-sons-of-node/",
     "title": "The midnight ghost train (usa) + sons of node",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 15,
+    "shortText": "Aight, onze buddies van THE MIDNIGHT GHOST TRAIN keren weer terug naar Europa, dit keer echt voor een allerlaatste keer. Hierna ga je dit trio niet meer aan het werk zien. Als je ze niet kent weet dan dat TMGT een van de beste stonerrocktrio’s van het afgelopen decennium is. Als je ze wel kent, dan haal je beter snel die tickets voor een show die episch zal zijn. Siked dat ze dB’s hoog op hun lijst van favo venues hebben staan en dus ook absoluut hier willen spelen!",
     "longText": "../public/texts/dbs/LWdob3N0LXRyYWluLXVzYS1zb25zLW9mLW5vZGUv.html",
     "image": "../public/event-images/dbs/LWdob3N0LXRyYWluLXVzYS1zb25zLW9mLW5vZGUv",
     "unavailable": false,
@@ -6940,8 +7463,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/the-subhumans-uk-anarcho-punk-legends/",
     "title": "The subhumans (uk anarcho punk legends)",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 10,
+    "shortText": "Zeer invloedrijke aartsvaders en vaandeldragers van de UK Anarcho Punk. Ook bij hen geldt dat hun eerste, én wat latere EP’s ware klassiekers in het genre zijn. Hun eerste EP ‘Demolition War’ kwam uit in 1981 op het Spiderleg label van de Anarcho band Flux of Pink Indians en sloeg overal in als een bom. Gekenmerkt door een wat ‘muzikalere’ sound en songwriting maar niet minder (juist méér) bijtend en agressief in combinatie met de overeenkomstige teksten en ‘delivery’ van zanger Dick Lucas maakten dit de band onweerstaanbaar.\nAnno 2025 trekken The Subhumans nog steeds door stad en land om hun politieke boodschap te verkondigen. Wel ouder niet kouder, en zeker niet minder betrokken spuwen Dick Lucas en de zijnen hun gal over de huidige verrotte wereld. Nu meer dan ooit, anarcho punk to save the world (or die trying).",
     "longText": "../public/texts/dbs/dW1hbnMtdWstYW5hcmNoby1wdW5rLWxlZ2VuZHMv.html",
     "image": "../public/event-images/dbs/dW1hbnMtdWstYW5hcmNoby1wdW5rLWxlZ2VuZHMv",
     "unavailable": false,
@@ -6997,6 +7520,35 @@
           "death",
           "doom metal, atmospheric doom metal (early)",
           " atmospheric rock (later)"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-06-30T04:30:00",
+    "end": "2025-06-30T10:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/aleksiproxima-flarehurryland/",
+    "title": "Aleksi+Proxima Flare+Hurryland",
+    "location": "dbs",
+    "price": 7.5,
+    "shortText": "",
+    "longText": "../public/texts/dbs/L2FsZWtzaXByb3hpbWEtZmxhcmVodXJyeWxhbmQv.html",
+    "image": "../public/event-images/dbs/L2FsZWtzaXByb3hpbWEtZmxhcmVodXJyeWxhbmQv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "proxima flare": {
+        "s": "315Th53dV868sSv3jYt8UO",
+        "l": "proxima%20flare",
+        "g": [
+          "progressive metal"
+        ]
+      },
+      "hurryland": {
+        "s": "7FxU3mrUjcrSYzFHYNYkQ9",
+        "l": "hurryland",
+        "g": [
+          "progressive metal"
         ]
       }
     }
@@ -7137,6 +7689,31 @@
     }
   },
   {
+    "door": "2025-07-03T19:00:00",
+    "start": "2025-07-03T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/108791/unto-others",
+    "title": "Unto Others",
+    "location": "013",
+    "price": 28.3,
+    "shortText": "Never, Neverland Tour",
+    "longText": "../public/texts/013/bC9wcm9ncmFtbWEvMTA4NzkxL3VudG8tb3RoZXJz.html",
+    "image": "../public/event-images/013/bC9wcm9ncmFtbWEvMTA4NzkxL3VudG8tb3RoZXJz",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "unto others": {
+        "s": "1W5khHrkcznsyChxwIBfAI",
+        "l": "unto%20others",
+        "g": [
+          "portland metal",
+          "heavy metal",
+          "gothic rock"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-07-04T19:00:00",
     "venueEventUrl": "https://occii.org/events/rj-birthday-bash/",
     "title": "R/j birthday bash! w/ mörser (de) ",
@@ -7176,8 +7753,8 @@
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-soundville-molder-kontusion/",
     "title": "Baroeg On Tour @SoundVille: Molder ",
     "location": "baroeg",
-    "price": null,
-    "shortText": " Kontusion Lomp, ranzig, groovy en vooral heavy death thrash en vuige death metal met een dikke punksaus eroverheen.",
+    "price": 14,
+    "shortText": " Kontusion  +  Gutslasher Lomp, ranzig, groovy en vooral heavy death thrash en vuige death metal met een dikke punksaus eroverheen.",
     "longText": "../public/texts/baroeg/ci1zb3VuZHZpbGxlLW1vbGRlci1rb250dXNpb24v.html",
     "image": "../public/event-images/baroeg/ci1zb3VuZHZpbGxlLW1vbGRlci1rb250dXNpb24v",
     "soldOut": false,
@@ -7220,9 +7797,16 @@
           "progressive metal"
         ]
       },
-      "lomp, ranzig, groovy en vooral heavy death thrash en vuige death met een dikke punksaus eroverheen.": {
+      "gutslasher": {
+        "s": "4isLbcZki5DjdC5C9IcIF9",
+        "l": "gutslasher",
+        "g": [
+          "death metal"
+        ]
+      },
+      "gutslasher lomp, ranzig, groovy en vooral heavy death thrash en vuige death met een dikke punksaus eroverheen.": {
         "s": null,
-        "l": "lomp, ranzig, groovy en vooral heavy death thrash en vuige death met een dikke punksaus eroverheen.",
+        "l": "gutslasher lomp, ranzig, groovy en vooral heavy death thrash en vuige death met een dikke punksaus eroverheen.",
         "g": [
           "death metal"
         ]
@@ -7287,8 +7871,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/daddy-long-legs-support/",
     "title": "Daddy long legs + support",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 12.5,
+    "shortText": "Oh Yes! Super siked onze favo Rhythm & Blues Garage Punx DADDY LONG LEGS uit NYC op VLP 63 te verwelkomen.",
     "longText": "../public/texts/dbs/ZXZlbnQvZGFkZHktbG9uZy1sZWdzLXN1cHBvcnQv.html",
     "image": "../public/event-images/dbs/ZXZlbnQvZGFkZHktbG9uZy1sZWdzLXN1cHBvcnQv",
     "unavailable": false,
@@ -7525,8 +8109,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/pro-pain-usa-legends-of-hardcore-metal/",
     "title": "Pro-pain (usa legends of hardcore metal)",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 21,
+    "shortText": "Zo net voor de grote vakantie pakken we nog weer eens keer uit met de helden van Pro-Pain. Al voor de tweede keer op de nieuwe locatie, ook omdat Gary en de zijnen graag de voortgang willen checken.",
     "longText": "../public/texts/dbs/dXNhLWxlZ2VuZHMtb2YtaGFyZGNvcmUtbWV0YWwv.html",
     "image": "../public/event-images/dbs/dXNhLWxlZ2VuZHMtb2YtaGFyZGNvcmUtbWV0YWwv",
     "unavailable": false,
@@ -7604,8 +8188,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/dbs-tivre-present-battlesnake-aus/",
     "title": "Db’s & tivre present battlesnake (aus)",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 10,
+    "shortText": "TivoliVredenburg & dB’s present BATTLESNAKE!",
     "longText": "../public/texts/dbs/dGl2cmUtcHJlc2VudC1iYXR0bGVzbmFrZS1hdXMv.html",
     "image": "../public/event-images/dbs/dGl2cmUtcHJlc2VudC1iYXR0bGVzbmFrZS1hdXMv",
     "unavailable": false,
@@ -7723,8 +8307,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/zeke/",
     "title": "Zeke",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 12.5,
+    "shortText": "HARDER SNELLER!\nZEKE, GODDAMN ROCK N ROLL!\nLEGENDS!!\nDeze Amerikaanse hardcoreband uit Seattle heeft een motto: They only play raw, fast, and loud. De onbezonnen punk’n’rollers overdonderen met supersnelle riffs, wat resulteert in een onmiskenbaar geluid. Carrièrehoogtepunten zoals ‘Kicked in the Teeth’, ‘Death Alley’, en ‘Til the Livin’ End’ laten zich allemaal kenmerken door de schreeuwzang van “Blind” Marky Felchtone, de krachtige ritmes en de eenvoud van hun nummers.\nTickets op tijd aanschaffen voor deze enige Nederlandse clubshow!",
     "longText": "../public/texts/dbs/Oi8vd3d3LmRic3R1ZGlvLm5sL2V2ZW50L3pla2Uv.html",
     "image": "../public/event-images/dbs/Oi8vd3d3LmRic3R1ZGlvLm5sL2V2ZW50L3pla2Uv",
     "unavailable": false,
@@ -7895,6 +8479,29 @@
     "shortText": "\nMet Machine Head, Papa Roach, Gojira, Apocalyptica, Within Temptation e.v.a.",
     "image": "../public/location-images/wackenduitslandmetmachinehead",
     "location": "wackenduitslandmetmachinehead"
+  },
+  {
+    "door": "2025-08-01T19:00:00",
+    "start": "2025-08-01T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/109382/dogma",
+    "title": "Dogma",
+    "location": "013",
+    "price": 18.3,
+    "shortText": "",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvMTA5MzgyL2RvZ21h.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvMTA5MzgyL2RvZ21h",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "dogma": {
+        "s": "4R6XPuqGShFESRVkCePaxj",
+        "l": "dogma",
+        "g": [
+          "groove metal"
+        ]
+      }
+    }
   },
   {
     "start": "2025-08-03T20:00:00",
@@ -8118,7 +8725,29 @@
     "artists": {}
   },
   {
-    "start": "2025-08-09T19:30:00",
+    "start": "2025-08-08T08:00:00",
+    "end": "2025-08-08T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/dogma/",
+    "title": "Dogma",
+    "location": "dbs",
+    "price": 15,
+    "shortText": "Religie? Cult? Wat het ook precies mag zijn, mysterieus is het wel, deze all female rock band die flirt met alle wetten. Vermomd als kwaadaardige nonnen maken deze vrouwen classic harde rock (hoewel de laatste single van Dogma dan weer flirt met tango) met een heel theatrale inslag. Denk aan een all female versie van KISS, of Alice Cooper maar dan anders.\nWie ze precies zijn en waar ze vandaan komen is onbekend maar DOGMA – Lilith, Lamia, Nixe, Rusalka en Abrahel – is vastbesloten de wereld te veroveren met hun explosieve mix van theatrale rock, zware riffs en provocerende teksten. En dat lukt tot nog toe vrij goed getuige de immense following die ze hebben opgebouwd.\nHeel benieuwd hoe dit live bij ons op het podium uit de verf gaat komen. DOGMA gaat uiteindelijk een stadionrockband worden met een goedkeurende Madonna in de VIP seat die meehumt met DOGMA’s versie van Like a Prayer.\nFEMALE POWER!",
+    "longText": "../public/texts/dbs/Ly93d3cuZGJzdHVkaW8ubmwvZXZlbnQvZG9nbWEv.html",
+    "image": "../public/event-images/dbs/Ly93d3cuZGJzdHVkaW8ubmwvZXZlbnQvZG9nbWEv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "dogma": {
+        "s": "4R6XPuqGShFESRVkCePaxj",
+        "l": "dogma",
+        "g": [
+          "groove metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-08-09T19:00:00",
     "end": "2025-08-09T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/wednesday-13-09-08-2025/",
     "title": "Wednesday 13",
@@ -8135,6 +8764,75 @@
         "g": [
           "horror punk",
           "industrial metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-11T20:00:00",
+    "start": "2025-08-11T20:30:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/inter-arma-1/",
+    "title": "Inter Arma + Wayfarer",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "metal, black metal, doom metal, sludge metal, doornroosjepas",
+    "longText": "../public/texts/doornroosje/bnJvb3NqZS5ubC9ldmVudC9pbnRlci1hcm1hLTEv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/04/Inter-Arma-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "farer": {
+        "s": "529WaKnDwThqAtgOLNjwMp",
+        "l": "farer",
+        "g": [
+          "atmospheric sludge",
+          "post-metal"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-08-11T19:00:00",
+    "end": "2025-08-11T23:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/the-fall-of-troy-11-08-2025/",
+    "title": "The Fall Of Troy",
+    "location": "dehelling",
+    "price": 25.2,
+    "shortText": "Posthardcore-legendes vieren twintig jaar Doppelgänger",
+    "longText": "../public/texts/dehelling/YS90aGUtZmFsbC1vZi10cm95LTExLTA4LTIwMjUv.html",
+    "image": "../public/event-images/dehelling/YS90aGUtZmFsbC1vZi10cm95LTExLTA4LTIwMjUv",
+    "eventGenres": null,
+    "artists": {
+      "the fall of troy": {
+        "s": "5fuqrhmrymtoo9uolfad4p",
+        "l": "the%20fall%20of%20troy",
+        "g": [
+          "post-hardcore",
+          "progressive post-hardcore",
+          "screamo",
+          "swancore"
+        ]
+      },
+      "fall": {
+        "s": null,
+        "l": "fall",
+        "g": [
+          "death metal"
         ]
       }
     }
@@ -8419,12 +9117,95 @@
     }
   },
   {
+    "door": "2025-08-15T21:00:00",
+    "start": "2025-08-15T22:00:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/rezn/",
+    "title": "Rezn",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "metal, doom metal, space metal",
+    "longText": "../public/texts/doornroosje/d3d3LmRvb3Jucm9vc2plLm5sL2V2ZW50L3Jlem4v.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/02/REZN-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      },
+      "rezn": {
+        "s": "3pDqLo5LnCyCBxhKZygkfK",
+        "l": "rezn",
+        "g": [
+          "sludge metal",
+          "stoner rock",
+          "doom metal",
+          "space rock",
+          "psychedelic doom",
+          "stoner metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-16T19:30:00",
+    "start": "2025-08-16T20:00:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/the-browning/",
+    "title": "The Browning",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "+ Polar + The Defectmetal, metalcore, deathcore, electronicore",
+    "longText": "../public/texts/doornroosje/bnJvb3NqZS5ubC9ldmVudC90aGUtYnJvd25pbmcv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/03/The-Browning-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      },
+      "the browning": {
+        "s": "4DSNcg40nf6T3eNAObq1Lo",
+        "l": "the%20browning",
+        "g": [
+          "deathcore",
+          "metalcore",
+          "deathstep",
+          "metal",
+          "djent"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-08-21T19:00:00",
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-roodkapje-riffsniffer-presents-atomic-bitchwax-bismut/",
     "title": "Baroeg On Tour @Roodkapje: Riffsniffer presents: The Atomic Bitchwax ",
     "location": "baroeg",
-    "price": null,
-    "shortText": " Bismut FFO: Monster Magnet, Desert Queen, My Sleeping Karma",
+    "price": 14,
+    "shortText": " Bismut FFO: Monster Magnet, Desert Queen, My Sleeping Karma.",
     "longText": "../public/texts/baroeg/ZXNlbnRzLWF0b21pYy1iaXRjaHdheC1iaXNtdXQv.html",
     "image": "../public/event-images/baroeg/ZXNlbnRzLWF0b21pYy1iaXRjaHdheC1iaXNtdXQv",
     "soldOut": false,
@@ -8460,9 +9241,9 @@
           "stoner rock"
         ]
       },
-      "ffo: , desert queen, my sleeping karma": {
+      "ffo: , desert queen, my sleeping karma.": {
         "s": null,
-        "l": "ffo: , desert queen, my sleeping karma",
+        "l": "ffo: , desert queen, my sleeping karma.",
         "g": [
           "stoner rock"
         ]
@@ -8652,6 +9433,162 @@
     }
   },
   {
+    "door": "2025-08-27T19:00:00",
+    "start": "2025-08-27T20:30:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering-11/",
+    "title": "The Gathering",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "Final extra showrock, progressieve rock, metal, symfonische metal",
+    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L3RoZS1nYXRoZXJpbmctMTEv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/12/The-Gathering-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "the gathering": {
+        "s": "2kO6zjt4a1OIqxOERhliEX",
+        "l": "the%20gathering",
+        "g": [
+          "atmospheric doom",
+          "dutch metal",
+          "gothic metal",
+          "gothic symphonic metal",
+          "symphonic metal",
+          "death",
+          "doom metal, atmospheric doom metal (early)",
+          " atmospheric rock (later)"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-28T19:00:00",
+    "start": "2025-08-28T20:30:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering-10/",
+    "title": "The Gathering",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "Extra showrock, progressieve rock, metal, symfonische metal",
+    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L3RoZS1nYXRoZXJpbmctMTAv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/12/The-Gathering-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "the gathering": {
+        "s": "2kO6zjt4a1OIqxOERhliEX",
+        "l": "the%20gathering",
+        "g": [
+          "atmospheric doom",
+          "dutch metal",
+          "gothic metal",
+          "gothic symphonic metal",
+          "symphonic metal",
+          "death",
+          "doom metal, atmospheric doom metal (early)",
+          " atmospheric rock (later)"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-31T19:00:00",
+    "start": "2025-08-31T20:30:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering-9/",
+    "title": "The Gathering",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "Extra showrock, progressieve rock, metal, symfonische metal",
+    "longText": "../public/texts/doornroosje/b3NqZS5ubC9ldmVudC90aGUtZ2F0aGVyaW5nLTkv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/12/The-Gathering-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "the gathering": {
+        "s": "2kO6zjt4a1OIqxOERhliEX",
+        "l": "the%20gathering",
+        "g": [
+          "atmospheric doom",
+          "dutch metal",
+          "gothic metal",
+          "gothic symphonic metal",
+          "symphonic metal",
+          "death",
+          "doom metal, atmospheric doom metal (early)",
+          " atmospheric rock (later)"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-09-05T19:30:00",
     "start": "2025-09-05T20:00:00",
     "venueEventUrl": "https://patronaat.nl/event/black-lips-support-05-09-25/",
@@ -8698,6 +9635,20 @@
         ]
       }
     }
+  },
+  {
+    "start": "2025-09-05T08:00:00",
+    "end": "2025-09-05T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/the-courettes/",
+    "title": "The fabulous courettes",
+    "location": "dbs",
+    "price": 12.5,
+    "shortText": "Het opwindendste garage/soul/rock duo van nu komt naar de nieuwe dB’s. The Courettes leerden we kennen tijdens Covid toen zij als een van de weinige bands maar door bleven rocken, overal waar men ze maar wilde hebben. Nu, anno 2025, zijn Flavia en Martin tig singles en 4 langspelers verder op fraaie labels als Sounds of Subterrania en vooral Damaged Goods, en dat mag een wonder heten want dit echtpaar speelt al jaren ruim 200 optredens per jaar overal ter wereld. Nu weer terug bij dB’s, op VLP 63 dit keer.",
+    "longText": "../public/texts/dbs/c3R1ZGlvLm5sL2V2ZW50L3RoZS1jb3VyZXR0ZXMv.html",
+    "image": "../public/event-images/dbs/c3R1ZGlvLm5sL2V2ZW50L3RoZS1jb3VyZXR0ZXMv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "start": "2025-09-08T19:00:00",
@@ -8781,6 +9732,48 @@
           "scottish metal",
           "uk metalcore",
           "metalcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-09-11T21:00:00",
+    "start": "2025-09-11T22:00:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/bong-ra/",
+    "title": "Bong-Ra",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "metal, breakcore",
+    "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L2JvbmctcmEv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/02/Bong-ra-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "bong-ra": {
+        "s": "6dD5LzTwdYS3gRvRSCOIVP",
+        "l": "bong-ra",
+        "g": [
+          "breakcore",
+          "dutch dnb",
+          "breakcore",
+          "electronic (early)",
+          " experimental stoner",
+          "doom metal (later)"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
         ]
       }
     }
@@ -8932,7 +9925,7 @@
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-open-air-2025/",
     "title": "Baroeg Open Air 2025",
     "location": "baroeg",
-    "price": null,
+    "price": 12.5,
     "shortText": "Zaterdag 13 september 2025 vindt de zestiende editie van Baroeg Open Air plaats in het Rotterdamse Zuiderpark.",
     "longText": "../public/texts/baroeg/cm9kdWN0aWUvYmFyb2VnLW9wZW4tYWlyLTIwMjUv.html",
     "image": "../public/event-images/baroeg/cm9kdWN0aWUvYmFyb2VnLW9wZW4tYWlyLTIwMjUv",
@@ -8981,15 +9974,37 @@
     }
   },
   {
-    "door": "2025-09-13T19:00:00",
-    "start": "2025-09-13T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/94529/ayreon",
+    "start": "2025-09-13T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/jacks-world-series-of-darts-finals-4",
+    "title": "Jack's world series of darts finals\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t13:00",
+    "location": "afaslive",
+    "price": 12,
+    "shortText": "  undefined",
+    "longText": "../public/texts/afaslive/d29ybGQtc2VyaWVzLW9mLWRhcnRzLWZpbmFscy00.html",
+    "image": "../public/event-images/afaslive/d29ybGQtc2VyaWVzLW9mLWRhcnRzLWZpbmFscy00",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "13:00": {
+        "s": null,
+        "l": "13:00",
+        "g": [
+          "technical death metal",
+          "deathcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-09-13T12:30:00",
+    "start": "2025-09-13T12:30:00",
+    "venueEventUrl": "https://www.013.nl/programma/94540/ayreon",
     "title": "Ayreon",
     "location": "013",
     "price": 75,
-    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #3",
-    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1MjkvYXlyZW9u.html",
-    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1MjkvYXlyZW9u",
+    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #2 (MATINEE)",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDAvYXlyZW9u.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDAvYXlyZW9u",
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
@@ -9010,15 +10025,15 @@
     }
   },
   {
-    "door": "2025-09-13T12:30:00",
-    "start": "2025-09-13T12:30:00",
-    "venueEventUrl": "https://www.013.nl/programma/94540/ayreon",
+    "door": "2025-09-13T19:00:00",
+    "start": "2025-09-13T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/94529/ayreon",
     "title": "Ayreon",
     "location": "013",
     "price": 75,
-    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #2 (MATINEE)",
-    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDAvYXlyZW9u.html",
-    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDAvYXlyZW9u",
+    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #3",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1MjkvYXlyZW9u.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1MjkvYXlyZW9u",
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
@@ -9064,15 +10079,37 @@
     }
   },
   {
-    "door": "2025-09-14T12:30:00",
-    "start": "2025-09-14T12:30:00",
-    "venueEventUrl": "https://www.013.nl/programma/94545/ayreon",
+    "start": "2025-09-14T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/jacks-world-series-of-darts-finals-4",
+    "title": "Jack's world series of darts finals\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t13:00",
+    "location": "afaslive",
+    "price": 12,
+    "shortText": "  undefined",
+    "longText": "../public/texts/afaslive/d29ybGQtc2VyaWVzLW9mLWRhcnRzLWZpbmFscy00.html",
+    "image": "../public/event-images/afaslive/d29ybGQtc2VyaWVzLW9mLWRhcnRzLWZpbmFscy00",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "13:00": {
+        "s": null,
+        "l": "13:00",
+        "g": [
+          "technical death metal",
+          "deathcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-09-14T19:00:00",
+    "start": "2025-09-14T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/94548/ayreon",
     "title": "Ayreon",
     "location": "013",
     "price": 75,
-    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #4 (MATINEE)",
-    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDUvYXlyZW9u.html",
-    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDUvYXlyZW9u",
+    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #5",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDgvYXlyZW9u.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDgvYXlyZW9u",
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
@@ -9093,15 +10130,15 @@
     }
   },
   {
-    "door": "2025-09-14T19:00:00",
-    "start": "2025-09-14T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/94548/ayreon",
+    "door": "2025-09-14T12:30:00",
+    "start": "2025-09-14T12:30:00",
+    "venueEventUrl": "https://www.013.nl/programma/94545/ayreon",
     "title": "Ayreon",
     "location": "013",
     "price": 75,
-    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #5",
-    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDgvYXlyZW9u.html",
-    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDgvYXlyZW9u",
+    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #4 (MATINEE)",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDUvYXlyZW9u.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDUvYXlyZW9u",
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
@@ -9273,7 +10310,7 @@
     }
   },
   {
-    "start": "2025-09-25T19:30:00",
+    "start": "2025-09-25T19:00:00",
     "end": "2025-09-25T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/wolfheart-25-09-2025/",
     "title": "Wolfheart",
@@ -9293,6 +10330,29 @@
           "finnish metal",
           "melodic death metal",
           "melodic death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-09-25T19:00:00",
+    "start": "2025-09-25T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/109593/better-lovers",
+    "title": "Better Lovers",
+    "location": "013",
+    "price": 28.3,
+    "shortText": "",
+    "longText": "../public/texts/013/cHJvZ3JhbW1hLzEwOTU5My9iZXR0ZXItbG92ZXJz.html",
+    "image": "../public/event-images/013/cHJvZ3JhbW1hLzEwOTU5My9iZXR0ZXItbG92ZXJz",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "better lovers": {
+        "s": "3mStoA23qANDeMqHi2oqze",
+        "l": "better%20lovers",
+        "g": [
+          "metalcore"
         ]
       }
     }
@@ -9350,7 +10410,7 @@
     "location": "sounddog"
   },
   {
-    "start": "2025-09-28T19:30:00",
+    "start": "2025-09-28T19:00:00",
     "end": "2025-09-28T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/night-verses-28-09-2025/",
     "title": "Night Verses",
@@ -9424,6 +10484,44 @@
           "black metal",
           "pirate metal",
           "viking",
+          "black metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-10-02T08:00:00",
+    "end": "2025-10-02T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/the-lets-gos-japan/",
+    "title": "The let’s go’s (japan)",
+    "location": "dbs",
+    "price": 13.5,
+    "shortText": "Japan, Punk ‘n Roll en drie meiden, dat kan niet fout gaan, enter THE LET’S GO’S uit Tokyo.",
+    "longText": "../public/texts/dbs/by5ubC9ldmVudC90aGUtbGV0cy1nb3MtamFwYW4v.html",
+    "image": "../public/event-images/dbs/by5ubC9ldmVudC90aGUtbGV0cy1nb3MtamFwYW4v",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-10-02T19:00:00",
+    "start": "2025-10-02T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/109526/der-weg-einer-freiheit",
+    "title": "Der Weg Einer Freiheit",
+    "location": "013",
+    "price": 29.3,
+    "shortText": "",
+    "longText": "../public/texts/013/LzEwOTUyNi9kZXItd2VnLWVpbmVyLWZyZWloZWl0.html",
+    "image": "../public/event-images/013/LzEwOTUyNi9kZXItd2VnLWVpbmVyLWZyZWloZWl0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "der weg einer freiheit": {
+        "s": "7e823b0KQoVtLG86Ui5xGD",
+        "l": "der%20weg%20einer%20freiheit",
+        "g": [
+          "black metal",
           "black metal"
         ]
       }
@@ -9894,6 +10992,36 @@
     "location": "trix"
   },
   {
+    "door": "2025-10-16T21:00:00",
+    "start": "2025-10-16T22:00:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/texoprint/",
+    "title": "Texoprint",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "rock, noise rock",
+    "longText": "../public/texts/doornroosje/b29ybnJvb3NqZS5ubC9ldmVudC90ZXhvcHJpbnQv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/03/Texoprint-WEB-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "texoprint": {
+        "s": "3Crxw3x5GQwDrhY51BNcMi",
+        "l": "texoprint",
+        "g": [
+          "dutch post-punk"
+        ]
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
     "title": "The Rock Circus",
     "start": "2025-10-17",
     "eventLocationName": "brabanthallen",
@@ -9902,13 +11030,50 @@
     "location": "brabanthallen"
   },
   {
+    "door": "2025-10-17T19:15:00",
+    "start": "2025-10-17T20:15:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/floor-jansen-2/",
+    "title": "Floor Jansen",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "pop, symphonic metal, power metal",
+    "longText": "../public/texts/doornroosje/b29zamUubmwvZXZlbnQvZmxvb3ItamFuc2VuLTIv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/10/Floor-Jansen-WEB-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "floor jansen": {
+        "s": "2zntj9bu9qmjwbbomspqgj",
+        "l": "floor%20jansen",
+        "g": [
+          "hel"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-10-17T08:00:00",
     "end": "2025-10-17T11:00:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/boppin-the-rock-presents-t-99-bacon-fat-louis/",
     "title": "Boppin’ the Rock presents T-99 ",
     "location": "dbs",
-    "price": "0",
-    "shortText": " Bacon Fat Louis ",
+    "price": 15,
+    "shortText": " Bacon Fat Louis In de Nederlandse roots rock scene kan er maar een de grootste zijn en dat is T-99!\nT-99 is 26 YEARS OF ROOTS ‘N’ ROLL maar ook BLUES, COUNTRY, ROCKABILLY, SURF en verkoop je SOUL maar aan de duivel-muziek. Echte liedjes voor echte mensen vakkundig gebracht door maestro’s Mischa den Haring, Martin de Ruiter en Donné la Fontaine, drie wilde rock-‘n-roll-vrijbuiters met groots grommende gitaren, roffelbeukende drums, pets-kets contrabas en dubbelloops vocalen.\nToonaangevend muziektijdschrift OOR schreef ooit : “T-99 is de meest opwindende en vernieuwende rootsband van Nederland en ver daarbuiten” -en dat citaat hoeft nog steeds niet te worden bijgesteld.  Ga ze live zien. Want op het podium begint T-99 pas echt te glimmen. Daar rocken ze, daar ratelen ze, daar rollen ze, daar schudden en swingen ze. Daar komen die drie bastaardzonen van de blues tot leven alsof de duivel ze op de hielen zit. En zetten ze elke zaal, elke club, elk café, elk gat en elke stad in vuur en vlam zoals Jerry Lee ooit zijn piano. En als je ze live hebt gezien, weet je het voor altijd. Je zult bekeerd worden, een fan voor het leven.",
     "longText": "../public/texts/dbs/cHJlc2VudHMtdC05OS1iYWNvbi1mYXQtbG91aXMv.html",
     "image": "../public/event-images/dbs/cHJlc2VudHMtdC05OS1iYWNvbi1mYXQtbG91aXMv",
     "unavailable": false,
@@ -9920,6 +11085,30 @@
         "g": [
           "heavy metal",
           "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-10-17T19:30:00",
+    "start": "2025-10-17T20:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/hesken-anapoda-hyla",
+    "title": "Hesken + anapoda + hyla",
+    "location": "cpunt",
+    "price": 8,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/Lm5sL2FnZW5kYS9oZXNrZW4tYW5hcG9kYS1oeWxh.html",
+    "image": "../public/event-images/cpunt/Lm5sL2FnZW5kYS9oZXNrZW4tYW5hcG9kYS1oeWxh",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "hesken": {
+        "s": "46uzkpA27zK6u3rGOqtyg2",
+        "l": "hesken",
+        "g": [
+          "progressive metal",
+          "progressive metal"
         ]
       }
     }
@@ -9962,7 +11151,7 @@
     "shortText": "Helloween 40 Years Anniversary Tour",
     "longText": "../public/texts/013/OTY5MDUvaGVsbG93ZWVuLWJlYXN0LWluLWJsYWNr.html",
     "image": "../public/event-images/013/OTY5MDUvaGVsbG93ZWVuLWJlYXN0LWluLWJsYWNr",
-    "soldOut": false,
+    "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
@@ -10084,10 +11273,9 @@
     "door": "2025-10-20T20:00:00",
     "start": "2025-10-20T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/one-ok-rock",
-    "title": "One ok rock\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t nieuw",
+    "title": "One ok rock",
     "location": "afaslive",
     "price": 20,
-    "shortText": "  undefined",
     "longText": "../public/texts/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL29uZS1vay1yb2Nr.html",
     "image": "../public/event-images/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL29uZS1vay1yb2Nr",
     "soldOut": false,
@@ -10201,8 +11389,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/the-big-4-of-metal/",
     "title": "The big 4 of metal",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 17.5,
+    "shortText": "Aangezien je dit in het echt niet mee gaat maken doen we eens gek en zetten THE BIG 4 IN METAL op een podium als uitgevoerd door vier van de beste metal tribute bands.",
     "longText": "../public/texts/dbs/by5ubC9ldmVudC90aGUtYmlnLTQtb2YtbWV0YWwv.html",
     "image": "../public/event-images/dbs/by5ubC9ldmVudC90aGUtYmlnLTQtb2YtbWV0YWwv",
     "unavailable": false,
@@ -10516,6 +11704,20 @@
     }
   },
   {
+    "start": "2025-11-01T08:00:00",
+    "end": "2025-11-01T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/dub-pistols-uk/",
+    "title": "Dub pistols (uk)",
+    "location": "dbs",
+    "price": 20,
+    "shortText": "Fantastische liveband en een garantie voor a big party!\nDub Pistols bestaat ruim 25 jaar en heeft in die tijd een unieke sound ontwikkelt met invloeden uit dub, punk, jungle, ska, breakbeat, hip-hop, jungle en nog veel meer.",
+    "longText": "../public/texts/dbs/dHVkaW8ubmwvZXZlbnQvZHViLXBpc3RvbHMtdWsv.html",
+    "image": "../public/event-images/dbs/dHVkaW8ubmwvZXZlbnQvZHViLXBpc3RvbHMtdWsv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "title": "Battle Beast, Dominum en Majestica",
     "start": "2025-11-02",
     "eventLocationName": "trix",
@@ -10655,6 +11857,49 @@
     }
   },
   {
+    "door": "2025-11-06T19:00:00",
+    "start": "2025-11-06T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/107971/king-gizzard-the-lizard-wizard",
+    "title": "King Gizzard & The Lizard Wizard",
+    "location": "013",
+    "price": 53.8,
+    "shortText": "Rave set",
+    "longText": "../public/texts/013/a2luZy1naXp6YXJkLXRoZS1saXphcmQtd2l6YXJk.html",
+    "image": "../public/event-images/013/a2luZy1naXp6YXJkLXRoZS1saXphcmQtd2l6YXJk",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "king gizzard & the lizard wizard": {
+        "s": "6xyvaodge0vmrt83jss9sn",
+        "l": "king%20gizzard%20&%20the%20lizard%20wizard",
+        "g": [
+          "australian psych",
+          "double drumming",
+          "microtonal",
+          "neo-psychedelic"
+        ]
+      },
+      "the lizard wizard": {
+        "s": null,
+        "l": "czechia",
+        "g": [
+          "progressive death metal/grindcore"
+        ]
+      },
+      "king gizzard": {
+        "s": "6xyvaodge0vmrt83jss9sn",
+        "l": "king%20gizzard",
+        "g": [
+          "australian psych",
+          "double drumming",
+          "microtonal",
+          "neo-psychedelic"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-11-07T19:30:00",
     "venueEventUrl": "https://neushoorn.nl/production/the-perfect-tool/",
     "title": "The Perfect Tool",
@@ -10673,6 +11918,20 @@
         "g": []
       }
     }
+  },
+  {
+    "door": "2025-11-07T20:00:00",
+    "start": "2025-11-07T21:00:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/eskorzo-2/",
+    "title": "Eskorzo",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "punk, cumbia, afro, gypsy",
+    "longText": "../public/texts/doornroosje/b29ybnJvb3NqZS5ubC9ldmVudC9lc2tvcnpvLTIv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/01/ESKORZO-WEB-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "door": "2025-11-07T19:00:00",
@@ -10720,6 +11979,27 @@
       "pene corrida": {
         "s": "1hw2ywipnsowbtb8flzcca",
         "l": "pene%20corrida",
+        "g": []
+      }
+    }
+  },
+  {
+    "door": "2025-11-09T19:30:00",
+    "start": "2025-11-09T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/the-perfect-tool",
+    "title": "The Perfect Tool",
+    "location": "cpunt",
+    "price": 23,
+    "shortText": "Tribute to 35 Years of Tool",
+    "longText": "../public/texts/cpunt/dW50Lm5sL2FnZW5kYS90aGUtcGVyZmVjdC10b29s.html",
+    "image": "../public/event-images/cpunt/dW50Lm5sL2FnZW5kYS90aGUtcGVyZmVjdC10b29s",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the perfect tool": {
+        "s": null,
+        "l": "the%20perfect%20tool",
         "g": []
       }
     }
@@ -10781,6 +12061,51 @@
           "post-rock",
           "math rock",
           "sludge metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-11-14T19:00:00",
+    "start": "2025-11-14T19:30:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/lacuna-coil/",
+    "title": "Lacuna Coil",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "+ Nonpointmetal, symfonische metal",
+    "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvbGFjdW5hLWNvaWwv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/01/Lacuna-Coil-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "lacuna coil": {
+        "s": "4OAddazJM576euUnFSvXSL",
+        "l": "lacuna%20coil",
+        "g": [
+          "gothic metal",
+          "symphonic metal",
+          "metal",
+          "symphonic rock",
+          "melodic metal",
+          "gothic metal",
+          "rock (early)",
+          " alternative rock",
+          "metal (later)"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
         ]
       }
     }
@@ -10959,6 +12284,55 @@
     }
   },
   {
+    "door": "2025-11-26T19:00:00",
+    "start": "2025-11-26T19:30:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/perturbator/",
+    "title": "Perturbator",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "+ Kælan Mikla + GOSTmetal, synth wave, electro",
+    "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvcGVydHVyYmF0b3Iv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2025/01/Perturbator-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "perturbator": {
+        "s": "244ulu9lkdw39bjwlul3k8",
+        "l": "perturbator",
+        "g": [
+          "cyberpunk",
+          "darksynth",
+          "synthwave"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      },
+      "kælan mikla": {
+        "s": "28meEMqGpDrolyQ9OVoDAH",
+        "l": "k%C3%A6lan%20mikla",
+        "g": [
+          "darkwave",
+          "cold wave",
+          "post-punk",
+          "deathrock"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-11-28T19:30:00",
     "start": "2025-11-28T20:45:00",
     "venueEventUrl": "https://www.podiumvictorie.nl/programma/acindc",
@@ -11027,6 +12401,72 @@
     }
   },
   {
+    "start": "2025-11-29T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-grounds-wavefest-presents-clan-of-xymox-the-essence-desinteresse/",
+    "title": "Baroeg On Tour @Grounds: Wavefest presents: Clan Of Xymox ",
+    "location": "baroeg",
+    "price": 25,
+    "shortText": " The Essence  +  Desinteresse Deze zaterdag vindt Wavefest plaats in Grounds, Rotterdam. Drie bekende namen uit de Nederlandse new…",
+    "longText": "../public/texts/baroeg/eW1veC10aGUtZXNzZW5jZS1kZXNpbnRlcmVzc2Uv.html",
+    "image": "../public/event-images/baroeg/eW1veC10aGUtZXNzZW5jZS1kZXNpbnRlcmVzc2Uv",
+    "soldOut": false,
+    "eventGenres": [
+      "coldwave",
+      "darkwave",
+      "new wave"
+    ],
+    "artists": {
+      "clan of xymox": {
+        "s": "1whmr7i0ulf58wfqexcpha",
+        "l": "clan%20of%20xymox",
+        "g": [
+          "dark wave",
+          "dream pop",
+          "ethereal wave",
+          "gothic rock"
+        ]
+      },
+      "desinteresse": {
+        "s": "6QEEO0dNssjo13FijeT1W9",
+        "l": "desinteresse",
+        "g": [
+          "dutch post-punk",
+          "darkwave",
+          "new wave",
+          "post-punk"
+        ]
+      },
+      "ater": {
+        "s": "1HpPzWF2E6G8KfD5pOM6La",
+        "l": "ater",
+        "g": [
+          "djent",
+          "black metal",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
+        ]
+      },
+      "the essence": {
+        "s": "5PFghO8MtdLDK3sWS9MU33",
+        "l": "the%20essence",
+        "g": [
+          "post-punk",
+          "deathrock",
+          "darkwave",
+          "new wave",
+          "cold wave",
+          "technical",
+          "melodic death metal",
+          "coldwave",
+          "darkwave",
+          "new wave"
+        ]
+      }
+    }
+  },
+  {
     "title": "Sabaton",
     "start": "2025-12-01",
     "eventLocationName": "ziggo dome",
@@ -11061,7 +12501,7 @@
     "venueEventUrl": "https://bibelot.net/programma/acindc/",
     "title": "Acindc",
     "location": "bibelot",
-    "price": 2025,
+    "price": 0,
     "longText": "../public/texts/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS9hY2luZGMv.html",
     "image": "../public/event-images/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS9hY2luZGMv",
     "soldOut": false,
@@ -11075,6 +12515,31 @@
         "l": "acindc",
         "g": [
           "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-12-05T19:00:00",
+    "start": "2025-12-05T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/108757/ice-nine-kills",
+    "title": "Ice Nine Kills",
+    "location": "013",
+    "price": 43.8,
+    "shortText": "",
+    "longText": "../public/texts/013/cm9ncmFtbWEvMTA4NzU3L2ljZS1uaW5lLWtpbGxz.html",
+    "image": "../public/event-images/013/cm9ncmFtbWEvMTA4NzU3L2ljZS1uaW5lLWtpbGxz",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ice nine kills": {
+        "s": "52qKfVcIV4GS8A8Vay2xtt",
+        "l": "ice%20nine%20kills",
+        "g": [
+          "metalcore",
+          "metal",
+          "post-hardcore"
         ]
       }
     }
@@ -11321,7 +12786,7 @@
     "venueEventUrl": "https://bibelot.net/programma/pene-corrida-the-penergy-tour/",
     "title": "Pene Corrida – The Penergy Tour",
     "location": "bibelot",
-    "price": 20,
+    "price": 0,
     "longText": "../public/texts/bibelot/cGVuZS1jb3JyaWRhLXRoZS1wZW5lcmd5LXRvdXIv.html",
     "image": "../public/event-images/bibelot/cGVuZS1jb3JyaWRhLXRoZS1wZW5lcmd5LXRvdXIv",
     "soldOut": false,
@@ -11372,6 +12837,68 @@
     "shortText": "RTM Stage, Rotterdam",
     "image": "../public/location-images/rtmstage",
     "location": "rtmstage"
+  },
+  {
+    "door": "2026-02-06T19:00:00",
+    "start": "2026-02-06T19:30:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/beyond-the-black/",
+    "title": "Beyond the Black",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "metal, symfonische metal",
+    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L2JleW9uZC10aGUtYmxhY2sv.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2024/12/Beyond-the-Black-web-1200x630.jpg",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "beyond the black": {
+        "s": "6swnqil41bd4go2fnaxxrf",
+        "l": "beyond%20the%20black",
+        "g": [
+          "gothic symphonic metal",
+          "slayer",
+          "symphonic metal"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2026-02-06T20:00:00",
+    "start": "2026-02-06T20:45:00",
+    "venueEventUrl": "https://bibelot.net/programma/ronnie-james-dio-the-memorial-concert/",
+    "title": "Ronnie James Dio: The Memorial Concert",
+    "location": "bibelot",
+    "price": 2026,
+    "longText": "../public/texts/bibelot/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv.html",
+    "image": "../public/event-images/bibelot/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal "
+    ],
+    "artists": {
+      "the memorial concert": {
+        "s": null,
+        "l": "the%20memorial%20concert",
+        "g": [
+          "metal "
+        ]
+      }
+    }
   },
   {
     "title": "Epica, Amaranthe en Charlotte Wessels",

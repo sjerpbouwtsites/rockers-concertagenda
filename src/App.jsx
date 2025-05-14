@@ -14,6 +14,7 @@ import "./styles/open-screen.css";
 import "./styles/flickety.css";
 import EventBlocks from "./mods/EventBlocks.jsx";
 import OpenScreen from "./mods/OpenScreen.jsx";
+import { filterEventsDateInPast } from "./mods/util.js";
 
 class App extends React.Component {
     title = "Rock Agenda";
@@ -115,7 +116,7 @@ class App extends React.Component {
         const getMusicEvents = fetch("./events-list.json", {})
             .then((response) => response.json())
             .then((musicEvents) => {
-                return musicEvents;
+                return musicEvents.filter(filterEventsDateInPast);
             });
 
         return await Promise.all([getLocations, getMusicEvents])

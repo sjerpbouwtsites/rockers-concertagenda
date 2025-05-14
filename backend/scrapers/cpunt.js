@@ -148,6 +148,15 @@ scraper.singlePage = async function ({ page, event }) {
         timeout: 7500
     });
 
+    // cookie accept voor iframes
+    await page.evaluate(() => {
+        const b = document.querySelector(
+            "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"
+        );
+        if (!b) return;
+        b.click();
+    });
+
     let pageInfo = await page.evaluate(
         // eslint-disable-next-line no-shadow
         ({ months, event }) => {

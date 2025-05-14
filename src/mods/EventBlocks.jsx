@@ -1,5 +1,5 @@
 import React from "react";
-import { BEMify, filterEventsDateInPast, waitFor } from "./util.js";
+import { BEMify, waitFor } from "./util.js";
 import closeIcon from "../images/close.png";
 import LoadmoreButton from "./LoadmoreButton.jsx";
 
@@ -11,14 +11,14 @@ class EventBlocks extends React.Component {
         this.state = {
             filteredMusicEvents: [],
             eventDataLoading: false,
-            eventDataLoaded: false,
             filterHideSoldOut: false,
             sendDataUp: false,
             firstFilteringDone: false,
-            lastRegionFilter: ["all"]
+            lastRegionFilter: ["all"],
+            maxEventsShown: 100
         };
         this.currentYear = new Date().getFullYear();
-        this.maxEventsShown = 100;
+
         this.musicEventsLength = null;
         this.createLocationHTML = this.createLocationHTML.bind(this);
         this.createDates = this.createDates.bind(this);
@@ -468,12 +468,14 @@ ${BEMify("event-block", [
 
     add100ToMaxEventsShown() {
         console.log(`add 100 to max events shown draait`);
-
-        let newMax = this.maxEventsShown + 100;
+        const { maxEventsShown } = this.state;
+        let newMax = maxEventsShown + 100;
         if (newMax > this.musicEventsLength) {
             newMax = this.musicEventsLength;
         }
-        this.maxEventsShown = newMax;
+        this.setState({
+            maxEventsShown: newMax
+        });
     }
 
     async musicEventFilters() {
@@ -603,17 +605,14 @@ ${BEMify("event-block", [
     }
     render() {
         const { hasFetchedData } = this.props;
+        const { maxEventsShown } = this.state;
         if (!hasFetchedData) return "";
 
         const enlargedClassAddition = this.someEventIsEnlarged()
             ? "some-event-is-enlarged"
             : "nothing-is-enlarged";
-        const {
-            eventDataLoading,
-            filterHideSoldOut,
-            filteredMusicEvents,
-            eventDataLoaded
-        } = this.state;
+        const { eventDataLoading, filterHideSoldOut, filteredMusicEvents } =
+            this.state;
 
         if (!filteredMusicEvents.length) {
             return "";
@@ -633,7 +632,7 @@ ${BEMify("event-block", [
                 {
                     printThis
                         .filter((musicEvent, index) => {
-                            if (index + 1 > this.maxEventsShown) return false;
+                            if (index + 1 > maxEventsShown) return false;
                             return true;
                         })
                         .map((musicEvent, musicEventKey) => {
@@ -771,8 +770,8 @@ ${BEMify("event-block", [
                 }
                 <LoadmoreButton
                     musicEventsLength={mel}
-                    maxEventsShown={this.maxEventsShown}
-                    eventDataLoaded={eventDataLoaded}
+                    maxEventsShown={maxEventsShown}
+                    eventDataLoaded={!eventDataLoading}
                     add100ToMaxEventsShown={this.add100ToMaxEventsShown}
                 />
             </div>

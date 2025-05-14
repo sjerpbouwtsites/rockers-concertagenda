@@ -5,7 +5,7 @@ import { printLocationsToPublic } from "./mods/locations.js";
 import initMonitorBackend from "./monitor/backend.js";
 import RockWorker from "./mods/rock-worker.js";
 import getWorkerConfig from "./mods/worker-config.js";
-import houseKeeping from "./housekeeping.js";
+import HouseKeeping from "./housekeeping.js";
 import Artists from "./artist-db/models/artists.js";
 import fsDirections from "./mods/fs-directions.js";
 import doeOnderhoudAanArtistDB from "./artist-db/models/onderhoud.js";
@@ -138,11 +138,11 @@ async function checkSinglePageCacheExistsRecursive(familyNames) {
 }
 
 async function init() {
+    new HouseKeeping().init();
     printLocationsToPublic();
 
     const workerConfig = getWorkerConfig();
     await checkSinglePageCacheExistsRecursive(workerConfig.familyNames);
-    await houseKeeping();
 
     monitorWebsocketServer = await initMonitorBackend();
     RockWorker.monitorWebsocketServer = monitorWebsocketServer;

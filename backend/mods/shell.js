@@ -13,50 +13,55 @@ function getShellArguments() {
         shellArguments[argName] = argValue;
     });
 
-    // if (shellArguments.force && shellArguments.force.includes("all")) {
-    //   shellArguments.force += Object.keys(
-    //     JSON.parse(fs.readFileSync(fsDirections.timestampsJson))
-    //   ).join(";");
-    // }
-
     return shellArguments;
 }
 
 const shell = {
     _arguments: null,
-    get force() {
-        return this._arguments?.force || null;
-    },
-    get forceSet() {
-        return this._arguments?.forceSet || null;
-    },
-    get forceAll() {
-        return this._arguments?.force?.includes("all") || false;
-    },
-    get forceThese() {
-        return (
-            (this._arguments?.force?.split(",") ?? []).map((f) =>
-                f.replace("%", "")
-            ) ?? []
-        );
+    check: function (a) {
+        if (a === "false") return a;
+        if (a === "all") return a;
+        if (typeof a === "string") return a.split("%");
+        return false;
     },
 
-    get resetActiveWorkersBases() {
-        return (
-            (this._arguments?.resetActiveWorkersBases &&
-                this._arguments?.resetActiveWorkersBases === "true") ||
-            false
-        );
+    /**
+     * see {@link HouseKeeping#baseEventsCleanup}
+     */
+    get removeBaseEvents() {
+        return this.check(this._arguments?.removeBaseEvents);
     },
 
-    get keepImages() {
-        return this._arguments?.keepImages || false;
+    /**
+     * see {@link HouseKeeping#publicEventImagesCleanup}
+     */
+    get removePublicEventImages() {
+        return this.check(this._arguments?.removePublicEventImages);
     },
+
+    /**
+     * see {@link HouseKeeping#longTextFilesCleanup}
+     */
+    get removeLongTextFiles() {
+        return this.check(this._arguments?.removeLongTextFiles);
+    },
+
+    /**
+     * see {@link HouseKeeping#singlePageCacheCleanup}
+     */
+    get removeSinglePageCache() {
+        return this.check(this._arguments?.removeSinglePageCache);
+    },
+
     get debugLongHTML() {
-        return this._arguments?.debugLongHTML || false;
+        return this._arguments?.debugLongHTML ?? null;
     },
+
+    /**
+     * aantal workers tegelijk mogen draaien.
+     */
     get workers() {
-        return this._arguments?.workers || null;
+        return this._arguments?.workers;
     },
     /**
      * of de artist db de refused, allowed, unclear etc moet schrijven.

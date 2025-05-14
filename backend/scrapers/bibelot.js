@@ -199,9 +199,9 @@ scraper.singlePage = async function ({ page, event }) {
         event,
         pageInfo
     );
-    pageInfo.mediaForHTML = mediaForHTML;
 
     pageInfo.textForHTML = textForHTML;
+    pageInfo.mediaForHTML = mediaForHTML;
     const singlePageHTML = await page.evaluate(() => {
         return document.body.parentNode.outerHTML;
     });

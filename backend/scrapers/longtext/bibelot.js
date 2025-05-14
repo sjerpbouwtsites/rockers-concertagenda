@@ -1,126 +1,107 @@
 /* eslint-disable  */
 /* eslint-disable indent */
 /* global document */
+
+import {
+    handleError,
+    ongewensteHTMLUitHeleDocument,
+    eersteLadingOverbodigeAttributesWeg,
+    maakMediaHTMLBronnen,
+    hinderlijkeTekstenEruitSlopen,
+    formatHTMLTextBodyNaarEenSpatieMax,
+    legeHTMLElementenVerwijderen,
+    maakTekstBlokHTML,
+    standaardSelectorConfig,
+    removeElementsRecursive,
+    gewoonBerichtDumpen
+} from "../gedeeld/longHTML.js";
+
 export default async function longTextSocialsIframes(page, event) {
-    return page.evaluate(
-        // eslint-disable-next-line no-shadow
-        ({ event }) => {
-            const res = {};
+    //bibelot hack
+    const bibelotKrijgEenZiekte = await page.evaluate(() => {
+        document.querySelectorAll("[data-src]").forEach((el) => {
+            el.src = el.getAttribute("data-src");
+        });
 
-            const mediaSelector = [".vide0-block iframe"].join(", ");
-            const textSelector = ".grid-container p";
-            const removeEmptyHTMLFrom = textSelector; // textSelector;
+        const youtubeIDHTML = Array.from(
+            document.querySelectorAll("video-embed")
+        )
+            .map((a) => a.innerHTML)
+            .join("");
+        const ytMatches = youtubeIDHTML.matchAll(/src=\"(.*)\"/g);
+        const ytMatchesArray = Array.from(new Set(ytMatches));
+        return [youtubeIDHTML, ytMatchesArray];
+    });
 
-            const removeSelectors = [
-                `${textSelector} [class*='icon-']`,
-                `${textSelector} [class*='fa-']`,
-                `${textSelector} .fa`,
-                `${textSelector} script`,
-                `${textSelector} noscript`,
-                `${textSelector} style`,
-                `${textSelector} meta`,
-                `${textSelector} svg`,
-                `${textSelector} form`,
-                `${textSelector} img`
-            ].join(", ");
-
-            const attributesToRemove = [
-                "style",
-                "hidden",
-                "_target",
-                "frameborder",
-                "onclick",
-                "aria-hidden"
-            ];
-            const attributesToRemoveSecondRound = ["class", "id"];
-            const removeHTMLWithStrings = ["hapje en een drankje"];
-
-            const mediaAttrRemSelAdd = `${
-                mediaSelector.length
-                    ? `, ${mediaSelector} *, ${mediaSelector}`
-                    : ""
-            }`;
-            const textSocEnMedia = `${textSelector} ${mediaAttrRemSelAdd}`;
-            document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-                attributesToRemove.forEach((attr) => {
-                    if (elToStrip.hasAttribute(attr)) {
-                        elToStrip.removeAttribute(attr);
+    let ditIsDeImgURL = null;
+    let ditIsDeYoutubeID = null;
+    try {
+        if (Array.isArray(bibelotKrijgEenZiekte)) {
+            if (bibelotKrijgEenZiekte.length > 1) {
+                const a = bibelotKrijgEenZiekte[1];
+                if (Array.isArray(a) && a.length) {
+                    const b = a[0];
+                    if (Array.isArray(b) && b.length) {
+                        ditIsDeImgURL = b[1];
                     }
-                });
-            });
-
-            document.querySelectorAll("[data-src]").forEach((el) => {
-                el.src = el.getAttribute("data-src");
-            });
-
-            // media obj maken voordat HTML verdwijnt
-            res.mediaForHTML = Array.from(
-                document.querySelectorAll(mediaSelector)
-            ).map((bron) => {
-                let src = bron?.src && bron?.src !== "" ? bron.src : "";
-                return {
-                    outer: bron.outerHTML,
-                    src,
-                    id: null,
-                    type: src.includes("spotify")
-                        ? "spotify"
-                        : src.includes("youtube")
-                        ? "youtube"
-                        : "bandcamp"
-                };
-            });
-
-            // stript HTML tbv text
-            removeSelectors.length &&
-                document
-                    .querySelectorAll(removeSelectors)
-                    .forEach((toRemove) =>
-                        toRemove.parentNode.removeChild(toRemove)
-                    );
-
-            // verwijder ongewenste paragrafen over bv restaurants
-            Array.from(
-                document.querySelectorAll(
-                    `${textSelector} p, ${textSelector} span, ${textSelector} a`
-                )
-            ).forEach((verwijder) => {
-                const heeftEvilString = !!removeHTMLWithStrings.find(
-                    (evilString) => verwijder.textContent.includes(evilString)
-                );
-                if (heeftEvilString) {
-                    verwijder.parentNode.removeChild(verwijder);
                 }
-            });
+            }
+        }
+    } catch (error) {
+        handleError(error);
+    }
 
-            // lege HTML eruit cq HTML zonder tekst of getallen
-            document
-                .querySelectorAll(`${removeEmptyHTMLFrom} > *`)
-                .forEach((checkForEmpty) => {
-                    const leegMatch = checkForEmpty.innerHTML.match(/[\w\d]/g);
-                    if (!Array.isArray(leegMatch)) {
-                        checkForEmpty.parentNode.removeChild(checkForEmpty);
-                    }
-                });
-            document
-                .querySelectorAll(textSelector)
-                .forEach((ts) => ts.setAttribute("data-text", "1"));
-            // laatste attributen eruit.
-            document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-                attributesToRemoveSecondRound.forEach((attr) => {
-                    if (elToStrip.hasAttribute(attr)) {
-                        elToStrip.removeAttribute(attr);
-                    }
-                });
-            });
+    if (ditIsDeImgURL) {
+        ditIsDeYoutubeID = ditIsDeImgURL
+            .replace(`https://i.ytimg.com/vi/`, "")
+            .replace(`/sddefault.jpg`, "");
+        ("https://i.ytimg.com/vi/ewcVSP81ZpI/sddefault.jpg");
+    }
 
-            // tekst.
-            res.textForHTML = Array.from(
-                document.querySelectorAll("[data-text]")
-            )
-                .map((el) => el.innerHTML)
-                .join("");
-            return res;
-        },
-        { event }
-    );
+    const res = {
+        mediaForHTML: null,
+        textForHTML: null
+    };
+    // in standaard removeEls saveTheseAttrsFirst removeAttrsLastStep
+    // removeHTMLWithStrings htmlElementsWithStringsToRemove
+    const selectors = {
+        ...standaardSelectorConfig,
+        textBody: ".programmainfo-block .large-order-1",
+        mediaEls: null,
+        removeEmptyHTMLFrom: ".programmainfo-block .large-order-1"
+    };
+
+    await ongewensteHTMLUitHeleDocument(page, selectors);
+
+    await eersteLadingOverbodigeAttributesWeg(page, selectors);
+
+    //res.mediaForHTML = await maakMediaHTMLBronnen(page, selectors, event);
+    // bibelot HACK!!!
+    if (ditIsDeYoutubeID) {
+        res.mediaForHTML = [
+            {
+                outer: null,
+                src: null,
+                id: ditIsDeYoutubeID,
+                type: "youtube"
+            }
+        ];
+    }
+    gewoonBerichtDumpen({
+        ditIsDeImgURL,
+        title: event.title,
+        mediaData: res.mediaForHTML
+    });
+
+    await hinderlijkeTekstenEruitSlopen(page, selectors);
+
+    await formatHTMLTextBodyNaarEenSpatieMax(page, selectors);
+
+    await removeElementsRecursive(page, selectors);
+
+    await legeHTMLElementenVerwijderen(page, selectors);
+
+    res.textForHTML = await maakTekstBlokHTML(page, selectors);
+
+    return res;
 }
