@@ -27,7 +27,6 @@ class EventBlocks extends React.Component {
         this.add100ToMaxEventsShown = this.add100ToMaxEventsShown.bind(this);
         this.escFunction = this.escFunction.bind(this);
         this.hideSoldOut = this.hideSoldOut.bind(this);
-        this.addFirstOfMonth = this.addFirstOfMonth.bind(this);
         this.gescrolledBuitenBeeldEnlarged =
             this.gescrolledBuitenBeeldEnlarged.bind(this);
     }
@@ -194,6 +193,35 @@ class EventBlocks extends React.Component {
     }
 
     // #endregion fetch methoden getEventData en loadLongerText
+
+    async loadExternalSite(musicEventKey, e) {
+        e.stopPropagation();
+        e.nativeEvent.stopImmediatePropagation();
+
+        let { filteredMusicEvents } = this.state;
+
+        const thisEvent = filteredMusicEvents[musicEventKey];
+
+        if (!thisEvent.location.url) {
+            alert(
+                `De bron van dit event gaf geen aanvullde informatie over dit event, de website van de locatie is ook onbekend.`
+            );
+            return;
+        }
+
+        const confirmed = window.confirm(
+            `De bron van dit event gaf geen verdere informatie. Wil je hier blijven of door naar de website van ${thisEvent.location.name}?`
+        );
+
+        if (confirmed) {
+            const state = { data: true, watDoeIk: null };
+            const url = window.location.href;
+            window.history.pushState(state, "", url);
+            window.location.replace(thisEvent.location.url);
+            return;
+        }
+        return;
+    }
 
     // #region event-block HTML methods
 
@@ -394,7 +422,10 @@ class EventBlocks extends React.Component {
                                                   this,
                                                   musicEventKey
                                               )
-                                            : null
+                                            : this.loadExternalSite.bind(
+                                                  this,
+                                                  musicEventKey
+                                              )
                                     }
                                     title={
                                         musicEvent.longText

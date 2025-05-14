@@ -92,7 +92,7 @@
     filter: saturate(20%);
 }
 .event-block--no-longTextHTML:hover {
-    cursor: not-allowed;
+    cursor: help;
 }
 
 @media (max-width: 600px) {
