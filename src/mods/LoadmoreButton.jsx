@@ -10,12 +10,11 @@ class LoadmoreButton extends React.Component {
             hasDoneNewLoad: false,
             hasLoadedEverything: false
         };
-        this.checkButtonIsAboutInView =
-            this.checkButtonIsAboutInView.bind(this);
+        this.checkButtonIsInView = this.checkButtonIsInView.bind(this);
     }
 
     componentDidMount() {
-        setInterval(this.checkButtonIsAboutInView, this.intervalSpeed);
+        setInterval(this.checkButtonIsInView, this.intervalSpeed);
         setTimeout(() => {
             this.setState({ hasDoneNewLoad: true });
         }, this.intervalSpeed - 500);
@@ -31,7 +30,7 @@ class LoadmoreButton extends React.Component {
         }
     }
 
-    checkButtonIsAboutInView() {
+    checkButtonIsInView() {
         const { hasLoadedEverything, inView } = this.state;
 
         if (hasLoadedEverything) return;
@@ -69,6 +68,7 @@ class LoadmoreButton extends React.Component {
         } = this.props;
         if (!eventDataLoaded) return "";
         if (hasLoadedEverything) return "";
+        if (maxEventsShown === musicEventsLength) return "";
 
         return (
             <button
