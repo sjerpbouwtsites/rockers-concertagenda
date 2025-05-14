@@ -3,19 +3,19 @@ import React from "react";
 class LoadmoreButton extends React.Component {
     intervalSpeed = 3000;
 
-    hasLoadedEverything = false;
-
     constructor(props) {
         super(props);
         this.state = {
             inView: false,
-            hasDoneNewLoad: false
+            hasDoneNewLoad: false,
+            hasLoadedEverything: false
         };
-        this.checkButtonIsInView = this.checkButtonIsInView.bind(this);
+        this.checkButtonIsAboutInView =
+            this.checkButtonIsAboutInView.bind(this);
     }
 
     componentDidMount() {
-        setInterval(this.checkButtonIsInView, this.intervalSpeed);
+        setInterval(this.checkButtonIsAboutInView, this.intervalSpeed);
         setTimeout(() => {
             this.setState({ hasDoneNewLoad: true });
         }, this.intervalSpeed - 500);
@@ -23,22 +23,27 @@ class LoadmoreButton extends React.Component {
 
     componentDidUpdate() {
         const { maxEventsShown, musicEventsLength } = this.props;
-        if (maxEventsShown === musicEventsLength) {
-            this.hasLoadedEverything = true;
+        const { hasLoadedEverything } = this.state;
+        if (maxEventsShown === musicEventsLength && !hasLoadedEverything) {
+            this.setState({
+                hasLoadedEverything: true
+            });
         }
     }
 
-    checkButtonIsInView() {
-        if (this.hasLoadedEverything) return;
+    checkButtonIsAboutInView() {
+        const { hasLoadedEverything, inView } = this.state;
+
+        if (hasLoadedEverything) return;
+        console.log("CHECKT BUTTON IS IN VIEW");
 
         const st =
             document.documentElement.scrollTop || document.body.scrollTop;
         // eslint-disable-next-line
         const ah = screen.availHeight;
-        const mh = st + ah;
+        const mh = st + 1.5 * ah;
         const oh = document.body.offsetHeight;
         const newState = (mh - oh) / ah > 0;
-        const { inView } = this.state;
         if (newState === inView) {
             return;
         }
@@ -59,11 +64,12 @@ class LoadmoreButton extends React.Component {
             eventDataLoaded,
             add100ToMaxEventsShown,
             maxEventsShown,
-            musicEventsLength
+            musicEventsLength,
+            hasLoadedEverything
         } = this.props;
         if (!eventDataLoaded) return "";
-        if (this.hasLoadedEverything) return "";
-        if (maxEventsShown === musicEventsLength) return "";
+        if (hasLoadedEverything) return "";
+
         return (
             <button
                 type="button"
