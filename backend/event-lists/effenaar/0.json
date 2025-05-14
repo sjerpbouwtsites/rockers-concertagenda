@@ -1,236 +1,12 @@
 [
   {
-    "door": "2025-04-04T19:30:00",
-    "start": "2025-04-04T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/greenleaf",
-    "title": "Greenleaf",
-    "location": "effenaar",
-    "price": 22.5,
-    "shortText": "+ Gnome + High Desert Queen",
-    "longText": "../public/texts/effenaar/dy5lZmZlbmFhci5ubC9hZ2VuZGEvZ3JlZW5sZWFm.html",
-    "image": "../public/event-images/effenaar/dy5lZmZlbmFhci5ubC9hZ2VuZGEvZ3JlZW5sZWFm",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "greenleaf": {
-        "s": "2mjr7nb7vy7aqwxgskdlm7",
-        "l": "greenleaf",
-        "g": [
-          "modern blues rock",
-          "psychedelic doom",
-          "retro metal",
-          "stoner metal",
-          "stoner rock",
-          "swedish stoner rock"
-        ]
-      },
-      "high desert queen": {
-        "s": "41RTJDSsIKHfYUpSNzztJK",
-        "l": "high%20desert%20queen",
-        "g": [
-          "austin metal",
-          "psychedelic doom",
-          "stoner metal",
-          "rock"
-        ]
-      },
-      "gnome": {
-        "s": "6clbqb5cobaxrbi4qvckmo",
-        "l": "gnome",
-        "g": [
-          "belgian stoner rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-18T19:30:00",
-    "start": "2025-04-18T20:30:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/esprit-dair",
-    "title": "Esprit D'Air",
-    "location": "effenaar",
-    "price": 28.5,
-    "shortText": "Prijswinnend J-metal solo project",
-    "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2VzcHJpdC1kYWly.html",
-    "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2VzcHJpdC1kYWly",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "esprit d'air": {
-        "s": "41r42bjr4kazco7t4nvdld",
-        "l": "esprit%20d'air",
-        "g": []
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-29T18:30:00",
-    "start": "2025-04-29T19:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/venom-inc-krisiun",
-    "title": "Venom Inc.+ Krisiun",
-    "location": "effenaar",
-    "price": 32.5,
-    "shortText": "Keiharde extreme metal bill | + HATE + Ater",
-    "longText": "../public/texts/effenaar/YXIubmwvYWdlbmRhL3Zlbm9tLWluYy1rcmlzaXVu.html",
-    "image": "../public/event-images/effenaar/YXIubmwvYWdlbmRhL3Zlbm9tLWluYy1rcmlzaXVu",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "venom inc.": {
-        "s": "3MHIoEboWZOn2vX4O3GrjM",
-        "l": "venom%20inc.",
-        "g": [
-          "speed metal",
-          "thrash metal",
-          "black metal",
-          "heavy metal",
-          "black",
-          "death metal",
-          "extreme metal",
-          "heavy metal"
-        ]
-      },
-      "krisiun": {
-        "s": "3pzaw9xs16rx8fukh8wv6n",
-        "l": "krisiun",
-        "g": [
-          "brazilian death metal",
-          "brazilian metal",
-          "brutal death metal",
-          "death metal",
-          "deathgrind",
-          "metal",
-          "metal gaucho",
-          "technical death metal",
-          "thrash metal"
-        ]
-      },
-      "extreme": {
-        "s": "6w7j5wq5ai5oqylcm15s2l",
-        "l": "extreme",
-        "g": [
-          "funk metal",
-          "glam metal",
-          "hard rock"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
-        ]
-      },
-      "hate": {
-        "s": "13XggX75z0Hk0VNvOuTJoB",
-        "l": "hate",
-        "g": [
-          "death metal",
-          "black metal",
-          "thrash metal (early)",
-          " hard rock (later)",
-          "black",
-          "death metal",
-          "extreme metal",
-          "heavy metal"
-        ]
-      },
-      "ater": {
-        "s": "1HpPzWF2E6G8KfD5pOM6La",
-        "l": "ater",
-        "g": [
-          "djent",
-          "black metal",
-          "black",
-          "death metal",
-          "extreme metal",
-          "heavy metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-02T19:30:00",
-    "start": "2025-05-02T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/temple-fang-mojo-kitchen-brothers",
-    "title": "Temple Fang + Mojo & The Kitchen Brothers",
-    "location": "effenaar",
-    "price": 17,
-    "shortText": "Twee psych-rock bands op één avond!",
-    "longText": "../public/texts/effenaar/cGxlLWZhbmctbW9qby1raXRjaGVuLWJyb3RoZXJz.html",
-    "image": "../public/event-images/effenaar/cGxlLWZhbmctbW9qby1raXRjaGVuLWJyb3RoZXJz",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "temple fang": {
-        "s": null,
-        "l": null,
-        "g": [
-          "space rock",
-          "doom",
-          "psych",
-          "heavy psych",
-          "stoner"
-        ]
-      },
-      "mojo": {
-        "s": "1nxfzZDDm0a0msuLz0W4lx",
-        "l": "mojo",
-        "g": [
-          "stoner",
-          "doom metal",
-          "rock"
-        ]
-      },
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      },
-      "rock": {
-        "s": null,
-        "l": "rock",
-        "g": [
-          "heavy metal",
-          "hard rock"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-05-16T20:00:00",
     "start": "2025-05-16T20:30:00",
     "venueEventUrl": "https://www.effenaar.nl/agenda/komatsu-album-release",
     "title": "Komatsu | album release",
     "location": "effenaar",
     "price": 15,
-    "shortText": "Lokale stonerrock/sludge helden presenteren nieuwe plaat 'A breakfast for Champions' | + del-Toros",
+    "shortText": "Lokale stonerrock/sludge helden presenteren nieuwe plaat 'A breakfast for Champions' | + del-Toros + Dreaded Bøck & the Hellraisers",
     "longText": "../public/texts/effenaar/bC9hZ2VuZGEva29tYXRzdS1hbGJ1bS1yZWxlYXNl.html",
     "image": "../public/event-images/effenaar/bC9hZ2VuZGEva29tYXRzdS1hbGJ1bS1yZWxlYXNl",
     "soldOut": false,
@@ -253,6 +29,24 @@
         "g": [
           "heavy metal",
           "hard rock"
+        ]
+      },
+      "dreaded bøck": {
+        "s": null,
+        "l": "dreaded%20b%C3%B8ck",
+        "g": [
+          "sludge",
+          "stoner",
+          "doom metal"
+        ]
+      },
+      "the hellraisers": {
+        "s": "3CwDHL9InLPAIS62fMVZwu",
+        "l": "the%20hellraisers",
+        "g": [
+          "sludge",
+          "stoner",
+          "doom metal"
         ]
       }
     }
@@ -296,6 +90,61 @@
         "g": [
           "groove",
           "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-07-05T19:30:00",
+    "start": "2025-07-05T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/overkill-vicious-rumors",
+    "title": "Overkill + Vicious Rumors",
+    "location": "effenaar",
+    "price": 38.5,
+    "shortText": "Een double bill gevuld met thrash- en powermetal",
+    "longText": "../public/texts/effenaar/YWdlbmRhL292ZXJraWxsLXZpY2lvdXMtcnVtb3Jz.html",
+    "image": "../public/event-images/effenaar/YWdlbmRhL292ZXJraWxsLXZpY2lvdXMtcnVtb3Jz",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      },
+      "overkill": {
+        "s": "0NmYchKQ8JIR9QHYJA0FRe",
+        "l": "overkill",
+        "g": [
+          "thrash metal",
+          "speed metal",
+          "groove metal",
+          "metal",
+          "heavy metal",
+          "thrash metal, thrash",
+          "groove metal"
+        ]
+      },
+      "vicious rumors": {
+        "s": "5qF6qgroDoDIKpPChRqhX3",
+        "l": "vicious%20rumors",
+        "g": [
+          "speed metal",
+          "power metal",
+          "heavy metal",
+          "thrash metal",
+          "heavy",
+          "power metal, groove metal"
         ]
       }
     }
@@ -357,13 +206,80 @@
     }
   },
   {
+    "door": "2025-09-25T19:30:00",
+    "start": "2025-09-25T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/intervals",
+    "title": "Intervals",
+    "location": "effenaar",
+    "price": 24.5,
+    "shortText": "Virtuoze, technische, progressieve rock uit Canada",
+    "longText": "../public/texts/effenaar/dy5lZmZlbmFhci5ubC9hZ2VuZGEvaW50ZXJ2YWxz.html",
+    "image": "../public/event-images/effenaar/dy5lZmZlbmFhci5ubC9hZ2VuZGEvaW50ZXJ2YWxz",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
+      },
+      "intervals": {
+        "s": "0xpJGyjbEzkWSNfcf2tcMl",
+        "l": "intervals",
+        "g": [
+          "djent",
+          "progressive metal",
+          "math rock",
+          "progressive rock",
+          "various, heavy",
+          "doom metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-10-04T15:00:00",
+    "start": "2025-10-04T15:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/caya2025",
+    "title": "Come As You Are 2025",
+    "location": "effenaar",
+    "price": 49.5,
+    "shortText": " K's Choice, Fun Lovin' Criminals, Claw Boys Claw, Long Fling en meer  Het beste van drie decennia gitaarmuziek",
+    "longText": "../public/texts/effenaar/d3cuZWZmZW5hYXIubmwvYWdlbmRhL2NheWEyMDI1.html",
+    "image": "../public/event-images/effenaar/d3cuZWZmZW5hYXIubmwvYWdlbmRhL2NheWEyMDI1",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "claw boys claw": {
+        "s": "5t378xbmytaymycg84zipv",
+        "l": "claw%20boys%20claw",
+        "g": [
+          "dutch blues",
+          "dutch indie",
+          "dutch rock"
+        ]
+      },
+      "crim": {
+        "s": null,
+        "l": "crim",
+        "g": [
+          "melodic death metal",
+          "metalcore"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-10-25T19:30:00",
     "start": "2025-10-25T20:00:00",
     "venueEventUrl": "https://www.effenaar.nl/agenda/fall-spring",
     "title": "From Fall To Spring",
     "location": "effenaar",
     "price": 17,
-    "shortText": "Een energieke mix van metalcore en alternatieve rock",
+    "shortText": "Een energieke mix van metalcore en alternatieve rock | + Cyan Kicks",
     "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2ZhbGwtc3ByaW5n.html",
     "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2ZhbGwtc3ByaW5n",
     "soldOut": false,
@@ -417,15 +333,60 @@
     }
   },
   {
-    "door": "2025-12-13T15:00:00",
-    "start": "2025-12-13T15:30:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-2025-day-2",
-    "title": "Eindhoven Metal Meeting 2025 - Day 2",
+    "door": "2025-11-20T19:30:00",
+    "start": "2025-11-20T20:15:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/lacuna-coil",
+    "title": "Lacuna Coil",
+    "location": "effenaar",
+    "price": 27.5,
+    "shortText": "Italiaanse alt-metal grootheden komen terug naar Effenaar! | + NONPOINT",
+    "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2xhY3VuYS1jb2ls.html",
+    "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2xhY3VuYS1jb2ls",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "lacuna coil": {
+        "s": "4OAddazJM576euUnFSvXSL",
+        "l": "lacuna%20coil",
+        "g": [
+          "gothic metal",
+          "symphonic metal",
+          "metal",
+          "symphonic rock",
+          "melodic metal",
+          "gothic metal",
+          "rock (early)",
+          " alternative rock",
+          "metal (later)"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-12-12T15:00:00",
+    "start": "2025-12-12T15:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-2025-day-1",
+    "title": "Eindhoven Metal Meeting 2025 - Day 1",
     "location": "effenaar",
     "price": 140,
-    "shortText": "Met o.a. TRIPTYKON, SINISTER en ANGSTSKRIG",
-    "longText": "../public/texts/effenaar/aG92ZW4tbWV0YWwtbWVldGluZy0yMDI1LWRheS0y.html",
-    "image": "../public/event-images/effenaar/aG92ZW4tbWV0YWwtbWVldGluZy0yMDI1LWRheS0y",
+    "shortText": "met o.a. HYPOCRISY, GORGOROTH , ABSU, HELLBUTCHER",
+    "longText": "../public/texts/effenaar/aG92ZW4tbWV0YWwtbWVldGluZy0yMDI1LWRheS0x.html",
+    "image": "../public/event-images/effenaar/aG92ZW4tbWV0YWwtbWVldGluZy0yMDI1LWRheS0x",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
@@ -444,18 +405,50 @@
           "progressive metal"
         ]
       },
-      "triptykon": {
-        "s": "37fG1EQuwb6zBHyFYUGfj8",
-        "l": "triptykon",
+      "gorgoroth": {
+        "s": "1dt7cfrzxm8qpva82jx9y5",
+        "l": "gorgoroth",
         "g": [
           "black metal",
-          "doom metal",
-          "swiss black metal",
-          "swiss metal",
-          "gothic",
-          "doom",
+          "metal",
+          "norwegian black metal",
+          "norwegian metal",
+          "tolkien metal"
+        ]
+      },
+      "hypocrisy": {
+        "s": "73UIalJYgktSi7qQFV53Qv",
+        "l": "hypocrisy",
+        "g": [
+          "melodic death metal",
+          "death metal",
+          "metal",
+          "black metal",
+          "melodic metal",
+          "death metal (early)",
+          " melodic death metal (later)"
+        ]
+      },
+      "absu": {
+        "s": "3eVkhnD2UKVjX5uiUsqfXP",
+        "l": "absu",
+        "g": [
+          "black metal",
+          "death metal (early)",
+          " black",
+          "thrash metal (later)"
+        ]
+      },
+      "hellbutcher": {
+        "s": "0LNxFESoHHXMTsh5RIl8L2",
+        "l": "hellbutcher",
+        "g": [
+          "speed metal",
+          "black metal",
+          "thrash metal",
+          "black",
           "death",
-          "black metal"
+          "thrash metal"
         ]
       }
     }

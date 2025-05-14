@@ -682,7 +682,7 @@ export default class AbstractScraper extends ScraperConfig {
             event: singleEvent
         });
 
-        if (singlePageHTML) {
+        if (singlePageHTML && this._s.singlePage.useCache) {
             //save in cache if not there
             const u = singleEvent.venueEventUrl
                 .replaceAll(/\W/g, "")

@@ -11,7 +11,8 @@ export default class ScraperConfig {
         launchOptions: {},
         singlePage: {
             waitUntil: "domcontentloaded",
-            timeout: 5001
+            timeout: 5001,
+            useCache: true
         },
         mainPage: {
             waitUntil: "domcontentloaded",

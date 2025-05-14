@@ -22,7 +22,8 @@ const scraper = new AbstractScraper({
         waitUntil: "load"
     },
     singlePage: {
-        timeout: 15000
+        timeout: 15000,
+        useCache: false
     },
     app: {
         harvest: {
@@ -305,16 +306,12 @@ scraper.singlePage = async function ({ page, event }) {
 
     pageInfo.textForHTML = textForHTML;
 
-    const singlePageHTML = await page.evaluate(() => {
-        return document.body.parentNode.outerHTML;
-    });
-
     return this.singlePageEnd({
         pageInfo,
         stopFunctie,
         page,
         event,
-        singlePageHTML
+        singlePageHTML: null
     });
 };
 // #endregion                         SINGLE PAGE

@@ -1,84 +1,6 @@
 [
   {
-    "door": "2025-04-01T14:00:00",
-    "start": "2025-04-01T14:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/rapunzel-het-kleine-theater/",
-    "title": "Rapunzel – Het kleine theater",
-    "location": "groeneengel",
-    "price": 13,
-    "longText": "../public/texts/groeneengel/YS9yYXB1bnplbC1oZXQta2xlaW5lLXRoZWF0ZXIv.html",
-    "image": "../public/event-images/groeneengel/YS9yYXB1bnplbC1oZXQta2xlaW5lLXRoZWF0ZXIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ater": {
-        "s": "1HpPzWF2E6G8KfD5pOM6La",
-        "l": "ater",
-        "g": [
-          "djent",
-          "black metal",
-          "black",
-          "death metal",
-          "extreme metal",
-          "heavy metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-01T20:00:00",
-    "start": "2025-04-01T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/lost-kings-of-entertainment-osse-muzikanten-eren-rockhelden/",
-    "title": "Lost Kings Of Entertainment: Osse muzikanten eren Rockhelden!",
-    "location": "groeneengel",
-    "price": 25,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/c2UtbXV6aWthbnRlbi1lcmVuLXJvY2toZWxkZW4v.html",
-    "image": "../public/event-images/groeneengel/c2UtbXV6aWthbnRlbi1lcmVuLXJvY2toZWxkZW4v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "rock": {
-        "s": null,
-        "l": "rock",
-        "g": [
-          "heavy metal",
-          "hard rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-01T19:30:00",
-    "start": "2025-04-01T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/joy-division-undercover-closer-to-curtis/",
-    "title": "Joy Division Undercover – Closer To Curtis",
-    "location": "groeneengel",
-    "price": 20,
-    "longText": "../public/texts/groeneengel/bi11bmRlcmNvdmVyLWNsb3Nlci10by1jdXJ0aXMv.html",
-    "image": "../public/event-images/groeneengel/bi11bmRlcmNvdmVyLWNsb3Nlci10by1jdXJ0aXMv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "joy division": {
-        "s": null,
-        "l": "joy%20division",
-        "g": []
-      },
-      "undercover": {
-        "s": "5EQMhqNfNmnIIAgwQX1WZ7",
-        "l": "undercover",
-        "g": [
-          "christian punk"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-04-01T20:00:00",
+    "start": "2025-05-15T20:00:00",
     "venueEventUrl": "https://www.groene-engel.nl/programma/hippie-death-cult-drive-by-wire/",
     "title": "Hippie Death Cult + Drive By Wire",
     "location": "groeneengel",
@@ -109,7 +31,7 @@
     }
   },
   {
-    "start": "2025-04-01T20:00:00",
+    "start": "2025-05-15T20:00:00",
     "venueEventUrl": "https://www.groene-engel.nl/programma/north-mississippi-allstars-25th-anniversary-of-shake-hands-with-shorty/",
     "title": "North Mississippi Allstars",
     "location": "groeneengel",
@@ -127,6 +49,109 @@
           "sludge",
           "doom metal",
           "death 'n' roll"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-15T00:00:00",
+    "start": "2025-05-15T19:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/25-jaar-groene-engel-het-jubileumboek/",
+    "title": "Van hemelbestormers tot engelenwerk – Een kwart eeuw cultuur en ontmoeten bij Groene Engel",
+    "location": "groeneengel",
+    "price": 13,
+    "shortText": " undefined",
+    "longText": "../public/texts/groeneengel/Z3JvZW5lLWVuZ2VsLWhldC1qdWJpbGV1bWJvZWsv.html",
+    "image": "../public/event-images/groeneengel/Z3JvZW5lLWVuZ2VsLWhldC1qdWJpbGV1bWJvZWsv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "hemelbestormer": {
+        "s": "5oHzkbFUZZHA2y8t2aAhso",
+        "l": "hemelbestormer",
+        "g": [
+          "sludge metal",
+          "post-rock",
+          "doom metal",
+          "space rock",
+          "post-metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-15T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/onbeperkt-theaterabonnement-2025-2026/",
+    "title": "Onbeperkt Theaterabonnement 2025-2026",
+    "location": "groeneengel",
+    "price": 20,
+    "longText": "../public/texts/groeneengel/dC10aGVhdGVyYWJvbm5lbWVudC0yMDI1LTIwMjYv.html",
+    "image": "../public/event-images/groeneengel/dC10aGVhdGVyYWJvbm5lbWVudC0yMDI1LTIwMjYv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ater": {
+        "s": "1HpPzWF2E6G8KfD5pOM6La",
+        "l": "ater",
+        "g": [
+          "djent",
+          "black metal",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-15T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/hoopje-mens-tg-echo/",
+    "title": "Hoopje Mens – TG Echo",
+    "location": "groeneengel",
+    "price": 20,
+    "longText": "../public/texts/groeneengel/cHJvZ3JhbW1hL2hvb3BqZS1tZW5zLXRnLWVjaG8v.html",
+    "image": "../public/event-images/groeneengel/cHJvZ3JhbW1hL2hvb3BqZS1tZW5zLXRnLWVjaG8v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "echo": {
+        "s": "0fgykf9avljex0l9wt5b8z",
+        "l": "echo",
+        "g": [
+          "alternative rock",
+          "new romantic",
+          "new wave",
+          "permanent wave"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-15T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/apocalypse-straks-de-theatertroep/",
+    "title": "Apocalypse straks – de Theatertroep",
+    "location": "groeneengel",
+    "price": 20,
+    "longText": "../public/texts/groeneengel/YWx5cHNlLXN0cmFrcy1kZS10aGVhdGVydHJvZXAv.html",
+    "image": "../public/event-images/groeneengel/YWx5cHNlLXN0cmFrcy1kZS10aGVhdGVydHJvZXAv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ater": {
+        "s": "1HpPzWF2E6G8KfD5pOM6La",
+        "l": "ater",
+        "g": [
+          "djent",
+          "black metal",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
         ]
       }
     }

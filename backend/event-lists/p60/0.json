@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "door": "2025-05-22T18:00:00Z",
+    "start": "2025-05-22T20:30:00Z",
+    "venueEventUrl": "https://p60.nl/2025/sonic-hunt-mei",
+    "title": "Sonic Hunt",
+    "location": "p60",
+    "price": 12.5015,
+    "shortText": "FT. CARDIGAN INN, CHRYSALIS & SPURN",
+    "longText": "../public/texts/p60/czovL3A2MC5ubC8yMDI1L3NvbmljLWh1bnQtbWVp.html",
+    "image": "../public/event-images/p60/czovL3A2MC5ubC8yMDI1L3NvbmljLWh1bnQtbWVp",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "sonic": {
+        "s": "77NlgotgHiVpi79fpChUZc",
+        "l": "sonic",
+        "g": [
+          "melodic death metal",
+          "metalcore"
+        ]
+      },
+      "spurn": {
+        "s": "6EuJStUEQd6XOxDSTiPRw0",
+        "l": "spurn",
+        "g": [
+          "garage rock",
+          "metalcore",
+          "melodic death metal"
+        ]
+      },
+      "hunt": {
+        "s": null,
+        "l": "hunt",
+        "g": [
+          "heavy",
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-06-06T18:00:00Z",
+    "start": "2025-06-06T20:30:00Z",
+    "venueEventUrl": "https://p60.nl/2025/electric-eel-shock",
+    "title": "Electric Eel Shock",
+    "location": "p60",
+    "price": 17.5018,
+    "shortText": "Support: Sneurf + Bellamy Grove",
+    "longText": "../public/texts/p60/cDYwLm5sLzIwMjUvZWxlY3RyaWMtZWVsLXNob2Nr.html",
+    "image": "../public/event-images/p60/cDYwLm5sLzIwMjUvZWxlY3RyaWMtZWVsLXNob2Nr",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "electric eel shock": {
+        "s": "1lly6eogc1ph2y6zrjnkcy",
+        "l": "electric%20eel%20shock",
+        "g": [
+          "j-metal",
+          "japanese garage rock"
+        ]
+      }
+    }
+  }
+]

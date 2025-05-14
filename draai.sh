@@ -4,9 +4,9 @@ clear
 node index.js \
     workers=3 \
     removeBaseEvents=all \
-    removePublicEventImages=true \
+    removePublicEventImages=false \
     removeLongTextFiles=false \
-    removeSinglePageCache=all \
+    removeSinglePageCache=false \
     scraperEventsLongTextDebug=false \
     artistDBWrite=false \
     noLocPrint=true \

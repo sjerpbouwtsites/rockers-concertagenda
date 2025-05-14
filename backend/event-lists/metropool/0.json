@@ -1,60 +1,11 @@
 [
   {
-    "start": "2025-04-11T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/deadly-alliance-ep-release",
-    "title": "Deadly Alliance - EP release",
-    "location": "metropool",
-    "price": 10,
-    "shortText": "De mannen brengen de rauwheid van de thrash-scene terug",
-    "longText": "../public/texts/metropool/bmRhL2RlYWRseS1hbGxpYW5jZS1lcC1yZWxlYXNl.html",
-    "image": "../public/event-images/metropool/bmRhL2RlYWRseS1hbGxpYW5jZS1lcC1yZWxlYXNl",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "deadly alliance": {
-        "s": "6PhKl46OGC5fSK21tYUJEu",
-        "l": "deadly%20alliance",
-        "g": [
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-04-20T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/agent-steel",
-    "title": "Agent Steel",
-    "location": "metropool",
-    "price": 25.5,
-    "shortText": "Galactische metal die niet van deze wereld is",
-    "longText": "../public/texts/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL2FnZW50LXN0ZWVs.html",
-    "image": "../public/event-images/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL2FnZW50LXN0ZWVs",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "agent steel": {
-        "s": "1FQv3rI4iJPitbZiTxBGut",
-        "l": "agent%20steel",
-        "g": [
-          "melodic thrash",
-          "old school thrash",
-          "us power metal",
-          "power",
-          "speed",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
     "start": "2025-05-14T18:30:00",
     "venueEventUrl": "https://metropool.nl/agenda/decapitated-cryptopsy-warbringer-carnation",
     "title": "Decapitated ",
     "location": "metropool",
     "price": 33,
-    "shortText": " Cryptopsy  +  Warbringer  +  Carnation Internal Bloodshed Over Europe 2025",
+    "shortText": " Cryptopsy  +  Warbringer  +  Carnation Infernal Bloodshed Over Europe 2025",
     "longText": "../public/texts/metropool/Y3J5cHRvcHN5LXdhcmJyaW5nZXItY2FybmF0aW9u.html",
     "image": "../public/event-images/metropool/Y3J5cHRvcHN5LXdhcmJyaW5nZXItY2FybmF0aW9u",
     "soldOut": false,
@@ -117,18 +68,27 @@
     }
   },
   {
-    "start": "2025-06-29T20:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/pussy-riot",
-    "title": "Pussy Riot",
+    "start": "2025-07-10T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/nashville-pussy",
+    "title": "Nashville Pussy",
     "location": "metropool",
-    "price": 29.5,
-    "shortText": "Tijdens de NAVO-top klinkt in Hengelo de stem van verzet",
-    "longText": "../public/texts/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9wdXNzeS1yaW90.html",
-    "image": "../public/event-images/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9wdXNzeS1yaW90",
+    "price": 25,
+    "shortText": "Voor iedereen die even wil doen alsof het ze allemaal niks kan schelen",
+    "longText": "../public/texts/metropool/cG9vbC5ubC9hZ2VuZGEvbmFzaHZpbGxlLXB1c3N5.html",
+    "image": "../public/event-images/metropool/cG9vbC5ubC9hZ2VuZGEvbmFzaHZpbGxlLXB1c3N5",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "nashville pussy": {
+        "s": "73sawKQrhPG7HXTDRZGfOX",
+        "l": "nashville%20pussy",
+        "g": [
+          "punk 'n' roll",
+          "sleaze rock"
+        ]
+      }
+    }
   },
   {
     "start": "2025-08-24T20:30:00",
@@ -156,6 +116,28 @@
         "l": "jetsam",
         "g": [
           "post-metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-10-07T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/yt",
+    "title": "Y&t",
+    "location": "metropool",
+    "price": 38,
+    "shortText": "De band die hardrock definieerde",
+    "longText": "../public/texts/metropool/aHR0cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL3l0.html",
+    "image": "../public/event-images/metropool/aHR0cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL3l0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "y&t": {
+        "s": null,
+        "l": null,
+        "g": [
+          "symfonische rock"
         ]
       }
     }
