@@ -197,53 +197,6 @@ class EventBlocks extends React.Component {
 
     // #region event-block HTML methods
 
-    // priceElement(musicEvent) {
-    //     // eslint-disable-line
-    //     // FIXME Naar eigen component
-
-    //     let priceText = null;
-    //     if (musicEvent.soldOut) {
-    //         priceText = "Uitverkocht!";
-    //     } else if (musicEvent?.price === null) {
-    //         priceText = "€?";
-    //     } else if (musicEvent?.price) {
-    //         priceText = `€ ${Number(musicEvent?.price).toFixed(2).toString().replace(".", ",")}`;
-    //     } else if (musicEvent?.origin === "ticketmaster") {
-    //         // TODO is die origin er nog?
-    //         priceText = "Gratis";
-    //     } else {
-    //         return "";
-    //     }
-
-    //     const sharedModifiers = [
-    //         musicEvent.soldOut ? "sold-out" : "",
-    //         musicEvent.enlarged ? "enlarged" : ""
-    //     ];
-
-    //     const priceSelectors = BEMify(
-    //         "event-block__price anthracite-color",
-    //         sharedModifiers
-    //     );
-
-    //     const emoji = musicEvent.soldOut ? "💀" : "🎫";
-    //     const linkPriceWrapper = (
-    //         <a
-    //             className={BEMify(
-    //                 "event-block__venue-link event-block__price-link-wrapper",
-    //                 sharedModifiers
-    //             )}
-    //             href={musicEvent.venueEventUrl}
-    //             target="_blank"
-    //             rel="noreferrer"
-    //         >
-    //             <span className="ticketemoji contrast-with-dark">{emoji}</span>
-    //             <span className={priceSelectors}>{priceText}</span>
-    //         </a>
-    //     );
-
-    //     return linkPriceWrapper;
-    // }
-
     async sluitEnlarged(e = null) {
         if (e) {
             e.stopPropagation();
@@ -346,57 +299,8 @@ class EventBlocks extends React.Component {
         });
 
         return musicEventsInRegion;
-
-        // .filter((musicEvent) => {
-        //     if (!filterSettings?.daterange?.lower) {
-        //         return true;
-        //     }
-        //     const lowerRangeTime = new Date(
-        //         filterSettings.daterange.lower
-        //     ).getTime();
-        //     const upperRangeTime = new Date(
-        //         filterSettings.daterange.upper
-        //     ).getTime();
-        //     const eventTime = new Date(musicEvent.start).getTime();
-
-        //     if (lowerRangeTime > eventTime) {
-        //         return false;
-        //     }
-        //     if (upperRangeTime < eventTime) {
-        //         return false;
-        //     }
-        //     return true;
-        // })
     }
 
-    /**
-     * Pas vlak voor de render weet je, want na filtering,
-     * welke musicEvents de eerste van de maand zijn.
-     */
-    addFirstOfMonth(filteredMusicEvents) {
-        return filteredMusicEvents.map((musicEvent, musicEventIndex) => {
-            // eslint-disable-next-line
-            musicEvent.firstOfMonth = false;
-            const start = new Date(musicEvent.start);
-            // eslint-disable-next-line
-            musicEvent.eventMonth = start.toLocaleDateString("nl", {
-                year: "numeric",
-                month: "short"
-            });
-            if (!musicEventIndex || !filteredMusicEvents[musicEventIndex - 1]) {
-                // eslint-disable-next-line
-                musicEvent.firstOfMonth = true;
-            }
-            if (
-                musicEvent.eventMonth !==
-                filteredMusicEvents[musicEventIndex - 1]?.eventMonth
-            ) {
-                // eslint-disable-next-line
-                musicEvent.firstOfMonth = true;
-            }
-            return musicEvent;
-        });
-    }
     render() {
         const { hasFetchedData } = this.props;
         const { maxEventsShown } = this.state;
