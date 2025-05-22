@@ -119,9 +119,8 @@ export async function getImageByCanvas(page, event, _this, selector) {
 
     if (!dataURI) {
         handleError(
-            new Error(
-                `geen inhoud dataURI ${event.title} ${event.venueEventUrl}`
-            )
+            new Error(`geen inhoud dataURI ${event.title} `),
+            `<a href='${event.venueEventUrl}'>${event.title}</a>`
         );
         return null;
     }

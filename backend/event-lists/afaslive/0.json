@@ -1,64 +1,5 @@
 [
   {
-    "door": "2025-05-05T20:00:00",
-    "start": "2025-05-05T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/inna",
-    "title": "Inna",
-    "location": "afaslive",
-    "price": 2025,
-    "longText": "../public/texts/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9pbm5h.html",
-    "image": "../public/event-images/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9pbm5h",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "inna": {
-        "s": "5yOowugKH15S1g0UN72qIz",
-        "l": "inna",
-        "g": [
-          "folk",
-          "pagan metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-13T18:30:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/babymetal-2",
-    "title": "Babymetal",
-    "location": "afaslive",
-    "price": 13,
-    "longText": "../public/texts/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL2JhYnltZXRhbC0y.html",
-    "image": "../public/event-images/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL2JhYnltZXRhbC0y",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "babymetal": {
-        "s": "630wznp2ol7fl4xl0gnmwq",
-        "l": "babymetal",
-        "g": [
-          "idol rock",
-          "j-metal",
-          "kawaii metal"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
     "start": "2025-05-22T17:30:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/steven-wilson",
     "title": "Steven Wilson",
@@ -82,10 +23,9 @@
   {
     "start": "2025-06-15T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/the-rose-2",
-    "title": "The rose\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t nieuw",
+    "title": "The Rose",
     "location": "afaslive",
     "price": 15,
-    "shortText": "  undefined",
     "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS90aGUtcm9zZS0y.html",
     "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS90aGUtcm9zZS0y",
     "soldOut": false,
@@ -171,7 +111,7 @@
   {
     "start": "2025-09-13T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/jacks-world-series-of-darts-finals-4",
-    "title": "Jack's world series of darts finals\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t13:00",
+    "title": "Jack’s casino world series of darts finals\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t13:00",
     "location": "afaslive",
     "price": 12,
     "shortText": "  undefined",
@@ -193,7 +133,7 @@
   {
     "start": "2025-09-14T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/jacks-world-series-of-darts-finals-4",
-    "title": "Jack's world series of darts finals\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t13:00",
+    "title": "Jack’s casino world series of darts finals\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t13:00",
     "location": "afaslive",
     "price": 12,
     "shortText": "  undefined",
@@ -281,6 +221,54 @@
           "swedish metal",
           "symphonic metal",
           "melodic death metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-11-18T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/halestorm",
+    "title": "Halestorm\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t nieuw",
+    "location": "afaslive",
+    "price": 18,
+    "shortText": "  undefined",
+    "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvaGFsZXN0b3Jt.html",
+    "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvaGFsZXN0b3Jt",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "alestorm": {
+        "s": "3opqu68jpzlzvjajj3b2da",
+        "l": "alestorm",
+        "g": [
+          "british power metal",
+          "comic metal",
+          "pirate",
+          "power metal",
+          "scottish metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2026-04-17T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/russo",
+    "title": "Russo\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t nieuw",
+    "location": "afaslive",
+    "price": 0,
+    "shortText": "  undefined",
+    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL3J1c3Nv.html",
+    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL3J1c3Nv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "russ": {
+        "s": null,
+        "l": "russ",
+        "g": [
+          "symphonic",
+          "pagan black metal (early)",
+          " symphonic black metal (later)"
         ]
       }
     }

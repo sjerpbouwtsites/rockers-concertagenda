@@ -5,8 +5,8 @@ node index.js \
     workers=3 \
     removeBaseEvents=all \
     removePublicEventImages=false \
-    removeLongTextFiles=false \
-    removeSinglePageCache=false \
+    removeLongTextFiles=all \
+    removeSinglePageCache=all \
     scraperEventsLongTextDebug=false \
     artistDBWrite=false \
     noLocPrint=true \

@@ -194,7 +194,7 @@ scraper.singlePage = async function ({ page, event }) {
         workerData,
         event,
         pageInfo,
-        selectors: ["[x-ref='event_image'] img"],
+        selectors: ["picture img[src*='013']", "[x-ref='event_image'] img"],
         mode: "image-src"
     });
     pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
@@ -218,9 +218,13 @@ scraper.singlePage = async function ({ page, event }) {
 
     pageInfo.textForHTML = textForHTML;
 
-    const singlePageHTML = await page.evaluate(() => {
-        return document.body.parentNode.outerHTML;
-    });
+    const singlePageHTML = await page
+        .evaluate(() => {
+            return document.body.parentNode.outerHTML;
+        })
+        .catch((err) => {
+            this.handleError(err, `013 singlepagehtml`);
+        });
 
     return this.singlePageEnd({
         pageInfo,
