@@ -87,7 +87,7 @@ export const workerConfig = {
     workerConcurrent: 1,
     forceSet: 4,
   },
-  //metalfan: { workerCount: 1, CPUReq: "low", workerConcurrent: 1 },
+  metalfan: { workerCount: 1, CPUReq: "low", workerConcurrent: 1 },
   metropool: {
     workerCount: 2,
     workerConcurrent: 1,

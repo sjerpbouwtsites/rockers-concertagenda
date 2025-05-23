@@ -3,7 +3,7 @@ killall -s 9 chrome
 clear
 node index.js \
     workers=3 \
-    removeBaseEvents=false \
+    removeBaseEvents=metalfan \
     removePublicEventImages=false \
     removeLongTextFiles=false \
     removeSinglePageCache=false \
