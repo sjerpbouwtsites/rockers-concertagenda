@@ -6369,7 +6369,7 @@
   },
   {
     "start": "2025-08-13T19:00:00",
-    "end": "2025-08-13T22:30:00",
+    "end": "2025-08-13T23:00:00",
     "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/drowning-pool?show=390",
     "title": "Drowning Pool",
     "location": "volt",
@@ -10839,6 +10839,27 @@
           "black metal",
           "punk"
         ]
+      }
+    }
+  },
+  {
+    "start": "2025-11-01T20:30:00",
+    "end": "2025-11-01T22:30:00",
+    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/delilah-bon?show=426",
+    "title": "Delilah Bon",
+    "location": "volt",
+    "price": 17.5,
+    "shortText": "Metal",
+    "longText": "../public/texts/volt/Y3Rpdml0ZWl0L2RlbGlsYWgtYm9uP3Nob3c9NDI2.html",
+    "image": "../public/event-images/volt/Y3Rpdml0ZWl0L2RlbGlsYWgtYm9uP3Nob3c9NDI2",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "delilah bon": {
+        "s": null,
+        "l": "delilah%20bon",
+        "g": []
       }
     }
   },

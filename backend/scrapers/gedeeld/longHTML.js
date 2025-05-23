@@ -98,6 +98,8 @@ export const standaardSelectorConfig = {
     `iframe[src*='youtube']`,
     `iframe[src*='bandcamp']`,
     `iframe[src*='spotify']`,
+    "iframe[data-src*='spotify']",
+    "iframe[data-src*='bandcamp']",
   ],
 };
 
@@ -200,6 +202,9 @@ export async function maakMediaHTMLBronnen(page, selectors, event) {
                 type: "youtube",
               };
             } else if (isSpotifyIframe) {
+              if (!bron.hasAttribute("src")) {
+                bron.setAttribute("src", bron.getAttribute("data-src"));
+              }
               return {
                 outer: bron.outerHTML,
                 src: calcedSrc,
