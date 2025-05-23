@@ -10,7 +10,7 @@ node index.js \
     scraperEventsLongTextDebug=false \
     artistDBWrite=false \
     noLocPrint=true \
-    debugLongHTML=false
+    debugLongHTML=all
 
 # removeTextFiles = false || all || 013%paradiso
 # removePublicEventImages = false || all || 013%paradiso
