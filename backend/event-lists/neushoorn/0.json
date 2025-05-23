@@ -140,5 +140,32 @@
         ]
       }
     }
+  },
+  {
+    "start": "4051-01-16T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/scrum/",
+    "title": "Scrum",
+    "location": "neushoorn",
+    "price": 22,
+    "shortText": "Zeskoppige powerfolk met ballen",
+    "longText": "../public/texts/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vc2NydW0v.html",
+    "image": "../public/event-images/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vc2NydW0v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "scrum": {
+        "s": "0sGdJHX64lQqPYY0is2MjX",
+        "l": "scrum",
+        "g": [
+          "celtic rock",
+          "celtic",
+          "folk rock",
+          "folk punk",
+          "pirate metal",
+          "doom metal"
+        ]
+      }
+    }
   }
 ]

@@ -95,83 +95,80 @@
     }
   },
   {
-    "start": "2025-06-30T04:30:00",
-    "end": "2025-06-30T10:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/aleksiproxima-flarehurryland/",
-    "title": "Aleksi+Proxima Flare+Hurryland",
+    "start": "2025-07-11T08:00:00",
+    "end": "2025-07-11T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/pro-pain-usa-legends-of-hardcore-metal/",
+    "title": "Pro-pain (usa legends of hardcore metal)",
     "location": "dbs",
-    "price": 7.5,
+    "price": "0",
     "shortText": "",
-    "longText": "../public/texts/dbs/L2FsZWtzaXByb3hpbWEtZmxhcmVodXJyeWxhbmQv.html",
-    "image": "../public/event-images/dbs/L2FsZWtzaXByb3hpbWEtZmxhcmVodXJyeWxhbmQv",
+    "longText": "../public/texts/dbs/dXNhLWxlZ2VuZHMtb2YtaGFyZGNvcmUtbWV0YWwv.html",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "proxima flare": {
-        "s": "315Th53dV868sSv3jYt8UO",
-        "l": "proxima%20flare",
+      "pro-pain": {
+        "s": "56f64pmwssccms1cxanpk8",
+        "l": "pro-pain",
         "g": [
-          "progressive metal"
+          "groove metal",
+          "old school thrash",
+          "thrash metal",
+          "southern metal"
         ]
       },
-      "hurryland": {
-        "s": "7FxU3mrUjcrSYzFHYNYkQ9",
-        "l": "hurryland",
+      "hardcore": {
+        "s": "3N11n3hTyVlcOg77IGefjz",
+        "l": "hardcore",
         "g": [
+          "death metal",
+          "hardcore"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
           "progressive metal"
         ]
       }
     }
   },
   {
-    "start": "2025-07-05T08:00:00",
-    "end": "2025-07-05T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/daddy-long-legs-support/",
-    "title": "Daddy long legs + support",
+    "start": "2025-07-17T08:00:00",
+    "end": "2025-07-17T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/zeke/",
+    "title": "ZEKE + Killer Kin + Evil Centric",
     "location": "dbs",
     "price": 12.5,
-    "shortText": "Oh Yes! Super siked onze favo Rhythm & Blues Garage Punx DADDY LONG LEGS uit NYC op VLP 63 te verwelkomen.",
-    "longText": "../public/texts/dbs/ZXZlbnQvZGFkZHktbG9uZy1sZWdzLXN1cHBvcnQv.html",
-    "image": "../public/event-images/dbs/ZXZlbnQvZGFkZHktbG9uZy1sZWdzLXN1cHBvcnQv",
+    "shortText": "HARDER SNELLER!\nZEKE, GODDAMN ROCK N ROLL!\nLEGENDS!!\nDeze Amerikaanse hardcoreband uit Seattle heeft een motto: They only play raw, fast, and loud. De onbezonnen punk’n’rollers overdonderen met supersnelle riffs, wat resulteert in een onmiskenbaar geluid. Carrièrehoogtepunten zoals ‘Kicked in the Teeth’, ‘Death Alley’, en ‘Til the Livin’ End’ laten zich allemaal kenmerken door de schreeuwzang van “Blind” Marky Felchtone, de krachtige ritmes en de eenvoud van hun nummers.\nTickets op tijd aanschaffen voor deze enige Nederlandse clubshow!",
+    "longText": "../public/texts/dbs/Oi8vd3d3LmRic3R1ZGlvLm5sL2V2ZW50L3pla2Uv.html",
+    "image": "../public/event-images/dbs/Oi8vd3d3LmRic3R1ZGlvLm5sL2V2ZW50L3pla2Uv",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "daddy long legs": {
-        "s": "26vp0YsAVautrWTzJXf6Zi",
-        "l": "daddy%20long%20legs",
+      "zeke": {
+        "s": "7HvjR3M6xzluBLTnioRzvu",
+        "l": "zeke",
         "g": [
-          "modern blues",
-          "garage rock",
-          "blues rock"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-07-15T08:00:00",
-    "end": "2025-07-15T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/dbs-tivre-present-battlesnake-aus/",
-    "title": "Db’s & tivre present battlesnake (aus)",
-    "location": "dbs",
-    "price": 10,
-    "shortText": "TivoliVredenburg & dB’s present BATTLESNAKE!",
-    "longText": "../public/texts/dbs/dGl2cmUtcHJlc2VudC1iYXR0bGVzbmFrZS1hdXMv.html",
-    "image": "../public/event-images/dbs/dGl2cmUtcHJlc2VudC1iYXR0bGVzbmFrZS1hdXMv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "battle": {
-        "s": null,
-        "l": "battle",
-        "g": [
-          "black metal"
+          "punk 'n' roll",
+          "progressive metal",
+          "rock"
         ]
       },
-      "snake": {
+      "evilcentric": {
         "s": null,
-        "l": "snake",
+        "l": "evilcentric",
         "g": [
-          "heavy metal"
+          "stoner",
+          "thrash metal"
         ]
       }
     }
@@ -218,10 +215,9 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/yawning-man-usa-soft-sun-no-usa/",
     "title": "Yawning man (usa) + soft sun (no/usa)",
     "location": "dbs",
-    "price": 15,
-    "shortText": "Bij dB’s houden we graag oude helden in ere en het Californische Yawning Man hoort zeker thuis in de canon van de hedendaagse rock. Opgericht in 1986 opgericht en één van pioniers van de Palm Desert Scene. Ze brachten tijdens de zogeheten generator parties hun garage sound naar de woestijn. Hun muziek had grote invloed op levende legendes zoals John Garcia, Josh Homme en Brant Bjork, die later de legendarische stoner rockband Kyuss vormden. Terwijl hun meer commerciële tijdgenoten leunden op zware riffs en hardcore punk, bleef cultband Yawning Man flink roeren in een smeltkroes van stijlen; van psychedelisch tot folkloristisch, jazz, hard rock, prog en wereldmuziek. Laatste album Long Walk of the Navajo uit 2023 laat horen dat Yawning Man nog altijd niet aan muzikale zeggingskracht heeft ingeboet. Een parel van een band voor *those in the know*",
+    "price": "0",
+    "shortText": "",
     "longText": "../public/texts/dbs/d25pbmctbWFuLXVzYS1zb2Z0LXN1bi1uby11c2Ev.html",
-    "image": "../public/event-images/dbs/d25pbmctbWFuLXVzYS1zb2Z0LXN1bi1uby11c2Ev",
     "unavailable": false,
     "eventGenres": null,
     "artists": {

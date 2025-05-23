@@ -3,13 +3,13 @@ killall -s 9 chrome
 clear
 node index.js \
     workers=3 \
-    removeBaseEvents=metalfan \
+    removeBaseEvents=all \
     removePublicEventImages=false \
     removeLongTextFiles=false \
     removeSinglePageCache=false \
     scraperEventsLongTextDebug=false \
     artistDBWrite=true \
-    noLocPrint=true \
+    noLocPrint=false \
     debugLongHTML=false
 
 # removeTextFiles = false || all || 013%paradiso

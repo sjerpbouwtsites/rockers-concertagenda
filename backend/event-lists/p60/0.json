@@ -1,46 +1,5 @@
 [
   {
-    "door": "2025-05-22T18:00:00Z",
-    "start": "2025-05-22T20:30:00Z",
-    "venueEventUrl": "https://p60.nl/2025/sonic-hunt-mei",
-    "title": "Sonic Hunt",
-    "location": "p60",
-    "price": 12.5015,
-    "shortText": "FT. CARDIGAN INN, CHRYSALIS & SPURN",
-    "longText": "../public/texts/p60/czovL3A2MC5ubC8yMDI1L3NvbmljLWh1bnQtbWVp.html",
-    "image": "../public/event-images/p60/czovL3A2MC5ubC8yMDI1L3NvbmljLWh1bnQtbWVp",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "sonic": {
-        "s": "77NlgotgHiVpi79fpChUZc",
-        "l": "sonic",
-        "g": [
-          "melodic death metal",
-          "metalcore"
-        ]
-      },
-      "spurn": {
-        "s": "6EuJStUEQd6XOxDSTiPRw0",
-        "l": "spurn",
-        "g": [
-          "garage rock",
-          "metalcore",
-          "melodic death metal"
-        ]
-      },
-      "hunt": {
-        "s": null,
-        "l": "hunt",
-        "g": [
-          "heavy",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-06-06T18:00:00Z",
     "start": "2025-06-06T20:30:00Z",
     "venueEventUrl": "https://p60.nl/2025/electric-eel-shock",
@@ -73,6 +32,7 @@
     "price": 6.508,
     "shortText": "FT. ZUIDAS, VILE PASSAGE & TUESDAY",
     "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9yYWRhci1qdW4=.html",
+    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9yYWRhci1qdW4=",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -156,6 +116,65 @@
           "medieval metal",
           "symphonic metal",
           "black metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-09-05T17:00:00Z",
+    "start": "2025-09-05T19:30:00Z",
+    "venueEventUrl": "https://p60.nl/2025/hmmf-vr",
+    "title": "Heavy Metal Maniacs Festival Dag #1",
+    "location": "p60",
+    "price": 26.503,
+    "shortText": "MARTYR, ELIXIR & TRÖJAN",
+    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9obW1mLXZy.html",
+    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9obW1mLXZy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      },
+      "martyr": {
+        "s": "6Os2c8U66NlOGOZF2GGLX6",
+        "l": "martyr",
+        "g": [
+          "speed metal",
+          "heavy metal",
+          "power metal",
+          "technical death metal"
+        ]
+      },
+      "elixir": {
+        "s": "2V9jKYeRc72nApTYRJKjJ3",
+        "l": "elixir",
+        "g": [
+          "ambient",
+          "heavy metal"
+        ]
+      },
+      "tröjan": {
+        "s": "7kj92HiTtWWN57XW7mpHJV",
+        "l": "tr%C3%B6jan",
+        "g": [
+          "speed metal",
+          "heavy metal",
+          "nwobhm, heavy",
+          "speed metal"
         ]
       }
     }

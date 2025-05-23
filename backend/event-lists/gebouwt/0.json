@@ -101,19 +101,25 @@
     }
   },
   {
-    "door": "2025-05-23T14:00:00",
-    "start": "2025-05-23T14:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/danny-bryant-2/",
-    "title": "Danny Bryant",
+    "door": "2025-05-23T20:00:00",
+    "start": "2025-05-23T20:00:00",
+    "venueEventUrl": "https://gebouw-t.nl/agenda/pene-corrida-2/",
+    "title": "Pene Corrida",
     "location": "gebouwt",
-    "price": 19.75,
-    "shortText": "Britse Blueslegende",
-    "longText": "../public/texts/gebouwt/dXctdC5ubC9hZ2VuZGEvZGFubnktYnJ5YW50LTIv.html",
-    "image": "../public/event-images/gebouwt/dXctdC5ubC9hZ2VuZGEvZGFubnktYnJ5YW50LTIv",
+    "price": 22.25,
+    "shortText": "The Penergy Tour, Popmusic on Steroids!",
+    "longText": "../public/texts/gebouwt/dXctdC5ubC9hZ2VuZGEvcGVuZS1jb3JyaWRhLTIv.html",
+    "image": "../public/event-images/gebouwt/dXctdC5ubC9hZ2VuZGEvcGVuZS1jb3JyaWRhLTIv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "pene corrida": {
+        "s": "1hw2ywipnsowbtb8flzcca",
+        "l": "pene%20corrida",
+        "g": []
+      }
+    }
   },
   {
     "door": "2025-05-23T20:00:00",
