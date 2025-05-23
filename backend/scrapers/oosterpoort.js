@@ -73,13 +73,14 @@ scraper.mainPage = async function () {
 
   if (cookiesNodig) {
     await page.evaluate(() => {
-      document.querySelector("[name*='marketing']").click();
-      document.querySelector(".cookie__settings .cookie__process").click();
+      document.querySelector("[name*='marketing']")?.click();
+      document.querySelector(".cookie__settings .cookie__process")?.click();
+      document.querySelector(".cookie__accept.button")?.click();
     });
     await this.waitTime(50);
   }
 
-  await this.autoScroll(page);
+  //  await this.autoScroll(page);
   await this.autoScroll(page);
 
   let rawEvents = await page.evaluate(
@@ -125,13 +126,16 @@ scraper.mainPage = async function () {
     }
   );
 
+  this.dirtyLog(rawEvents);
+
   rawEvents = rawEvents
     .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix))
-    .filter((event) => {
-      return this.skipRegexCheck(event);
-    })
-    .map(mapToShortDate)
-    .map(this.isMusicEventCorruptedMapper);
+    // .filter((event) => {
+    //   return this.skipRegexCheck(event);
+    // })
+    .map(mapToShortDate);
+  //.map(this.isMusicEventCorruptedMapper);
+  this.dirtyLog(rawEvents);
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -139,6 +143,8 @@ scraper.mainPage = async function () {
     eventGen,
     checkedEvents: [],
   });
+
+  this.dirtyLog(checkedEvents);
 
   this.saveBaseEventlist(workerData.family, checkedEvents);
 

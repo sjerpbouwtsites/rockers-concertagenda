@@ -1,10 +1,10 @@
 const debugSettings = {
   debugDebug: false,
-  debugCorruptedUnavailable: false,
+  debugCorruptedUnavailable: true,
   debugsinglePageAsyncCheck: true,
   debugRawEventAsyncCheck: true,
   debugBaseEvents: true,
-  //  debugPageInfo: true,
+  debugPageInfo: false,
   debugPrice: false,
   debugWithTempFile: false,
   debugHarvestIntegratie: false,
