@@ -3,14 +3,14 @@ killall -s 9 chrome
 clear
 node index.js \
     workers=3 \
-    removeBaseEvents=all \
+    removeBaseEvents=afaslive \
     removePublicEventImages=false \
-    removeLongTextFiles=all \
-    removeSinglePageCache=all \
+    removeLongTextFiles=false \
+    removeSinglePageCache=false \
     scraperEventsLongTextDebug=false \
     artistDBWrite=false \
     noLocPrint=true \
-    debugLongHTML=all
+    debugLongHTML=false
 
 # removeTextFiles = false || all || 013%paradiso
 # removePublicEventImages = false || all || 013%paradiso

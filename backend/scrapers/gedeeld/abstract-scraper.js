@@ -357,6 +357,26 @@ export default class AbstractScraper extends ScraperConfig {
   }
 
   /**
+   * om de main lijst mee te filteren op basis van scraper instellingen
+   * @param {musicEvent} baseEvent
+   */
+  skipRegexCheck(baseEvent) {
+    let gevonden = false;
+    const regexes = this._s.app.mainPage.skipEventRegexes;
+    if (regexes.length) {
+      let i = 0;
+      while (i < regexes.length && !gevonden) {
+        const m = baseEvent.title.match(regexes[i]);
+        if (Array.isArray(m)) {
+          gevonden = Array.isArray(m);
+        }
+        i++;
+      }
+    }
+    return !gevonden;
+  }
+
+  /**
    * beeindigt stopFunctie timeout
    * sluit page
    * verwerkt mogelijke witruimte weg
@@ -1332,26 +1352,28 @@ export default class AbstractScraper extends ScraperConfig {
     const eventListFileName = `${fsDirections.eventLists}/${workerData.family}/0.json`;
     const fsRes = JSON.parse(fs.readFileSync(eventListFileName, "utf-8"));
 
-    const eerste5 = [fsRes[0], fsRes[1], fsRes[2], fsRes[3], fsRes[4]];
-    const eerste5Kort = eerste5.map((r) => {
-      if (!r) return r;
-      const longTextURL = r.longText.replace("../public/texts/", "");
-      const n = {
-        title: r.title,
-        start: r.start,
-        anker: `<a href='${r.venueEventUrl}'>${r.title}</a>`,
-        link: `<a class='links-naar-longtext-html' style="font-weight: bold; font-size: 18px" target='_blank' href='${`http://localhost/rockagenda/public/texts/${longTextURL}`}'>LongText</a>`,
-      };
-      return n;
-    });
-    this.dirtyDebug({
-      title: `event list res ${workerData.family}`,
-      eerste5Kort,
-    });
-    this.dirtyLog({
-      title: `event list res ${workerData.family}`,
-      eerste5Kort,
-    });
+    if (shell.debugLongHTML) {
+      const eerste5 = [fsRes[0], fsRes[1], fsRes[2], fsRes[3], fsRes[4]];
+      const eerste5Kort = eerste5.map((r) => {
+        if (!r) return r;
+        const longTextURL = r.longText.replace("../public/texts/", "");
+        const n = {
+          title: r.title,
+          start: r.start,
+          anker: `<a href='${r.venueEventUrl}'>${r.title}</a>`,
+          link: `<a class='links-naar-longtext-html' style="font-weight: bold; font-size: 18px" target='_blank' href='${`http://localhost/rockagenda/public/texts/${longTextURL}`}'>LongText</a>`,
+        };
+        return n;
+      });
+      this.dirtyDebug({
+        title: `event list res ${workerData.family}`,
+        eerste5Kort,
+      });
+      this.dirtyLog({
+        title: `event list res ${workerData.family}`,
+        eerste5Kort,
+      });
+    }
 
     return true;
   }

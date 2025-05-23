@@ -43,22 +43,23 @@
     }
   },
   {
-    "start": "2025-07-01T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/camilla-cabello",
-    "title": "Camila Cabello",
+    "start": "2025-06-24T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/the-cult",
+    "title": "The Cult",
     "location": "afaslive",
-    "price": 2025,
-    "longText": "../public/texts/afaslive/bGl2ZS5ubC9hZ2VuZGEvY2FtaWxsYS1jYWJlbGxv.html",
-    "image": "../public/event-images/afaslive/bGl2ZS5ubC9hZ2VuZGEvY2FtaWxsYS1jYWJlbGxv",
+    "price": 24,
+    "longText": "../public/texts/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL3RoZS1jdWx0.html",
+    "image": "../public/event-images/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL3RoZS1jdWx0",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "abel": {
-        "s": "0JRVrJQNnlSl10wEsioxOJ",
-        "l": "abel",
+      "the cult": {
+        "s": "49DW3KvkyjHO35mK1JnSyS",
+        "l": "the%20cult",
         "g": [
-          "stoner metal",
-          "rock"
+          "hard rock",
+          "glam metal",
+          "black metal"
         ]
       }
     }
@@ -88,50 +89,6 @@
     }
   },
   {
-    "start": "2025-09-13T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/jacks-world-series-of-darts-finals-4",
-    "title": "Jack’s casino world series of darts finals\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t13:00",
-    "location": "afaslive",
-    "price": 12,
-    "shortText": "  undefined",
-    "longText": "../public/texts/afaslive/d29ybGQtc2VyaWVzLW9mLWRhcnRzLWZpbmFscy00.html",
-    "image": "../public/event-images/afaslive/d29ybGQtc2VyaWVzLW9mLWRhcnRzLWZpbmFscy00",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "13:00": {
-        "s": null,
-        "l": "13:00",
-        "g": [
-          "technical death metal",
-          "deathcore"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-09-14T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/jacks-world-series-of-darts-finals-4",
-    "title": "Jack’s casino world series of darts finals\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t13:00",
-    "location": "afaslive",
-    "price": 12,
-    "shortText": "  undefined",
-    "longText": "../public/texts/afaslive/d29ybGQtc2VyaWVzLW9mLWRhcnRzLWZpbmFscy00.html",
-    "image": "../public/event-images/afaslive/d29ybGQtc2VyaWVzLW9mLWRhcnRzLWZpbmFscy00",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "13:00": {
-        "s": null,
-        "l": "13:00",
-        "g": [
-          "technical death metal",
-          "deathcore"
-        ]
-      }
-    }
-  },
-  {
     "start": "2025-09-29T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/pierce-the-veil",
     "title": "Pierce The Veil",
@@ -151,6 +108,18 @@
         ]
       }
     }
+  },
+  {
+    "start": "2025-10-04T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/yungblud",
+    "title": "Yungblud",
+    "location": "afaslive",
+    "price": 2025,
+    "longText": "../public/texts/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL3l1bmdibHVk.html",
+    "image": "../public/event-images/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL3l1bmdibHVk",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "door": "2025-10-20T20:00:00",
@@ -271,48 +240,6 @@
           "uk post-punk revival",
           "melodic death",
           "groove metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-11-24T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/lorde",
-    "title": "Lorde",
-    "location": "afaslive",
-    "price": 24,
-    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2xvcmRl.html",
-    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2xvcmRl",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "lorde": {
-        "s": "163tK9Wjr9P9DmM0AVK7lm",
-        "l": "lorde",
-        "g": [
-          "thrash metal",
-          "crossover"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-11-25T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/lorde",
-    "title": "Lorde",
-    "location": "afaslive",
-    "price": 24,
-    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2xvcmRl.html",
-    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2xvcmRl",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "lorde": {
-        "s": "163tK9Wjr9P9DmM0AVK7lm",
-        "l": "lorde",
-        "g": [
-          "thrash metal",
-          "crossover"
         ]
       }
     }
