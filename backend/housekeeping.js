@@ -85,9 +85,11 @@ export default class HouseKeeping {
    * @returns {array} verwijderde bestandsnamen
    */
   baseEventsCleanup(cleanInstructions) {
+    if (!cleanInstructions || cleanInstructions === "false") return [];
+
     const bestaandeBaseEventLists = fs.readdirSync(fsDirections.baseEventlists);
     const verwijderd = [];
-    const vv = this.vandaag;
+    const vv = this.vandaag; // TODO
 
     if (cleanInstructions.includes("all")) {
       bestaandeBaseEventLists
