@@ -38,18 +38,18 @@ export const workerConfig = {
     //     workerConcurrent: 1,
     //     forceSet: 2
     // }
-    doornroosje: {
-        workerCount: 1,
-        workerConcurrent: 1,
-        CPUReq: "high",
-        forceSet: 2
-    }
-    // effenaar: {
-    //     workerCount: 3,
+    // doornroosje: {
+    //     workerCount: 1,
+    //     workerConcurrent: 1,
     //     CPUReq: "high",
-    //     workerConcurrent: 2,
-    //     forceSet: 3
-    // },
+    //     forceSet: 2
+    // }
+    effenaar: {
+        workerCount: 1,
+        CPUReq: "high",
+        workerConcurrent: 1,
+        forceSet: 3
+    }
     // gebouwt: {
     //     workerCount: 1,
     //     workerConcurrent: 1,
