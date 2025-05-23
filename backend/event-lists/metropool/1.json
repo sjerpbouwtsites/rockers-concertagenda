@@ -54,98 +54,137 @@
   },
   {
     "start": "2025-10-07T20:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/yt",
-    "title": "Y&t",
+    "venueEventUrl": "https://metropool.nl/agenda/peter-hook-the-light",
+    "title": "Peter Hook & The Light",
     "location": "metropool",
     "price": 38,
-    "shortText": "De band die hardrock definieerde",
-    "longText": "../public/texts/metropool/aHR0cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL3l0.html",
-    "image": "../public/event-images/metropool/aHR0cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL3l0",
+    "shortText": "De oud-bassist van Joy Division en New Order",
+    "longText": "../public/texts/metropool/bmwvYWdlbmRhL3BldGVyLWhvb2stdGhlLWxpZ2h0.html",
+    "image": "../public/event-images/metropool/bmwvYWdlbmRhL3BldGVyLWhvb2stdGhlLWxpZ2h0",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "y&t": {
+      "peter hook & the light": {
+        "s": null,
+        "l": "peter%20hook%20&%20the%20light",
+        "g": [
+          "Postpunk",
+          "New Wave",
+          "Indie"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-10-11T14:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/beerland-met-claw-boys-claw",
+    "title": "Beerland met Claw Boys Claw",
+    "location": "metropool",
+    "price": 38,
+    "shortText": "Geniet samen met gelijkgezinden van (speciaal)bier en de beste bands",
+    "longText": "../public/texts/metropool/ZGEvYmVlcmxhbmQtbWV0LWNsYXctYm95cy1jbGF3.html",
+    "image": "../public/event-images/metropool/ZGEvYmVlcmxhbmQtbWV0LWNsYXctYm95cy1jbGF3",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "claw boys claw": {
+        "s": "5t378xbmytaymycg84zipv",
+        "l": "claw%20boys%20claw",
+        "g": [
+          "dutch blues",
+          "dutch indie",
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-10-25T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/hemelbestormer",
+    "title": "Hemelbestormer",
+    "location": "metropool",
+    "price": 19,
+    "shortText": "Waar licht en duisternis samensmelten tot een unieke mix van instrumentale post doom",
+    "longText": "../public/texts/metropool/b3Bvb2wubmwvYWdlbmRhL2hlbWVsYmVzdG9ybWVy.html",
+    "image": "../public/event-images/metropool/b3Bvb2wubmwvYWdlbmRhL2hlbWVsYmVzdG9ybWVy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "hemelbestormer": {
+        "s": "5oHzkbFUZZHA2y8t2aAhso",
+        "l": "hemelbestormer",
+        "g": [
+          "sludge metal",
+          "post-rock",
+          "doom metal",
+          "space rock",
+          "post-metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-11-14T21:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/temple-fang",
+    "title": "Temple Fang",
+    "location": "metropool",
+    "price": 18,
+    "shortText": "Rock’n’roll om geestelijke vrijheid te bereiken",
+    "longText": "../public/texts/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL3RlbXBsZS1mYW5n.html",
+    "image": "../public/event-images/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL3RlbXBsZS1mYW5n",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "temple fang": {
         "s": null,
         "l": null,
         "g": [
-          "symfonische rock"
+          "space rock",
+          "doom",
+          "psych",
+          "heavy psych",
+          "stoner"
         ]
       }
     }
   },
   {
-    "start": "2025-10-18T20:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/delain",
-    "title": "Delain",
+    "start": "2026-02-27T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/omnium-gatherum-fallujah-in-mourning",
+    "title": "Omnium gatherum + fallujah + in mourning",
     "location": "metropool",
-    "price": 30,
-    "shortText": "Een exclusieve show van de Nederlandse symfonische-metalband",
-    "longText": "../public/texts/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvZGVsYWlu.html",
-    "image": "../public/event-images/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvZGVsYWlu",
+    "price": 29,
+    "shortText": "De nieuwe generatie deathmetal op één podium",
+    "longText": "../public/texts/metropool/LWdhdGhlcnVtLWZhbGx1amFoLWluLW1vdXJuaW5n.html",
+    "image": "../public/event-images/metropool/LWdhdGhlcnVtLWZhbGx1amFoLWluLW1vdXJuaW5n",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "delain": {
-        "s": "6pIRdCtSE5hLFfIfcTAicI",
-        "l": "delain",
+      "fall": {
+        "s": null,
+        "l": "fall",
         "g": [
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "power metal",
-          "symphonic metal",
-          "symphonic metal",
-          "rock"
+          "death metal"
         ]
-      }
-    }
-  },
-  {
-    "start": "2025-10-31T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/doodseskader",
-    "title": "Doodseskader",
-    "location": "metropool",
-    "price": 20,
-    "shortText": "Niet voor de tere zieltjes",
-    "longText": "../public/texts/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvZG9vZHNlc2thZGVy.html",
-    "image": "../public/event-images/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvZG9vZHNlc2thZGVy",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "doodseskader": {
-        "s": "3nfvorn4wvioqrdljbxrok",
-        "l": "belgium",
+      },
+      "in mourning": {
+        "s": "0gsIXiV7rw5I9wJaxgoOdB",
+        "l": "in%20mourning",
         "g": [
-          "sludgecore",
-          "experimental sludge/post-metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-11-15T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/blackbriar",
-    "title": "Blackbriar",
-    "location": "metropool",
-    "price": 27.5,
-    "shortText": "Gothic metal met een filmisch randje",
-    "longText": "../public/texts/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9ibGFja2JyaWFy.html",
-    "image": "../public/event-images/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9ibGFja2JyaWFy",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "blackbriar": {
-        "s": "6pxqux3bytsvj7lcvviomi",
-        "l": "blackbriar",
-        "g": [
-          "dutch metal",
-          "gothic symphonic metal",
-          "slayer",
-          "symphonic metal"
+          "melodic death metal",
+          "progressive metal",
+          "melodic metal",
+          "death metal",
+          "doom metal",
+          "gothic",
+          "doom",
+          "death metal (early)",
+          " progressive melodic death metal (later)"
         ]
       }
     }

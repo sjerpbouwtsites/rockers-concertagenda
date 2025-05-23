@@ -107,52 +107,87 @@
     }
   },
   {
-    "start": "2025-07-04T08:00:00",
-    "end": "2025-07-04T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/left-lane-cruiser-usa/",
-    "title": "Left lane cruiser (usa) + lo-lite",
+    "start": "2025-06-30T04:30:00",
+    "end": "2025-06-30T10:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/aleksiproxima-flarehurryland/",
+    "title": "Aleksi+Proxima Flare+Hurryland",
     "location": "dbs",
-    "price": 10,
-    "shortText": "Als Joe Evans & Brenn Beck de oversteek naar Europa maken, willen we ze hier bij dB’s op de planken hebben. Dat is gelukkig ook deze keer weer gelukt nadat ze eerder al in juni vorig jaar de VLP 63 in vuur en vlam zetten. Dat gaat opnieuw gebeuren want er zijn maar weinig livebands met de rauwe energie van Left Lane Cruiser.",
-    "longText": "../public/texts/dbs/bC9ldmVudC9sZWZ0LWxhbmUtY3J1aXNlci11c2Ev.html",
-    "image": "../public/event-images/dbs/bC9ldmVudC9sZWZ0LWxhbmUtY3J1aXNlci11c2Ev",
+    "price": 7.5,
+    "shortText": "",
+    "longText": "../public/texts/dbs/L2FsZWtzaXByb3hpbWEtZmxhcmVodXJyeWxhbmQv.html",
+    "image": "../public/event-images/dbs/L2FsZWtzaXByb3hpbWEtZmxhcmVodXJyeWxhbmQv",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "left lane cruiser": {
-        "s": "2sJLswTuwPwm9Y1tMC4erf",
-        "l": "left%20lane%20cruiser",
+      "proxima flare": {
+        "s": "315Th53dV868sSv3jYt8UO",
+        "l": "proxima%20flare",
         "g": [
-          "blues rock",
-          "modern blues",
-          "stoner rock",
-          "gothic country",
-          "blues",
-          "country blues",
-          "garage rock"
+          "progressive metal",
+          "alternative",
+          "doom",
+          "heavy metal",
+          "progressive"
+        ]
+      },
+      "hurryland": {
+        "s": "7FxU3mrUjcrSYzFHYNYkQ9",
+        "l": "hurryland",
+        "g": [
+          "progressive metal"
         ]
       }
     }
   },
   {
-    "start": "2025-07-12T08:00:00",
-    "end": "2025-07-12T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/skampida-columbia/",
-    "title": "Skampida (columbia)",
+    "start": "2025-07-05T08:00:00",
+    "end": "2025-07-05T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/daddy-long-legs-support/",
+    "title": "Daddy long legs + support",
     "location": "dbs",
-    "price": 13,
-    "shortText": "Skampida is geen onbekende meer in Utrecht. Na diverse dampende uitverkochte shows in Acu en vorig jaar nog buiten bij de Nijverheid, is nu eindelijk dB’s aan de beurt. Deze party band bij uitstek die in 1998 werd opgericht in Bogota, Colombia breng een mix van Colombiaanse reggae, folkloristische ritmes en urban geluiden (hiphop, punk cumbia en champeta), samen met Roma-invloeden en drum & bass.\nStilstaan is geen optie.",
-    "longText": "../public/texts/dbs/aW8ubmwvZXZlbnQvc2thbXBpZGEtY29sdW1iaWEv.html",
-    "image": "../public/event-images/dbs/aW8ubmwvZXZlbnQvc2thbXBpZGEtY29sdW1iaWEv",
+    "price": 12.5,
+    "shortText": "Oh Yes! Super siked onze favo Rhythm & Blues Garage Punx DADDY LONG LEGS uit NYC op VLP 63 te verwelkomen.",
+    "longText": "../public/texts/dbs/ZXZlbnQvZGFkZHktbG9uZy1sZWdzLXN1cHBvcnQv.html",
+    "image": "../public/event-images/dbs/ZXZlbnQvZGFkZHktbG9uZy1sZWdzLXN1cHBvcnQv",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "skampida": {
-        "s": "2gFTHPd5iboV0IvQgsATno",
-        "l": "skampida",
+      "daddy long legs": {
+        "s": "26vp0YsAVautrWTzJXf6Zi",
+        "l": "daddy%20long%20legs",
         "g": [
-          "ska",
-          "ska punk"
+          "modern blues",
+          "garage rock",
+          "blues rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-07-15T08:00:00",
+    "end": "2025-07-15T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/dbs-tivre-present-battlesnake-aus/",
+    "title": "Db’s & tivre present battlesnake (aus)",
+    "location": "dbs",
+    "price": 10,
+    "shortText": "TivoliVredenburg & dB’s present BATTLESNAKE!",
+    "longText": "../public/texts/dbs/dGl2cmUtcHJlc2VudC1iYXR0bGVzbmFrZS1hdXMv.html",
+    "image": "../public/event-images/dbs/dGl2cmUtcHJlc2VudC1iYXR0bGVzbmFrZS1hdXMv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "battle": {
+        "s": null,
+        "l": "battle",
+        "g": [
+          "black metal"
+        ]
+      },
+      "snake": {
+        "s": null,
+        "l": "snake",
+        "g": [
+          "heavy metal"
         ]
       }
     }

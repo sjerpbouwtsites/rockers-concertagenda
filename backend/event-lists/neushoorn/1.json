@@ -108,28 +108,26 @@
     }
   },
   {
-    "start": "4051-01-16T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/scrum/",
-    "title": "Scrum",
+    "start": "2025-12-06T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/feuerengel-extra-show/",
+    "title": "Feuerengel – a tribute to rammstein",
     "location": "neushoorn",
-    "price": 22,
-    "shortText": "Zeskoppige powerfolk met ballen",
-    "longText": "../public/texts/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vc2NydW0v.html",
-    "image": "../public/event-images/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vc2NydW0v",
+    "price": 35,
+    "shortText": "Een perfecte illusie van het origineel Extra show",
+    "longText": "../public/texts/neushoorn/ZHVjdGlvbi9mZXVlcmVuZ2VsLWV4dHJhLXNob3cv.html",
+    "image": "../public/event-images/neushoorn/ZHVjdGlvbi9mZXVlcmVuZ2VsLWV4dHJhLXNob3cv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "scrum": {
-        "s": "0sGdJHX64lQqPYY0is2MjX",
-        "l": "scrum",
+      "feuerengel": {
+        "s": null,
+        "l": "feuerengel",
         "g": [
-          "celtic rock",
-          "celtic",
-          "folk rock",
-          "folk punk",
-          "pirate metal",
-          "doom metal"
+          "neue deutsche haerte",
+          "tanzmetal",
+          "industrial",
+          "industrial metal"
         ]
       }
     }
