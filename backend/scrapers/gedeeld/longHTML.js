@@ -177,6 +177,8 @@ export async function maakMediaHTMLBronnen(page, selectors, event) {
                 ? bron.getAttribute("data-src")
                 : bron?.hasAttribute("data-video-embed")
                 ? bron.getAttribute("data-video-embed")
+                : bron?.hasAttribute("data-lazy-src")
+                ? bron.getAttribute("data-lazy-src")
                 : "";
 
             const isYoutubeAnchor =
@@ -190,7 +192,10 @@ export async function maakMediaHTMLBronnen(page, selectors, event) {
               "data-video-embed-field-lazy"
             );
 
-            if (calcedSrc && calcedSrc.includes("about:blank")) {
+            if (
+              calcedSrc &&
+              Array.isArray(calcedSrc.match(/about\s?:\s?blank/))
+            ) {
               return null;
             }
 
@@ -203,7 +208,11 @@ export async function maakMediaHTMLBronnen(page, selectors, event) {
               };
             } else if (isSpotifyIframe) {
               if (!bron.hasAttribute("src")) {
-                bron.setAttribute("src", bron.getAttribute("data-src"));
+                if (bron.hasAttribute("data-src")) {
+                  bron.setAttribute("src", bron.getAttribute("data-src"));
+                } else if (bron.hasAttribute("data-lazy-src")) {
+                  bron.setAttribute("src", bron.getAttribute("data-lazy-src"));
+                }
               }
               return {
                 outer: bron.outerHTML,
@@ -282,7 +291,9 @@ export async function maakMediaHTMLBronnen(page, selectors, event) {
                                 data-src: ${bron.getAttribute("data-src")}<br> 
                                 HREF: ${bron?.href} 
                                 ID:<br> ${bron?.id}
-                                HTML: ${bron.outerHTML}<br>
+                                attributes: ${Array.from(bron.attributes)
+                                  .map((a) => `${a.name}=${a.value}`)
+                                  .join(", ")}<br>
                                  ClassName: ${bron?.className}<br>
                                  isYoutubeAnchor: ${isYoutubeAnchor}<br>
                                  isYoutubeIframe: ${isYoutubeIframe}<br>
