@@ -26,18 +26,18 @@ export const workerConfig = {
     // }
     //baroeg: { workerCount: 1, workerConcurrent: 2, forceSet: 0 }
     //bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 }
-    cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 }
+    //cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
     // dbs: {
     //     workerCount: 3,
     //     workerConcurrent: 3,
     //     CPUReq: "high",
     //     forceSet: 1
-    // },
-    // dehelling: {
-    //     workerCount: 1,
-    //     workerConcurrent: 1,
-    //     forceSet: 2
-    // },
+    // }
+    dehelling: {
+        workerCount: 1,
+        workerConcurrent: 1,
+        forceSet: 2
+    }
     // doornroosje: {
     //     workerCount: 1,
     //     workerConcurrent: 1,

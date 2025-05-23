@@ -287,14 +287,15 @@
     }
   },
   {
-    "start": "2025-05-24T18:00:00",
-    "end": "2025-05-24T23:00:00",
+    "start": "2025-05-24T22:00:00",
+    "end": "2025-05-24T03:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/no-barrier-24-05-2025/",
     "title": "No barrier",
     "location": "dehelling",
     "price": 14.2,
     "shortText": "Poppunk, Emo, Rock & Metalcore Party",
     "longText": "../public/texts/dehelling/L2FnZW5kYS9uby1iYXJyaWVyLTI0LTA1LTIwMjUv.html",
+    "image": "../public/event-images/dehelling/L2FnZW5kYS9uby1iYXJyaWVyLTI0LTA1LTIwMjUv",
     "eventGenres": null,
     "artists": {
       "no barrier": {
@@ -310,8 +311,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/clash-of-the-titans-2025-finale/",
     "title": "Clash of the titans 2025 – finale met accisma ",
     "location": "dbs",
-    "price": "0",
-    "shortText": " captain kelphair  +  kroos  +  part garden  +  croon ",
+    "price": 10,
+    "shortText": " captain kelphair  +  kroos  +  part garden  +  croon Na 40 bands verdeeld over 8 voorrondes, 2 halve finales en 1 wildcard ronde presenteren we met trots de vijf bands die gaan strijden (met liefde, zonder venijn) om de winst in de CLASH OF THE TITANS FINALE 2025. Tijdens het juryberaad speelt de winnaar van vorig jaar (prijsvraag; wie is dat?)",
     "longText": "../public/texts/dbs/YXNoLW9mLXRoZS10aXRhbnMtMjAyNS1maW5hbGUv.html",
     "image": "../public/event-images/dbs/YXNoLW9mLXRoZS10aXRhbnMtMjAyNS1maW5hbGUv",
     "unavailable": false,
@@ -406,6 +407,29 @@
           "pop",
           "rock & roll",
           "soul"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-25T04:00:00",
+    "end": "2025-05-25T08:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/boppin-the-rock-presents-gizzelle-the-savoys-wild-records-mischief-cc-jerome-trio/",
+    "title": "Boppin’ the Rock presents GIZZELLE & the Savoys (Wild Records) ",
+    "location": "dbs",
+    "price": 17.5,
+    "shortText": " Mischief!  +  CC Jerome Trio Behold people, Boppin’ the Rock pakt uit met een formidabele triple bill rond de Amerikaanse zangeres GIZZELLE & The Savoys, de Domtown maestro’s of rockabilly MISCHIEF! en het CC JEROME TRIO.",
+    "longText": "../public/texts/dbs/Y29yZHMtbWlzY2hpZWYtY2MtamVyb21lLXRyaW8v.html",
+    "image": "../public/event-images/dbs/Y29yZHMtbWlzY2hpZWYtY2MtamVyb21lLXRyaW8v",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
         ]
       }
     }
@@ -694,6 +718,20 @@
         ]
       }
     }
+  },
+  {
+    "start": "2025-05-29T08:30:00",
+    "end": "2025-05-29T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/club-3voor12-utrecht-12/",
+    "title": "CLUB 3voor12 Utrecht",
+    "location": "dbs",
+    "price": 6,
+    "shortText": "Donderdag 29 mei presenteren we een nieuwe editie van Club 3voor12 Utrecht in dB’s. Tickets (online 6 euro, deur 7 euro) zijn verkrijgbaar via dB’s en de ticketlink van het event (volgt z.s.m.). Op deze editie check je:",
+    "longText": "../public/texts/dbs/ZXZlbnQvY2x1Yi0zdm9vcjEyLXV0cmVjaHQtMTIv.html",
+    "image": "../public/event-images/dbs/ZXZlbnQvY2x1Yi0zdm9vcjEyLXV0cmVjaHQtMTIv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "start": "2025-05-30T20:00:00",
@@ -992,6 +1030,42 @@
     }
   },
   {
+    "start": "2025-05-31T07:30:00",
+    "end": "2025-05-31T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/terziele-release-show-hemelbestormer-b-gavran/",
+    "title": "Terziele release show ",
+    "location": "dbs",
+    "price": 10,
+    "shortText": " hemelbestormer (b)  +  gavran Ter Ziele Album Release Show – 31 mei dB’s Utrecht",
+    "longText": "../public/texts/dbs/LXNob3ctaGVtZWxiZXN0b3JtZXItYi1nYXZyYW4v.html",
+    "image": "../public/event-images/dbs/LXNob3ctaGVtZWxiZXN0b3JtZXItYi1nYXZyYW4v",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "hemelbestormer": {
+        "s": "5oHzkbFUZZHA2y8t2aAhso",
+        "l": "hemelbestormer",
+        "g": [
+          "sludge metal",
+          "post-rock",
+          "doom metal",
+          "space rock",
+          "post-metal"
+        ]
+      },
+      "gavran": {
+        "s": "0Z7JnoZUMxgmaLgApKMYpl",
+        "l": "gavran",
+        "g": [
+          "sludge metal",
+          "doom metal",
+          "sludge",
+          "doom metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-05-31T20:00:00",
     "start": "2025-05-31T20:30:00",
     "venueEventUrl": "https://www.cpunt.nl/agenda/eyehategod",
@@ -1079,6 +1153,7 @@
     "price": "0",
     "shortText": " Summer Vibe Alert: Lekker simpel en lekker gezellig: 4 x een zondag in juni met een 𝗚𝗥𝗔𝗧𝗜𝗦 show vanaf 16:00",
     "longText": "../public/texts/dbs/ZXRhLXB1bmthYmlsbHktZnJvbS1hcmdlbnRpbmEv.html",
+    "image": "../public/event-images/dbs/ZXRhLXB1bmthYmlsbHktZnJvbS1hcmdlbnRpbmEv",
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
@@ -1129,6 +1204,30 @@
         "g": [
           "metalcore",
           "deathcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-06-03T07:30:00",
+    "end": "2025-06-03T11:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/bellen-blaas-festival-met-control-v-can-of-worms-bistro-rosa-en-salamander-gratis/",
+    "title": "Bellen Blaas Festival met Control-V, Can of Worms, Bistro, Rosa en Salamander. Gratis",
+    "location": "dbs",
+    "price": "0",
+    "shortText": " Georganiseerd en uitgevoerd door studenten van het Conservatorium Utrecht. Een avond met optredens in cafe en zaal, deels ook meteen examen. Gratis en voor niets toegankelijk.",
+    "longText": "../public/texts/dbs/dHJvLXJvc2EtZW4tc2FsYW1hbmRlci1ncmF0aXMv.html",
+    "image": "../public/event-images/dbs/dHJvLXJvc2EtZW4tc2FsYW1hbmRlci1ncmF0aXMv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "can of worms": {
+        "s": "0J86wWYNuWmEoUi1wZ4cT0",
+        "l": "can%20of%20worms",
+        "g": [
+          "french death metal",
+          "thrash",
+          "death metal"
         ]
       }
     }
@@ -1387,6 +1486,20 @@
     "artists": {}
   },
   {
+    "start": "2025-06-06T08:00:00",
+    "end": "2025-06-06T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/wave-invasion-presents-patriarcy-usa-llora-usa/",
+    "title": "Wave invasion presents patriarchy (usa) ",
+    "location": "dbs",
+    "price": 15,
+    "shortText": " coatie pop (usa) Riemen vast voor een avond opwindende en confronterende gothic synth pop, EBM, wave met zelfs een snuif metal. Enter PATRIARCHY & Coatie Pop!",
+    "longText": "../public/texts/dbs/c2VudHMtcGF0cmlhcmN5LXVzYS1sbG9yYS11c2Ev.html",
+    "image": "../public/event-images/dbs/c2VudHMtcGF0cmlhcmN5LXVzYS1sbG9yYS11c2Ev",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2025-06-06T18:30:00",
     "start": "2025-06-06T18:30:00",
     "venueEventUrl": "https://www.013.nl/programma/106183/neal-morse-the-resonance-the-flower-kings",
@@ -1582,7 +1695,6 @@
     "price": "0",
     "shortText": "",
     "longText": "../public/texts/dbs/YnN0dWRpby5ubC9ldmVudC9ob2x5LXNjdW0tdWsv.html",
-    "image": "../public/event-images/dbs/YnN0dWRpby5ubC9ldmVudC9ob2x5LXNjdW0tdWsv",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
@@ -1784,6 +1896,36 @@
     }
   },
   {
+    "start": "2025-06-12T08:00:00",
+    "end": "2025-06-12T11:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/big-ass-metal-fest-42/",
+    "title": "Big ass metal fest #42",
+    "location": "dbs",
+    "price": 10,
+    "shortText": "",
+    "longText": "../public/texts/dbs/bC9ldmVudC9iaWctYXNzLW1ldGFsLWZlc3QtNDIv.html",
+    "image": "../public/event-images/dbs/bC9ldmVudC9iaWctYXNzLW1ldGFsLWZlc3QtNDIv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
     "title": "Into The Grave",
     "start": "2025-06-13",
     "eventLocationName": "leeuwarden\nmet exodus",
@@ -1950,8 +2092,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/dopethrone-can-void-claw/",
     "title": "Dopethrone (can) + voidclaw",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 14,
+    "shortText": "Dopethrone (CA) + Voidclaw",
     "longText": "../public/texts/dbs/dmVudC9kb3BldGhyb25lLWNhbi12b2lkLWNsYXcv.html",
     "image": "../public/event-images/dbs/dmVudC9kb3BldGhyb25lLWNhbi12b2lkLWNsYXcv",
     "unavailable": false,
@@ -2079,6 +2221,30 @@
     }
   },
   {
+    "start": "2025-06-19T08:00:00",
+    "end": "2025-06-19T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/digger-the-pussycats-oz/",
+    "title": "Digger & the pussycats (oz) ",
+    "location": "dbs",
+    "price": 13.5,
+    "shortText": " mitraille(b)  +  the mono kids Dat we dit nog mogen meemaken, Digger & the Pussycats, Sam &Andy terug in dB’s!\nYou drive like a cunt, nog steeds. Moeten al gauw terug in de tijd naar de periode 2005- 2012 toen dit illustere duo met grote regelmaat de podia in Europa aan gort kwam spelen en (onder andere) dB’s als uitvalsbasis gebruikte. Toen kwamen er allemaal grote mensen dingen aan die de band op een laag pitje zetten tot NU! Digger & the Pussycats komt weer naar Nederland en een show in de nieuwe dB’s mag dan ook niet ontbreken.",
+    "longText": "../public/texts/dbs/ZXZlbnQvZGlnZ2VyLXRoZS1wdXNzeWNhdHMtb3ov.html",
+    "image": "../public/event-images/dbs/ZXZlbnQvZGlnZ2VyLXRoZS1wdXNzeWNhdHMtb3ov",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "mono": {
+        "s": "53LVoipNTQ4lvUSJ61XKU3",
+        "l": "mono",
+        "g": [
+          "post-rock",
+          "math rock",
+          "sludge metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-06-19T19:00:00",
     "start": "2025-06-19T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/105358/skillet",
@@ -2167,8 +2333,8 @@
     }
   },
   {
-    "start": "2025-06-22T18:00:00",
-    "end": "2025-06-22T23:00:00",
+    "start": "2025-06-22T22:00:00",
+    "end": "2025-06-22T03:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/tetrarch-22-06-2025/",
     "title": "Tetrarch",
     "location": "dehelling",
@@ -2296,6 +2462,29 @@
     }
   },
   {
+    "start": "2025-06-25T05:30:00",
+    "end": "2025-06-25T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/dont-stop-talking-about-palestine/",
+    "title": "Don’t stop talking about palestine",
+    "location": "dbs",
+    "shortText": "Afgelopen zondag gingen we met meer dan 100.000 mensen de straat op om een rode lijn te trekken. Laat de aandacht niet verslappen, juist nu niet. Oxfam Novib, TivoliVredenburg, De Helling, EKKO en dB’s organiseren op woensdag 25 juni een event in het teken van Palestina. Op het programma staat livemuziek, performances, kunst, cultuur en eten om een open en verbindend gesprek te stimuleren. De tickets zijn op basis van Pay What You Want. Per ticket gaat er € 5,- naar servicekosten en de rest van de inkomsten komen volledig ten goede aan de noodhulp die Oxfam Novib biedt aan mensen in Palestina. Het programma wordt binnenkort bekend gemaakt.",
+    "longText": "../public/texts/dbs/LXN0b3AtdGFsa2luZy1hYm91dC1wYWxlc3RpbmUv.html",
+    "image": "../public/event-images/dbs/LXN0b3AtdGFsa2luZy1hYm91dC1wYWxlc3RpbmUv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "talk": {
+        "s": null,
+        "l": "talk",
+        "g": [
+          "crossover",
+          "hardcore",
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
     "title": "Jera On Air",
     "start": "2025-06-26",
     "eventLocationName": "ysselstyn\nmet turnstile",
@@ -2402,6 +2591,29 @@
     }
   },
   {
+    "start": "2025-06-27T08:00:00",
+    "end": "2025-06-27T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/the-midnight-ghost-train-usa-sons-of-node/",
+    "title": "The midnight ghost train (usa) + sons of node",
+    "location": "dbs",
+    "price": 15,
+    "shortText": "Aight, onze buddies van THE MIDNIGHT GHOST TRAIN keren weer terug naar Europa, dit keer echt voor een allerlaatste keer. Hierna ga je dit trio niet meer aan het werk zien. Als je ze niet kent weet dan dat TMGT een van de beste stonerrocktrio’s van het afgelopen decennium is. Als je ze wel kent, dan haal je beter snel die tickets voor een show die episch zal zijn. Siked dat ze dB’s hoog op hun lijst van favo venues hebben staan en dus ook absoluut hier willen spelen!",
+    "longText": "../public/texts/dbs/LWdob3N0LXRyYWluLXVzYS1zb25zLW9mLW5vZGUv.html",
+    "image": "../public/event-images/dbs/LWdob3N0LXRyYWluLXVzYS1zb25zLW9mLW5vZGUv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ghost": {
+        "s": "1qp56t7n950o3egmssl81d",
+        "l": "ghost",
+        "g": [
+          "hard rock",
+          "metal"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-06-28T20:30:00",
     "venueEventUrl": "https://www.littledevil.nl/calendar/the-midnight-ghost-train-usa-sons-of-node/",
     "title": "The Midnight Ghost Train (USA) + Sons of Node",
@@ -2429,8 +2641,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/the-subhumans-uk-anarcho-punk-legends/",
     "title": "The subhumans (uk anarcho punk legends) ",
     "location": "dbs",
-    "price": "0",
-    "shortText": " kort door de bocht  +  mouser  +  dj steve ",
+    "price": 10,
+    "shortText": " kort door de bocht  +  mouser  +  dj steve Zeer invloedrijke aartsvaders en vaandeldragers van de UK Anarcho Punk. Ook bij hen geldt dat hun eerste, én wat latere EP’s ware klassiekers in het genre zijn. Hun eerste EP ‘Demolition War’ kwam uit in 1981 op het Spiderleg label van de Anarcho band Flux of Pink Indians en sloeg overal in als een bom. Gekenmerkt door een wat ‘muzikalere’ sound en songwriting maar niet minder (juist méér) bijtend en agressief in combinatie met de overeenkomstige teksten en ‘delivery’ van zanger Dick Lucas maakten dit de band onweerstaanbaar.\nAnno 2025 trekken The Subhumans nog steeds door stad en land om hun politieke boodschap te verkondigen. Wel ouder niet kouder, en zeker niet minder betrokken spuwen Dick Lucas en de zijnen hun gal over de huidige verrotte wereld. Nu meer dan ooit, anarcho punk to save the world (or die trying).",
     "longText": "../public/texts/dbs/dW1hbnMtdWstYW5hcmNoby1wdW5rLWxlZ2VuZHMv.html",
     "image": "../public/event-images/dbs/dW1hbnMtdWstYW5hcmNoby1wdW5rLWxlZ2VuZHMv",
     "unavailable": false,
@@ -2946,6 +3158,30 @@
     }
   },
   {
+    "start": "2025-07-05T08:00:00",
+    "end": "2025-07-05T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/daddy-long-legs-support/",
+    "title": "Daddy long legs + support",
+    "location": "dbs",
+    "price": 12.5,
+    "shortText": "Oh Yes! Super siked onze favo Rhythm & Blues Garage Punx DADDY LONG LEGS uit NYC op VLP 63 te verwelkomen.",
+    "longText": "../public/texts/dbs/ZXZlbnQvZGFkZHktbG9uZy1sZWdzLXN1cHBvcnQv.html",
+    "image": "../public/event-images/dbs/ZXZlbnQvZGFkZHktbG9uZy1sZWdzLXN1cHBvcnQv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "daddy long legs": {
+        "s": "26vp0YsAVautrWTzJXf6Zi",
+        "l": "daddy%20long%20legs",
+        "g": [
+          "modern blues",
+          "garage rock",
+          "blues rock"
+        ]
+      }
+    }
+  },
+  {
     "title": "Pirate Metal Party",
     "start": "2025-07-06",
     "eventLocationName": "cacaofabriek",
@@ -3145,8 +3381,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/pro-pain-usa-legends-of-hardcore-metal/",
     "title": "Pro-pain (usa legends of hardcore metal)",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 21,
+    "shortText": "Zo net voor de grote vakantie pakken we nog weer eens keer uit met de helden van Pro-Pain. Al voor de tweede keer op de nieuwe locatie, ook omdat Gary en de zijnen graag de voortgang willen checken.",
     "longText": "../public/texts/dbs/dXNhLWxlZ2VuZHMtb2YtaGFyZGNvcmUtbWV0YWwv.html",
     "image": "../public/event-images/dbs/dXNhLWxlZ2VuZHMtb2YtaGFyZGNvcmUtbWV0YWwv",
     "unavailable": false,
@@ -3183,6 +3419,29 @@
         "g": [
           "groove",
           "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-07-12T08:00:00",
+    "end": "2025-07-12T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/skampida-columbia/",
+    "title": "Skampida (columbia)",
+    "location": "dbs",
+    "price": 13,
+    "shortText": "Skampida is geen onbekende meer in Utrecht. Na diverse dampende uitverkochte shows in Acu en vorig jaar nog buiten bij de Nijverheid, is nu eindelijk dB’s aan de beurt. Deze party band bij uitstek die in 1998 werd opgericht in Bogota, Colombia breng een mix van Colombiaanse reggae, folkloristische ritmes en urban geluiden (hiphop, punk cumbia en champeta), samen met Roma-invloeden en drum & bass.\nStilstaan is geen optie.",
+    "longText": "../public/texts/dbs/aW8ubmwvZXZlbnQvc2thbXBpZGEtY29sdW1iaWEv.html",
+    "image": "../public/event-images/dbs/aW8ubmwvZXZlbnQvc2thbXBpZGEtY29sdW1iaWEv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "skampida": {
+        "s": "2gFTHPd5iboV0IvQgsATno",
+        "l": "skampida",
+        "g": [
+          "ska",
+          "ska punk"
         ]
       }
     }
@@ -3415,6 +3674,38 @@
     }
   },
   {
+    "start": "2025-07-17T08:00:00",
+    "end": "2025-07-17T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/zeke/",
+    "title": "ZEKE + Killer Kin + Evil Centric",
+    "location": "dbs",
+    "price": 12.5,
+    "shortText": "HARDER SNELLER!\nZEKE, GODDAMN ROCK N ROLL!\nLEGENDS!!\nDeze Amerikaanse hardcoreband uit Seattle heeft een motto: They only play raw, fast, and loud. De onbezonnen punk’n’rollers overdonderen met supersnelle riffs, wat resulteert in een onmiskenbaar geluid. Carrièrehoogtepunten zoals ‘Kicked in the Teeth’, ‘Death Alley’, en ‘Til the Livin’ End’ laten zich allemaal kenmerken door de schreeuwzang van “Blind” Marky Felchtone, de krachtige ritmes en de eenvoud van hun nummers.\nTickets op tijd aanschaffen voor deze enige Nederlandse clubshow!",
+    "longText": "../public/texts/dbs/Oi8vd3d3LmRic3R1ZGlvLm5sL2V2ZW50L3pla2Uv.html",
+    "image": "../public/event-images/dbs/Oi8vd3d3LmRic3R1ZGlvLm5sL2V2ZW50L3pla2Uv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "zeke": {
+        "s": "7HvjR3M6xzluBLTnioRzvu",
+        "l": "zeke",
+        "g": [
+          "punk 'n' roll",
+          "progressive metal",
+          "rock"
+        ]
+      },
+      "evilcentric": {
+        "s": null,
+        "l": "evilcentric",
+        "g": [
+          "stoner",
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-07-17T19:00:00",
     "start": "2025-07-17T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/105979/kaonashi",
@@ -3443,8 +3734,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/boppin-the-rock-big-bluegrass-special-feat-john-miller-uk-the-original-five-swe/",
     "title": "Boppin’ the rock big bluegrass special feat. john miller (uk) & the original five (swe)",
     "location": "dbs",
-    "price": "0",
-    "shortText": " ",
+    "price": 13,
+    "shortText": " Deze vrijdag aan de vooravond van ons groot tweedaags dB’s Open Festival pakken we nog even een heerlijk avondje bluegrass mee met onze favoriete Schotse cowboy JOHN MILLER die voor deze tour op pad gaat met de Zweedse cowboys van The Original Five, een van de meest vooraanstaande traditionele bluegrass gezelschappen in de huidige rootsmuziek. Na een optreden van The Original Five, zal de held van deze avond, John Miller, aansluiten met zijn eigen authentieke stemgeluid.\nHet wordt een avond die niet te missen is voor liefhebbers van traditionele country en bluegrass, muzikaal vakmanschap en sowieso een feestje.",
     "longText": "../public/texts/dbs/bGxlci11ay10aGUtb3JpZ2luYWwtZml2ZS1zd2Uv.html",
     "image": "../public/event-images/dbs/bGxlci11ay10aGUtb3JpZ2luYWwtZml2ZS1zd2Uv",
     "unavailable": false,
@@ -3914,14 +4205,37 @@
     "artists": {}
   },
   {
-    "start": "2025-08-09T18:00:00",
-    "end": "2025-08-09T23:00:00",
+    "start": "2025-08-08T08:00:00",
+    "end": "2025-08-08T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/dogma/",
+    "title": "Dogma",
+    "location": "dbs",
+    "price": 15,
+    "shortText": "Religie? Cult? Wat het ook precies mag zijn, mysterieus is het wel, deze all female rock band die flirt met alle wetten. Vermomd als kwaadaardige nonnen maken deze vrouwen classic harde rock (hoewel de laatste single van Dogma dan weer flirt met tango) met een heel theatrale inslag. Denk aan een all female versie van KISS, of Alice Cooper maar dan anders.\nWie ze precies zijn en waar ze vandaan komen is onbekend maar DOGMA – Lilith, Lamia, Nixe, Rusalka en Abrahel – is vastbesloten de wereld te veroveren met hun explosieve mix van theatrale rock, zware riffs en provocerende teksten. En dat lukt tot nog toe vrij goed getuige de immense following die ze hebben opgebouwd.\nHeel benieuwd hoe dit live bij ons op het podium uit de verf gaat komen. DOGMA gaat uiteindelijk een stadionrockband worden met een goedkeurende Madonna in de VIP seat die meehumt met DOGMA’s versie van Like a Prayer.\nFEMALE POWER!",
+    "longText": "../public/texts/dbs/Ly93d3cuZGJzdHVkaW8ubmwvZXZlbnQvZG9nbWEv.html",
+    "image": "../public/event-images/dbs/Ly93d3cuZGJzdHVkaW8ubmwvZXZlbnQvZG9nbWEv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "dogma": {
+        "s": "4R6XPuqGShFESRVkCePaxj",
+        "l": "dogma",
+        "g": [
+          "groove metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-08-09T22:00:00",
+    "end": "2025-08-09T03:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/wednesday-13-09-08-2025/",
     "title": "Wednesday 13",
     "location": "dehelling",
     "price": 25.2,
     "shortText": "Bloedstollende horrorpunk laat je nachtmerries op sprookjes lijken",
     "longText": "../public/texts/dehelling/Z2VuZGEvd2VkbmVzZGF5LTEzLTA5LTA4LTIwMjUv.html",
+    "image": "../public/event-images/dehelling/Z2VuZGEvd2VkbmVzZGF5LTEzLTA5LTA4LTIwMjUv",
     "eventGenres": null,
     "artists": {
       "wednesday 13": {
@@ -3977,14 +4291,15 @@
     }
   },
   {
-    "start": "2025-08-11T18:00:00",
-    "end": "2025-08-11T23:00:00",
+    "start": "2025-08-11T22:00:00",
+    "end": "2025-08-11T03:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/the-fall-of-troy-11-08-2025/",
     "title": "The Fall Of Troy",
     "location": "dehelling",
     "price": 25.2,
     "shortText": "Posthardcore-legendes vieren twintig jaar Doppelgänger",
     "longText": "../public/texts/dehelling/YS90aGUtZmFsbC1vZi10cm95LTExLTA4LTIwMjUv.html",
+    "image": "../public/event-images/dehelling/YS90aGUtZmFsbC1vZi10cm95LTExLTA4LTIwMjUv",
     "eventGenres": null,
     "artists": {
       "the fall of troy": {
@@ -5115,6 +5430,28 @@
     }
   },
   {
+    "start": "2025-09-20T22:00:00",
+    "end": "2025-09-20T03:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/sugar-spine-20-09-2025/",
+    "title": "Sugar Spine",
+    "location": "dehelling",
+    "price": 19.2,
+    "shortText": "Utrechts hardste hardcore/metalband presenteert nieuwe EP",
+    "longText": "../public/texts/dehelling/YWdlbmRhL3N1Z2FyLXNwaW5lLTIwLTA5LTIwMjUv.html",
+    "image": "../public/event-images/dehelling/YWdlbmRhL3N1Z2FyLXNwaW5lLTIwLTA5LTIwMjUv",
+    "eventGenres": null,
+    "artists": {
+      "sugar spine": {
+        "s": "2xevvc5j2ink2vea2wnwkr",
+        "l": null,
+        "g": [
+          "metalcore",
+          "progressive"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-09-20T05:00:00",
     "end": "2025-09-20T11:00:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/big-ass-metal-xxl-43-disquiet-25-years-anniversary-w-beyond-the-pale-temptations-for-the-weak-b-insurrection-nl-scars-no/",
@@ -5302,14 +5639,15 @@
     }
   },
   {
-    "start": "2025-09-25T18:00:00",
-    "end": "2025-09-25T23:00:00",
+    "start": "2025-09-25T22:00:00",
+    "end": "2025-09-25T03:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/wolfheart-25-09-2025/",
     "title": "Wolfheart",
     "location": "dehelling",
     "price": 24.7,
     "shortText": "Melancholische Finse death metal lawine verplettert alles op zijn pad",
     "longText": "../public/texts/dehelling/bC9hZ2VuZGEvd29sZmhlYXJ0LTI1LTA5LTIwMjUv.html",
+    "image": "../public/event-images/dehelling/bC9hZ2VuZGEvd29sZmhlYXJ0LTI1LTA5LTIwMjUv",
     "eventGenres": null,
     "artists": {
       "wolfheart": {
@@ -5579,14 +5917,15 @@
     }
   },
   {
-    "start": "2025-09-28T18:00:00",
-    "end": "2025-09-28T23:00:00",
+    "start": "2025-09-28T22:00:00",
+    "end": "2025-09-28T03:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/night-verses-28-09-2025/",
     "title": "Night Verses",
     "location": "dehelling",
     "price": 24.2,
     "shortText": "Post-metal spacerock pioniers katapulteren je de ruimte in",
     "longText": "../public/texts/dehelling/Z2VuZGEvbmlnaHQtdmVyc2VzLTI4LTA5LTIwMjUv.html",
+    "image": "../public/event-images/dehelling/Z2VuZGEvbmlnaHQtdmVyc2VzLTI4LTA5LTIwMjUv",
     "eventGenres": null,
     "artists": {
       "night verses": {
@@ -5688,6 +6027,20 @@
         ]
       }
     }
+  },
+  {
+    "start": "2025-10-02T08:00:00",
+    "end": "2025-10-02T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/the-lets-gos-japan/",
+    "title": "The let’s go’s (japan)",
+    "location": "dbs",
+    "price": 13.5,
+    "shortText": "Japan, Punk ‘n Roll en drie meiden, dat kan niet fout gaan, enter THE LET’S GO’S uit Tokyo.",
+    "longText": "../public/texts/dbs/by5ubC9ldmVudC90aGUtbGV0cy1nb3MtamFwYW4v.html",
+    "image": "../public/event-images/dbs/by5ubC9ldmVudC90aGUtbGV0cy1nb3MtamFwYW4v",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "door": "2025-10-02T19:00:00",
@@ -6214,8 +6567,8 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/boppin-the-rock-presents-t-99-bacon-fat-louis/",
     "title": "Boppin’ the Rock presents T-99 ",
     "location": "dbs",
-    "price": "0",
-    "shortText": " Bacon Fat Louis ",
+    "price": 15,
+    "shortText": " Bacon Fat Louis In de Nederlandse roots rock scene kan er maar een de grootste zijn en dat is T-99!\nT-99 is 26 YEARS OF ROOTS ‘N’ ROLL maar ook BLUES, COUNTRY, ROCKABILLY, SURF en verkoop je SOUL maar aan de duivel-muziek. Echte liedjes voor echte mensen vakkundig gebracht door maestro’s Mischa den Haring, Martin de Ruiter en Donné la Fontaine, drie wilde rock-‘n-roll-vrijbuiters met groots grommende gitaren, roffelbeukende drums, pets-kets contrabas en dubbelloops vocalen.\nToonaangevend muziektijdschrift OOR schreef ooit : “T-99 is de meest opwindende en vernieuwende rootsband van Nederland en ver daarbuiten” -en dat citaat hoeft nog steeds niet te worden bijgesteld.  Ga ze live zien. Want op het podium begint T-99 pas echt te glimmen. Daar rocken ze, daar ratelen ze, daar rollen ze, daar schudden en swingen ze. Daar komen die drie bastaardzonen van de blues tot leven alsof de duivel ze op de hielen zit. En zetten ze elke zaal, elke club, elk café, elk gat en elke stad in vuur en vlam zoals Jerry Lee ooit zijn piano. En als je ze live hebt gezien, weet je het voor altijd. Je zult bekeerd worden, een fan voor het leven.",
     "longText": "../public/texts/dbs/cHJlc2VudHMtdC05OS1iYWNvbi1mYXQtbG91aXMv.html",
     "image": "../public/event-images/dbs/cHJlc2VudHMtdC05OS1iYWNvbi1mYXQtbG91aXMv",
     "unavailable": false,
@@ -6938,6 +7291,28 @@
     }
   },
   {
+    "start": "2025-10-30T22:00:00",
+    "end": "2025-10-30T03:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/thornhill-30-10-2025/",
+    "title": "Thornhill",
+    "location": "dehelling",
+    "price": 28.2,
+    "shortText": "Australiërs maken alt-metal weer sexy",
+    "longText": "../public/texts/dehelling/bC9hZ2VuZGEvdGhvcm5oaWxsLTMwLTEwLTIwMjUv.html",
+    "image": "../public/event-images/dehelling/bC9hZ2VuZGEvdGhvcm5oaWxsLTMwLTEwLTIwMjUv",
+    "eventGenres": null,
+    "artists": {
+      "thornhill": {
+        "s": "2dE5audbkV3o5cKxvM7lBD",
+        "l": "thornhill",
+        "g": [
+          "metalcore",
+          "djent"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-10-30T19:00:00",
     "start": "2025-10-30T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/112105/planet-of-zeus",
@@ -7011,8 +7386,8 @@
     }
   },
   {
-    "start": "2025-10-31T18:00:00",
-    "end": "2025-10-31T23:00:00",
+    "start": "2025-10-31T22:00:00",
+    "end": "2025-10-31T03:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/a-hella-mean-halloween-31-10-2025/",
     "title": "A Hella Mean Halloween",
     "location": "dehelling",
@@ -7090,6 +7465,20 @@
         "g": []
       }
     }
+  },
+  {
+    "start": "2025-11-01T08:00:00",
+    "end": "2025-11-01T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/dub-pistols-uk/",
+    "title": "Dub pistols (uk)",
+    "location": "dbs",
+    "price": 20,
+    "shortText": "Fantastische liveband en een garantie voor a big party!\nDub Pistols bestaat ruim 25 jaar en heeft in die tijd een unieke sound ontwikkelt met invloeden uit dub, punk, jungle, ska, breakbeat, hip-hop, jungle en nog veel meer.",
+    "longText": "../public/texts/dbs/dHVkaW8ubmwvZXZlbnQvZHViLXBpc3RvbHMtdWsv.html",
+    "image": "../public/event-images/dbs/dHVkaW8ubmwvZXZlbnQvZHViLXBpc3RvbHMtdWsv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "title": "Battle Beast, Dominum en Majestica",
@@ -8100,6 +8489,32 @@
           "punk 'n' roll",
           "progressive metal",
           "rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-11-29T08:00:00",
+    "end": "2025-11-29T11:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/temple-fang-support-2/",
+    "title": "Temple fang + support",
+    "location": "dbs",
+    "price": 17,
+    "shortText": "De absolute meesters van de NL psychedelica blijven maar geven! Lifted From the Wind heet de eerste echte studioplaat van Temple Fang, vijf nummer die zoals we gewend zijn van hun energieke live-optredens, heerlijk hallucinant alle hoeken van het muzikale psychedelische universum bestrijken. Siked dat ze de plaat ook hier komen spelen want zoals hopelijk bekend verondersteld mag worden, hebben de mannen van Temple Fang een speciaal plekje voor dB’s in hun grote harten, en vice versa. Midden in de pandemie, december 2020, speelden de heren drie legendarische seated shows hier. Opnames daarvan kwamen deels terecht op de dubbelelpee Fang Temple.",
+    "longText": "../public/texts/dbs/bC9ldmVudC90ZW1wbGUtZmFuZy1zdXBwb3J0LTIv.html",
+    "image": "../public/event-images/dbs/bC9ldmVudC90ZW1wbGUtZmFuZy1zdXBwb3J0LTIv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "temple fang": {
+        "s": null,
+        "l": null,
+        "g": [
+          "space rock",
+          "doom",
+          "psych",
+          "heavy psych",
+          "stoner"
         ]
       }
     }

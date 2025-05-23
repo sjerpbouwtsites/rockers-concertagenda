@@ -150,6 +150,8 @@ dehellingScraper.mainPage = async function () {
 
 // #region      SINGLE PAGE
 dehellingScraper.singlePage = async function ({ page, event }) {
+    this.dirtyTalk(event.title);
+
     const { stopFunctie } = await this.singlePageStart();
 
     // cookie accept voor iframes
@@ -192,6 +194,9 @@ dehellingScraper.singlePage = async function ({ page, event }) {
         selectors: [".img--cover img", ".u-section__inner img"],
         mode: "image-src"
     }).catch((err) => this.handleError(err));
+
+    await this.waitTime(500); // TODO HACK WAIT TIME WANT PAGE WORDT VERNIETIGD TE SNEL
+
     pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
     pageInfo.image = imageRes.image;
 
