@@ -1,149 +1,55 @@
 /* eslint-disable  */
 /* eslint-disable indent */
 /* global document */
+
+import {
+    handleError,
+    ongewensteHTMLUitHeleDocument,
+    eersteLadingOverbodigeAttributesWeg,
+    maakMediaHTMLBronnen,
+    hinderlijkeTekstenEruitSlopen,
+    formatHTMLTextBodyNaarEenSpatieMax,
+    legeHTMLElementenVerwijderen,
+    maakTekstBlokHTML,
+    standaardSelectorConfig,
+    removeElementsRecursive
+} from "../gedeeld/longHTML.js";
+
 export default async function longTextSocialsIframes(page, event) {
-    return page.evaluate(
-        // eslint-disable-next-line no-shadow
-        ({ event }) => {
-            const res = {};
+    const res = {
+        mediaForHTML: null,
+        textForHTML: null
+    };
+    // in standaard removeEls saveTheseAttrsFirst removeAttrsLastStep
+    // removeHTMLWithStrings htmlElementsWithStringsToRemove
+    const selectors = {
+        ...standaardSelectorConfig,
+        textBody: "sidebar + .content",
+        mediaEls: ".responsive-embed iframe, .tophits iframe",
+        removeEmptyHTMLFrom: "sidebar + .content",
+        removeHTMLWithStrings: []
+    };
 
-            const textSelector = "sidebar + .content";
-            const mediaSelector = [
-                ".responsive-embed iframe, .tophits iframe"
-            ].join(", ");
-            const removeEmptyHTMLFrom = textSelector;
+    selectors.removeEls.concat([
+        "sidebar + .content .responsive-embed",
+        "sidebar + .content .summary"
+    ]);
 
-            const removeSelectors = [
-                `${textSelector} [class*='icon-']`,
-                `${textSelector} [class*='fa-']`,
-                `${textSelector} .fa`,
-                `${textSelector} script`,
-                `${textSelector} noscript`,
-                `${textSelector} style`,
-                `${textSelector} meta`,
-                `${textSelector} svg`,
-                `${textSelector} form`,
-                `${textSelector} img`,
-                `${textSelector} .responsive-embed`,
-                `${textSelector} .summary`
-            ].join(", ");
+    res.mediaForHTML = await maakMediaHTMLBronnen(page, selectors, event);
 
-            const attributesToRemove = [
-                "style",
-                "hidden",
-                "_target",
-                "frameborder",
-                "onclick",
-                "aria-hidden",
-                "allow",
-                "allowfullscreen",
-                "data-deferlazy",
-                "width",
-                "height"
-            ];
-            const attributesToRemoveSecondRound = ["class", "id"];
-            const removeHTMLWithStrings = [];
+    await ongewensteHTMLUitHeleDocument(page, selectors);
 
-            const mediaAttrRemSelAdd = `${
-                mediaSelector.length
-                    ? `, ${mediaSelector} *, ${mediaSelector}`
-                    : ""
-            }`;
-            const textSocEnMedia = `${textSelector} ${mediaAttrRemSelAdd}`;
-            document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-                attributesToRemove.forEach((attr) => {
-                    if (elToStrip.hasAttribute(attr)) {
-                        elToStrip.removeAttribute(attr);
-                    }
-                });
-            });
+    await eersteLadingOverbodigeAttributesWeg(page, selectors);
 
-            // media obj maken voordat HTML verdwijnt
-            res.mediaForHTML = !mediaSelector.length
-                ? ""
-                : Array.from(document.querySelectorAll(mediaSelector)).map(
-                      (bron) => {
-                          bron.className = "";
+    await hinderlijkeTekstenEruitSlopen(page, selectors);
 
-                          if (
-                              bron.hasAttribute("src") &&
-                              bron.getAttribute("src").includes("youtube")
-                          ) {
-                              return {
-                                  outer: bron.outerHTML,
-                                  src: bron.src,
-                                  id: null,
-                                  type: "youtube"
-                              };
-                          }
+    await formatHTMLTextBodyNaarEenSpatieMax(page, selectors);
 
-                          // terugval???? nog niet bekend met alle opties.
-                          return {
-                              outer: bron.outerHTML,
-                              src: bron.src,
-                              id: null,
-                              type: bron.src.includes("spotify")
-                                  ? "spotify"
-                                  : bron.src.includes("youtube")
-                                  ? "youtube"
-                                  : "bandcamp"
-                          };
-                      }
-                  );
+    await removeElementsRecursive(page, selectors);
 
-            // stript HTML tbv text
-            removeSelectors.length &&
-                document
-                    .querySelectorAll(removeSelectors)
-                    .forEach((toRemove) =>
-                        toRemove.parentNode.removeChild(toRemove)
-                    );
+    await legeHTMLElementenVerwijderen(page, selectors);
 
-            // verwijder ongewenste paragrafen over bv restaurants
-            Array.from(
-                document.querySelectorAll(
-                    `${textSelector} p, ${textSelector} span, ${textSelector} a`
-                )
-            ).forEach((verwijder) => {
-                const heeftEvilString = !!removeHTMLWithStrings.find(
-                    (evilString) => verwijder.textContent.includes(evilString)
-                );
-                if (heeftEvilString) {
-                    verwijder.parentNode.removeChild(verwijder);
-                }
-            });
+    res.textForHTML = await maakTekstBlokHTML(page, selectors);
 
-            // lege HTML eruit cq HTML zonder tekst of getallen
-            document
-                .querySelectorAll(`${removeEmptyHTMLFrom} > *`)
-                .forEach((checkForEmpty) => {
-                    const leegMatch = checkForEmpty.innerHTML
-                        .replace("&nbsp;", "")
-                        .match(/[\w\d]/g);
-                    if (!Array.isArray(leegMatch)) {
-                        checkForEmpty.parentNode.removeChild(checkForEmpty);
-                    }
-                });
-            document
-                .querySelectorAll(textSelector)
-                .forEach((ts) => ts.setAttribute("data-text", "1"));
-            // laatste attributen eruit.
-            document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-                attributesToRemoveSecondRound.forEach((attr) => {
-                    if (elToStrip.hasAttribute(attr)) {
-                        elToStrip.removeAttribute(attr);
-                    }
-                });
-            });
-
-            // tekst.
-            res.textForHTML = Array.from(
-                document.querySelectorAll("[data-text]")
-            )
-                .map((el) => el.innerHTML)
-                .join("");
-            return res;
-        },
-        { event }
-    );
+    return res;
 }

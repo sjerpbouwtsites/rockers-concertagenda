@@ -1177,6 +1177,30 @@
     "artists": {}
   },
   {
+    "start": "2025-05-30T21:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/living-colour/",
+    "title": "Living Colour",
+    "location": "neushoorn",
+    "price": null,
+    "shortText": "Een kleurrijke mengelmoes van hardrock, free jazz, heavy metal en funk",
+    "longText": "../public/texts/neushoorn/bi5ubC9wcm9kdWN0aW9uL2xpdmluZy1jb2xvdXIv.html",
+    "image": "../public/event-images/neushoorn/bi5ubC9wcm9kdWN0aW9uL2xpdmluZy1jb2xvdXIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "living colour": {
+        "s": "6uhp7wa6sjm5zl6xz561de",
+        "l": "living%20colour",
+        "g": [
+          "funk metal",
+          "funk rock",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-05-30T20:00:00",
     "venueEventUrl": "https://neushoorn.nl/production/hardcore-vrijdag/",
     "title": "Hardcore Vrijdag",
@@ -5642,6 +5666,38 @@
     "artists": {}
   },
   {
+    "start": "2025-08-14T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/prong/",
+    "title": "Prong",
+    "location": "neushoorn",
+    "price": 26,
+    "shortText": "31 Years Of Cleansing Tour",
+    "longText": "../public/texts/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vcHJvbmcv.html",
+    "image": "../public/event-images/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vcHJvbmcv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "prong": {
+        "s": "6SER9tY2pDIDVWVf5Ql97B",
+        "l": "prong",
+        "g": [
+          "groove metal",
+          "industrial metal",
+          "thrash metal",
+          "alternative metal",
+          "industrial rock",
+          "metal",
+          "crossover",
+          "thrash metal (early",
+          "later)",
+          " groove",
+          "industrial metal (mid)"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-08-14T19:00:00",
     "venueEventUrl": "https://www.littledevil.nl/calendar/pyrexia-usa-relics-of-humanity-blr/",
     "title": "Pyrexia (USA) + Relics of Humanity (BLR)",
@@ -7403,6 +7459,28 @@
     }
   },
   {
+    "start": "2025-09-27T12:15:00",
+    "venueEventUrl": "https://neushoorn.nl/production/into-the-void/",
+    "title": "Into The Void",
+    "location": "neushoorn",
+    "price": 59,
+    "shortText": "Internationaal stoner-, sludge- en doomfestival",
+    "longText": "../public/texts/neushoorn/bi5ubC9wcm9kdWN0aW9uL2ludG8tdGhlLXZvaWQv.html",
+    "image": "../public/event-images/neushoorn/bi5ubC9wcm9kdWN0aW9uL2ludG8tdGhlLXZvaWQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "into the void": {
+        "s": "3f8TUzmaZIVUAboVELMaBE",
+        "l": "into%20the%20void",
+        "g": [
+          "deathcore"
+        ]
+      }
+    }
+  },
+  {
     "title": "Wings Of Steel en Angelic Forces",
     "start": "2025-09-27",
     "eventLocationName": "sound dog",
@@ -9008,6 +9086,20 @@
         ]
       }
     }
+  },
+  {
+    "start": "2025-10-25T15:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/fajtfest-fryslan/",
+    "title": "Fajtfest Fryslân",
+    "location": "neushoorn",
+    "price": 15,
+    "shortText": "Bruut gitaargeweld op Fryske editie van iconisch metal/-core festival",
+    "longText": "../public/texts/neushoorn/bC9wcm9kdWN0aW9uL2ZhanRmZXN0LWZyeXNsYW4v.html",
+    "image": "../public/event-images/neushoorn/bC9wcm9kdWN0aW9uL2ZhanRmZXN0LWZyeXNsYW4v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "start": "2025-10-25T20:30:00",
@@ -10942,7 +11034,7 @@
     "title": "Feuerengel – a tribute to rammstein",
     "location": "neushoorn",
     "price": 35,
-    "shortText": "Een perfecte illusie van het origineel",
+    "shortText": "Een perfecte illusie van het origineel Laatste kaarten",
     "longText": "../public/texts/neushoorn/b29ybi5ubC9wcm9kdWN0aW9uL2ZldWVyZW5nZWwv.html",
     "image": "../public/event-images/neushoorn/b29ybi5ubC9wcm9kdWN0aW9uL2ZldWVyZW5nZWwv",
     "soldOut": false,
@@ -11910,5 +12002,32 @@
     "shortText": "Ancienne Belgique, Brussel (BelgiÃ«)",
     "image": "../public/location-images/anciennebelgique",
     "location": "anciennebelgique"
+  },
+  {
+    "start": "4051-01-16T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/scrum/",
+    "title": "Scrum",
+    "location": "neushoorn",
+    "price": 22,
+    "shortText": "Zeskoppige powerfolk met ballen",
+    "longText": "../public/texts/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vc2NydW0v.html",
+    "image": "../public/event-images/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vc2NydW0v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "scrum": {
+        "s": "0sGdJHX64lQqPYY0is2MjX",
+        "l": "scrum",
+        "g": [
+          "celtic rock",
+          "celtic",
+          "folk rock",
+          "folk punk",
+          "pirate metal",
+          "doom metal"
+        ]
+      }
+    }
   }
 ]

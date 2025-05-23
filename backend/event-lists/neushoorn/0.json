@@ -1,92 +1,24 @@
 [
   {
-    "start": "2025-04-18T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/3-eyed-kids/",
-    "title": "3 eyed kids",
+    "start": "2025-05-30T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/hardcore-vrijdag/",
+    "title": "Hardcore Vrijdag",
     "location": "neushoorn",
-    "price": 10,
-    "shortText": "Een brute mix van metal en hiphop",
-    "longText": "../public/texts/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vMy1leWVkLWtpZHMv.html",
-    "image": "../public/event-images/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vMy1leWVkLWtpZHMv",
+    "price": 5,
+    "shortText": "Je tweemaandelijkse dosis hardcore punk op vrijdag",
+    "longText": "../public/texts/neushoorn/bC9wcm9kdWN0aW9uL2hhcmRjb3JlLXZyaWpkYWcv.html",
+    "image": "../public/event-images/neushoorn/bC9wcm9kdWN0aW9uL2hhcmRjb3JlLXZyaWpkYWcv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "3 eyed kids": {
-        "s": "4cmx6rsoa66tynathlh0in",
-        "l": null,
+      "hardcore": {
+        "s": "3N11n3hTyVlcOg77IGefjz",
+        "l": "hardcore",
         "g": [
-          "metalcore",
-          "progressive"
+          "death metal",
+          "hardcore"
         ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-02T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/blossom-wither-gavran-dodenbezweerder/",
-    "title": "Blossom & Wither + Gavran + Dodenbezweerder",
-    "location": "neushoorn",
-    "price": 9,
-    "shortText": "Albumpresentatie 'Nevermore'",
-    "longText": "../public/texts/neushoorn/d2l0aGVyLWdhdnJhbi1kb2RlbmJlendlZXJkZXIv.html",
-    "image": "../public/event-images/neushoorn/d2l0aGVyLWdhdnJhbi1kb2RlbmJlendlZXJkZXIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "dodenbezweerder": {
-        "s": "0hdcR32dwjcQsbcBxy6SoM",
-        "l": "dodenbezweerder",
-        "g": [
-          "black metal",
-          "avant-garde",
-          "raw black metal",
-          "ambient"
-        ]
-      },
-      "gavran": {
-        "s": "0Z7JnoZUMxgmaLgApKMYpl",
-        "l": "gavran",
-        "g": [
-          "sludge metal",
-          "doom metal",
-          "sludge",
-          "doom metal"
-        ]
-      },
-      "blossom & wither": {
-        "s": "4MjuhUX2MUuclDHYjquZB1",
-        "l": "blossom%20&%20wither",
-        "g": [
-          "post-rock",
-          "post-metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-17T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/ter-ziele-onhou/",
-    "title": "Ter Ziele + Onhou",
-    "location": "neushoorn",
-    "price": 15,
-    "shortText": "Albumpresentatie 'Embodiment Of Death'",
-    "longText": "../public/texts/neushoorn/bmwvcHJvZHVjdGlvbi90ZXItemllbGUtb25ob3Uv.html",
-    "image": "../public/event-images/neushoorn/bmwvcHJvZHVjdGlvbi90ZXItemllbGUtb25ob3Uv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ter ziele": {
-        "s": "4zaaeasrkr1rdqtcdlui6g",
-        "l": "ter%20ziele",
-        "g": []
-      },
-      "onhou": {
-        "s": null,
-        "l": "onhou",
-        "g": []
       }
     }
   },
@@ -117,86 +49,95 @@
     }
   },
   {
-    "start": "2025-07-11T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/nervana/",
-    "title": "Nervana",
+    "start": "2025-08-14T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/prong/",
+    "title": "Prong",
     "location": "neushoorn",
-    "price": 20,
-    "shortText": "The American Nirvana Tribute",
-    "longText": "../public/texts/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL25lcnZhbmEv.html",
-    "image": "../public/event-images/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL25lcnZhbmEv",
+    "price": 26,
+    "shortText": "31 Years Of Cleansing Tour",
+    "longText": "../public/texts/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vcHJvbmcv.html",
+    "image": "../public/event-images/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vcHJvbmcv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "nervana": {
-        "s": null,
-        "l": null,
+      "prong": {
+        "s": "6SER9tY2pDIDVWVf5Ql97B",
+        "l": "prong",
         "g": [
-          "grunge"
+          "groove metal",
+          "industrial metal",
+          "thrash metal",
+          "alternative metal",
+          "industrial rock",
+          "metal",
+          "crossover",
+          "thrash metal (early",
+          "later)",
+          " groove",
+          "industrial metal (mid)"
         ]
       }
     }
   },
   {
-    "start": "2025-09-19T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-the-optimist-in-me/",
-    "title": "The Optimist In Me",
+    "start": "2025-09-27T12:15:00",
+    "venueEventUrl": "https://neushoorn.nl/production/into-the-void/",
+    "title": "Into The Void",
     "location": "neushoorn",
-    "price": 5,
-    "shortText": "Rock jezelf de positiviteit in met The Optimist In Me",
-    "longText": "../public/texts/neushoorn/b24vbmgtY2FmZS10aGUtb3B0aW1pc3QtaW4tbWUv.html",
-    "image": "../public/event-images/neushoorn/b24vbmgtY2FmZS10aGUtb3B0aW1pc3QtaW4tbWUv",
+    "price": 59,
+    "shortText": "Internationaal stoner-, sludge- en doomfestival",
+    "longText": "../public/texts/neushoorn/bi5ubC9wcm9kdWN0aW9uL2ludG8tdGhlLXZvaWQv.html",
+    "image": "../public/event-images/neushoorn/bi5ubC9wcm9kdWN0aW9uL2ludG8tdGhlLXZvaWQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "the optimist in me": {
-        "s": "3qmkrrjqjtixsbgjgwwmmu",
-        "l": "the%20optimist%20in%20me",
-        "g": []
-      }
-    }
-  },
-  {
-    "start": "2025-10-03T19:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/yandt/",
-    "title": "Y&t",
-    "location": "neushoorn",
-    "price": 39.75,
-    "shortText": "An evening with Y&T",
-    "longText": "../public/texts/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24veWFuZHQv.html",
-    "image": "../public/event-images/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24veWFuZHQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "y&t": {
-        "s": null,
-        "l": null,
+      "into the void": {
+        "s": "3f8TUzmaZIVUAboVELMaBE",
+        "l": "into%20the%20void",
         "g": [
-          "symfonische rock"
+          "deathcore"
         ]
       }
     }
   },
   {
-    "start": "2025-11-07T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/the-perfect-tool/",
-    "title": "The Perfect Tool",
+    "start": "2025-10-25T15:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/fajtfest-fryslan/",
+    "title": "Fajtfest Fryslân",
     "location": "neushoorn",
-    "price": 22.5,
-    "shortText": "35 jaar Tool in één mokerharde show",
-    "longText": "../public/texts/neushoorn/bC9wcm9kdWN0aW9uL3RoZS1wZXJmZWN0LXRvb2wv.html",
-    "image": "../public/event-images/neushoorn/bC9wcm9kdWN0aW9uL3RoZS1wZXJmZWN0LXRvb2wv",
+    "price": 15,
+    "shortText": "Bruut gitaargeweld op Fryske editie van iconisch metal/-core festival",
+    "longText": "../public/texts/neushoorn/bC9wcm9kdWN0aW9uL2ZhanRmZXN0LWZyeXNsYW4v.html",
+    "image": "../public/event-images/neushoorn/bC9wcm9kdWN0aW9uL2ZhanRmZXN0LWZyeXNsYW4v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-12-05T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/feuerengel/",
+    "title": "Feuerengel – a tribute to rammstein",
+    "location": "neushoorn",
+    "price": 35,
+    "shortText": "Een perfecte illusie van het origineel Laatste kaarten",
+    "longText": "../public/texts/neushoorn/b29ybi5ubC9wcm9kdWN0aW9uL2ZldWVyZW5nZWwv.html",
+    "image": "../public/event-images/neushoorn/b29ybi5ubC9wcm9kdWN0aW9uL2ZldWVyZW5nZWwv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "the perfect tool": {
+      "feuerengel": {
         "s": null,
-        "l": "the%20perfect%20tool",
-        "g": []
+        "l": "feuerengel",
+        "g": [
+          "neue deutsche haerte",
+          "tanzmetal",
+          "industrial",
+          "industrial metal"
+        ]
       }
     }
   }

@@ -57,8 +57,6 @@ scraper.mainPage = async function () {
         workerData.family
     );
 
-    this.dirtyTalk(`${availableBaseEvents ? `🟩 JA baselists` : `🟥 nee`}`);
-
     if (availableBaseEvents) {
         const thisWorkersEvents = availableBaseEvents.filter(
             (eventEl, index) =>

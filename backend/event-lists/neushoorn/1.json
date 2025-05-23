@@ -1,48 +1,135 @@
 [
   {
-    "start": "2025-05-30T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/hardcore-vrijdag/",
-    "title": "Hardcore Vrijdag",
+    "start": "2025-05-30T21:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/living-colour/",
+    "title": "Living Colour",
     "location": "neushoorn",
-    "price": 5,
-    "shortText": "Je tweemaandelijkse dosis hardcore punk op vrijdag",
-    "longText": "../public/texts/neushoorn/bC9wcm9kdWN0aW9uL2hhcmRjb3JlLXZyaWpkYWcv.html",
-    "image": "../public/event-images/neushoorn/bC9wcm9kdWN0aW9uL2hhcmRjb3JlLXZyaWpkYWcv",
+    "price": null,
+    "shortText": "Een kleurrijke mengelmoes van hardrock, free jazz, heavy metal en funk",
+    "longText": "../public/texts/neushoorn/bi5ubC9wcm9kdWN0aW9uL2xpdmluZy1jb2xvdXIv.html",
+    "image": "../public/event-images/neushoorn/bi5ubC9wcm9kdWN0aW9uL2xpdmluZy1jb2xvdXIv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "hardcore": {
-        "s": "3N11n3hTyVlcOg77IGefjz",
-        "l": "hardcore",
+      "living colour": {
+        "s": "6uhp7wa6sjm5zl6xz561de",
+        "l": "living%20colour",
         "g": [
-          "death metal",
-          "hardcore"
+          "funk metal",
+          "funk rock",
+          "hard rock"
         ]
       }
     }
   },
   {
-    "start": "2025-12-05T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/feuerengel/",
-    "title": "Feuerengel – a tribute to rammstein",
+    "start": "2025-07-11T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nervana/",
+    "title": "Nervana",
     "location": "neushoorn",
-    "price": 35,
-    "shortText": "Een perfecte illusie van het origineel",
-    "longText": "../public/texts/neushoorn/b29ybi5ubC9wcm9kdWN0aW9uL2ZldWVyZW5nZWwv.html",
-    "image": "../public/event-images/neushoorn/b29ybi5ubC9wcm9kdWN0aW9uL2ZldWVyZW5nZWwv",
+    "price": 20,
+    "shortText": "The American Nirvana Tribute",
+    "longText": "../public/texts/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL25lcnZhbmEv.html",
+    "image": "../public/event-images/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL25lcnZhbmEv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "feuerengel": {
+      "nervana": {
         "s": null,
-        "l": "feuerengel",
+        "l": null,
         "g": [
-          "neue deutsche haerte",
-          "tanzmetal",
-          "industrial",
-          "industrial metal"
+          "grunge"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-09-19T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-the-optimist-in-me/",
+    "title": "The Optimist In Me",
+    "location": "neushoorn",
+    "price": 5,
+    "shortText": "Rock jezelf de positiviteit in met The Optimist In Me",
+    "longText": "../public/texts/neushoorn/b24vbmgtY2FmZS10aGUtb3B0aW1pc3QtaW4tbWUv.html",
+    "image": "../public/event-images/neushoorn/b24vbmgtY2FmZS10aGUtb3B0aW1pc3QtaW4tbWUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the optimist in me": {
+        "s": "3qmkrrjqjtixsbgjgwwmmu",
+        "l": "the%20optimist%20in%20me",
+        "g": []
+      }
+    }
+  },
+  {
+    "start": "2025-10-03T19:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/yandt/",
+    "title": "Y&t",
+    "location": "neushoorn",
+    "price": 39.75,
+    "shortText": "An evening with Y&T",
+    "longText": "../public/texts/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24veWFuZHQv.html",
+    "image": "../public/event-images/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24veWFuZHQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "y&t": {
+        "s": null,
+        "l": null,
+        "g": [
+          "symfonische rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-11-07T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/the-perfect-tool/",
+    "title": "The Perfect Tool",
+    "location": "neushoorn",
+    "price": 22.5,
+    "shortText": "35 jaar Tool in één mokerharde show",
+    "longText": "../public/texts/neushoorn/bC9wcm9kdWN0aW9uL3RoZS1wZXJmZWN0LXRvb2wv.html",
+    "image": "../public/event-images/neushoorn/bC9wcm9kdWN0aW9uL3RoZS1wZXJmZWN0LXRvb2wv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the perfect tool": {
+        "s": null,
+        "l": "the%20perfect%20tool",
+        "g": []
+      }
+    }
+  },
+  {
+    "start": "4051-01-16T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/scrum/",
+    "title": "Scrum",
+    "location": "neushoorn",
+    "price": 22,
+    "shortText": "Zeskoppige powerfolk met ballen",
+    "longText": "../public/texts/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vc2NydW0v.html",
+    "image": "../public/event-images/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vc2NydW0v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "scrum": {
+        "s": "0sGdJHX64lQqPYY0is2MjX",
+        "l": "scrum",
+        "g": [
+          "celtic rock",
+          "celtic",
+          "folk rock",
+          "folk punk",
+          "pirate metal",
+          "doom metal"
         ]
       }
     }
