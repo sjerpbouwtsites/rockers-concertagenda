@@ -65,6 +65,35 @@
     }
   },
   {
+    "start": "2025-05-23T19:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/ter-ziele-gavran-hezurra/",
+    "title": "Ter Ziele + Gavran + Hezurra",
+    "location": "littledevil",
+    "price": 10,
+    "shortText": "Ter Ziele album release show - blackened post doom",
+    "longText": "../public/texts/littledevil/bmRhci90ZXItemllbGUtZ2F2cmFuLWhlenVycmEv.html",
+    "image": "../public/event-images/littledevil/bmRhci90ZXItemllbGUtZ2F2cmFuLWhlenVycmEv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "ter ziele": {
+        "s": "4zaaeasrkr1rdqtcdlui6g",
+        "l": "ter%20ziele",
+        "g": []
+      },
+      "gavran": {
+        "s": "0Z7JnoZUMxgmaLgApKMYpl",
+        "l": "gavran",
+        "g": [
+          "sludge metal",
+          "doom metal",
+          "sludge",
+          "doom metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-05-23T20:00:00",
     "start": "2025-05-23T20:00:00",
     "venueEventUrl": "https://gebouw-t.nl/agenda/slash-n-roses-2/",
@@ -336,6 +365,21 @@
     "image": "../public/event-images/melkweg/d2FweC1wcmV0dHktcGlzc2VkLTI0LTA1LTIwMjUv",
     "soldOut": false,
     "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-05-24T20:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/little-devil-allstars/",
+    "title": "Little Devil Allstars",
+    "location": "littledevil",
+    "price": null,
+    "shortText": "benefiet concert crowdfunding - uitverkocht - afterparty met DJRockin' Ad! Read more",
+    "longText": "../public/texts/littledevil/YWxlbmRhci9saXR0bGUtZGV2aWwtYWxsc3RhcnMv.html",
+    "image": "../public/event-images/littledevil/YWxlbmRhci9saXR0bGUtZGV2aWwtYWxsc3RhcnMv",
+    "soldOut": [
+      "uitverkocht"
+    ],
     "eventGenres": null,
     "artists": {}
   },
@@ -761,6 +805,19 @@
         ]
       }
     }
+  },
+  {
+    "start": "2025-05-25T15:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/toonplicht/",
+    "title": "Toonplicht",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": "expo - performance",
+    "longText": "../public/texts/littledevil/ZWRldmlsLm5sL2NhbGVuZGFyL3Rvb25wbGljaHQv.html",
+    "image": "../public/event-images/littledevil/ZWRldmlsLm5sL2NhbGVuZGFyL3Rvb25wbGljaHQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "start": "2025-05-25T04:00:00",
@@ -1998,6 +2055,29 @@
     "location": "gashouder"
   },
   {
+    "start": "2025-06-07T20:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/mojo-the-kitchen-brothers-b/",
+    "title": "Mojo & The Kitchen Brothers (B)",
+    "location": "littledevil",
+    "price": 14,
+    "shortText": "",
+    "longText": "../public/texts/littledevil/ci9tb2pvLXRoZS1raXRjaGVuLWJyb3RoZXJzLWIv.html",
+    "image": "../public/event-images/littledevil/ci9tb2pvLXRoZS1raXRjaGVuLWJyb3RoZXJzLWIv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "mojo": {
+        "s": "1nxfzZDDm0a0msuLz0W4lx",
+        "l": "mojo",
+        "g": [
+          "stoner",
+          "doom metal",
+          "rock"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-06-07T20:00:00",
     "start": "2025-06-07T20:30:00",
     "end": "2025-06-07T23:15:00",
@@ -2084,6 +2164,44 @@
           "stoner",
           "doom metal",
           "rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-06-08T15:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/sargeist-fin-barshasketh-nz-uk-sotherion-f/",
+    "title": "Sargeist (fin) ",
+    "location": "littledevil",
+    "price": 15,
+    "shortText": " barshasketh (nz/uk)  +  sotherion (f) black metal - pres. by Metal Matinee",
+    "longText": "../public/texts/littledevil/YmFyc2hhc2tldGgtbnotdWstc290aGVyaW9uLWYv.html",
+    "image": "../public/event-images/littledevil/YmFyc2hhc2tldGgtbnotdWstc290aGVyaW9uLWYv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "sargeist": {
+        "s": "6zl5IXVgj1nG1fqjUh68xe",
+        "l": "sargeist",
+        "g": [
+          "black metal",
+          "black metal"
+        ]
+      },
+      "therion": {
+        "s": "5c8cw62zyj9xo6idlrdesi",
+        "l": "sweden",
+        "g": [
+          "gothic metal",
+          "gothic symphonic metal",
+          "opera metal",
+          "power metal",
+          "swedish metal",
+          "symphonic black metal",
+          "symphonic death metal",
+          "symphonic metal",
+          "death metal",
+          "symphonic/operatic metal"
         ]
       }
     }
@@ -2468,6 +2586,44 @@
         "g": [
           "groove",
           "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-06-14T19:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/sapphyr-xii-thorns-depraved-will/",
+    "title": "Sapphyr + XII Thorns + Depraved Will",
+    "location": "littledevil",
+    "price": 7,
+    "shortText": "deathcore - death metal - presented by Zoë",
+    "longText": "../public/texts/littledevil/cGh5ci14aWktdGhvcm5zLWRlcHJhdmVkLXdpbGwv.html",
+    "image": "../public/event-images/littledevil/cGh5ci14aWktdGhvcm5zLWRlcHJhdmVkLXdpbGwv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "sapphyr": {
+        "s": "7IKrBr9Q2bGjy6nh4XIuw1",
+        "l": "sapphyr",
+        "g": [
+          "deathcore",
+          "symphonic deathcore"
+        ]
+      },
+      "xii thorns": {
+        "s": "0nAbUZTbd0UFkL4GGacvG8",
+        "l": "xii%20thorns",
+        "g": [
+          "deathcore"
+        ]
+      },
+      "depraved will": {
+        "s": "1ty9gbc3JTAd8Cpz6fgO7h",
+        "l": "depraved%20will",
+        "g": [
+          "deathcore",
+          "melodic death metal",
+          "melodic deathcore"
         ]
       }
     }
@@ -2938,6 +3094,37 @@
     }
   },
   {
+    "start": "2025-06-21T21:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/sacri-monti-usa/",
+    "title": "Sacri monti (usa)",
+    "location": "littledevil",
+    "price": 12.5,
+    "shortText": "psychedelic heavy rock",
+    "longText": "../public/texts/littledevil/bC5ubC9jYWxlbmRhci9zYWNyaS1tb250aS11c2Ev.html",
+    "image": "../public/event-images/littledevil/bC5ubC9jYWxlbmRhci9zYWNyaS1tb250aS11c2Ev",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "sacri monti": {
+        "s": "5ht76ocmbpmwp5rjmk7u6i",
+        "l": "sacri%20monti",
+        "g": [
+          "psychedelic doom",
+          "retro metal",
+          "space rock"
+        ]
+      },
+      "crim": {
+        "s": null,
+        "l": "crim",
+        "g": [
+          "melodic death metal",
+          "metalcore"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-06-21T20:00:00",
     "venueEventUrl": "https://www.doornroosje.nl/event/kids-n-billies-2025/",
     "title": "Kids ‘n’ billies 2025",
@@ -3199,6 +3386,19 @@
     }
   },
   {
+    "start": "2025-06-27T20:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/lithium-a-tribute-to-nirvana/",
+    "title": "Lithium – A Tribute to Nirvana",
+    "location": "littledevil",
+    "price": 15,
+    "shortText": "nirvana tribute - grunge",
+    "longText": "../public/texts/littledevil/L2xpdGhpdW0tYS10cmlidXRlLXRvLW5pcnZhbmEv.html",
+    "image": "../public/event-images/littledevil/L2xpdGhpdW0tYS10cmlidXRlLXRvLW5pcnZhbmEv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "start": "2025-06-27T23:00:00",
     "end": "2025-06-27T06:00:00",
     "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/factionsummerwarmup/",
@@ -3337,6 +3537,30 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "start": "2025-06-29T15:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/heavy-echoes-matinee-2/",
+    "title": "Heavy Echoes Matinee",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": "hosted by Deepsky - dark experimental ambient duo",
+    "longText": "../public/texts/littledevil/bGVuZGFyL2hlYXZ5LWVjaG9lcy1tYXRpbmVlLTIv.html",
+    "image": "../public/event-images/littledevil/bGVuZGFyL2hlYXZ5LWVjaG9lcy1tYXRpbmVlLTIv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "echo": {
+        "s": "0fgykf9avljex0l9wt5b8z",
+        "l": "echo",
+        "g": [
+          "alternative rock",
+          "new romantic",
+          "new wave",
+          "permanent wave"
+        ]
+      }
+    }
   },
   {
     "door": "2025-06-29T19:30:00",
@@ -4406,6 +4630,39 @@
     }
   },
   {
+    "start": "2025-07-18T20:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/rezet-d-headless-hunter/",
+    "title": "Rezet (D) + Headless Hunter",
+    "location": "littledevil",
+    "price": 12.5,
+    "shortText": "thrash metal - speed metal - pres. by HB Concerts",
+    "longText": "../public/texts/littledevil/ZW5kYXIvcmV6ZXQtZC1oZWFkbGVzcy1odW50ZXIv.html",
+    "image": "../public/event-images/littledevil/ZW5kYXIvcmV6ZXQtZC1oZWFkbGVzcy1odW50ZXIv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "headless hunter": {
+        "s": "4aFxWu9DFqbM5wQt4TpQwC",
+        "l": "headless%20hunter",
+        "g": [
+          "thrash metal",
+          "speed metal",
+          "groove metal",
+          "thrash metal"
+        ]
+      },
+      "rezet": {
+        "s": "6mEsJPMfmOwRLP3NZGXYg2",
+        "l": "rezet",
+        "g": [
+          "thrash metal",
+          "speed metal",
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-07-18T08:00:00",
     "end": "2025-07-18T10:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/boppin-the-rock-big-bluegrass-special-feat-john-miller-uk-the-original-five-swe/",
@@ -4453,6 +4710,30 @@
         "l": "stickfigs",
         "g": [
           "skate punk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-07-20T15:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/heavy-echoes-matinee-3/",
+    "title": "Heavy Echoes Matinee",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": "hosted by Deepsky - dark experimental ambient duo",
+    "longText": "../public/texts/littledevil/bGVuZGFyL2hlYXZ5LWVjaG9lcy1tYXRpbmVlLTMv.html",
+    "image": "../public/event-images/littledevil/bGVuZGFyL2hlYXZ5LWVjaG9lcy1tYXRpbmVlLTMv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "echo": {
+        "s": "0fgykf9avljex0l9wt5b8z",
+        "l": "echo",
+        "g": [
+          "alternative rock",
+          "new romantic",
+          "new wave",
+          "permanent wave"
         ]
       }
     }
@@ -4550,6 +4831,30 @@
     }
   },
   {
+    "start": "2025-07-27T19:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/pentagram-chl/",
+    "title": "Pentagram (CHL)",
+    "location": "littledevil",
+    "price": 10,
+    "shortText": "thrash metal - death metal - pres. by MMM",
+    "longText": "../public/texts/littledevil/dmlsLm5sL2NhbGVuZGFyL3BlbnRhZ3JhbS1jaGwv.html",
+    "image": "../public/event-images/littledevil/dmlsLm5sL2NhbGVuZGFyL3BlbnRhZ3JhbS1jaGwv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "pentagram": {
+        "s": "0xybuiDEYo3YuT3fLPaIyE",
+        "l": "pentagram",
+        "g": [
+          "doom metal",
+          "sludge metal",
+          "stoner rock",
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-07-28T20:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/wine-lips-28-07-2025/",
     "title": "Wine Lips",
@@ -4632,6 +4937,51 @@
     "shortText": "\nMet Machine Head, Papa Roach, Gojira, Apocalyptica, Within Temptation e.v.a.",
     "image": "../public/location-images/wackenduitslandmetmachinehead",
     "location": "wackenduitslandmetmachinehead"
+  },
+  {
+    "start": "2025-07-31T19:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/defeated-sanity-d/",
+    "title": "Defeated Sanity (D)",
+    "location": "littledevil",
+    "price": 8.5,
+    "shortText": "progressive brutal death metal",
+    "longText": "../public/texts/littledevil/bmwvY2FsZW5kYXIvZGVmZWF0ZWQtc2FuaXR5LWQv.html",
+    "image": "../public/event-images/littledevil/bmwvY2FsZW5kYXIvZGVmZWF0ZWQtc2FuaXR5LWQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "defeated sanity": {
+        "s": "0dy6peOuKo2QkwaNWPoJpx",
+        "l": "defeated%20sanity",
+        "g": [
+          "death metal",
+          "grindcore",
+          "deathcore",
+          "technical brutal death metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-08-01T20:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/dogma/",
+    "title": "Dogma",
+    "location": "littledevil",
+    "price": 15,
+    "shortText": "heavy metal - hard rock",
+    "longText": "../public/texts/littledevil/bGl0dGxlZGV2aWwubmwvY2FsZW5kYXIvZG9nbWEv.html",
+    "image": "../public/event-images/littledevil/bGl0dGxlZGV2aWwubmwvY2FsZW5kYXIvZG9nbWEv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "dogma": {
+        "s": "4R6XPuqGShFESRVkCePaxj",
+        "l": "dogma",
+        "g": [
+          "groove metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-08-01T19:00:00",
@@ -5288,6 +5638,32 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "start": "2025-08-14T19:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/pyrexia-usa-relics-of-humanity-blr/",
+    "title": "Pyrexia (USA) + Relics of Humanity (BLR)",
+    "location": "littledevil",
+    "price": 12.5,
+    "shortText": "brutal death metal",
+    "longText": "../public/texts/littledevil/aWEtdXNhLXJlbGljcy1vZi1odW1hbml0eS1ibHIv.html",
+    "image": "../public/event-images/littledevil/aWEtdXNhLXJlbGljcy1vZi1odW1hbml0eS1ibHIv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "pyrexia": {
+        "s": "3QOSKKx9w3eplRxO0XRSZe",
+        "l": "pyrexia",
+        "g": [
+          "death metal",
+          "grindcore",
+          "brutal death metal (early",
+          "later)",
+          " death",
+          "groove metal (mid)"
+        ]
+      }
+    }
   },
   {
     "door": "2025-08-14T19:30:00",
