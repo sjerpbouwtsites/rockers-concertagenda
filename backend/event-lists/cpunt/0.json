@@ -1,127 +1,12 @@
 [
   {
-    "door": "2025-04-19T19:30:00",
-    "start": "2025-04-19T20:00:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/reaching-as-we-fall",
-    "title": "Reaching As We Fall",
-    "location": "cpunt",
-    "price": 10,
-    "shortText": "Support: DEEPROOT & I'll Get By",
-    "longText": "../public/texts/cpunt/Lm5sL2FnZW5kYS9yZWFjaGluZy1hcy13ZS1mYWxs.html",
-    "image": "../public/event-images/cpunt/Lm5sL2FnZW5kYS9yZWFjaGluZy1hcy13ZS1mYWxs",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "reaching as we fall": {
-        "s": "5e6c0qjLrLOlHLdQCVaUmP",
-        "l": "reaching%20as%20we%20fall",
-        "g": [
-          "metalcore"
-        ]
-      },
-      "fall": {
-        "s": null,
-        "l": "fall",
-        "g": [
-          "death metal"
-        ]
-      },
-      "deeproot": {
-        "s": "497D31qNuomZa2eCIOuEa5",
-        "l": "deeproot",
-        "g": [
-          "deathcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-27T15:30:00",
-    "start": "2025-04-27T16:00:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/slugger-savage-beat",
-    "title": "Slugger & Savage Beat",
-    "location": "cpunt",
-    "price": 12.5,
-    "shortText": "European Tour 2025",
-    "longText": "../public/texts/cpunt/Lm5sL2FnZW5kYS9zbHVnZ2VyLXNhdmFnZS1iZWF0.html",
-    "image": "../public/event-images/cpunt/Lm5sL2FnZW5kYS9zbHVnZ2VyLXNhdmFnZS1iZWF0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "savage beat": {
-        "s": "5cX4t1wynwEgM2noNwJ4XF",
-        "l": "savage%20beat",
-        "g": [
-          "dutch punk",
-          "oi",
-          "skinhead oi"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-03T20:00:00",
-    "start": "2025-05-03T20:30:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/hardcover",
-    "title": "Hardcover + Boneripper + None Shall Fall",
-    "location": "cpunt",
-    "price": 10,
-    "shortText": "Ode aan de grondleggers van hard- en metalcore",
-    "longText": "../public/texts/cpunt/L3d3dy5jcHVudC5ubC9hZ2VuZGEvaGFyZGNvdmVy.html",
-    "image": "../public/event-images/cpunt/L3d3dy5jcHVudC5ubC9hZ2VuZGEvaGFyZGNvdmVy",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "fall": {
-        "s": null,
-        "l": "fall",
-        "g": [
-          "death metal"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-09T20:00:00",
-    "start": "2025-05-09T20:30:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/alternative-90s-october-rust-psychosocial",
-    "title": "Alternative 90s: October Rust + Psychosocial",
-    "location": "cpunt",
-    "price": 17.5,
-    "shortText": "",
-    "longText": "../public/texts/cpunt/LTkwcy1vY3RvYmVyLXJ1c3QtcHN5Y2hvc29jaWFs.html",
-    "image": "../public/event-images/cpunt/LTkwcy1vY3RvYmVyLXJ1c3QtcHN5Y2hvc29jaWFs",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
     "door": "2025-05-31T20:00:00",
     "start": "2025-05-31T20:30:00",
     "venueEventUrl": "https://www.cpunt.nl/agenda/eyehategod",
     "title": "Eyehategod",
     "location": "cpunt",
     "price": 22.5,
-    "shortText": "",
+    "shortText": "Support: Afgrond",
     "longText": "../public/texts/cpunt/d3d3LmNwdW50Lm5sL2FnZW5kYS9leWVoYXRlZ29k.html",
     "image": "../public/event-images/cpunt/d3d3LmNwdW50Lm5sL2FnZW5kYS9leWVoYXRlZ29k",
     "soldOut": false,
@@ -150,6 +35,15 @@
           "death metal",
           "extreme metal",
           "heavy metal"
+        ]
+      },
+      "afgrond": {
+        "s": "6koxdQ0VoKf7eEHgJOqJlF",
+        "l": "afgrond",
+        "g": [
+          "sludge",
+          "doom",
+          "post-metal"
         ]
       }
     }
@@ -287,6 +181,35 @@
     }
   },
   {
+    "start": "2025-09-27T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/beyond93",
+    "title": "Beyond93",
+    "location": "cpunt",
+    "price": 10,
+    "shortText": "Support: Sellfish & Splitbox",
+    "longText": "../public/texts/cpunt/Ly93d3cuY3B1bnQubmwvYWdlbmRhL2JleW9uZDkz.html",
+    "image": "../public/event-images/cpunt/Ly93d3cuY3B1bnQubmwvYWdlbmRhL2JleW9uZDkz",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "beyond93": {
+        "s": "7hF10lDsbzBDUHFa6QaKff",
+        "l": "beyond93",
+        "g": [
+          "skate punk"
+        ]
+      },
+      "sellfish": {
+        "s": "1ha6e91WS3kTqcixgBkMOo",
+        "l": "sellfish",
+        "g": [
+          "skate punk"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-10-17T19:30:00",
     "start": "2025-10-17T20:00:00",
     "venueEventUrl": "https://www.cpunt.nl/agenda/hesken-anapoda-hyla",
@@ -311,6 +234,45 @@
     }
   },
   {
+    "door": "2025-10-18T20:00:00",
+    "start": "2025-10-18T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/alternative-90s-nirvana-green-day",
+    "title": "Alternative 90s: Nirvana & Green Day",
+    "location": "cpunt",
+    "price": 17.5,
+    "shortText": "Tributes by Negative Creeps & Green Bay",
+    "longText": "../public/texts/cpunt/ZXJuYXRpdmUtOTBzLW5pcnZhbmEtZ3JlZW4tZGF5.html",
+    "image": "../public/event-images/cpunt/ZXJuYXRpdmUtOTBzLW5pcnZhbmEtZ3JlZW4tZGF5",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "green bay": {
+        "s": "54fqomnsedeijbigu7zbnz",
+        "l": "green%20bay",
+        "g": []
+      },
+      "nirvana": {
+        "s": "6olE6TJLqED3rqDCT0FyPh",
+        "l": "nirvana",
+        "g": [
+          "grunge",
+          "rock",
+          "raw black",
+          "death metal"
+        ]
+      },
+      "green day": {
+        "s": "7oPftvlwr6VrsViSDV7fJY",
+        "l": "green%20day",
+        "g": [
+          "punk",
+          "pop punk"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-11-09T19:30:00",
     "start": "2025-11-09T20:30:00",
     "venueEventUrl": "https://www.cpunt.nl/agenda/the-perfect-tool",
@@ -328,6 +290,45 @@
         "s": null,
         "l": "the%20perfect%20tool",
         "g": []
+      }
+    }
+  },
+  {
+    "door": "2025-12-19T20:00:00",
+    "start": "2025-12-19T21:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/plan-nine",
+    "title": "Plan Nine",
+    "location": "cpunt",
+    "price": 23,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/L3d3dy5jcHVudC5ubC9hZ2VuZGEvcGxhbi1uaW5l.html",
+    "image": "../public/event-images/cpunt/L3d3dy5jcHVudC5ubC9hZ2VuZGEvcGxhbi1uaW5l",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2026-03-27T20:00:00",
+    "start": "2026-03-27T21:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/maiden-united",
+    "title": "Maiden uniteD",
+    "location": "cpunt",
+    "price": 30,
+    "shortText": "1980 ft. Dennis Stratton",
+    "longText": "../public/texts/cpunt/LmNwdW50Lm5sL2FnZW5kYS9tYWlkZW4tdW5pdGVk.html",
+    "image": "../public/event-images/cpunt/LmNwdW50Lm5sL2FnZW5kYS9tYWlkZW4tdW5pdGVk",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "maiden united": {
+        "s": "7hxwv8nk5ea0uaopamhuxe",
+        "l": "maiden%20united",
+        "g": [
+          "acoustic rock",
+          "heavy metal"
+        ]
       }
     }
   }

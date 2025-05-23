@@ -18,8 +18,13 @@ import {
 export default async function longTextSocialsIframes(page, event) {
     //013 hacks
     await page.evaluate(() => {
-        document.querySelector("article h1").parentNode.parentNode.id =
-            "textbody";
+        let h1El = document.querySelector("article h1");
+        if (h1El) {
+            document.querySelector("article h1").parentNode.parentNode.id =
+                "textbody";
+        } else {
+            document.querySelector("p, span").parentNode.id = "textbody";
+        }
     });
 
     const res = {

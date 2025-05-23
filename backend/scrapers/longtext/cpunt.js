@@ -3,47 +3,54 @@
 /* global document */
 
 import {
-    handleError,
-    ongewensteHTMLUitHeleDocument,
-    eersteLadingOverbodigeAttributesWeg,
-    maakMediaHTMLBronnen,
-    hinderlijkeTekstenEruitSlopen,
-    formatHTMLTextBodyNaarEenSpatieMax,
-    legeHTMLElementenVerwijderen,
-    maakTekstBlokHTML,
-    standaardSelectorConfig,
-    removeElementsRecursive
+  handleError,
+  ongewensteHTMLUitHeleDocument,
+  eersteLadingOverbodigeAttributesWeg,
+  maakMediaHTMLBronnen,
+  hinderlijkeTekstenEruitSlopen,
+  formatHTMLTextBodyNaarEenSpatieMax,
+  legeHTMLElementenVerwijderen,
+  maakTekstBlokHTML,
+  standaardSelectorConfig,
+  removeElementsRecursive,
 } from "../gedeeld/longHTML.js";
 
 export default async function longTextSocialsIframes(page, event) {
-    const res = {
-        mediaForHTML: null,
-        textForHTML: null
-    };
-    // in standaard removeEls saveTheseAttrsFirst removeAttrsLastStep
-    // removeHTMLWithStrings htmlElementsWithStringsToRemove
-    const selectors = {
-        ...standaardSelectorConfig,
-        textBody: ".contentblock-TextOneColumn",
-        mediaEls: ".contentblock-Video iframe",
-        removeEmptyHTMLFrom: ".contentblock-TextOneColumn"
-    };
+  const res = {
+    mediaForHTML: null,
+    textForHTML: null,
+  };
+  // in standaard removeEls saveTheseAttrsFirst removeAttrsLastStep
+  // removeHTMLWithStrings htmlElementsWithStringsToRemove
+  const selectors = {
+    ...standaardSelectorConfig,
+    textBody: ".contentblock-TextOneColumn",
+    removeEmptyHTMLFrom: ".contentblock-TextOneColumn",
+  };
 
-    res.mediaForHTML = await maakMediaHTMLBronnen(page, selectors, event);
+  await page.evaluate(() => {
+    const b = document.querySelector(
+      "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"
+    );
+    if (!b) return;
+    b.click();
+  });
 
-    await ongewensteHTMLUitHeleDocument(page, selectors);
+  res.mediaForHTML = await maakMediaHTMLBronnen(page, selectors, event);
 
-    await eersteLadingOverbodigeAttributesWeg(page, selectors);
+  await ongewensteHTMLUitHeleDocument(page, selectors);
 
-    await hinderlijkeTekstenEruitSlopen(page, selectors);
+  await eersteLadingOverbodigeAttributesWeg(page, selectors);
 
-    await formatHTMLTextBodyNaarEenSpatieMax(page, selectors);
+  await hinderlijkeTekstenEruitSlopen(page, selectors);
 
-    await removeElementsRecursive(page, selectors);
+  await formatHTMLTextBodyNaarEenSpatieMax(page, selectors);
 
-    await legeHTMLElementenVerwijderen(page, selectors);
+  await removeElementsRecursive(page, selectors);
 
-    res.textForHTML = await maakTekstBlokHTML(page, selectors);
+  await legeHTMLElementenVerwijderen(page, selectors);
 
-    return res;
+  res.textForHTML = await maakTekstBlokHTML(page, selectors);
+
+  return res;
 }

@@ -1,146 +1,126 @@
 [
   {
-    "start": "2025-04-12T18:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/rotfest-met-maria-iskariot-be-rotzorg-eyesores-apeshit-waardeloos/",
-    "title": "ROTFEST met: Maria Iskariot (BE) ",
+    "start": "2025-06-04T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/w1-cafe-wasemkap-vol3/",
+    "title": "W1 cafe: wasemkap vol3",
     "location": "willemeen",
-    "price": 12.5,
-    "shortText": " Rotzorg   +  Eyesores  +  Apeshit   +  Waardeloos punk festival",
-    "longText": "../public/texts/willemeen/Zy1leWVzb3Jlcy1hcGVzaGl0LXdhYXJkZWxvb3Mv.html",
+    "price": 0,
+    "shortText": "blieps, noise, experimental,",
+    "longText": "../public/texts/willemeen/b2dyYW1tYS93MS1jYWZlLXdhc2Vta2FwLXZvbDMv.html",
+    "image": "../public/location-images/willemeen",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-06-11T19:30:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/skull-cult-us-periot/",
+    "title": "Skull Cult (US) + Periot",
+    "location": "willemeen",
+    "price": 8,
+    "shortText": "punk rock, rawk",
+    "longText": "../public/texts/willemeen/cm9ncmFtbWEvc2t1bGwtY3VsdC11cy1wZXJpb3Qv.html",
+    "image": "../public/location-images/willemeen",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-06-17T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/battery-us-support-excl-nl-show/",
+    "title": "Battery (US, only NL show) ",
+    "location": "willemeen",
+    "price": 16,
+    "shortText": " Thrive (NL/DE, first NL show)  +  Hometown Crew DC hardcore, youth crew, Hardcore, SXE",
+    "longText": "../public/texts/willemeen/dHRlcnktdXMtc3VwcG9ydC1leGNsLW5sLXNob3cv.html",
     "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "apeshit": {
-        "s": "60idytqipfbGaZr3u2a0QG",
-        "l": "apeshit",
+      "hometown crew": {
+        "s": "5TFQ3BuWa1IZ2OsQ6X4t3b",
+        "l": "hometown%20crew",
         "g": [
-          "dutch post-punk",
-          "brutal death metal",
+          "hardcore punk",
+          "hardcore",
+          "melodic hardcore"
+        ]
+      },
+      "battery": {
+        "s": "7MlVSrN1UclvhmDbHlCOf9",
+        "l": "battery",
+        "g": [
+          "hardcore punk",
+          "hardcore",
+          "melodic hardcore",
+          "groove",
+          "thrash metal"
+        ]
+      },
+      "first": {
+        "s": null,
+        "l": "first",
+        "g": [
+          "melodic heavy metal",
+          "rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-08-14T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/3-inches-of-blood-ca-spirit-adrift-us-engelenbak-doetinchem/",
+    "title": "3 Inches Of Blood (CA) ",
+    "location": "willemeen",
+    "price": 20,
+    "shortText": " Spirit Adrift (US)  @ Engelenbak Doetinchem true heavy metal",
+    "longText": "../public/texts/willemeen/cmlmdC11cy1lbmdlbGVuYmFrLWRvZXRpbmNoZW0v.html",
+    "image": "../public/location-images/willemeen",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "blood": {
+        "s": null,
+        "l": "blood",
+        "g": [
+          "death metal",
           "grindcore"
         ]
       }
     }
   },
   {
-    "start": "2025-05-03T23:59:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/outcast-vs-addr-presents-total-ga-osz/",
-    "title": "Outcast VS ADDR Presents; Total Ga-osz",
+    "start": "2025-09-06T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/het-stenen-tijdperk-met-drive-by-wire-thammuz-cervus-gallon/",
+    "title": "Het Stenen Tijdperk met; Drive By Wire ",
     "location": "willemeen",
-    "price": 10,
-    "shortText": "millenium hardcore gabber",
-    "longText": "../public/texts/willemeen/dnMtYWRkci1wcmVzZW50cy10b3RhbC1nYS1vc3ov.html",
+    "price": 12.5,
+    "shortText": " Thammuz  +  Cervus  +  Gallon stoner",
+    "longText": "../public/texts/willemeen/Ynktd2lyZS10aGFtbXV6LWNlcnZ1cy1nYWxsb24v.html",
     "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "outcast": {
-        "s": "4ddifkfkmzrazeakcn1gjo",
-        "l": "outcast",
+      "drive by wire": {
+        "s": "2gHRDBgrG9h6DUWOrsgNI1",
+        "l": "drive%20by%20wire",
         "g": [
-          "deep punk rock",
-          "northern irish punk",
-          "uk82"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-10T19:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/diabolical-echoes-part-7/",
-    "title": "Diabolical Echoes part 7",
-    "location": "willemeen",
-    "price": 8,
-    "shortText": "black metal",
-    "longText": "../public/texts/willemeen/YW1tYS9kaWFib2xpY2FsLWVjaG9lcy1wYXJ0LTcv.html",
-    "image": "../public/location-images/willemeen",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "echo": {
-        "s": "0fgykf9avljex0l9wt5b8z",
-        "l": "echo",
-        "g": [
-          "alternative rock",
-          "new romantic",
-          "new wave",
-          "permanent wave"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-06-05T19:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/back-alley-ritual-4-metalucifer-jp-intranced-us-bad-omen-avalon-de/",
-    "title": "Back Alley Ritual 4: Metalucifer (JP) ",
-    "location": "willemeen",
-    "price": 24.21,
-    "shortText": " Intranced (US)  +  Bad Omen  +  Avalon (DE) cult heavy metal",
-    "longText": "../public/texts/willemeen/dHJhbmNlZC11cy1iYWQtb21lbi1hdmFsb24tZGUv.html",
-    "image": "../public/location-images/willemeen",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "lucifer": {
-        "s": "3oypqq5xqbllc5fh0h7a6q",
-        "l": "lucifer",
-        "g": [
-          "belgian metal"
+          "stoner rock",
+          "space rock",
+          "doom metal",
+          "sludge metal"
         ]
       },
-      "metal": {
-        "s": null,
-        "l": "metal",
+      "thammuz": {
+        "s": "5XjWtIODAsVMlwEBfmlbOp",
+        "l": "thammuz",
         "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-06-28T19:30:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/aephanemer-fr-support/",
-    "title": "Aephanemer (FR) + Hesken",
-    "location": "willemeen",
-    "price": 17.5,
-    "shortText": "symphonic melodic death",
-    "longText": "../public/texts/willemeen/b2dyYW1tYS9hZXBoYW5lbWVyLWZyLXN1cHBvcnQv.html",
-    "image": "../public/location-images/willemeen",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "aephanemer": {
-        "s": "1M2nK2dOXJjcCuW3SQEzET",
-        "l": "aephanemer",
-        "g": [
-          "melodic death metal",
-          "melodic metal",
-          "folk metal",
-          "death metal",
-          "symphonic metal",
-          "symphonic",
-          "melodic death metal"
-        ]
-      },
-      "hesken": {
-        "s": "46uzkpA27zK6u3rGOqtyg2",
-        "l": "hesken",
-        "g": [
-          "progressive metal",
-          "progressive metal"
+          "dutch stoner rock"
         ]
       }
     }
@@ -170,5 +150,56 @@
         ]
       }
     }
+  },
+  {
+    "start": "2025-10-25T16:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/arnhem-deathfest-2025/",
+    "title": "Arnhem Deathfest 2025",
+    "location": "willemeen",
+    "price": 20,
+    "shortText": "death metal",
+    "longText": "../public/texts/willemeen/b2dyYW1tYS9hcm5oZW0tZGVhdGhmZXN0LTIwMjUv.html",
+    "image": "../public/location-images/willemeen",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-11-26T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/gutalax-cz-spasm-cz-guineapig-it-excl-nl-show/",
+    "title": "Gutalax (cz) ",
+    "location": "willemeen",
+    "price": 23.5,
+    "shortText": " spasm (cz)  +  guineapig (it) excl nl show groegrind, gore 'n roll",
+    "longText": "../public/texts/willemeen/LWN6LWd1aW5lYXBpZy1pdC1leGNsLW5sLXNob3cv.html",
+    "image": "../public/location-images/willemeen",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "guineapig": {
+        "s": "7JjFSi8Nz49BxuZcoTHc7L",
+        "l": "guineapig",
+        "g": [
+          "grindcore",
+          "goregrind"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-12-07T15:30:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/human-toys-fr-cafe-de-wacht/",
+    "title": "Human toys (fr) @ cafe de wacht",
+    "location": "willemeen",
+    "price": 0,
+    "shortText": "theremin punkrock",
+    "longText": "../public/texts/willemeen/YS9odW1hbi10b3lzLWZyLWNhZmUtZGUtd2FjaHQv.html",
+    "image": "../public/location-images/willemeen",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   }
 ]

@@ -1,152 +1,13 @@
 [
   {
-    "door": "2025-04-03T19:30:00",
-    "start": "2025-04-03T20:30:00",
-    "end": "2025-04-03T00:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2025/04/03/clan-of-xymox",
-    "title": "Clan Of Xymox",
-    "location": "nieuwenor",
-    "price": 25,
-    "shortText": "new-wave-ebm\nRePost! pre­sen­teert pio­niers van de darkwave",
-    "longText": "../public/texts/nieuwenor/cmFtbWEvMjAyNS8wNC8wMy9jbGFuLW9mLXh5bW94.html",
-    "image": "../public/event-images/nieuwenor/cmFtbWEvMjAyNS8wNC8wMy9jbGFuLW9mLXh5bW94",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-04-04T19:00:00",
-    "start": "2025-04-04T20:00:00",
-    "end": "2025-04-04T23:15:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2025/04/04/slash-n-roses-bad-medicine",
-    "title": "Slash N’ Roses + Bad Medicine",
-    "location": "nieuwenor",
-    "price": 30,
-    "shortText": "rock-alternative,tribute-cover\nHet hard­rock gevoel van de jaren 80",
-    "longText": "../public/texts/nieuwenor/LzA0L3NsYXNoLW4tcm9zZXMtYmFkLW1lZGljaW5l.html",
-    "image": "../public/event-images/nieuwenor/LzA0L3NsYXNoLW4tcm9zZXMtYmFkLW1lZGljaW5l",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "slash n’ roses": {
-        "s": null,
-        "l": null,
-        "g": [
-          "hard rock"
-        ]
-      },
-      "bad medicine": {
-        "s": null,
-        "l": null,
-        "g": [
-          "hard rock",
-          "coverband",
-          "bon jovi"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-10T19:00:00",
-    "start": "2025-04-10T20:00:00",
-    "end": "2025-04-10T23:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2025/04/10/atonement-praefator-outpoet",
-    "title": "Ato­ne­ment + prae­fa­tor — outpoet",
-    "location": "nieuwenor",
-    "price": 11.5,
-    "shortText": "metal\nMeer metal geweld in Outpoet!",
-    "longText": "../public/texts/nieuwenor/MTAvYXRvbmVtZW50LXByYWVmYXRvci1vdXRwb2V0.html",
-    "image": "../public/event-images/nieuwenor/MTAvYXRvbmVtZW50LXByYWVmYXRvci1vdXRwb2V0",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-04-11T20:00:00",
-    "start": "2025-04-11T21:00:00",
-    "end": "2025-04-11T01:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2025/04/11/rockabilly-breakout-pre-party",
-    "title": "Rock­a­bil­ly Break­out Pre-Par­ty — De Tapperij",
-    "location": "nieuwenor",
-    "price": 0,
-    "shortText": " roots-americana\ngra­tis pre-par­ty met The Tail­drag­gers en DJ Hot Jumper",
-    "longText": "../public/texts/nieuwenor/L3JvY2thYmlsbHktYnJlYWtvdXQtcHJlLXBhcnR5.html",
-    "image": "../public/event-images/nieuwenor/L3JvY2thYmlsbHktYnJlYWtvdXQtcHJlLXBhcnR5",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "rock": {
-        "s": null,
-        "l": "rock",
-        "g": [
-          "heavy metal",
-          "hard rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-18T22:00:00",
-    "start": "2025-04-18T22:00:00",
-    "end": "2025-04-18T04:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2025/04/18/first-bass",
-    "title": "First Bass",
-    "location": "nieuwenor",
-    "price": 10.5,
-    "shortText": "dance,dance-alle-dance\nft. Ekko & Side­track (AUS)",
-    "longText": "../public/texts/nieuwenor/cm9ncmFtbWEvMjAyNS8wNC8xOC9maXJzdC1iYXNz.html",
-    "image": "../public/event-images/nieuwenor/cm9ncmFtbWEvMjAyNS8wNC8xOC9maXJzdC1iYXNz",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "first": {
-        "s": null,
-        "l": "first",
-        "g": [
-          "melodic heavy metal",
-          "rock"
-        ]
-      },
-      "bass": {
-        "s": null,
-        "l": "bass",
-        "g": [
-          "doom",
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-10T19:00:00",
-    "start": "2025-05-10T19:30:00",
-    "end": "2025-05-10T22:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2025/05/10/makemake-tw",
-    "title": "Make­ma­ke (tw)",
-    "location": "nieuwenor",
-    "price": 23.5,
-    "shortText": "metal\nTai­wa­nees Fema­le Metal Trio komt naar Heerlen!",
-    "longText": "../public/texts/nieuwenor/b2dyYW1tYS8yMDI1LzA1LzEwL21ha2VtYWtlLXR3.html",
-    "image": "../public/event-images/nieuwenor/b2dyYW1tYS8yMDI1LzA1LzEwL21ha2VtYWtlLXR3",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
     "door": "2025-05-23T19:00:00",
     "start": "2025-05-23T20:00:00",
-    "end": "2025-05-23T23:00:00",
+    "end": "2025-05-23T22:30:00",
     "venueEventUrl": "https://nieuwenor.nl/programma/2025/05/23/the-amy-winehouse-band",
     "title": "The Amy Wine­hou­se Band (UK)",
     "location": "nieuwenor",
     "price": 32.5,
-    "shortText": "blues,funk-soul,jazz,pop\nEen eer­be­toon aan een van de groot­ste arties­ten ooit!",
+    "shortText": "blues,funk-soul,jazz,pop\nEen hom­ma­ge aan een van de groot­ste arties­ten ooit",
     "longText": "../public/texts/nieuwenor/NS8wNS8yMy90aGUtYW15LXdpbmVob3VzZS1iYW5k.html",
     "image": "../public/event-images/nieuwenor/NS8wNS8yMy90aGUtYW15LXdpbmVob3VzZS1iYW5k",
     "soldOut": null,
@@ -160,53 +21,6 @@
           "heavy",
           "power metal"
         ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-28T19:00:00",
-    "start": "2025-05-28T19:30:00",
-    "end": "2025-05-28T22:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2025/05/28/rick-de-leeuw-band",
-    "title": "Rick de Leeuw & Band",
-    "location": "nieuwenor",
-    "price": 30,
-    "shortText": "pop,rock-alternative\nVan de Tröc­ke­ner Kecks",
-    "longText": "../public/texts/nieuwenor/LzIwMjUvMDUvMjgvcmljay1kZS1sZWV1dy1iYW5k.html",
-    "image": "../public/event-images/nieuwenor/LzIwMjUvMDUvMjgvcmljay1kZS1sZWV1dy1iYW5k",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-06-01T20:00:00",
-    "start": "2025-06-01T20:30:00",
-    "end": "2025-06-01T22:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2025/06/01/tender-prey",
-    "title": "Ten­der Prey",
-    "location": "nieuwenor",
-    "price": 20,
-    "shortText": "tribute-cover\nA Tri­bu­te to Nick Cave",
-    "longText": "../public/texts/nieuwenor/b2dyYW1tYS8yMDI1LzA2LzAxL3RlbmRlci1wcmV5.html",
-    "image": "../public/event-images/nieuwenor/b2dyYW1tYS8yMDI1LzA2LzAxL3RlbmRlci1wcmV5",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "prey": {
-        "s": "",
-        "l": "prey",
-        "g": []
       }
     }
   },
@@ -244,7 +58,7 @@
     "venueEventUrl": "https://nieuwenor.nl/programma/2025/06/15/stahlzeit-plt",
     "title": "Stahl­zeit — LIMBURGzaal",
     "location": "nieuwenor",
-    "price": 37.5,
+    "price": 38.5,
     "shortText": "tribute-cover,metal\nDé bes­te Ramm­stein tri­bu­te band ter wereld",
     "longText": "../public/texts/nieuwenor/cmFtbWEvMjAyNS8wNi8xNS9zdGFobHplaXQtcGx0.html",
     "image": "../public/event-images/nieuwenor/cmFtbWEvMjAyNS8wNi8xNS9zdGFobHplaXQtcGx0",
@@ -278,6 +92,22 @@
     }
   },
   {
+    "door": "2025-08-03T18:30:00",
+    "start": "2025-08-03T19:30:00",
+    "end": "2025-08-03T22:30:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/08/03/fit-for-a-king",
+    "title": "Fit For A King",
+    "location": "nieuwenor",
+    "price": 35,
+    "shortText": "punk-emo-hardcore,metal\nBreak the cycle",
+    "longText": "../public/texts/nieuwenor/YW1tYS8yMDI1LzA4LzAzL2ZpdC1mb3ItYS1raW5n.html",
+    "image": "../public/event-images/nieuwenor/YW1tYS8yMDI1LzA4LzAzL2ZpdC1mb3ItYS1raW5n",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2025-08-08T20:00:00",
     "start": "2025-08-08T20:30:00",
     "end": "2025-08-08T23:00:00",
@@ -288,6 +118,22 @@
     "shortText": "punk-emo-hardcore,metal\nPost-hard­co­re uit Ber­lijn, terug in Heerlen!",
     "longText": "../public/texts/nieuwenor/cmFtbWEvMjAyNS8wOC8wOC9mdXR1cmUtcGFsYWNl.html",
     "image": "../public/event-images/nieuwenor/cmFtbWEvMjAyNS8wOC8wOC9mdXR1cmUtcGFsYWNl",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-08-13T18:30:00",
+    "start": "2025-08-13T19:00:00",
+    "end": "2025-08-13T22:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/08/13/the-real-mckenzies",
+    "title": "The real mcken­zies (sct)",
+    "location": "nieuwenor",
+    "price": 25,
+    "shortText": "punk-emo-hardcore\nSchot­se Punk voor rebel­len en nietsnutten",
+    "longText": "../public/texts/nieuwenor/LzIwMjUvMDgvMTMvdGhlLXJlYWwtbWNrZW56aWVz.html",
+    "image": "../public/event-images/nieuwenor/LzIwMjUvMDgvMTMvdGhlLXJlYWwtbWNrZW56aWVz",
     "soldOut": null,
     "unavailable": false,
     "eventGenres": null,
@@ -340,6 +186,30 @@
           "thrash metal",
           "crossover",
           "hardcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-10-01T19:00:00",
+    "start": "2025-10-01T20:00:00",
+    "end": "2025-10-01T22:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/10/01/y-t",
+    "title": "Y&t",
+    "location": "nieuwenor",
+    "price": 37.5,
+    "shortText": "blues,rock-alternative\nAn eve­ning with Y&T",
+    "longText": "../public/texts/nieuwenor/b3IubmwvcHJvZ3JhbW1hLzIwMjUvMTAvMDEveS10.html",
+    "image": "../public/event-images/nieuwenor/b3IubmwvcHJvZ3JhbW1hLzIwMjUvMTAvMDEveS10",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "y&t": {
+        "s": null,
+        "l": null,
+        "g": [
+          "symfonische rock"
         ]
       }
     }
@@ -402,7 +272,7 @@
     "title": "And’­re Hazes Band",
     "location": "nieuwenor",
     "price": 25,
-    "shortText": "tribute-cover\ndé groot­ste Neder­lands­ta­li­ge artiest ooit komt weer tot leven",
+    "shortText": "tribute-cover\nDé groot­ste Neder­lands­ta­li­ge artiest ooit komt weer tot leven",
     "longText": "../public/texts/nieuwenor/bWEvMjAyNS8xMC8yNS9hbmRyZS1oYXplcy1iYW5k.html",
     "image": "../public/event-images/nieuwenor/bWEvMjAyNS8xMC8yNS9hbmRyZS1oYXplcy1iYW5k",
     "soldOut": null,
@@ -415,6 +285,39 @@
         "g": [
           "heavy",
           "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-10-25T22:00:00",
+    "start": "2025-10-25T22:00:00",
+    "end": "2025-10-25T04:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/10/25/first-bass",
+    "title": "First Bass",
+    "location": "nieuwenor",
+    "price": 0,
+    "shortText": "dance,dance-alle-dance\nDrum ​‘n Bass madness",
+    "longText": "../public/texts/nieuwenor/cm9ncmFtbWEvMjAyNS8xMC8yNS9maXJzdC1iYXNz.html",
+    "image": "../public/event-images/nieuwenor/cm9ncmFtbWEvMjAyNS8xMC8yNS9maXJzdC1iYXNz",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "first": {
+        "s": null,
+        "l": "first",
+        "g": [
+          "melodic heavy metal",
+          "rock"
+        ]
+      },
+      "bass": {
+        "s": null,
+        "l": "bass",
+        "g": [
+          "doom",
+          "death metal"
         ]
       }
     }
@@ -471,6 +374,47 @@
     }
   },
   {
+    "door": "2025-11-14T19:00:00",
+    "start": "2025-11-14T20:00:00",
+    "end": "2025-11-14T23:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/11/14/as-i-lay-dying",
+    "title": "As I Lay Dying",
+    "location": "nieuwenor",
+    "price": 35,
+    "shortText": "metal\nAn Eve­ning With As I Lay Dying – 20 jaar Sha­dows Are Security",
+    "longText": "../public/texts/nieuwenor/YW1tYS8yMDI1LzExLzE0L2FzLWktbGF5LWR5aW5n.html",
+    "image": "../public/event-images/nieuwenor/YW1tYS8yMDI1LzExLzE0L2FzLWktbGF5LWR5aW5n",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-12-04T19:00:00",
+    "start": "2025-12-04T19:30:00",
+    "end": "2025-12-04T21:45:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/12/04/rick-de-leeuw-band",
+    "title": "Rick de Leeuw & Band",
+    "location": "nieuwenor",
+    "price": 30,
+    "shortText": "pop,rock-alternative\nVan de Tröc­ke­ner Kecks",
+    "longText": "../public/texts/nieuwenor/LzIwMjUvMTIvMDQvcmljay1kZS1sZWV1dy1iYW5k.html",
+    "image": "../public/event-images/nieuwenor/LzIwMjUvMTIvMDQvcmljay1kZS1sZWV1dy1iYW5k",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-12-07T19:00:00",
     "start": "2025-12-07T19:30:00",
     "end": "2025-12-07T22:00:00",
@@ -491,6 +435,31 @@
         "g": [
           "punk",
           "hardcore punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2026-03-08T15:00:00",
+    "start": "2026-03-08T16:00:00",
+    "end": "2026-03-08T18:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2026/03/08/bouke-the-elvis-matters-band",
+    "title": "Bou­ke & The Elvis Mat­ters Band",
+    "location": "nieuwenor",
+    "price": 38.5,
+    "shortText": "tribute-cover\nBrengt een ode aan Elvis Pres­ley — bekend van The Tri­bu­te (Batt­le of the Bands)",
+    "longText": "../public/texts/nieuwenor/OC9ib3VrZS10aGUtZWx2aXMtbWF0dGVycy1iYW5k.html",
+    "image": "../public/event-images/nieuwenor/OC9ib3VrZS10aGUtZWx2aXMtbWF0dGVycy1iYW5k",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
         ]
       }
     }

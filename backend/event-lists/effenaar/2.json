@@ -1,77 +1,28 @@
 [
   {
-    "door": "2025-04-11T19:30:00",
-    "start": "2025-04-11T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/effenaar-club-card-concert2025",
-    "title": "Effenaar Club Card concert: Marathon ",
+    "door": "2025-06-11T19:00:00",
+    "start": "2025-06-11T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/wasp-11jun",
+    "title": "W.a.s.p.",
     "location": "effenaar",
-    "price": 0,
-    "shortText": " Texoprint  +  Baklawai Exclusief voor onze Club Card houders",
-    "longText": "../public/texts/effenaar/ZWZmZW5hYXItY2x1Yi1jYXJkLWNvbmNlcnQyMDI1.html",
-    "image": "../public/event-images/effenaar/ZWZmZW5hYXItY2x1Yi1jYXJkLWNvbmNlcnQyMDI1",
+    "price": 42.5,
+    "shortText": "Een heavy metal legende keert terug!",
+    "longText": "../public/texts/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS93YXNwLTExanVu.html",
+    "image": "../public/event-images/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS93YXNwLTExanVu",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "texoprint": {
-        "s": "3Crxw3x5GQwDrhY51BNcMi",
-        "l": "texoprint",
+      "w.a.s.p.": {
+        "s": "3BVkDHWRvLJEyKdvhLbjsq",
+        "l": "w.a.s.p.",
         "g": [
-          "dutch post-punk"
-        ]
-      },
-      "marathon": {
-        "s": "4AmPhWuKz1UIdx2Mvt4yAw",
-        "l": "marathon",
-        "g": [
-          "dutch post-punk",
-          "dutch shoegaze"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-25T20:00:00",
-    "start": "2025-04-25T20:30:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/johncoffey2025",
-    "title": "John Coffey",
-    "location": "effenaar",
-    "price": 22.5,
-    "shortText": "Utrechtse punkers naar Altstadt met underplayed show",
-    "longText": "../public/texts/effenaar/ZW5hYXIubmwvYWdlbmRhL2pvaG5jb2ZmZXkyMDI1.html",
-    "image": "../public/event-images/effenaar/ZW5hYXIubmwvYWdlbmRhL2pvaG5jb2ZmZXkyMDI1",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "john coffey": {
-        "s": "4kffvdsomgp0boibxvgeya",
-        "l": "john%20coffey",
-        "g": [
-          "dutch indie",
-          "dutch rock",
-          "hardcore punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-02T19:30:00",
-    "start": "2025-05-02T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/redhook",
-    "title": "RedHook",
-    "location": "effenaar",
-    "price": 17,
-    "shortText": "Een poppy mix van alternatieve metal, post-hardcore en metalcore | + Comastatic",
-    "longText": "../public/texts/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9yZWRob29r.html",
-    "image": "../public/event-images/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9yZWRob29r",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "hardcore": {
-        "s": "3N11n3hTyVlcOg77IGefjz",
-        "l": "hardcore",
-        "g": [
-          "death metal",
-          "hardcore"
+          "glam metal",
+          "hard rock",
+          "metal",
+          "speed metal",
+          "thrash metal",
+          "heavy metal",
+          "hard rock"
         ]
       },
       "metal": {
@@ -92,18 +43,156 @@
     }
   },
   {
-    "door": "2025-05-10T19:30:00",
-    "start": "2025-05-10T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/luna-kills",
-    "title": "Luna kills",
+    "door": "2025-07-05T19:30:00",
+    "start": "2025-07-05T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/overkill-vicious-rumors",
+    "title": "Overkill + Vicious Rumors",
+    "location": "effenaar",
+    "price": 38.5,
+    "shortText": "Een double bill gevuld met thrash- en powermetal",
+    "longText": "../public/texts/effenaar/YWdlbmRhL292ZXJraWxsLXZpY2lvdXMtcnVtb3Jz.html",
+    "image": "../public/event-images/effenaar/YWdlbmRhL292ZXJraWxsLXZpY2lvdXMtcnVtb3Jz",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      },
+      "overkill": {
+        "s": "0NmYchKQ8JIR9QHYJA0FRe",
+        "l": "overkill",
+        "g": [
+          "thrash metal",
+          "speed metal",
+          "groove metal",
+          "metal",
+          "heavy metal",
+          "thrash metal, thrash",
+          "groove metal"
+        ]
+      },
+      "vicious rumors": {
+        "s": "5qF6qgroDoDIKpPChRqhX3",
+        "l": "vicious%20rumors",
+        "g": [
+          "speed metal",
+          "power metal",
+          "heavy metal",
+          "heavy",
+          "power metal, groove metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-07T20:00:00",
+    "start": "2025-08-07T20:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/snot",
+    "title": "Snot",
+    "location": "effenaar",
+    "price": 20.5,
+    "shortText": "Invloedrijke nu-metalband speelt album 'Get Some' integraal",
+    "longText": "../public/texts/effenaar/Oi8vd3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9zbm90.html",
+    "image": "../public/event-images/effenaar/Oi8vd3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9zbm90",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "snot": {
+        "s": "6TnlohrPbZ8D0JvJp9S1t8",
+        "l": "snot",
+        "g": [
+          "nu metal",
+          "rap metal",
+          "alternative metal",
+          "funk rock",
+          "death metal"
+        ]
+      },
+      "get some": {
+        "s": "0aou4fuweaa3so42vjpost",
+        "l": null,
+        "g": [
+          "norwegian hip hop"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-09-21T20:00:00",
+    "start": "2025-09-21T20:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/lets-gos-nieuwe-datum",
+    "title": "The let’s go’s (nieuwe datum)",
     "location": "effenaar",
     "price": 15,
-    "shortText": "Alternative/nu-metal met electronics geïnspireerd door game-soundtracks | + Artificial",
-    "longText": "../public/texts/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS9sdW5hLWtpbGxz.html",
-    "image": "../public/event-images/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS9sdW5hLWtpbGxz",
+    "shortText": "Japanse all-female powerpunkband | + Ink Bomb",
+    "longText": "../public/texts/effenaar/bC9hZ2VuZGEvbGV0cy1nb3MtbmlldXdlLWRhdHVt.html",
+    "image": "../public/event-images/effenaar/bC9hZ2VuZGEvbGV0cy1nb3MtbmlldXdlLWRhdHVt",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-10-03T20:00:00",
+    "start": "2025-10-03T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/nobarrier-03okt",
+    "title": "No barrier",
+    "location": "effenaar",
+    "price": 16,
+    "shortText": "Poppunk, Emo, Rock & Metalcore Party",
+    "longText": "../public/texts/effenaar/bmFhci5ubC9hZ2VuZGEvbm9iYXJyaWVyLTAzb2t0.html",
+    "image": "../public/event-images/effenaar/bmFhci5ubC9hZ2VuZGEvbm9iYXJyaWVyLTAzb2t0",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "no barrier": {
+        "s": "2am0proxk0wcivgl5rza3a",
+        "l": "no%20barrier",
+        "g": []
+      },
       "metal": {
         "s": null,
         "l": "metal",
@@ -117,28 +206,6 @@
         "g": [
           "groove",
           "progressive metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-24T20:00:00",
-    "start": "2025-05-24T20:30:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/bowl",
-    "title": "Bowl",
-    "location": "effenaar",
-    "price": 16,
-    "shortText": "Kenmerkende mix van gruizige garagerock en desoriënterende postpunk",
-    "longText": "../public/texts/effenaar/Oi8vd3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9ib3ds.html",
-    "image": "../public/event-images/effenaar/Oi8vd3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9ib3ds",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "bowl": {
-        "s": "3g2APnmJ1jNf0WDYF4rZCm",
-        "l": "bowl",
-        "g": [
-          "post-punk"
         ]
       },
       "rock": {
@@ -152,18 +219,29 @@
     }
   },
   {
-    "door": "2025-07-16T20:00:00",
-    "start": "2025-07-16T20:30:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/battlesnake",
-    "title": "Battlesnake",
+    "door": "2025-10-19T19:30:00",
+    "start": "2025-10-19T20:15:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/battle-beast",
+    "title": "Battle Beast",
     "location": "effenaar",
-    "price": 17,
-    "shortText": "Titanen van de theatrale heavy metal",
-    "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2JhdHRsZXNuYWtl.html",
-    "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2JhdHRsZXNuYWtl",
+    "price": 38.5,
+    "shortText": "Party power metal uit Finland | + Vanaheim + Solarcycles",
+    "longText": "../public/texts/effenaar/ZmZlbmFhci5ubC9hZ2VuZGEvYmF0dGxlLWJlYXN0.html",
+    "image": "../public/event-images/effenaar/ZmZlbmFhci5ubC9hZ2VuZGEvYmF0dGxlLWJlYXN0",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
+      "battle beast": {
+        "s": "7k5jeohqcf20a8fobd9ize",
+        "l": "battle%20beast",
+        "g": [
+          "finnish heavy metal",
+          "finnish power metal",
+          "gothic symphonic metal",
+          "power metal",
+          "symphonic metal"
+        ]
+      },
       "battle": {
         "s": null,
         "l": "battle",
@@ -171,11 +249,12 @@
           "black metal"
         ]
       },
-      "snake": {
-        "s": null,
-        "l": "snake",
+      "vanaheim": {
+        "s": "0ewl1mehmtg9sylwydotu7",
+        "l": "vanaheim",
         "g": [
-          "heavy metal"
+          "dutch metal",
+          "metal gotico"
         ]
       },
       "metal": {
@@ -196,47 +275,101 @@
     }
   },
   {
-    "door": "2025-10-04T15:00:00",
-    "start": "2025-10-04T15:30:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/caya2025",
-    "title": "Come As You Are 2025",
+    "door": "2025-11-07T19:30:00",
+    "start": "2025-11-07T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/pothamus",
+    "title": "Pothamus",
     "location": "effenaar",
-    "price": 49.5,
-    "shortText": " o.a. Fun Lovin' Criminals, Claw Boys Claw, Afterpartees en meer  Het beste van drie decennia gitaarmuziek",
-    "longText": "../public/texts/effenaar/d3cuZWZmZW5hYXIubmwvYWdlbmRhL2NheWEyMDI1.html",
-    "image": "../public/event-images/effenaar/d3cuZWZmZW5hYXIubmwvYWdlbmRhL2NheWEyMDI1",
+    "price": 18.5,
+    "shortText": "Een hypnotiserende reis door een landschap van sludge en post-metal",
+    "longText": "../public/texts/effenaar/d3cuZWZmZW5hYXIubmwvYWdlbmRhL3BvdGhhbXVz.html",
+    "image": "../public/event-images/effenaar/d3cuZWZmZW5hYXIubmwvYWdlbmRhL3BvdGhhbXVz",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "claw boys claw": {
-        "s": "5t378xbmytaymycg84zipv",
-        "l": "claw%20boys%20claw",
+      "pothamus": {
+        "s": "3oKgJ6083BjtllXxDN3TD5",
+        "l": "pothamus",
         "g": [
-          "dutch blues",
-          "dutch indie",
-          "dutch rock"
+          "belgian post-rock",
+          "doomgaze"
         ]
       },
-      "crim": {
+      "metal": {
         "s": null,
-        "l": "crim",
+        "l": "metal",
         "g": [
-          "melodic death metal",
-          "metalcore"
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
         ]
       }
     }
   },
   {
-    "door": "2025-12-12T15:00:00",
-    "start": "2025-12-12T15:30:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-2025-day-1",
-    "title": "Eindhoven Metal Meeting 2025 - Day 1",
+    "door": "2025-12-07T19:30:00",
+    "start": "2025-12-07T20:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/belzebong",
+    "title": "Belzebong",
+    "location": "effenaar",
+    "price": 17,
+    "shortText": "Instrumentale stonerrock, doommetal en heavy psych",
+    "longText": "../public/texts/effenaar/dy5lZmZlbmFhci5ubC9hZ2VuZGEvYmVsemVib25n.html",
+    "image": "../public/event-images/effenaar/dy5lZmZlbmFhci5ubC9hZ2VuZGEvYmVsemVib25n",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
+      },
+      "belzebong": {
+        "s": "3MffQ9fJsgtOEqW8GvzJW8",
+        "l": "belzebong",
+        "g": [
+          "sludge metal",
+          "doom metal",
+          "stoner",
+          "doom metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-12-13T15:00:00",
+    "start": "2025-12-13T15:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-2025-day-2",
+    "title": "Eindhoven Metal Meeting 2025 - Day 2",
     "location": "effenaar",
     "price": 140,
-    "shortText": "Met o.a. TRIPTYKON, SINISTER en ANGSTSKRIG",
-    "longText": "../public/texts/effenaar/aG92ZW4tbWV0YWwtbWVldGluZy0yMDI1LWRheS0x.html",
-    "image": "../public/event-images/effenaar/aG92ZW4tbWV0YWwtbWVldGluZy0yMDI1LWRheS0x",
+    "shortText": "met o.a. TRIPTYKON, BATUSHKA, NARGAROTH, TRIBULATION",
+    "longText": "../public/texts/effenaar/aG92ZW4tbWV0YWwtbWVldGluZy0yMDI1LWRheS0y.html",
+    "image": "../public/event-images/effenaar/aG92ZW4tbWV0YWwtbWVldGluZy0yMDI1LWRheS0y",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
@@ -253,6 +386,15 @@
         "g": [
           "groove",
           "progressive metal"
+        ]
+      },
+      "tribulation": {
+        "s": "7xTo7ipdBZezIoyAkmcRge",
+        "l": "tribulation",
+        "g": [
+          "swedish metal",
+          "black",
+          "thrash metal"
         ]
       },
       "triptykon": {
@@ -268,6 +410,21 @@
           "death",
           "black metal"
         ]
+      },
+      "nargaroth": {
+        "s": "0aIcU4OHpKl7lpcRQp32Eo",
+        "l": "nargaroth",
+        "g": [
+          "autonomous black metal",
+          "black metal",
+          "german black metal",
+          "black metal"
+        ]
+      },
+      "batushka": {
+        "s": null,
+        "l": "batushka",
+        "g": []
       }
     }
   }

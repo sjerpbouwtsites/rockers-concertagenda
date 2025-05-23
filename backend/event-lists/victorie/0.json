@@ -1,143 +1,13 @@
 [
   {
-    "door": "2025-04-03T19:15:00",
-    "start": "2025-04-03T19:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/anneke-van-giersbergen-2025",
-    "title": "Anneke van Giersbergen",
-    "location": "victorie",
-    "price": 31.65,
-    "shortText": "Veelzijdige rockzangeres",
-    "longText": "../public/texts/victorie/bWEvYW5uZWtlLXZhbi1naWVyc2Jlcmdlbi0yMDI1.html",
-    "image": "../public/event-images/victorie/bWEvYW5uZWtlLXZhbi1naWVyc2Jlcmdlbi0yMDI1",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "anneke van giersbergen": {
-        "s": "6tzqjnkayty8hfqbeddf8v",
-        "l": "anneke%20van%20giersbergen",
-        "g": [
-          "metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-04T19:30:00",
-    "start": "2025-04-04T20:00:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/clan-of-xymox",
-    "title": "Clan of Xymox",
-    "location": "victorie",
-    "price": 23,
-    "shortText": "Dark wave formatie is terug met nieuw album 'Exodus'",
-    "longText": "../public/texts/victorie/cmllLm5sL3Byb2dyYW1tYS9jbGFuLW9mLXh5bW94.html",
-    "image": "../public/event-images/victorie/cmllLm5sL3Byb2dyYW1tYS9jbGFuLW9mLXh5bW94",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "clan of xymox": {
-        "s": "1whmr7i0ulf58wfqexcpha",
-        "l": "clan%20of%20xymox",
-        "g": [
-          "dark wave",
-          "dream pop",
-          "ethereal wave",
-          "gothic rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-18T19:15:00",
-    "start": "2025-04-18T20:15:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/smells-like-grunge-18/04/25",
-    "title": "Smells Like Grunge",
-    "location": "victorie",
-    "price": 25.88,
-    "shortText": "Een avond vol grunge en 90s rock",
-    "longText": "../public/texts/victorie/bWEvc21lbGxzLWxpa2UtZ3J1bmdlLTE4LzA0LzI1.html",
-    "image": "../public/event-images/victorie/bWEvc21lbGxzLWxpa2UtZ3J1bmdlLTE4LzA0LzI1",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-04-18T19:30:00",
-    "start": "2025-04-18T20:30:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/knives-out!-meltheads,-bug,-no-brains",
-    "title": "Knives out! meltheads, bug, no brains",
-    "location": "victorie",
-    "price": 14.5,
-    "shortText": "(post)punkavond",
-    "longText": "../public/texts/victorie/b3V0IS1tZWx0aGVhZHMsLWJ1Zywtbm8tYnJhaW5z.html",
-    "image": "../public/event-images/victorie/b3V0IS1tZWx0aGVhZHMsLWJ1Zywtbm8tYnJhaW5z",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "no brains": {
-        "s": "5zwy9rbvpvxw49wgpfxv0t",
-        "l": null,
-        "g": [
-          "punk",
-          "street punk"
-        ]
-      },
-      "knives": {
-        "s": "2YoHhPouaTT96k3dUQ8WZK",
-        "l": "knives",
-        "g": [
-          "grindcore",
-          "death 'n' roll"
-        ]
-      },
-      "heads": {
-        "s": null,
-        "l": "heads",
-        "g": [
-          "death",
-          "thrash",
-          "black metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-15T19:00:00",
-    "start": "2025-05-15T19:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/neuk!-69-charger-skroetbalg",
-    "title": "Neuk! - 69 Charger - Skroetbalg",
-    "location": "victorie",
-    "price": 22,
-    "shortText": "Halsbrekende tour",
-    "longText": "../public/texts/victorie/bWEvbmV1ayEtNjktY2hhcmdlci1za3JvZXRiYWxn.html",
-    "image": "../public/event-images/victorie/bWEvbmV1ayEtNjktY2hhcmdlci1za3JvZXRiYWxn",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "69 charger": {
-        "s": "2sibonl0bjr2o5ckfrcepl",
-        "l": "69%20charger",
-        "g": [
-          "metal",
-          "punk"
-        ]
-      },
-      "neuk!": {
-        "s": "61z4arbgymgk3nsxcyazoa",
-        "l": "neuk!",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2025-05-29T19:15:00",
-    "start": "2025-05-29T19:30:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/dikke-dennis-en-de-r%C3%B8ckers",
-    "title": "Dikke Dennis & de Røckers",
+    "start": "2025-05-29T21:30:00+02:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/dikke-dennis-de-rockers/",
+    "title": "Dikke Dennis & De Røckers",
     "location": "victorie",
     "price": 15.5,
     "shortText": "Voormalig mascotte van Peter Pan Speedrock heeft nu eigen band",
-    "longText": "../public/texts/victorie/aWtrZS1kZW5uaXMtZW4tZGUtciVDMyVCOGNrZXJz.html",
-    "image": "../public/event-images/victorie/aWtrZS1kZW5uaXMtZW4tZGUtciVDMyVCOGNrZXJz",
+    "longText": "../public/texts/victorie/cmFtbWEvZGlra2UtZGVubmlzLWRlLXJvY2tlcnMv.html",
+    "image": "../public/event-images/victorie/cmFtbWEvZGlra2UtZGVubmlzLWRlLXJvY2tlcnMv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
@@ -165,15 +35,57 @@
     }
   },
   {
-    "door": "2025-07-10T19:30:00",
-    "start": "2025-07-10T20:15:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/valient-thorr-10/07/25",
+    "start": "2025-05-30T23:30:00+02:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/junkyard-2/",
+    "title": "Junkyard",
+    "location": "victorie",
+    "price": 0,
+    "shortText": "De hardste drum & bass-editie van het jaar",
+    "longText": "../public/texts/victorie/dG9yaWUubmwvcHJvZ3JhbW1hL2p1bmt5YXJkLTIv.html",
+    "image": "../public/event-images/victorie/dG9yaWUubmwvcHJvZ3JhbW1hL2p1bmt5YXJkLTIv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "junkyard": {
+        "s": "102IW5khntjPJsSvbFI7eF",
+        "l": "junkyard",
+        "g": [
+          "glam metal",
+          "glam rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-07-06T22:00:00+02:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/wodan-boys-rooftop-show/",
+    "title": "Wodan Boys Rooftop Show",
+    "location": "victorie",
+    "price": 21.5,
+    "shortText": "Een kolkende moshpit op ons dakterras",
+    "longText": "../public/texts/victorie/cmFtbWEvd29kYW4tYm95cy1yb29mdG9wLXNob3cv.html",
+    "image": "../public/event-images/victorie/cmFtbWEvd29kYW4tYm95cy1yb29mdG9wLXNob3cv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "wodan boys": {
+        "s": "0kmkbibevmq4luqquahdmr",
+        "l": "wodan%20boys",
+        "g": [
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-07-10T22:15:00+02:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/valient-thorr/",
     "title": "Valient Thorr",
     "location": "victorie",
     "price": 23,
     "shortText": "Legendarische rockhelden uit North Carolina",
-    "longText": "../public/texts/victorie/b2dyYW1tYS92YWxpZW50LXRob3JyLTEwLzA3LzI1.html",
-    "image": "../public/event-images/victorie/b2dyYW1tYS92YWxpZW50LXRob3JyLTEwLzA3LzI1",
+    "longText": "../public/texts/victorie/aWUubmwvcHJvZ3JhbW1hL3ZhbGllbnQtdGhvcnIv.html",
+    "image": "../public/event-images/victorie/aWUubmwvcHJvZ3JhbW1hL3ZhbGllbnQtdGhvcnIv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
@@ -190,15 +102,14 @@
     }
   },
   {
-    "door": "2025-09-12T19:15:00",
-    "start": "2025-09-12T20:00:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/band-of-friends",
-    "title": "Band of Friends",
+    "start": "2025-09-12T22:00:00+02:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/band-of-friends/",
+    "title": "Band Of Friends",
     "location": "victorie",
     "price": 25.88,
-    "shortText": "Bluesrockformatie",
-    "longText": "../public/texts/victorie/ZS5ubC9wcm9ncmFtbWEvYmFuZC1vZi1mcmllbmRz.html",
-    "image": "../public/event-images/victorie/ZS5ubC9wcm9ncmFtbWEvYmFuZC1vZi1mcmllbmRz",
+    "shortText": "Bluesrockformatie opgericht door basgitarist en vocalist Gerry McAvoy (Rory Gallagher)",
+    "longText": "../public/texts/victorie/Lm5sL3Byb2dyYW1tYS9iYW5kLW9mLWZyaWVuZHMv.html",
+    "image": "../public/event-images/victorie/Lm5sL3Byb2dyYW1tYS9iYW5kLW9mLWZyaWVuZHMv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
@@ -213,15 +124,35 @@
     }
   },
   {
-    "door": "2025-10-26T14:30:00",
-    "start": "2025-10-26T15:30:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/and-the-band-played-on",
+    "start": "2025-10-16T21:50:00+02:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/henge/",
+    "title": "Henge",
+    "location": "victorie",
+    "price": 23,
+    "shortText": "Grensverleggende muziek van verre planeten",
+    "longText": "../public/texts/victorie/dW12aWN0b3JpZS5ubC9wcm9ncmFtbWEvaGVuZ2Uv.html",
+    "image": "../public/event-images/victorie/dW12aWN0b3JpZS5ubC9wcm9ncmFtbWEvaGVuZ2Uv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "henge": {
+        "s": "5R09pajxQjiwdUH6Fw4yM5",
+        "l": "henge",
+        "g": [
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-10-26T16:30:00+01:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/and-the-band-played-on/",
     "title": "And The Band Played On",
     "location": "victorie",
     "price": 25.9,
-    "shortText": "Tribute aan The Band",
-    "longText": "../public/texts/victorie/b2dyYW1tYS9hbmQtdGhlLWJhbmQtcGxheWVkLW9u.html",
-    "image": "../public/event-images/victorie/b2dyYW1tYS9hbmQtdGhlLWJhbmQtcGxheWVkLW9u",
+    "shortText": "Eerbetoon aan The Band met muzikanten van o.a. De Dijk, Normaal en Sjako!",
+    "longText": "../public/texts/victorie/Z3JhbW1hL2FuZC10aGUtYmFuZC1wbGF5ZWQtb24v.html",
+    "image": "../public/event-images/victorie/Z3JhbW1hL2FuZC10aGUtYmFuZC1wbGF5ZWQtb24v",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
@@ -236,16 +167,84 @@
     }
   },
   {
-    "door": "2025-11-28T19:30:00",
-    "start": "2025-11-28T20:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/acindc",
+    "start": "2025-10-30T21:00:00+01:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/claw-boys-claw/",
+    "title": "Claw Boys Claw",
+    "location": "victorie",
+    "price": 31.05,
+    "shortText": "Allerlaatste kans om deze legendarische rockband live te zien",
+    "longText": "../public/texts/victorie/ZS5ubC9wcm9ncmFtbWEvY2xhdy1ib3lzLWNsYXcv.html",
+    "image": "../public/event-images/victorie/ZS5ubC9wcm9ncmFtbWEvY2xhdy1ib3lzLWNsYXcv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "claw boys claw": {
+        "s": "5t378xbmytaymycg84zipv",
+        "l": "claw%20boys%20claw",
+        "g": [
+          "dutch blues",
+          "dutch indie",
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-11-09T21:10:00+01:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/temple-fang/",
+    "title": "Temple Fang",
+    "location": "victorie",
+    "price": 19,
+    "shortText": "",
+    "longText": "../public/texts/victorie/b3JpZS5ubC9wcm9ncmFtbWEvdGVtcGxlLWZhbmcv.html",
+    "image": "../public/event-images/victorie/b3JpZS5ubC9wcm9ncmFtbWEvdGVtcGxlLWZhbmcv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "temple fang": {
+        "s": null,
+        "l": null,
+        "g": [
+          "space rock",
+          "doom",
+          "psych",
+          "heavy psych",
+          "stoner"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-11-19T21:30:00+01:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/adrian-vandenberg-my-whitesnake-years/",
+    "title": "Adrian Vandenberg: My Whitesnake Years",
+    "location": "victorie",
+    "price": 42.2,
+    "shortText": "Gitaarlegende brengt ode aan zijn Whitesnake jaren",
+    "longText": "../public/texts/victorie/YW5kZW5iZXJnLW15LXdoaXRlc25ha2UteWVhcnMv.html",
+    "image": "../public/event-images/victorie/YW5kZW5iZXJnLW15LXdoaXRlc25ha2UteWVhcnMv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "snake": {
+        "s": null,
+        "l": "snake",
+        "g": [
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-11-28T21:45:00+01:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/acindc/",
     "title": "Acindc",
     "location": "victorie",
     "price": 28.75,
     "shortText": "Eerbetoon aan AC/DC",
-    "longText": "../public/texts/victorie/dW12aWN0b3JpZS5ubC9wcm9ncmFtbWEvYWNpbmRj.html",
-    "image": "../public/event-images/victorie/dW12aWN0b3JpZS5ubC9wcm9ncmFtbWEvYWNpbmRj",
-    "soldOut": false,
+    "longText": "../public/texts/victorie/bXZpY3RvcmllLm5sL3Byb2dyYW1tYS9hY2luZGMv.html",
+    "image": "../public/event-images/victorie/bXZpY3RvcmllLm5sL3Byb2dyYW1tYS9hY2luZGMv",
+    "soldOut": true,
     "eventGenres": null,
     "artists": {
       "acindc": {
@@ -253,6 +252,28 @@
         "l": "acindc",
         "g": [
           "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-11-30T21:00:00+01:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/eurydice-release/",
+    "title": "Eurydice",
+    "location": "victorie",
+    "price": 12.5,
+    "shortText": "Liveshow rondom debuutalbum",
+    "longText": "../public/texts/victorie/bmwvcHJvZ3JhbW1hL2V1cnlkaWNlLXJlbGVhc2Uv.html",
+    "image": "../public/event-images/victorie/bmwvcHJvZ3JhbW1hL2V1cnlkaWNlLXJlbGVhc2Uv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "eurydice": {
+        "s": "7iY2EYh4gAOcWg8NYpJXi8",
+        "l": "eurydice",
+        "g": [
+          "death metal",
+          "hardcore"
         ]
       }
     }

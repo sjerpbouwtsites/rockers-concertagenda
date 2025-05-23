@@ -1,262 +1,143 @@
 [
   {
-    "door": "2025-04-03T19:30:00",
-    "start": "2025-04-03T20:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/rhea-support-03-04-25/",
-    "title": "Rhea + Eurydice",
-    "location": "patronaat",
-    "price": 18,
-    "shortText": "Het bewijs dat rock-‘n-roll springlevend is",
-    "longText": "../public/texts/patronaat/bC9ldmVudC9yaGVhLXN1cHBvcnQtMDMtMDQtMjUv.html",
-    "image": "../public/event-images/patronaat/bC9ldmVudC9yaGVhLXN1cHBvcnQtMDMtMDQtMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "eurydice": {
-        "s": "7iY2EYh4gAOcWg8NYpJXi8",
-        "l": "eurydice",
-        "g": [
-          "death metal",
-          "hardcore"
-        ]
-      },
-      "rhea": {
-        "s": "3iTqZTjeziB8WtVJeIUrLD",
-        "l": "rhea",
-        "g": [
-          "belgian rock",
-          "atmospheric death",
-          "doom metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-13T19:00:00",
-    "start": "2025-04-13T19:30:00",
-    "venueEventUrl": "https://patronaat.nl/event/frozen-crown-lutharo-13-04-25/",
-    "title": "Frozen Crown + Fellowship + Lutharo",
-    "location": "patronaat",
-    "price": 27.5,
-    "shortText": "Alle vuisten in de lucht!",
-    "longText": "../public/texts/patronaat/ZnJvemVuLWNyb3duLWx1dGhhcm8tMTMtMDQtMjUv.html",
-    "image": "../public/event-images/patronaat/ZnJvemVuLWNyb3duLWx1dGhhcm8tMTMtMDQtMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "frozen crown": {
-        "s": "6hbGneO1qRnmz6xflK4n8E",
-        "l": "frozen%20crown",
-        "g": [
-          "gothic symphonic metal",
-          "italian folk metal",
-          "italian power metal",
-          "melodic metal",
-          "power metal",
-          "slayer",
-          "symphonic metal",
-          "symphonic power metal",
-          "power metal"
-        ]
-      },
-      "fellowship": {
-        "s": "3WDqn7WBcRoRE1IpEWNf3E",
-        "l": "fellowship",
-        "g": [
-          "british power metal",
-          "melodic metal",
-          "symphonic power metal",
-          "symphonic power metal"
-        ]
-      },
-      "lutharo": {
-        "s": "38RQwSDbSq8ztizimX2vYp",
-        "l": "lutharo",
-        "g": [
-          "slayer",
-          "melodic death",
-          "power",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-19T18:30:00",
-    "start": "2025-04-19T19:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/patriarkh-dogma-nidhogg-19-04-25/",
-    "title": "Patriarkh + DOGMA + Nidhogg",
+    "door": "2025-05-23T19:00:00",
+    "start": "2025-05-23T19:15:00",
+    "venueEventUrl": "https://patronaat.nl/event/grima-ultar-23-05-25/",
+    "title": "Grima + Ultar + Houle + Aquilus + Suldusk",
     "location": "patronaat",
     "price": 28.5,
-    "shortText": "Epische orthodoxe black metal",
-    "longText": "../public/texts/patronaat/cmlhcmtoLWRvZ21hLW5pZGhvZ2ctMTktMDQtMjUv.html",
-    "image": "../public/event-images/patronaat/cmlhcmtoLWRvZ21hLW5pZGhvZ2ctMTktMDQtMjUv",
+    "shortText": "Atmosferische blackmetal uit Siberië",
+    "longText": "../public/texts/patronaat/bmwvZXZlbnQvZ3JpbWEtdWx0YXItMjMtMDUtMjUv.html",
+    "image": "../public/event-images/patronaat/bmwvZXZlbnQvZ3JpbWEtdWx0YXItMjMtMDUtMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "patriarkh": {
-        "s": null,
-        "l": null,
+      "aquilus": {
+        "s": "1AKQ12On2ydAN0jykcB929",
+        "l": "aquilus",
         "g": [
           "black metal",
-          "doom metal"
+          "atmospheric black",
+          "folk metal",
+          "neoclassical"
         ]
       },
-      "nidhogg": {
-        "s": "4bkO4QWnpMCKGdfevM6n64",
-        "l": "nidhogg",
+      "suldusk": {
+        "s": "27bhelNsrdlX5Y5H7yigfg",
+        "l": "suldusk",
+        "g": [
+          "neofolk",
+          "black metal"
+        ]
+      },
+      "grima": {
+        "s": "7KSPZyeCKkfkhMkX8rYIhD",
+        "l": "grima",
+        "g": [
+          "atmospheric black metal",
+          "russian black metal",
+          "voidgaze",
+          "atmospheric black metal"
+        ]
+      },
+      "ultar": {
+        "s": "6qBmMTIQANnluSglXkcRV0",
+        "l": "ultar",
         "g": [
           "black metal",
+          "post-black metal"
+        ]
+      },
+      "houle": {
+        "s": "7kyEbclVUPx4zFdUdNbMUI",
+        "l": "houle",
+        "g": [
           "dark ambient",
-          "heavy",
-          "power",
-          "folk metal"
-        ]
-      },
-      "dogma": {
-        "s": "4R6XPuqGShFESRVkCePaxj",
-        "l": "dogma",
-        "g": [
-          "groove metal"
+          "ambient",
+          "black metal"
         ]
       }
     }
   },
   {
-    "door": "2025-04-24T19:30:00",
-    "start": "2025-04-24T20:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/tramhaus-support-24-04-25/",
-    "title": "Tramhaus + Søwt",
+    "door": "2025-05-31T19:30:00",
+    "start": "2025-05-31T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/dvne-support-31-05-25/",
+    "title": "Dvne + pijn",
     "location": "patronaat",
-    "price": 22.5,
-    "shortText": "Rotterdamse punkers brengen debuutalbum naar Haarlem",
-    "longText": "../public/texts/patronaat/ZW50L3RyYW1oYXVzLXN1cHBvcnQtMjQtMDQtMjUv.html",
-    "image": "../public/event-images/patronaat/ZW50L3RyYW1oYXVzLXN1cHBvcnQtMjQtMDQtMjUv",
+    "price": 23.5,
+    "shortText": "Progressieve metal uit schotland met sci-fi en fantasy invloeden",
+    "longText": "../public/texts/patronaat/bC9ldmVudC9kdm5lLXN1cHBvcnQtMzEtMDUtMjUv.html",
+    "image": "../public/event-images/patronaat/bC9ldmVudC9kdm5lLXN1cHBvcnQtMzEtMDUtMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "tramhaus": {
-        "s": "5HXrUfoDwofY8lehLNIykB",
-        "l": "tramhaus",
+      "pijn": {
+        "s": "088azitic1cw6iszwcylvw",
+        "l": "pijn",
         "g": [
-          "post-punk",
-          "noise rock"
+          "atmospheric post-metal",
+          "british post-rock",
+          "post-doom metal",
+          "post-metal"
         ]
       },
-      "søwt": {
-        "s": null,
-        "l": "s%c3%b8wt",
+      "dvne": {
+        "s": "1isrot4ggrmnqft2vmaa5q",
+        "l": "united kingdom",
+        "g": [
+          "edinburgh metal",
+          "post-metal",
+          "progressive sludge",
+          "sci-fi metal",
+          "scottish metal",
+          "progressive sludge/post-metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-06-17T19:30:00",
+    "start": "2025-06-17T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/normandie-support-17-06-25/",
+    "title": "Normandie + Tropic Gold",
+    "location": "patronaat",
+    "price": 26,
+    "shortText": "Metalcore uit Zweden terug in Haarlem",
+    "longText": "../public/texts/patronaat/bnQvbm9ybWFuZGllLXN1cHBvcnQtMTctMDYtMjUv.html",
+    "image": "../public/event-images/patronaat/bnQvbm9ybWFuZGllLXN1cHBvcnQtMTctMDYtMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "normandie": {
+        "s": "1zsottir3vjzrnw4iq8zg6",
+        "l": "normandie",
         "g": []
       }
     }
   },
   {
-    "door": "2025-04-25T19:30:00",
-    "start": "2025-04-25T19:45:00",
-    "venueEventUrl": "https://patronaat.nl/event/vorst-in-de-grond-2025-25-04-25/",
-    "title": "Vorst in de grond 2025",
-    "location": "patronaat",
-    "price": 18,
-    "shortText": "Gepresenteerd door Minor Operation Bookings",
-    "longText": "../public/texts/patronaat/cnN0LWluLWRlLWdyb25kLTIwMjUtMjUtMDQtMjUv.html",
-    "image": "../public/event-images/patronaat/cnN0LWluLWRlLWdyb25kLTIwMjUtMjUtMDQtMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-05-15T19:00:00",
-    "start": "2025-05-15T19:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/pornofilmy-15-05-25/",
-    "title": "Pornofilmy",
+    "door": "2025-06-22T19:30:00",
+    "start": "2025-06-22T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/jiluka-nini-22-06-25/",
+    "title": "Jiluka + NiNi",
     "location": "patronaat",
     "price": null,
-    "shortText": "Russische punk!",
-    "longText": "../public/texts/patronaat/Lm5sL2V2ZW50L3Bvcm5vZmlsbXktMTUtMDUtMjUv.html",
-    "image": "../public/event-images/patronaat/Lm5sL2V2ZW50L3Bvcm5vZmlsbXktMTUtMDUtMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-05-18T19:30:00",
-    "start": "2025-05-18T20:15:00",
-    "venueEventUrl": "https://patronaat.nl/event/blackbriar-solar-cycles-18-05-25/",
-    "title": "Blackbriar + Solar Cycles",
-    "location": "patronaat",
-    "price": 28.5,
-    "shortText": "Een van de snelst stijgende sterren van de symfonishe metalscene",
-    "longText": "../public/texts/patronaat/Y2ticmlhci1zb2xhci1jeWNsZXMtMTgtMDUtMjUv.html",
-    "image": "../public/event-images/patronaat/Y2ticmlhci1zb2xhci1jeWNsZXMtMTgtMDUtMjUv",
+    "shortText": "Japanse 'visual kei' metalband blaast je omver",
+    "longText": "../public/texts/patronaat/bmwvZXZlbnQvamlsdWthLW5pbmktMjItMDYtMjUv.html",
+    "image": "../public/event-images/patronaat/bmwvZXZlbnQvamlsdWthLW5pbmktMjItMDYtMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "blackbriar": {
-        "s": "6pxqux3bytsvj7lcvviomi",
-        "l": "blackbriar",
+      "nini": {
+        "s": "1yRlzSYXePSpSnffspTXYQ",
+        "l": "nini",
         "g": [
-          "dutch metal",
-          "gothic symphonic metal",
-          "slayer",
-          "symphonic metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-27T19:00:00",
-    "start": "2025-05-27T19:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/dame-area-support-27-05-25/",
-    "title": "Dame area + support",
-    "location": "patronaat",
-    "price": null,
-    "shortText": "Dark electro met invloeden van post-punk en avant-garde rock",
-    "longText": "../public/texts/patronaat/bnQvZGFtZS1hcmVhLXN1cHBvcnQtMjctMDUtMjUv.html",
-    "image": "../public/event-images/patronaat/bnQvZGFtZS1hcmVhLXN1cHBvcnQtMjctMDUtMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "dame area": {
-        "s": "1Cmtis0NcKGTvAnovenEJl",
-        "l": "dame%20area",
-        "g": [
-          "ebm",
-          "cold wave",
-          "industrial",
-          "darkwave"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-06-01T19:00:00",
-    "start": "2025-06-01T20:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/living-colour-support-01-06-25/",
-    "title": "Living Colour + Green Crow Collective • PHIL",
-    "location": "patronaat",
-    "price": 38.5,
-    "shortText": "Eighties band terug naar Haarlem",
-    "longText": "../public/texts/patronaat/aXZpbmctY29sb3VyLXN1cHBvcnQtMDEtMDYtMjUv.html",
-    "image": "../public/event-images/patronaat/aXZpbmctY29sb3VyLXN1cHBvcnQtMDEtMDYtMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "living colour": {
-        "s": "6uhp7wa6sjm5zl6xz561de",
-        "l": "living%20colour",
-        "g": [
-          "funk metal",
-          "funk rock",
-          "hard rock"
+          "folk metal"
         ]
       }
     }
@@ -292,66 +173,73 @@
     }
   },
   {
-    "door": "2025-07-10T19:30:00",
-    "start": "2025-07-10T20:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/pentagram-10-07-25/",
-    "title": "Pentagram",
+    "door": "2025-07-05T19:30:00",
+    "start": "2025-07-05T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/coheed-cambria-support-05-07-25/",
+    "title": "Coheed and Cambria + Heave Blood & Die",
     "location": "patronaat",
-    "price": 34.5,
-    "shortText": "Doommetalband met cultstatus",
-    "longText": "../public/texts/patronaat/dC5ubC9ldmVudC9wZW50YWdyYW0tMTAtMDctMjUv.html",
-    "image": "../public/event-images/patronaat/dC5ubC9ldmVudC9wZW50YWdyYW0tMTAtMDctMjUv",
+    "price": 33.5,
+    "shortText": "De beste mix van gitaren en science-fiction",
+    "longText": "../public/texts/patronaat/aGVlZC1jYW1icmlhLXN1cHBvcnQtMDUtMDctMjUv.html",
+    "image": "../public/event-images/patronaat/aGVlZC1jYW1icmlhLXN1cHBvcnQtMDUtMDctMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "pentagram": {
-        "s": "0xybuiDEYo3YuT3fLPaIyE",
-        "l": "pentagram",
+      "blood": {
+        "s": null,
+        "l": "blood",
         "g": [
-          "doom metal",
-          "sludge metal",
-          "stoner rock",
-          "thrash metal"
+          "death metal",
+          "grindcore"
         ]
       }
     }
   },
   {
-    "door": "2025-08-23T14:30:00",
-    "start": "2025-08-23T15:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/complexity-fest-2025-23-08-25/",
-    "title": "Complexity Fest 2025: Car Bomb, Imperial Triumphant, Papangu, meth., L’orne en meer!",
+    "door": "2025-07-10T19:30:00",
+    "start": "2025-07-10T20:30:00",
+    "venueEventUrl": "https://patronaat.nl/event/steve-von-till-10-07-25/",
+    "title": "Steve von Till • Nieuwe Kerk",
     "location": "patronaat",
-    "price": null,
-    "shortText": " Ons favoriete festival voor grensverleggende heavy muziek is terug!",
-    "longText": "../public/texts/patronaat/Y29tcGxleGl0eS1mZXN0LTIwMjUtMjMtMDgtMjUv.html",
-    "image": "../public/event-images/patronaat/Y29tcGxleGl0eS1mZXN0LTIwMjUtMjMtMDgtMjUv",
+    "price": 24.5,
+    "shortText": "Neurosis-frontman brengt solo-werk naar Haarlem",
+    "longText": "../public/texts/patronaat/ZXZlbnQvc3RldmUtdm9uLXRpbGwtMTAtMDctMjUv.html",
+    "image": "../public/event-images/patronaat/ZXZlbnQvc3RldmUtdm9uLXRpbGwtMTAtMDctMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "imperial triumphant": {
-        "s": "5zvMklMSTgoGUS9Un5domO",
-        "l": "imperial%20triumphant",
+      "steve von till": {
+        "s": "5fndnhwmhasuxf6grqzdsj",
+        "l": "steve%20von%20till",
         "g": [
-          "avant-garde black metal",
-          "dissonant death metal",
-          "nyc metal",
-          "post-black metal",
-          "technical black metal",
-          "voidgrind",
-          "avant-garde",
-          "technical black",
-          "death metal"
+          "drone metal",
+          "melancholia",
+          "post-metal"
         ]
-      },
-      "papangu": {
-        "s": "0Ubo1fKmsKmf8A8D2kh16r",
-        "l": "papangu",
+      }
+    }
+  },
+  {
+    "door": "2025-09-05T19:30:00",
+    "start": "2025-09-05T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/black-lips-support-05-09-25/",
+    "title": "Black Lips + support",
+    "location": "patronaat",
+    "price": 25.5,
+    "shortText": "Legendarische punkers met een southern twang",
+    "longText": "../public/texts/patronaat/dC9ibGFjay1saXBzLXN1cHBvcnQtMDUtMDktMjUv.html",
+    "image": "../public/event-images/patronaat/dC9ibGFjay1saXBzLXN1cHBvcnQtMDUtMDktMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "black lips": {
+        "s": "35C0NSLogAwImm8HAMqEmG",
+        "l": "black%20lips",
         "g": [
-          "progressive metal",
-          "avant-garde"
+          "garage rock"
         ]
       }
     }
@@ -360,7 +248,7 @@
     "door": "2025-09-17T19:00:00",
     "start": "2025-09-17T19:30:00",
     "venueEventUrl": "https://patronaat.nl/event/ten56-vctms-17-09-25/",
-    "title": "ten56. + VCTMS + The Dali Thundering Concept",
+    "title": "Ten56. + cabal + vctms + dali",
     "location": "patronaat",
     "price": null,
     "shortText": "Muziek als een mokerslag op je borstkas, maar dan met stijl",
@@ -379,64 +267,234 @@
           "djent"
         ]
       },
+      "cabal": {
+        "s": "6iv9dxekx45ff7qe0ldufw",
+        "l": "cabal",
+        "g": [
+          "argentine rock"
+        ]
+      },
       "vctms": {
         "s": "0Gav1syIZzd1D6fiyhd9dT",
         "l": "vctms",
         "g": [
           "deathcore",
           "metalcore",
-          "djent"
+          "djent",
+          "\""
         ]
       },
-      "the dali thundering concept": {
-        "s": "6HZqdaj8X8h6gMTPlD6EPR",
-        "l": "the%20dali%20thundering%20concept",
+      "dali": {
+        "s": "5fvW3NDzojPcdLL9pth71U",
+        "l": "dali",
         "g": [
-          "djent",
-          "progressive metal",
-          "deathcore",
-          "metalcore"
+          "black metal"
         ]
       }
     }
   },
   {
-    "door": "2025-10-09T19:30:00",
-    "start": "2025-10-09T20:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/hang-youth-support-09-10-25/",
-    "title": "Hang Youth + support",
+    "door": "2025-10-03T19:00:00",
+    "start": "2025-10-03T19:30:00",
+    "venueEventUrl": "https://patronaat.nl/event/der-weg-einer-freiheit-support-03-10-25/",
+    "title": "Der Weg Einer Freiheit + support",
     "location": "patronaat",
-    "price": 23.5,
-    "shortText": "Dé belichaming van Nederlandse punk anno nu",
-    "longText": "../public/texts/patronaat/dC9oYW5nLXlvdXRoLXN1cHBvcnQtMDktMTAtMjUv.html",
-    "image": "../public/event-images/patronaat/dC9oYW5nLXlvdXRoLXN1cHBvcnQtMDktMTAtMjUv",
+    "price": 28.5,
+    "shortText": "Moderne, progressieve en avant-garde black metal",
+    "longText": "../public/texts/patronaat/bmVyLWZyZWloZWl0LXN1cHBvcnQtMDMtMTAtMjUv.html",
+    "image": "../public/event-images/patronaat/bmVyLWZyZWloZWl0LXN1cHBvcnQtMDMtMTAtMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "hang youth": {
-        "s": "33s4eablBmnrPlE3y6CZFR",
-        "l": "hang%20youth",
+      "der weg einer freiheit": {
+        "s": "7e823b0KQoVtLG86Ui5xGD",
+        "l": "der%20weg%20einer%20freiheit",
         "g": [
-          "dutch indie",
-          "lowlands hardcore"
+          "black metal",
+          "black metal"
         ]
       }
     }
   },
   {
-    "door": "2025-10-20T16:30:00",
-    "start": "2025-10-20T16:30:00",
-    "venueEventUrl": "https://patronaat.nl/event/common-thread-tour-day-2-20-10-25/",
-    "title": "Common Thread Tour",
+    "door": "2025-10-05T19:30:00",
+    "start": "2025-10-05T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/pestilence-support-05-10-25/",
+    "title": "Pestilence + Misanthropia",
     "location": "patronaat",
-    "price": null,
+    "price": 23.5,
+    "shortText": "Een van de eerste grote extreme metalbands uit Nederland",
+    "longText": "../public/texts/patronaat/dC9wZXN0aWxlbmNlLXN1cHBvcnQtMDUtMTAtMjUv.html",
+    "image": "../public/event-images/patronaat/dC9wZXN0aWxlbmNlLXN1cHBvcnQtMDUtMTAtMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "misanthropia": {
+        "s": "4yb8ayltwfuqn8ogg4qjky",
+        "l": "misanthropia",
+        "g": [
+          "grisly death metal"
+        ]
+      },
+      "pestilence": {
+        "s": "6jcfn4plxfuxmhrxpopsan",
+        "l": "pestilence",
+        "g": [
+          "black metal",
+          "brutal death metal",
+          "death metal",
+          "deathrash",
+          "dutch death metal",
+          "dutch metal",
+          "old school thrash",
+          "technical death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-10-18T18:30:00",
+    "start": "2025-10-18T19:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/breakdown-of-sanity-18-10-25/",
+    "title": "Breakdown of Sanity + Abbie Falls + Defocus",
+    "location": "patronaat",
+    "price": 27.5,
+    "shortText": "Metalcoreband maakte keiharde comeback en komt eindelijk naar Haarlem",
+    "longText": "../public/texts/patronaat/L2JyZWFrZG93bi1vZi1zYW5pdHktMTgtMTAtMjUv.html",
+    "image": "../public/event-images/patronaat/L2JyZWFrZG93bi1vZi1zYW5pdHktMTgtMTAtMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "fall": {
+        "s": null,
+        "l": "fall",
+        "g": [
+          "death metal"
+        ]
+      },
+      "defocus": {
+        "s": "4lqszvqBsOjOq4MItmZlsU",
+        "l": "defocus",
+        "g": [
+          "metalcore",
+          "deathcore",
+          "djent"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-10-19T15:00:00",
+    "start": "2025-10-19T15:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/common-thread-tour-day-1-19-10-25/",
+    "title": "Common Thread Tour – Day 1",
+    "location": "patronaat",
+    "price": 45.5,
     "shortText": "Tweedaags punk-, emo- en hardcore-festival",
-    "longText": "../public/texts/patronaat/b24tdGhyZWFkLXRvdXItZGF5LTItMjAtMTAtMjUv.html",
-    "image": "../public/event-images/patronaat/b24tdGhyZWFkLXRvdXItZGF5LTItMjAtMTAtMjUv",
+    "longText": "../public/texts/patronaat/b24tdGhyZWFkLXRvdXItZGF5LTEtMTktMTAtMjUv.html",
+    "image": "../public/event-images/patronaat/b24tdGhyZWFkLXRvdXItZGF5LTEtMTktMTAtMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "door": "2025-10-24T19:30:00",
+    "start": "2025-10-24T19:45:00",
+    "venueEventUrl": "https://patronaat.nl/event/pothamus-support-24-10-25/",
+    "title": "Pothamus + support",
+    "location": "patronaat",
+    "price": 18,
+    "shortText": "Post-metal/sludgeband zorgt voor collectieve catharsis",
+    "longText": "../public/texts/patronaat/ZW50L3BvdGhhbXVzLXN1cHBvcnQtMjQtMTAtMjUv.html",
+    "image": "../public/event-images/patronaat/ZW50L3BvdGhhbXVzLXN1cHBvcnQtMjQtMTAtMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "pothamus": {
+        "s": "3oKgJ6083BjtllXxDN3TD5",
+        "l": "pothamus",
+        "g": [
+          "belgian post-rock",
+          "doomgaze"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-11-22T19:30:00",
+    "start": "2025-11-22T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/for-i-am-king-final-tour-22-11-25/",
+    "title": "For I Am King – Final Tour",
+    "location": "patronaat",
+    "price": 23.5,
+    "shortText": "De allerlaatste show van legendarische Nederlandse metalcoreband",
+    "longText": "../public/texts/patronaat/aS1hbS1raW5nLWZpbmFsLXRvdXItMjItMTEtMjUv.html",
+    "image": "../public/event-images/patronaat/aS1hbS1raW5nLWZpbmFsLXRvdXItMjItMTEtMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "for i am king": {
+        "s": null,
+        "l": "for%20i%20am%20king",
+        "g": []
+      }
+    }
+  },
+  {
+    "door": "2025-12-07T19:00:00",
+    "start": "2025-12-07T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/ruud-jolie-within-temptation-ongefilterd-phil-07-12-25/",
+    "title": "Ruud Jolie (Within Temptation) | Ongefilterd • PHIL",
+    "location": "patronaat",
+    "price": null,
+    "shortText": " Within Temptation-gitarist openhartig, boeiend en droogkomisch",
+    "longText": "../public/texts/patronaat/aW9uLW9uZ2VmaWx0ZXJkLXBoaWwtMDctMTItMjUv.html",
+    "image": "../public/event-images/patronaat/aW9uLW9uZ2VmaWx0ZXJkLXBoaWwtMDctMTItMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "filter": {
+        "s": "01wjpkiwvnurv5hjiadb8c",
+        "l": "filter",
+        "g": [
+          "alternative metal",
+          "alternative rock",
+          "grunge",
+          "industrial metal",
+          "nu metal",
+          "post-grunge"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2026-02-13T19:30:00",
+    "start": "2026-02-13T20:30:00",
+    "venueEventUrl": "https://patronaat.nl/event/ronnie-james-dio-memorial-concert-13-02-26/",
+    "title": "Ronnie James Dio – The Memorial Concert",
+    "location": "patronaat",
+    "price": 28.5,
+    "shortText": "Bekende hardrock - en metal artiesten brengen een eerbetoon aan rock'n'roll legende",
+    "longText": "../public/texts/patronaat/ZGlvLW1lbW9yaWFsLWNvbmNlcnQtMTMtMDItMjYv.html",
+    "image": "../public/event-images/patronaat/ZGlvLW1lbW9yaWFsLWNvbmNlcnQtMTMtMDItMjYv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ronnie james dio": {
+        "s": "4M3c7tg4BzLQ5pIOupZL65",
+        "l": "ronnie%20james%20dio",
+        "g": [
+          "hard rock"
+        ]
+      }
+    }
   }
 ]

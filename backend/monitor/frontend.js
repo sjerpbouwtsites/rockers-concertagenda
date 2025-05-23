@@ -181,7 +181,8 @@ function initiateClosingClient() {
     }
     setTimeout(() => {
         if (!document.body.hasAttribute("data-dont-close")) {
-            window.close();
+            // window.close();
+            console.log("SLUITEN UITGEZET"); // TODO
         }
     }, 60000);
     setTimeout(() => {

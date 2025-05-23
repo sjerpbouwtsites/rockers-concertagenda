@@ -1,104 +1,53 @@
 [
   {
-    "start": "2025-04-17T19:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/patriarkh-dogma",
-    "title": "Patriarkh + dogma",
+    "start": "2025-07-10T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/nashville-pussy",
+    "title": "Nashville Pussy",
     "location": "metropool",
-    "price": 29.5,
-    "shortText": "Een duistere muzikale ervaring",
-    "longText": "../public/texts/metropool/cG9vbC5ubC9hZ2VuZGEvcGF0cmlhcmtoLWRvZ21h.html",
-    "image": "../public/event-images/metropool/cG9vbC5ubC9hZ2VuZGEvcGF0cmlhcmtoLWRvZ21h",
+    "price": 25,
+    "shortText": "Voor iedereen die even wil doen alsof het ze allemaal niks kan schelen",
+    "longText": "../public/texts/metropool/cG9vbC5ubC9hZ2VuZGEvbmFzaHZpbGxlLXB1c3N5.html",
+    "image": "../public/event-images/metropool/cG9vbC5ubC9hZ2VuZGEvbmFzaHZpbGxlLXB1c3N5",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "patriarkh": {
-        "s": null,
-        "l": null,
+      "nashville pussy": {
+        "s": "73sawKQrhPG7HXTDRZGfOX",
+        "l": "nashville%20pussy",
         "g": [
-          "black metal",
-          "doom metal"
-        ]
-      },
-      "dogma": {
-        "s": "4R6XPuqGShFESRVkCePaxj",
-        "l": "dogma",
-        "g": [
-          "groove metal"
+          "punk 'n' roll",
+          "sleaze rock"
         ]
       }
     }
   },
   {
-    "start": "2025-05-02T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/wille-and-the-bandits",
-    "title": "Wille and the Bandits",
+    "start": "2025-08-24T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/flotsam-jetsam",
+    "title": "Flotsam & Jetsam",
     "location": "metropool",
-    "price": 22.5,
-    "shortText": "Een muzikale reis door rauwe blues en krachtige rock",
-    "longText": "../public/texts/metropool/bC9hZ2VuZGEvd2lsbGUtYW5kLXRoZS1iYW5kaXRz.html",
-    "image": "../public/event-images/metropool/bC9hZ2VuZGEvd2lsbGUtYW5kLXRoZS1iYW5kaXRz",
+    "price": 27.5,
+    "shortText": "Al veertig jaar een vaste waarde in de thrashmetal-scene",
+    "longText": "../public/texts/metropool/b3Bvb2wubmwvYWdlbmRhL2Zsb3RzYW0tamV0c2Ft.html",
+    "image": "../public/event-images/metropool/b3Bvb2wubmwvYWdlbmRhL2Zsb3RzYW0tamV0c2Ft",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
+      "flotsam": {
+        "s": "6OPDM0yzC3CmonQLmC4WAs",
+        "l": "flotsam",
         "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-28T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/arena",
-    "title": "Arena",
-    "location": "metropool",
-    "price": 33,
-    "shortText": "De rockband viert de dertigste verjaardag van debuutalbum Songs From The Lions Cage",
-    "longText": "../public/texts/metropool/cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2FyZW5h.html",
-    "image": "../public/event-images/metropool/cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2FyZW5h",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "arena": {
-        "s": "5n72qzNEfzCXvNDxKComR7",
-        "l": "arena",
-        "g": [
-          "neo-progressive",
-          "progressive metal",
-          "progressive rock",
-          "symphonic rock",
+          "power",
           "thrash metal"
         ]
-      }
-    }
-  },
-  {
-    "start": "2025-07-11T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/valient-thorr",
-    "title": "Valient Thorr",
-    "location": "metropool",
-    "price": 22.5,
-    "shortText": "De iconische rockers vieren het 21-jarig jubileum van hun debuutalbum",
-    "longText": "../public/texts/metropool/cm9wb29sLm5sL2FnZW5kYS92YWxpZW50LXRob3Jy.html",
-    "image": "../public/event-images/metropool/cm9wb29sLm5sL2FnZW5kYS92YWxpZW50LXRob3Jy",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "valient thorr": {
-        "s": "6rVaRHgldZoRMvERFyZmAH",
-        "l": "valient%20thorr",
+      },
+      "jetsam": {
+        "s": "7gNUlg0kH9M4lMrZxRWkaT",
+        "l": "jetsam",
         "g": [
-          "north carolina metal",
-          "heavy",
-          "southern metal",
-          "rock"
+          "post-metal"
         ]
       }
     }
@@ -121,6 +70,82 @@
         "l": null,
         "g": [
           "symfonische rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-10-18T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/delain",
+    "title": "Delain",
+    "location": "metropool",
+    "price": 30,
+    "shortText": "Een exclusieve show van de Nederlandse symfonische-metalband",
+    "longText": "../public/texts/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvZGVsYWlu.html",
+    "image": "../public/event-images/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvZGVsYWlu",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "delain": {
+        "s": "6pIRdCtSE5hLFfIfcTAicI",
+        "l": "delain",
+        "g": [
+          "dutch metal",
+          "gothic metal",
+          "gothic symphonic metal",
+          "power metal",
+          "symphonic metal",
+          "symphonic metal",
+          "rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-10-31T21:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/doodseskader",
+    "title": "Doodseskader",
+    "location": "metropool",
+    "price": 20,
+    "shortText": "Niet voor de tere zieltjes",
+    "longText": "../public/texts/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvZG9vZHNlc2thZGVy.html",
+    "image": "../public/event-images/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvZG9vZHNlc2thZGVy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "doodseskader": {
+        "s": "3nfvorn4wvioqrdljbxrok",
+        "l": "belgium",
+        "g": [
+          "sludgecore",
+          "experimental sludge/post-metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-11-15T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/blackbriar",
+    "title": "Blackbriar",
+    "location": "metropool",
+    "price": 27.5,
+    "shortText": "Gothic metal met een filmisch randje",
+    "longText": "../public/texts/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9ibGFja2JyaWFy.html",
+    "image": "../public/event-images/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9ibGFja2JyaWFy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "blackbriar": {
+        "s": "6pxqux3bytsvj7lcvviomi",
+        "l": "blackbriar",
+        "g": [
+          "dutch metal",
+          "gothic symphonic metal",
+          "slayer",
+          "symphonic metal"
         ]
       }
     }
