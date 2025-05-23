@@ -99,10 +99,13 @@ scraper.mainPage = async function () {
     { workerData, unavailabiltyTerms: terms.unavailability }
   );
   rawEvents = rawEvents
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix))
+    .filter((event) => {
+      return this.skipRegexCheck(event);
+    })
     .map((event) => mapToStartDate(event, "dag-maandNaam-jaar", this.months))
     .map(mapToShortDate)
-    .map(this.isMusicEventCorruptedMapper)
-    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
+    .map(this.isMusicEventCorruptedMapper);
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars

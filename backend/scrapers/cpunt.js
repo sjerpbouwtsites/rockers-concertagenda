@@ -5,46 +5,46 @@ import longTextSocialsIframes from "./longtext/cpunt.js";
 import getImage from "./gedeeld/image.js";
 import terms from "../artist-db/store/terms.js";
 import {
-    mapToDoorTime,
-    combineStartTimeStartDate,
-    mapToStartTime,
-    mapToShortDate,
-    mapToStartDate,
-    combineDoorTimeStartDate
+  mapToDoorTime,
+  combineStartTimeStartDate,
+  mapToStartTime,
+  mapToShortDate,
+  mapToStartDate,
+  combineDoorTimeStartDate,
 } from "./gedeeld/datums.js";
 import workTitleAndSlug from "./gedeeld/slug.js";
 
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
-    workerData: { ...workerData },
-    launchOptions: {
-        headless: false
+  workerData: { ...workerData },
+  launchOptions: {
+    headless: false,
+  },
+  mainPage: {
+    timeout: 30014,
+    waitUntil: "load",
+    url: `https://www.cpunt.nl/agenda?q=&genre=metalpunkheavy&StartDate=${new Date()
+      .toISOString()
+      .substring(0, 10)}&EndDate=#filter`,
+  },
+  singlePage: {
+    timeout: 15000,
+  },
+  app: {
+    harvest: {
+      dividers: [`&`, `,`],
+      dividerRex: "[&,]",
+      artistsIn: ["title", "shortText"],
     },
     mainPage: {
-        timeout: 30014,
-        waitUntil: "load",
-        url: `https://www.cpunt.nl/agenda?q=&genre=metalpunkheavy&StartDate=${new Date()
-            .toISOString()
-            .substring(0, 10)}&EndDate=#filter`
+      requiredProperties: ["venueEventUrl", "title"],
+      asyncCheckFuncs: ["refused", "allowedEvent", "forbiddenTerms"],
     },
     singlePage: {
-        timeout: 15000
+      requiredProperties: ["venueEventUrl", "title", "start"],
+      asyncCheckFuncs: ["success"],
     },
-    app: {
-        harvest: {
-            dividers: [`&`, `,`],
-            dividerRex: "[&,]",
-            artistsIn: ["title", "shortText"]
-        },
-        mainPage: {
-            requiredProperties: ["venueEventUrl", "title"],
-            asyncCheckFuncs: ["refused", "allowedEvent", "forbiddenTerms"]
-        },
-        singlePage: {
-            requiredProperties: ["venueEventUrl", "title", "start"],
-            asyncCheckFuncs: ["success"]
-        }
-    }
+  },
 });
 // #endregion                          SCRAPER CONFIG
 
@@ -52,195 +52,194 @@ scraper.listenToMasterThread();
 
 // #region       MAIN PAGE
 scraper.mainPage = async function () {
-    const availableBaseEvents = await this.checkBaseEventAvailable(
-        workerData.family
+  const availableBaseEvents = await this.checkBaseEventAvailable(
+    workerData.family
+  );
+  if (availableBaseEvents) {
+    const thisWorkersEvents = availableBaseEvents.filter(
+      (eventEl, index) => index % workerData.workerCount === workerData.index
     );
-    if (availableBaseEvents) {
-        const thisWorkersEvents = availableBaseEvents.filter(
-            (eventEl, index) =>
-                index % workerData.workerCount === workerData.index
-        );
-        return this.mainPageEnd({
-            stopFunctie: null,
-            rawEvents: thisWorkersEvents
-        });
-    }
-
-    const { stopFunctie, page } = await this.mainPageStart();
-
-    let rawEvents = await page.evaluate(
-        // eslint-disable-next-line no-shadow
-        ({ workerData, unavailabiltyTerms }) =>
-            Array.from(
-                document.querySelectorAll("#filter .article-wrapper")
-            ).map((rawEvent) => {
-                const title =
-                    rawEvent.querySelector(".article-title")?.textContent ??
-                    null;
-                const res = {
-                    anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
-                    errors: []
-                };
-
-                res.title = title;
-                const anchor = rawEvent.querySelector(".absolute-link") ?? null;
-                res.venueEventUrl = anchor?.href ?? null;
-
-                res.mapToStartDate =
-                    rawEvent
-                        .querySelector(".article-info .article-date")
-                        ?.textContent.trim() ?? "";
-                res.mapToStartTime =
-                    rawEvent
-                        .querySelector(".article-info .article-time")
-                        ?.textContent.trim()
-                        .replace(".", ":") ?? "";
-                const artInfoText =
-                    rawEvent
-                        .querySelector(".article-info")
-                        ?.textContent.toLowerCase() ?? "";
-                const uaRex = new RegExp(unavailabiltyTerms.join("|"), "gi");
-                res.unavailable = !!rawEvent.textContent.match(uaRex);
-                res.soldOut = !!artInfoText.match(/wachtlijst|uitverkocht/i);
-                res.shortText =
-                    rawEvent
-                        .querySelector(".article-content .article-category")
-                        ?.textContent.trim() ?? "";
-                return res;
-            }),
-        { workerData, unavailabiltyTerms: terms.unavailability }
-    );
-
-    rawEvents = rawEvents
-        .map((re) => mapToStartDate(re, "dag-maandNaam-jaar", this.months))
-        .map(mapToShortDate)
-        .map(mapToStartTime)
-        .map(combineStartTimeStartDate)
-        .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix))
-        .map(this.isMusicEventCorruptedMapper);
-
-    const eventGen = this.eventGenerator(rawEvents);
-    // eslint-disable-next-line no-unused-vars
-    const checkedEvents = await this.rawEventsAsyncCheck({
-        eventGen,
-        checkedEvents: []
-    });
-
-    this.saveBaseEventlist(workerData.family, checkedEvents);
-
-    const thisWorkersEvents = checkedEvents.filter(
-        (eventEl, index) => index % workerData.workerCount === workerData.index
-    );
-
     return this.mainPageEnd({
-        stopFunctie,
-        page,
-        rawEvents: thisWorkersEvents
+      stopFunctie: null,
+      rawEvents: thisWorkersEvents,
     });
+  }
+
+  const { stopFunctie, page } = await this.mainPageStart();
+
+  let rawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
+    ({ workerData, unavailabiltyTerms }) =>
+      Array.from(document.querySelectorAll("#filter .article-wrapper")).map(
+        (rawEvent) => {
+          const title =
+            rawEvent.querySelector(".article-title")?.textContent ?? null;
+          const res = {
+            anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
+            errors: [],
+          };
+
+          res.title = title;
+          const anchor = rawEvent.querySelector(".absolute-link") ?? null;
+          res.venueEventUrl = anchor?.href ?? null;
+
+          res.mapToStartDate =
+            rawEvent
+              .querySelector(".article-info .article-date")
+              ?.textContent.trim() ?? "";
+          res.mapToStartTime =
+            rawEvent
+              .querySelector(".article-info .article-time")
+              ?.textContent.trim()
+              .replace(".", ":") ?? "";
+          const artInfoText =
+            rawEvent
+              .querySelector(".article-info")
+              ?.textContent.toLowerCase() ?? "";
+          const uaRex = new RegExp(unavailabiltyTerms.join("|"), "gi");
+          res.unavailable = !!rawEvent.textContent.match(uaRex);
+          res.soldOut = !!artInfoText.match(/wachtlijst|uitverkocht/i);
+          res.shortText =
+            rawEvent
+              .querySelector(".article-content .article-category")
+              ?.textContent.trim() ?? "";
+          return res;
+        }
+      ),
+    { workerData, unavailabiltyTerms: terms.unavailability }
+  );
+
+  rawEvents = rawEvents
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix))
+    .filter((event) => {
+      return this.skipRegexCheck(event);
+    })
+    .map((re) => mapToStartDate(re, "dag-maandNaam-jaar", this.months))
+    .map(mapToShortDate)
+    .map(mapToStartTime)
+    .map(combineStartTimeStartDate)
+    .map(this.isMusicEventCorruptedMapper);
+
+  const eventGen = this.eventGenerator(rawEvents);
+  // eslint-disable-next-line no-unused-vars
+  const checkedEvents = await this.rawEventsAsyncCheck({
+    eventGen,
+    checkedEvents: [],
+  });
+
+  this.saveBaseEventlist(workerData.family, checkedEvents);
+
+  const thisWorkersEvents = checkedEvents.filter(
+    (eventEl, index) => index % workerData.workerCount === workerData.index
+  );
+
+  return this.mainPageEnd({
+    stopFunctie,
+    page,
+    rawEvents: thisWorkersEvents,
+  });
 };
 // #endregion                          MAIN PAGE
 
 // #region      SINGLE PAGE
 scraper.singlePage = async function ({ page, event }) {
-    const { stopFunctie } = await this.singlePageStart();
+  const { stopFunctie } = await this.singlePageStart();
 
-    await page
-        .waitForSelector("#main .content-blocks", {
-            timeout: 7500
-        })
-        .catch((err) => {
-            this.handleError(
-                err,
-                `wachtend op content block in ${event.title} ${event.venueEventUrl} maar niet hier`,
-                "close-thread"
-            );
-        });
+  await this.waitTime(125);
 
-    // cookie accept voor iframes
-    await page.evaluate(() => {
-        const b = document.querySelector(
-            "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"
-        );
-        if (!b) return;
-        b.click();
-    });
-
-    let pageInfo = await page.evaluate(
-        // eslint-disable-next-line no-shadow
-        ({ months, event }) => {
-            const res = {
-                anker: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
-                errors: []
-            };
-
-            const dd = document.querySelector(
-                ".article-time .icon-deuren-open"
-            );
-            res.mapToDoorTime = dd
-                ? dd.parentNode?.textContent.trim().replace(".", ":")
-                : null;
-
-            return res;
-        },
-        { months: this.months, event }
+  // cookie accept voor iframes
+  await page.evaluate(() => {
+    const b = document.querySelector(
+      "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"
     );
-
-    pageInfo = mapToDoorTime(pageInfo);
-    pageInfo.startDate = event.startDate;
-    pageInfo = combineDoorTimeStartDate(pageInfo);
-
-    const imageRes = await getImage({
-        _this: this,
-        page,
-        workerData,
-        event,
-        pageInfo,
-        selectors: [".bg-image[style*='background']"],
-        mode: "background-src"
+    if (!b) return;
+    b.click();
+  });
+  await page
+    .waitForSelector("#main .content-blocks", {
+      timeout: 7500,
+    })
+    .catch((err) => {
+      this.handleError(
+        err,
+        `wachtend op content block in ${event.title} ${event.venueEventUrl} maar niet hier`,
+        "close-thread"
+      );
     });
 
-    pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
-    pageInfo.image = imageRes.image;
+  let pageInfo = await page.evaluate(
+    // eslint-disable-next-line no-shadow
+    ({ months, event }) => {
+      const res = {
+        anker: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
+        errors: [],
+      };
 
-    const viaTicketMaster = await page.evaluate(
-        () =>
-            !!document.querySelector(
-                '.tickets-wrapper a[href*="ticketmaster"]'
-            ) && !document.querySelector(".price")
-    );
+      const dd = document.querySelector(".article-time .icon-deuren-open");
+      res.mapToDoorTime = dd
+        ? dd.parentNode?.textContent.trim().replace(".", ":")
+        : null;
 
-    if (viaTicketMaster) {
-        pageInfo.price = null;
-    } else {
-        const priceRes = await this.getPriceFromHTML({
-            page,
-            event,
-            pageInfo,
-            selectors: [".article-price"]
-        });
-        pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
-        pageInfo.price = priceRes.price;
-    }
+      return res;
+    },
+    { months: this.months, event }
+  );
 
-    const { mediaForHTML, textForHTML } = await longTextSocialsIframes(
-        page,
-        event,
-        pageInfo
-    );
-    pageInfo.mediaForHTML = mediaForHTML;
+  pageInfo = mapToDoorTime(pageInfo);
+  pageInfo.startDate = event.startDate;
+  pageInfo = combineDoorTimeStartDate(pageInfo);
 
-    pageInfo.textForHTML = textForHTML;
+  const imageRes = await getImage({
+    _this: this,
+    page,
+    workerData,
+    event,
+    pageInfo,
+    selectors: [".bg-image[style*='background']"],
+    mode: "background-src",
+  });
 
-    const singlePageHTML = await page.evaluate(() => {
-        return document.body.parentNode.outerHTML;
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;
+
+  const viaTicketMaster = await page.evaluate(
+    () =>
+      !!document.querySelector('.tickets-wrapper a[href*="ticketmaster"]') &&
+      !document.querySelector(".price")
+  );
+
+  if (viaTicketMaster) {
+    pageInfo.price = null;
+  } else {
+    const priceRes = await this.getPriceFromHTML({
+      page,
+      event,
+      pageInfo,
+      selectors: [".article-price"],
     });
+    pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+    pageInfo.price = priceRes.price;
+  }
 
-    return this.singlePageEnd({
-        pageInfo,
-        stopFunctie,
-        page,
-        event,
-        singlePageHTML
-    });
+  const { mediaForHTML, textForHTML } = await longTextSocialsIframes(
+    page,
+    event,
+    pageInfo
+  );
+  pageInfo.mediaForHTML = mediaForHTML;
+
+  pageInfo.textForHTML = textForHTML;
+
+  const singlePageHTML = await page.evaluate(() => {
+    return document.body.parentNode.outerHTML;
+  });
+
+  return this.singlePageEnd({
+    pageInfo,
+    stopFunctie,
+    page,
+    event,
+    singlePageHTML,
+  });
 };
 // #endregion                         SINGLE PAGE

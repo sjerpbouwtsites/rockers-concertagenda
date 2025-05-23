@@ -126,9 +126,12 @@ scraper.mainPage = async function () {
   );
 
   rawEvents = rawEvents
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix))
+    .filter((event) => {
+      return this.skipRegexCheck(event);
+    })
     .map(mapToShortDate)
-    .map(this.isMusicEventCorruptedMapper)
-    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
+    .map(this.isMusicEventCorruptedMapper);
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars

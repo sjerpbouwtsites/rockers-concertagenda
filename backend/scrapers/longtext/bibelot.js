@@ -85,11 +85,6 @@ export default async function longTextSocialsIframes(page, event) {
       },
     ];
   }
-  gewoonBerichtDumpen({
-    ditIsDeImgURL,
-    title: event.title,
-    mediaData: res.mediaForHTML,
-  });
 
   await hinderlijkeTekstenEruitSlopen(page, selectors);
 
