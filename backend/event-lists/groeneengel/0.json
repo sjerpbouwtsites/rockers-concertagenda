@@ -1,61 +1,37 @@
 [
   {
-    "start": "2025-05-15T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/hippie-death-cult-drive-by-wire/",
-    "title": "Hippie Death Cult + Drive By Wire",
-    "location": "groeneengel",
-    "price": 15,
-    "longText": "../public/texts/groeneengel/cHBpZS1kZWF0aC1jdWx0LWRyaXZlLWJ5LXdpcmUv.html",
-    "image": "../public/event-images/groeneengel/cHBpZS1kZWF0aC1jdWx0LWRyaXZlLWJ5LXdpcmUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "hippie death cult": {
-        "s": "4izavjyt6nf7m5fq31pjxl",
-        "l": "hippie%20death%20cult",
-        "g": [
-          "psychedelic doom"
-        ]
-      },
-      "drive by wire": {
-        "s": "2gHRDBgrG9h6DUWOrsgNI1",
-        "l": "drive%20by%20wire",
-        "g": [
-          "stoner rock",
-          "space rock",
-          "doom metal",
-          "sludge metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-15T20:00:00",
+    "start": "2025-05-24T20:00:00",
     "venueEventUrl": "https://www.groene-engel.nl/programma/north-mississippi-allstars-25th-anniversary-of-shake-hands-with-shorty/",
-    "title": "North Mississippi Allstars",
+    "title": "North Mississippi Allstars ",
     "location": "groeneengel",
     "price": 20,
+    "shortText": " support act: Black Raven undefined",
     "longText": "../public/texts/groeneengel/cnktb2Ytc2hha2UtaGFuZHMtd2l0aC1zaG9ydHkv.html",
     "image": "../public/event-images/groeneengel/cnktb2Ytc2hha2UtaGFuZHMtd2l0aC1zaG9ydHkv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "miss": {
-        "s": null,
-        "l": "miss",
+      "raven": {
+        "s": "6K0vfJogIPUIo694VqX2Wr",
+        "l": "raven",
         "g": [
-          "sludge",
-          "doom metal",
-          "death 'n' roll"
+          "nwobhm",
+          "heavy metal, speed metal"
+        ]
+      },
+      "black": {
+        "s": null,
+        "l": "black",
+        "g": [
+          "black metal"
         ]
       }
     }
   },
   {
-    "door": "2025-05-15T00:00:00",
-    "start": "2025-05-15T19:30:00",
+    "door": "2025-05-24T00:00:00",
+    "start": "2025-05-24T19:30:00",
     "venueEventUrl": "https://www.groene-engel.nl/programma/25-jaar-groene-engel-het-jubileumboek/",
     "title": "Van hemelbestormers tot engelenwerk – Een kwart eeuw cultuur en ontmoeten bij Groene Engel",
     "location": "groeneengel",
@@ -81,7 +57,7 @@
     }
   },
   {
-    "start": "2025-05-15T20:30:00",
+    "start": "2025-05-24T20:30:00",
     "venueEventUrl": "https://www.groene-engel.nl/programma/onbeperkt-theaterabonnement-2025-2026/",
     "title": "Onbeperkt Theaterabonnement 2025-2026",
     "location": "groeneengel",
@@ -107,7 +83,7 @@
     }
   },
   {
-    "start": "2025-05-15T20:30:00",
+    "start": "2025-05-24T20:30:00",
     "venueEventUrl": "https://www.groene-engel.nl/programma/hoopje-mens-tg-echo/",
     "title": "Hoopje Mens – TG Echo",
     "location": "groeneengel",
@@ -131,7 +107,33 @@
     }
   },
   {
-    "start": "2025-05-15T20:30:00",
+    "start": "2025-05-24T14:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/buurvrouw-en-buurvrouw-het-kleine-theater/",
+    "title": "Buurvrouw en Buurvrouw – het Kleine Theater",
+    "location": "groeneengel",
+    "price": 12,
+    "longText": "../public/texts/groeneengel/LWJ1dXJ2cm91dy1oZXQta2xlaW5lLXRoZWF0ZXIv.html",
+    "image": "../public/event-images/groeneengel/LWJ1dXJ2cm91dy1oZXQta2xlaW5lLXRoZWF0ZXIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ater": {
+        "s": "1HpPzWF2E6G8KfD5pOM6La",
+        "l": "ater",
+        "g": [
+          "djent",
+          "black metal",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-24T20:30:00",
     "venueEventUrl": "https://www.groene-engel.nl/programma/apocalypse-straks-de-theatertroep/",
     "title": "Apocalypse straks – de Theatertroep",
     "location": "groeneengel",
