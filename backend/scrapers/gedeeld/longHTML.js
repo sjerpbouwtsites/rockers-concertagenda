@@ -156,6 +156,12 @@ export async function maakMediaHTMLBronnen(page, selectors, event) {
       ({ selectors, event }) => {
         return Array.from(document.querySelectorAll(selectors.mediaEls))
           .map((bron) => {
+            if (!bron) {
+              throw new Error(
+                `lege bron maak media in <a href='${event.venueEventUrl}'>${event.title}</a>`
+              );
+            }
+
             const calcedSrc =
               bron.hasAttribute("src") &&
               bron.getAttribute("src").includes("http")
@@ -164,7 +170,7 @@ export async function maakMediaHTMLBronnen(page, selectors, event) {
                 ? bron.getAttribute("data-src")
                 : bron?.hasAttribute("data-video-embed")
                 ? bron.getAttribute("data-video-embed")
-                : null;
+                : "";
 
             const isYoutubeAnchor =
               bron.hasAttribute("href") && bron.href.includes("youtube");
@@ -173,8 +179,11 @@ export async function maakMediaHTMLBronnen(page, selectors, event) {
             const isBandcampIframe = calcedSrc.includes("bandcamp");
             const isYoutubeImg = calcedSrc.includes("ytimg.com");
             const isOembedMetID = calcedSrc.includes("oembed");
+            const isVideoEmbedFieldLazy = bron.hasAttribute(
+              "data-video-embed-field-lazy"
+            );
 
-            if (calcedSrc.includes("about:blank")) {
+            if (calcedSrc && calcedSrc.includes("about:blank")) {
               return null;
             }
 
@@ -242,6 +251,15 @@ export async function maakMediaHTMLBronnen(page, selectors, event) {
                 outer: null,
                 src: null,
                 id: id,
+                type: "youtube",
+              };
+            } else if (isVideoEmbedFieldLazy) {
+              return {
+                outer: bron
+                  .getAttribute("data-video-embed-field-lazy")
+                  .match(/<ifr.*>/),
+                src: null,
+                id: null,
                 type: "youtube",
               };
             } else {

@@ -2403,6 +2403,35 @@
     }
   },
   {
+    "door": "2025-06-12T18:00:00Z",
+    "start": "2025-06-12T20:30:00Z",
+    "venueEventUrl": "https://p60.nl/2025/radar-jun",
+    "title": "P60's radar",
+    "location": "p60",
+    "price": 6.508,
+    "shortText": "FT. ZUIDAS, VILE PASSAGE & TUESDAY",
+    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9yYWRhci1qdW4=.html",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "vile": {
+        "s": "5gspaqiah8njurmygxjcj2",
+        "l": "vile",
+        "g": [
+          "art pop",
+          "chamber pop",
+          "indie rock",
+          "modern folk rock",
+          "neo-psychedelic",
+          "noise pop",
+          "philly indie",
+          "singer-songwriter"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-06-12T20:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/milk-made-sapy-12-06-2025/",
     "title": "Milk made: sapy",
@@ -3100,6 +3129,30 @@
     }
   },
   {
+    "door": "2025-06-21T16:30:00Z",
+    "start": "2025-06-21T19:00:00Z",
+    "venueEventUrl": "https://p60.nl/2025/the-bollyrock",
+    "title": "The Bollyrock",
+    "location": "p60",
+    "price": 7.501,
+    "shortText": "PROUDLY PRESENTED BY OMKAR",
+    "longText": "../public/texts/p60/cHM6Ly9wNjAubmwvMjAyNS90aGUtYm9sbHlyb2Nr.html",
+    "image": "../public/event-images/p60/cHM6Ly9wNjAubmwvMjAyNS90aGUtYm9sbHlyb2Nr",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-06-21T21:00:00",
     "venueEventUrl": "https://www.littledevil.nl/calendar/sacri-monti-usa/",
     "title": "Sacri monti (usa)",
@@ -3390,6 +3443,21 @@
         ]
       }
     }
+  },
+  {
+    "door": "2025-06-27T18:00:00Z",
+    "start": "2025-06-27T20:30:00Z",
+    "venueEventUrl": "https://p60.nl/2025/nouvelle-vague",
+    "title": "Nouvelle Vague",
+    "location": "p60",
+    "price": 32.5034,
+    "shortText": "POST-PUNKMUZIEK IN EEN BOSSA NOVA-STIJL",
+    "longText": "../public/texts/p60/czovL3A2MC5ubC8yMDI1L25vdXZlbGxlLXZhZ3Vl.html",
+    "image": "../public/event-images/p60/czovL3A2MC5ubC8yMDI1L25vdXZlbGxlLXZhZ3Vl",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "start": "2025-06-27T20:00:00",
@@ -4800,6 +4868,34 @@
         "g": [
           "heavy metal",
           "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-07-19T18:00:00Z",
+    "start": "2025-07-19T20:30:00Z",
+    "venueEventUrl": "https://p60.nl/2025/arkona",
+    "title": "Arkona",
+    "location": "p60",
+    "price": 20.5022,
+    "shortText": "EXCLUSIEVE NEDERLANDSE SHOW",
+    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9hcmtvbmE=.html",
+    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9hcmtvbmE=",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "arkona": {
+        "s": "6AJ9HQ2Ptp1WWEfBFvR5fF",
+        "l": "arkona",
+        "g": [
+          "folk metal",
+          "pirate metal",
+          "folk",
+          "medieval metal",
+          "symphonic metal",
+          "black metal"
         ]
       }
     }
