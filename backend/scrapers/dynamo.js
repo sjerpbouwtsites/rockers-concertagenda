@@ -43,6 +43,7 @@ const scraper = new AbstractScraper({
         "spotifyConfirmation",
         "failure",
       ],
+      skipEventRegexes: [/bunkerbass/im, /club\s?commit/im, /faction:/im],
     },
     singlePage: {
       requiredProperties: ["venueEventUrl", "title", "price", "start"],

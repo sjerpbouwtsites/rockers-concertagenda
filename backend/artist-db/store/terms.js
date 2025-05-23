@@ -139,6 +139,8 @@ const forbiddenTerms = [
   "folkcafé",
   "folkcafe",
   "jamsessie",
+  "theater",
+  "bluegrass",
 ];
 
 const globalForbiddenGenres = [

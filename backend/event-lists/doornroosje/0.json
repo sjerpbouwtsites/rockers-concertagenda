@@ -1,28 +1,5 @@
 [
   {
-    "door": "2025-05-24T20:00:00",
-    "start": "2025-05-24T20:45:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/vieux-farka-toure-3/",
-    "title": "Vieux Farka Touré",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, bluesrock, desert rock, doornroosjepas",
-    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZpZXV4LWZhcmthLXRvdXJlLTMv.html",
-    "image": null,
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "rock": {
-        "s": null,
-        "l": "rock",
-        "g": [
-          "heavy metal",
-          "hard rock"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-05-28T19:30:00",
     "start": "2025-05-28T20:00:00",
     "venueEventUrl": "https://www.doornroosje.nl/event/mannequin-pussy/",
@@ -108,20 +85,6 @@
         ]
       }
     }
-  },
-  {
-    "door": "2025-06-06T18:00:00",
-    "start": "2025-06-06T19:00:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/manu-chao-2/",
-    "title": "Manu Chao",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "Ultra Acoustic Toursinger songwriter, punk, roots, mestizo",
-    "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvbWFudS1jaGFvLTIv.html",
-    "image": null,
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {}
   },
   {
     "door": "2025-06-13T20:00:00",
@@ -230,19 +193,6 @@
         ]
       }
     }
-  },
-  {
-    "start": "2025-06-21T20:00:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/kids-n-billies-2025/",
-    "title": "Kids ‘n’ billies 2025",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "",
-    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L2tpZHMtbi1iaWxsaWVzLTIwMjUv.html",
-    "image": null,
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {}
   },
   {
     "door": "2025-07-08T20:00:00",
@@ -694,6 +644,54 @@
         "g": [
           "groove",
           "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-10-25T19:30:00",
+    "start": "2025-10-25T20:30:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/alcest/",
+    "title": "Alcest",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "+ BRUIT ≤post rock, metal, black metal",
+    "longText": "../public/texts/doornroosje/dy5kb29ybnJvb3NqZS5ubC9ldmVudC9hbGNlc3Qv.html",
+    "image": null,
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "alcest": {
+        "s": null,
+        "l": "alcest",
+        "g": [
+          "metal",
+          "black-metal",
+          "blackgaze",
+          "post-metal"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
         ]
       }
     }

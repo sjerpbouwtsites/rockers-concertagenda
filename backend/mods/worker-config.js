@@ -29,7 +29,7 @@ export const workerConfig = {
   cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
   dbs: {
     workerCount: 3,
-    workerConcurrent: 3,
+    workerConcurrent: 1,
     CPUReq: "high",
     forceSet: 1,
   },
@@ -68,7 +68,7 @@ export const workerConfig = {
     CPUReq: "high",
     forceSet: 3,
   },
-  groeneengel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
+  //groeneengel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
   iduna: { workerCount: 1, workerConcurrent: 1, forceSet: 4 },
   kavka: {
     workerCount: 1,
@@ -82,7 +82,7 @@ export const workerConfig = {
     forceSet: 4,
   },
   melkweg: {
-    workerCount: 2,
+    workerCount: 1,
     CPUReq: "high",
     workerConcurrent: 1,
     forceSet: 4,

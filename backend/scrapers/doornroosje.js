@@ -42,6 +42,7 @@ const scraper = new AbstractScraper({
         "hasGoodTerms",
         "spotifyConfirmation",
       ],
+      skipEventRegexes: [/kids.*billies/im],
     },
     singlePage: {
       requiredProperties: ["venueEventUrl", "title", "start"],
@@ -296,8 +297,6 @@ scraper.singlePage = async function ({ page, event }) {
     pageInfo
   );
   pageInfo.mediaForHTML = mediaForHTML;
-
-  this.dirtyDebug(mediaForHTML);
 
   pageInfo.textForHTML = textForHTML;
 

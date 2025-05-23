@@ -1,41 +1,29 @@
 [
   {
-    "door": "2025-05-23T22:00:00",
-    "start": "2025-05-23T22:00:00",
-    "end": "2025-05-23T04:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/bunkerbass-3/",
-    "title": "bunkerbass",
+    "door": "2025-05-24T19:00:00",
+    "start": "2025-05-24T19:30:00",
+    "end": "2025-05-24T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/the-hotelier/",
+    "title": "The Hotelier",
     "location": "dynamo",
-    "price": 13.5,
-    "shortText": "[DRUM AND BASS]",
-    "longText": "../public/texts/dynamo/dmVuLm5sL2V2ZW5lbWVudC9idW5rZXJiYXNzLTMv.html",
-    "image": "../public/event-images/dynamo/dmVuLm5sL2V2ZW5lbWVudC9idW5rZXJiYXNzLTMv",
+    "price": 22,
+    "shortText": "Support: Bony Macaroni + EDLP",
+    "longText": "../public/texts/dynamo/dmVuLm5sL2V2ZW5lbWVudC90aGUtaG90ZWxpZXIv.html",
+    "image": "../public/event-images/dynamo/dmVuLm5sL2V2ZW5lbWVudC90aGUtaG90ZWxpZXIv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "bass": {
-        "s": null,
-        "l": "bass",
+      "the hotelier": {
+        "s": "3kzNckjE5FzHQhe4pJiLKa",
+        "l": "the%20hotelier",
         "g": [
-          "doom",
-          "death metal"
+          "midwest emo",
+          "emo",
+          "math rock",
+          "emo pop"
         ]
       }
     }
-  },
-  {
-    "start": "2025-05-30T22:00:00",
-    "end": "2025-05-30T04:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/commit/",
-    "title": "Club commit",
-    "location": "dynamo",
-    "price": 11.5,
-    "shortText": "[BREAKS | GARAGE | JUNGLE | 4X4]",
-    "longText": "../public/texts/dynamo/ZWluZGhvdmVuLm5sL2V2ZW5lbWVudC9jb21taXQv.html",
-    "image": "../public/event-images/dynamo/ZWluZGhvdmVuLm5sL2V2ZW5lbWVudC9jb21taXQv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
   },
   {
     "start": "2025-06-06T23:00:00",
@@ -121,260 +109,282 @@
     "artists": {}
   },
   {
-    "start": "2025-06-27T23:00:00",
-    "end": "2025-06-27T06:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/factionsummerwarmup/",
-    "title": "Faction: summer warm up",
+    "door": "2025-06-28T19:30:00",
+    "start": "2025-06-28T20:00:00",
+    "end": "2025-06-28T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/after-taste-2/",
+    "title": "After Taste",
     "location": "dynamo",
-    "price": 14.55,
-    "shortText": "[DRUM AND BASS]",
-    "longText": "../public/texts/dynamo/ZXZlbmVtZW50L2ZhY3Rpb25zdW1tZXJ3YXJtdXAv.html",
-    "image": "../public/event-images/dynamo/ZXZlbmVtZW50L2ZhY3Rpb25zdW1tZXJ3YXJtdXAv",
+    "price": 14,
+    "shortText": "Support: The Infamous Nameless",
+    "longText": "../public/texts/dynamo/ZW4ubmwvZXZlbmVtZW50L2FmdGVyLXRhc3RlLTIv.html",
+    "image": "../public/event-images/dynamo/ZW4ubmwvZXZlbmVtZW50L2FmdGVyLXRhc3RlLTIv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "bass": {
-        "s": null,
-        "l": "bass",
+      "after taste": {
+        "s": "0Py0Fe4tMyQxGHTkX67IcS",
+        "l": "after%20taste",
         "g": [
-          "doom",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-07-03T19:30:00",
+    "start": "2025-07-03T20:00:00",
+    "end": "2025-07-03T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/hell-can-wait/",
+    "title": "Hell Can Wait",
+    "location": "dynamo",
+    "price": 16.5,
+    "shortText": "Support: I’ll Get By",
+    "longText": "../public/texts/dynamo/ZW4ubmwvZXZlbmVtZW50L2hlbGwtY2FuLXdhaXQv.html",
+    "image": "../public/event-images/dynamo/ZW4ubmwvZXZlbmVtZW50L2hlbGwtY2FuLXdhaXQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "hell can wait": {
+        "s": "7y4ASsLqvxgWja0ym7SBYs",
+        "l": "hell%20can%20wait",
+        "g": [
+          "melodic hardcore",
+          "metalcore",
+          "post-hardcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-03T15:00:00",
+    "start": "2025-08-03T15:30:00",
+    "end": "2025-08-03T19:30:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/forbidden/",
+    "title": "Forbidden",
+    "location": "dynamo",
+    "price": 29.5,
+    "shortText": "Support: Warbringer + Headless Hunter",
+    "longText": "../public/texts/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9mb3JiaWRkZW4v.html",
+    "image": "../public/event-images/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9mb3JiaWRkZW4v",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "forbidden": {
+        "s": "5MhPZVXE28sD9rXE3GU1uN",
+        "l": "forbidden",
+        "g": [
+          "thrash metal",
+          "speed metal",
+          "groove metal",
+          "metal",
+          "thrash metal"
+        ]
+      },
+      "headless hunter": {
+        "s": "4aFxWu9DFqbM5wQt4TpQwC",
+        "l": "headless%20hunter",
+        "g": [
+          "thrash metal",
+          "speed metal",
+          "groove metal",
+          "thrash metal"
+        ]
+      },
+      "warbringer": {
+        "s": "4ukkkgkjnwx8ktuvea66k1",
+        "l": "warbringer",
+        "g": [
+          "metal",
+          "new wave of thrash metal",
+          "speed metal",
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-07T20:00:00",
+    "start": "2025-08-07T20:30:00",
+    "end": "2025-08-07T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/snot/",
+    "title": "Snot",
+    "location": "dynamo",
+    "price": 20.5,
+    "shortText": "Plus support",
+    "longText": "../public/texts/dynamo/by1laW5kaG92ZW4ubmwvZXZlbmVtZW50L3Nub3Qv.html",
+    "image": "../public/event-images/dynamo/by1laW5kaG92ZW4ubmwvZXZlbmVtZW50L3Nub3Qv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "snot": {
+        "s": "6TnlohrPbZ8D0JvJp9S1t8",
+        "l": "snot",
+        "g": [
+          "nu metal",
+          "rap metal",
+          "alternative metal",
+          "funk rock",
+          "death metal"
+        ]
+      },
+      "plus": {
+        "s": null,
+        "l": "plus",
+        "g": [
+          "death",
+          "black metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-21T19:00:00",
+    "start": "2025-08-21T19:30:00",
+    "end": "2025-08-21T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/crystal-lake-attila/",
+    "title": "Crystal Lake + Attila",
+    "location": "dynamo",
+    "price": 22.5,
+    "shortText": "plus support",
+    "longText": "../public/texts/dynamo/ZXZlbmVtZW50L2NyeXN0YWwtbGFrZS1hdHRpbGEv.html",
+    "image": "../public/event-images/dynamo/ZXZlbmVtZW50L2NyeXN0YWwtbGFrZS1hdHRpbGEv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "plus": {
+        "s": null,
+        "l": "plus",
+        "g": [
+          "death",
+          "black metal"
+        ]
+      },
+      "crystal lake": {
+        "s": "5DzNxD4vwCDEIa20oEzB9l",
+        "l": "crystal%20lake",
+        "g": [
+          "hardstyle",
+          "big room",
+          "thrash metal"
+        ]
+      },
+      "attila": {
+        "s": "4Uv5bceTJ2h3tLlssUNDNP",
+        "l": "attila",
+        "g": [
+          "deathcore",
+          "metalcore",
+          "rap metal",
+          "metal",
+          "screamo",
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-09-20T19:30:00",
+    "start": "2025-09-20T20:00:00",
+    "end": "2025-09-20T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/inferum/",
+    "title": "Inferum",
+    "location": "dynamo",
+    "price": 16.5,
+    "shortText": "support: Nephylim + Reformist",
+    "longText": "../public/texts/dynamo/aW5kaG92ZW4ubmwvZXZlbmVtZW50L2luZmVydW0v.html",
+    "image": "../public/event-images/dynamo/aW5kaG92ZW4ubmwvZXZlbmVtZW50L2luZmVydW0v",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "reformist": {
+        "s": "6xFMODZuwYPuLeILtpuOqI",
+        "l": "reformist",
+        "g": [
+          "metalcore",
+          "deathcore"
+        ]
+      },
+      "nephylim": {
+        "s": "7DPLwE91KdBmQUCRIRlDZr",
+        "l": "nephylim",
+        "g": [
+          "dutch death metal",
+          "melodic death metal"
+        ]
+      },
+      "inferum": {
+        "s": "32jhwDRPAFGsySbXUw2Z1t",
+        "l": "inferum",
+        "g": [
+          "deathcore",
+          "death metal",
           "death metal"
         ]
       }
     }
   },
   {
-    "door": "2025-06-29T19:30:00",
-    "start": "2025-06-29T20:15:00",
-    "end": "2025-06-29T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/the-gathering/",
-    "title": "The Gathering",
+    "door": "2025-11-08T19:30:00",
+    "start": "2025-11-08T20:15:00",
+    "end": "2025-11-08T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/skroetbalg/",
+    "title": "Skroetbalg",
     "location": "dynamo",
-    "price": 26.5,
-    "shortText": "Uitverkocht",
-    "longText": "../public/texts/dynamo/ZW4ubmwvZXZlbmVtZW50L3RoZS1nYXRoZXJpbmcv.html",
-    "image": "../public/event-images/dynamo/ZW4ubmwvZXZlbmVtZW50L3RoZS1nYXRoZXJpbmcv",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "the gathering": {
-        "s": "2kO6zjt4a1OIqxOERhliEX",
-        "l": "the%20gathering",
-        "g": [
-          "atmospheric doom",
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "symphonic metal",
-          "death",
-          "doom metal, atmospheric doom metal (early)",
-          " atmospheric rock (later)"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-08-02T20:00:00",
-    "start": "2025-08-02T20:30:00",
-    "end": "2025-08-02T23:15:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/barnyard-boogie-bookings-last-affront/",
-    "title": "Barnyard Boogie Bookings: LAST AFFRONT",
-    "location": "dynamo",
-    "price": 10,
-    "shortText": "w/Warhead97 + Raw Peace",
-    "longText": "../public/texts/dynamo/LWJvb2dpZS1ib29raW5ncy1sYXN0LWFmZnJvbnQv.html",
-    "image": "../public/event-images/dynamo/LWJvb2dpZS1ib29raW5ncy1sYXN0LWFmZnJvbnQv",
+    "price": 21.5,
+    "shortText": "Support: 69 Charger + Speedmobile",
+    "longText": "../public/texts/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L3Nrcm9ldGJhbGcv.html",
+    "image": "../public/event-images/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L3Nrcm9ldGJhbGcv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "rhea": {
-        "s": "3iTqZTjeziB8WtVJeIUrLD",
-        "l": "rhea",
+      "speedmobile": {
+        "s": "15qfmszEuUlcKcPcwt5P05",
+        "l": "speedmobile",
         "g": [
-          "belgian rock",
-          "atmospheric death",
-          "doom metal"
+          "punk ",
+          "rock "
         ]
       },
-      "last affront": {
-        "s": "6isVTSRZqcegXbnXGgZriS",
-        "l": "last%20affront",
+      "69 charger": {
+        "s": "2sibonl0bjr2o5ckfrcepl",
+        "l": "69%20charger",
         "g": [
-          "hardcore punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-08-04T19:30:00",
-    "start": "2025-08-04T20:00:00",
-    "end": "2025-08-04T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/british-lion/",
-    "title": "British Lion",
-    "location": "dynamo",
-    "price": 33,
-    "shortText": "Plus Support",
-    "longText": "../public/texts/dynamo/dmVuLm5sL2V2ZW5lbWVudC9icml0aXNoLWxpb24v.html",
-    "image": "../public/event-images/dynamo/dmVuLm5sL2V2ZW5lbWVudC9icml0aXNoLWxpb24v",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "plus": {
-        "s": null,
-        "l": "plus",
-        "g": [
-          "death",
-          "black metal"
-        ]
-      },
-      "british lion": {
-        "s": "5z5jrGRiONDfGvQydFriQh",
-        "l": "british%20lion",
-        "g": [
-          "heavy metal",
-          "hard rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-08-13T19:30:00",
-    "start": "2025-08-13T20:00:00",
-    "end": "2025-08-13T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/prong/",
-    "title": "Prong",
-    "location": "dynamo",
-    "price": 26,
-    "shortText": "Plus support",
-    "longText": "../public/texts/dynamo/LWVpbmRob3Zlbi5ubC9ldmVuZW1lbnQvcHJvbmcv.html",
-    "image": "../public/event-images/dynamo/LWVpbmRob3Zlbi5ubC9ldmVuZW1lbnQvcHJvbmcv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "prong": {
-        "s": "6SER9tY2pDIDVWVf5Ql97B",
-        "l": "prong",
-        "g": [
-          "groove metal",
-          "industrial metal",
-          "thrash metal",
-          "alternative metal",
-          "industrial rock",
           "metal",
-          "crossover",
-          "thrash metal (early",
-          "later)",
-          " groove",
-          "industrial metal (mid)"
+          "punk"
         ]
       },
-      "plus": {
-        "s": null,
-        "l": "plus",
+      "speed": {
+        "s": "4wf6GGNBqaU79839E6yjfn",
+        "l": "speed",
         "g": [
-          "death",
-          "black metal"
+          "australian hardcore",
+          "heavy",
+          "speed metal"
         ]
       }
     }
   },
   {
-    "door": "2025-09-10T19:30:00",
-    "start": "2025-09-10T20:00:00",
-    "end": "2025-09-10T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/scene-queen/",
-    "title": "Scene Queen",
+    "door": "2026-01-31T19:30:00",
+    "start": "2026-01-31T20:00:00",
+    "end": "2026-01-31T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/ronnie-james-dio/",
+    "title": "Ronnie James Dio",
     "location": "dynamo",
-    "price": 23.5,
-    "shortText": "Plus Support",
-    "longText": "../public/texts/dynamo/b3Zlbi5ubC9ldmVuZW1lbnQvc2NlbmUtcXVlZW4v.html",
-    "image": "../public/event-images/dynamo/b3Zlbi5ubC9ldmVuZW1lbnQvc2NlbmUtcXVlZW4v",
+    "price": 27.5,
+    "shortText": "The Memorial Concert",
+    "longText": "../public/texts/dynamo/bmwvZXZlbmVtZW50L3Jvbm5pZS1qYW1lcy1kaW8v.html",
+    "image": "../public/event-images/dynamo/bmwvZXZlbmVtZW50L3Jvbm5pZS1qYW1lcy1kaW8v",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "plus": {
-        "s": null,
-        "l": "plus",
+      "ronnie james dio": {
+        "s": "4M3c7tg4BzLQ5pIOupZL65",
+        "l": "ronnie%20james%20dio",
         "g": [
-          "death",
-          "black metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-10-18T19:00:00",
-    "start": "2025-10-18T19:30:00",
-    "end": "2025-10-18T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/annisokay/",
-    "title": "Annisokay",
-    "location": "dynamo",
-    "price": 23.5,
-    "shortText": "support: heart of a coward + the narrator",
-    "longText": "../public/texts/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9hbm5pc29rYXkv.html",
-    "image": "../public/event-images/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9hbm5pc29rYXkv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "annisokay": {
-        "s": "7lai1cv19dsukggjbzqxfg",
-        "l": "annisokay",
-        "g": [
-          "german metalcore",
-          "german post-hardcore",
-          "metalcore",
-          "trancecore"
-        ]
-      },
-      "heart of a coward": {
-        "s": "6gizrqejjnx3mfac1yofmz",
-        "l": "heart%20of%20a%20coward",
-        "g": [
-          "djent",
-          "melodic metalcore",
-          "metalcore",
-          "uk metalcore"
-        ]
-      },
-      "the narrator": {
-        "s": "7d1ZGbsel9lq6hwvWhPFgk",
-        "l": "the%20narrator",
-        "g": [
-          "metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-11-22T20:00:00",
-    "start": "2025-11-22T20:30:00",
-    "end": "2025-11-22T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/persecutor/",
-    "title": "Persecutor",
-    "location": "dynamo",
-    "price": 11.5,
-    "shortText": "Plus Support",
-    "longText": "../public/texts/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L3BlcnNlY3V0b3Iv.html",
-    "image": "../public/event-images/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L3BlcnNlY3V0b3Iv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "plus": {
-        "s": null,
-        "l": "plus",
-        "g": [
-          "death",
-          "black metal"
-        ]
-      },
-      "persecutor": {
-        "s": "4iqXnnPDd6AJ5wMRQfuMB0",
-        "l": "persecutor",
-        "g": [
-          "thrash metal",
-          "speed metal",
-          "metalcore",
-          "thrash metal"
+          "hard rock"
         ]
       }
     }

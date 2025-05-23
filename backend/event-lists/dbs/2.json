@@ -1,210 +1,202 @@
 [
   {
-    "start": "2025-05-29T08:30:00",
-    "end": "2025-05-29T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/club-3voor12-utrecht-12/",
-    "title": "CLUB 3voor12 Utrecht",
-    "location": "dbs",
-    "price": 6,
-    "shortText": "Donderdag 29 mei presenteren we een nieuwe editie van Club 3voor12 Utrecht in dB’s. Tickets (online 6 euro, deur 7 euro) zijn verkrijgbaar via dB’s en de ticketlink van het event (volgt z.s.m.). Op deze editie check je:",
-    "longText": "../public/texts/dbs/ZXZlbnQvY2x1Yi0zdm9vcjEyLXV0cmVjaHQtMTIv.html",
-    "image": "../public/event-images/dbs/ZXZlbnQvY2x1Yi0zdm9vcjEyLXV0cmVjaHQtMTIv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-06-01T04:00:00",
-    "end": "2025-06-01T07:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/dbs-open-1-presenteert-angry-zeta-punkabilly-from-argentina/",
-    "title": "dB’s Open # 1 presenteert ANGRY ZETA (Punkabilly from Argentina)",
-    "location": "dbs",
-    "price": "0",
-    "shortText": " Summer Vibe Alert: Lekker simpel en lekker gezellig: 4 x een zondag in juni met een 𝗚𝗥𝗔𝗧𝗜𝗦 show vanaf 16:00",
-    "longText": "../public/texts/dbs/ZXRhLXB1bmthYmlsbHktZnJvbS1hcmdlbnRpbmEv.html",
-    "image": "../public/event-images/dbs/ZXRhLXB1bmthYmlsbHktZnJvbS1hcmdlbnRpbmEv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-06-12T08:00:00",
-    "end": "2025-06-12T11:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/big-ass-metal-fest-42/",
-    "title": "Big ass metal fest #42",
+    "start": "2025-05-31T07:30:00",
+    "end": "2025-05-31T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/terziele-release-show-hemelbestormer-b-gavran/",
+    "title": "Terziele release show ",
     "location": "dbs",
     "price": 10,
-    "shortText": "",
-    "longText": "../public/texts/dbs/bC9ldmVudC9iaWctYXNzLW1ldGFsLWZlc3QtNDIv.html",
-    "image": "../public/event-images/dbs/bC9ldmVudC9iaWctYXNzLW1ldGFsLWZlc3QtNDIv",
+    "shortText": " hemelbestormer (b)  +  gavran Ter Ziele Album Release Show – 31 mei dB’s Utrecht",
+    "longText": "../public/texts/dbs/LXNob3ctaGVtZWxiZXN0b3JtZXItYi1nYXZyYW4v.html",
+    "image": "../public/event-images/dbs/LXNob3ctaGVtZWxiZXN0b3JtZXItYi1nYXZyYW4v",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
+      "hemelbestormer": {
+        "s": "5oHzkbFUZZHA2y8t2aAhso",
+        "l": "hemelbestormer",
         "g": [
-          "death metal"
+          "sludge metal",
+          "post-rock",
+          "doom metal",
+          "space rock",
+          "post-metal"
         ]
       },
-      "meta": {
-        "s": null,
-        "l": "meta",
+      "gavran": {
+        "s": "0Z7JnoZUMxgmaLgApKMYpl",
+        "l": "gavran",
         "g": [
-          "groove",
+          "sludge metal",
+          "doom metal",
+          "sludge",
+          "doom metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-06-20T08:00:00",
+    "end": "2025-06-20T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/ultha-d-grey-aura/",
+    "title": "Ultha (d) + grey aura",
+    "location": "dbs",
+    "price": 10,
+    "shortText": "Het Duitse Ultha is een band voor liefhebbers van lang uitgesponnen black metal met een goeie scheut melancholie, geschoeid op de leest van bands als Ash Borer en Wolves in the Throne Room.",
+    "longText": "../public/texts/dbs/aW8ubmwvZXZlbnQvdWx0aGEtZC1ncmV5LWF1cmEv.html",
+    "image": "../public/event-images/dbs/aW8ubmwvZXZlbnQvdWx0aGEtZC1ncmV5LWF1cmEv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "grey aura": {
+        "s": "5zlsiIekribvslzGzaqBJi",
+        "l": "grey%20aura",
+        "g": [
+          "dutch black metal",
+          "avant-garde",
+          "atmospheric",
+          "post-black metal"
+        ]
+      },
+      "ultha": {
+        "s": "2dNNRreuWrVDbNX2srDdag",
+        "l": "ultha",
+        "g": [
+          "black metal",
+          "black metal",
+          "hardcore (punk) ",
+          "metal ",
+          "punk "
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-06-27T08:00:00",
+    "end": "2025-06-27T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/the-midnight-ghost-train-usa-sons-of-node/",
+    "title": "The midnight ghost train (usa) + sons of node",
+    "location": "dbs",
+    "price": 15,
+    "shortText": "Aight, onze buddies van THE MIDNIGHT GHOST TRAIN keren weer terug naar Europa, dit keer echt voor een allerlaatste keer. Hierna ga je dit trio niet meer aan het werk zien. Als je ze niet kent weet dan dat TMGT een van de beste stonerrocktrio’s van het afgelopen decennium is. Als je ze wel kent, dan haal je beter snel die tickets voor een show die episch zal zijn. Siked dat ze dB’s hoog op hun lijst van favo venues hebben staan en dus ook absoluut hier willen spelen!",
+    "longText": "../public/texts/dbs/LWdob3N0LXRyYWluLXVzYS1zb25zLW9mLW5vZGUv.html",
+    "image": "../public/event-images/dbs/LWdob3N0LXRyYWluLXVzYS1zb25zLW9mLW5vZGUv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ghost": {
+        "s": "1qp56t7n950o3egmssl81d",
+        "l": "ghost",
+        "g": [
+          "hard rock",
+          "metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-06-30T04:30:00",
+    "end": "2025-06-30T10:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/aleksiproxima-flarehurryland/",
+    "title": "Aleksi+Proxima Flare+Hurryland",
+    "location": "dbs",
+    "price": 7.5,
+    "shortText": "",
+    "longText": "../public/texts/dbs/L2FsZWtzaXByb3hpbWEtZmxhcmVodXJyeWxhbmQv.html",
+    "image": "../public/event-images/dbs/L2FsZWtzaXByb3hpbWEtZmxhcmVodXJyeWxhbmQv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "proxima flare": {
+        "s": "315Th53dV868sSv3jYt8UO",
+        "l": "proxima%20flare",
+        "g": [
+          "progressive metal"
+        ]
+      },
+      "hurryland": {
+        "s": "7FxU3mrUjcrSYzFHYNYkQ9",
+        "l": "hurryland",
+        "g": [
           "progressive metal"
         ]
       }
     }
   },
   {
-    "start": "2025-06-19T08:00:00",
-    "end": "2025-06-19T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/digger-the-pussycats-oz/",
-    "title": "Digger & the pussycats (oz) ",
+    "start": "2025-07-05T08:00:00",
+    "end": "2025-07-05T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/daddy-long-legs-support/",
+    "title": "Daddy long legs + support",
     "location": "dbs",
-    "price": 13.5,
-    "shortText": " mitraille(b)  +  the mono kids Dat we dit nog mogen meemaken, Digger & the Pussycats, Sam &Andy terug in dB’s!\nYou drive like a cunt, nog steeds. Moeten al gauw terug in de tijd naar de periode 2005- 2012 toen dit illustere duo met grote regelmaat de podia in Europa aan gort kwam spelen en (onder andere) dB’s als uitvalsbasis gebruikte. Toen kwamen er allemaal grote mensen dingen aan die de band op een laag pitje zetten tot NU! Digger & the Pussycats komt weer naar Nederland en een show in de nieuwe dB’s mag dan ook niet ontbreken.",
-    "longText": "../public/texts/dbs/ZXZlbnQvZGlnZ2VyLXRoZS1wdXNzeWNhdHMtb3ov.html",
-    "image": "../public/event-images/dbs/ZXZlbnQvZGlnZ2VyLXRoZS1wdXNzeWNhdHMtb3ov",
+    "price": 12.5,
+    "shortText": "Oh Yes! Super siked onze favo Rhythm & Blues Garage Punx DADDY LONG LEGS uit NYC op VLP 63 te verwelkomen.",
+    "longText": "../public/texts/dbs/ZXZlbnQvZGFkZHktbG9uZy1sZWdzLXN1cHBvcnQv.html",
+    "image": "../public/event-images/dbs/ZXZlbnQvZGFkZHktbG9uZy1sZWdzLXN1cHBvcnQv",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "mono": {
-        "s": "53LVoipNTQ4lvUSJ61XKU3",
-        "l": "mono",
+      "daddy long legs": {
+        "s": "26vp0YsAVautrWTzJXf6Zi",
+        "l": "daddy%20long%20legs",
         "g": [
-          "post-rock",
-          "math rock",
-          "sludge metal"
+          "modern blues",
+          "garage rock",
+          "blues rock"
         ]
       }
     }
   },
   {
-    "start": "2025-06-25T05:30:00",
-    "end": "2025-06-25T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/dont-stop-talking-about-palestine/",
-    "title": "Don’t stop talking about palestine",
-    "location": "dbs",
-    "shortText": "Afgelopen zondag gingen we met meer dan 100.000 mensen de straat op om een rode lijn te trekken. Laat de aandacht niet verslappen, juist nu niet. Oxfam Novib, TivoliVredenburg, De Helling, EKKO en dB’s organiseren op woensdag 25 juni een event in het teken van Palestina. Op het programma staat livemuziek, performances, kunst, cultuur en eten om een open en verbindend gesprek te stimuleren. De tickets zijn op basis van Pay What You Want. Per ticket gaat er € 5,- naar servicekosten en de rest van de inkomsten komen volledig ten goede aan de noodhulp die Oxfam Novib biedt aan mensen in Palestina. Het programma wordt binnenkort bekend gemaakt.",
-    "longText": "../public/texts/dbs/LXN0b3AtdGFsa2luZy1hYm91dC1wYWxlc3RpbmUv.html",
-    "image": "../public/event-images/dbs/LXN0b3AtdGFsa2luZy1hYm91dC1wYWxlc3RpbmUv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "talk": {
-        "s": null,
-        "l": "talk",
-        "g": [
-          "crossover",
-          "hardcore",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-07-04T08:00:00",
-    "end": "2025-07-04T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/left-lane-cruiser-usa/",
-    "title": "Left lane cruiser (usa) + lo-lite",
+    "start": "2025-07-15T08:00:00",
+    "end": "2025-07-15T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/dbs-tivre-present-battlesnake-aus/",
+    "title": "Db’s & tivre present battlesnake (aus)",
     "location": "dbs",
     "price": 10,
-    "shortText": "Als Joe Evans & Brenn Beck de oversteek naar Europa maken, willen we ze hier bij dB’s op de planken hebben. Dat is gelukkig ook deze keer weer gelukt nadat ze eerder al in juni vorig jaar de VLP 63 in vuur en vlam zetten. Dat gaat opnieuw gebeuren want er zijn maar weinig livebands met de rauwe energie van Left Lane Cruiser.",
-    "longText": "../public/texts/dbs/bC9ldmVudC9sZWZ0LWxhbmUtY3J1aXNlci11c2Ev.html",
-    "image": "../public/event-images/dbs/bC9ldmVudC9sZWZ0LWxhbmUtY3J1aXNlci11c2Ev",
+    "shortText": "TivoliVredenburg & dB’s present BATTLESNAKE!",
+    "longText": "../public/texts/dbs/dGl2cmUtcHJlc2VudC1iYXR0bGVzbmFrZS1hdXMv.html",
+    "image": "../public/event-images/dbs/dGl2cmUtcHJlc2VudC1iYXR0bGVzbmFrZS1hdXMv",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "left lane cruiser": {
-        "s": "2sJLswTuwPwm9Y1tMC4erf",
-        "l": "left%20lane%20cruiser",
-        "g": [
-          "blues rock",
-          "modern blues",
-          "stoner rock",
-          "gothic country",
-          "blues",
-          "country blues",
-          "garage rock"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-07-12T08:00:00",
-    "end": "2025-07-12T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/skampida-columbia/",
-    "title": "Skampida (columbia)",
-    "location": "dbs",
-    "price": 13,
-    "shortText": "Skampida is geen onbekende meer in Utrecht. Na diverse dampende uitverkochte shows in Acu en vorig jaar nog buiten bij de Nijverheid, is nu eindelijk dB’s aan de beurt. Deze party band bij uitstek die in 1998 werd opgericht in Bogota, Colombia breng een mix van Colombiaanse reggae, folkloristische ritmes en urban geluiden (hiphop, punk cumbia en champeta), samen met Roma-invloeden en drum & bass.\nStilstaan is geen optie.",
-    "longText": "../public/texts/dbs/aW8ubmwvZXZlbnQvc2thbXBpZGEtY29sdW1iaWEv.html",
-    "image": "../public/event-images/dbs/aW8ubmwvZXZlbnQvc2thbXBpZGEtY29sdW1iaWEv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "skampida": {
-        "s": "2gFTHPd5iboV0IvQgsATno",
-        "l": "skampida",
-        "g": [
-          "ska",
-          "ska punk"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-07-18T08:00:00",
-    "end": "2025-07-18T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/boppin-the-rock-big-bluegrass-special-feat-john-miller-uk-the-original-five-swe/",
-    "title": "Boppin’ the rock big bluegrass special feat. john miller (uk) & the original five (swe)",
-    "location": "dbs",
-    "price": 13,
-    "shortText": " Deze vrijdag aan de vooravond van ons groot tweedaags dB’s Open Festival pakken we nog even een heerlijk avondje bluegrass mee met onze favoriete Schotse cowboy JOHN MILLER die voor deze tour op pad gaat met de Zweedse cowboys van The Original Five, een van de meest vooraanstaande traditionele bluegrass gezelschappen in de huidige rootsmuziek. Na een optreden van The Original Five, zal de held van deze avond, John Miller, aansluiten met zijn eigen authentieke stemgeluid.\nHet wordt een avond die niet te missen is voor liefhebbers van traditionele country en bluegrass, muzikaal vakmanschap en sowieso een feestje.",
-    "longText": "../public/texts/dbs/bGxlci11ay10aGUtb3JpZ2luYWwtZml2ZS1zd2Uv.html",
-    "image": "../public/event-images/dbs/bGxlci11ay10aGUtb3JpZ2luYWwtZml2ZS1zd2Uv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "rock": {
+      "battle": {
         "s": null,
-        "l": "rock",
+        "l": "battle",
         "g": [
-          "heavy metal",
-          "hard rock"
+          "black metal"
+        ]
+      },
+      "snake": {
+        "s": null,
+        "l": "snake",
+        "g": [
+          "heavy metal"
         ]
       }
     }
   },
   {
-    "start": "2025-08-02T08:00:00",
-    "end": "2025-08-02T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/spoon-benders-portland/",
-    "title": "Spoon benders (portland)",
+    "start": "2025-08-08T08:00:00",
+    "end": "2025-08-08T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/dogma/",
+    "title": "Dogma",
     "location": "dbs",
-    "price": 14,
-    "shortText": "Spoon Benders uit Portland Oregon zegt je misschien nog niet heel veel maar neem van ons aan dat dit psychedelische progpunkrock powerkwarter momenteel een van de bands is om in de gaten te houden. Na een totaal uitverkochte US tour waarop weer veel zieltjes gewonnen zijn is het nu de beurt aan Europa om als een baksteen te vallen voor de sexy psych rock van Spoon Benders. Met hun sound die het midden houdt tussen zware psychedelische rock met de koortjes en de solo’s, en rechttoe rechtaan protopunk wordt je van early Pink Floyd (met Syd Barrett) gekatapulteerd naar het nu van Ty Segall en aanverwanten. Extra kracht van Spoon Benders daarbij zijn de spooky vocalen van frontdame Kathy Black die het dynamische muzikale geheel nog van een gothic sausje voorzien.\nLaatste release ‘How Things Repeat’ is al een plaatje om te koesteren maar afgaand op hun live-reputatie moet je ze vooral live gaan zien. Ga je geen spijt van krijgen.\nPsych out!",
-    "longText": "../public/texts/dbs/L2V2ZW50L3Nwb29uLWJlbmRlcnMtcG9ydGxhbmQv.html",
-    "image": "../public/event-images/dbs/L2V2ZW50L3Nwb29uLWJlbmRlcnMtcG9ydGxhbmQv",
+    "price": 15,
+    "shortText": "Religie? Cult? Wat het ook precies mag zijn, mysterieus is het wel, deze all female rock band die flirt met alle wetten. Vermomd als kwaadaardige nonnen maken deze vrouwen classic harde rock (hoewel de laatste single van Dogma dan weer flirt met tango) met een heel theatrale inslag. Denk aan een all female versie van KISS, of Alice Cooper maar dan anders.\nWie ze precies zijn en waar ze vandaan komen is onbekend maar DOGMA – Lilith, Lamia, Nixe, Rusalka en Abrahel – is vastbesloten de wereld te veroveren met hun explosieve mix van theatrale rock, zware riffs en provocerende teksten. En dat lukt tot nog toe vrij goed getuige de immense following die ze hebben opgebouwd.\nHeel benieuwd hoe dit live bij ons op het podium uit de verf gaat komen. DOGMA gaat uiteindelijk een stadionrockband worden met een goedkeurende Madonna in de VIP seat die meehumt met DOGMA’s versie van Like a Prayer.\nFEMALE POWER!",
+    "longText": "../public/texts/dbs/Ly93d3cuZGJzdHVkaW8ubmwvZXZlbnQvZG9nbWEv.html",
+    "image": "../public/event-images/dbs/Ly93d3cuZGJzdHVkaW8ubmwvZXZlbnQvZG9nbWEv",
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-08-09T08:00:00",
-    "end": "2025-08-09T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/the-mount-fuji-doomjazz-corporation-organza-ray-support/",
-    "title": "The Mount Fuji Doomjazz Corporation ",
-    "location": "dbs",
-    "price": 16,
-    "shortText": " Organza Ray (support) Als voorbereiding op het unieke reünie optreden van The Kilimanjaro Darkjazz Ensemble en The Mount Fuji Doomjazz Corporation in Berlijn op 29 augustus, geven de heren en dame een exclusief concert in dB’s. Deze bijzondere avond dient als opwarming voor de reünie show en biedt een unieke set waarin bestaand werk wordt verweven met vrije improvisatie — een klein voorproefje van wat er in Berlijn te verwachten valt. Het voorprogramma wordt verzorgd door Organza Ray, het project van Hilary Jeffery, trombonist van The Kilimanjaro Darkjazz Ensemble.",
-    "longText": "../public/texts/dbs/cnBvcmF0aW9uLW9yZ2FuemEtcmF5LXN1cHBvcnQv.html",
-    "image": "../public/event-images/dbs/cnBvcmF0aW9uLW9yZ2FuemEtcmF5LXN1cHBvcnQv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "dogma": {
+        "s": "4R6XPuqGShFESRVkCePaxj",
+        "l": "dogma",
+        "g": [
+          "groove metal"
+        ]
+      }
+    }
   },
   {
     "start": "2025-10-02T08:00:00",
@@ -221,31 +213,27 @@
     "artists": {}
   },
   {
-    "start": "2025-10-24T07:00:00",
-    "end": "2025-10-24T11:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/the-big-4-of-metal/",
-    "title": "The big 4 of metal",
+    "start": "2025-11-11T08:00:00",
+    "end": "2025-11-11T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/yawning-man-usa-soft-sun-no-usa/",
+    "title": "Yawning man (usa) + soft sun (no/usa)",
     "location": "dbs",
-    "price": 17.5,
-    "shortText": "Aangezien je dit in het echt niet mee gaat maken doen we eens gek en zetten THE BIG 4 IN METAL op een podium als uitgevoerd door vier van de beste metal tribute bands.",
-    "longText": "../public/texts/dbs/by5ubC9ldmVudC90aGUtYmlnLTQtb2YtbWV0YWwv.html",
-    "image": "../public/event-images/dbs/by5ubC9ldmVudC90aGUtYmlnLTQtb2YtbWV0YWwv",
+    "price": 15,
+    "shortText": "Bij dB’s houden we graag oude helden in ere en het Californische Yawning Man hoort zeker thuis in de canon van de hedendaagse rock. Opgericht in 1986 opgericht en één van pioniers van de Palm Desert Scene. Ze brachten tijdens de zogeheten generator parties hun garage sound naar de woestijn. Hun muziek had grote invloed op levende legendes zoals John Garcia, Josh Homme en Brant Bjork, die later de legendarische stoner rockband Kyuss vormden. Terwijl hun meer commerciële tijdgenoten leunden op zware riffs en hardcore punk, bleef cultband Yawning Man flink roeren in een smeltkroes van stijlen; van psychedelisch tot folkloristisch, jazz, hard rock, prog en wereldmuziek. Laatste album Long Walk of the Navajo uit 2023 laat horen dat Yawning Man nog altijd niet aan muzikale zeggingskracht heeft ingeboet. Een parel van een band voor *those in the know*",
+    "longText": "../public/texts/dbs/d25pbmctbWFuLXVzYS1zb2Z0LXN1bi1uby11c2Ev.html",
+    "image": "../public/event-images/dbs/d25pbmctbWFuLXVzYS1zb2Z0LXN1bi1uby11c2Ev",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
+      "yawning man": {
+        "s": "2d06w6cy8notptpdiagvoe",
+        "l": "yawning%20man",
         "g": [
-          "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
+          "instrumental rock",
+          "instrumental stoner rock",
+          "palm desert scene",
+          "stoner metal",
+          "stoner rock"
         ]
       }
     }

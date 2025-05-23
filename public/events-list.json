@@ -94,18 +94,21 @@
     "location": "sounddog"
   },
   {
-    "door": "2025-05-23T18:00:00",
-    "start": "2025-05-23T18:20:00",
+    "start": "2025-05-23T16:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/make-them-suffer-23-05-2025/",
     "title": "Make Them Suffer",
     "location": "melkweg",
     "price": 28.75,
-    "shortText": "deathcore · metalcore · heavy",
+    "shortText": "",
     "longText": "../public/texts/melkweg/YS9tYWtlLXRoZW0tc3VmZmVyLTIzLTA1LTIwMjUv.html",
     "image": "../public/event-images/melkweg/YS9tYWtlLXRoZW0tc3VmZmVyLTIzLTA1LTIwMjUv",
     "soldOut": true,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Deathcore",
+      "Metalcore",
+      "Heavy"
+    ],
     "artists": {
       "make them suffer": {
         "s": "0FZcPgWI3BsFQl4rOAGSHT",
@@ -356,36 +359,12 @@
     }
   },
   {
-    "door": "2025-05-23T22:00:00",
-    "start": "2025-05-23T22:00:00",
-    "end": "2025-05-23T04:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/bunkerbass-3/",
-    "title": "bunkerbass",
-    "location": "dynamo",
-    "price": 13.5,
-    "shortText": "[DRUM AND BASS]",
-    "longText": "../public/texts/dynamo/dmVuLm5sL2V2ZW5lbWVudC9idW5rZXJiYXNzLTMv.html",
-    "image": "../public/event-images/dynamo/dmVuLm5sL2V2ZW5lbWVudC9idW5rZXJiYXNzLTMv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "bass": {
-        "s": null,
-        "l": "bass",
-        "g": [
-          "doom",
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-05-23T20:00:00",
     "start": "2025-05-23T20:45:00",
     "venueEventUrl": "https://bibelot.net/programma/jaya-the-cat-us-nl/",
     "title": "Jaya the cat (us/nl)",
     "location": "bibelot",
-    "price": 0,
+    "price": 23,
     "longText": "../public/texts/bibelot/L3Byb2dyYW1tYS9qYXlhLXRoZS1jYXQtdXMtbmwv.html",
     "image": "../public/event-images/bibelot/L3Byb2dyYW1tYS9qYXlhLXRoZS1jYXQtdXMtbmwv",
     "soldOut": false,
@@ -403,32 +382,56 @@
     }
   },
   {
-    "start": "2025-05-24T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/pretty-pissed-24-05-2025/",
-    "title": "Pretty Pissed",
-    "location": "melkweg",
-    "price": 44.85,
-    "shortText": "punk · postpunk",
-    "longText": "../public/texts/melkweg/ZW5kYS9wcmV0dHktcGlzc2VkLTI0LTA1LTIwMjUv.html",
-    "image": "../public/event-images/melkweg/ZW5kYS9wcmV0dHktcGlzc2VkLTI0LTA1LTIwMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-05-24T20:00:00",
+    "start": "2025-05-24T20:45:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/wap-shoo-wapx-pretty-pissed-24-05-2025/",
     "title": "Wap Shoo Wap X Pretty Pissed Afterparty",
     "location": "melkweg",
     "price": 14.4,
-    "shortText": "punk · rock-‘n-roll",
+    "shortText": "",
     "longText": "../public/texts/melkweg/d2FweC1wcmV0dHktcGlzc2VkLTI0LTA1LTIwMjUv.html",
     "image": "../public/event-images/melkweg/d2FweC1wcmV0dHktcGlzc2VkLTI0LTA1LTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
+    "eventGenres": [
+      "Punk",
+      "Rock-‘n-roll"
+    ],
+    "artists": {
+      "pretty pissed": {
+        "s": null,
+        "l": "pretty%20pissed",
+        "g": [
+          "Punk",
+          "Postpunk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-24T13:30:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/pretty-pissed-24-05-2025/",
+    "title": "Pretty Pissed",
+    "location": "melkweg",
+    "price": 44.85,
+    "shortText": "",
+    "longText": "../public/texts/melkweg/ZW5kYS9wcmV0dHktcGlzc2VkLTI0LTA1LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/ZW5kYS9wcmV0dHktcGlzc2VkLTI0LTA1LTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": [
+      "Punk",
+      "Postpunk"
+    ],
+    "artists": {
+      "pretty pissed": {
+        "s": null,
+        "l": "pretty%20pissed",
+        "g": [
+          "Punk",
+          "Postpunk"
+        ]
+      }
+    }
   },
   {
     "start": "2025-05-24T20:00:00",
@@ -506,165 +509,6 @@
     }
   },
   {
-    "start": "2025-05-24T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/apocalypse-straks-de-theatertroep/",
-    "title": "Apocalypse straks – de Theatertroep",
-    "location": "groeneengel",
-    "price": 20,
-    "longText": "../public/texts/groeneengel/YWx5cHNlLXN0cmFrcy1kZS10aGVhdGVydHJvZXAv.html",
-    "image": "../public/event-images/groeneengel/YWx5cHNlLXN0cmFrcy1kZS10aGVhdGVydHJvZXAv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ater": {
-        "s": "1HpPzWF2E6G8KfD5pOM6La",
-        "l": "ater",
-        "g": [
-          "djent",
-          "black metal",
-          "black",
-          "death metal",
-          "extreme metal",
-          "heavy metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-24T14:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/buurvrouw-en-buurvrouw-het-kleine-theater/",
-    "title": "Buurvrouw en Buurvrouw – het Kleine Theater",
-    "location": "groeneengel",
-    "price": 12,
-    "longText": "../public/texts/groeneengel/LWJ1dXJ2cm91dy1oZXQta2xlaW5lLXRoZWF0ZXIv.html",
-    "image": "../public/event-images/groeneengel/LWJ1dXJ2cm91dy1oZXQta2xlaW5lLXRoZWF0ZXIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ater": {
-        "s": "1HpPzWF2E6G8KfD5pOM6La",
-        "l": "ater",
-        "g": [
-          "djent",
-          "black metal",
-          "black",
-          "death metal",
-          "extreme metal",
-          "heavy metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-24T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/hoopje-mens-tg-echo/",
-    "title": "Hoopje Mens – TG Echo",
-    "location": "groeneengel",
-    "price": 20,
-    "longText": "../public/texts/groeneengel/cHJvZ3JhbW1hL2hvb3BqZS1tZW5zLXRnLWVjaG8v.html",
-    "image": "../public/event-images/groeneengel/cHJvZ3JhbW1hL2hvb3BqZS1tZW5zLXRnLWVjaG8v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "echo": {
-        "s": "0fgykf9avljex0l9wt5b8z",
-        "l": "echo",
-        "g": [
-          "alternative rock",
-          "new romantic",
-          "new wave",
-          "permanent wave"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-24T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/onbeperkt-theaterabonnement-2025-2026/",
-    "title": "Onbeperkt Theaterabonnement 2025-2026",
-    "location": "groeneengel",
-    "price": 20,
-    "longText": "../public/texts/groeneengel/dC10aGVhdGVyYWJvbm5lbWVudC0yMDI1LTIwMjYv.html",
-    "image": "../public/event-images/groeneengel/dC10aGVhdGVyYWJvbm5lbWVudC0yMDI1LTIwMjYv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ater": {
-        "s": "1HpPzWF2E6G8KfD5pOM6La",
-        "l": "ater",
-        "g": [
-          "djent",
-          "black metal",
-          "black",
-          "death metal",
-          "extreme metal",
-          "heavy metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-24T00:00:00",
-    "start": "2025-05-24T19:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/25-jaar-groene-engel-het-jubileumboek/",
-    "title": "Van hemelbestormers tot engelenwerk – Een kwart eeuw cultuur en ontmoeten bij Groene Engel",
-    "location": "groeneengel",
-    "price": 13,
-    "shortText": " undefined",
-    "longText": "../public/texts/groeneengel/Z3JvZW5lLWVuZ2VsLWhldC1qdWJpbGV1bWJvZWsv.html",
-    "image": "../public/event-images/groeneengel/Z3JvZW5lLWVuZ2VsLWhldC1qdWJpbGV1bWJvZWsv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "hemelbestormer": {
-        "s": "5oHzkbFUZZHA2y8t2aAhso",
-        "l": "hemelbestormer",
-        "g": [
-          "sludge metal",
-          "post-rock",
-          "doom metal",
-          "space rock",
-          "post-metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-24T20:00:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/north-mississippi-allstars-25th-anniversary-of-shake-hands-with-shorty/",
-    "title": "North Mississippi Allstars ",
-    "location": "groeneengel",
-    "price": 20,
-    "shortText": " support act: Black Raven undefined",
-    "longText": "../public/texts/groeneengel/cnktb2Ytc2hha2UtaGFuZHMtd2l0aC1zaG9ydHkv.html",
-    "image": "../public/event-images/groeneengel/cnktb2Ytc2hha2UtaGFuZHMtd2l0aC1zaG9ydHkv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "raven": {
-        "s": "6K0vfJogIPUIo694VqX2Wr",
-        "l": "raven",
-        "g": [
-          "nwobhm",
-          "heavy metal, speed metal"
-        ]
-      },
-      "black": {
-        "s": null,
-        "l": "black",
-        "g": [
-          "black metal"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-05-24T20:00:00",
     "start": "2025-05-24T20:30:00",
     "venueEventUrl": "https://www.effenaar.nl/agenda/bowl",
@@ -716,29 +560,6 @@
           "emo",
           "math rock",
           "emo pop"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-24T20:00:00",
-    "start": "2025-05-24T20:45:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/vieux-farka-toure-3/",
-    "title": "Vieux Farka Touré",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, bluesrock, desert rock, doornroosjepas",
-    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZpZXV4LWZhcmthLXRvdXJlLTMv.html",
-    "image": null,
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "rock": {
-        "s": null,
-        "l": "rock",
-        "g": [
-          "heavy metal",
-          "hard rock"
         ]
       }
     }
@@ -904,29 +725,6 @@
     "artists": {}
   },
   {
-    "start": "2025-05-25T04:00:00",
-    "end": "2025-05-25T08:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/boppin-the-rock-presents-gizzelle-the-savoys-wild-records-mischief-cc-jerome-trio/",
-    "title": "Boppin’ the Rock presents GIZZELLE & the Savoys (Wild Records) ",
-    "location": "dbs",
-    "price": 17.5,
-    "shortText": " Mischief!  +  CC Jerome Trio Behold people, Boppin’ the Rock pakt uit met een formidabele triple bill rond de Amerikaanse zangeres GIZZELLE & The Savoys, de Domtown maestro’s of rockabilly MISCHIEF! en het CC JEROME TRIO.",
-    "longText": "../public/texts/dbs/Y29yZHMtbWlzY2hpZWYtY2MtamVyb21lLXRyaW8v.html",
-    "image": "../public/event-images/dbs/Y29yZHMtbWlzY2hpZWYtY2MtamVyb21lLXRyaW8v",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "rock": {
-        "s": null,
-        "l": "rock",
-        "g": [
-          "heavy metal",
-          "hard rock"
-        ]
-      }
-    }
-  },
-  {
     "start": "2025-05-25T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/98273/crimson-glory",
     "title": "Crimson Glory",
@@ -1065,17 +863,20 @@
     }
   },
   {
-    "start": "2025-05-28T20:00:00",
+    "start": "2025-05-28T16:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/reconstruction-tour-28-05-2025/",
     "title": "Pennywise / Propagandhi / Comeback Kid / The Iron Roses / Dead Pioneers",
     "location": "melkweg",
     "price": 51.75,
-    "shortText": " punkrock · hardcore punk Reconstruction Tour 2025",
+    "shortText": " reconstruction tour 2025",
     "longText": "../public/texts/melkweg/ZWNvbnN0cnVjdGlvbi10b3VyLTI4LTA1LTIwMjUv.html",
     "image": "../public/event-images/melkweg/ZWNvbnN0cnVjdGlvbi10b3VyLTI4LTA1LTIwMjUv",
     "soldOut": true,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Punkrock",
+      "Hardcore punk"
+    ],
     "artists": {
       "comeback kid": {
         "s": "67f7GZXNMGRn98lqrtIdrN",
@@ -1110,6 +911,22 @@
           "punk",
           "skate punk",
           "socal pop punk"
+        ]
+      },
+      "the iron roses": {
+        "s": "4E39TiZAnl2g2uCpWI9L96",
+        "l": "the%20iron%20roses",
+        "g": [
+          "Punkrock",
+          "Hardcore punk"
+        ]
+      },
+      "dead pioneers": {
+        "s": "3t0cq15eUtB2wvb1wJARsv",
+        "l": "dead%20pioneers",
+        "g": [
+          "Punkrock",
+          "Hardcore punk"
         ]
       }
     }
@@ -1258,20 +1075,6 @@
     }
   },
   {
-    "start": "2025-05-29T08:30:00",
-    "end": "2025-05-29T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/club-3voor12-utrecht-12/",
-    "title": "CLUB 3voor12 Utrecht",
-    "location": "dbs",
-    "price": 6,
-    "shortText": "Donderdag 29 mei presenteren we een nieuwe editie van Club 3voor12 Utrecht in dB’s. Tickets (online 6 euro, deur 7 euro) zijn verkrijgbaar via dB’s en de ticketlink van het event (volgt z.s.m.). Op deze editie check je:",
-    "longText": "../public/texts/dbs/ZXZlbnQvY2x1Yi0zdm9vcjEyLXV0cmVjaHQtMTIv.html",
-    "image": "../public/event-images/dbs/ZXZlbnQvY2x1Yi0zdm9vcjEyLXV0cmVjaHQtMTIv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
     "start": "2025-05-30T23:30:00+02:00",
     "venueEventUrl": "https://www.podiumvictorie.nl/programma/junkyard-2/",
     "title": "Junkyard",
@@ -1373,20 +1176,6 @@
         ]
       }
     }
-  },
-  {
-    "start": "2025-05-30T22:00:00",
-    "end": "2025-05-30T04:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/commit/",
-    "title": "Club commit",
-    "location": "dynamo",
-    "price": 11.5,
-    "shortText": "[BREAKS | GARAGE | JUNGLE | 4X4]",
-    "longText": "../public/texts/dynamo/ZWluZGhvdmVuLm5sL2V2ZW5lbWVudC9jb21taXQv.html",
-    "image": "../public/event-images/dynamo/ZWluZGhvdmVuLm5sL2V2ZW5lbWVudC9jb21taXQv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
   },
   {
     "door": "2025-05-30T19:30:00",
@@ -1509,7 +1298,6 @@
     }
   },
   {
-    "door": "2025-05-30T19:00:00",
     "start": "2025-05-30T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/108587/incantation-dead-congregation",
     "title": "Incantation + Dead Congregation",
@@ -1895,30 +1683,6 @@
     }
   },
   {
-    "start": "2025-06-03T07:30:00",
-    "end": "2025-06-03T11:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/bellen-blaas-festival-met-control-v-can-of-worms-bistro-rosa-en-salamander-gratis/",
-    "title": "Bellen Blaas Festival met Control-V, Can of Worms, Bistro, Rosa en Salamander. Gratis",
-    "location": "dbs",
-    "price": "0",
-    "shortText": " Georganiseerd en uitgevoerd door studenten van het Conservatorium Utrecht. Een avond met optredens in cafe en zaal, deels ook meteen examen. Gratis en voor niets toegankelijk.",
-    "longText": "../public/texts/dbs/dHJvLXJvc2EtZW4tc2FsYW1hbmRlci1ncmF0aXMv.html",
-    "image": "../public/event-images/dbs/dHJvLXJvc2EtZW4tc2FsYW1hbmRlci1ncmF0aXMv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "can of worms": {
-        "s": "0J86wWYNuWmEoUi1wZ4cT0",
-        "l": "can%20of%20worms",
-        "g": [
-          "french death metal",
-          "thrash",
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
     "start": "2025-06-04T19:00:00",
     "venueEventUrl": "https://www.willemeen.nl/programma/w1-cafe-wasemkap-vol3/",
     "title": "W1 cafe: wasemkap vol3",
@@ -1939,6 +1703,24 @@
     "shortText": "Sound Dog, Breda",
     "image": "../public/location-images/sounddog",
     "location": "sounddog"
+  },
+  {
+    "start": "2025-06-04T17:30:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/witchz-04-06-2025/",
+    "title": "Witchz",
+    "location": "melkweg",
+    "price": 20.7,
+    "shortText": "life tour 2025 uk & europe",
+    "longText": "../public/texts/melkweg/bC9ubC9hZ2VuZGEvd2l0Y2h6LTA0LTA2LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bC9ubC9hZ2VuZGEvd2l0Y2h6LTA0LTA2LTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": [
+      "Bass",
+      "Duister",
+      "Rap"
+    ],
+    "artists": {}
   },
   {
     "start": "2025-06-04T21:00:00",
@@ -2167,18 +1949,21 @@
     }
   },
   {
-    "door": "2025-06-06T19:00:00",
-    "start": "2025-06-06T20:00:00",
+    "start": "2025-06-06T17:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/fokofpolisiekar-van-pletzen-early-b-06-06-2025/",
     "title": "Fokofpolisiekar / Van Pletzen / Early B",
     "location": "melkweg",
     "price": 46,
-    "shortText": "alternative rock · punk · feelgood",
+    "shortText": "",
     "longText": "../public/texts/melkweg/YW4tcGxldHplbi1lYXJseS1iLTA2LTA2LTIwMjUv.html",
     "image": "../public/event-images/melkweg/YW4tcGxldHplbi1lYXJseS1iLTA2LTA2LTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Alternative rock",
+      "Punk",
+      "Feelgood"
+    ],
     "artists": {}
   },
   {
@@ -2235,34 +2020,6 @@
     "longText": "../public/texts/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9zZWxlY3RhLTQv.html",
     "image": "../public/event-images/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9zZWxlY3RhLTQv",
     "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-06-06T18:00:00",
-    "start": "2025-06-06T19:00:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/manu-chao-2/",
-    "title": "Manu Chao",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "Ultra Acoustic Toursinger songwriter, punk, roots, mestizo",
-    "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvbWFudS1jaGFvLTIv.html",
-    "image": null,
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-06-06T08:00:00",
-    "end": "2025-06-06T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/wave-invasion-presents-patriarcy-usa-llora-usa/",
-    "title": "Wave invasion presents patriarchy (usa) ",
-    "location": "dbs",
-    "price": 15,
-    "shortText": " coatie pop (usa) Riemen vast voor een avond opwindende en confronterende gothic synth pop, EBM, wave met zelfs een snuif metal. Enter PATRIARCHY & Coatie Pop!",
-    "longText": "../public/texts/dbs/c2VudHMtcGF0cmlhcmN5LXVzYS1sbG9yYS11c2Ev.html",
-    "image": "../public/event-images/dbs/c2VudHMtcGF0cmlhcmN5LXVzYS1sbG9yYS11c2Ev",
-    "unavailable": false,
     "eventGenres": null,
     "artists": {}
   },
@@ -2541,9 +2298,10 @@
     "venueEventUrl": "https://www.dbstudio.nl/event/holy-scum-uk/",
     "title": "Holy scum (uk) + xeeland",
     "location": "dbs",
-    "price": "0",
-    "shortText": "",
+    "price": 10,
+    "shortText": "Niet voor tere zielen, Holy Scum, een soort van underground supergroep samengesteld uit Peter J Taylor (voorheen uit Action Beat), Chris Haslam (GNOD) en John Perry van Suck. Aangevuld met Dälek’s Mike Mare (aka Mike Manteca).",
     "longText": "../public/texts/dbs/YnN0dWRpby5ubC9ldmVudC9ob2x5LXNjdW0tdWsv.html",
+    "image": "../public/event-images/dbs/YnN0dWRpby5ubC9ldmVudC9ob2x5LXNjdW0tdWsv",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
@@ -2556,6 +2314,34 @@
           "krautrock",
           "electronic rock",
           "sludge metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-06-10T19:00:00",
+    "start": "2025-06-10T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/108035/whitechapel",
+    "title": "Whitechapel",
+    "location": "013",
+    "price": 27.3,
+    "shortText": "",
+    "longText": "../public/texts/013/bC9wcm9ncmFtbWEvMTA4MDM1L3doaXRlY2hhcGVs.html",
+    "image": "../public/event-images/013/bC9wcm9ncmFtbWEvMTA4MDM1L3doaXRlY2hhcGVs",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "whitechapel": {
+        "s": "5274obTQJjzjyycRyJlfml",
+        "l": "whitechapel",
+        "g": [
+          "deathcore",
+          "melodic metalcore",
+          "metalcore",
+          "nu metal",
+          "tennessee metal",
+          "deathcore"
         ]
       }
     }
@@ -2706,17 +2492,21 @@
     }
   },
   {
-    "start": "2025-06-12T20:00:00",
+    "start": "2025-06-12T16:30:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/milk-made-sapy-12-06-2025/",
     "title": "Milk made: sapy",
     "location": "melkweg",
     "price": 9.5,
-    "shortText": "punk · alternatieve hiphop · genre-bending",
+    "shortText": "",
     "longText": "../public/texts/melkweg/bmRhL21pbGstbWFkZS1zYXB5LTEyLTA2LTIwMjUv.html",
     "image": "../public/event-images/melkweg/bmRhL21pbGstbWFkZS1zYXB5LTEyLTA2LTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Punk",
+      "Alternatieve Hiphop",
+      "Genre-bending"
+    ],
     "artists": {}
   },
   {
@@ -3204,17 +2994,20 @@
     }
   },
   {
-    "start": "2025-06-17T20:00:00",
+    "start": "2025-06-17T17:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/me-first-and-the-gimme-gimmes-17-06-2025/",
     "title": "Me First And The Gimme Gimmes",
     "location": "melkweg",
     "price": 40.25,
-    "shortText": "punkrock · covers",
+    "shortText": "",
     "longText": "../public/texts/melkweg/ZC10aGUtZ2ltbWUtZ2ltbWVzLTE3LTA2LTIwMjUv.html",
     "image": "../public/event-images/melkweg/ZC10aGUtZ2ltbWUtZ2ltbWVzLTE3LTA2LTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Punkrock",
+      "Covers"
+    ],
     "artists": {
       "me first and the gimme gimmes": {
         "s": "0covrc8eowdwxrs3jtrrn5",
@@ -3383,17 +3176,20 @@
     "location": "dessel"
   },
   {
-    "start": "2025-06-19T20:00:00",
+    "start": "2025-06-19T17:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/jerry-cantrell-19-06-2025/",
     "title": "Jerry Cantrell",
     "location": "melkweg",
     "price": 34.5,
-    "shortText": "grunge · alternative rock 'I Want Blood' - tour",
+    "shortText": "'i want blood' - tour",
     "longText": "../public/texts/melkweg/bmRhL2plcnJ5LWNhbnRyZWxsLTE5LTA2LTIwMjUv.html",
     "image": "../public/event-images/melkweg/bmRhL2plcnJ5LWNhbnRyZWxsLTE5LTA2LTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Grunge",
+      "Alternative rock"
+    ],
     "artists": {
       "jerry cantrell": {
         "s": "5HUFo8AH9ZILmlyKFfEMNP",
@@ -3531,6 +3327,42 @@
     }
   },
   {
+    "start": "2025-06-21T17:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/molotov-21-06-2025/",
+    "title": "Molotov",
+    "location": "melkweg",
+    "price": 57.5,
+    "shortText": "",
+    "longText": "../public/texts/melkweg/L25sL2FnZW5kYS9tb2xvdG92LTIxLTA2LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/L25sL2FnZW5kYS9tb2xvdG92LTIxLTA2LTIwMjUv",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": [
+      "Rock",
+      "Rap",
+      "Latin"
+    ],
+    "artists": {
+      "molotov": {
+        "s": "27Owkm4TGlMqb0BqaEt3PW",
+        "l": "molotov",
+        "g": [
+          "rock en español",
+          "mexican rock",
+          "latin rock",
+          "ska",
+          "latin alternative",
+          "mexican hip hop",
+          "latin hip hop",
+          "deathcore",
+          "Rock",
+          "Rap",
+          "Latin"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-06-21T21:00:00",
     "venueEventUrl": "https://www.littledevil.nl/calendar/sacri-monti-usa/",
     "title": "Sacri monti (usa)",
@@ -3560,19 +3392,6 @@
         ]
       }
     }
-  },
-  {
-    "start": "2025-06-21T20:00:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/kids-n-billies-2025/",
-    "title": "Kids ‘n’ billies 2025",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "",
-    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L2tpZHMtbi1iaWxsaWVzLTIwMjUv.html",
-    "image": null,
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {}
   },
   {
     "door": "2025-06-22T19:30:00",
@@ -3725,17 +3544,20 @@
     }
   },
   {
-    "start": "2025-06-24T20:00:00",
+    "start": "2025-06-24T17:30:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/alien-ant-farm-24-06-2025/",
     "title": "Alien Ant Farm",
     "location": "melkweg",
     "price": 34.5,
-    "shortText": "nu metal · alternative rock",
+    "shortText": "",
     "longText": "../public/texts/melkweg/bmRhL2FsaWVuLWFudC1mYXJtLTI0LTA2LTIwMjUv.html",
     "image": "../public/event-images/melkweg/bmRhL2FsaWVuLWFudC1mYXJtLTI0LTA2LTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Nu metal",
+      "Alternative rock"
+    ],
     "artists": {
       "alien ant farm": {
         "s": "6TZdvF1kFzwnQLgHQynzsO",
@@ -3957,29 +3779,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {}
-  },
-  {
-    "start": "2025-06-27T23:00:00",
-    "end": "2025-06-27T06:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/factionsummerwarmup/",
-    "title": "Faction: summer warm up",
-    "location": "dynamo",
-    "price": 14.55,
-    "shortText": "[DRUM AND BASS]",
-    "longText": "../public/texts/dynamo/ZXZlbmVtZW50L2ZhY3Rpb25zdW1tZXJ3YXJtdXAv.html",
-    "image": "../public/event-images/dynamo/ZXZlbmVtZW50L2ZhY3Rpb25zdW1tZXJ3YXJtdXAv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "bass": {
-        "s": null,
-        "l": "bass",
-        "g": [
-          "doom",
-          "death metal"
-        ]
-      }
-    }
   },
   {
     "start": "2025-06-27T08:00:00",
@@ -5577,29 +5376,6 @@
     }
   },
   {
-    "start": "2025-07-18T08:00:00",
-    "end": "2025-07-18T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/boppin-the-rock-big-bluegrass-special-feat-john-miller-uk-the-original-five-swe/",
-    "title": "Boppin’ the rock big bluegrass special feat. john miller (uk) & the original five (swe)",
-    "location": "dbs",
-    "price": 13,
-    "shortText": " Deze vrijdag aan de vooravond van ons groot tweedaags dB’s Open Festival pakken we nog even een heerlijk avondje bluegrass mee met onze favoriete Schotse cowboy JOHN MILLER die voor deze tour op pad gaat met de Zweedse cowboys van The Original Five, een van de meest vooraanstaande traditionele bluegrass gezelschappen in de huidige rootsmuziek. Na een optreden van The Original Five, zal de held van deze avond, John Miller, aansluiten met zijn eigen authentieke stemgeluid.\nHet wordt een avond die niet te missen is voor liefhebbers van traditionele country en bluegrass, muzikaal vakmanschap en sowieso een feestje.",
-    "longText": "../public/texts/dbs/bGxlci11ay10aGUtb3JpZ2luYWwtZml2ZS1zd2Uv.html",
-    "image": "../public/event-images/dbs/bGxlci11ay10aGUtb3JpZ2luYWwtZml2ZS1zd2Uv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "rock": {
-        "s": null,
-        "l": "rock",
-        "g": [
-          "heavy metal",
-          "hard rock"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-07-19T18:00:00Z",
     "start": "2025-07-19T20:30:00Z",
     "venueEventUrl": "https://p60.nl/2025/arkona",
@@ -5829,17 +5605,21 @@
     }
   },
   {
-    "start": "2025-07-28T20:00:00",
+    "start": "2025-07-28T17:30:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/wine-lips-28-07-2025/",
     "title": "Wine Lips",
     "location": "melkweg",
     "price": 23,
-    "shortText": "punk · garagerock · fuzz",
+    "shortText": "",
     "longText": "../public/texts/melkweg/bC9hZ2VuZGEvd2luZS1saXBzLTI4LTA3LTIwMjUv.html",
     "image": "../public/event-images/melkweg/bC9hZ2VuZGEvd2luZS1saXBzLTI4LTA3LTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Punk",
+      "Garagerock",
+      "Fuzz"
+    ],
     "artists": {
       "wine lips": {
         "s": "4fPl9Aa0FMkATDiA7AnBNM",
@@ -6043,17 +5823,21 @@
     "artists": {}
   },
   {
-    "start": "2025-08-03T20:00:00",
+    "start": "2025-08-03T17:30:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/august-burns-red-03-08-2025/",
     "title": "August Burns Red",
     "location": "melkweg",
     "price": 34.5,
-    "shortText": "metalcore · progressive · melodic European Tour Twenty Twenty-Five",
+    "shortText": "european tour twenty twenty-five",
     "longText": "../public/texts/melkweg/YS9hdWd1c3QtYnVybnMtcmVkLTAzLTA4LTIwMjUv.html",
     "image": "../public/event-images/melkweg/YS9hdWd1c3QtYnVybnMtcmVkLTAzLTA4LTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Metalcore",
+      "Progressive",
+      "Melodic"
+    ],
     "artists": {
       "august burns red": {
         "s": "5p9CTsn5ueGU4oScNX1axu",
@@ -7151,7 +6935,7 @@
     "venueEventUrl": "https://bibelot.net/programma/crocodiles-us/",
     "title": "Crocodiles (US)  + Yummy",
     "location": "bibelot",
-    "price": 0,
+    "price": 24,
     "longText": "../public/texts/bibelot/dC5uZXQvcHJvZ3JhbW1hL2Nyb2NvZGlsZXMtdXMv.html",
     "image": "../public/event-images/bibelot/dC5uZXQvcHJvZ3JhbW1hL2Nyb2NvZGlsZXMtdXMv",
     "soldOut": false,
@@ -7458,17 +7242,20 @@
     }
   },
   {
-    "start": "2025-09-05T08:00:00",
-    "end": "2025-09-05T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/the-courettes/",
-    "title": "The fabulous courettes",
-    "location": "dbs",
-    "price": 12.5,
-    "shortText": "Het opwindendste garage/soul/rock duo van nu komt naar de nieuwe dB’s. The Courettes leerden we kennen tijdens Covid toen zij als een van de weinige bands maar door bleven rocken, overal waar men ze maar wilde hebben. Nu, anno 2025, zijn Flavia en Martin tig singles en 4 langspelers verder op fraaie labels als Sounds of Subterrania en vooral Damaged Goods, en dat mag een wonder heten want dit echtpaar speelt al jaren ruim 200 optredens per jaar overal ter wereld. Nu weer terug bij dB’s, op VLP 63 dit keer.",
-    "longText": "../public/texts/dbs/c3R1ZGlvLm5sL2V2ZW50L3RoZS1jb3VyZXR0ZXMv.html",
-    "image": "../public/event-images/dbs/c3R1ZGlvLm5sL2V2ZW50L3RoZS1jb3VyZXR0ZXMv",
+    "start": "2025-09-05T17:30:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/voila-05-09-2025/",
+    "title": "Voilà",
+    "location": "melkweg",
+    "price": 18.4,
+    "shortText": "",
+    "longText": "../public/texts/melkweg/bmwvbmwvYWdlbmRhL3ZvaWxhLTA1LTA5LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bmwvbmwvYWdlbmRhL3ZvaWxhLTA1LTA5LTIwMjUv",
+    "soldOut": true,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Poprock",
+      "Magisch"
+    ],
     "artists": {}
   },
   {
@@ -7499,6 +7286,34 @@
         "l": "thammuz",
         "g": [
           "dutch stoner rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-09-08T17:30:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-lemonheads-08-09-2025/",
+    "title": "The Lemonheads",
+    "location": "melkweg",
+    "price": 31.05,
+    "shortText": "",
+    "longText": "../public/texts/melkweg/bmRhL3RoZS1sZW1vbmhlYWRzLTA4LTA5LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bmRhL3RoZS1sZW1vbmhlYWRzLTA4LTA5LTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": [
+      "Alternative rock",
+      "Indierock",
+      "90's"
+    ],
+    "artists": {
+      "heads": {
+        "s": null,
+        "l": "heads",
+        "g": [
+          "death",
+          "thrash",
+          "black metal"
         ]
       }
     }
@@ -7970,15 +7785,15 @@
     }
   },
   {
-    "door": "2025-09-13T12:30:00",
-    "start": "2025-09-13T12:30:00",
-    "venueEventUrl": "https://www.013.nl/programma/94540/ayreon",
+    "door": "2025-09-13T19:00:00",
+    "start": "2025-09-13T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/94529/ayreon",
     "title": "Ayreon",
     "location": "013",
     "price": 75,
-    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #2 (MATINEE)",
-    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDAvYXlyZW9u.html",
-    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDAvYXlyZW9u",
+    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #3",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1MjkvYXlyZW9u.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1MjkvYXlyZW9u",
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
@@ -7999,15 +7814,15 @@
     }
   },
   {
-    "door": "2025-09-13T19:00:00",
-    "start": "2025-09-13T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/94529/ayreon",
+    "door": "2025-09-13T12:30:00",
+    "start": "2025-09-13T12:30:00",
+    "venueEventUrl": "https://www.013.nl/programma/94540/ayreon",
     "title": "Ayreon",
     "location": "013",
     "price": 75,
-    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #3",
-    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1MjkvYXlyZW9u.html",
-    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1MjkvYXlyZW9u",
+    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #2 (MATINEE)",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDAvYXlyZW9u.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDAvYXlyZW9u",
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
@@ -8053,15 +7868,15 @@
     }
   },
   {
-    "door": "2025-09-14T19:00:00",
-    "start": "2025-09-14T19:00:00",
-    "venueEventUrl": "https://www.013.nl/programma/94548/ayreon",
+    "door": "2025-09-14T12:30:00",
+    "start": "2025-09-14T12:30:00",
+    "venueEventUrl": "https://www.013.nl/programma/94545/ayreon",
     "title": "Ayreon",
     "location": "013",
     "price": 75,
-    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #5",
-    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDgvYXlyZW9u.html",
-    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDgvYXlyZW9u",
+    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #4 (MATINEE)",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDUvYXlyZW9u.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDUvYXlyZW9u",
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
@@ -8082,15 +7897,15 @@
     }
   },
   {
-    "door": "2025-09-14T12:30:00",
-    "start": "2025-09-14T12:30:00",
-    "venueEventUrl": "https://www.013.nl/programma/94545/ayreon",
+    "door": "2025-09-14T19:00:00",
+    "start": "2025-09-14T19:00:00",
+    "venueEventUrl": "https://www.013.nl/programma/94548/ayreon",
     "title": "Ayreon",
     "location": "013",
     "price": 75,
-    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #4 (MATINEE)",
-    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDUvYXlyZW9u.html",
-    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDUvYXlyZW9u",
+    "shortText": "30TH ANNIVERSARY - AN AMAZING FLIGHT THROUGH TIME - SHOW #5",
+    "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDgvYXlyZW9u.html",
+    "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvOTQ1NDgvYXlyZW9u",
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
@@ -8433,17 +8248,21 @@
     }
   },
   {
-    "start": "2025-09-23T20:00:00",
+    "start": "2025-09-23T17:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/poison-the-well-23-09-2025/",
     "title": "Poison The Well",
     "location": "melkweg",
     "price": 26.45,
-    "shortText": "metalcore · hardcore · screamo ‘The Opposite Of December…’ 25th-Anniversary Tour",
+    "shortText": "‘the opposite of december…’ 25th-anniversary tour",
     "longText": "../public/texts/melkweg/ZGEvcG9pc29uLXRoZS13ZWxsLTIzLTA5LTIwMjUv.html",
     "image": "../public/event-images/melkweg/ZGEvcG9pc29uLXRoZS13ZWxsLTIzLTA5LTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Metalcore",
+      "Hardcore",
+      "Screamo"
+    ],
     "artists": {
       "poison the well": {
         "s": "71t8oi0TjZ9Op6JRrVqaBx",
@@ -8699,7 +8518,7 @@
     "venueEventUrl": "https://bibelot.net/programma/conflict-uk-dammit-be/",
     "title": "Conflict (uk) + dammit (be)",
     "location": "bibelot",
-    "price": 0,
+    "price": 26,
     "longText": "../public/texts/bibelot/b2dyYW1tYS9jb25mbGljdC11ay1kYW1taXQtYmUv.html",
     "image": "../public/event-images/bibelot/b2dyYW1tYS9jb25mbGljdC11ay1kYW1taXQtYmUv",
     "soldOut": false,
@@ -8901,32 +8720,6 @@
     }
   },
   {
-    "start": "2025-09-28T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/basement-28-09-2025/",
-    "title": "Basement",
-    "location": "melkweg",
-    "price": 29.9,
-    "shortText": "emo · posthardcore · alternative rock",
-    "longText": "../public/texts/melkweg/bmwvYWdlbmRhL2Jhc2VtZW50LTI4LTA5LTIwMjUv.html",
-    "image": "../public/event-images/melkweg/bmwvYWdlbmRhL2Jhc2VtZW50LTI4LTA5LTIwMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "basement": {
-        "s": "4DUQBYAyOTZotSEdKhaf6c",
-        "l": "basement",
-        "g": [
-          "midwest emo",
-          "shoegaze",
-          "pop punk",
-          "death",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
     "start": "2025-09-28T22:00:00",
     "end": "2025-09-28T03:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/night-verses-28-09-2025/",
@@ -8971,6 +8764,34 @@
           "thrash metal",
           "crossover",
           "hardcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-09-29T17:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-buttertones-x-la-witch-29-09-2025/",
+    "title": "The Buttertones x L.A. Witch",
+    "location": "melkweg",
+    "price": 20.15,
+    "shortText": "",
+    "longText": "../public/texts/melkweg/ZXJ0b25lcy14LWxhLXdpdGNoLTI5LTA5LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/ZXJ0b25lcy14LWxhLXdpdGNoLTI5LTA5LTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": [
+      "Cinematisch",
+      "Postpunk",
+      "Psychedelisch"
+    ],
+    "artists": {
+      "the buttertones x l.a. witch": {
+        "s": null,
+        "l": "the%20buttertones%20x%20l.a.%20witch",
+        "g": [
+          "Cinematisch",
+          "Postpunk",
+          "Psychedelisch"
         ]
       }
     }
@@ -9591,6 +9412,34 @@
     }
   },
   {
+    "start": "2025-10-06T17:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/peter-hook-the-light-06-10-2025/",
+    "title": "Peter Hook & The Light",
+    "location": "melkweg",
+    "price": 40.35,
+    "shortText": "",
+    "longText": "../public/texts/melkweg/dGVyLWhvb2stdGhlLWxpZ2h0LTA2LTEwLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/dGVyLWhvb2stdGhlLWxpZ2h0LTA2LTEwLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": [
+      "Postpunk",
+      "New Wave",
+      "Indie"
+    ],
+    "artists": {
+      "peter hook & the light": {
+        "s": null,
+        "l": "peter%20hook%20&%20the%20light",
+        "g": [
+          "Postpunk",
+          "New Wave",
+          "Indie"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-10-07T20:00:00",
     "venueEventUrl": "https://metropool.nl/agenda/yt",
     "title": "Y&t",
@@ -9613,17 +9462,21 @@
     }
   },
   {
-    "start": "2025-10-08T20:00:00",
+    "start": "2025-10-08T17:30:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/atreyu-08-10-2025/",
     "title": "Atreyu",
     "location": "melkweg",
     "price": 25.3,
-    "shortText": "metalcore · hardcore · screamo",
+    "shortText": "",
     "longText": "../public/texts/melkweg/bC9ubC9hZ2VuZGEvYXRyZXl1LTA4LTEwLTIwMjUv.html",
     "image": "../public/event-images/melkweg/bC9ubC9hZ2VuZGEvYXRyZXl1LTA4LTEwLTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Metalcore",
+      "Hardcore",
+      "Screamo"
+    ],
     "artists": {
       "atreyu": {
         "s": "3lksihbjqohckcqbfezotv",
@@ -9746,17 +9599,21 @@
     "location": "schouwburg"
   },
   {
-    "start": "2025-10-10T20:00:00",
+    "start": "2025-10-10T17:30:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-inspector-cluzo-10-10-2025/",
     "title": "The Inspector Cluzo",
     "location": "melkweg",
     "price": 20.15,
-    "shortText": "rock · blues · funk LESS IS MORE TOUR",
+    "shortText": "less is more tour",
     "longText": "../public/texts/melkweg/aGUtaW5zcGVjdG9yLWNsdXpvLTEwLTEwLTIwMjUv.html",
     "image": "../public/event-images/melkweg/aGUtaW5zcGVjdG9yLWNsdXpvLTEwLTEwLTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Rock",
+      "Blues",
+      "Funk"
+    ],
     "artists": {}
   },
   {
@@ -9976,29 +9833,6 @@
         "g": [
           "groove",
           "progressive metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-10-17T08:00:00",
-    "end": "2025-10-17T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/boppin-the-rock-presents-t-99-bacon-fat-louis/",
-    "title": "Boppin’ the Rock presents T-99 ",
-    "location": "dbs",
-    "price": 15,
-    "shortText": " Bacon Fat Louis In de Nederlandse roots rock scene kan er maar een de grootste zijn en dat is T-99!\nT-99 is 26 YEARS OF ROOTS ‘N’ ROLL maar ook BLUES, COUNTRY, ROCKABILLY, SURF en verkoop je SOUL maar aan de duivel-muziek. Echte liedjes voor echte mensen vakkundig gebracht door maestro’s Mischa den Haring, Martin de Ruiter en Donné la Fontaine, drie wilde rock-‘n-roll-vrijbuiters met groots grommende gitaren, roffelbeukende drums, pets-kets contrabas en dubbelloops vocalen.\nToonaangevend muziektijdschrift OOR schreef ooit : “T-99 is de meest opwindende en vernieuwende rootsband van Nederland en ver daarbuiten” -en dat citaat hoeft nog steeds niet te worden bijgesteld.  Ga ze live zien. Want op het podium begint T-99 pas echt te glimmen. Daar rocken ze, daar ratelen ze, daar rollen ze, daar schudden en swingen ze. Daar komen die drie bastaardzonen van de blues tot leven alsof de duivel ze op de hielen zit. En zetten ze elke zaal, elke club, elk café, elk gat en elke stad in vuur en vlam zoals Jerry Lee ooit zijn piano. En als je ze live hebt gezien, weet je het voor altijd. Je zult bekeerd worden, een fan voor het leven.",
-    "longText": "../public/texts/dbs/cHJlc2VudHMtdC05OS1iYWNvbi1mYXQtbG91aXMv.html",
-    "image": "../public/event-images/dbs/cHJlc2VudHMtdC05OS1iYWNvbi1mYXQtbG91aXMv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "rock": {
-        "s": null,
-        "l": "rock",
-        "g": [
-          "heavy metal",
-          "hard rock"
         ]
       }
     }
@@ -10825,6 +10659,54 @@
     }
   },
   {
+    "door": "2025-10-25T19:30:00",
+    "start": "2025-10-25T20:30:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/alcest/",
+    "title": "Alcest",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "+ BRUIT ≤post rock, metal, black metal",
+    "longText": "../public/texts/doornroosje/dy5kb29ybnJvb3NqZS5ubC9ldmVudC9hbGNlc3Qv.html",
+    "image": null,
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "alcest": {
+        "s": null,
+        "l": "alcest",
+        "g": [
+          "metal",
+          "black-metal",
+          "blackgaze",
+          "post-metal"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      },
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-10-25T19:00:00",
     "start": "2025-10-25T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/108402/a-tribute-to-jethro-tull",
@@ -11144,17 +11026,21 @@
     }
   },
   {
-    "start": "2025-11-01T20:00:00",
+    "start": "2025-11-01T17:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/no-barrier-01-11-2025/",
     "title": "No Barrier",
     "location": "melkweg",
     "price": 15.5,
-    "shortText": "metalcore · poppunk · emo Punk, rock & metalcore party met DJ's en liveband",
+    "shortText": "punk, rock & metalcore party met dj's en liveband",
     "longText": "../public/texts/melkweg/L2FnZW5kYS9uby1iYXJyaWVyLTAxLTExLTIwMjUv.html",
     "image": "../public/event-images/melkweg/L2FnZW5kYS9uby1iYXJyaWVyLTAxLTExLTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Metalcore",
+      "Poppunk",
+      "Emo"
+    ],
     "artists": {
       "no barrier": {
         "s": "2am0proxk0wcivgl5rza3a",
@@ -11261,17 +11147,20 @@
     "artists": {}
   },
   {
-    "start": "2025-11-03T20:00:00",
+    "start": "2025-11-03T18:30:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/citizen-soldier-03-11-2025/",
     "title": "Citizen Soldier",
     "location": "melkweg",
     "price": 25.3,
-    "shortText": "alternative rock · post-grunge",
+    "shortText": "",
     "longText": "../public/texts/melkweg/ZGEvY2l0aXplbi1zb2xkaWVyLTAzLTExLTIwMjUv.html",
     "image": "../public/event-images/melkweg/ZGEvY2l0aXplbi1zb2xkaWVyLTAzLTExLTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Alternative rock",
+      "Post-grunge"
+    ],
     "artists": {}
   },
   {
@@ -11669,17 +11558,21 @@
     }
   },
   {
-    "start": "2025-11-11T20:00:00",
+    "start": "2025-11-11T18:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/hanabie-11-11-2025/",
     "title": "Hanabie.",
     "location": "melkweg",
     "price": 34.5,
-    "shortText": "harajuku-core · metalcore · japan",
+    "shortText": "",
     "longText": "../public/texts/melkweg/L25sL2FnZW5kYS9oYW5hYmllLTExLTExLTIwMjUv.html",
     "image": "../public/event-images/melkweg/L25sL2FnZW5kYS9oYW5hYmllLTExLTExLTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Harajuku-core",
+      "Metalcore",
+      "Japan"
+    ],
     "artists": {}
   },
   {
@@ -11709,17 +11602,21 @@
     }
   },
   {
-    "start": "2025-11-12T20:00:00",
+    "start": "2025-11-12T18:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/mono-jp-12-11-2025/",
     "title": "Mono (jp)",
     "location": "melkweg",
     "price": 32.2,
-    "shortText": "postrock · ambient · instrumentaal",
+    "shortText": "",
     "longText": "../public/texts/melkweg/L25sL2FnZW5kYS9tb25vLWpwLTEyLTExLTIwMjUv.html",
     "image": "../public/event-images/melkweg/L25sL2FnZW5kYS9tb25vLWpwLTEyLTExLTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Postrock",
+      "Ambient",
+      "Instrumentaal"
+    ],
     "artists": {
       "mono": {
         "s": "53LVoipNTQ4lvUSJ61XKU3",
@@ -12028,6 +11925,34 @@
     "location": "anciennebelgique"
   },
   {
+    "start": "2025-11-18T18:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/ekkstacy-18-11-2025/",
+    "title": "Ekkstacy",
+    "location": "melkweg",
+    "price": 28.75,
+    "shortText": "",
+    "longText": "../public/texts/melkweg/bmwvYWdlbmRhL2Vra3N0YWN5LTE4LTExLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bmwvYWdlbmRhL2Vra3N0YWN5LTE4LTExLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": [
+      "Emo",
+      "Postpunk",
+      "Indierock"
+    ],
+    "artists": {
+      "ekkstacy": {
+        "s": "0ynzbXwyCzxicMKHBoOkSH",
+        "l": "ekkstacy",
+        "g": [
+          "Emo",
+          "Postpunk",
+          "Indierock"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-11-18T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/halestorm",
     "title": "Halestorm",
@@ -12107,17 +12032,21 @@
     }
   },
   {
-    "start": "2025-11-20T20:00:00",
+    "start": "2025-11-20T19:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/panic-shack-20-11-2025/",
     "title": "Panic Shack",
     "location": "melkweg",
     "price": 17.25,
-    "shortText": "punk · rauw · riot grrrl",
+    "shortText": "",
     "longText": "../public/texts/melkweg/YWdlbmRhL3BhbmljLXNoYWNrLTIwLTExLTIwMjUv.html",
     "image": "../public/event-images/melkweg/YWdlbmRhL3BhbmljLXNoYWNrLTIwLTExLTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Punk",
+      "Rauw",
+      "riot grrrl"
+    ],
     "artists": {}
   },
   {
@@ -12452,6 +12381,34 @@
     }
   },
   {
+    "start": "2025-11-25T18:30:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-subways-25-11-2025/",
+    "title": "The Subways",
+    "location": "melkweg",
+    "price": 25.3,
+    "shortText": "20yr \"young for eternity\"",
+    "longText": "../public/texts/melkweg/YWdlbmRhL3RoZS1zdWJ3YXlzLTI1LTExLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/YWdlbmRhL3RoZS1zdWJ3YXlzLTI1LTExLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": [
+      "Indierock",
+      "Poppunk",
+      "Post-grunge"
+    ],
+    "artists": {
+      "the subways": {
+        "s": "4BntNFyiN3VGG4hhRRZt9d",
+        "l": "the%20subways",
+        "g": [
+          "Indierock",
+          "Poppunk",
+          "Post-grunge"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-11-25T19:00:00",
     "venueEventUrl": "https://kavka.be/event/gutalax-spasm-guineapig/",
     "title": "Gutalax + Spasm + Guineapig",
@@ -12568,17 +12525,20 @@
     }
   },
   {
-    "start": "2025-11-28T20:00:00",
+    "start": "2025-11-28T18:30:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/danko-jones-28-11-2025/",
     "title": "Danko Jones",
     "location": "melkweg",
     "price": 31.05,
-    "shortText": "hardrock · rock-‘n-roll IS WHAT YOU NEED TOUR 2025",
+    "shortText": "is what you need tour 2025",
     "longText": "../public/texts/melkweg/YWdlbmRhL2RhbmtvLWpvbmVzLTI4LTExLTIwMjUv.html",
     "image": "../public/event-images/melkweg/YWdlbmRhL2RhbmtvLWpvbmVzLTI4LTExLTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Hardrock",
+      "Rock-‘n-roll"
+    ],
     "artists": {
       "danko jones": {
         "s": "7cgovigsnxymgobkxk8dtw",
@@ -12770,17 +12730,21 @@
     }
   },
   {
-    "start": "2025-11-30T20:00:00",
+    "start": "2025-11-30T18:30:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/coldrain-30-11-2025/",
     "title": "coldrain",
     "location": "melkweg",
     "price": 25.9,
-    "shortText": "posthardcore · melodic · metalcore",
+    "shortText": "",
     "longText": "../public/texts/melkweg/bmwvYWdlbmRhL2NvbGRyYWluLTMwLTExLTIwMjUv.html",
     "image": "../public/event-images/melkweg/bmwvYWdlbmRhL2NvbGRyYWluLTMwLTExLTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Posthardcore",
+      "Melodic",
+      "Metalcore"
+    ],
     "artists": {
       "coldrain": {
         "s": "4pCVGaLWxDe4d8bsjsnmUM",
@@ -12788,7 +12752,10 @@
         "g": [
           "j-rock",
           "metalcore",
-          "anime"
+          "anime",
+          "Posthardcore",
+          "Melodic",
+          "Metalcore"
         ]
       }
     }
@@ -12825,6 +12792,23 @@
     "shortText": "Ziggo Dome, Amsterdam",
     "image": "../public/location-images/ziggodome",
     "location": "ziggodome"
+  },
+  {
+    "start": "2025-12-02T18:30:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/nothingnowhere-02-12-2025/",
+    "title": "nothing,nowhere.",
+    "location": "melkweg",
+    "price": 27.6,
+    "shortText": "",
+    "longText": "../public/texts/melkweg/bmRhL25vdGhpbmdub3doZXJlLTAyLTEyLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bmRhL25vdGhpbmdub3doZXJlLTAyLTEyLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": [
+      "Emo",
+      "Genre-bending"
+    ],
+    "artists": {}
   },
   {
     "start": "2025-12-02T19:00:00",
@@ -13158,17 +13142,21 @@
     "artists": {}
   },
   {
-    "start": "2025-12-10T20:00:00",
+    "start": "2025-12-10T18:30:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/ramkot-10-12-2025/",
     "title": "Ramkot",
     "location": "melkweg",
     "price": 23,
-    "shortText": "hardrock · heavy · stonerrock",
+    "shortText": "",
     "longText": "../public/texts/melkweg/bC9ubC9hZ2VuZGEvcmFta290LTEwLTEyLTIwMjUv.html",
     "image": "../public/event-images/melkweg/bC9ubC9hZ2VuZGEvcmFta290LTEwLTEyLTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Hardrock",
+      "Heavy",
+      "Stonerrock"
+    ],
     "artists": {}
   },
   {
@@ -13396,6 +13384,36 @@
     }
   },
   {
+    "start": "2025-12-13T18:30:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/bohemian-betyars-13-12-2025/",
+    "title": "Bohemian Betyars",
+    "location": "melkweg",
+    "price": 23,
+    "shortText": "",
+    "longText": "../public/texts/melkweg/YS9ib2hlbWlhbi1iZXR5YXJzLTEzLTEyLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/YS9ib2hlbWlhbi1iZXR5YXJzLTEzLTEyLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": [
+      "Freakfolk",
+      "Punk",
+      "Folk"
+    ],
+    "artists": {
+      "bohemian betyars": {
+        "s": "2ezypskwbfnftobn9pucow",
+        "l": "bohemian%20betyars",
+        "g": [
+          "gypsy punk",
+          "hungarian folk",
+          "hungarian punk",
+          "hungarian rock",
+          "magyar alternative"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-12-13T15:00:00",
     "start": "2025-12-13T15:30:00",
     "venueEventUrl": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-2025-day-2",
@@ -13464,17 +13482,21 @@
     }
   },
   {
-    "start": "2025-12-14T20:00:00",
+    "start": "2025-12-14T18:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/katatonia-14-12-2025/",
     "title": "Katatonia",
     "location": "melkweg",
     "price": 39.1,
-    "shortText": "melancholisch · doom · progressieve metal UK & Europe Tour 2025",
+    "shortText": "uk & europe tour 2025",
     "longText": "../public/texts/melkweg/bC9hZ2VuZGEva2F0YXRvbmlhLTE0LTEyLTIwMjUv.html",
     "image": "../public/event-images/melkweg/bC9hZ2VuZGEva2F0YXRvbmlhLTE0LTEyLTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Melancholisch",
+      "Doom",
+      "Progressieve metal"
+    ],
     "artists": {
       "katatonia": {
         "s": "2CWWgbxApjbyByxBBCvGTm",
@@ -13647,17 +13669,20 @@
     }
   },
   {
-    "start": "2025-12-21T20:00:00",
+    "start": "2025-12-21T18:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/new-model-army-21-12-2025/",
     "title": "New Model Army",
     "location": "melkweg",
     "price": 31.05,
-    "shortText": "rock · postpunk",
+    "shortText": "",
     "longText": "../public/texts/melkweg/bmRhL25ldy1tb2RlbC1hcm15LTIxLTEyLTIwMjUv.html",
     "image": "../public/event-images/melkweg/bmRhL25ldy1tb2RlbC1hcm15LTIxLTEyLTIwMjUv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Rock",
+      "Postpunk"
+    ],
     "artists": {
       "new model army": {
         "s": "7n1em42fseebd9h2p8ewws",
@@ -13889,17 +13914,20 @@
     }
   },
   {
-    "start": "2026-02-20T20:00:00",
+    "start": "2026-02-20T18:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-blue-stones-20-02-2026/",
     "title": "The Blue Stones",
     "location": "melkweg",
     "price": 25.9,
-    "shortText": "garagerock · alternatief",
+    "shortText": "",
     "longText": "../public/texts/melkweg/ZGEvdGhlLWJsdWUtc3RvbmVzLTIwLTAyLTIwMjYv.html",
     "image": "../public/event-images/melkweg/ZGEvdGhlLWJsdWUtc3RvbmVzLTIwLTAyLTIwMjYv",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "Garagerock",
+      "Alternatief"
+    ],
     "artists": {}
   },
   {
