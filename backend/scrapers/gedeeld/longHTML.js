@@ -94,6 +94,11 @@ export const standaardSelectorConfig = {
   removeAttrsLastStep: ["class", "id"],
   removeHTMLWithStrings: [],
   htmlElementsWithStringsToRemove: ["p", "span", "a"],
+  mediaEls: [
+    `iframe[src*='youtube']`,
+    `iframe[src*='bandcamp']`,
+    `iframe[src*='spotify']`,
+  ],
 };
 
 // eerst de ongewenste HTML uit het hele document.
