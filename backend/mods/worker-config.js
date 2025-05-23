@@ -38,6 +38,11 @@ export const workerConfig = {
   //     workerConcurrent: 1,
   //     forceSet: 2
   // }
+  depul: {
+    workerCount: 1,
+    workerConcurrent: 1,
+    forceSet: 2,
+  },
   // doornroosje: {
   //     workerCount: 1,
   //     workerConcurrent: 1,
@@ -112,7 +117,7 @@ export const workerConfig = {
   // },
   // victorie: { workerCount: 1, workerConcurrent: 2, forceSet: 6 },
   // volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
-  willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
+  //willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
 };
 
 // tivolivredenburg: {

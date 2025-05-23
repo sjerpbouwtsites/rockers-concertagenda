@@ -98,8 +98,6 @@ scraper.mainPage = async function () {
     { workerData }
   );
 
-  this.dirtyLog(rawEvents);
-
   rawEvents = rawEvents
     .map((event) => mapToStartDate(event, "dag-maandNaam", this.months))
     .map(mapToShortDate)

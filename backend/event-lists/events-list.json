@@ -744,6 +744,20 @@
     }
   },
   {
+    "door": "2025-05-24T19:30:00",
+    "start": "2025-05-24T20:00:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/buttmud-dias-the-astronauts/",
+    "title": "Buttmud vs. Dias & The Astronauts (NL)",
+    "location": "depul",
+    "price": 10,
+    "shortText": "Rock like Elvis on Crack meets Punkrock racekak!",
+    "longText": "../public/texts/depul/YS9idXR0bXVkLWRpYXMtdGhlLWFzdHJvbmF1dHMv.html",
+    "image": "../public/event-images/depul/YS9idXR0bXVkLWRpYXMtdGhlLWFzdHJvbmF1dHMv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "start": "2025-05-24T22:00:00",
     "end": "2025-05-24T03:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/no-barrier-24-05-2025/",
@@ -8239,6 +8253,20 @@
     }
   },
   {
+    "door": "2025-09-19T19:30:00",
+    "start": "2025-09-19T20:30:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/lenoise/",
+    "title": "Lenoise (be)",
+    "location": "depul",
+    "price": 22,
+    "shortText": "A tribute to Neil Young & Crazy Horse",
+    "longText": "../public/texts/depul/d3cubGl2ZXB1bC5jb20vYWdlbmRhL2xlbm9pc2Uv.html",
+    "image": "../public/event-images/depul/d3cubGl2ZXB1bC5jb20vYWdlbmRhL2xlbm9pc2Uv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2025-09-20T19:30:00",
     "start": "2025-09-20T20:00:00",
     "end": "2025-09-20T23:00:00",
@@ -10171,6 +10199,20 @@
         ]
       }
     }
+  },
+  {
+    "door": "2025-10-18T16:00:00",
+    "start": "2025-10-18T16:30:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/wtpf-2025/",
+    "title": "Welcome To Pul Fiction",
+    "location": "depul",
+    "price": 29.5,
+    "shortText": "A heavy rock 'n roll indoor festival!",
+    "longText": "../public/texts/depul/LmxpdmVwdWwuY29tL2FnZW5kYS93dHBmLTIwMjUv.html",
+    "image": "../public/event-images/depul/LmxpdmVwdWwuY29tL2FnZW5kYS93dHBmLTIwMjUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "door": "2025-10-18T20:00:00",
@@ -12581,6 +12623,20 @@
     }
   },
   {
+    "door": "2025-11-28T20:30:00",
+    "start": "2025-11-28T21:00:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/call-it-off/",
+    "title": "Call it off (nl)",
+    "location": "depul",
+    "price": 12,
+    "shortText": "Eras Tour goes poppunk!",
+    "longText": "../public/texts/depul/aXZlcHVsLmNvbS9hZ2VuZGEvY2FsbC1pdC1vZmYv.html",
+    "image": "../public/event-images/depul/aXZlcHVsLmNvbS9hZ2VuZGEvY2FsbC1pdC1vZmYv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "start": "2025-11-29T08:00:00",
     "end": "2025-11-29T11:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/temple-fang-support-2/",
@@ -13640,6 +13696,28 @@
         "s": "7n1em42fseebd9h2p8ewws",
         "l": "new%20model%20army",
         "g": []
+      }
+    }
+  },
+  {
+    "door": "2026-01-16T19:30:00",
+    "start": "2026-01-16T20:30:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/ronnie-james-dio-memorial-concert/",
+    "title": "Ronnie James Dio - The Memorial Concert",
+    "location": "depul",
+    "price": 26,
+    "shortText": "Door de absolute top van de hardrock en metal",
+    "longText": "../public/texts/depul/aWUtamFtZXMtZGlvLW1lbW9yaWFsLWNvbmNlcnQv.html",
+    "image": "../public/event-images/depul/aWUtamFtZXMtZGlvLW1lbW9yaWFsLWNvbmNlcnQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "ronnie james dio": {
+        "s": "4M3c7tg4BzLQ5pIOupZL65",
+        "l": "ronnie%20james%20dio",
+        "g": [
+          "hard rock"
+        ]
       }
     }
   },
