@@ -1,19 +1,5 @@
 [
   {
-    "start": "2025-05-21T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-brian-jonestown-massacre-21-05-2025/",
-    "title": "The Brian Jonestown Massacre",
-    "location": "melkweg",
-    "price": 33.35,
-    "shortText": "psychedelisch · fuzz · rock",
-    "longText": "../public/texts/melkweg/am9uZXN0b3duLW1hc3NhY3JlLTIxLTA1LTIwMjUv.html",
-    "image": "../public/event-images/melkweg/am9uZXN0b3duLW1hc3NhY3JlLTIxLTA1LTIwMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
     "start": "2025-05-24T20:00:00",
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/pretty-pissed-24-05-2025/",
     "title": "Pretty Pissed",
@@ -166,111 +152,149 @@
     }
   },
   {
-    "start": "2025-10-10T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-inspector-cluzo-10-10-2025/",
-    "title": "The Inspector Cluzo",
-    "location": "melkweg",
-    "price": 20.15,
-    "shortText": "rock · blues · funk LESS IS MORE TOUR",
-    "longText": "../public/texts/melkweg/aGUtaW5zcGVjdG9yLWNsdXpvLTEwLTEwLTIwMjUv.html",
-    "image": "../public/event-images/melkweg/aGUtaW5zcGVjdG9yLWNsdXpvLTEwLTEwLTIwMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-11-03T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/citizen-soldier-03-11-2025/",
-    "title": "Citizen Soldier",
+    "start": "2025-10-08T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/atreyu-08-10-2025/",
+    "title": "Atreyu",
     "location": "melkweg",
     "price": 25.3,
-    "shortText": "alternative rock · post-grunge",
-    "longText": "../public/texts/melkweg/ZGEvY2l0aXplbi1zb2xkaWVyLTAzLTExLTIwMjUv.html",
-    "image": "../public/event-images/melkweg/ZGEvY2l0aXplbi1zb2xkaWVyLTAzLTExLTIwMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-11-12T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/mono-jp-12-11-2025/",
-    "title": "Mono (jp)",
-    "location": "melkweg",
-    "price": 32.2,
-    "shortText": "postrock · ambient · instrumentaal",
-    "longText": "../public/texts/melkweg/L25sL2FnZW5kYS9tb25vLWpwLTEyLTExLTIwMjUv.html",
-    "image": "../public/event-images/melkweg/L25sL2FnZW5kYS9tb25vLWpwLTEyLTExLTIwMjUv",
+    "shortText": "metalcore · hardcore · screamo",
+    "longText": "../public/texts/melkweg/bC9ubC9hZ2VuZGEvYXRyZXl1LTA4LTEwLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bC9ubC9hZ2VuZGEvYXRyZXl1LTA4LTEwLTIwMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "mono": {
-        "s": "53LVoipNTQ4lvUSJ61XKU3",
-        "l": "mono",
+      "atreyu": {
+        "s": "3lksihbjqohckcqbfezotv",
+        "l": "atreyu",
         "g": [
-          "post-rock",
-          "math rock",
-          "sludge metal"
+          "alternative metal",
+          "melodic metalcore",
+          "metalcore",
+          "nu metal",
+          "post-grunge",
+          "screamo"
         ]
       }
     }
   },
   {
-    "start": "2025-11-28T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/danko-jones-28-11-2025/",
-    "title": "Danko Jones",
+    "start": "2025-11-01T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/no-barrier-01-11-2025/",
+    "title": "No Barrier",
     "location": "melkweg",
-    "price": 31.05,
-    "shortText": "hardrock · rock-‘n-roll IS WHAT YOU NEED TOUR 2025",
-    "longText": "../public/texts/melkweg/YWdlbmRhL2RhbmtvLWpvbmVzLTI4LTExLTIwMjUv.html",
-    "image": "../public/event-images/melkweg/YWdlbmRhL2RhbmtvLWpvbmVzLTI4LTExLTIwMjUv",
+    "price": 15.5,
+    "shortText": "metalcore · poppunk · emo Punk, rock & metalcore party met DJ's en liveband",
+    "longText": "../public/texts/melkweg/L2FnZW5kYS9uby1iYXJyaWVyLTAxLTExLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/L2FnZW5kYS9uby1iYXJyaWVyLTAxLTExLTIwMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "danko jones": {
-        "s": "7cgovigsnxymgobkxk8dtw",
-        "l": "danko%20jones",
-        "g": [
-          "punk 'n' roll"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-12-10T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/ramkot-10-12-2025/",
-    "title": "Ramkot",
-    "location": "melkweg",
-    "price": 23,
-    "shortText": "hardrock · heavy · stonerrock",
-    "longText": "../public/texts/melkweg/bC9ubC9hZ2VuZGEvcmFta290LTEwLTEyLTIwMjUv.html",
-    "image": "../public/event-images/melkweg/bC9ubC9hZ2VuZGEvcmFta290LTEwLTEyLTIwMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-12-21T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/new-model-army-21-12-2025/",
-    "title": "New Model Army",
-    "location": "melkweg",
-    "price": 31.05,
-    "shortText": "rock · postpunk",
-    "longText": "../public/texts/melkweg/bmRhL25ldy1tb2RlbC1hcm15LTIxLTEyLTIwMjUv.html",
-    "image": "../public/event-images/melkweg/bmRhL25ldy1tb2RlbC1hcm15LTIxLTEyLTIwMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "new model army": {
-        "s": "7n1em42fseebd9h2p8ewws",
-        "l": "new%20model%20army",
+      "no barrier": {
+        "s": "2am0proxk0wcivgl5rza3a",
+        "l": "no%20barrier",
         "g": []
       }
     }
+  },
+  {
+    "start": "2025-11-11T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/hanabie-11-11-2025/",
+    "title": "Hanabie.",
+    "location": "melkweg",
+    "price": 34.5,
+    "shortText": "harajuku-core · metalcore · japan",
+    "longText": "../public/texts/melkweg/L25sL2FnZW5kYS9oYW5hYmllLTExLTExLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/L25sL2FnZW5kYS9oYW5hYmllLTExLTExLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-11-20T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/panic-shack-20-11-2025/",
+    "title": "Panic Shack",
+    "location": "melkweg",
+    "price": 17.25,
+    "shortText": "punk · rauw · riot grrrl",
+    "longText": "../public/texts/melkweg/YWdlbmRhL3BhbmljLXNoYWNrLTIwLTExLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/YWdlbmRhL3BhbmljLXNoYWNrLTIwLTExLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-11-30T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/coldrain-30-11-2025/",
+    "title": "coldrain",
+    "location": "melkweg",
+    "price": 25.9,
+    "shortText": "posthardcore · melodic · metalcore",
+    "longText": "../public/texts/melkweg/bmwvYWdlbmRhL2NvbGRyYWluLTMwLTExLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bmwvYWdlbmRhL2NvbGRyYWluLTMwLTExLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "coldrain": {
+        "s": "4pCVGaLWxDe4d8bsjsnmUM",
+        "l": "coldrain",
+        "g": [
+          "j-rock",
+          "metalcore",
+          "anime"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-12-14T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/katatonia-14-12-2025/",
+    "title": "Katatonia",
+    "location": "melkweg",
+    "price": 39.1,
+    "shortText": "melancholisch · doom · progressieve metal UK & Europe Tour 2025",
+    "longText": "../public/texts/melkweg/bC9hZ2VuZGEva2F0YXRvbmlhLTE0LTEyLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bC9hZ2VuZGEva2F0YXRvbmlhLTE0LTEyLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "katatonia": {
+        "s": "2CWWgbxApjbyByxBBCvGTm",
+        "l": "katatonia",
+        "g": [
+          "doom metal",
+          "gothic metal",
+          "progressive metal",
+          "swedish doom metal",
+          "swedish metal",
+          "swedish progressive metal",
+          "doom",
+          "death metal (early)",
+          " gothic",
+          "alternative",
+          "progressive rock",
+          "metal (later)"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2026-02-20T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-blue-stones-20-02-2026/",
+    "title": "The Blue Stones",
+    "location": "melkweg",
+    "price": 25.9,
+    "shortText": "garagerock · alternatief",
+    "longText": "../public/texts/melkweg/ZGEvdGhlLWJsdWUtc3RvbmVzLTIwLTAyLTIwMjYv.html",
+    "image": "../public/event-images/melkweg/ZGEvdGhlLWJsdWUtc3RvbmVzLTIwLTAyLTIwMjYv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   }
 ]
