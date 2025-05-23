@@ -177,6 +177,7 @@ export async function maakMediaHTMLBronnen(page, selectors, event) {
                         const isYoutubeIframe = calcedSrc.includes("youtube");
                         const isBandcampIframe = calcedSrc.includes("bandcamp");
                         const isYoutubeImg = calcedSrc.includes("ytimg.com");
+                        const isOembedMetID = calcedSrc.includes("oembed");
 
                         if (calcedSrc.includes("about:blank")) {
                             return null;
@@ -228,6 +229,21 @@ export async function maakMediaHTMLBronnen(page, selectors, event) {
                                 src: calcedSrc,
                                 id: null,
                                 type: "bandcamp"
+                            };
+                        } else if (isOembedMetID) {
+                            const dc = decodeURIComponent(calcedSrc);
+                            let id = null;
+                            if (dc.includes("tu.be")) {
+                                id = dc.split("tu.be/")[1].split("&")[0];
+                            } else {
+                                id = dc.split("v=")[1].split("&")[0];
+                            }
+
+                            return {
+                                outer: null,
+                                src: null,
+                                id: id,
+                                type: "youtube"
                             };
                         } else {
                             throw new Error(
