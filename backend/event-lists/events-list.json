@@ -1080,8 +1080,8 @@
   },
   {
     "door": "2025-05-29T19:00:00",
-    "start": "2025-05-29T20:00:00",
-    "end": "2025-05-29T23:00:00",
+    "start": "2025-05-29T19:45:00",
+    "end": "2025-05-29T22:45:00",
     "venueEventUrl": "https://iduna.nl/agenda/blaze-bayley-pryma/",
     "title": "Blaze Bayley • • Pryma",
     "location": "iduna",
@@ -6840,6 +6840,36 @@
     }
   },
   {
+    "door": "2025-09-25T20:00:00",
+    "start": "2025-09-25T20:30:00",
+    "end": "2025-09-25T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/ian-paice-purpendicular/",
+    "title": "Ian Paice • • Purpendicular",
+    "location": "iduna",
+    "price": 20,
+    "shortText": null,
+    "longText": "../public/texts/iduna/Z2VuZGEvaWFuLXBhaWNlLXB1cnBlbmRpY3VsYXIv.html",
+    "image": "../public/event-images/iduna/Z2VuZGEvaWFuLXBhaWNlLXB1cnBlbmRpY3VsYXIv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "purpendicular": {
+        "s": "7dtykvbh2qxkicazbxtrkf",
+        "l": "purpendicular",
+        "g": []
+      },
+      "ian paice": {
+        "s": "2gndxbhyibxhwvurrlruaq",
+        "l": "ian%20paice",
+        "g": [
+          "rock drums",
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-09-25T19:30:00",
     "start": "2025-09-25T20:00:00",
     "venueEventUrl": "https://www.effenaar.nl/agenda/intervals",
@@ -9786,6 +9816,28 @@
     "artists": {}
   },
   {
+    "door": "2025-11-20T18:30:00",
+    "start": "2025-11-20T19:30:00",
+    "end": "2025-11-20T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/life-of-agony-ugly-kid-joe/",
+    "title": "Life Of Agony • • Ugly Kid Joe",
+    "location": "iduna",
+    "price": 18,
+    "shortText": null,
+    "longText": "../public/texts/iduna/ZGEvbGlmZS1vZi1hZ29ueS11Z2x5LWtpZC1qb2Uv.html",
+    "image": "../public/event-images/iduna/ZGEvbGlmZS1vZi1hZ29ueS11Z2x5LWtpZC1qb2Uv",
+    "soldOut": true,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "life of agony": {
+        "s": "4gyzqpfg5yqzjt2jj0ikel",
+        "l": "life%20of%20agony",
+        "g": []
+      }
+    }
+  },
+  {
     "door": "2025-11-20T19:30:00",
     "start": "2025-11-20T20:15:00",
     "venueEventUrl": "https://www.effenaar.nl/agenda/lacuna-coil",
@@ -9863,6 +9915,39 @@
     "shortText": "Grenswerk, Venlo",
     "image": "../public/location-images/grenswerk",
     "location": "grenswerk"
+  },
+  {
+    "door": "2025-11-21T20:00:00",
+    "start": "2025-11-21T20:30:00",
+    "end": "2025-11-21T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/cobra-the-impaler-my-diligence/",
+    "title": "Cobra The Impaler • • My Diligence",
+    "location": "iduna",
+    "price": 20,
+    "shortText": null,
+    "longText": "../public/texts/iduna/b2JyYS10aGUtaW1wYWxlci1teS1kaWxpZ2VuY2Uv.html",
+    "image": "../public/event-images/iduna/b2JyYS10aGUtaW1wYWxlci1teS1kaWxpZ2VuY2Uv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "cobra the impaler": {
+        "s": "3GF4mtTUUptBbUoJNclS4A",
+        "l": "cobra%20the%20impaler",
+        "g": [
+          "progressive metalcore"
+        ]
+      },
+      "my diligence": {
+        "s": "3gwEKGsymNFllrIlZ6nhih",
+        "l": "my%20diligence",
+        "g": [
+          "stoner rock",
+          "sludge metal",
+          "space rock"
+        ]
+      }
+    }
   },
   {
     "door": "2025-11-21T19:00:00",
@@ -10442,6 +10527,22 @@
         ]
       }
     }
+  },
+  {
+    "door": "2025-12-06T20:00:00",
+    "start": "2025-12-06T20:30:00",
+    "end": "2025-12-06T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/skroetbalg/",
+    "title": "Skroetbalg",
+    "location": "iduna",
+    "price": 20,
+    "shortText": null,
+    "longText": "../public/texts/iduna/Oi8vaWR1bmEubmwvYWdlbmRhL3Nrcm9ldGJhbGcv.html",
+    "image": "../public/event-images/iduna/Oi8vaWR1bmEubmwvYWdlbmRhL3Nrcm9ldGJhbGcv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "door": "2025-12-07T20:30:00",
@@ -11173,6 +11274,30 @@
         "g": [
           "heavy",
           "thrash metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2026-02-14T20:00:00",
+    "start": "2026-02-14T20:30:00",
+    "end": "2026-02-14T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/ronnie-james-dio-the-memorial-concert/",
+    "title": "Ronnie James DioThe Memorial Concert",
+    "location": "iduna",
+    "price": 20,
+    "shortText": null,
+    "longText": "../public/texts/iduna/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv.html",
+    "image": "../public/event-images/iduna/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "ronnie james dio": {
+        "s": "4M3c7tg4BzLQ5pIOupZL65",
+        "l": "ronnie%20james%20dio",
+        "g": [
+          "hard rock"
         ]
       }
     }
