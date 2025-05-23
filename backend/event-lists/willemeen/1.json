@@ -126,49 +126,80 @@
     }
   },
   {
-    "start": "2025-10-17T23:59:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/hardcore-never-dies-ii/",
-    "title": "Hardcore Never Dies II",
+    "start": "2025-10-01T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/thyrfing-se-30-years-anniversary-exclusive-nl-show-firtan-de/",
+    "title": "Thyrfing (SE) – 30 Years Anniversary Exclusive NL Show ",
     "location": "willemeen",
-    "price": 10,
-    "shortText": "hardcore",
-    "longText": "../public/texts/willemeen/Z3JhbW1hL2hhcmRjb3JlLW5ldmVyLWRpZXMtaWkv.html",
+    "price": 26.5,
+    "shortText": " Firtan (DE) viking metal",
+    "longText": "../public/texts/willemeen/eS1leGNsdXNpdmUtbmwtc2hvdy1maXJ0YW4tZGUv.html",
     "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "hardcore": {
-        "s": "3N11n3hTyVlcOg77IGefjz",
-        "l": "hardcore",
+      "thyrfing": {
+        "s": "2UGaMtxeXt8FQMCpxscnEJ",
+        "l": "thyrfing",
         "g": [
-          "death metal",
-          "hardcore"
+          "folk metal",
+          "black metal",
+          "pirate metal",
+          "viking",
+          "black metal"
         ]
       }
     }
   },
   {
-    "start": "2025-11-30T18:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/whoredom-rife-no-malakhim-se-halphas-de/",
-    "title": "Whoredom rife (no) ",
+    "start": "2025-10-25T16:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/arnhem-deathfest-2025/",
+    "title": "Arnhem Deathfest 2025",
     "location": "willemeen",
     "price": 20,
-    "shortText": " malakhim (se)  +  halphas (de) black metal",
-    "longText": "../public/texts/willemeen/aWZlLW5vLW1hbGFraGltLXNlLWhhbHBoYXMtZGUv.html",
+    "shortText": "death metal",
+    "longText": "../public/texts/willemeen/b2dyYW1tYS9hcm5oZW0tZGVhdGhmZXN0LTIwMjUv.html",
+    "image": "../public/location-images/willemeen",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-11-26T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/gutalax-cz-spasm-cz-guineapig-it-excl-nl-show/",
+    "title": "Gutalax (cz) ",
+    "location": "willemeen",
+    "price": 23.5,
+    "shortText": " spasm (cz)  +  guineapig (it) excl nl show groegrind, gore 'n roll",
+    "longText": "../public/texts/willemeen/LWN6LWd1aW5lYXBpZy1pdC1leGNsLW5sLXNob3cv.html",
     "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "whoredom rife": {
-        "s": "5BPuwHD7jA85XePrEFUIIk",
-        "l": "whoredom%20rife",
+      "guineapig": {
+        "s": "7JjFSi8Nz49BxuZcoTHc7L",
+        "l": "guineapig",
         "g": [
-          "black metal",
-          "black metal"
+          "grindcore",
+          "goregrind"
         ]
       }
     }
+  },
+  {
+    "start": "2025-12-07T15:30:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/human-toys-fr-cafe-de-wacht/",
+    "title": "Human toys (fr) @ cafe de wacht",
+    "location": "willemeen",
+    "price": 0,
+    "shortText": "theremin punkrock",
+    "longText": "../public/texts/willemeen/YS9odW1hbi10b3lzLWZyLWNhZmUtZGUtd2FjaHQv.html",
+    "image": "../public/location-images/willemeen",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   }
 ]
