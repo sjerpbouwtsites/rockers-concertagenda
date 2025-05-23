@@ -255,9 +255,43 @@ scraper.singlePage = async function ({ page, event }) {
   pageInfo = combineStartTimeStartDate(pageInfo);
   pageInfo = combineDoorTimeStartDate(pageInfo);
 
-  const imageSrc = await page.evaluate(() => {
-    return document.querySelector("[property='og:image']")?.content ?? "";
-  });
+  // const imageSrc = await page.evaluate(() => {
+  //   return document.querySelector("[property='og:image']")?.content ?? "";
+  // });
+
+  // const imageRes = await getImage({
+  //   _this: this,
+  //   page,
+  //   workerData,
+  //   event,
+  //   pageInfo,
+  //   selectors: [],
+  //   mode: "direct-input",
+  //   imageSrc,
+  // });
+
+  // src instellen op imagewrapper img
+  await page
+    .evaluate(() => {
+      const twittImg = document.querySelector("[name='twitter:image']").content;
+      const dieImage = document.querySelector(".img-wrapper img");
+      if (twittImg) {
+        dieImage.src = twittImg;
+        return twittImg;
+      }
+
+      const srcsetEl = document.querySelector(
+        'source[srcset*="assets.paradiso.nl"][srcset*="1024"], source[srcset*="assets.paradiso.nl"][srcset*="1280"], source[srcset*="assets.paradiso.nl"], source[srcset]'
+      );
+      dieImage.src = srcsetEl.srcset.match(
+        /(https?:\/\/[^\s]+?\.(webp|jpg|jpeg|png))/im
+      )[0];
+
+      return dieImage.src;
+    })
+    .catch((err) => {
+      this.handleError(err, `fout srcset match ${pageInfo.anker}`);
+    });
 
   const imageRes = await getImage({
     _this: this,
@@ -265,9 +299,8 @@ scraper.singlePage = async function ({ page, event }) {
     workerData,
     event,
     pageInfo,
-    selectors: [],
-    mode: "direct-input",
-    imageSrc,
+    selectors: [".img-wrapper img"],
+    mode: "image-src",
   });
 
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
