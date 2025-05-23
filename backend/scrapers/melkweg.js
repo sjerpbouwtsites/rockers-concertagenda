@@ -39,6 +39,7 @@ const scraper = new AbstractScraper({
         "hasAllowedArtist",
         "spotifyConfirmation",
       ],
+      skipEventRegexes: [/milk\s?made/im],
     },
     singlePage: {
       requiredProperties: ["venueEventUrl", "title", "price", "start"],

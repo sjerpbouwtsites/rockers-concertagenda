@@ -82,7 +82,7 @@ export const workerConfig = {
     forceSet: 4,
   },
   melkweg: {
-    workerCount: 1,
+    workerCount: 3,
     CPUReq: "high",
     workerConcurrent: 1,
     forceSet: 4,

@@ -3,12 +3,12 @@ killall -s 9 chrome
 clear
 node index.js \
     workers=3 \
-    removeBaseEvents=melkweg \
+    removeBaseEvents=false \
     removePublicEventImages=false \
     removeLongTextFiles=false \
     removeSinglePageCache=false \
     scraperEventsLongTextDebug=false \
-    artistDBWrite=false \
+    artistDBWrite=true \
     noLocPrint=true \
     debugLongHTML=false
 
