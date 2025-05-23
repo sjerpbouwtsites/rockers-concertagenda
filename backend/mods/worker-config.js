@@ -44,25 +44,25 @@ export const workerConfig = {
     //     CPUReq: "high",
     //     forceSet: 2
     // }
-    effenaar: {
-        workerCount: 1,
-        CPUReq: "high",
-        workerConcurrent: 1,
-        forceSet: 3
-    }
+    dynamo: { workerCount: 2, workerConcurrent: 1, forceSet: 3 }
+    // effenaar: {
+    //     workerCount: 1,
+    //     CPUReq: "high",
+    //     workerConcurrent: 1,
+    //     forceSet: 3
+    // }
     // gebouwt: {
     //     workerCount: 1,
     //     workerConcurrent: 1,
     //     CPUReq: "high",
     //     forceSet: 3
-    // },
+    // }
     // gebrdenobel: {
     //     workerCount: 1,
     //     workerConcurrent: 1,
     //     CPUReq: "high",
     //     forceSet: 3
     // },
-    // dynamo: { workerCount: 2, workerConcurrent: 1, forceSet: 3 },
     // groeneengel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
     // iduna: { workerCount: 1, workerConcurrent: 1, forceSet: 4 },
     // kavka: {

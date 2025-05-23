@@ -71,7 +71,9 @@ export const standaardSelectorConfig = {
         `form`,
         `h1`,
         `img`,
-        `iframe`
+        `iframe`,
+        `button`,
+        `figure`
     ].join(", "),
     captureTextRemoveEls: [
         "div",
@@ -84,7 +86,9 @@ export const standaardSelectorConfig = {
         "i",
         "span",
         "a",
-        "b"
+        "b",
+        "li",
+        "ul"
     ],
     saveTheseAttrsFirst: ["id", "class", "href", "src", "data-src"],
     removeAttrsLastStep: ["class", "id"],
@@ -158,29 +162,25 @@ export async function maakMediaHTMLBronnen(page, selectors, event) {
             ({ selectors, event }) => {
                 return Array.from(document.querySelectorAll(selectors.mediaEls))
                     .map((bron) => {
-                        if (
-                            !bron.hasAttribute("src") &&
-                            bron.hasAttribute("data-src")
-                        ) {
-                            bron.src = bron.getAttribute("data-src");
-                            bron.removeAttribute("data-src");
-                        }
+                        const calcedSrc =
+                            bron.hasAttribute("src") &&
+                            bron.getAttribute("src") !== ""
+                                ? bron.getAttribute("src")
+                                : bron.hasAttribute("data-src")
+                                ? bron.getAttribute("data-src")
+                                : "";
 
                         const isYoutubeAnchor =
                             bron.hasAttribute("href") &&
                             bron.href.includes("youtube");
-                        const isSpotifyIframe =
-                            bron.hasAttribute("src") &&
-                            bron.src.includes("spotify");
-                        const isYoutubeIframe =
-                            bron.hasAttribute("src") &&
-                            bron.src.includes("youtube");
-                        const isBandcampIframe =
-                            bron.hasAttribute("src") &&
-                            bron.src.includes("bandcamp");
-                        const isYoutubeImg =
-                            bron.hasAttribute("src") &&
-                            bron.src.includes("ytimg.com");
+                        const isSpotifyIframe = calcedSrc.includes("spotify");
+                        const isYoutubeIframe = calcedSrc.includes("youtube");
+                        const isBandcampIframe = calcedSrc.includes("bandcamp");
+                        const isYoutubeImg = calcedSrc.includes("ytimg.com");
+
+                        if (calcedSrc.includes("about:blank")) {
+                            return null;
+                        }
 
                         if (isYoutubeAnchor) {
                             return {
@@ -195,26 +195,26 @@ export async function maakMediaHTMLBronnen(page, selectors, event) {
                         } else if (isSpotifyIframe) {
                             return {
                                 outer: bron.outerHTML,
-                                src: bron.src,
+                                src: calcedSrc,
                                 id: null,
                                 type: "spotify"
                             };
                         } else if (isYoutubeIframe) {
                             return {
                                 outer: bron.outerHTML,
-                                src: bron.src,
+                                src: calcedSrc,
                                 id: null,
                                 type: "youtube"
                             };
                         } else if (isBandcampIframe) {
                             return {
                                 outer: bron.outerHTML,
-                                src: bron.src,
+                                src: calcedSrc,
                                 id: null,
                                 type: "bandcamp"
                             };
                         } else if (isYoutubeImg) {
-                            const idMatch = bron.src.match(/vi\/(.*)\//);
+                            const idMatch = calcedSrc.match(/vi\/(.*)\//);
                             if (Array.isArray(idMatch)) {
                                 return {
                                     outer: null,
@@ -225,13 +225,26 @@ export async function maakMediaHTMLBronnen(page, selectors, event) {
                             }
                             return {
                                 outer: bron.outerHTML,
-                                src: bron.src,
+                                src: calcedSrc,
                                 id: null,
                                 type: "bandcamp"
                             };
                         } else {
                             throw new Error(
-                                `niet herkende media element voor ${event.title} ${event.venueEventUrl} ${bron?.src} ${bron?.href} ${bron?.id} ${bron?.className}`
+                                `<hr>niet herkende media element voor <a href='${event.venueEventUrl}'>${event.title}</a>
+                                <hr> SRC: ${calcedSrc}<br> 
+                                HREF: ${bron?.href} 
+                                ID:<br> ${bron?.id}
+                                HTML: ${bron.outerHTML}<br>
+                                 ClassName: ${bron?.className}<br>
+                                 isYoutubeAnchor: ${isYoutubeAnchor}<br>
+                                 isYoutubeIframe: ${isYoutubeIframe}<br>
+                                 isSpotifyIframe: ${isSpotifyIframe}<br>
+                                 isBandcampIframe: ${isBandcampIframe}<br>
+                                 isYoutubeImg: ${isYoutubeImg}<br>
+                                 
+                                 
+                                 `
                             );
                         }
                     })

@@ -232,8 +232,11 @@ scraper.singlePage = async function ({ page, event }) {
         pageInfo
     );
     if (!textForHTML || typeof textForHTML === "undefined") {
-        const eee = new Error(`geen textForHTML bij ${event.title}`);
-        this.handleError(eee);
+        const eee = new Error(`geen textForHTML`);
+        this.handleError(
+            eee,
+            `bij <a href='${event.venueEventUrl}'>${event.title}</a>`
+        );
         pageInfo.textForHTML = "";
     } else {
         pageInfo.textForHTML = textForHTML;

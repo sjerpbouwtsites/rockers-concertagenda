@@ -6,7 +6,7 @@ node index.js \
     removeBaseEvents=all \
     removePublicEventImages=false \
     removeLongTextFiles=all \
-    removeSinglePageCache=false \
+    removeSinglePageCache=all \
     scraperEventsLongTextDebug=false \
     artistDBWrite=false \
     noLocPrint=true \

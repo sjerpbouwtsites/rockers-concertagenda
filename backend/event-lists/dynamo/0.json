@@ -1,152 +1,12 @@
 [
   {
-    "door": "2025-04-05T15:00:00",
-    "start": "2025-04-05T15:20:00",
-    "end": "2025-04-05T00:30:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/grindhoven-xii/",
-    "title": "Grindhoven XII",
-    "location": "dynamo",
-    "price": 36.5,
-    "shortText": "W/ General Surgery + Guineapig + pulmonary Fibrosis and more",
-    "longText": "../public/texts/dynamo/bi5ubC9ldmVuZW1lbnQvZ3JpbmRob3Zlbi14aWkv.html",
-    "image": "../public/event-images/dynamo/bi5ubC9ldmVuZW1lbnQvZ3JpbmRob3Zlbi14aWkv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "pulmonary fibrosis": {
-        "s": "10cqdVKP6irGvHQkcy7NG0",
-        "l": "pulmonary%20fibrosis",
-        "g": [
-          "goregrind",
-          "pornogrind",
-          "goregrind",
-          "noisegrind (early)",
-          " brutal death metal",
-          "grindcore (later)"
-        ]
-      },
-      "general surgery": {
-        "s": "7uqRm8hzY1AGigP9Qd6j4U",
-        "l": "general%20surgery",
-        "g": [
-          "brutal death metal",
-          "deathgrind",
-          "goregrind",
-          "grindcore",
-          "swedish death metal",
-          "swedish grindcore",
-          "death metal",
-          "goregrind"
-        ]
-      },
-      "guineapig": {
-        "s": "7JjFSi8Nz49BxuZcoTHc7L",
-        "l": "guineapig",
-        "g": [
-          "grindcore",
-          "goregrind"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-04-11T22:00:00",
-    "end": "2025-04-11T04:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/the-pharmacy-2/",
-    "title": "The pharmacy",
-    "location": "dynamo",
-    "price": 10,
-    "shortText": "[HARDGROOVE | GARAGE | BREAKBEAT | DNB]",
-    "longText": "../public/texts/dynamo/bi5ubC9ldmVuZW1lbnQvdGhlLXBoYXJtYWN5LTIv.html",
-    "image": "../public/event-images/dynamo/bi5ubC9ldmVuZW1lbnQvdGhlLXBoYXJtYWN5LTIv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-04-19T19:30:00",
-    "start": "2025-04-19T20:15:00",
-    "end": "2025-04-19T23:15:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/carsick/",
-    "title": "Carsick",
-    "location": "dynamo",
-    "price": 16,
-    "shortText": "Plus support",
-    "longText": "../public/texts/dynamo/aW5kaG92ZW4ubmwvZXZlbmVtZW50L2NhcnNpY2sv.html",
-    "image": "../public/event-images/dynamo/aW5kaG92ZW4ubmwvZXZlbmVtZW50L2NhcnNpY2sv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "plus": {
-        "s": null,
-        "l": "plus",
-        "g": [
-          "death",
-          "black metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-02T23:00:00",
-    "start": "2025-05-02T23:00:00",
-    "end": "2025-05-02T04:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/obsession/",
-    "title": "Obsession",
-    "location": "dynamo",
-    "price": 11.2,
-    "shortText": "[HARD TECHNO]",
-    "longText": "../public/texts/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9vYnNlc3Npb24v.html",
-    "image": "../public/event-images/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9vYnNlc3Npb24v",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "obsession": {
-        "s": "5BDLRKwXZrrrr0WXTqfCYg",
-        "l": "obsession",
-        "g": [
-          "speed metal",
-          "hi-nrg",
-          "heavy metal",
-          "power metal",
-          "heavy metal",
-          "hard rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-07T19:30:00",
-    "start": "2025-05-07T20:00:00",
-    "end": "2025-05-07T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/knives/",
-    "title": "Knives",
-    "location": "dynamo",
-    "price": 15,
-    "shortText": "Hosted by Stroomhuis",
-    "longText": "../public/texts/dynamo/ZWluZGhvdmVuLm5sL2V2ZW5lbWVudC9rbml2ZXMv.html",
-    "image": "../public/event-images/dynamo/ZWluZGhvdmVuLm5sL2V2ZW5lbWVudC9rbml2ZXMv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "knives": {
-        "s": "2YoHhPouaTT96k3dUQ8WZK",
-        "l": "knives",
-        "g": [
-          "grindcore",
-          "death 'n' roll"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-05-23T22:00:00",
     "start": "2025-05-23T22:00:00",
     "end": "2025-05-23T04:00:00",
     "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/bunkerbass-3/",
     "title": "bunkerbass",
     "location": "dynamo",
-    "price": 2300,
+    "price": 13.5,
     "shortText": "[DRUM AND BASS]",
     "longText": "../public/texts/dynamo/dmVuLm5sL2V2ZW5lbWVudC9idW5rZXJiYXNzLTMv.html",
     "image": "../public/event-images/dynamo/dmVuLm5sL2V2ZW5lbWVudC9idW5rZXJiYXNzLTMv",
@@ -169,8 +29,8 @@
     "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/commit/",
     "title": "Club commit",
     "location": "dynamo",
-    "price": 3000,
-    "shortText": "[UK GARAGE | JUNGLE | AFROBEAT | GHETTOTECH]",
+    "price": 11.5,
+    "shortText": "[BREAKS | GARAGE | JUNGLE | 4X4]",
     "longText": "../public/texts/dynamo/ZWluZGhvdmVuLm5sL2V2ZW5lbWVudC9jb21taXQv.html",
     "image": "../public/event-images/dynamo/ZWluZGhvdmVuLm5sL2V2ZW5lbWVudC9jb21taXQv",
     "soldOut": false,
@@ -178,7 +38,7 @@
     "artists": {}
   },
   {
-    "start": "2025-06-06T22:00:00",
+    "start": "2025-06-06T23:00:00",
     "end": "2025-06-06T04:00:00",
     "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/selecta-4/",
     "title": "Selecta",
@@ -190,6 +50,60 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "door": "2025-06-12T18:30:00",
+    "start": "2025-06-12T19:15:00",
+    "end": "2025-06-12T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/cattle-decapitation/",
+    "title": "Cattle Decapitation",
+    "location": "dynamo",
+    "price": 29.5,
+    "shortText": "Support: Severe Torture + Skeletal Remains",
+    "longText": "../public/texts/dynamo/ZXZlbmVtZW50L2NhdHRsZS1kZWNhcGl0YXRpb24v.html",
+    "image": "../public/event-images/dynamo/ZXZlbmVtZW50L2NhdHRsZS1kZWNhcGl0YXRpb24v",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "cattle decapitation": {
+        "s": "67zmmta88ddo0gturrzgjn",
+        "l": "cattle%20decapitation",
+        "g": [
+          "american grindcore",
+          "brutal death metal",
+          "death metal",
+          "deathcore",
+          "deathgrind",
+          "goregrind",
+          "grindcore",
+          "technical death metal",
+          "technical grindcore"
+        ]
+      },
+      "skeletal remains": {
+        "s": "4Rh3NPxVMADeaSIduAsykN",
+        "l": "skeletal%20remains",
+        "g": [
+          "brutal death metal",
+          "death metal",
+          "deathgrind",
+          "grisly death metal",
+          "new wave of osdm",
+          "technical death metal",
+          "death metal"
+        ]
+      },
+      "severe torture": {
+        "s": "2LkGWKBS0nNlEtqx4khGf1",
+        "l": "severe%20torture",
+        "g": [
+          "death metal",
+          "grindcore",
+          "speed metal",
+          "death metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-06-15T11:00:00",
@@ -207,28 +121,18 @@
     "artists": {}
   },
   {
-    "start": "2025-06-27T22:00:00",
-    "end": "2025-06-27T04:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/nebula-4/",
-    "title": "NEBULA x faction x dublex",
+    "start": "2025-06-27T23:00:00",
+    "end": "2025-06-27T06:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/factionsummerwarmup/",
+    "title": "Faction: summer warm up",
     "location": "dynamo",
-    "price": 2700,
+    "price": 14.55,
     "shortText": "[DRUM AND BASS]",
-    "longText": "../public/texts/dynamo/bmRob3Zlbi5ubC9ldmVuZW1lbnQvbmVidWxhLTQv.html",
-    "image": "../public/event-images/dynamo/bmRob3Zlbi5ubC9ldmVuZW1lbnQvbmVidWxhLTQv",
+    "longText": "../public/texts/dynamo/ZXZlbmVtZW50L2ZhY3Rpb25zdW1tZXJ3YXJtdXAv.html",
+    "image": "../public/event-images/dynamo/ZXZlbmVtZW50L2ZhY3Rpb25zdW1tZXJ3YXJtdXAv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "nebula": {
-        "s": "1czkorb9in0ejpeyekbikf",
-        "l": "nebula",
-        "g": [
-          "cosmic post-rock",
-          "instrumental post-rock",
-          "polish post-rock",
-          "post-rock"
-        ]
-      },
       "bass": {
         "s": null,
         "l": "bass",
@@ -240,26 +144,95 @@
     }
   },
   {
-    "door": "2025-07-03T19:30:00",
-    "start": "2025-07-03T20:00:00",
-    "end": "2025-07-03T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/hell-can-wait/",
-    "title": "Hell Can Wait",
+    "door": "2025-06-29T19:30:00",
+    "start": "2025-06-29T20:15:00",
+    "end": "2025-06-29T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/the-gathering/",
+    "title": "The Gathering",
     "location": "dynamo",
-    "price": 16.5,
-    "shortText": "Support: I’ll Get By",
-    "longText": "../public/texts/dynamo/ZW4ubmwvZXZlbmVtZW50L2hlbGwtY2FuLXdhaXQv.html",
-    "image": "../public/event-images/dynamo/ZW4ubmwvZXZlbmVtZW50L2hlbGwtY2FuLXdhaXQv",
+    "price": 26.5,
+    "shortText": "Uitverkocht",
+    "longText": "../public/texts/dynamo/ZW4ubmwvZXZlbmVtZW50L3RoZS1nYXRoZXJpbmcv.html",
+    "image": "../public/event-images/dynamo/ZW4ubmwvZXZlbmVtZW50L3RoZS1nYXRoZXJpbmcv",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "the gathering": {
+        "s": "2kO6zjt4a1OIqxOERhliEX",
+        "l": "the%20gathering",
+        "g": [
+          "atmospheric doom",
+          "dutch metal",
+          "gothic metal",
+          "gothic symphonic metal",
+          "symphonic metal",
+          "death",
+          "doom metal, atmospheric doom metal (early)",
+          " atmospheric rock (later)"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-02T20:00:00",
+    "start": "2025-08-02T20:30:00",
+    "end": "2025-08-02T23:15:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/barnyard-boogie-bookings-last-affront/",
+    "title": "Barnyard Boogie Bookings: LAST AFFRONT",
+    "location": "dynamo",
+    "price": 10,
+    "shortText": "w/Warhead97 + Raw Peace",
+    "longText": "../public/texts/dynamo/LWJvb2dpZS1ib29raW5ncy1sYXN0LWFmZnJvbnQv.html",
+    "image": "../public/event-images/dynamo/LWJvb2dpZS1ib29raW5ncy1sYXN0LWFmZnJvbnQv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "hell can wait": {
-        "s": "7y4ASsLqvxgWja0ym7SBYs",
-        "l": "hell%20can%20wait",
+      "rhea": {
+        "s": "3iTqZTjeziB8WtVJeIUrLD",
+        "l": "rhea",
         "g": [
-          "melodic hardcore",
-          "metalcore",
-          "post-hardcore"
+          "belgian rock",
+          "atmospheric death",
+          "doom metal"
+        ]
+      },
+      "last affront": {
+        "s": "6isVTSRZqcegXbnXGgZriS",
+        "l": "last%20affront",
+        "g": [
+          "hardcore punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-04T19:30:00",
+    "start": "2025-08-04T20:00:00",
+    "end": "2025-08-04T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/british-lion/",
+    "title": "British Lion",
+    "location": "dynamo",
+    "price": 33,
+    "shortText": "Plus Support",
+    "longText": "../public/texts/dynamo/dmVuLm5sL2V2ZW5lbWVudC9icml0aXNoLWxpb24v.html",
+    "image": "../public/event-images/dynamo/dmVuLm5sL2V2ZW5lbWVudC9icml0aXNoLWxpb24v",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "plus": {
+        "s": null,
+        "l": "plus",
+        "g": [
+          "death",
+          "black metal"
+        ]
+      },
+      "british lion": {
+        "s": "5z5jrGRiONDfGvQydFriQh",
+        "l": "british%20lion",
+        "g": [
+          "heavy metal",
+          "hard rock"
         ]
       }
     }
@@ -301,6 +274,107 @@
         "g": [
           "death",
           "black metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-09-10T19:30:00",
+    "start": "2025-09-10T20:00:00",
+    "end": "2025-09-10T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/scene-queen/",
+    "title": "Scene Queen",
+    "location": "dynamo",
+    "price": 23.5,
+    "shortText": "Plus Support",
+    "longText": "../public/texts/dynamo/b3Zlbi5ubC9ldmVuZW1lbnQvc2NlbmUtcXVlZW4v.html",
+    "image": "../public/event-images/dynamo/b3Zlbi5ubC9ldmVuZW1lbnQvc2NlbmUtcXVlZW4v",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "plus": {
+        "s": null,
+        "l": "plus",
+        "g": [
+          "death",
+          "black metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-10-18T19:00:00",
+    "start": "2025-10-18T19:30:00",
+    "end": "2025-10-18T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/annisokay/",
+    "title": "Annisokay",
+    "location": "dynamo",
+    "price": 23.5,
+    "shortText": "support: heart of a coward + the narrator",
+    "longText": "../public/texts/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9hbm5pc29rYXkv.html",
+    "image": "../public/event-images/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC9hbm5pc29rYXkv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "annisokay": {
+        "s": "7lai1cv19dsukggjbzqxfg",
+        "l": "annisokay",
+        "g": [
+          "german metalcore",
+          "german post-hardcore",
+          "metalcore",
+          "trancecore"
+        ]
+      },
+      "heart of a coward": {
+        "s": "6gizrqejjnx3mfac1yofmz",
+        "l": "heart%20of%20a%20coward",
+        "g": [
+          "djent",
+          "melodic metalcore",
+          "metalcore",
+          "uk metalcore"
+        ]
+      },
+      "the narrator": {
+        "s": "7d1ZGbsel9lq6hwvWhPFgk",
+        "l": "the%20narrator",
+        "g": [
+          "metalcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-11-22T20:00:00",
+    "start": "2025-11-22T20:30:00",
+    "end": "2025-11-22T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/persecutor/",
+    "title": "Persecutor",
+    "location": "dynamo",
+    "price": 11.5,
+    "shortText": "Plus Support",
+    "longText": "../public/texts/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L3BlcnNlY3V0b3Iv.html",
+    "image": "../public/event-images/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L3BlcnNlY3V0b3Iv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "plus": {
+        "s": null,
+        "l": "plus",
+        "g": [
+          "death",
+          "black metal"
+        ]
+      },
+      "persecutor": {
+        "s": "4iqXnnPDd6AJ5wMRQfuMB0",
+        "l": "persecutor",
+        "g": [
+          "thrash metal",
+          "speed metal",
+          "metalcore",
+          "thrash metal"
         ]
       }
     }

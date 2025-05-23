@@ -1,147 +1,88 @@
 /* eslint-disable  */
 /* eslint-disable indent */
 /* global document */
+
+import {
+    handleError,
+    ongewensteHTMLUitHeleDocument,
+    eersteLadingOverbodigeAttributesWeg,
+    maakMediaHTMLBronnen,
+    hinderlijkeTekstenEruitSlopen,
+    formatHTMLTextBodyNaarEenSpatieMax,
+    legeHTMLElementenVerwijderen,
+    maakTekstBlokHTML,
+    standaardSelectorConfig,
+    removeElementsRecursive
+} from "../gedeeld/longHTML.js";
+
 export default async function longTextSocialsIframes(page, event) {
-    return page.evaluate(
-        // eslint-disable-next-line no-shadow
-        ({ event }) => {
-            const res = {};
+    const res = {
+        mediaForHTML: null,
+        textForHTML: null
+    };
+    // in standaard removeEls saveTheseAttrsFirst removeAttrsLastStep
+    // removeHTMLWithStrings htmlElementsWithStringsToRemove
+    const selectors = {
+        ...standaardSelectorConfig,
+        textBody: ".wp-block-dynamo-eindhoven-container",
+        mediaEls: [
+            ".wp-block-dynamo-eindhoven-container .rll-youtube-player img, .wp-block-dynamo-eindhoven-container iframe"
+        ].join(", "),
+        removeEmptyHTMLFrom: ".wp-block-dynamo-eindhoven-container",
+        removeHTMLWithStrings: ["Net bevestigd"]
+    };
 
-            res.textForHTML = "";
+    await waitTime(50);
 
-            const textSelector = ".wp-block-dynamo-eindhoven-container";
-            const mediaSelector = [
-                ".wp-block-dynamo-eindhoven-container .rll-youtube-player, .wp-block-dynamo-eindhoven-container iframe"
-            ].join(", ");
-            const removeEmptyHTMLFrom = textSelector;
+    await page.evaluate(() => {
+        window.scrollBy(0, 250);
+    });
+    await waitTime(50);
 
-            const removeSelectors = [
-                `${textSelector} [class*='icon-']`,
-                `${textSelector} [class*='fa-']`,
-                `${textSelector} .fa`,
-                `${textSelector} script`,
-                `${textSelector} noscript`,
-                `${textSelector} style`,
-                `${textSelector} meta`,
-                `${textSelector} svg`,
-                `${textSelector} form`,
-                ".iframe-wrapper-tijdelijk",
-                `${textSelector} img`,
-                `${textSelector} .rll-youtube-player`,
-                `${textSelector} iframe`
-            ].join(", ");
+    await page.evaluate(() => {
+        window.scrollBy(0, 250);
+    });
 
-            const attributesToRemove = [
-                "style",
-                "hidden",
-                "_target",
-                "frameborder",
-                "onclick",
-                "aria-hidden",
-                "allow",
-                "allowfullscreen",
-                "data-deferlazy",
-                "width",
-                "height"
-            ];
-            const attributesToRemoveSecondRound = ["class", "id"];
-            const removeHTMLWithStrings = [];
+    //selectors.removeEls.concat(["#gerelateerd"]);
 
-            // custom dynamo
-            // document
-            //     .querySelectorAll(".article-block iframe")
-            //     .forEach((iframe) =>
-            //         iframe.parentNode.classList.add("iframe-wrapper-tijdelijk")
-            //     );
-            // end custom dynamo
+    await page.evaluate(() => {
+        const r = document.getElementById("gerelateerd");
+        if (r) {
+            r.parentNode.removeChild(r);
+        }
+        const i = document.getElementById("info");
+        if (i) {
+            i.parentNode.removeChild(i);
+        }
+    });
 
-            const mediaAttrRemSelAdd = `${
-                mediaSelector.length
-                    ? `, ${mediaSelector} *, ${mediaSelector}`
-                    : ""
-            }`;
-            const textSocEnMedia = `${textSelector} ${mediaAttrRemSelAdd}`;
-            document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-                attributesToRemove.forEach((attr) => {
-                    if (elToStrip.hasAttribute(attr)) {
-                        elToStrip.removeAttribute(attr);
-                    }
-                });
-            });
+    res.mediaForHTML = await maakMediaHTMLBronnen(page, selectors, event);
 
-            // media obj maken voordat HTML verdwijnt
-            res.mediaForHTML = Array.from(
-                document.querySelectorAll(mediaSelector)
-            ).map((bron) => {
-                const src = bron.className.includes("youtube")
-                    ? bron.getAttribute("data-src")
-                    : bron.src;
-                return {
-                    outer: bron.outerHTML,
-                    src,
-                    id: null,
-                    type: src.includes("spotify")
-                        ? "spotify"
-                        : src.includes("youtube")
-                        ? "youtube"
-                        : "bandcamp"
-                };
-            });
+    await ongewensteHTMLUitHeleDocument(page, selectors);
 
-            // stript HTML tbv text
-            removeSelectors.length &&
-                document
-                    .querySelectorAll(removeSelectors)
-                    .forEach((toRemove) =>
-                        toRemove.parentNode.removeChild(toRemove)
-                    );
+    await eersteLadingOverbodigeAttributesWeg(page, selectors);
 
-            // verwijder ongewenste paragrafen over bv restaurants
-            Array.from(
-                document.querySelectorAll(
-                    `${textSelector} p, ${textSelector} span, ${textSelector} a`
-                )
-            ).forEach((verwijder) => {
-                const heeftEvilString = !!removeHTMLWithStrings.find(
-                    (evilString) => verwijder?.textContent.includes(evilString)
-                );
-                if (heeftEvilString) {
-                    verwijder.parentNode.removeChild(verwijder);
-                }
-            });
+    await hinderlijkeTekstenEruitSlopen(page, selectors);
 
-            // lege HTML eruit cq HTML zonder tekst of getallen
-            // document
-            //     .querySelectorAll(`${removeEmptyHTMLFrom} > *`)
-            //     .forEach((checkForEmpty) => {
-            //         const leegMatch = checkForEmpty.innerHTML
-            //             .replace("&nbsp;", "")
-            //             .match(/[\w\d]/g);
-            //         if (!Array.isArray(leegMatch)) {
-            //             checkForEmpty.parentNode.removeChild(checkForEmpty);
-            //         }
-            //     });
+    await formatHTMLTextBodyNaarEenSpatieMax(page, selectors);
 
-            document
-                .querySelectorAll(textSelector)
-                .forEach((ts) => ts.setAttribute("data-text", "1"));
-            // laatste attributen eruit.
-            document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-                attributesToRemoveSecondRound.forEach((attr) => {
-                    if (elToStrip.hasAttribute(attr)) {
-                        elToStrip.removeAttribute(attr);
-                    }
-                });
-            });
+    await removeElementsRecursive(page, selectors);
 
-            // tekst.
-            res.textForHTML = Array.from(
-                document.querySelectorAll("[data-text]")
-            )
-                .map((el) => el.innerHTML)
-                .join("");
-            return res;
-        },
-        { event }
-    );
+    await legeHTMLElementenVerwijderen(page, selectors);
+
+    res.textForHTML = await maakTekstBlokHTML(page, selectors);
+
+    return res;
+}
+
+async function waitTime(wait = 500) {
+    if (wait > 100) {
+        this.dirtyTalk(
+            `${workerData.family} ${workerData.index} waiting ${wait}`
+        );
+    }
+
+    return new Promise((res) => {
+        setTimeout(res, wait);
+    });
 }
