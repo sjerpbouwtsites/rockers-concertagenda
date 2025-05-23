@@ -98,18 +98,18 @@ export const workerConfig = {
   // },
   // oosterpoort: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
   // p60: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
-  paradiso: {
+  // paradiso: {
+  //   workerCount: 2,
+  //   workerConcurrent: 2,
+  //   forceSet: 5,
+  //   CPUReq: "high",
+  // },
+  patronaat: {
     workerCount: 2,
-    workerConcurrent: 2,
-    forceSet: 5,
+    workerConcurrent: 1,
+    forceSet: 6,
     CPUReq: "high",
   },
-  // patronaat: {
-  //     workerCount: 2,
-  //     workerConcurrent: 1,
-  //     forceSet: 6,
-  //     CPUReq: "high"
-  // },
   // tivolivredenburg: {
   //     workerCount: 1,
   //     workerConcurrent: 1,
