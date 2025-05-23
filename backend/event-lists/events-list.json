@@ -1,114 +1,5 @@
 [
   {
-    "door": "2025-05-22T18:00:00Z",
-    "start": "2025-05-22T20:30:00Z",
-    "venueEventUrl": "https://p60.nl/2025/sonic-hunt-mei",
-    "title": "Sonic Hunt",
-    "location": "p60",
-    "price": 12.5015,
-    "shortText": "FT. CARDIGAN INN, CHRYSALIS & SPURN",
-    "longText": "../public/texts/p60/czovL3A2MC5ubC8yMDI1L3NvbmljLWh1bnQtbWVp.html",
-    "image": "../public/event-images/p60/czovL3A2MC5ubC8yMDI1L3NvbmljLWh1bnQtbWVp",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "sonic": {
-        "s": "77NlgotgHiVpi79fpChUZc",
-        "l": "sonic",
-        "g": [
-          "melodic death metal",
-          "metalcore"
-        ]
-      },
-      "spurn": {
-        "s": "6EuJStUEQd6XOxDSTiPRw0",
-        "l": "spurn",
-        "g": [
-          "garage rock",
-          "metalcore",
-          "melodic death metal"
-        ]
-      },
-      "hunt": {
-        "s": null,
-        "l": "hunt",
-        "g": [
-          "heavy",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-22T18:00:00",
-    "end": "2025-05-22T23:00:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/phantom-elite-ep-release-22-05-2025/",
-    "title": "Phantom Elite EP release",
-    "location": "dehelling",
-    "price": 17.2,
-    "shortText": "Exclusieve releaseparty van genrebending metalband",
-    "longText": "../public/texts/dehelling/bS1lbGl0ZS1lcC1yZWxlYXNlLTIyLTA1LTIwMjUv.html",
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-05-22T20:00:00",
-    "start": "2025-05-22T20:30:00",
-    "venueEventUrl": "https://bibelot.net/programma/bibelot-x-door-test-plan-uk-mye-taai/",
-    "title": "Bibelot x door: test plan (uk) + mye taai",
-    "location": "bibelot",
-    "price": 0,
-    "longText": "../public/texts/bibelot/LXgtZG9vci10ZXN0LXBsYW4tdWstbXllLXRhYWkv.html",
-    "image": "../public/event-images/bibelot/LXgtZG9vci10ZXN0LXBsYW4tdWstbXllLXRhYWkv",
-    "soldOut": false,
-    "eventGenres": [
-      "electro ",
-      "punk "
-    ],
-    "artists": {
-      "test plan": {
-        "s": "51hfP8BcSbQoL3DFrwNNCA",
-        "l": "test%20plan",
-        "g": [
-          "noise rock",
-          "post-punk",
-          "electro ",
-          "punk "
-        ]
-      },
-      "mye taai": {
-        "s": null,
-        "l": "mye%20taai",
-        "g": [
-          "electro ",
-          "punk "
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-22T17:30:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/steven-wilson",
-    "title": "Steven Wilson",
-    "location": "afaslive",
-    "price": 22,
-    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u.html",
-    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "steven wilson": {
-        "s": "4X42BfuhWCAZ2swiVze9O0",
-        "l": "steven%20wilson",
-        "g": [
-          "progressive metal",
-          "progressive rock"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-05-23T19:00:00",
     "start": "2025-05-23T20:00:00",
     "end": "2025-05-23T23:00:00",
@@ -439,10 +330,10 @@
   {
     "start": "2025-05-24T13:00:00",
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-t-haantje-lomba-rock-scream-tonight-wasabi-toothpaste-support/",
-    "title": "Baroeg On Tour @’t Haantje: Lomba Rock: Scream Tonight ",
+    "title": "Baroeg On Tour @ ’t Haantje: Lomba Rock: Scream Tonight ",
     "location": "baroeg",
     "price": 7.5,
-    "shortText": " Wasabi Toothpaste  +  Doctor Robert And The Pills Een kleinschalig festival op de stoep bij Eterij Tapperij Café ’t Haantje.",
+    "shortText": " Wasabi Toothpaste  +  Loose Tights  +  Doctor Robert And The Pills Een kleinschalig festival met coverbands op de stoep bij Eterij Tapperij Café ’t Haantje.",
     "longText": "../public/texts/baroeg/Z2h0LXdhc2FiaS10b290aHBhc3RlLXN1cHBvcnQv.html",
     "image": "../public/event-images/baroeg/Z2h0LXdhc2FiaS10b290aHBhc3RlLXN1cHBvcnQv",
     "soldOut": false,
@@ -487,9 +378,17 @@
           "soul"
         ]
       },
-      "doctor robert and the pills een kleinschalig festival op de stoep bij eterij tapperij café ’t haantje.": {
+      "band": {
         "s": null,
-        "l": "doctor%20robert%20and%20the%20pills%20een%20kleinschalig%20festival%20op%20de%20stoep%20bij%20eterij%20tapperij%20caf%C3%A9%20%E2%80%99t%20haantje.",
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      },
+      "loose tights": {
+        "s": null,
+        "l": "loose%20tights",
         "g": [
           "funk",
           "metal",
@@ -498,9 +397,9 @@
           "soul"
         ]
       },
-      "een kleinschalig festival op de stoep bij eterij tapperij café ’t haantje.": {
+      "loose tights een kleinschalig festival met covers op de stoep bij eterij tapperij café ’t haantje.": {
         "s": null,
-        "l": "een%20kleinschalig%20festival%20op%20de%20stoep%20bij%20eterij%20tapperij%20caf%C3%A9%20%E2%80%99t%20haantje.",
+        "l": "loose tights een kleinschalig festival met covers op de stoep bij eterij tapperij café ’t haantje.",
         "g": [
           "funk",
           "metal",
@@ -903,7 +802,7 @@
     "venueEventUrl": "https://bibelot.net/programma/its-not-a-phase-mom-sum41-some41-the-offspring-by-the-offspin-uk/",
     "title": "It’s not a phase mom: sum41 (some41) & the offspring (by the offspin) (uk)",
     "location": "bibelot",
-    "price": 0,
+    "price": 30,
     "shortText": " undefined",
     "longText": "../public/texts/bibelot/ZS1vZmZzcHJpbmctYnktdGhlLW9mZnNwaW4tdWsv.html",
     "image": "../public/event-images/bibelot/ZS1vZmZzcHJpbmctYnktdGhlLW9mZnNwaW4tdWsv",
@@ -1099,7 +998,7 @@
     "title": "Eyehategod",
     "location": "cpunt",
     "price": 22.5,
-    "shortText": "",
+    "shortText": "Support: Afgrond",
     "longText": "../public/texts/cpunt/d3d3LmNwdW50Lm5sL2FnZW5kYS9leWVoYXRlZ29k.html",
     "image": "../public/event-images/cpunt/d3d3LmNwdW50Lm5sL2FnZW5kYS9leWVoYXRlZ29k",
     "soldOut": false,
@@ -1128,6 +1027,15 @@
           "death metal",
           "extreme metal",
           "heavy metal"
+        ]
+      },
+      "afgrond": {
+        "s": "6koxdQ0VoKf7eEHgJOqJlF",
+        "l": "afgrond",
+        "g": [
+          "sludge",
+          "doom",
+          "post-metal"
         ]
       }
     }
@@ -1250,7 +1158,7 @@
   {
     "start": "2025-06-04T21:00:00",
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-v11-castle/",
-    "title": "Baroeg On Tour @V11: Castle",
+    "title": "Baroeg On Tour @ V11: Castle + Proxima Flare",
     "location": "baroeg",
     "price": 14,
     "shortText": "Met meer dan 700 optredens op hun conto kun je alleen maar een goed geoliede machine in het ruim van de V11 verwachten.",
@@ -1258,8 +1166,10 @@
     "image": "../public/event-images/baroeg/dGllL2Jhcm9lZy1vbi10b3VyLXYxMS1jYXN0bGUv",
     "soldOut": false,
     "eventGenres": [
+      "alternative",
       "doom",
-      "heavy metal"
+      "heavy metal",
+      "progressive"
     ],
     "artists": {
       "castle": {
@@ -1272,12 +1182,25 @@
           "heavy metal"
         ]
       },
+      "proxima flare": {
+        "s": "315Th53dV868sSv3jYt8UO",
+        "l": "proxima%20flare",
+        "g": [
+          "progressive metal",
+          "alternative",
+          "doom",
+          "heavy metal",
+          "progressive"
+        ]
+      },
       "met dan 700 optredens op hun conto kun je alleen maar een goed geoliede machine in het ruim van de v11 verwachten.": {
         "s": null,
         "l": "met dan 700 optredens op hun conto kun je alleen maar een goed geoliede machine in het ruim van de v11 verwachten.",
         "g": [
+          "alternative",
           "doom",
-          "heavy metal"
+          "heavy metal",
+          "progressive"
         ]
       }
     }
@@ -1510,6 +1433,51 @@
     "location": "gashouder"
   },
   {
+    "start": "2025-06-07T12:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-kaderock-doodswens/",
+    "title": "Baroeg On Tour @ Kaderock: Doodswens",
+    "location": "baroeg",
+    "price": null,
+    "shortText": "Baroeg presents Doodswens @Kaderock 2025, zaterdag 7 juni.",
+    "longText": "../public/texts/baroeg/ZWctb24tdG91ci1rYWRlcm9jay1kb29kc3dlbnMv.html",
+    "image": "../public/event-images/baroeg/ZWctb24tdG91ci1rYWRlcm9jay1kb29kc3dlbnMv",
+    "soldOut": false,
+    "eventGenres": [
+      "black"
+    ],
+    "artists": {
+      "rock": {
+        "s": null,
+        "l": "rock",
+        "g": [
+          "heavy metal",
+          "hard rock"
+        ]
+      },
+      "ater": {
+        "s": "1HpPzWF2E6G8KfD5pOM6La",
+        "l": "ater",
+        "g": [
+          "djent",
+          "black metal",
+          "black",
+          "death metal",
+          "extreme metal",
+          "heavy metal"
+        ]
+      },
+      "doodswens": {
+        "s": "4y0PziA2nR9lWxhF9T1Mm6",
+        "l": "doodswens",
+        "g": [
+          "black metal",
+          "black metal",
+          "black"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-06-07T19:00:00",
     "start": "2025-06-07T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/103287/mojo-the-kitchen-brothers",
@@ -1530,6 +1498,77 @@
           "stoner",
           "doom metal",
           "rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-06-08T15:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-de-beuk-sheer-terror/",
+    "title": "Baroeg On Tour @ De Beuk: Live Hard presents: Sheer Terror ",
+    "location": "baroeg",
+    "price": 16.5,
+    "shortText": " Malad  +  Get Some!  +  Rival Pack Het zwarte schaap van de New York hardcore.",
+    "longText": "../public/texts/baroeg/LW9uLXRvdXItZGUtYmV1ay1zaGVlci10ZXJyb3Iv.html",
+    "image": "../public/event-images/baroeg/LW9uLXRvdXItZGUtYmV1ay1zaGVlci10ZXJyb3Iv",
+    "soldOut": false,
+    "eventGenres": [
+      "hardcore"
+    ],
+    "artists": {
+      "sheer terror": {
+        "s": "2afpwhrvdljivnmpbou4ju",
+        "l": "sheer%20terror",
+        "g": [
+          "crossover thrash",
+          "hardcore",
+          "nyhc"
+        ]
+      },
+      "get some": {
+        "s": "0aou4fuweaa3so42vjpost",
+        "l": null,
+        "g": [
+          "norwegian hip hop"
+        ]
+      },
+      "terror": {
+        "s": "1gvrgptec6szfqvitik3eg",
+        "l": "colombia",
+        "g": [
+          "hardcore",
+          "la hardcore",
+          "thrash metal"
+        ]
+      },
+      "malad": {
+        "s": "21fzlwdq72k9w3ozypcxyr",
+        "l": null,
+        "g": [
+          "punk",
+          "street punk"
+        ]
+      },
+      "hardcore": {
+        "s": "3N11n3hTyVlcOg77IGefjz",
+        "l": "hardcore",
+        "g": [
+          "death metal",
+          "hardcore"
+        ]
+      },
+      "! rival pack": {
+        "s": null,
+        "l": "! rival pack",
+        "g": [
+          "hardcore"
+        ]
+      },
+      "! rival pack het zwarte schaap van de new york .": {
+        "s": null,
+        "l": "! rival pack het zwarte schaap van de new york .",
+        "g": [
+          "hardcore"
         ]
       }
     }
@@ -2307,6 +2346,29 @@
     }
   },
   {
+    "door": "2025-06-26T19:30:00",
+    "start": "2025-06-26T20:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/wodan-boys/",
+    "title": "Wodan Boys",
+    "location": "bibelot",
+    "price": 26,
+    "longText": "../public/texts/bibelot/ZWxvdC5uZXQvcHJvZ3JhbW1hL3dvZGFuLWJveXMv.html",
+    "image": "../public/event-images/bibelot/ZWxvdC5uZXQvcHJvZ3JhbW1hL3dvZGFuLWJveXMv",
+    "soldOut": false,
+    "eventGenres": [
+      "garagerock "
+    ],
+    "artists": {
+      "wodan boys": {
+        "s": "0kmkbibevmq4luqquahdmr",
+        "l": "wodan%20boys",
+        "g": [
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-06-27T22:00:00",
     "end": "2025-06-27T04:00:00",
     "venueEventUrl": "https://www.dynamo-eindhoven.nl/evenement/nebula-4/",
@@ -2698,7 +2760,7 @@
   {
     "start": "2025-07-04T19:00:00",
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-soundville-molder-kontusion/",
-    "title": "Baroeg On Tour @SoundVille: Molder ",
+    "title": "Baroeg On Tour @ SoundVille: Molder ",
     "location": "baroeg",
     "price": 14,
     "shortText": " Kontusion  +  Gutslasher Lomp, ranzig, groovy en vooral heavy death thrash en vuige death metal met een dikke punksaus eroverheen.",
@@ -2756,6 +2818,39 @@
         "l": "gutslasher lomp, ranzig, groovy en vooral heavy death thrash en vuige death met een dikke punksaus eroverheen.",
         "g": [
           "death metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-07-04T13:30:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-rotterdam-bluegrass-festival-renegade-bandits/",
+    "title": "Baroeg On Tour @ Rotterdam Bluegrass Festival: Renegade Bandits",
+    "location": "baroeg",
+    "price": null,
+    "shortText": " Baroeg presents Renegade Bandits @Rotterdam Bluegrass Festival 2025, vrijdag 4 juli.",
+    "longText": "../public/texts/baroeg/YXNzLWZlc3RpdmFsLXJlbmVnYWRlLWJhbmRpdHMv.html",
+    "image": "../public/event-images/baroeg/YXNzLWZlc3RpdmFsLXJlbmVnYWRlLWJhbmRpdHMv",
+    "soldOut": false,
+    "eventGenres": [
+      "outlaw country"
+    ],
+    "artists": {
+      "renegade": {
+        "s": "3vBaLrnIgG5WCQ3pTeZexc",
+        "l": "renegade",
+        "g": [
+          "jungle",
+          "progressive heavy metal",
+          "hard rock"
+        ]
+      },
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
         ]
       }
     }
@@ -3101,6 +3196,55 @@
     "location": "muziekgieterij"
   },
   {
+    "start": "2025-07-13T15:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-soundville-riffsniffer-presents-earth-tongue-support/",
+    "title": "Baroeg On Tour @ SoundVille: Riffsniffer presents: Valley of the Sun ",
+    "location": "baroeg",
+    "price": 14,
+    "shortText": " Earth Tongue FFO: Frankie and the Witch Fingers, Soundgarden, Wo Fat",
+    "longText": "../public/texts/baroeg/cHJlc2VudHMtZWFydGgtdG9uZ3VlLXN1cHBvcnQv.html",
+    "image": "../public/event-images/baroeg/cHJlc2VudHMtZWFydGgtdG9uZ3VlLXN1cHBvcnQv",
+    "soldOut": false,
+    "eventGenres": [
+      "heavy psych rock",
+      "stoner rock"
+    ],
+    "artists": {
+      "valley of the sun": {
+        "s": "3OX4skiU9o7fxdi5Li7k5l",
+        "l": "valley%20of%20the%20sun",
+        "g": [
+          "stoner rock",
+          "sludge metal",
+          "space rock",
+          "doom metal",
+          "heavy psych rock",
+          "stoner rock"
+        ]
+      },
+      "earth tongue": {
+        "s": "1dceZ2BGZBTMuI6BIL4EQ5",
+        "l": "earth%20tongue",
+        "g": [
+          "stoner rock",
+          "sludge metal",
+          "doom metal",
+          "rock",
+          "heavy psych rock",
+          "stoner rock"
+        ]
+      },
+      "earth tongue ffo: frankie and the witch fingers, soundgarden, wo fat": {
+        "s": null,
+        "l": "earth%20tongue%20ffo:%20frankie%20and%20the%20witch%20fingers,%20soundgarden,%20wo%20fat",
+        "g": [
+          "heavy psych rock",
+          "stoner rock"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-07-15T08:00:00",
     "end": "2025-07-15T11:00:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/dbs-tivre-present-battlesnake-aus/",
@@ -3185,6 +3329,57 @@
         "g": [
           "groove",
           "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-07-16T21:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-v11-butcher-abc-100-years-war/",
+    "title": "Baroeg on tour @ v11: butcher abc ",
+    "location": "baroeg",
+    "price": 15,
+    "shortText": " 100 years war Gore, death en crust in V11.",
+    "longText": "../public/texts/baroeg/djExLWJ1dGNoZXItYWJjLTEwMC15ZWFycy13YXIv.html",
+    "image": "../public/event-images/baroeg/djExLWJ1dGNoZXItYWJjLTEwMC15ZWFycy13YXIv",
+    "soldOut": false,
+    "eventGenres": [
+      "crust",
+      "death metal",
+      "goregrind"
+    ],
+    "artists": {
+      "butcher abc": {
+        "s": "0Rt2lp1m67p5YQoZklidN3",
+        "l": "butcher%20abc",
+        "g": [
+          "grindcore",
+          "noisecore (early)",
+          " death metal",
+          "goregrind (later)",
+          "crust",
+          "death metal",
+          "goregrind"
+        ]
+      },
+      "100 years war": {
+        "s": null,
+        "l": "100%20years%20war",
+        "g": [
+          "death metal",
+          "crust",
+          "crust",
+          "death metal",
+          "goregrind"
+        ]
+      },
+      "100 years war gore, death en crust in v11.": {
+        "s": null,
+        "l": "100%20years%20war%20gore,%20death%20en%20crust%20in%20v11.",
+        "g": [
+          "crust",
+          "death metal",
+          "goregrind"
         ]
       }
     }
@@ -3316,6 +3511,65 @@
           "punk",
           "heavy",
           "folk metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-07-25T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-roodkapje-tftp-presents-agrotoxico-night-templars-stachel/",
+    "title": "Baroeg On Tour @Roodkapje: TFTP presents: Agrotóxico ",
+    "location": "baroeg",
+    "price": 14,
+    "shortText": " Night Templars  +  Stachel FFO: Ratos de Parão, Lobotomia, Acidez.",
+    "longText": "../public/texts/baroeg/dG94aWNvLW5pZ2h0LXRlbXBsYXJzLXN0YWNoZWwv.html",
+    "image": "../public/event-images/baroeg/dG94aWNvLW5pZ2h0LXRlbXBsYXJzLXN0YWNoZWwv",
+    "soldOut": false,
+    "eventGenres": [
+      "hardcore punk",
+      "metallic punk",
+      "punk"
+    ],
+    "artists": {
+      "agrotóxico": {
+        "s": "5DgqEZ3LRb6oZKsSDQ2NhM",
+        "l": "agrot%C3%B3xico",
+        "g": [
+          "hardcore punk",
+          "punk",
+          "hardcore punk",
+          "metallic punk",
+          "punk"
+        ]
+      },
+      "night templars": {
+        "s": null,
+        "l": "night%20templars",
+        "g": [
+          "speed metal",
+          "punk rock",
+          "hardcore punk",
+          "metallic punk",
+          "punk"
+        ]
+      },
+      "stachel": {
+        "s": "78YXkrCAQhpopwCEbP797b",
+        "l": "stachel",
+        "g": [
+          "hardcore punk",
+          "hardcore punk",
+          "metallic punk",
+          "punk"
+        ]
+      },
+      "stachel ffo: ratos de parão, lobotomia, acidez.": {
+        "s": null,
+        "l": "stachel%20ffo:%20ratos%20de%20par%C3%A3o,%20lobotomia,%20acidez.",
+        "g": [
+          "hardcore punk",
+          "metallic punk",
+          "punk"
         ]
       }
     }
@@ -4047,7 +4301,7 @@
   {
     "start": "2025-08-21T19:00:00",
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-roodkapje-riffsniffer-presents-atomic-bitchwax-bismut/",
-    "title": "Baroeg On Tour @Roodkapje: Riffsniffer presents: The Atomic Bitchwax ",
+    "title": "Baroeg On Tour @ Roodkapje: Riffsniffer presents: The Atomic Bitchwax ",
     "location": "baroeg",
     "price": 14,
     "shortText": " Bismut FFO: Monster Magnet, Desert Queen, My Sleeping Karma.",
@@ -4207,6 +4461,41 @@
         "l": "jetsam",
         "g": [
           "post-metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-24T19:30:00",
+    "start": "2025-08-24T20:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/crocodiles-us/",
+    "title": "Crocodiles (US)  + Yummy",
+    "location": "bibelot",
+    "price": 0,
+    "longText": "../public/texts/bibelot/dC5uZXQvcHJvZ3JhbW1hL2Nyb2NvZGlsZXMtdXMv.html",
+    "image": "../public/event-images/bibelot/dC5uZXQvcHJvZ3JhbW1hL2Nyb2NvZGlsZXMtdXMv",
+    "soldOut": false,
+    "eventGenres": [
+      "garagerock ",
+      "punk "
+    ],
+    "artists": {
+      "crocodiles": {
+        "s": "1Z4Erxt5wSXH0gbOsVJUMv",
+        "l": "crocodiles",
+        "g": [
+          "noise pop",
+          "nu gaze",
+          "stoner",
+          "sludge metal"
+        ]
+      },
+      "yummy": {
+        "s": "3EPDUft8JXlRTIsrNqfFDS",
+        "l": "yummy",
+        "g": [
+          "garagerock ",
+          "punk "
         ]
       }
     }
@@ -5105,12 +5394,189 @@
     "artists": {}
   },
   {
+    "door": "2025-09-26T20:00:00",
+    "start": "2025-09-26T20:30:00",
+    "venueEventUrl": "https://bibelot.net/programma/conflict-uk-dammit-be/",
+    "title": "Conflict (uk) + dammit (be)",
+    "location": "bibelot",
+    "price": 0,
+    "longText": "../public/texts/bibelot/b2dyYW1tYS9jb25mbGljdC11ay1kYW1taXQtYmUv.html",
+    "image": "../public/event-images/bibelot/b2dyYW1tYS9jb25mbGljdC11ay1kYW1taXQtYmUv",
+    "soldOut": false,
+    "eventGenres": [
+      "punk "
+    ],
+    "artists": {
+      "conflict": {
+        "s": "47dYAN18NhVC43ud5Zq1PZ",
+        "l": "conflict",
+        "g": [
+          "hardcore punk",
+          "punk",
+          "industrial",
+          "death metal",
+          "punk "
+        ]
+      }
+    }
+  },
+  {
     "title": "Wings Of Steel en Angelic Forces",
     "start": "2025-09-27",
     "eventLocationName": "sound dog",
     "shortText": "Sound Dog, Breda",
     "image": "../public/location-images/sounddog",
     "location": "sounddog"
+  },
+  {
+    "start": "2025-09-27T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/beyond93",
+    "title": "Beyond93",
+    "location": "cpunt",
+    "price": 10,
+    "shortText": "Support: Sellfish & Splitbox",
+    "longText": "../public/texts/cpunt/Ly93d3cuY3B1bnQubmwvYWdlbmRhL2JleW9uZDkz.html",
+    "image": "../public/event-images/cpunt/Ly93d3cuY3B1bnQubmwvYWdlbmRhL2JleW9uZDkz",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "beyond93": {
+        "s": "7hF10lDsbzBDUHFa6QaKff",
+        "l": "beyond93",
+        "g": [
+          "skate punk"
+        ]
+      },
+      "sellfish": {
+        "s": "1ha6e91WS3kTqcixgBkMOo",
+        "l": "sellfish",
+        "g": [
+          "skate punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-09-27T18:00:00",
+    "start": "2025-09-27T18:45:00",
+    "venueEventUrl": "https://bibelot.net/programma/darkest-hour/",
+    "title": "Darkest hour (us) ",
+    "location": "bibelot",
+    "price": 27,
+    "shortText": " bleeding through (us)  +  shai hulud (us)  +  denial of life (us) undefined",
+    "longText": "../public/texts/bibelot/b3QubmV0L3Byb2dyYW1tYS9kYXJrZXN0LWhvdXIv.html",
+    "image": "../public/event-images/bibelot/b3QubmV0L3Byb2dyYW1tYS9kYXJrZXN0LWhvdXIv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal "
+    ],
+    "artists": {
+      "darkest hour": {
+        "s": "4dso1lISV1Atdo3O6qbhqq",
+        "l": "darkest%20hour",
+        "g": [
+          "melodic metalcore",
+          "metalcore",
+          "melodic death metal",
+          "metalcore"
+        ]
+      },
+      "undefined": {
+        "s": "6NMVL5NGYZKTl6AZuxybbV",
+        "l": "undefined",
+        "g": [
+          "metalcore",
+          "new wave ",
+          "punk "
+        ]
+      },
+      "bleeding through": {
+        "s": "41btkKEfOGIHsd7WNahMCi",
+        "l": "bleeding%20through",
+        "g": [
+          "metalcore",
+          "deathcore",
+          "metal",
+          "metalcore",
+          "metal "
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-09-27T18:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-bibelot-main-stage-darkest-hour-bleeding-through-shai-hulud-denial-of-life/",
+    "title": "Baroeg On Tour @ Bibelot (Main Stage): Darkest Hour ",
+    "location": "baroeg",
+    "price": 33,
+    "shortText": " Bleeding Through  +  Shai Hulud  +  Denial Of Life Vier drie decennia meedogenloze metal.",
+    "longText": "../public/texts/baroeg/dWdoLXNoYWktaHVsdWQtZGVuaWFsLW9mLWxpZmUv.html",
+    "image": "../public/event-images/baroeg/dWdoLXNoYWktaHVsdWQtZGVuaWFsLW9mLWxpZmUv",
+    "soldOut": false,
+    "eventGenres": [
+      "crossover",
+      "hardcore",
+      "melodic death",
+      "metalcore",
+      "thrash"
+    ],
+    "artists": {
+      "denial of life": {
+        "s": "00ghci0p7iwstw34fgzskk",
+        "l": "denial%20of%20life",
+        "g": [
+          "slc hardcore"
+        ]
+      },
+      "darkest hour": {
+        "s": "4dso1lISV1Atdo3O6qbhqq",
+        "l": "darkest%20hour",
+        "g": [
+          "melodic metalcore",
+          "metalcore",
+          "melodic death metal",
+          "metalcore"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "meta": {
+        "s": null,
+        "l": "meta",
+        "g": [
+          "groove",
+          "progressive metal"
+        ]
+      },
+      "bleeding through shai hulud": {
+        "s": null,
+        "l": "bleeding through shai hulud",
+        "g": [
+          "crossover",
+          "hardcore",
+          "melodic death",
+          "metalcore",
+          "thrash"
+        ]
+      },
+      "bleeding through shai hulud vier drie decennia meedogenloze .": {
+        "s": null,
+        "l": "bleeding through shai hulud vier drie decennia meedogenloze .",
+        "g": [
+          "crossover",
+          "hardcore",
+          "melodic death",
+          "metalcore",
+          "thrash"
+        ]
+      }
+    }
   },
   {
     "start": "2025-09-28T18:00:00",
@@ -5790,6 +6256,39 @@
     }
   },
   {
+    "door": "2025-10-17T20:00:00",
+    "start": "2025-10-17T21:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/feuerengel-a-tribute-to-rammstein-de/",
+    "title": "Feuerengel – a tribute to rammstein (de)",
+    "location": "bibelot",
+    "price": 17,
+    "longText": "../public/texts/bibelot/Z2VsLWEtdHJpYnV0ZS10by1yYW1tc3RlaW4tZGUv.html",
+    "image": "../public/event-images/bibelot/Z2VsLWEtdHJpYnV0ZS10by1yYW1tc3RlaW4tZGUv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal "
+    ],
+    "artists": {
+      "feuerengel": {
+        "s": null,
+        "l": "feuerengel",
+        "g": [
+          "neue deutsche haerte",
+          "tanzmetal",
+          "industrial",
+          "industrial metal"
+        ]
+      },
+      "– a tribute to rammstein": {
+        "s": null,
+        "l": "%E2%80%93%20a%20tribute%20to%20rammstein",
+        "g": [
+          "metal "
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-10-18T20:00:00",
     "venueEventUrl": "https://metropool.nl/agenda/delain",
     "title": "Delain",
@@ -5835,6 +6334,45 @@
         "l": "fall",
         "g": [
           "death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-10-18T20:00:00",
+    "start": "2025-10-18T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/alternative-90s-nirvana-green-day",
+    "title": "Alternative 90s: Nirvana & Green Day",
+    "location": "cpunt",
+    "price": 17.5,
+    "shortText": "Tributes by Negative Creeps & Green Bay",
+    "longText": "../public/texts/cpunt/ZXJuYXRpdmUtOTBzLW5pcnZhbmEtZ3JlZW4tZGF5.html",
+    "image": "../public/event-images/cpunt/ZXJuYXRpdmUtOTBzLW5pcnZhbmEtZ3JlZW4tZGF5",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "green bay": {
+        "s": "54fqomnsedeijbigu7zbnz",
+        "l": "green%20bay",
+        "g": []
+      },
+      "nirvana": {
+        "s": "6olE6TJLqED3rqDCT0FyPh",
+        "l": "nirvana",
+        "g": [
+          "grunge",
+          "rock",
+          "raw black",
+          "death metal"
+        ]
+      },
+      "green day": {
+        "s": "7oPftvlwr6VrsViSDV7fJY",
+        "l": "green%20day",
+        "g": [
+          "punk",
+          "pop punk"
         ]
       }
     }
@@ -6164,6 +6702,60 @@
     }
   },
   {
+    "start": "2025-10-24T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-grounds-riffsniffer-presents-the-obsessed-mould/",
+    "title": "Baroeg On Tour @ Grounds: Riffsniffer presents: The Obsessed ",
+    "location": "baroeg",
+    "price": 20,
+    "shortText": " Mould FFO: Black Sabbath, Thou, YOB of Neurosis.",
+    "longText": "../public/texts/baroeg/ci1wcmVzZW50cy10aGUtb2JzZXNzZWQtbW91bGQv.html",
+    "image": "../public/event-images/baroeg/ci1wcmVzZW50cy10aGUtb2JzZXNzZWQtbW91bGQv",
+    "soldOut": false,
+    "eventGenres": [
+      "doom"
+    ],
+    "artists": {
+      "the obsessed": {
+        "s": "4yumqlcvnu9dw31akzavij",
+        "l": "the%20obsessed",
+        "g": [
+          "doom metal",
+          "sludge metal",
+          "stoner metal",
+          "stoner rock"
+        ]
+      },
+      "abbath": {
+        "s": "1epgwdbju7jsgvbhlqptpx",
+        "l": "abbath",
+        "g": [
+          "black 'n' roll",
+          "black metal",
+          "death metal",
+          "metal",
+          "norwegian black metal",
+          "symphonic black metal"
+        ]
+      },
+      "mould": {
+        "s": "4YKVTOc7KjZfuAfvaCHKqo",
+        "l": "mould",
+        "g": [
+          "sludge",
+          "doom metal",
+          "doom"
+        ]
+      },
+      "mould ffo: black s, thou, yob of neurosis.": {
+        "s": null,
+        "l": "mould ffo: black s, thou, yob of neurosis.",
+        "g": [
+          "doom"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-10-25T19:00:00",
     "start": "2025-10-25T20:00:00",
     "end": "2025-10-25T23:00:00",
@@ -6430,6 +7022,28 @@
     "image": "../public/event-images/dehelling/bGxhLW1lYW4taGFsbG93ZWVuLTMxLTEwLTIwMjUv",
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "start": "2025-10-31T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/above-beyond",
+    "title": "Above ",
+    "location": "afaslive",
+    "price": 31,
+    "shortText": " beyond\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t nieuw  undefined",
+    "longText": "../public/texts/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvYWJvdmUtYmV5b25k.html",
+    "image": "../public/event-images/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvYWJvdmUtYmV5b25k",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "above": {
+        "s": null,
+        "l": "above",
+        "g": [
+          "black metal",
+          "punk"
+        ]
+      }
+    }
   },
   {
     "door": "2025-11-01T19:00:00",
@@ -6797,6 +7411,33 @@
     }
   },
   {
+    "door": "2025-11-08T19:45:00",
+    "start": "2025-11-08T20:30:00",
+    "venueEventUrl": "https://bibelot.net/programma/claw-boys-claw-nov/",
+    "title": "Claw Boys Claw",
+    "location": "bibelot",
+    "price": 2025,
+    "longText": "../public/texts/bibelot/L3Byb2dyYW1tYS9jbGF3LWJveXMtY2xhdy1ub3Yv.html",
+    "image": "../public/event-images/bibelot/L3Byb2dyYW1tYS9jbGF3LWJveXMtY2xhdy1ub3Yv",
+    "soldOut": false,
+    "eventGenres": [
+      "garagerock ",
+      "indie ",
+      "rock "
+    ],
+    "artists": {
+      "claw boys claw": {
+        "s": "5t378xbmytaymycg84zipv",
+        "l": "claw%20boys%20claw",
+        "g": [
+          "dutch blues",
+          "dutch indie",
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-11-09T19:30:00",
     "start": "2025-11-09T20:30:00",
     "venueEventUrl": "https://www.cpunt.nl/agenda/the-perfect-tool",
@@ -6926,6 +7567,59 @@
     }
   },
   {
+    "door": "2025-11-15T20:30:00",
+    "start": "2025-11-15T21:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/submit-fest/",
+    "title": "Submit Fest",
+    "location": "bibelot",
+    "price": 15,
+    "longText": "../public/texts/bibelot/bG90Lm5ldC9wcm9ncmFtbWEvc3VibWl0LWZlc3Qv.html",
+    "image": "../public/event-images/bibelot/bG90Lm5ldC9wcm9ncmFtbWEvc3VibWl0LWZlc3Qv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal "
+    ],
+    "artists": {
+      "submit fest": {
+        "s": null,
+        "l": "submit%20fest",
+        "g": [
+          "metal "
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-11-15T14:30:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-bibelot-power-stage-submit-fest-2025/",
+    "title": "Baroeg On Tour @ Bibelot (Power Stage): Submit Fest 2025",
+    "location": "baroeg",
+    "price": 25,
+    "shortText": " Submit Fest 2025 – New location, same energy!",
+    "longText": "../public/texts/baroeg/LXBvd2VyLXN0YWdlLXN1Ym1pdC1mZXN0LTIwMjUv.html",
+    "image": "../public/event-images/baroeg/LXBvd2VyLXN0YWdlLXN1Ym1pdC1mZXN0LTIwMjUv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal"
+    ],
+    "artists": {
+      "submit fest": {
+        "s": null,
+        "l": "submit%20fest",
+        "g": [
+          "metal"
+        ]
+      },
+      "submit fest – new location, same energy!": {
+        "s": null,
+        "l": "submit fest – new location, same energy!",
+        "g": [
+          "metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-11-15T19:00:00",
     "start": "2025-11-15T19:00:00",
     "venueEventUrl": "https://www.013.nl/programma/110707/plan-nine",
@@ -6941,6 +7635,92 @@
     "artists": {}
   },
   {
+    "start": "2025-11-16T19:30:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-boerderij-beasto-blanco-i-ya-toyah-datcha-mandala/",
+    "title": "Baroeg On Tour @ Boerderij: Beastö Blancö ",
+    "location": "baroeg",
+    "price": 35,
+    "shortText": " I Ya Toyah  +  Dätcha Mandala FFO: Alice Cooper, Rob Zombie, Halestorm.",
+    "longText": "../public/texts/baroeg/bmNvLWkteWEtdG95YWgtZGF0Y2hhLW1hbmRhbGEv.html",
+    "image": "../public/event-images/baroeg/bmNvLWkteWEtdG95YWgtZGF0Y2hhLW1hbmRhbGEv",
+    "soldOut": false,
+    "eventGenres": [
+      "darkwave",
+      "electro",
+      "heavy metal",
+      "industrial",
+      "rock"
+    ],
+    "artists": {
+      "alestorm": {
+        "s": "3opqu68jpzlzvjajj3b2da",
+        "l": "alestorm",
+        "g": [
+          "british power metal",
+          "comic metal",
+          "pirate",
+          "power metal",
+          "scottish metal"
+        ]
+      },
+      "lice": {
+        "s": "4JC8PfKoENbnkxLB2k3ZGo",
+        "l": "lice",
+        "g": [
+          "bristol indie",
+          "crank wave",
+          "uk post-punk revival",
+          "melodic death",
+          "groove metal"
+        ]
+      },
+      "beastö blancö": {
+        "s": null,
+        "l": "beast%C3%B6%20blanc%C3%B6",
+        "g": [
+          "darkwave",
+          "electro",
+          "heavy metal",
+          "industrial",
+          "rock"
+        ]
+      },
+      "i ya toyah": {
+        "s": "5pig0rzYT7aqLkAryQjF45",
+        "l": "i%20ya%20toyah",
+        "g": [
+          "darkwave",
+          "electro",
+          "heavy metal",
+          "industrial",
+          "rock"
+        ]
+      },
+      "dätcha mandala": {
+        "s": "4d4uJl3hSCcoFBYRyHoZ2N",
+        "l": "d%C3%A4tcha%20mandala",
+        "g": [
+          "darkwave",
+          "electro",
+          "heavy metal",
+          "industrial",
+          "rock"
+        ]
+      },
+      "i ya toyah dätcha mandala ffo: a cooper, rob zombie, h.": {
+        "s": null,
+        "l": "i ya toyah dätcha mandala ffo: a cooper, rob zombie, h.",
+        "g": [
+          "darkwave",
+          "electro",
+          "heavy metal",
+          "industrial",
+          "rock"
+        ]
+      }
+    }
+  },
+  {
     "title": "Lacuna Coil en Nonpoint",
     "start": "2025-11-18",
     "eventLocationName": "ancienne belgique",
@@ -6951,10 +7731,9 @@
   {
     "start": "2025-11-18T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/halestorm",
-    "title": "Halestorm\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t nieuw",
+    "title": "Halestorm",
     "location": "afaslive",
     "price": 18,
-    "shortText": "  undefined",
     "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvaGFsZXN0b3Jt.html",
     "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvaGFsZXN0b3Jt",
     "soldOut": false,
@@ -7140,6 +7919,31 @@
     "location": "vorstin"
   },
   {
+    "start": "2025-11-23T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/wolf-alice",
+    "title": "Wolf alice\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t nieuw",
+    "location": "afaslive",
+    "price": 23,
+    "shortText": "  undefined",
+    "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS93b2xmLWFsaWNl.html",
+    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS93b2xmLWFsaWNl",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "lice": {
+        "s": "4JC8PfKoENbnkxLB2k3ZGo",
+        "l": "lice",
+        "g": [
+          "bristol indie",
+          "crank wave",
+          "uk post-punk revival",
+          "melodic death",
+          "groove metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-11-23T18:00:00",
     "start": "2025-11-23T18:00:00",
     "venueEventUrl": "https://www.013.nl/programma/107480/all-shall-perish",
@@ -7167,6 +7971,27 @@
     }
   },
   {
+    "start": "2025-11-24T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/lorde",
+    "title": "Lorde",
+    "location": "afaslive",
+    "price": 24,
+    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2xvcmRl.html",
+    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2xvcmRl",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "lorde": {
+        "s": "163tK9Wjr9P9DmM0AVK7lm",
+        "l": "lorde",
+        "g": [
+          "thrash metal",
+          "crossover"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-11-25T19:00:00",
     "venueEventUrl": "https://kavka.be/event/gutalax-spasm-guineapig/",
     "title": "Gutalax + Spasm + Guineapig",
@@ -7185,6 +8010,27 @@
         "g": [
           "grindcore",
           "goregrind"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-11-25T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/lorde",
+    "title": "Lorde",
+    "location": "afaslive",
+    "price": 24,
+    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2xvcmRl.html",
+    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2xvcmRl",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "lorde": {
+        "s": "163tK9Wjr9P9DmM0AVK7lm",
+        "l": "lorde",
+        "g": [
+          "thrash metal",
+          "crossover"
         ]
       }
     }
@@ -7261,7 +8107,7 @@
   {
     "start": "2025-11-29T19:00:00",
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-grounds-wavefest-presents-clan-of-xymox-the-essence-desinteresse/",
-    "title": "Baroeg On Tour @Grounds: Wavefest presents: Clan Of Xymox ",
+    "title": "Baroeg On Tour @ Grounds: Wavefest presents: Clan Of Xymox ",
     "location": "baroeg",
     "price": 25,
     "shortText": " The Essence  +  Desinteresse Deze zaterdag vindt Wavefest plaats in Grounds, Rotterdam. Drie bekende namen uit de Nederlandse new…",
@@ -7457,7 +8303,7 @@
     "venueEventUrl": "https://bibelot.net/programma/acindc/",
     "title": "Acindc",
     "location": "bibelot",
-    "price": 0,
+    "price": 2025,
     "longText": "../public/texts/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS9hY2luZGMv.html",
     "image": "../public/event-images/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS9hY2luZGMv",
     "soldOut": false,
@@ -7972,12 +8818,27 @@
     }
   },
   {
+    "door": "2025-12-19T20:00:00",
+    "start": "2025-12-19T21:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/plan-nine",
+    "title": "Plan Nine",
+    "location": "cpunt",
+    "price": 23,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/L3d3dy5jcHVudC5ubC9hZ2VuZGEvcGxhbi1uaW5l.html",
+    "image": "../public/event-images/cpunt/L3d3dy5jcHVudC5ubC9hZ2VuZGEvcGxhbi1uaW5l",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2025-12-20T20:30:00",
     "start": "2025-12-20T21:00:00",
     "venueEventUrl": "https://bibelot.net/programma/pene-corrida-the-penergy-tour/",
     "title": "Pene Corrida – The Penergy Tour",
     "location": "bibelot",
-    "price": 0,
+    "price": 20,
     "longText": "../public/texts/bibelot/cGVuZS1jb3JyaWRhLXRoZS1wZW5lcmd5LXRvdXIv.html",
     "image": "../public/event-images/bibelot/cGVuZS1jb3JyaWRhLXRoZS1wZW5lcmd5LXRvdXIv",
     "soldOut": false,
@@ -8127,15 +8988,61 @@
     "artists": {}
   },
   {
+    "start": "2026-02-20T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/avatar",
+    "title": "Avatar",
+    "location": "afaslive",
+    "price": 20,
+    "longText": "../public/texts/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvYXZhdGFy.html",
+    "image": "../public/event-images/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvYXZhdGFy",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "avatar": {
+        "s": "4jpaXieuls7LVzG1uma5Rs",
+        "l": "avatar",
+        "g": [
+          "metal",
+          "melodic death metal",
+          "groove metal",
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2026-03-27T20:00:00",
+    "start": "2026-03-27T21:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/maiden-united",
+    "title": "Maiden uniteD",
+    "location": "cpunt",
+    "price": 30,
+    "shortText": "1980 ft. Dennis Stratton",
+    "longText": "../public/texts/cpunt/LmNwdW50Lm5sL2FnZW5kYS9tYWlkZW4tdW5pdGVk.html",
+    "image": "../public/event-images/cpunt/LmNwdW50Lm5sL2FnZW5kYS9tYWlkZW4tdW5pdGVk",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "maiden united": {
+        "s": "7hxwv8nk5ea0uaopamhuxe",
+        "l": "maiden%20united",
+        "g": [
+          "acoustic rock",
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
     "start": "2026-04-17T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/russo",
-    "title": "Russo\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t nieuw",
+    "title": "Russo",
     "location": "afaslive",
     "price": 0,
-    "shortText": "  undefined",
     "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL3J1c3Nv.html",
     "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL3J1c3Nv",
-    "soldOut": false,
+    "soldOut": true,
     "eventGenres": null,
     "artists": {
       "russ": {

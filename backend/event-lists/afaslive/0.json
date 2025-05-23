@@ -1,26 +1,5 @@
 [
   {
-    "start": "2025-05-22T17:30:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/steven-wilson",
-    "title": "Steven Wilson",
-    "location": "afaslive",
-    "price": 22,
-    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u.html",
-    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "steven wilson": {
-        "s": "4X42BfuhWCAZ2swiVze9O0",
-        "l": "steven%20wilson",
-        "g": [
-          "progressive metal",
-          "progressive rock"
-        ]
-      }
-    }
-  },
-  {
     "start": "2025-06-15T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/the-rose-2",
     "title": "The Rose",
@@ -226,12 +205,33 @@
     }
   },
   {
+    "start": "2025-10-31T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/above-beyond",
+    "title": "Above ",
+    "location": "afaslive",
+    "price": 31,
+    "shortText": " beyond\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t nieuw  undefined",
+    "longText": "../public/texts/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvYWJvdmUtYmV5b25k.html",
+    "image": "../public/event-images/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvYWJvdmUtYmV5b25k",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "above": {
+        "s": null,
+        "l": "above",
+        "g": [
+          "black metal",
+          "punk"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-11-18T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/halestorm",
-    "title": "Halestorm\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t nieuw",
+    "title": "Halestorm",
     "location": "afaslive",
     "price": 18,
-    "shortText": "  undefined",
     "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvaGFsZXN0b3Jt.html",
     "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvaGFsZXN0b3Jt",
     "soldOut": false,
@@ -251,15 +251,104 @@
     }
   },
   {
+    "start": "2025-11-23T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/wolf-alice",
+    "title": "Wolf alice\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t nieuw",
+    "location": "afaslive",
+    "price": 23,
+    "shortText": "  undefined",
+    "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS93b2xmLWFsaWNl.html",
+    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS93b2xmLWFsaWNl",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "lice": {
+        "s": "4JC8PfKoENbnkxLB2k3ZGo",
+        "l": "lice",
+        "g": [
+          "bristol indie",
+          "crank wave",
+          "uk post-punk revival",
+          "melodic death",
+          "groove metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-11-24T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/lorde",
+    "title": "Lorde",
+    "location": "afaslive",
+    "price": 24,
+    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2xvcmRl.html",
+    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2xvcmRl",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "lorde": {
+        "s": "163tK9Wjr9P9DmM0AVK7lm",
+        "l": "lorde",
+        "g": [
+          "thrash metal",
+          "crossover"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-11-25T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/lorde",
+    "title": "Lorde",
+    "location": "afaslive",
+    "price": 24,
+    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2xvcmRl.html",
+    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2xvcmRl",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "lorde": {
+        "s": "163tK9Wjr9P9DmM0AVK7lm",
+        "l": "lorde",
+        "g": [
+          "thrash metal",
+          "crossover"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2026-02-20T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/avatar",
+    "title": "Avatar",
+    "location": "afaslive",
+    "price": 20,
+    "longText": "../public/texts/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvYXZhdGFy.html",
+    "image": "../public/event-images/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvYXZhdGFy",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "avatar": {
+        "s": "4jpaXieuls7LVzG1uma5Rs",
+        "l": "avatar",
+        "g": [
+          "metal",
+          "melodic death metal",
+          "groove metal",
+          "heavy metal"
+        ]
+      }
+    }
+  },
+  {
     "start": "2026-04-17T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/russo",
-    "title": "Russo\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t nieuw",
+    "title": "Russo",
     "location": "afaslive",
     "price": 0,
-    "shortText": "  undefined",
     "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL3J1c3Nv.html",
     "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL3J1c3Nv",
-    "soldOut": false,
+    "soldOut": true,
     "eventGenres": null,
     "artists": {
       "russ": {

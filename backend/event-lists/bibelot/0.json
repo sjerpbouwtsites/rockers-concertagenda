@@ -1,186 +1,5 @@
 [
   {
-    "door": "2025-04-18T19:00:00",
-    "start": "2025-04-18T19:30:00",
-    "venueEventUrl": "https://bibelot.net/programma/inherited-album-release/",
-    "title": "Inherited – Album Release",
-    "location": "bibelot",
-    "price": 18,
-    "longText": "../public/texts/bibelot/cmFtbWEvaW5oZXJpdGVkLWFsYnVtLXJlbGVhc2Uv.html",
-    "image": "../public/event-images/bibelot/cmFtbWEvaW5oZXJpdGVkLWFsYnVtLXJlbGVhc2Uv",
-    "soldOut": false,
-    "eventGenres": [
-      "metal "
-    ],
-    "artists": {
-      "inherited": {
-        "s": "74r5dmgt1473kf2lg4ndxe",
-        "l": "united states",
-        "g": [
-          "black/death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-25T20:00:00",
-    "start": "2025-04-25T20:30:00",
-    "venueEventUrl": "https://bibelot.net/programma/the-flying-luttenbachers-us-albatre-polarized-combo-qazam/",
-    "title": "The Flying Luttenbachers (US) ",
-    "location": "bibelot",
-    "price": 0,
-    "shortText": " Albatre  +  Polarized  +  Combo Qazam undefined",
-    "longText": "../public/texts/bibelot/YWxiYXRyZS1wb2xhcml6ZWQtY29tYm8tcWF6YW0v.html",
-    "image": "../public/event-images/bibelot/YWxiYXRyZS1wb2xhcml6ZWQtY29tYm8tcWF6YW0v",
-    "soldOut": false,
-    "eventGenres": [
-      "jazz ",
-      "progressive rock ",
-      "punk "
-    ],
-    "artists": {
-      "combo qazam": {
-        "s": "7knDpm1ZleLQxKi49eCnCd",
-        "l": "combo%20qazam",
-        "g": [
-          "krautrock",
-          "noise rock",
-          "jazz ",
-          "progressive rock ",
-          "punk "
-        ]
-      },
-      "polarized": {
-        "s": "30oa7GX0upKm0TvcsiUvi5",
-        "l": "polarized",
-        "g": [
-          "thrash metal",
-          "jazz ",
-          "progressive rock ",
-          "punk "
-        ]
-      },
-      "albatre": {
-        "s": "2OIlzTJrqUrk320QlZicjp",
-        "l": "albatre",
-        "g": [
-          "free jazz",
-          "jazz ",
-          "progressive rock ",
-          "punk "
-        ]
-      },
-      "undefined": {
-        "s": "6NMVL5NGYZKTl6AZuxybbV",
-        "l": "undefined",
-        "g": [
-          "metalcore",
-          "new wave ",
-          "punk "
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-26T15:00:00",
-    "start": "2025-04-26T16:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/temper-koningsdag-parker-fans-gespuys-fit-de-badslippers-sasha-sailor-meer/",
-    "title": "TEMPER Koningsdag: Parker Fans, Gespuys, Fit, De Badslippers, Sasha Sailor & meer",
-    "location": "bibelot",
-    "price": 0,
-    "shortText": " undefined",
-    "longText": "../public/texts/bibelot/YmFkc2xpcHBlcnMtc2FzaGEtc2FpbG9yLW1lZXIv.html",
-    "image": "../public/event-images/bibelot/YmFkc2xpcHBlcnMtc2FzaGEtc2FpbG9yLW1lZXIv",
-    "soldOut": false,
-    "eventGenres": [
-      "electro ",
-      "punk ",
-      "rock "
-    ],
-    "artists": {
-      "parker fans, gespuys, fit, de badslippers, sasha sailor &": {
-        "s": null,
-        "l": "parker%20fans,%20gespuys,%20fit,%20de%20badslippers,%20sasha%20sailor%20&",
-        "g": [
-          "electro ",
-          "punk ",
-          "rock "
-        ]
-      },
-      "undefined": {
-        "s": "6NMVL5NGYZKTl6AZuxybbV",
-        "l": "undefined",
-        "g": [
-          "metalcore",
-          "new wave ",
-          "punk "
-        ]
-      },
-      "meer": {
-        "s": "4pAX6VBnbccF9uVcb9EGiq",
-        "l": "meer",
-        "g": [
-          "progressive rock",
-          "progressive metal",
-          "symphonic rock",
-          "art rock",
-          "electro ",
-          "punk ",
-          "rock "
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-17T19:30:00",
-    "start": "2025-05-17T20:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/wodan-boys/",
-    "title": "Wodan Boys",
-    "location": "bibelot",
-    "price": 17,
-    "longText": "../public/texts/bibelot/ZWxvdC5uZXQvcHJvZ3JhbW1hL3dvZGFuLWJveXMv.html",
-    "image": "../public/event-images/bibelot/ZWxvdC5uZXQvcHJvZ3JhbW1hL3dvZGFuLWJveXMv",
-    "soldOut": false,
-    "eventGenres": [
-      "garagerock "
-    ],
-    "artists": {
-      "wodan boys": {
-        "s": "0kmkbibevmq4luqquahdmr",
-        "l": "wodan%20boys",
-        "g": [
-          "dutch rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-17T20:00:00",
-    "start": "2025-05-17T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/ksu-farben-lehre-pl/",
-    "title": "Ksu + farben lehre (pl)",
-    "location": "bibelot",
-    "price": 0,
-    "longText": "../public/texts/bibelot/cHJvZ3JhbW1hL2tzdS1mYXJiZW4tbGVocmUtcGwv.html",
-    "image": "../public/event-images/bibelot/cHJvZ3JhbW1hL2tzdS1mYXJiZW4tbGVocmUtcGwv",
-    "soldOut": false,
-    "eventGenres": [
-      "punk ",
-      "rock "
-    ],
-    "artists": {
-      "farben lehre": {
-        "s": "3O9bFJBTRddC4HOsZixhuw",
-        "l": "farben%20lehre",
-        "g": [
-          "punk",
-          "punk ",
-          "rock "
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-05-22T20:00:00",
     "start": "2025-05-22T20:30:00",
     "venueEventUrl": "https://bibelot.net/programma/bibelot-x-door-test-plan-uk-mye-taai/",
@@ -244,7 +63,7 @@
     "venueEventUrl": "https://bibelot.net/programma/its-not-a-phase-mom-sum41-some41-the-offspring-by-the-offspin-uk/",
     "title": "It’s not a phase mom: sum41 (some41) & the offspring (by the offspin) (uk)",
     "location": "bibelot",
-    "price": 0,
+    "price": 30,
     "shortText": " undefined",
     "longText": "../public/texts/bibelot/ZS1vZmZzcHJpbmctYnktdGhlLW9mZnNwaW4tdWsv.html",
     "image": "../public/event-images/bibelot/ZS1vZmZzcHJpbmctYnktdGhlLW9mZnNwaW4tdWsv",
@@ -271,6 +90,138 @@
           "metalcore",
           "new wave ",
           "punk "
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-06-26T19:30:00",
+    "start": "2025-06-26T20:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/wodan-boys/",
+    "title": "Wodan Boys",
+    "location": "bibelot",
+    "price": 26,
+    "longText": "../public/texts/bibelot/ZWxvdC5uZXQvcHJvZ3JhbW1hL3dvZGFuLWJveXMv.html",
+    "image": "../public/event-images/bibelot/ZWxvdC5uZXQvcHJvZ3JhbW1hL3dvZGFuLWJveXMv",
+    "soldOut": false,
+    "eventGenres": [
+      "garagerock "
+    ],
+    "artists": {
+      "wodan boys": {
+        "s": "0kmkbibevmq4luqquahdmr",
+        "l": "wodan%20boys",
+        "g": [
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-08-24T19:30:00",
+    "start": "2025-08-24T20:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/crocodiles-us/",
+    "title": "Crocodiles (US)  + Yummy",
+    "location": "bibelot",
+    "price": 0,
+    "longText": "../public/texts/bibelot/dC5uZXQvcHJvZ3JhbW1hL2Nyb2NvZGlsZXMtdXMv.html",
+    "image": "../public/event-images/bibelot/dC5uZXQvcHJvZ3JhbW1hL2Nyb2NvZGlsZXMtdXMv",
+    "soldOut": false,
+    "eventGenres": [
+      "garagerock ",
+      "punk "
+    ],
+    "artists": {
+      "crocodiles": {
+        "s": "1Z4Erxt5wSXH0gbOsVJUMv",
+        "l": "crocodiles",
+        "g": [
+          "noise pop",
+          "nu gaze",
+          "stoner",
+          "sludge metal"
+        ]
+      },
+      "yummy": {
+        "s": "3EPDUft8JXlRTIsrNqfFDS",
+        "l": "yummy",
+        "g": [
+          "garagerock ",
+          "punk "
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-09-26T20:00:00",
+    "start": "2025-09-26T20:30:00",
+    "venueEventUrl": "https://bibelot.net/programma/conflict-uk-dammit-be/",
+    "title": "Conflict (uk) + dammit (be)",
+    "location": "bibelot",
+    "price": 0,
+    "longText": "../public/texts/bibelot/b2dyYW1tYS9jb25mbGljdC11ay1kYW1taXQtYmUv.html",
+    "image": "../public/event-images/bibelot/b2dyYW1tYS9jb25mbGljdC11ay1kYW1taXQtYmUv",
+    "soldOut": false,
+    "eventGenres": [
+      "punk "
+    ],
+    "artists": {
+      "conflict": {
+        "s": "47dYAN18NhVC43ud5Zq1PZ",
+        "l": "conflict",
+        "g": [
+          "hardcore punk",
+          "punk",
+          "industrial",
+          "death metal",
+          "punk "
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-09-27T18:00:00",
+    "start": "2025-09-27T18:45:00",
+    "venueEventUrl": "https://bibelot.net/programma/darkest-hour/",
+    "title": "Darkest hour (us) ",
+    "location": "bibelot",
+    "price": 27,
+    "shortText": " bleeding through (us)  +  shai hulud (us)  +  denial of life (us) undefined",
+    "longText": "../public/texts/bibelot/b3QubmV0L3Byb2dyYW1tYS9kYXJrZXN0LWhvdXIv.html",
+    "image": "../public/event-images/bibelot/b3QubmV0L3Byb2dyYW1tYS9kYXJrZXN0LWhvdXIv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal "
+    ],
+    "artists": {
+      "darkest hour": {
+        "s": "4dso1lISV1Atdo3O6qbhqq",
+        "l": "darkest%20hour",
+        "g": [
+          "melodic metalcore",
+          "metalcore",
+          "melodic death metal",
+          "metalcore"
+        ]
+      },
+      "undefined": {
+        "s": "6NMVL5NGYZKTl6AZuxybbV",
+        "l": "undefined",
+        "g": [
+          "metalcore",
+          "new wave ",
+          "punk "
+        ]
+      },
+      "bleeding through": {
+        "s": "41btkKEfOGIHsd7WNahMCi",
+        "l": "bleeding%20through",
+        "g": [
+          "metalcore",
+          "deathcore",
+          "metal",
+          "metalcore",
+          "metal "
         ]
       }
     }
@@ -314,12 +265,95 @@
     }
   },
   {
+    "door": "2025-10-17T20:00:00",
+    "start": "2025-10-17T21:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/feuerengel-a-tribute-to-rammstein-de/",
+    "title": "Feuerengel – a tribute to rammstein (de)",
+    "location": "bibelot",
+    "price": 17,
+    "longText": "../public/texts/bibelot/Z2VsLWEtdHJpYnV0ZS10by1yYW1tc3RlaW4tZGUv.html",
+    "image": "../public/event-images/bibelot/Z2VsLWEtdHJpYnV0ZS10by1yYW1tc3RlaW4tZGUv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal "
+    ],
+    "artists": {
+      "feuerengel": {
+        "s": null,
+        "l": "feuerengel",
+        "g": [
+          "neue deutsche haerte",
+          "tanzmetal",
+          "industrial",
+          "industrial metal"
+        ]
+      },
+      "– a tribute to rammstein": {
+        "s": null,
+        "l": "%E2%80%93%20a%20tribute%20to%20rammstein",
+        "g": [
+          "metal "
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-11-08T19:45:00",
+    "start": "2025-11-08T20:30:00",
+    "venueEventUrl": "https://bibelot.net/programma/claw-boys-claw-nov/",
+    "title": "Claw Boys Claw",
+    "location": "bibelot",
+    "price": 2025,
+    "longText": "../public/texts/bibelot/L3Byb2dyYW1tYS9jbGF3LWJveXMtY2xhdy1ub3Yv.html",
+    "image": "../public/event-images/bibelot/L3Byb2dyYW1tYS9jbGF3LWJveXMtY2xhdy1ub3Yv",
+    "soldOut": false,
+    "eventGenres": [
+      "garagerock ",
+      "indie ",
+      "rock "
+    ],
+    "artists": {
+      "claw boys claw": {
+        "s": "5t378xbmytaymycg84zipv",
+        "l": "claw%20boys%20claw",
+        "g": [
+          "dutch blues",
+          "dutch indie",
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-11-15T20:30:00",
+    "start": "2025-11-15T21:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/submit-fest/",
+    "title": "Submit Fest",
+    "location": "bibelot",
+    "price": 15,
+    "longText": "../public/texts/bibelot/bG90Lm5ldC9wcm9ncmFtbWEvc3VibWl0LWZlc3Qv.html",
+    "image": "../public/event-images/bibelot/bG90Lm5ldC9wcm9ncmFtbWEvc3VibWl0LWZlc3Qv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal "
+    ],
+    "artists": {
+      "submit fest": {
+        "s": null,
+        "l": "submit%20fest",
+        "g": [
+          "metal "
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-12-05T20:00:00",
     "start": "2025-12-05T21:00:00",
     "venueEventUrl": "https://bibelot.net/programma/acindc/",
     "title": "Acindc",
     "location": "bibelot",
-    "price": 0,
+    "price": 2025,
     "longText": "../public/texts/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS9hY2luZGMv.html",
     "image": "../public/event-images/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS9hY2luZGMv",
     "soldOut": false,
@@ -343,7 +377,7 @@
     "venueEventUrl": "https://bibelot.net/programma/pene-corrida-the-penergy-tour/",
     "title": "Pene Corrida – The Penergy Tour",
     "location": "bibelot",
-    "price": 0,
+    "price": 20,
     "longText": "../public/texts/bibelot/cGVuZS1jb3JyaWRhLXRoZS1wZW5lcmd5LXRvdXIv.html",
     "image": "../public/event-images/bibelot/cGVuZS1jb3JyaWRhLXRoZS1wZW5lcmd5LXRvdXIv",
     "soldOut": false,

@@ -29,6 +29,14 @@ export default async function longTextSocialsIframes(page, event) {
         removeEmptyHTMLFrom: ".contentblock-TextOneColumn"
     };
 
+    await page.evaluate(() => {
+        const b = document.querySelector(
+            "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"
+        );
+        if (!b) return;
+        b.click();
+    });
+
     res.mediaForHTML = await maakMediaHTMLBronnen(page, selectors, event);
 
     await ongewensteHTMLUitHeleDocument(page, selectors);

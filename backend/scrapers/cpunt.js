@@ -144,9 +144,17 @@ scraper.mainPage = async function () {
 scraper.singlePage = async function ({ page, event }) {
     const { stopFunctie } = await this.singlePageStart();
 
-    await page.waitForSelector("#main .content-blocks", {
-        timeout: 7500
-    });
+    await page
+        .waitForSelector("#main .content-blocks", {
+            timeout: 7500
+        })
+        .catch((err) => {
+            this.handleError(
+                err,
+                `wachtend op content block in ${event.title} ${event.venueEventUrl} maar niet hier`,
+                "close-thread"
+            );
+        });
 
     // cookie accept voor iframes
     await page.evaluate(() => {

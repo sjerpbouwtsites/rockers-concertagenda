@@ -155,7 +155,7 @@ export async function maakMediaHTMLBronnen(page, selectors, event) {
 
     return await page
         .evaluate(
-            ({ selectors }) => {
+            ({ selectors, event }) => {
                 return Array.from(document.querySelectorAll(selectors.mediaEls))
                     .map((bron) => {
                         if (
@@ -231,13 +231,13 @@ export async function maakMediaHTMLBronnen(page, selectors, event) {
                             };
                         } else {
                             throw new Error(
-                                `niet herkende media element ${bron?.src} ${bron?.href} ${bron?.id} ${bron?.className}`
+                                `niet herkende media element voor ${event.title} ${event.venueEventUrl} ${bron?.src} ${bron?.href} ${bron?.id} ${bron?.className}`
                             );
                         }
                     })
                     .filter((a) => a);
             },
-            { selectors }
+            { selectors, event }
         )
         .catch((err) => {
             handleError(err);
