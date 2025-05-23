@@ -711,7 +711,7 @@ export default class AbstractScraper extends ScraperConfig {
             // mergedEvent.registerINVALID(this.workerData); TODO HERACTIVIEREN
             if (mergedEvent.corrupted) {
                 this.dirtyDebug({
-                    title: `💀 ${mergedEvent.corrupted}`,
+                    title: `💀 corrupt ${mergedEvent.corrupted}`,
                     event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEvent.venueEventUrl}'>${mergedEvent.title}</a> Corr.`
                 });
                 this.asyncSaveRefused(mergedEvent);

@@ -9010,6 +9010,32 @@
     }
   },
   {
+    "start": "2025-10-25T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/hemelbestormer",
+    "title": "Hemelbestormer",
+    "location": "metropool",
+    "price": 19,
+    "shortText": "Waar licht en duisternis samensmelten tot een unieke mix van instrumentale post doom",
+    "longText": "../public/texts/metropool/b3Bvb2wubmwvYWdlbmRhL2hlbWVsYmVzdG9ybWVy.html",
+    "image": "../public/event-images/metropool/b3Bvb2wubmwvYWdlbmRhL2hlbWVsYmVzdG9ybWVy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "hemelbestormer": {
+        "s": "5oHzkbFUZZHA2y8t2aAhso",
+        "l": "hemelbestormer",
+        "g": [
+          "sludge metal",
+          "post-rock",
+          "doom metal",
+          "space rock",
+          "post-metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-10-25T19:30:00",
     "start": "2025-10-25T20:00:00",
     "venueEventUrl": "https://www.effenaar.nl/agenda/fall-spring",
@@ -9889,6 +9915,32 @@
     }
   },
   {
+    "start": "2025-11-14T21:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/temple-fang",
+    "title": "Temple Fang",
+    "location": "metropool",
+    "price": 18,
+    "shortText": "Rock’n’roll om geestelijke vrijheid te bereiken",
+    "longText": "../public/texts/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL3RlbXBsZS1mYW5n.html",
+    "image": "../public/event-images/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL3RlbXBsZS1mYW5n",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "temple fang": {
+        "s": null,
+        "l": null,
+        "g": [
+          "space rock",
+          "doom",
+          "psych",
+          "heavy psych",
+          "stoner"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-11-14T19:00:00",
     "start": "2025-11-14T19:30:00",
     "venueEventUrl": "https://www.doornroosje.nl/event/lacuna-coil/",
@@ -9951,6 +10003,31 @@
         "s": null,
         "l": "for%20i%20am%20king",
         "g": []
+      }
+    }
+  },
+  {
+    "start": "2025-11-15T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/blackbriar",
+    "title": "Blackbriar",
+    "location": "metropool",
+    "price": 27.5,
+    "shortText": "Gothic metal met een filmisch randje",
+    "longText": "../public/texts/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9ibGFja2JyaWFy.html",
+    "image": "../public/event-images/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9ibGFja2JyaWFy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "blackbriar": {
+        "s": "6pxqux3bytsvj7lcvviomi",
+        "l": "blackbriar",
+        "g": [
+          "dutch metal",
+          "gothic symphonic metal",
+          "slayer",
+          "symphonic metal"
+        ]
       }
     }
   },
@@ -11739,6 +11816,43 @@
           "melodic death metal",
           "groove metal",
           "heavy metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2026-02-27T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/omnium-gatherum-fallujah-in-mourning",
+    "title": "Omnium gatherum + fallujah + in mourning",
+    "location": "metropool",
+    "price": 29,
+    "shortText": "De nieuwe generatie deathmetal op één podium",
+    "longText": "../public/texts/metropool/LWdhdGhlcnVtLWZhbGx1amFoLWluLW1vdXJuaW5n.html",
+    "image": "../public/event-images/metropool/LWdhdGhlcnVtLWZhbGx1amFoLWluLW1vdXJuaW5n",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "fall": {
+        "s": null,
+        "l": "fall",
+        "g": [
+          "death metal"
+        ]
+      },
+      "in mourning": {
+        "s": "0gsIXiV7rw5I9wJaxgoOdB",
+        "l": "in%20mourning",
+        "g": [
+          "melodic death metal",
+          "progressive metal",
+          "melodic metal",
+          "death metal",
+          "doom metal",
+          "gothic",
+          "doom",
+          "death metal (early)",
+          " progressive melodic death metal (later)"
         ]
       }
     }
