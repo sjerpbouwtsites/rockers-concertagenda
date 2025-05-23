@@ -162,7 +162,9 @@ export async function maakMediaHTMLBronnen(page, selectors, event) {
                 ? bron.getAttribute("src")
                 : bron.hasAttribute("data-src")
                 ? bron.getAttribute("data-src")
-                : "GEEN SRC";
+                : bron?.hasAttribute("data-video-embed")
+                ? bron.getAttribute("data-video-embed")
+                : null;
 
             const isYoutubeAnchor =
               bron.hasAttribute("href") && bron.href.includes("youtube");

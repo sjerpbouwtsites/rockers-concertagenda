@@ -1,51 +1,14 @@
 [
   {
-    "start": "2025-04-07T20:00:00+02:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/kink-benefietavond-no-guts-no-glory/",
-    "title": "Kink benefietavond no guts no glorytaxitaxi, orange skyline, noise",
-    "location": "oosterpoort",
-    "price": 9.5,
-    "shortText": "  KINK BENEFIETAVOND NO GUTS NO GLORYTAXITAXI, ORANGE SKYLINE, NOISE",
-    "longText": "../public/texts/oosterpoort/ZW5lZmlldGF2b25kLW5vLWd1dHMtbm8tZ2xvcnkv.html",
-    "image": "../public/event-images/oosterpoort/ZW5lZmlldGF2b25kLW5vLWd1dHMtbm8tZ2xvcnkv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-04-20T20:00:00+02:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/dizzee-rascal/",
-    "title": "Dizzee RascalWe Want Bass Tour ",
-    "location": "oosterpoort",
-    "price": 28.1,
-    "shortText": " support NoizBoiz Dizzee RascalWe Want Bass Tour + support NoizBoiz",
-    "longText": "../public/texts/oosterpoort/ZW4ubmwvcHJvZ3JhbW1hL2RpenplZS1yYXNjYWwv.html",
-    "image": "../public/event-images/oosterpoort/ZW4ubmwvcHJvZ3JhbW1hL2RpenplZS1yYXNjYWwv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "bass": {
-        "s": null,
-        "l": "bass",
-        "g": [
-          "doom",
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
     "start": "2025-06-07T20:00:00+02:00",
     "venueEventUrl": "https://www.spotgroningen.nl/programma/heather-nova/",
     "title": "Heather Nova",
     "location": "oosterpoort",
-    "price": 0,
+    "price": null,
     "shortText": "Heather Nova",
     "longText": "../public/texts/oosterpoort/Z2VuLm5sL3Byb2dyYW1tYS9oZWF0aGVyLW5vdmEv.html",
     "image": "../public/event-images/oosterpoort/Z2VuLm5sL3Byb2dyYW1tYS9oZWF0aGVyLW5vdmEv",
-    "soldOut": true,
+    "soldOut": null,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
@@ -55,30 +18,6 @@
         "g": [
           "black",
           "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-06-11T20:00:00+02:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/sven-hammond/",
-    "title": "Sven Hammond+ support: Miss Meredith",
-    "location": "oosterpoort",
-    "price": 28.1,
-    "shortText": "Sven Hammond+ support: Miss Meredith",
-    "longText": "../public/texts/oosterpoort/Z2VuLm5sL3Byb2dyYW1tYS9zdmVuLWhhbW1vbmQv.html",
-    "image": "../public/event-images/oosterpoort/Z2VuLm5sL3Byb2dyYW1tYS9zdmVuLWhhbW1vbmQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "miss": {
-        "s": null,
-        "l": "miss",
-        "g": [
-          "sludge",
-          "doom metal",
-          "death 'n' roll"
         ]
       }
     }
@@ -130,18 +69,51 @@
     }
   },
   {
-    "start": "2025-08-25T20:30:00+02:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/the-waterboys-2/",
-    "title": "The Waterboys",
+    "start": "2025-07-09T20:30:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/steve-von-till/",
+    "title": "Steve Von Till",
     "location": "oosterpoort",
-    "price": 47.6,
-    "shortText": "The Waterboys",
-    "longText": "../public/texts/oosterpoort/Lm5sL3Byb2dyYW1tYS90aGUtd2F0ZXJib3lzLTIv.html",
-    "image": "../public/event-images/oosterpoort/Lm5sL3Byb2dyYW1tYS90aGUtd2F0ZXJib3lzLTIv",
+    "price": 24.1,
+    "shortText": "Steve Von Till",
+    "longText": "../public/texts/oosterpoort/bi5ubC9wcm9ncmFtbWEvc3RldmUtdm9uLXRpbGwv.html",
+    "image": "../public/event-images/oosterpoort/bi5ubC9wcm9ncmFtbWEvc3RldmUtdm9uLXRpbGwv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "steve von till": {
+        "s": "5fndnhwmhasuxf6grqzdsj",
+        "l": "steve%20von%20till",
+        "g": [
+          "drone metal",
+          "melancholia",
+          "post-metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-09-19T20:00:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/anna-ternheim-2/",
+    "title": "Anna TernheimPremonitions",
+    "location": "oosterpoort",
+    "price": 23.1,
+    "shortText": "Anna TernheimPremonitions",
+    "longText": "../public/texts/oosterpoort/Lm5sL3Byb2dyYW1tYS9hbm5hLXRlcm5oZWltLTIv.html",
+    "image": "../public/event-images/oosterpoort/Lm5sL3Byb2dyYW1tYS9hbm5hLXRlcm5oZWltLTIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "premonition": {
+        "s": "0vShN5Qc9EG8nfPQnCICth",
+        "l": "premonition",
+        "g": [
+          "hardcore",
+          "hardcore punk",
+          "melodic heavy metal"
+        ]
+      },
       "ater": {
         "s": "1HpPzWF2E6G8KfD5pOM6La",
         "l": "ater",
@@ -157,28 +129,25 @@
     }
   },
   {
-    "start": "2025-09-19T20:00:00+02:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/anna-ternheim-2/",
-    "title": "Anna Ternheim",
+    "start": "2025-09-29T20:00:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/young-gun-silver-fox-3/",
+    "title": "Young Gun Silver Fox",
     "location": "oosterpoort",
-    "price": 23.1,
-    "shortText": "Anna Ternheim",
-    "longText": "../public/texts/oosterpoort/Lm5sL3Byb2dyYW1tYS9hbm5hLXRlcm5oZWltLTIv.html",
-    "image": "../public/event-images/oosterpoort/Lm5sL3Byb2dyYW1tYS9hbm5hLXRlcm5oZWltLTIv",
+    "price": 39.6,
+    "shortText": "Young Gun Silver Fox",
+    "longText": "../public/texts/oosterpoort/Z3JhbW1hL3lvdW5nLWd1bi1zaWx2ZXItZm94LTMv.html",
+    "image": "../public/event-images/oosterpoort/Z3JhbW1hL3lvdW5nLWd1bi1zaWx2ZXItZm94LTMv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "ater": {
-        "s": "1HpPzWF2E6G8KfD5pOM6La",
-        "l": "ater",
+      "silver": {
+        "s": "7oeuJSyVZTCkm3BurLz8cG",
+        "l": "silver",
         "g": [
-          "djent",
-          "black metal",
-          "black",
-          "death metal",
-          "extreme metal",
-          "heavy metal"
+          "thrash metal",
+          "crossover",
+          "hardcore"
         ]
       }
     }
@@ -208,121 +177,36 @@
     }
   },
   {
-    "start": "2025-10-23T20:30:00+02:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/miss-montreal-11/",
-    "title": "Miss montrealmarathon",
+    "start": "2026-05-16T20:30:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/frank-boeijen-9/",
+    "title": "Frank BoeijenTheatertournee 2026",
     "location": "oosterpoort",
-    "price": 44.6,
-    "shortText": "Miss MontrealMARATHON",
-    "longText": "../public/texts/oosterpoort/bmwvcHJvZ3JhbW1hL21pc3MtbW9udHJlYWwtMTEv.html",
-    "image": "../public/event-images/oosterpoort/bmwvcHJvZ3JhbW1hL21pc3MtbW9udHJlYWwtMTEv",
+    "price": 29,
+    "shortText": "Frank BoeijenTheatertournee 2026",
+    "longText": "../public/texts/oosterpoort/Lm5sL3Byb2dyYW1tYS9mcmFuay1ib2VpamVuLTkv.html",
+    "image": "../public/event-images/oosterpoort/Lm5sL3Byb2dyYW1tYS9mcmFuay1ib2VpamVuLTkv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "montreal": {
-        "s": "1WBgY3ppwWenEynLyKUNRk",
-        "l": "montreal",
+      "urne": {
+        "s": null,
+        "l": null,
         "g": [
-          "german punk",
-          "german ska",
           "heavy metal",
-          "hard rock"
+          "black metal"
         ]
       },
-      "marathon": {
-        "s": "4AmPhWuKz1UIdx2Mvt4yAw",
-        "l": "marathon",
+      "ater": {
+        "s": "1HpPzWF2E6G8KfD5pOM6La",
+        "l": "ater",
         "g": [
-          "dutch post-punk",
-          "dutch shoegaze"
-        ]
-      },
-      "miss": {
-        "s": null,
-        "l": "miss",
-        "g": [
-          "sludge",
-          "doom metal",
-          "death 'n' roll"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-11-12T20:00:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/fun-lovin-criminals/",
-    "title": "Fun Lovin' Criminals",
-    "location": "oosterpoort",
-    "price": 36.6,
-    "shortText": "Fun Lovin' Criminals",
-    "longText": "../public/texts/oosterpoort/cHJvZ3JhbW1hL2Z1bi1sb3Zpbi1jcmltaW5hbHMv.html",
-    "image": "../public/event-images/oosterpoort/cHJvZ3JhbW1hL2Z1bi1sb3Zpbi1jcmltaW5hbHMv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "crim": {
-        "s": null,
-        "l": "crim",
-        "g": [
-          "melodic death metal",
-          "metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-11-20T20:00:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/adrian-vandenberg/",
-    "title": "Adrian VandenbergMy Whitesnake Years",
-    "location": "oosterpoort",
-    "price": 41.6,
-    "shortText": "Adrian VandenbergMy Whitesnake Years",
-    "longText": "../public/texts/oosterpoort/bC9wcm9ncmFtbWEvYWRyaWFuLXZhbmRlbmJlcmcv.html",
-    "image": "../public/event-images/oosterpoort/bC9wcm9ncmFtbWEvYWRyaWFuLXZhbmRlbmJlcmcv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "vandenberg": {
-        "s": "3hav15rfpste7ztekhhjtx",
-        "l": "vandenberg",
-        "g": [
-          "dutch rock",
-          "glam metal",
-          "hard rock"
-        ]
-      },
-      "snake": {
-        "s": null,
-        "l": "snake",
-        "g": [
+          "djent",
+          "black metal",
+          "black",
+          "death metal",
+          "extreme metal",
           "heavy metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-11-29T16:00:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/pe-rinusfeestje/",
-    "title": "Pé & RinusfeestjeDizze keer bie ons!",
-    "location": "oosterpoort",
-    "price": 0,
-    "shortText": "Pé & RinusfeestjeDizze keer bie ons!",
-    "longText": "../public/texts/oosterpoort/Lm5sL3Byb2dyYW1tYS9wZS1yaW51c2ZlZXN0amUv.html",
-    "image": "../public/event-images/oosterpoort/Lm5sL3Byb2dyYW1tYS9wZS1yaW51c2ZlZXN0amUv",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "zeke": {
-        "s": "7HvjR3M6xzluBLTnioRzvu",
-        "l": "zeke",
-        "g": [
-          "punk 'n' roll",
-          "progressive metal",
-          "rock"
         ]
       }
     }
