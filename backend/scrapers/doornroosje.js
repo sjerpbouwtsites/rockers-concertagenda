@@ -304,6 +304,8 @@ scraper.singlePage = async function ({ page, event }) {
     );
     pageInfo.mediaForHTML = mediaForHTML;
 
+    this.dirtyDebug(mediaForHTML);
+
     pageInfo.textForHTML = textForHTML;
 
     return this.singlePageEnd({

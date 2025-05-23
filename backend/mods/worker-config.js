@@ -33,17 +33,17 @@ export const workerConfig = {
     //     CPUReq: "high",
     //     forceSet: 1
     // }
-    dehelling: {
-        workerCount: 1,
-        workerConcurrent: 1,
-        forceSet: 2
-    }
-    // doornroosje: {
+    // dehelling: {
     //     workerCount: 1,
     //     workerConcurrent: 1,
-    //     CPUReq: "high",
     //     forceSet: 2
-    // },
+    // }
+    doornroosje: {
+        workerCount: 1,
+        workerConcurrent: 1,
+        CPUReq: "high",
+        forceSet: 2
+    }
     // effenaar: {
     //     workerCount: 3,
     //     CPUReq: "high",
